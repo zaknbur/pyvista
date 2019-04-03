@@ -1,0 +1,699 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Datasets &mdash; vtki 0.17.5 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js"></script>
+        <script type="text/javascript" src="../_static/copybutton.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/copybutton.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/gallery.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/style.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/copybutton.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Point Data" href="points.html" />
+    <link rel="prev" title="Basic API Usage" href="../getting-started/simple.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> vtki
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.17.5
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../index.html">vtki Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../why.html">Why?</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Getting Started</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../getting-started/installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../getting-started/simple.html">Basic API Usage</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Data Types</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Datasets</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#polydata">PolyData</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#unstructuredgrid">UnstructuredGrid</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#structuredgrid">StructuredGrid</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#rectilineargrid">RectilinearGrid</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#imagedata">ImageData</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#multiblock">MultiBlock</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="#the-common-model">The Common Model</a></li>
+<li class="toctree-l1"><a class="reference internal" href="points.html">Point Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="point-grids.html">Point-Based Grids</a></li>
+<li class="toctree-l1"><a class="reference internal" href="grids.html">Gridded Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="container.html">Multiple Block Datasets</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Examples</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../examples/index.html">Loading and Creating Meshes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../examples/index.html#filtering">Filtering</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../examples/index.html#plotting-examples">Plotting Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../external_examples.html">External Examples</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Tools</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../tools/geometric.html">Geometric Objects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tools/plotting.html">Plotting</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tools/filters.html">Filters</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tools/ipy_tools.html">IPython Tools</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tools/qt_plotting.html">vtki PyQt Interface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tools/utilities.html">Utilities</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">vtki</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>Datasets</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/types/common.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="datasets">
+<h1>Datasets<a class="headerlink" href="#datasets" title="Permalink to this headline">¶</a></h1>
+<p>Datasets are any spatially reference information and usually consist of
+geometrical representations of a surface or volume in 3D space.
+In VTK, this superclass is represented by the <code class="docutils literal notranslate"><span class="pre">vtk.vtkDataSet</span></code> abstract class.</p>
+<p>In VTK, datasets consist of geometry, topology, and attributes to which <code class="docutils literal notranslate"><span class="pre">vtki</span></code>
+provides direct access:</p>
+<ul class="simple">
+<li><p>Geometry is the collection of points and cells in 2D or 3D space.</p></li>
+<li><p>Topology defines the structure of the dataset, or how the points are connected to each other to form a cells making a surface or volume.</p></li>
+<li><p>Attributes are any data values that are associated to either the points or cells of the dataset</p></li>
+</ul>
+<p>All of the following data types are listed subclasses of a dataset and share a
+set of common functionality which we wrap into the base class
+<a class="reference internal" href="#vtki.Common" title="vtki.Common"><code class="xref py py-class docutils literal notranslate"><span class="pre">vtki.Common</span></code></a>.</p>
+<div class="section" id="polydata">
+<h2>PolyData<a class="headerlink" href="#polydata" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference internal" href="points.html#vtki.PolyData" title="vtki.PolyData"><code class="xref py py-class docutils literal notranslate"><span class="pre">vtki.PolyData</span></code></a> consists of any 1D or 2D geometries to construct
+vertices, lines, polygons, and triangles.
+We generally use <code class="docutils literal notranslate"><span class="pre">PolyData</span></code> to construct scattered points and closed/open
+surfaces (non-volumetric datasets).
+The <a class="reference internal" href="points.html#vtki.PolyData" title="vtki.PolyData"><code class="xref py py-class docutils literal notranslate"><span class="pre">vtki.PolyData</span></code></a> class is an extension of <code class="docutils literal notranslate"><span class="pre">vtk.vtkPolyData</span></code>.</p>
+</div>
+<div class="section" id="unstructuredgrid">
+<h2>UnstructuredGrid<a class="headerlink" href="#unstructuredgrid" title="Permalink to this headline">¶</a></h2>
+<p>An <a class="reference internal" href="point-grids.html#vtki.UnstructuredGrid" title="vtki.UnstructuredGrid"><code class="xref py py-class docutils literal notranslate"><span class="pre">vtki.UnstructuredGrid</span></code></a> is the most general dataset type that can hold
+any 1D, 2D, or 3D cell geometries.
+You can think of this as a 3D extension of <code class="docutils literal notranslate"><span class="pre">PolyData</span></code> that allows volumetric
+cells to be present.
+It’s fairly uncommon to explicitly make unstructured grids but they are often
+the result of different processing routines that might extract subsets of larger
+datasets.
+The <a class="reference internal" href="point-grids.html#vtki.UnstructuredGrid" title="vtki.UnstructuredGrid"><code class="xref py py-class docutils literal notranslate"><span class="pre">vtki.UnstructuredGrid</span></code></a> class is an extension of
+<code class="docutils literal notranslate"><span class="pre">vtk.UnstructuredGrid</span></code>.</p>
+</div>
+<div class="section" id="structuredgrid">
+<h2>StructuredGrid<a class="headerlink" href="#structuredgrid" title="Permalink to this headline">¶</a></h2>
+<p>A <a class="reference internal" href="point-grids.html#vtki.StructuredGrid" title="vtki.StructuredGrid"><code class="xref py py-class docutils literal notranslate"><span class="pre">vtki.StructuredGrid</span></code></a> is a regular lattice of points aligned with an
+internal coordinate axes such that the connectivity can be defined by a grid
+ordering.
+These are commonly made from <code class="xref py py-func docutils literal notranslate"><span class="pre">np.meshgrid()</span></code>. The cell types of structured
+grids must be 2D Quads or 3D Hexahedrons.
+The <a class="reference internal" href="point-grids.html#vtki.StructuredGrid" title="vtki.StructuredGrid"><code class="xref py py-class docutils literal notranslate"><span class="pre">vtki.StructuredGrid</span></code></a> class is an extension of
+<code class="docutils literal notranslate"><span class="pre">vtk.vtkStructuredGrid</span></code>.</p>
+</div>
+<div class="section" id="rectilineargrid">
+<h2>RectilinearGrid<a class="headerlink" href="#rectilineargrid" title="Permalink to this headline">¶</a></h2>
+<p>A <a class="reference internal" href="grids.html#vtki.RectilinearGrid" title="vtki.RectilinearGrid"><code class="xref py py-class docutils literal notranslate"><span class="pre">vtki.RectilinearGrid</span></code></a> defines meshes with implicit geometries along the axes
+directions that are rectangular and regular.
+The <a class="reference internal" href="grids.html#vtki.RectilinearGrid" title="vtki.RectilinearGrid"><code class="xref py py-class docutils literal notranslate"><span class="pre">vtki.RectilinearGrid</span></code></a> class is an extension of
+<code class="docutils literal notranslate"><span class="pre">vtk.vtkRectilinearGrid</span></code>.</p>
+</div>
+<div class="section" id="imagedata">
+<h2>ImageData<a class="headerlink" href="#imagedata" title="Permalink to this headline">¶</a></h2>
+<p>Image data, commonly referenced to as uniform grids, and defined by the
+<a class="reference internal" href="grids.html#vtki.UniformGrid" title="vtki.UniformGrid"><code class="xref py py-class docutils literal notranslate"><span class="pre">vtki.UniformGrid</span></code></a> class are meshes with implicit geometries where cell
+sizes are uniformly assigned along each axis and the spatial reference is built
+out from an origin point.
+The <a class="reference internal" href="grids.html#vtki.UniformGrid" title="vtki.UniformGrid"><code class="xref py py-class docutils literal notranslate"><span class="pre">vtki.UniformGrid</span></code></a> class is an extension of <code class="docutils literal notranslate"><span class="pre">vtk.vtkImageData</span></code>.</p>
+</div>
+<div class="section" id="multiblock">
+<h2>MultiBlock<a class="headerlink" href="#multiblock" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference internal" href="container.html#vtki.MultiBlock" title="vtki.MultiBlock"><code class="xref py py-class docutils literal notranslate"><span class="pre">vtki.MultiBlock</span></code></a> datasets are containers to hold several VTK datasets in
+one accessible and spatially referenced object.
+The <a class="reference internal" href="container.html#vtki.MultiBlock" title="vtki.MultiBlock"><code class="xref py py-class docutils literal notranslate"><span class="pre">vtki.MultiBlock</span></code></a> class is an extension of
+<code class="docutils literal notranslate"><span class="pre">vtk.vtkMultiBlockDataSet</span></code>.</p>
+</div>
+</div>
+<div class="section" id="the-common-model">
+<h1>The Common Model<a class="headerlink" href="#the-common-model" title="Permalink to this headline">¶</a></h1>
+<p>The <a class="reference internal" href="#vtki.Common" title="vtki.Common"><code class="xref py py-class docutils literal notranslate"><span class="pre">vtki.Common</span></code></a> class holds attributes that are <em>common</em> to all
+spatially referenced datasets in <code class="docutils literal notranslate"><span class="pre">vtki</span></code>.
+This base class is analogous to VTK’s <code class="docutils literal notranslate"><span class="pre">vtk.vtkDataSet</span></code> class.</p>
+<p class="rubric">Attributes</p>
+<table class="longtable docutils align-center">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+</tbody>
+</table>
+<p class="rubric">Methods</p>
+<table class="longtable docutils align-center">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+</tbody>
+</table>
+<dl class="class">
+<dt id="vtki.Common">
+<em class="property">class </em><code class="descclassname">vtki.</code><code class="descname">Common</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#vtki.Common" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">vtki.filters.DataSetFilters</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Methods in common to grid and surface objects</p>
+<dl class="attribute">
+<dt id="vtki.Common.active_scalar">
+<code class="descname">active_scalar</code><a class="headerlink" href="#vtki.Common.active_scalar" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the active scalar as an array</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="vtki.Common.active_scalar_info">
+<code class="descname">active_scalar_info</code><a class="headerlink" href="#vtki.Common.active_scalar_info" title="Permalink to this definition">¶</a></dt>
+<dd><p>[field, name]</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>Return the active scalar’s field and name</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="vtki.Common.active_scalar_name">
+<code class="descname">active_scalar_name</code><a class="headerlink" href="#vtki.Common.active_scalar_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the active scalar’s name</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="vtki.Common.active_vectors">
+<code class="descname">active_vectors</code><a class="headerlink" href="#vtki.Common.active_vectors" title="Permalink to this definition">¶</a></dt>
+<dd><p>The active vectors array</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="vtki.Common.active_vectors_info">
+<code class="descname">active_vectors_info</code><a class="headerlink" href="#vtki.Common.active_vectors_info" title="Permalink to this definition">¶</a></dt>
+<dd><p>[field, name]</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>Return the active scalar’s field and name</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="vtki.Common.active_vectors_name">
+<code class="descname">active_vectors_name</code><a class="headerlink" href="#vtki.Common.active_vectors_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>The name of the active vectors array</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="vtki.Common.arrows">
+<code class="descname">arrows</code><a class="headerlink" href="#vtki.Common.arrows" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a glyph representation of the active vector data as
+arrows.  Arrows will be located at the points of the mesh and
+their size will be dependent on the length of the vector.
+Their direction will be the “direction” of the vector</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><strong>arrows</strong> – Active scalars represented as arrows.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference internal" href="points.html#vtki.PolyData" title="vtki.PolyData">vtki.PolyData</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="vtki.Common.bounds">
+<code class="descname">bounds</code><a class="headerlink" href="#vtki.Common.bounds" title="Permalink to this definition">¶</a></dt>
+<dd><p>bounding box of this dataset in the form
+(xmin,xmax, ymin,ymax, zmin,zmax)</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="vtki.Common.cell_arrays">
+<code class="descname">cell_arrays</code><a class="headerlink" href="#vtki.Common.cell_arrays" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the all cell arrays</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="vtki.Common.center">
+<code class="descname">center</code><a class="headerlink" href="#vtki.Common.center" title="Permalink to this definition">¶</a></dt>
+<dd><p>Center of the bounding box</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="vtki.Common.copy">
+<code class="descname">copy</code><span class="sig-paren">(</span><em>deep=True</em><span class="sig-paren">)</span><a class="headerlink" href="#vtki.Common.copy" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a copy of the object</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>deep</strong> (<em>bool</em><em>, </em><em>optional</em>) – When True makes a full copy of the object.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>newobject</strong> – Deep or shallow copy of the input.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>same as input</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="vtki.Common.copy_meta_from">
+<code class="descname">copy_meta_from</code><span class="sig-paren">(</span><em>ido</em><span class="sig-paren">)</span><a class="headerlink" href="#vtki.Common.copy_meta_from" title="Permalink to this definition">¶</a></dt>
+<dd><p>Copies vtki meta data onto this object from another object</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="vtki.Common.extent">
+<code class="descname">extent</code><a class="headerlink" href="#vtki.Common.extent" title="Permalink to this definition">¶</a></dt>
+<dd><p>The range of the bounding box</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="vtki.Common.get_data_range">
+<code class="descname">get_data_range</code><span class="sig-paren">(</span><em>arr=None</em>, <em>preference='cell'</em><span class="sig-paren">)</span><a class="headerlink" href="#vtki.Common.get_data_range" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the non-NaN min and max of a named scalar array</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>arr</strong> (<em>str</em><em>, </em><em>np.ndarray</em><em>, </em><em>optional</em>) – The name of the array to get the range. If None, the active scalar
+is used</p></li>
+<li><p><strong>preference</strong> (<em>str</em><em>, </em><em>optional</em>) – When scalars is specified, this is the perfered scalar type to
+search for in the dataset.  Must be either <code class="docutils literal notranslate"><span class="pre">'point'</span></code> or <code class="docutils literal notranslate"><span class="pre">'cell'</span></code></p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="vtki.Common.get_scalar">
+<code class="descname">get_scalar</code><span class="sig-paren">(</span><em>name</em>, <em>preference='cell'</em>, <em>info=False</em><span class="sig-paren">)</span><a class="headerlink" href="#vtki.Common.get_scalar" title="Permalink to this definition">¶</a></dt>
+<dd><p>Searches both point and cell data for an array</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="vtki.Common.head">
+<code class="descname">head</code><span class="sig-paren">(</span><em>display=True</em>, <em>html=None</em><span class="sig-paren">)</span><a class="headerlink" href="#vtki.Common.head" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the header stats of this dataset. If in IPython, this will
+be formatted to HTML. Otherwise returns a console friendly string</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="vtki.Common.n_cells">
+<code class="descname">n_cells</code><a class="headerlink" href="#vtki.Common.n_cells" title="Permalink to this definition">¶</a></dt>
+<dd><p>The number of cells in the entire dataset</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="vtki.Common.n_points">
+<code class="descname">n_points</code><a class="headerlink" href="#vtki.Common.n_points" title="Permalink to this definition">¶</a></dt>
+<dd><p>The number of points in the entire dataset</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="vtki.Common.n_scalars">
+<code class="descname">n_scalars</code><a class="headerlink" href="#vtki.Common.n_scalars" title="Permalink to this definition">¶</a></dt>
+<dd><p>The number of scalara arrays present in the dataset</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="vtki.Common.number_of_cells">
+<code class="descname">number_of_cells</code><a class="headerlink" href="#vtki.Common.number_of_cells" title="Permalink to this definition">¶</a></dt>
+<dd><p>returns the number of cells</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="vtki.Common.number_of_points">
+<code class="descname">number_of_points</code><a class="headerlink" href="#vtki.Common.number_of_points" title="Permalink to this definition">¶</a></dt>
+<dd><p>returns the number of points</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="vtki.Common.overwrite">
+<code class="descname">overwrite</code><span class="sig-paren">(</span><em>mesh</em><span class="sig-paren">)</span><a class="headerlink" href="#vtki.Common.overwrite" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overwrites this mesh inplace with the new mesh’s geometries and data</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>mesh</strong> (<em>vtk.vtkDataSet</em>) – The overwriting mesh.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="vtki.Common.plot">
+<code class="descname">plot</code><span class="sig-paren">(</span><em>off_screen=False</em>, <em>full_screen=False</em>, <em>screenshot=None</em>, <em>interactive=True</em>, <em>cpos=None</em>, <em>window_size=None</em>, <em>show_bounds=False</em>, <em>show_axes=True</em>, <em>notebook=None</em>, <em>background=None</em>, <em>text=''</em>, <em>return_img=False</em>, <em>eye_dome_lighting=False</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#vtki.Common.plot" title="Permalink to this definition">¶</a></dt>
+<dd><p>Convenience plotting function for a vtk or numpy object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>item</strong> (<em>vtk</em><em> or </em><em>numpy object</em>) – VTK object or numpy array to be plotted.</p></li>
+<li><p><strong>off_screen</strong> (<em>bool</em>) – Plots off screen when True.  Helpful for saving screenshots
+without a window popping up.</p></li>
+<li><p><strong>full_screen</strong> (<em>bool</em><em>, </em><em>optional</em>) – Opens window in full screen.  When enabled, ignores window_size.
+Default False.</p></li>
+<li><p><strong>screenshot</strong> (<em>str</em><em> or </em><em>bool</em><em>, </em><em>optional</em>) – <p>Saves screenshot to file when enabled.  See:
+help(vtkinterface.Plotter.screenshot).  Default disabled.</p>
+<p>When True, takes screenshot and returns numpy array of image.</p>
+</p></li>
+<li><p><strong>window_size</strong> (<em>list</em><em>, </em><em>optional</em>) – Window size in pixels.  Defaults to [1024, 768]</p></li>
+<li><p><strong>show_bounds</strong> (<em>bool</em><em>, </em><em>optional</em>) – Shows mesh bounds when True.  Default False. Alias <code class="docutils literal notranslate"><span class="pre">show_grid</span></code> also
+accepted.</p></li>
+<li><p><strong>notebook</strong> (<em>bool</em><em>, </em><em>optional</em>) – When True, the resulting plot is placed inline a jupyter notebook.
+Assumes a jupyter console is active.</p></li>
+<li><p><strong>show_axes</strong> (<em>bool</em><em>, </em><em>optional</em>) – Shows a vtk axes widget.  Enabled by default.</p></li>
+<li><p><strong>text</strong> (<em>str</em><em>, </em><em>optional</em>) – Adds text at the bottom of the plot.</p></li>
+<li><p><strong>**kwargs</strong> (<em>optional keyword arguments</em>) – See help(Plotter.add_mesh) for additional options.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><ul class="simple">
+<li><p><strong>cpos</strong> (<em>list</em>) – List of camera position, focal point, and view up.</p></li>
+<li><p><strong>img</strong> (<em>numpy.ndarray</em>) – Array containing pixel RGB and alpha.  Sized:
+[Window height x Window width x 3] for transparent_background=False
+[Window height x Window width x 4] for transparent_background=True
+Returned only when screenshot enabled</p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="vtki.Common.point_arrays">
+<code class="descname">point_arrays</code><a class="headerlink" href="#vtki.Common.point_arrays" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the all point arrays</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="vtki.Common.points">
+<code class="descname">points</code><a class="headerlink" href="#vtki.Common.points" title="Permalink to this definition">¶</a></dt>
+<dd><p>returns a pointer to the points as a numpy object</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="vtki.Common.points_to_double">
+<code class="descname">points_to_double</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#vtki.Common.points_to_double" title="Permalink to this definition">¶</a></dt>
+<dd><p>Makes points double precision</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="vtki.Common.rename_scalar">
+<code class="descname">rename_scalar</code><span class="sig-paren">(</span><em>old_name</em>, <em>new_name</em>, <em>preference='cell'</em><span class="sig-paren">)</span><a class="headerlink" href="#vtki.Common.rename_scalar" title="Permalink to this definition">¶</a></dt>
+<dd><p>Changes array name by searching for the array then renaming it</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="vtki.Common.rotate_x">
+<code class="descname">rotate_x</code><span class="sig-paren">(</span><em>angle</em><span class="sig-paren">)</span><a class="headerlink" href="#vtki.Common.rotate_x" title="Permalink to this definition">¶</a></dt>
+<dd><p>Rotates mesh about the x-axis.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>angle</strong> (<em>float</em>) – Angle in degrees to rotate about the x-axis.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="vtki.Common.rotate_y">
+<code class="descname">rotate_y</code><span class="sig-paren">(</span><em>angle</em><span class="sig-paren">)</span><a class="headerlink" href="#vtki.Common.rotate_y" title="Permalink to this definition">¶</a></dt>
+<dd><p>Rotates mesh about the y-axis.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>angle</strong> (<em>float</em>) – Angle in degrees to rotate about the y-axis.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="vtki.Common.rotate_z">
+<code class="descname">rotate_z</code><span class="sig-paren">(</span><em>angle</em><span class="sig-paren">)</span><a class="headerlink" href="#vtki.Common.rotate_z" title="Permalink to this definition">¶</a></dt>
+<dd><p>Rotates mesh about the z-axis.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>angle</strong> (<em>float</em>) – Angle in degrees to rotate about the z-axis.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="vtki.Common.scalar_names">
+<code class="descname">scalar_names</code><a class="headerlink" href="#vtki.Common.scalar_names" title="Permalink to this definition">¶</a></dt>
+<dd><p>A list of scalar names for the dataset. This makes
+sure to put the active scalar’s name first in the list.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="vtki.Common.set_active_scalar">
+<code class="descname">set_active_scalar</code><span class="sig-paren">(</span><em>name</em>, <em>preference='cell'</em><span class="sig-paren">)</span><a class="headerlink" href="#vtki.Common.set_active_scalar" title="Permalink to this definition">¶</a></dt>
+<dd><p>Finds the scalar by name and appropriately sets it as active</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="vtki.Common.set_active_vectors">
+<code class="descname">set_active_vectors</code><span class="sig-paren">(</span><em>name</em>, <em>preference='cell'</em><span class="sig-paren">)</span><a class="headerlink" href="#vtki.Common.set_active_vectors" title="Permalink to this definition">¶</a></dt>
+<dd><p>Finds the vectors by name and appropriately sets it as active</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="vtki.Common.t_coords">
+<code class="descname">t_coords</code><a class="headerlink" href="#vtki.Common.t_coords" title="Permalink to this definition">¶</a></dt>
+<dd><p>The active texture coordinates on the points</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="vtki.Common.textures">
+<code class="descname">textures</code><a class="headerlink" href="#vtki.Common.textures" title="Permalink to this definition">¶</a></dt>
+<dd><p>A dictionary to hold <code class="docutils literal notranslate"><span class="pre">vtk.vtkTexture</span></code> objects that can be
+associated with this dataset. When casting back to a VTK dataset or
+filtering this dataset, these textures will not be passed.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="vtki.Common.transform">
+<code class="descname">transform</code><span class="sig-paren">(</span><em>trans</em><span class="sig-paren">)</span><a class="headerlink" href="#vtki.Common.transform" title="Permalink to this definition">¶</a></dt>
+<dd><p>Compute a transformation in place using a 4x4 transform.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>trans</strong> (<em>vtk.vtkMatrix4x4</em><em>, </em><em>vtk.vtkTransform</em><em>, or </em><em>np.ndarray</em>) – Accepts a vtk transformation object or a 4x4 transformation matrix.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="vtki.Common.translate">
+<code class="descname">translate</code><span class="sig-paren">(</span><em>xyz</em><span class="sig-paren">)</span><a class="headerlink" href="#vtki.Common.translate" title="Permalink to this definition">¶</a></dt>
+<dd><p>Translates the mesh.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>xyz</strong> (<em>list</em><em> or </em><em>np.ndarray</em>) – Length 3 list or array.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="vtki.Common.vectors">
+<code class="descname">vectors</code><a class="headerlink" href="#vtki.Common.vectors" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns active vectors</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="vtki.Common.volume">
+<code class="descname">volume</code><a class="headerlink" href="#vtki.Common.volume" title="Permalink to this definition">¶</a></dt>
+<dd><p>Mesh volume</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><strong>volume</strong> – Total volume of the mesh.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="points.html" class="btn btn-neutral float-right" title="Point Data" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../getting-started/simple.html" class="btn btn-neutral float-left" title="Basic API Usage" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2017-2019, Alex Kaszynski
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

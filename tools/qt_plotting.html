@@ -1,0 +1,426 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>vtki PyQt Interface &mdash; vtki 0.17.5 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js"></script>
+        <script type="text/javascript" src="../_static/copybutton.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/copybutton.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/gallery.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/style.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/copybutton.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Utilities" href="utilities.html" />
+    <link rel="prev" title="IPython Tools" href="ipy_tools.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> vtki
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.17.5
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../index.html">vtki Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../why.html">Why?</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Getting Started</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../getting-started/installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../getting-started/simple.html">Basic API Usage</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Data Types</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../types/common.html">Datasets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../types/common.html#the-common-model">The Common Model</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../types/points.html">Point Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../types/point-grids.html">Point-Based Grids</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../types/grids.html">Gridded Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../types/container.html">Multiple Block Datasets</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Examples</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../examples/index.html">Loading and Creating Meshes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../examples/index.html#filtering">Filtering</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../examples/index.html#plotting-examples">Plotting Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../external_examples.html">External Examples</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Tools</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="geometric.html">Geometric Objects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="plotting.html">Plotting</a></li>
+<li class="toctree-l1"><a class="reference internal" href="filters.html">Filters</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ipy_tools.html">IPython Tools</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">vtki PyQt Interface</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#example-pyqt5-vtki-qtinteractor">Example PyQt5 vtki QtInteractor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#background-plotting">Background Plotting</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="utilities.html">Utilities</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">vtki</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>vtki PyQt Interface</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/tools/qt_plotting.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="vtki-pyqt-interface">
+<span id="qt-ref"></span><h1>vtki PyQt Interface<a class="headerlink" href="#vtki-pyqt-interface" title="Permalink to this headline">¶</a></h1>
+<p><code class="docutils literal notranslate"><span class="pre">vtki</span></code> has an interface for placing plots in <code class="docutils literal notranslate"><span class="pre">PyQt5</span></code> that extends the functionality of the <code class="docutils literal notranslate"><span class="pre">QVTKRenderWindowInteractor</span></code> class.  The <code class="docutils literal notranslate"><span class="pre">vtki.QtInteractor</span></code> class allows you to have the same functionality of the <code class="docutils literal notranslate"><span class="pre">Plotter</span></code> class within a <code class="docutils literal notranslate"><span class="pre">PyQt5</span></code> application.  This simplifies adding meshes, updating, and controlling them when using <code class="docutils literal notranslate"><span class="pre">PyQt5</span></code>.</p>
+<div class="section" id="example-pyqt5-vtki-qtinteractor">
+<h2>Example PyQt5 vtki QtInteractor<a class="headerlink" href="#example-pyqt5-vtki-qtinteractor" title="Permalink to this headline">¶</a></h2>
+<p>The following example shows how to create a simple application that adds a sphere to an empty plotting window.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sys</span>
+
+<span class="kn">from</span> <span class="nn">PyQt5</span> <span class="kn">import</span> <span class="n">Qt</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="kn">as</span> <span class="nn">np</span>
+
+<span class="kn">import</span> <span class="nn">vtki</span>
+
+
+<span class="k">class</span> <span class="nc">MainWindow</span><span class="p">(</span><span class="n">Qt</span><span class="o">.</span><span class="n">QMainWindow</span><span class="p">):</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">parent</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span> <span class="n">show</span><span class="o">=</span><span class="bp">True</span><span class="p">):</span>
+        <span class="n">Qt</span><span class="o">.</span><span class="n">QMainWindow</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">parent</span><span class="p">)</span>
+
+        <span class="c1"># create the frame</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">frame</span> <span class="o">=</span> <span class="n">Qt</span><span class="o">.</span><span class="n">QFrame</span><span class="p">()</span>
+        <span class="n">vlayout</span> <span class="o">=</span> <span class="n">Qt</span><span class="o">.</span><span class="n">QVBoxLayout</span><span class="p">()</span>
+
+        <span class="c1"># add the vtki interactor object</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">vtk_widget</span> <span class="o">=</span> <span class="n">vtki</span><span class="o">.</span><span class="n">QtInteractor</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">frame</span><span class="p">)</span>
+        <span class="n">vlayout</span><span class="o">.</span><span class="n">addWidget</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">vtk_widget</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">frame</span><span class="o">.</span><span class="n">setLayout</span><span class="p">(</span><span class="n">vlayout</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">setCentralWidget</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">frame</span><span class="p">)</span>
+
+        <span class="c1"># simple menu to demo functions</span>
+        <span class="n">mainMenu</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">menuBar</span><span class="p">()</span>
+        <span class="n">fileMenu</span> <span class="o">=</span> <span class="n">mainMenu</span><span class="o">.</span><span class="n">addMenu</span><span class="p">(</span><span class="s1">&#39;File&#39;</span><span class="p">)</span>
+        <span class="n">exitButton</span> <span class="o">=</span> <span class="n">Qt</span><span class="o">.</span><span class="n">QAction</span><span class="p">(</span><span class="s1">&#39;Exit&#39;</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span>
+        <span class="n">exitButton</span><span class="o">.</span><span class="n">setShortcut</span><span class="p">(</span><span class="s1">&#39;Ctrl+Q&#39;</span><span class="p">)</span>
+        <span class="n">exitButton</span><span class="o">.</span><span class="n">triggered</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">close</span><span class="p">)</span>
+        <span class="n">fileMenu</span><span class="o">.</span><span class="n">addAction</span><span class="p">(</span><span class="n">exitButton</span><span class="p">)</span>
+
+        <span class="c1"># allow adding a sphere</span>
+        <span class="n">meshMenu</span> <span class="o">=</span> <span class="n">mainMenu</span><span class="o">.</span><span class="n">addMenu</span><span class="p">(</span><span class="s1">&#39;Mesh&#39;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">add_sphere_action</span> <span class="o">=</span> <span class="n">Qt</span><span class="o">.</span><span class="n">QAction</span><span class="p">(</span><span class="s1">&#39;Add Sphere&#39;</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">add_sphere_action</span><span class="o">.</span><span class="n">triggered</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">add_sphere</span><span class="p">)</span>
+        <span class="n">meshMenu</span><span class="o">.</span><span class="n">addAction</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">add_sphere_action</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="n">show</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+
+    <span class="k">def</span> <span class="nf">add_sphere</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot; add a sphere to the pyqt frame &quot;&quot;&quot;</span>
+        <span class="n">sphere</span> <span class="o">=</span> <span class="n">vtki</span><span class="o">.</span><span class="n">Sphere</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">vtk_widget</span><span class="o">.</span><span class="n">add_mesh</span><span class="p">(</span><span class="n">sphere</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">vtk_widget</span><span class="o">.</span><span class="n">reset_camera</span><span class="p">()</span>
+
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
+    <span class="n">app</span> <span class="o">=</span> <span class="n">Qt</span><span class="o">.</span><span class="n">QApplication</span><span class="p">(</span><span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">)</span>
+    <span class="n">window</span> <span class="o">=</span> <span class="n">MainWindow</span><span class="p">()</span>
+    <span class="n">sys</span><span class="o">.</span><span class="n">exit</span><span class="p">(</span><span class="n">app</span><span class="o">.</span><span class="n">exec_</span><span class="p">())</span>
+</pre></div>
+</div>
+<div class="figure align-center" id="id1">
+<a class="reference internal image-reference" href="../_images/qt_plotting_sphere.png"><img alt="../_images/qt_plotting_sphere.png" src="../_images/qt_plotting_sphere.png" style="width: 600pt;" /></a>
+<p class="caption"><span class="caption-text">PyQt5 vtki QtInteractor</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+<div class="section" id="background-plotting">
+<h2>Background Plotting<a class="headerlink" href="#background-plotting" title="Permalink to this headline">¶</a></h2>
+<p>Normal <code class="docutils literal notranslate"><span class="pre">vtki</span></code> plotting windows exhibit blocking behavior, but it is possible to plot in the background and update the plotter in real-time using the <code class="docutils literal notranslate"><span class="pre">BackgroundPlotter</span></code> object.  This requires <code class="docutils literal notranslate"><span class="pre">PyQt5</span></code>, but otherwise appears and functions like a normal <code class="docutils literal notranslate"><span class="pre">vtki</span></code> <code class="docutils literal notranslate"><span class="pre">Plotter</span></code> instance.  For example:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">vtki</span>
+
+<span class="n">sphere</span> <span class="o">=</span> <span class="n">vtki</span><span class="o">.</span><span class="n">Sphere</span><span class="p">()</span>
+
+<span class="n">plotter</span> <span class="o">=</span> <span class="n">vtki</span><span class="o">.</span><span class="n">BackgroundPlotter</span><span class="p">()</span>
+<span class="n">plotter</span><span class="o">.</span><span class="n">add_mesh</span><span class="p">(</span><span class="n">sphere</span><span class="p">)</span>
+
+<span class="c1"># can now operate on the sphere and have it updated in the background</span>
+<span class="n">sphere</span><span class="o">.</span><span class="n">points</span> <span class="o">*=</span> <span class="mf">0.5</span>
+</pre></div>
+</div>
+<p class="rubric">Attributes</p>
+<table class="longtable docutils align-center">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+</tbody>
+</table>
+<p class="rubric">Methods</p>
+<table class="longtable docutils align-center">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+</tbody>
+</table>
+<dl class="class">
+<dt id="vtki.BackgroundPlotter">
+<em class="property">class </em><code class="descclassname">vtki.</code><code class="descname">BackgroundPlotter</code><span class="sig-paren">(</span><em>show=True</em>, <em>app=None</em>, <em>shape=(1</em>, <em>1)</em>, <em>window_size=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#vtki.BackgroundPlotter" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">vtki.qt_plotting.QtInteractor</span></code></p>
+<dl class="attribute">
+<dt id="vtki.BackgroundPlotter.ICON_TIME_STEP">
+<code class="descname">ICON_TIME_STEP</code><em class="property"> = 5.0</em><a class="headerlink" href="#vtki.BackgroundPlotter.ICON_TIME_STEP" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="vtki.BackgroundPlotter.add_actor">
+<code class="descname">add_actor</code><span class="sig-paren">(</span><em>actor</em>, <em>reset_camera=None</em>, <em>name=None</em>, <em>loc=None</em>, <em>culling=False</em><span class="sig-paren">)</span><a class="headerlink" href="#vtki.BackgroundPlotter.add_actor" title="Permalink to this definition">¶</a></dt>
+<dd><p>Adds an actor to render window.  Creates an actor if input is
+a mapper.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>uinput</strong> (<em>vtk.vtkMapper</em><em> or </em><em>vtk.vtkActor</em>) – vtk mapper or vtk actor to be added.</p></li>
+<li><p><strong>reset_camera</strong> (<em>bool</em><em>, </em><em>optional</em>) – Resets the camera when true.</p></li>
+<li><p><strong>loc</strong> (<em>int</em><em>, </em><em>tuple</em><em>, or </em><em>list</em>) – Index of the renderer to add the actor to.  For example,
+<code class="docutils literal notranslate"><span class="pre">loc=2</span></code> or <code class="docutils literal notranslate"><span class="pre">loc=(1,</span> <span class="pre">1)</span></code>.  If None, selects the last
+active Renderer.</p></li>
+<li><p><strong>culling</strong> (<em>bool optional</em>) – Does not render faces that should not be visible to the
+plotter.  This can be helpful for dense surface meshes,
+especially when edges are visible, but can cause flat
+meshes to be partially displayed.  Default False.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><ul class="simple">
+<li><p><strong>actor</strong> (<em>vtk.vtkActor</em>) – The actor.</p></li>
+<li><p><strong>actor_properties</strong> (<em>vtk.Properties</em>) – Actor properties.</p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="vtki.BackgroundPlotter.clear_camera_positions">
+<code class="descname">clear_camera_positions</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#vtki.BackgroundPlotter.clear_camera_positions" title="Permalink to this definition">¶</a></dt>
+<dd><p>clears all camera positions</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="vtki.BackgroundPlotter.closeEvent">
+<code class="descname">closeEvent</code><span class="sig-paren">(</span><em>self</em>, <em>QCloseEvent</em><span class="sig-paren">)</span><a class="headerlink" href="#vtki.BackgroundPlotter.closeEvent" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="vtki.BackgroundPlotter.save_camera_position">
+<code class="descname">save_camera_position</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#vtki.BackgroundPlotter.save_camera_position" title="Permalink to this definition">¶</a></dt>
+<dd><p>Saves camera position to saved camera menu for recall</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="vtki.BackgroundPlotter.scale_axes_dialog">
+<code class="descname">scale_axes_dialog</code><span class="sig-paren">(</span><em>show=True</em><span class="sig-paren">)</span><a class="headerlink" href="#vtki.BackgroundPlotter.scale_axes_dialog" title="Permalink to this definition">¶</a></dt>
+<dd><p>Open scale axes dialog</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="vtki.BackgroundPlotter.update_app_icon">
+<code class="descname">update_app_icon</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#vtki.BackgroundPlotter.update_app_icon" title="Permalink to this definition">¶</a></dt>
+<dd><p>Update the app icon if the user is not trying to resize the window.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="vtki.BackgroundPlotter.window_size">
+<code class="descname">window_size</code><a class="headerlink" href="#vtki.BackgroundPlotter.window_size" title="Permalink to this definition">¶</a></dt>
+<dd><p>returns render window size</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="vtki.ScaledPlotter">
+<em class="property">class </em><code class="descclassname">vtki.</code><code class="descname">ScaledPlotter</code><span class="sig-paren">(</span><em>xscale=1.0</em>, <em>yscale=1.0</em>, <em>zscale=1.0</em>, <em>show=True</em>, <em>app=None</em>, <em>continuous_update=False</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#vtki.ScaledPlotter" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">vtki.qt_plotting.BackgroundPlotter</span></code></p>
+<p>An extension of the <code class="docutils literal notranslate"><span class="pre">vtki.BackgroundPlotter</span></code> that has
+interactive widgets for scaling the axes in the rendering scene.</p>
+</dd></dl>
+
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="utilities.html" class="btn btn-neutral float-right" title="Utilities" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="ipy_tools.html" class="btn btn-neutral float-left" title="IPython Tools" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2017-2019, Alex Kaszynski
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

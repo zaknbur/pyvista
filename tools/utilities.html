@@ -1,0 +1,348 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Utilities &mdash; vtki 0.17.5 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js"></script>
+        <script type="text/javascript" src="../_static/copybutton.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/copybutton.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/gallery.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/style.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/copybutton.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="prev" title="vtki PyQt Interface" href="qt_plotting.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> vtki
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.17.5
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../index.html">vtki Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../why.html">Why?</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Getting Started</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../getting-started/installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../getting-started/simple.html">Basic API Usage</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Data Types</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../types/common.html">Datasets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../types/common.html#the-common-model">The Common Model</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../types/points.html">Point Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../types/point-grids.html">Point-Based Grids</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../types/grids.html">Gridded Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../types/container.html">Multiple Block Datasets</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Examples</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../examples/index.html">Loading and Creating Meshes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../examples/index.html#filtering">Filtering</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../examples/index.html#plotting-examples">Plotting Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../external_examples.html">External Examples</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Tools</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="geometric.html">Geometric Objects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="plotting.html">Plotting</a></li>
+<li class="toctree-l1"><a class="reference internal" href="filters.html">Filters</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ipy_tools.html">IPython Tools</a></li>
+<li class="toctree-l1"><a class="reference internal" href="qt_plotting.html">vtki PyQt Interface</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Utilities</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">vtki</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>Utilities</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/tools/utilities.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="module-vtki.utilities">
+<span id="utilities"></span><h1>Utilities<a class="headerlink" href="#module-vtki.utilities" title="Permalink to this headline">¶</a></h1>
+<p>Supporting functions for polydata and grid objects</p>
+<dl class="function">
+<dt id="vtki.wrap">
+<code class="descclassname">vtki.</code><code class="descname">wrap</code><span class="sig-paren">(</span><em>vtkdataset</em><span class="sig-paren">)</span><a class="headerlink" href="#vtki.wrap" title="Permalink to this definition">¶</a></dt>
+<dd><p>This is a convenience method to safely wrap any given VTK data object
+to its appropriate <code class="docutils literal notranslate"><span class="pre">vtki</span></code> data object.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="vtki.read">
+<code class="descclassname">vtki.</code><code class="descname">read</code><span class="sig-paren">(</span><em>filename</em>, <em>attrs=None</em><span class="sig-paren">)</span><a class="headerlink" href="#vtki.read" title="Permalink to this definition">¶</a></dt>
+<dd><p>This will read any VTK file! It will figure out what reader to use
+then wrap the VTK object for use in <code class="docutils literal notranslate"><span class="pre">vtki</span></code>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>attrs</strong> (<em>dict</em><em>, </em><em>optional</em>) – A dictionary of attributes to call on the reader. Keys of dictionary are
+the attribute/method names and values are the arguments passed to those
+calls. If you do not have any attributes to call, pass <code class="docutils literal notranslate"><span class="pre">None</span></code> as the
+value.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="vtki.read_exodus">
+<code class="descclassname">vtki.</code><code class="descname">read_exodus</code><span class="sig-paren">(</span><em>filename</em>, <em>animate_mode_shapes=True</em>, <em>apply_displacements=True</em>, <em>displacement_magnitude=1.0</em>, <em>enabled_sidesets=None</em><span class="sig-paren">)</span><a class="headerlink" href="#vtki.read_exodus" title="Permalink to this definition">¶</a></dt>
+<dd><p>Read an ExodusII file (<code class="docutils literal notranslate"><span class="pre">'.e'</span></code> or <code class="docutils literal notranslate"><span class="pre">'.exo'</span></code>)</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="vtki.read_texture">
+<code class="descclassname">vtki.</code><code class="descname">read_texture</code><span class="sig-paren">(</span><em>filename</em>, <em>attrs=None</em><span class="sig-paren">)</span><a class="headerlink" href="#vtki.read_texture" title="Permalink to this definition">¶</a></dt>
+<dd><p>Loads a <code class="docutils literal notranslate"><span class="pre">vtkTexture</span></code> from an image file.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="vtki.read_legacy">
+<code class="descclassname">vtki.</code><code class="descname">read_legacy</code><span class="sig-paren">(</span><em>filename</em><span class="sig-paren">)</span><a class="headerlink" href="#vtki.read_legacy" title="Permalink to this definition">¶</a></dt>
+<dd><p>Use VTK’s legacy reader to read a file</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="vtki.lines_from_points">
+<code class="descclassname">vtki.</code><code class="descname">lines_from_points</code><span class="sig-paren">(</span><em>points</em><span class="sig-paren">)</span><a class="headerlink" href="#vtki.lines_from_points" title="Permalink to this definition">¶</a></dt>
+<dd><p>Generates line from points.  Assumes points are ordered as line segments.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>points</strong> (<em>np.ndarray</em>) – <p>Points representing line segments.  For example, two line segments
+would be represented as:</p>
+<p>np.array([[0, 0, 0], [1, 0, 0], [1, 0, 0], [1, 1, 0]])</p>
+</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>lines</strong> – PolyData with lines and cells.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="../types/points.html#vtki.PolyData" title="vtki.PolyData">vtki.PolyData</a></p>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<p>This example plots two line segments at right angles to each other line.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">vtki</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">points</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">]])</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">lines</span> <span class="o">=</span> <span class="n">vtki</span><span class="o">.</span><span class="n">lines_from_points</span><span class="p">(</span><span class="n">points</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">lines</span><span class="o">.</span><span class="n">plot</span><span class="p">()</span> <span class="c1"># doctest:+SKIP</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="function">
+<dt id="vtki.vtk_points">
+<code class="descclassname">vtki.</code><code class="descname">vtk_points</code><span class="sig-paren">(</span><em>points</em>, <em>deep=True</em><span class="sig-paren">)</span><a class="headerlink" href="#vtki.vtk_points" title="Permalink to this definition">¶</a></dt>
+<dd><p>Convert numpy points to a vtkPoints object</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="vtki.vector_poly_data">
+<code class="descclassname">vtki.</code><code class="descname">vector_poly_data</code><span class="sig-paren">(</span><em>orig</em>, <em>vec</em><span class="sig-paren">)</span><a class="headerlink" href="#vtki.vector_poly_data" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates a vtkPolyData object composed of vectors</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="vtki.fit_plane_to_points">
+<code class="descclassname">vtki.</code><code class="descname">fit_plane_to_points</code><span class="sig-paren">(</span><em>points</em>, <em>return_meta=False</em><span class="sig-paren">)</span><a class="headerlink" href="#vtki.fit_plane_to_points" title="Permalink to this definition">¶</a></dt>
+<dd><p>Fits a plane to a set of points</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>points</strong> (<em>np.ndarray</em>) – Size n by 3 array of points to fit a plane through</p></li>
+<li><p><strong>return_meta</strong> (<em>bool</em>) – If true, also returns the center and normal used to generate the plane</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="vtki.trans_from_matrix">
+<code class="descclassname">vtki.</code><code class="descname">trans_from_matrix</code><span class="sig-paren">(</span><em>matrix</em><span class="sig-paren">)</span><a class="headerlink" href="#vtki.trans_from_matrix" title="Permalink to this definition">¶</a></dt>
+<dd><p>Convert a vtk matrix to a numpy.ndarray</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="vtki.set_error_output_file">
+<code class="descclassname">vtki.</code><code class="descname">set_error_output_file</code><span class="sig-paren">(</span><em>filename</em><span class="sig-paren">)</span><a class="headerlink" href="#vtki.set_error_output_file" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets a file to write out the VTK errors</p>
+</dd></dl>
+
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+      
+        <a href="qt_plotting.html" class="btn btn-neutral float-left" title="vtki PyQt Interface" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2017-2019, Alex Kaszynski
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

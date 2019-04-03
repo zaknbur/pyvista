@@ -1,0 +1,13 @@
+
+:orphan:
+
+.. _sphx_glr_examples_01-filter_sg_execution_times:
+
+Computation times
+=================
+**00:24.563** total execution time for **examples_01-filter** files:
+
+- **00:19.052**: :ref:`sphx_glr_examples_01-filter_compute-volume.py` (``compute-volume.py``)
+- **00:03.608**: :ref:`sphx_glr_examples_01-filter_volume-smoothing.py` (``volume-smoothing.py``)
+- **00:01.333**: :ref:`sphx_glr_examples_01-filter_using-filters.py` (``using-filters.py``)
+- **00:00.570**: :ref:`sphx_glr_examples_01-filter_poly-ray-trace.py` (``poly-ray-trace.py``)

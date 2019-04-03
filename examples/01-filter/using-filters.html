@@ -1,0 +1,333 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Using Common Filters &mdash; vtki 0.17.5 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../_static/language_data.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js"></script>
+        <script type="text/javascript" src="../../_static/copybutton.js"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/copybutton.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/gallery.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/style.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/copybutton.css" type="text/css" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Volume Smoothing" href="volume-smoothing.html" />
+    <link rel="prev" title="Ray Tracing" href="poly-ray-trace.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> vtki
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.17.5
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../index.html">vtki Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../why.html">Why?</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Getting Started</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../getting-started/installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../getting-started/simple.html">Basic API Usage</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Data Types</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../types/common.html">Datasets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../types/common.html#the-common-model">The Common Model</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../types/points.html">Point Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../types/point-grids.html">Point-Based Grids</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../types/grids.html">Gridded Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../types/container.html">Multiple Block Datasets</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Examples</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../index.html">Loading and Creating Meshes</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html#filtering">Filtering</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="compute-volume.html">Volumetric Analysis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="poly-ray-trace.html">Ray Tracing</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Using Common Filters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#filter-pipeline">Filter Pipeline</a></li>
+<li class="toctree-l2"><a class="reference internal" href="volume-smoothing.html">Volume Smoothing</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../index.html#plotting-examples">Plotting Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../external_examples.html">External Examples</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Tools</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../tools/geometric.html">Geometric Objects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../tools/plotting.html">Plotting</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../tools/filters.html">Filters</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../tools/ipy_tools.html">IPython Tools</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../tools/qt_plotting.html">vtki PyQt Interface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../tools/utilities.html">Utilities</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">vtki</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../index.html">Loading and Creating Meshes</a> &raquo;</li>
+        
+      <li>Using Common Filters</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../_sources/examples/01-filter/using-filters.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="sphx-glr-download-link-note admonition note">
+<p class="admonition-title">Note</p>
+<p>Click <a class="reference internal" href="#sphx-glr-download-examples-01-filter-using-filters-py"><span class="std std-ref">here</span></a> to download the full example code</p>
+</div>
+<div class="sphx-glr-example-title section" id="using-common-filters">
+<span id="sphx-glr-examples-01-filter-using-filters-py"></span><h1>Using Common Filters<a class="headerlink" href="#using-common-filters" title="Permalink to this headline">¶</a></h1>
+<p>Using common filters like thresholding and clipping
+<code class="docutils literal notranslate"><span class="pre">vtki</span></code> wrapped data objects have a suite of common filters ready for immediate
+use directly on the object. These filters include the following
+(see <a class="reference internal" href="../../tools/filters.html#filters-ref"><span class="std std-ref">Filters</span></a> for a complete list):</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">slice</span></code>: creates a single slice through the input dataset on a user defined plane</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">slice_orthogonal</span></code>: creates a <code class="docutils literal notranslate"><span class="pre">MultiBlock</span></code> dataset of three orthogonal slices</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">slice_along_axis</span></code>: creates a <code class="docutils literal notranslate"><span class="pre">MultiBlock</span></code> dataset of many slices along a specified axis</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">threshold</span></code>: Thresholds a dataset by a single value or range of values</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">threshold_percent</span></code>: Threshold by percentages of the scalar range</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">clip</span></code>: Clips the dataset by a user defined plane</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">outline_corners</span></code>: Outlines the corners of the data extent</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">extract_geometry</span></code>: Extract surface geometry</p></li>
+</ul>
+<p>To use these filters, call the method of your choice directly on your data
+object:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">vtki</span>
+<span class="kn">from</span> <span class="nn">vtki</span> <span class="k">import</span> <span class="n">examples</span>
+
+<span class="n">dataset</span> <span class="o">=</span> <span class="n">examples</span><span class="o">.</span><span class="n">load_uniform</span><span class="p">()</span>
+
+<span class="c1"># Apply a threshold over a data range</span>
+<span class="n">result</span> <span class="o">=</span> <span class="n">dataset</span><span class="o">.</span><span class="n">threshold</span><span class="p">([</span><span class="mi">100</span><span class="p">,</span> <span class="mi">500</span><span class="p">])</span>
+</pre></div>
+</div>
+<p>And now there is a thresholded version of the input dataset in the new
+<code class="docutils literal notranslate"><span class="pre">result</span></code> object. To learn more about what keyword arguments are available to
+alter how filters are executed, print the docstring for any filter attached to
+<code class="docutils literal notranslate"><span class="pre">vtki</span></code> objects with either <code class="docutils literal notranslate"><span class="pre">help(dataset.threshold)</span></code> or using <code class="docutils literal notranslate"><span class="pre">shift+tab</span></code>
+in an IPython environment.</p>
+<p>We can now plot this filtered dataset along side an outline of the original
+dataset</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">p</span> <span class="o">=</span> <span class="n">vtki</span><span class="o">.</span><span class="n">Plotter</span><span class="p">()</span>
+<span class="n">p</span><span class="o">.</span><span class="n">add_mesh</span><span class="p">(</span><span class="n">dataset</span><span class="o">.</span><span class="n">outline</span><span class="p">(),</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;k&#39;</span><span class="p">)</span>
+<span class="n">p</span><span class="o">.</span><span class="n">add_mesh</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
+<span class="n">p</span><span class="o">.</span><span class="n">camera_position</span> <span class="o">=</span> <span class="p">[</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">3</span><span class="p">]</span>
+<span class="n">p</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+<img alt="../../_images/sphx_glr_using-filters_001.png" class="sphx-glr-single-img" src="../../_images/sphx_glr_using-filters_001.png" />
+</div>
+<div class="section" id="filter-pipeline">
+<h1>Filter Pipeline<a class="headerlink" href="#filter-pipeline" title="Permalink to this headline">¶</a></h1>
+<p>In VTK, filters are often used in a pipeline where each algorithm passes its
+output to the next filtering algorithm. In <code class="docutils literal notranslate"><span class="pre">vtki</span></code>, we can mimic the filtering
+pipeline through a chain; attaching each filter to the last filter.
+In the following example, several filters are chained together:</p>
+<ol class="arabic simple">
+<li><p>First, and empty <code class="docutils literal notranslate"><span class="pre">threshold</span></code> filter to clean out any <code class="docutils literal notranslate"><span class="pre">NaN</span></code> values.</p></li>
+<li><p>Use an <code class="docutils literal notranslate"><span class="pre">elevation</span></code> filter to generate scalar values corresponding to height.</p></li>
+<li><p>Use the <code class="docutils literal notranslate"><span class="pre">clip</span></code> filter to cut the dataset in half.</p></li>
+<li><p>Create three slices along each axial plane using the <code class="docutils literal notranslate"><span class="pre">slice_orthogonal</span></code> filter.</p></li>
+</ol>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Apply a filtering chain</span>
+<span class="n">result</span> <span class="o">=</span> <span class="n">dataset</span><span class="o">.</span><span class="n">threshold</span><span class="p">()</span><span class="o">.</span><span class="n">elevation</span><span class="p">()</span><span class="o">.</span><span class="n">clip</span><span class="p">(</span><span class="n">normal</span><span class="o">=</span><span class="s1">&#39;z&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">slice_orthogonal</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>And to view this filtered data, simply call the <code class="docutils literal notranslate"><span class="pre">plot</span></code> method
+(<code class="docutils literal notranslate"><span class="pre">result.plot()</span></code>) or create a rendering scene:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">p</span> <span class="o">=</span> <span class="n">vtki</span><span class="o">.</span><span class="n">Plotter</span><span class="p">()</span>
+<span class="n">p</span><span class="o">.</span><span class="n">add_mesh</span><span class="p">(</span><span class="n">dataset</span><span class="o">.</span><span class="n">outline</span><span class="p">(),</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;k&#39;</span><span class="p">)</span>
+<span class="n">p</span><span class="o">.</span><span class="n">add_mesh</span><span class="p">(</span><span class="n">result</span><span class="p">,</span> <span class="n">scalars</span><span class="o">=</span><span class="s1">&#39;Elevation&#39;</span><span class="p">)</span>
+<span class="n">p</span><span class="o">.</span><span class="n">view_isometric</span><span class="p">()</span>
+<span class="n">p</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+<img alt="../../_images/sphx_glr_using-filters_002.png" class="sphx-glr-single-img" src="../../_images/sphx_glr_using-filters_002.png" />
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  1.333 seconds)</p>
+<div class="sphx-glr-footer class sphx-glr-footer-example docutils container" id="sphx-glr-download-examples-01-filter-using-filters-py">
+<div class="sphx-glr-download docutils container">
+<p><a class="reference download internal" download="" href="../../_downloads/0d6d5b94e6a5606afcceab65aba03616/using-filters.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">using-filters.py</span></code></a></p>
+</div>
+<div class="sphx-glr-download docutils container">
+<p><a class="reference download internal" download="" href="../../_downloads/2289b249c09a4286ca15abf6594cc053/using-filters.ipynb"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Jupyter</span> <span class="pre">notebook:</span> <span class="pre">using-filters.ipynb</span></code></a></p>
+</div>
+</div>
+<p class="sphx-glr-signature"><a class="reference external" href="https://sphinx-gallery.readthedocs.io">Gallery generated by Sphinx-Gallery</a></p>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="volume-smoothing.html" class="btn btn-neutral float-right" title="Volume Smoothing" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="poly-ray-trace.html" class="btn btn-neutral float-left" title="Ray Tracing" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2017-2019, Alex Kaszynski
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
