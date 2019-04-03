@@ -1,0 +1,427 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Multiple Block Datasets &mdash; vtki 0.17.5 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js"></script>
+        <script type="text/javascript" src="../_static/copybutton.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/copybutton.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/gallery.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/style.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/copybutton.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Loading and Creating Meshes" href="../examples/index.html" />
+    <link rel="prev" title="Gridded Data" href="grids.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> vtki
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.17.5
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../index.html">vtki Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../why.html">Why?</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Getting Started</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../getting-started/installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../getting-started/simple.html">Basic API Usage</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Data Types</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="common.html">Datasets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="common.html#the-common-model">The Common Model</a></li>
+<li class="toctree-l1"><a class="reference internal" href="points.html">Point Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="point-grids.html">Point-Based Grids</a></li>
+<li class="toctree-l1"><a class="reference internal" href="grids.html">Gridded Data</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Multiple Block Datasets</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Examples</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../examples/index.html">Loading and Creating Meshes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../examples/index.html#filtering">Filtering</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../examples/index.html#plotting-examples">Plotting Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../external_examples.html">External Examples</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Tools</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../tools/geometric.html">Geometric Objects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tools/plotting.html">Plotting</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tools/filters.html">Filters</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tools/ipy_tools.html">IPython Tools</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tools/qt_plotting.html">vtki PyQt Interface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tools/utilities.html">Utilities</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">vtki</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>Multiple Block Datasets</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/types/container.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="module-vtki.container">
+<span id="multiple-block-datasets"></span><h1>Multiple Block Datasets<a class="headerlink" href="#module-vtki.container" title="Permalink to this headline">¶</a></h1>
+<p>Container to mimic <code class="docutils literal notranslate"><span class="pre">vtkMultiBlockDataSet</span></code> objects. These classes hold many
+VTK datasets in one object that can be passed to VTK algorithms and <code class="docutils literal notranslate"><span class="pre">vtki</span></code>
+filtering/plotting routines.</p>
+<p class="rubric">Attributes</p>
+<table class="longtable docutils align-center">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+</tbody>
+</table>
+<p class="rubric">Methods</p>
+<table class="longtable docutils align-center">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+</tbody>
+</table>
+<dl class="class">
+<dt id="vtki.MultiBlock">
+<em class="property">class </em><code class="descclassname">vtki.</code><code class="descname">MultiBlock</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#vtki.MultiBlock" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">vtkCommonDataModelPython.vtkMultiBlockDataSet</span></code></p>
+<p>A container class to hold many data sets which can be iterated over.
+This wraps/extends the <code class="docutils literal notranslate"><span class="pre">vtkMultiBlockDataSet</span></code> class in VTK so that we can
+easily plot these data sets and use the container in a Pythonic manner.</p>
+<dl class="method">
+<dt id="vtki.MultiBlock.append">
+<code class="descname">append</code><span class="sig-paren">(</span><em>data</em><span class="sig-paren">)</span><a class="headerlink" href="#vtki.MultiBlock.append" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add a data set to the next block index</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="vtki.MultiBlock.bounds">
+<code class="descname">bounds</code><a class="headerlink" href="#vtki.MultiBlock.bounds" title="Permalink to this definition">¶</a></dt>
+<dd><p>Finds min/max for bounds across blocks</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>length 6 tuple of floats containing min/max along each axis</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>tuple(float)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="vtki.MultiBlock.combine">
+<code class="descname">combine</code><span class="sig-paren">(</span><em>merge_points=False</em><span class="sig-paren">)</span><a class="headerlink" href="#vtki.MultiBlock.combine" title="Permalink to this definition">¶</a></dt>
+<dd><p>Appends all blocks into a single unstructured grid.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>merge_points</strong> (<em>bool</em><em>, </em><em>optional</em>) – Merge coincidental points.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="vtki.MultiBlock.extract_geometry">
+<code class="descname">extract_geometry</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#vtki.MultiBlock.extract_geometry" title="Permalink to this definition">¶</a></dt>
+<dd><p>Combines the geomertry of all blocks into a single <code class="docutils literal notranslate"><span class="pre">PolyData</span></code>
+object. Place this filter at the end of a pipeline before a polydata
+consumer such as a polydata mapper to extract geometry from all blocks
+and append them to one polydata object.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="vtki.MultiBlock.get">
+<code class="descname">get</code><span class="sig-paren">(</span><em>index</em><span class="sig-paren">)</span><a class="headerlink" href="#vtki.MultiBlock.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get a block by its index or name (if the name is non-unique then
+returns the first occurence)</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="vtki.MultiBlock.get_block_name">
+<code class="descname">get_block_name</code><span class="sig-paren">(</span><em>index</em><span class="sig-paren">)</span><a class="headerlink" href="#vtki.MultiBlock.get_block_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the string name of the block at the given index</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="vtki.MultiBlock.get_data_range">
+<code class="descname">get_data_range</code><span class="sig-paren">(</span><em>name</em><span class="sig-paren">)</span><a class="headerlink" href="#vtki.MultiBlock.get_data_range" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the min/max of a scalar given its name across all blocks</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="vtki.MultiBlock.get_index_by_name">
+<code class="descname">get_index_by_name</code><span class="sig-paren">(</span><em>name</em><span class="sig-paren">)</span><a class="headerlink" href="#vtki.MultiBlock.get_index_by_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>Find the index number by block name</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="vtki.MultiBlock.keys">
+<code class="descname">keys</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#vtki.MultiBlock.keys" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get all the block names in the dataset</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="vtki.MultiBlock.n_blocks">
+<code class="descname">n_blocks</code><a class="headerlink" href="#vtki.MultiBlock.n_blocks" title="Permalink to this definition">¶</a></dt>
+<dd><p>The total number of blocks set</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="vtki.MultiBlock.next">
+<code class="descname">next</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#vtki.MultiBlock.next" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the next block from the iterator</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="vtki.MultiBlock.plot">
+<code class="descname">plot</code><span class="sig-paren">(</span><em>off_screen=False</em>, <em>full_screen=False</em>, <em>screenshot=None</em>, <em>interactive=True</em>, <em>cpos=None</em>, <em>window_size=None</em>, <em>show_bounds=False</em>, <em>show_axes=True</em>, <em>notebook=None</em>, <em>background=None</em>, <em>text=''</em>, <em>return_img=False</em>, <em>eye_dome_lighting=False</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#vtki.MultiBlock.plot" title="Permalink to this definition">¶</a></dt>
+<dd><p>Convenience plotting function for a vtk or numpy object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>item</strong> (<em>vtk</em><em> or </em><em>numpy object</em>) – VTK object or numpy array to be plotted.</p></li>
+<li><p><strong>off_screen</strong> (<em>bool</em>) – Plots off screen when True.  Helpful for saving screenshots
+without a window popping up.</p></li>
+<li><p><strong>full_screen</strong> (<em>bool</em><em>, </em><em>optional</em>) – Opens window in full screen.  When enabled, ignores window_size.
+Default False.</p></li>
+<li><p><strong>screenshot</strong> (<em>str</em><em> or </em><em>bool</em><em>, </em><em>optional</em>) – <p>Saves screenshot to file when enabled.  See:
+help(vtkinterface.Plotter.screenshot).  Default disabled.</p>
+<p>When True, takes screenshot and returns numpy array of image.</p>
+</p></li>
+<li><p><strong>window_size</strong> (<em>list</em><em>, </em><em>optional</em>) – Window size in pixels.  Defaults to [1024, 768]</p></li>
+<li><p><strong>show_bounds</strong> (<em>bool</em><em>, </em><em>optional</em>) – Shows mesh bounds when True.  Default False. Alias <code class="docutils literal notranslate"><span class="pre">show_grid</span></code> also
+accepted.</p></li>
+<li><p><strong>notebook</strong> (<em>bool</em><em>, </em><em>optional</em>) – When True, the resulting plot is placed inline a jupyter notebook.
+Assumes a jupyter console is active.</p></li>
+<li><p><strong>show_axes</strong> (<em>bool</em><em>, </em><em>optional</em>) – Shows a vtk axes widget.  Enabled by default.</p></li>
+<li><p><strong>text</strong> (<em>str</em><em>, </em><em>optional</em>) – Adds text at the bottom of the plot.</p></li>
+<li><p><strong>**kwargs</strong> (<em>optional keyword arguments</em>) – See help(Plotter.add_mesh) for additional options.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><ul class="simple">
+<li><p><strong>cpos</strong> (<em>list</em>) – List of camera position, focal point, and view up.</p></li>
+<li><p><strong>img</strong> (<em>numpy.ndarray</em>) – Array containing pixel RGB and alpha.  Sized:
+[Window height x Window width x 3] for transparent_background=False
+[Window height x Window width x 4] for transparent_background=True
+Returned only when screenshot enabled</p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="vtki.MultiBlock.pop">
+<code class="descname">pop</code><span class="sig-paren">(</span><em>index</em><span class="sig-paren">)</span><a class="headerlink" href="#vtki.MultiBlock.pop" title="Permalink to this definition">¶</a></dt>
+<dd><p>Pops off a block at the specified index</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="vtki.MultiBlock.save">
+<code class="descname">save</code><span class="sig-paren">(</span><em>filename</em>, <em>binary=True</em><span class="sig-paren">)</span><a class="headerlink" href="#vtki.MultiBlock.save" title="Permalink to this definition">¶</a></dt>
+<dd><p>Writes a <code class="docutils literal notranslate"><span class="pre">MultiBlock</span></code> dataset to disk.</p>
+<p>Written file may be an ASCII or binary vtm file.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>filename</strong> (<em>str</em>) – Filename of mesh to be written.  File type is inferred from
+the extension of the filename unless overridden with
+ftype.  Can be one of the following types (.vtm or .vtmb)</p></li>
+<li><p><strong>binary</strong> (<em>bool</em><em>, </em><em>optional</em>) – Writes the file as binary when True and ASCII when False.</p></li>
+</ul>
+</dd>
+</dl>
+<p class="rubric">Notes</p>
+<p>Binary files write much faster than ASCII and have a smaller
+file size.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="vtki.MultiBlock.set_block_name">
+<code class="descname">set_block_name</code><span class="sig-paren">(</span><em>index</em>, <em>name</em><span class="sig-paren">)</span><a class="headerlink" href="#vtki.MultiBlock.set_block_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set a block’s string name at the specified index</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../examples/index.html" class="btn btn-neutral float-right" title="Loading and Creating Meshes" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="grids.html" class="btn btn-neutral float-left" title="Gridded Data" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2017-2019, Alex Kaszynski
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

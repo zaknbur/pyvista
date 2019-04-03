@@ -1,0 +1,396 @@
+:orphan:
+
+
+
+.. _sphx_glr_examples:
+
+Here is a gallery of all the quick examples demonstrating what ``vtki`` can do!
+
+
+.. raw:: html
+
+    <div style='clear:both'></div>
+
+
+
+.. _sphx_glr_examples_00-load:
+
+Loading and Creating Meshes
+===========================
+
+
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbcontainer" tooltip="Creating a PolyData object from NumPy arrays">
+
+.. only:: html
+
+    .. figure:: /examples/00-load/images/thumb/sphx_glr_create-poly_thumb.png
+
+        :ref:`sphx_glr_examples_00-load_create-poly.py`
+
+.. raw:: html
+
+    </div>
+
+
+.. toctree::
+   :hidden:
+
+   /examples/00-load/create-poly
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbcontainer" tooltip="Create a StructuredGrid surface from NumPy arrays">
+
+.. only:: html
+
+    .. figure:: /examples/00-load/images/thumb/sphx_glr_create-structured-surface_thumb.png
+
+        :ref:`sphx_glr_examples_00-load_create-structured-surface.py`
+
+.. raw:: html
+
+    </div>
+
+
+.. toctree::
+   :hidden:
+
+   /examples/00-load/create-structured-surface
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbcontainer" tooltip="Create a simple uniform grid from a 3D NumPy array of values.">
+
+.. only:: html
+
+    .. figure:: /examples/00-load/images/thumb/sphx_glr_create-uniform-grid_thumb.png
+
+        :ref:`sphx_glr_examples_00-load_create-uniform-grid.py`
+
+.. raw:: html
+
+    </div>
+
+
+.. toctree::
+   :hidden:
+
+   /examples/00-load/create-uniform-grid
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbcontainer" tooltip="Create an irregular, unstructured grid from NumPy arrays">
+
+.. only:: html
+
+    .. figure:: /examples/00-load/images/thumb/sphx_glr_create-unstructured-surface_thumb.png
+
+        :ref:`sphx_glr_examples_00-load_create-unstructured-surface.py`
+
+.. raw:: html
+
+    </div>
+
+
+.. toctree::
+   :hidden:
+
+   /examples/00-load/create-unstructured-surface
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbcontainer" tooltip="Read a dataset from a known file type">
+
+.. only:: html
+
+    .. figure:: /examples/00-load/images/thumb/sphx_glr_read-file_thumb.png
+
+        :ref:`sphx_glr_examples_00-load_read-file.py`
+
+.. raw:: html
+
+    </div>
+
+
+.. toctree::
+   :hidden:
+
+   /examples/00-load/read-file
+.. raw:: html
+
+    <div style='clear:both'></div>
+
+
+
+.. _sphx_glr_examples_01-filter:
+
+Filtering
+=========
+
+
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbcontainer" tooltip=" Calculate mass properties such as the volume or area of datasets">
+
+.. only:: html
+
+    .. figure:: /examples/01-filter/images/thumb/sphx_glr_compute-volume_thumb.png
+
+        :ref:`sphx_glr_examples_01-filter_compute-volume.py`
+
+.. raw:: html
+
+    </div>
+
+
+.. toctree::
+   :hidden:
+
+   /examples/01-filter/compute-volume
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbcontainer" tooltip="Single line segment ray tracing for PolyData objects.">
+
+.. only:: html
+
+    .. figure:: /examples/01-filter/images/thumb/sphx_glr_poly-ray-trace_thumb.png
+
+        :ref:`sphx_glr_examples_01-filter_poly-ray-trace.py`
+
+.. raw:: html
+
+    </div>
+
+
+.. toctree::
+   :hidden:
+
+   /examples/01-filter/poly-ray-trace
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbcontainer" tooltip="Using common filters like thresholding and clipping">
+
+.. only:: html
+
+    .. figure:: /examples/01-filter/images/thumb/sphx_glr_using-filters_thumb.png
+
+        :ref:`sphx_glr_examples_01-filter_using-filters.py`
+
+.. raw:: html
+
+    </div>
+
+
+.. toctree::
+   :hidden:
+
+   /examples/01-filter/using-filters
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbcontainer" tooltip="Smoothing rough edges of a volumetric surface">
+
+.. only:: html
+
+    .. figure:: /examples/01-filter/images/thumb/sphx_glr_volume-smoothing_thumb.png
+
+        :ref:`sphx_glr_examples_01-filter_volume-smoothing.py`
+
+.. raw:: html
+
+    </div>
+
+
+.. toctree::
+   :hidden:
+
+   /examples/01-filter/volume-smoothing
+.. raw:: html
+
+    <div style='clear:both'></div>
+
+
+
+.. _sphx_glr_examples_02-plot:
+
+Plotting Examples
+=================
+
+
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbcontainer" tooltip="This example demonstrates how to remove elements from a scene.">
+
+.. only:: html
+
+    .. figure:: /examples/02-plot/images/thumb/sphx_glr_plot-clear_thumb.png
+
+        :ref:`sphx_glr_examples_02-plot_plot-clear.py`
+
+.. raw:: html
+
+    </div>
+
+
+.. toctree::
+   :hidden:
+
+   /examples/02-plot/plot-clear
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbcontainer" tooltip="Eye-Dome Lighting (EDL) is a non-photorealistic, image-based shading technique designed to impr...">
+
+.. only:: html
+
+    .. figure:: /examples/02-plot/images/thumb/sphx_glr_plot-edl_thumb.png
+
+        :ref:`sphx_glr_examples_02-plot_plot-edl.py`
+
+.. raw:: html
+
+    </div>
+
+
+.. toctree::
+   :hidden:
+
+   /examples/02-plot/plot-edl
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbcontainer" tooltip="Generate a moving gif from an active plotter">
+
+.. only:: html
+
+    .. figure:: /examples/02-plot/images/thumb/sphx_glr_plot-gif_thumb.png
+
+        :ref:`sphx_glr_examples_02-plot_plot-gif.py`
+
+.. raw:: html
+
+    </div>
+
+
+.. toctree::
+   :hidden:
+
+   /examples/02-plot/plot-gif
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbcontainer" tooltip="Use vectors in a dataset to plot and orient glyphs/geometric objects.">
+
+.. only:: html
+
+    .. figure:: /examples/02-plot/images/thumb/sphx_glr_plot-glyphs_thumb.png
+
+        :ref:`sphx_glr_examples_02-plot_plot-glyphs.py`
+
+.. raw:: html
+
+    </div>
+
+
+.. toctree::
+   :hidden:
+
+   /examples/02-plot/plot-glyphs
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbcontainer" tooltip="Create an animated MP4 movie of a rendering scene">
+
+.. only:: html
+
+    .. figure:: /examples/02-plot/images/thumb/sphx_glr_plot-movie_thumb.png
+
+        :ref:`sphx_glr_examples_02-plot_plot-movie.py`
+
+.. raw:: html
+
+    </div>
+
+
+.. toctree::
+   :hidden:
+
+   /examples/02-plot/plot-movie
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbcontainer" tooltip=" Subplotting: having multiple scenes in a signle window">
+
+.. only:: html
+
+    .. figure:: /examples/02-plot/images/thumb/sphx_glr_plot-multi-window_thumb.png
+
+        :ref:`sphx_glr_examples_02-plot_plot-multi-window.py`
+
+.. raw:: html
+
+    </div>
+
+
+.. toctree::
+   :hidden:
+
+   /examples/02-plot/plot-multi-window
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbcontainer" tooltip="Plot a mesh&#x27;s scalar array with an opacity trasfer funciton">
+
+.. only:: html
+
+    .. figure:: /examples/02-plot/images/thumb/sphx_glr_plot-opacity_thumb.png
+
+        :ref:`sphx_glr_examples_02-plot_plot-opacity.py`
+
+.. raw:: html
+
+    </div>
+
+
+.. toctree::
+   :hidden:
+
+   /examples/02-plot/plot-opacity
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbcontainer" tooltip="Walk through of all the different capabilities of scalar bars and how a user can customize scal...">
+
+.. only:: html
+
+    .. figure:: /examples/02-plot/images/thumb/sphx_glr_plot-scalar-bars_thumb.png
+
+        :ref:`sphx_glr_examples_02-plot_plot-scalar-bars.py`
+
+.. raw:: html
+
+    </div>
+
+
+.. toctree::
+   :hidden:
+
+   /examples/02-plot/plot-scalar-bars
+.. raw:: html
+
+    <div style='clear:both'></div>
+
+
+
+.. only:: html
+
+ .. rst-class:: sphx-glr-signature
+
+    `Gallery generated by Sphinx-Gallery <https://sphinx-gallery.readthedocs.io>`_

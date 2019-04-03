@@ -1,0 +1,713 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Filters &mdash; vtki 0.17.5 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js"></script>
+        <script type="text/javascript" src="../_static/copybutton.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/copybutton.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/gallery.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/style.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/copybutton.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="IPython Tools" href="ipy_tools.html" />
+    <link rel="prev" title="Plotting" href="plotting.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> vtki
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.17.5
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../index.html">vtki Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../why.html">Why?</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Getting Started</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../getting-started/installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../getting-started/simple.html">Basic API Usage</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Data Types</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../types/common.html">Datasets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../types/common.html#the-common-model">The Common Model</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../types/points.html">Point Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../types/point-grids.html">Point-Based Grids</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../types/grids.html">Gridded Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../types/container.html">Multiple Block Datasets</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Examples</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../examples/index.html">Loading and Creating Meshes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../examples/index.html#filtering">Filtering</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../examples/index.html#plotting-examples">Plotting Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../external_examples.html">External Examples</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Tools</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="geometric.html">Geometric Objects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="plotting.html">Plotting</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Filters</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#dataset-filters">Dataset Filters</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="ipy_tools.html">IPython Tools</a></li>
+<li class="toctree-l1"><a class="reference internal" href="qt_plotting.html">vtki PyQt Interface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="utilities.html">Utilities</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">vtki</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>Filters</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/tools/filters.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="module-vtki.filters">
+<span id="filters"></span><span id="filters-ref"></span><h1>Filters<a class="headerlink" href="#module-vtki.filters" title="Permalink to this headline">¶</a></h1>
+<p>These classes hold methods to apply general filters to any data type.
+By inherritting these classes into the wrapped VTK data structures, a user
+can easily apply common filters in an intuitive manner.</p>
+<p class="rubric">Example</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">vtki</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">vtki</span> <span class="k">import</span> <span class="n">examples</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">dataset</span> <span class="o">=</span> <span class="n">examples</span><span class="o">.</span><span class="n">load_uniform</span><span class="p">()</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="c1"># Threshold</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">thresh</span> <span class="o">=</span> <span class="n">dataset</span><span class="o">.</span><span class="n">threshold</span><span class="p">([</span><span class="mi">100</span><span class="p">,</span> <span class="mi">500</span><span class="p">])</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="c1"># Slice</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">slc</span> <span class="o">=</span> <span class="n">dataset</span><span class="o">.</span><span class="n">slice</span><span class="p">()</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="c1"># Clip</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">clp</span> <span class="o">=</span> <span class="n">dataset</span><span class="o">.</span><span class="n">clip</span><span class="p">(</span><span class="n">invert</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="c1"># Contour</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">iso</span> <span class="o">=</span> <span class="n">dataset</span><span class="o">.</span><span class="n">contour</span><span class="p">()</span>
+</pre></div>
+</div>
+<div class="section" id="dataset-filters">
+<h2>Dataset Filters<a class="headerlink" href="#dataset-filters" title="Permalink to this headline">¶</a></h2>
+<p>The <a class="reference internal" href="#vtki.DataSetFilters" title="vtki.DataSetFilters"><code class="xref py py-class docutils literal notranslate"><span class="pre">vtki.DataSetFilters</span></code></a> is inherited by <a class="reference internal" href="../types/common.html#vtki.Common" title="vtki.Common"><code class="xref py py-class docutils literal notranslate"><span class="pre">vtki.Common</span></code></a> making
+all the the following filters available as callable methods directly from any
+<code class="docutils literal notranslate"><span class="pre">vtki</span></code> dataset.</p>
+<p class="rubric">Methods</p>
+<table class="longtable docutils align-center">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+</tbody>
+</table>
+<dl class="class">
+<dt id="vtki.DataSetFilters">
+<em class="property">class </em><code class="descclassname">vtki.</code><code class="descname">DataSetFilters</code><a class="headerlink" href="#vtki.DataSetFilters" title="Permalink to this definition">¶</a></dt>
+<dd><p>A set of common filters that can be applied to any vtkDataSet</p>
+<dl class="method">
+<dt id="vtki.DataSetFilters.cell_centers">
+<code class="descname">cell_centers</code><span class="sig-paren">(</span><em>vertex=True</em><span class="sig-paren">)</span><a class="headerlink" href="#vtki.DataSetFilters.cell_centers" title="Permalink to this definition">¶</a></dt>
+<dd><p>Generate points at the center of the cells in this dataset.
+These points can be used for placing glyphs / vectors.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>vertex</strong> (<em>bool</em>) – Enable/disable the generation of vertex cells.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="vtki.DataSetFilters.cell_data_to_point_data">
+<code class="descname">cell_data_to_point_data</code><span class="sig-paren">(</span><em>pass_cell_data=False</em><span class="sig-paren">)</span><a class="headerlink" href="#vtki.DataSetFilters.cell_data_to_point_data" title="Permalink to this definition">¶</a></dt>
+<dd><p>Transforms cell data (i.e., data specified per cell) into point data
+(i.e., data specified at cell points).
+The method of transformation is based on averaging the data values of
+all cells using a particular point. Optionally, the input cell data can
+be passed through to the output as well.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>pass_cell_data</strong> (<em>bool</em>) – If enabled, pass the input cell data through to the output</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="vtki.DataSetFilters.clip">
+<code class="descname">clip</code><span class="sig-paren">(</span><em>normal='x'</em>, <em>origin=None</em>, <em>invert=True</em><span class="sig-paren">)</span><a class="headerlink" href="#vtki.DataSetFilters.clip" title="Permalink to this definition">¶</a></dt>
+<dd><p>Clip a dataset by a plane by specifying the origin and normal. If no
+parameters are given the clip will occur in the center of that dataset</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>normal</strong> (<em>tuple</em><em>(</em><em>float</em><em>) or </em><em>str</em>) – Length 3 tuple for the normal vector direction. Can also be
+specified as a string conventional direction such as <code class="docutils literal notranslate"><span class="pre">'x'</span></code> for
+<code class="docutils literal notranslate"><span class="pre">(1,0,0)</span></code> or <code class="docutils literal notranslate"><span class="pre">'-x'</span></code> for <code class="docutils literal notranslate"><span class="pre">(-1,0,0)</span></code>, etc.</p></li>
+<li><p><strong>origin</strong> (<em>tuple</em><em>(</em><em>float</em><em>)</em>) – The center <code class="docutils literal notranslate"><span class="pre">(x,y,z)</span></code> coordinate of the plane on which the clip
+occurs</p></li>
+<li><p><strong>invert</strong> (<em>bool</em>) – Flag on whether to flip/invert the clip</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="vtki.DataSetFilters.clip_box">
+<code class="descname">clip_box</code><span class="sig-paren">(</span><em>bounds=None</em>, <em>invert=True</em>, <em>factor=0.35</em><span class="sig-paren">)</span><a class="headerlink" href="#vtki.DataSetFilters.clip_box" title="Permalink to this definition">¶</a></dt>
+<dd><p>Clips a dataset by a bounding box defined by the bounds. If no bounds
+are given, a corner of the dataset bounds will be removed.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>bounds</strong> (<em>tuple</em><em>(</em><em>float</em><em>)</em>) – Length 6 iterable of floats: (xmin, xmax, ymin, ymax, zmin, zmax)</p></li>
+<li><p><strong>invert</strong> (<em>bool</em>) – Flag on whether to flip/invert the clip</p></li>
+<li><p><strong>factor</strong> (<em>float</em><em>, </em><em>optional</em>) – If bounds are not given this is the factor along each axis to
+extract the default box.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="vtki.DataSetFilters.compute_cell_sizes">
+<code class="descname">compute_cell_sizes</code><span class="sig-paren">(</span><em>length=False</em>, <em>area=True</em>, <em>volume=True</em><span class="sig-paren">)</span><a class="headerlink" href="#vtki.DataSetFilters.compute_cell_sizes" title="Permalink to this definition">¶</a></dt>
+<dd><p>This filter computes sizes for 1D (length), 2D (area) and 3D (volume)
+cells.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>length</strong> (<em>bool</em>) – Specify whether or not to compute the length of 1D cells.</p></li>
+<li><p><strong>area</strong> (<em>bool</em>) – Specify whether or not to compute the area of 2D cells.</p></li>
+<li><p><strong>volume</strong> (<em>bool</em>) – Specify whether or not to compute the volume of 3D cells.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="vtki.DataSetFilters.connectivity">
+<code class="descname">connectivity</code><span class="sig-paren">(</span><em>largest=False</em><span class="sig-paren">)</span><a class="headerlink" href="#vtki.DataSetFilters.connectivity" title="Permalink to this definition">¶</a></dt>
+<dd><p>Find and label connected bodies/volumes. This adds an ID array to
+the point and cell data to distinguish seperate connected bodies.
+This applies a <code class="docutils literal notranslate"><span class="pre">vtkConnectivityFilter</span></code> filter which extracts cells
+that share common points and/or meet other connectivity criterion.
+(Cells that share vertices and meet other connectivity criterion such
+as scalar range are known as a region.)</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>largest</strong> (<em>bool</em>) – Extract the largest connected part of the mesh.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="vtki.DataSetFilters.contour">
+<code class="descname">contour</code><span class="sig-paren">(</span><em>isosurfaces=10</em>, <em>scalars=None</em>, <em>compute_normals=False</em>, <em>compute_gradients=False</em>, <em>compute_scalars=True</em>, <em>rng=None</em>, <em>preference='point'</em><span class="sig-paren">)</span><a class="headerlink" href="#vtki.DataSetFilters.contour" title="Permalink to this definition">¶</a></dt>
+<dd><p>Contours an input dataset by an array. <code class="docutils literal notranslate"><span class="pre">isosurfaces</span></code> can be an integer
+specifying the number of isosurfaces in the data range or an iterable set of
+values for explicitly setting the isosurfaces.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>isosurfaces</strong> (<em>int</em><em> or </em><em>iterable</em>) – Number of isosurfaces to compute across valid data range or an
+iterable of float values to explicitly use as the isosurfaces.</p></li>
+<li><p><strong>scalars</strong> (<em>str</em><em>, </em><em>optional</em>) – Name of scalars to threshold on. Defaults to currently active scalars.</p></li>
+<li><p><strong>compute_normals</strong> (<em>bool</em><em>, </em><em>optional</em>) – </p></li>
+<li><p><strong>compute_gradients</strong> (<em>bool</em><em>, </em><em>optional</em>) – Desc</p></li>
+<li><p><strong>compute_scalars</strong> (<em>bool</em><em>, </em><em>optional</em>) – Preserves the scalar values that are being contoured</p></li>
+<li><p><strong>rng</strong> (<em>tuple</em><em>(</em><em>float</em><em>)</em><em>, </em><em>optional</em>) – If an integer number of isosurfaces is specified, this is the range
+over which to generate contours. Default is the scalar arrays’s full
+data range.</p></li>
+<li><p><strong>preference</strong> (<em>str</em><em>, </em><em>optional</em>) – When scalars is specified, this is the perfered scalar type to
+search for in the dataset.  Must be either <code class="docutils literal notranslate"><span class="pre">'point'</span></code> or <code class="docutils literal notranslate"><span class="pre">'cell'</span></code></p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="vtki.DataSetFilters.delaunay_3d">
+<code class="descname">delaunay_3d</code><span class="sig-paren">(</span><em>alpha=0</em>, <em>tol=0.001</em>, <em>offset=2.5</em><span class="sig-paren">)</span><a class="headerlink" href="#vtki.DataSetFilters.delaunay_3d" title="Permalink to this definition">¶</a></dt>
+<dd><p>Constructs a 3D Delaunay triangulation of the mesh.
+This helps smooth out a rugged mesh.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>alpha</strong> (<em>float</em><em>, </em><em>optional</em>) – Distance value to control output of this filter. For a non-zero
+alpha value, only verts, edges, faces, or tetra contained within
+the circumsphere (of radius alpha) will be output. Otherwise, only
+tetrahedra will be output.</p></li>
+<li><p><strong>tol</strong> (<em>float</em><em>, </em><em>optional</em>) – tolerance to control discarding of closely spaced points.
+This tolerance is specified as a fraction of the diagonal length
+of the bounding box of the points.</p></li>
+<li><p><strong>offset</strong> (<em>float</em><em>, </em><em>optional</em>) – multiplier to control the size of the initial, bounding Delaunay
+triangulation.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="vtki.DataSetFilters.elevation">
+<code class="descname">elevation</code><span class="sig-paren">(</span><em>low_point=None</em>, <em>high_point=None</em>, <em>scalar_range=None</em>, <em>preference='point'</em>, <em>set_active=True</em><span class="sig-paren">)</span><a class="headerlink" href="#vtki.DataSetFilters.elevation" title="Permalink to this definition">¶</a></dt>
+<dd><p>Generate scalar values on a dataset.  The scalar values lie within a
+user specified range, and are generated by computing a projection of
+each dataset point onto a line.
+The line can be oriented arbitrarily.
+A typical example is to generate scalars based on elevation or height
+above a plane.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>low_point</strong> (<em>tuple</em><em>(</em><em>float</em><em>)</em><em>, </em><em>optional</em>) – The low point of the projection line in 3D space. Default is bottom
+center of the dataset. Otherwise pass a length 3 tuple(float).</p></li>
+<li><p><strong>high_point</strong> (<em>tuple</em><em>(</em><em>float</em><em>)</em><em>, </em><em>optional</em>) – The high point of the projection line in 3D space. Default is top
+center of the dataset. Otherwise pass a length 3 tuple(float).</p></li>
+<li><p><strong>scalar_range</strong> (<em>str</em><em> or </em><em>tuple</em><em>(</em><em>float</em><em>)</em><em>, </em><em>optional</em>) – The scalar range to project to the low and high points on the line
+that will be mapped to the dataset. If None given, the values will
+be computed from the elevation (Z component) range between the
+high and low points. Min and max of a range can be given as a length
+2 tuple(float). If <code class="docutils literal notranslate"><span class="pre">str</span></code> name of scalara array present in the
+dataset given, the valid range of that array will be used.</p></li>
+<li><p><strong>preference</strong> (<em>str</em><em>, </em><em>optional</em>) – When a scalar name is specified for <code class="docutils literal notranslate"><span class="pre">scalar_range</span></code>, this is the
+perfered scalar type to search for in the dataset.
+Must be either ‘point’ or ‘cell’.</p></li>
+<li><p><strong>set_active</strong> (<em>bool</em><em>, </em><em>optional</em>) – A boolean flag on whethter or not to set the new <cite>Elevation</cite> scalar
+as the active scalar array on the output dataset.</p></li>
+</ul>
+</dd>
+</dl>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This will create a scalar array named <cite>Elevation</cite> on the point data of
+the input dataset and overasdf write an array named <cite>Elevation</cite> if present.</p>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="vtki.DataSetFilters.extract_geometry">
+<code class="descname">extract_geometry</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#vtki.DataSetFilters.extract_geometry" title="Permalink to this definition">¶</a></dt>
+<dd><p>Extract the outer surface of a volume or structured grid dataset as
+PolyData. This will extract all 0D, 1D, and 2D cells producing the
+boundary faces of the dataset.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="vtki.DataSetFilters.glyph">
+<code class="descname">glyph</code><span class="sig-paren">(</span><em>orient=True</em>, <em>scale=True</em>, <em>factor=1.0</em>, <em>geom=None</em><span class="sig-paren">)</span><a class="headerlink" href="#vtki.DataSetFilters.glyph" title="Permalink to this definition">¶</a></dt>
+<dd><p>Copies a geometric representation (called a glyph) to every
+point in the input dataset.  The glyph may be oriented along
+the input vectors, and it may be scaled according to scalar
+data or vector magnitude.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>orient</strong> (<em>bool</em>) – Use the active vectors array to orient the the glyphs</p></li>
+<li><p><strong>scale</strong> (<em>bool</em>) – Use the active scalars to scale the glyphs</p></li>
+<li><p><strong>factor</strong> (<em>float</em>) – Scale factor applied to sclaing array</p></li>
+<li><p><strong>geom</strong> (<em>vtk.vtkDataSet</em>) – The geometry to use for the glyph</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="vtki.DataSetFilters.outline">
+<code class="descname">outline</code><span class="sig-paren">(</span><em>generate_faces=False</em><span class="sig-paren">)</span><a class="headerlink" href="#vtki.DataSetFilters.outline" title="Permalink to this definition">¶</a></dt>
+<dd><p>Produces an outline of the full extent for the input dataset.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>generate_faces</strong> (<em>bool</em><em>, </em><em>optional</em>) – Generate solid faces for the box. This is off by default</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="vtki.DataSetFilters.outline_corners">
+<code class="descname">outline_corners</code><span class="sig-paren">(</span><em>factor=0.2</em><span class="sig-paren">)</span><a class="headerlink" href="#vtki.DataSetFilters.outline_corners" title="Permalink to this definition">¶</a></dt>
+<dd><p>Produces an outline of the corners for the input dataset.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>factor</strong> (<em>float</em><em>, </em><em>optional</em>) – controls the relative size of the corners to the length of the
+corresponding bounds</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="vtki.DataSetFilters.slice">
+<code class="descname">slice</code><span class="sig-paren">(</span><em>normal='x'</em>, <em>origin=None</em>, <em>generate_triangles=False</em>, <em>contour=False</em><span class="sig-paren">)</span><a class="headerlink" href="#vtki.DataSetFilters.slice" title="Permalink to this definition">¶</a></dt>
+<dd><p>Slice a dataset by a plane at the specified origin and normal vector
+orientation. If no origin is specified, the center of the input dataset will
+be used.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>normal</strong> (<em>tuple</em><em>(</em><em>float</em><em>) or </em><em>str</em>) – Length 3 tuple for the normal vector direction. Can also be
+specified as a string conventional direction such as <code class="docutils literal notranslate"><span class="pre">'x'</span></code> for
+<code class="docutils literal notranslate"><span class="pre">(1,0,0)</span></code> or <code class="docutils literal notranslate"><span class="pre">'-x'</span></code> for <code class="docutils literal notranslate"><span class="pre">(-1,0,0)`</span></code>, etc.</p></li>
+<li><p><strong>origin</strong> (<em>tuple</em><em>(</em><em>float</em><em>)</em>) – The center (x,y,z) coordinate of the plane on which the slice occurs</p></li>
+<li><p><strong>generate_triangles</strong> (<em>bool</em><em>, </em><em>optional</em>) – If this is enabled (<code class="docutils literal notranslate"><span class="pre">False</span></code> by default), the output will be
+triangles otherwise, the output will be the intersection polygons.</p></li>
+<li><p><strong>contour</strong> (<em>bool</em><em>, </em><em>optional</em>) – If True, apply a <code class="docutils literal notranslate"><span class="pre">contour</span></code> filter after slicing</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="vtki.DataSetFilters.slice_along_axis">
+<code class="descname">slice_along_axis</code><span class="sig-paren">(</span><em>n=5</em>, <em>axis='x'</em>, <em>tolerance=None</em>, <em>generate_triangles=False</em>, <em>contour=False</em><span class="sig-paren">)</span><a class="headerlink" href="#vtki.DataSetFilters.slice_along_axis" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create many slices of the input dataset along a specified axis.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>n</strong> (<em>int</em>) – The number of slices to create</p></li>
+<li><p><strong>axis</strong> (<em>str</em><em> or </em><em>int</em>) – The axis to generate the slices along. Perpendicular to the slices.
+Can be string name (<code class="docutils literal notranslate"><span class="pre">'x'</span></code>, <code class="docutils literal notranslate"><span class="pre">'y'</span></code>, or <code class="docutils literal notranslate"><span class="pre">'z'</span></code>) or axis index
+(<code class="docutils literal notranslate"><span class="pre">0</span></code>, <code class="docutils literal notranslate"><span class="pre">1</span></code>, or <code class="docutils literal notranslate"><span class="pre">2</span></code>).</p></li>
+<li><p><strong>tolerance</strong> (<em>float</em><em>, </em><em>optional</em>) – The toleranceerance to the edge of the dataset bounds to create the slices</p></li>
+<li><p><strong>generate_triangles</strong> (<em>bool</em><em>, </em><em>optional</em>) – If this is enabled (<code class="docutils literal notranslate"><span class="pre">False</span></code> by default), the output will be
+triangles otherwise, the output will be the intersection polygons.</p></li>
+<li><p><strong>contour</strong> (<em>bool</em><em>, </em><em>optional</em>) – If True, apply a <code class="docutils literal notranslate"><span class="pre">contour</span></code> filter after slicing</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="vtki.DataSetFilters.slice_orthogonal">
+<code class="descname">slice_orthogonal</code><span class="sig-paren">(</span><em>x=None</em>, <em>y=None</em>, <em>z=None</em>, <em>generate_triangles=False</em>, <em>contour=False</em><span class="sig-paren">)</span><a class="headerlink" href="#vtki.DataSetFilters.slice_orthogonal" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates three orthogonal slices through the dataset on the three
+caresian planes. Yields a MutliBlock dataset of the three slices</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>x</strong> (<em>float</em>) – The X location of the YZ slice</p></li>
+<li><p><strong>y</strong> (<em>float</em>) – The Y location of the XZ slice</p></li>
+<li><p><strong>z</strong> (<em>float</em>) – The Z location of the XY slice</p></li>
+<li><p><strong>generate_triangles</strong> (<em>bool</em><em>, </em><em>optional</em>) – If this is enabled (<code class="docutils literal notranslate"><span class="pre">False</span></code> by default), the output will be
+triangles otherwise, the output will be the intersection polygons.</p></li>
+<li><p><strong>contour</strong> (<em>bool</em><em>, </em><em>optional</em>) – If True, apply a <code class="docutils literal notranslate"><span class="pre">contour</span></code> filter after slicing</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="vtki.DataSetFilters.split_bodies">
+<code class="descname">split_bodies</code><span class="sig-paren">(</span><em>label=False</em><span class="sig-paren">)</span><a class="headerlink" href="#vtki.DataSetFilters.split_bodies" title="Permalink to this definition">¶</a></dt>
+<dd><p>Find, label, and split connected bodies/volumes. This splits
+different connected bodies into blocks in a MultiBlock dataset.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>label</strong> (<em>bool</em>) – A flag on whether to keep the ID arrays given by the
+<code class="docutils literal notranslate"><span class="pre">connectivity</span></code> filter.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="vtki.DataSetFilters.texture_map_to_plane">
+<code class="descname">texture_map_to_plane</code><span class="sig-paren">(</span><em>origin=None</em>, <em>point_u=None</em>, <em>point_v=None</em>, <em>inplace=False</em>, <em>name='Texture Coordinates'</em><span class="sig-paren">)</span><a class="headerlink" href="#vtki.DataSetFilters.texture_map_to_plane" title="Permalink to this definition">¶</a></dt>
+<dd><p>Texture map this dataset to a user defined plane. This is often used
+to define a plane to texture map an image to this dataset. The plane
+defines the spatial reference and extent of that image.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>origin</strong> (<em>tuple</em><em>(</em><em>float</em><em>)</em>) – Length 3 iterable of floats defining the XYZ coordinates of the
+BOTTOM LEFT CORNER of the plane</p></li>
+<li><p><strong>point_u</strong> (<em>tuple</em><em>(</em><em>float</em><em>)</em>) – Length 3 iterable of floats defining the XYZ coordinates of the
+BOTTOM RIGHT CORNER of the plane</p></li>
+<li><p><strong>point_v</strong> (<em>tuple</em><em>(</em><em>float</em><em>)</em>) – Length 3 iterable of floats defining the XYZ coordinates of the
+TOP LEFT CORNER of the plane</p></li>
+<li><p><strong>inplace</strong> (<em>bool</em><em>, </em><em>optional</em>) – If True, the new texture coordinates will be added to the dataset
+inplace. If False (default), a new dataset is returned with the
+textures coordinates</p></li>
+<li><p><strong>name</strong> (<em>str</em><em>, </em><em>optional</em>) – The string name to give the new texture coordinates if applying
+the filter inplace.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="vtki.DataSetFilters.threshold">
+<code class="descname">threshold</code><span class="sig-paren">(</span><em>value=None</em>, <em>scalars=None</em>, <em>invert=False</em>, <em>continuous=False</em>, <em>preference='cell'</em><span class="sig-paren">)</span><a class="headerlink" href="#vtki.DataSetFilters.threshold" title="Permalink to this definition">¶</a></dt>
+<dd><p>This filter will apply a <code class="docutils literal notranslate"><span class="pre">vtkThreshold</span></code> filter to the input dataset and
+return the resulting object. This extracts cells where scalar value in each
+cell satisfies threshold criterion.  If scalars is None, the inputs
+active_scalar is used.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>value</strong> (<em>float</em><em> or </em><em>iterable</em><em>, </em><em>optional</em>) – Single value or (min, max) to be used for the data threshold.  If
+iterable, then length must be 2. If no value is specified, the
+non-NaN data range will be used to remove any NaN values.</p></li>
+<li><p><strong>scalars</strong> (<em>str</em><em>, </em><em>optional</em>) – Name of scalars to threshold on. Defaults to currently active scalars.</p></li>
+<li><p><strong>invert</strong> (<em>bool</em><em>, </em><em>optional</em>) – If value is a single value, when invert is True cells are kept when
+their values are below parameter “value”.  When invert is False
+cells are kept when their value is above the threshold “value”.
+Default is False: yielding above the threshold “value”.</p></li>
+<li><p><strong>continuous</strong> (<em>bool</em><em>, </em><em>optional</em>) – When True, the continuous interval [minimum cell scalar,
+maxmimum cell scalar] will be used to intersect the threshold bound,
+rather than the set of discrete scalar values from the vertices.</p></li>
+<li><p><strong>preference</strong> (<em>str</em><em>, </em><em>optional</em>) – When scalars is specified, this is the perfered scalar type to
+search for in the dataset.  Must be either <code class="docutils literal notranslate"><span class="pre">'point'</span></code> or <code class="docutils literal notranslate"><span class="pre">'cell'</span></code></p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="vtki.DataSetFilters.threshold_percent">
+<code class="descname">threshold_percent</code><span class="sig-paren">(</span><em>percent=0.5</em>, <em>scalars=None</em>, <em>invert=False</em>, <em>continuous=False</em>, <em>preference='cell'</em><span class="sig-paren">)</span><a class="headerlink" href="#vtki.DataSetFilters.threshold_percent" title="Permalink to this definition">¶</a></dt>
+<dd><p>Thresholds the dataset by a percentage of its range on the active
+scalar array or as specified</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>percent</strong> (<em>float</em><em> or </em><em>tuple</em><em>(</em><em>float</em><em>)</em><em>, </em><em>optional</em>) – The percentage (0,1) to threshold. If value is out of 0 to 1 range,
+then it will be divided by 100 and checked to be in that range.</p></li>
+<li><p><strong>scalars</strong> (<em>str</em><em>, </em><em>optional</em>) – Name of scalars to threshold on. Defaults to currently active scalars.</p></li>
+<li><p><strong>invert</strong> (<em>bool</em><em>, </em><em>optional</em>) – When invert is True cells are kept when their values are below the
+percentage of the range.  When invert is False, cells are kept when
+their value is above the percentage of the range.
+Default is False: yielding above the threshold “value”.</p></li>
+<li><p><strong>continuous</strong> (<em>bool</em><em>, </em><em>optional</em>) – When True, the continuous interval [minimum cell scalar,
+maxmimum cell scalar] will be used to intersect the threshold bound,
+rather than the set of discrete scalar values from the vertices.</p></li>
+<li><p><strong>preference</strong> (<em>str</em><em>, </em><em>optional</em>) – When scalars is specified, this is the perfered scalar type to
+search for in the dataset.  Must be either <code class="docutils literal notranslate"><span class="pre">'point'</span></code> or <code class="docutils literal notranslate"><span class="pre">'cell'</span></code></p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="vtki.DataSetFilters.triangulate">
+<code class="descname">triangulate</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#vtki.DataSetFilters.triangulate" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns an all triangle mesh.  More complex polygons will be broken
+down into triangles.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><strong>mesh</strong> – Mesh containing only triangles.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference internal" href="../types/point-grids.html#vtki.UnstructuredGrid" title="vtki.UnstructuredGrid">vtki.UnstructuredGrid</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="vtki.DataSetFilters.warp_by_scalar">
+<code class="descname">warp_by_scalar</code><span class="sig-paren">(</span><em>scalars=None</em>, <em>scale_factor=1.0</em>, <em>normal=None</em>, <em>in_place=False</em><span class="sig-paren">)</span><a class="headerlink" href="#vtki.DataSetFilters.warp_by_scalar" title="Permalink to this definition">¶</a></dt>
+<dd><p>Warp the dataset’s points by a point data scalar array’s values.
+This modifies point coordinates by moving points along point normals by
+the scalar amount times the scale factor.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>scalars</strong> (<em>str</em><em>, </em><em>optional</em>) – Name of scalars to warb by. Defaults to currently active scalars.</p></li>
+<li><p><strong>scale_factor</strong> (<em>float</em><em>, </em><em>optional</em>) – A scalaing factor to increase the scaling effect</p></li>
+<li><p><strong>normal</strong> (<em>np.array</em><em>, </em><em>list</em><em>, </em><em>tuple of length 3</em>) – User specified normal. If given, data normals will be ignored and
+the given normal will be used to project the warp.</p></li>
+<li><p><strong>in_place</strong> (<em>bool</em>) – If True, the points of the give dataset will be updated.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="vtki.DataSetFilters.wireframe">
+<code class="descname">wireframe</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#vtki.DataSetFilters.wireframe" title="Permalink to this definition">¶</a></dt>
+<dd><p>Extract all the internal/external edges of the dataset as PolyData.
+This produces a full wireframe representation of the input dataset.</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="ipy_tools.html" class="btn btn-neutral float-right" title="IPython Tools" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="plotting.html" class="btn btn-neutral float-left" title="Plotting" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2017-2019, Alex Kaszynski
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

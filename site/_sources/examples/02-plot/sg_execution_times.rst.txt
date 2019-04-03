@@ -1,0 +1,17 @@
+
+:orphan:
+
+.. _sphx_glr_examples_02-plot_sg_execution_times:
+
+Computation times
+=================
+**00:52.400** total execution time for **examples_02-plot** files:
+
+- **00:30.908**: :ref:`sphx_glr_examples_02-plot_plot-edl.py` (``plot-edl.py``)
+- **00:05.890**: :ref:`sphx_glr_examples_02-plot_plot-movie.py` (``plot-movie.py``)
+- **00:04.309**: :ref:`sphx_glr_examples_02-plot_plot-scalar-bars.py` (``plot-scalar-bars.py``)
+- **00:04.007**: :ref:`sphx_glr_examples_02-plot_plot-gif.py` (``plot-gif.py``)
+- **00:02.511**: :ref:`sphx_glr_examples_02-plot_plot-glyphs.py` (``plot-glyphs.py``)
+- **00:02.283**: :ref:`sphx_glr_examples_02-plot_plot-multi-window.py` (``plot-multi-window.py``)
+- **00:01.592**: :ref:`sphx_glr_examples_02-plot_plot-opacity.py` (``plot-opacity.py``)
+- **00:00.898**: :ref:`sphx_glr_examples_02-plot_plot-clear.py` (``plot-clear.py``)

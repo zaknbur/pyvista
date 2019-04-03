@@ -1,0 +1,506 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Gridded Data &mdash; vtki 0.17.5 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js"></script>
+        <script type="text/javascript" src="../_static/copybutton.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/copybutton.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/gallery.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/style.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/copybutton.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Multiple Block Datasets" href="container.html" />
+    <link rel="prev" title="Point-Based Grids" href="point-grids.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> vtki
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.17.5
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../index.html">vtki Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../why.html">Why?</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Getting Started</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../getting-started/installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../getting-started/simple.html">Basic API Usage</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Data Types</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="common.html">Datasets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="common.html#the-common-model">The Common Model</a></li>
+<li class="toctree-l1"><a class="reference internal" href="points.html">Point Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="point-grids.html">Point-Based Grids</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Gridded Data</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#rectilinear-grid">Rectilinear Grid</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#uniform-grid">Uniform Grid</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="container.html">Multiple Block Datasets</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Examples</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../examples/index.html">Loading and Creating Meshes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../examples/index.html#filtering">Filtering</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../examples/index.html#plotting-examples">Plotting Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../external_examples.html">External Examples</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Tools</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../tools/geometric.html">Geometric Objects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tools/plotting.html">Plotting</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tools/filters.html">Filters</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tools/ipy_tools.html">IPython Tools</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tools/qt_plotting.html">vtki PyQt Interface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tools/utilities.html">Utilities</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">vtki</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>Gridded Data</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/types/grids.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="gridded-data">
+<h1>Gridded Data<a class="headerlink" href="#gridded-data" title="Permalink to this headline">¶</a></h1>
+<p>Gridded datasets in vtki capture <code class="docutils literal notranslate"><span class="pre">vtkRectilinearGrid</span></code> and <code class="docutils literal notranslate"><span class="pre">vtkImageData</span></code>
+data objects on the VTK backend. These data types have common features which
+are encompassed int their shared inheritance of <a class="reference internal" href="#vtki.Grid" title="vtki.Grid"><code class="xref py py-class docutils literal notranslate"><span class="pre">vtki.Grid</span></code></a></p>
+<p class="rubric">Attributes</p>
+<table class="longtable docutils align-center">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+</tbody>
+</table>
+<p class="rubric">Methods</p>
+<table class="longtable docutils align-center">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+</tbody>
+</table>
+<dl class="class">
+<dt id="vtki.Grid">
+<em class="property">class </em><code class="descclassname">vtki.</code><code class="descname">Grid</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#vtki.Grid" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">vtki.common.Common</span></code></p>
+<p>A class full of common methods for non-pointset grids</p>
+<dl class="attribute">
+<dt id="vtki.Grid.dimensions">
+<code class="descname">dimensions</code><a class="headerlink" href="#vtki.Grid.dimensions" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a length 3 tuple of the grid’s dimensions</p>
+</dd></dl>
+
+</dd></dl>
+
+<div class="section" id="rectilinear-grid">
+<h2>Rectilinear Grid<a class="headerlink" href="#rectilinear-grid" title="Permalink to this headline">¶</a></h2>
+<p class="rubric">Attributes</p>
+<table class="longtable docutils align-center">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+</tbody>
+</table>
+<p class="rubric">Methods</p>
+<table class="longtable docutils align-center">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+</tbody>
+</table>
+<dl class="class">
+<dt id="vtki.RectilinearGrid">
+<em class="property">class </em><code class="descclassname">vtki.</code><code class="descname">RectilinearGrid</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#vtki.RectilinearGrid" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">vtkCommonDataModelPython.vtkRectilinearGrid</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">vtki.grid.Grid</span></code></p>
+<p>Extends the functionality of a vtk.vtkRectilinearGrid object
+Can be initialized in several ways:</p>
+<ul class="simple">
+<li><p>Create empty grid</p></li>
+<li><p>Initialize from a vtk.vtkRectilinearGrid object</p></li>
+<li><p>Initialize directly from the point arrays</p></li>
+</ul>
+<p>See _from_arrays in the documentation for more details on initializing
+from point arrays</p>
+<p class="rubric">Examples</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">vtki</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">vtk</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="c1"># Create empty grid</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">grid</span> <span class="o">=</span> <span class="n">vtki</span><span class="o">.</span><span class="n">RectilinearGrid</span><span class="p">()</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="c1"># Initialize from a vtk.vtkRectilinearGrid object</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">vtkgrid</span> <span class="o">=</span> <span class="n">vtk</span><span class="o">.</span><span class="n">vtkRectilinearGrid</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">grid</span> <span class="o">=</span> <span class="n">vtki</span><span class="o">.</span><span class="n">RectilinearGrid</span><span class="p">(</span><span class="n">vtkgrid</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="c1"># Create from NumPy arrays</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">xrng</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="o">-</span><span class="mi">10</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">yrng</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="o">-</span><span class="mi">10</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">zrng</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="o">-</span><span class="mi">10</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">grid</span> <span class="o">=</span> <span class="n">vtki</span><span class="o">.</span><span class="n">RectilinearGrid</span><span class="p">(</span><span class="n">xrng</span><span class="p">,</span> <span class="n">yrng</span><span class="p">,</span> <span class="n">zrng</span><span class="p">)</span>
+</pre></div>
+</div>
+<dl class="attribute">
+<dt id="vtki.RectilinearGrid.points">
+<code class="descname">points</code><a class="headerlink" href="#vtki.RectilinearGrid.points" title="Permalink to this definition">¶</a></dt>
+<dd><p>returns a pointer to the points as a numpy object</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="vtki.RectilinearGrid.save">
+<code class="descname">save</code><span class="sig-paren">(</span><em>filename</em>, <em>binary=True</em><span class="sig-paren">)</span><a class="headerlink" href="#vtki.RectilinearGrid.save" title="Permalink to this definition">¶</a></dt>
+<dd><p>Writes a rectilinear grid to disk.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>filename</strong> (<em>str</em>) – Filename of grid to be written.  The file extension will select the
+type of writer to use.  “.vtk” will use the legacy writer, while
+“.vtr” will select the VTK XML writer.</p></li>
+<li><p><strong>binary</strong> (<em>bool</em><em>, </em><em>optional</em>) – Writes as a binary file by default.  Set to False to write ASCII.</p></li>
+</ul>
+</dd>
+</dl>
+<p class="rubric">Notes</p>
+<p>Binary files write much faster than ASCII, but binary files written on
+one system may not be readable on other systems.  Binary can be used
+only with the legacy writer.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="vtki.RectilinearGrid.x">
+<code class="descname">x</code><a class="headerlink" href="#vtki.RectilinearGrid.x" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the coordinates along the X-direction</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="vtki.RectilinearGrid.y">
+<code class="descname">y</code><a class="headerlink" href="#vtki.RectilinearGrid.y" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the coordinates along the Y-direction</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="vtki.RectilinearGrid.z">
+<code class="descname">z</code><a class="headerlink" href="#vtki.RectilinearGrid.z" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the coordinates along the Z-direction</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="uniform-grid">
+<h2>Uniform Grid<a class="headerlink" href="#uniform-grid" title="Permalink to this headline">¶</a></h2>
+<p><cite>vtki</cite>’s definition of a uniform grid is an extension of VTK’s <code class="docutils literal notranslate"><span class="pre">vtkImageData</span></code></p>
+<p class="rubric">Attributes</p>
+<table class="longtable docutils align-center">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+</tbody>
+</table>
+<p class="rubric">Methods</p>
+<table class="longtable docutils align-center">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+</tbody>
+</table>
+<dl class="class">
+<dt id="vtki.UniformGrid">
+<em class="property">class </em><code class="descclassname">vtki.</code><code class="descname">UniformGrid</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#vtki.UniformGrid" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">vtkCommonDataModelPython.vtkImageData</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">vtki.grid.Grid</span></code></p>
+<p>Extends the functionality of a vtk.vtkImageData object
+Can be initialized in several ways:</p>
+<ul class="simple">
+<li><p>Create empty grid</p></li>
+<li><p>Initialize from a vtk.vtkImageData object</p></li>
+<li><p>Initialize directly from the point arrays</p></li>
+</ul>
+<p>See <code class="docutils literal notranslate"><span class="pre">_from_specs</span></code> in the documentation for more details on initializing
+from point arrays</p>
+<p class="rubric">Examples</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">vtki</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">vtk</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="c1"># Create empty grid</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">grid</span> <span class="o">=</span> <span class="n">vtki</span><span class="o">.</span><span class="n">UniformGrid</span><span class="p">()</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="c1"># Initialize from a vtk.vtkImageData object</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">vtkgrid</span> <span class="o">=</span> <span class="n">vtk</span><span class="o">.</span><span class="n">vtkImageData</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">grid</span> <span class="o">=</span> <span class="n">vtki</span><span class="o">.</span><span class="n">UniformGrid</span><span class="p">(</span><span class="n">vtkgrid</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="c1"># Using just the grid dimensions</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">dims</span> <span class="o">=</span> <span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">grid</span> <span class="o">=</span> <span class="n">vtki</span><span class="o">.</span><span class="n">UniformGrid</span><span class="p">(</span><span class="n">dims</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="c1"># Using dimensions and spacing</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">spacing</span> <span class="o">=</span> <span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">grid</span> <span class="o">=</span> <span class="n">vtki</span><span class="o">.</span><span class="n">UniformGrid</span><span class="p">(</span><span class="n">dims</span><span class="p">,</span> <span class="n">spacing</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="c1"># Using dimensions, spacing, and an origin</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">origin</span> <span class="o">=</span> <span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">35</span><span class="p">,</span> <span class="mi">50</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">grid</span> <span class="o">=</span> <span class="n">vtki</span><span class="o">.</span><span class="n">UniformGrid</span><span class="p">(</span><span class="n">dims</span><span class="p">,</span> <span class="n">spacing</span><span class="p">,</span> <span class="n">origin</span><span class="p">)</span>
+</pre></div>
+</div>
+<dl class="attribute">
+<dt id="vtki.UniformGrid.origin">
+<code class="descname">origin</code><a class="headerlink" href="#vtki.UniformGrid.origin" title="Permalink to this definition">¶</a></dt>
+<dd><p>Origin of the grid (bottom southwest corner)</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="vtki.UniformGrid.points">
+<code class="descname">points</code><a class="headerlink" href="#vtki.UniformGrid.points" title="Permalink to this definition">¶</a></dt>
+<dd><p>returns a pointer to the points as a numpy object</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="vtki.UniformGrid.save">
+<code class="descname">save</code><span class="sig-paren">(</span><em>filename</em>, <em>binary=True</em><span class="sig-paren">)</span><a class="headerlink" href="#vtki.UniformGrid.save" title="Permalink to this definition">¶</a></dt>
+<dd><p>Writes image data grid to disk.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>filename</strong> (<em>str</em>) – Filename of grid to be written.  The file extension will select the
+type of writer to use.  “.vtk” will use the legacy writer, while
+“.vti” will select the VTK XML writer.</p></li>
+<li><p><strong>binary</strong> (<em>bool</em><em>, </em><em>optional</em>) – Writes as a binary file by default.  Set to False to write ASCII.</p></li>
+</ul>
+</dd>
+</dl>
+<p class="rubric">Notes</p>
+<p>Binary files write much faster than ASCII, but binary files written on
+one system may not be readable on other systems.  Binary can be used
+only with the legacy writer.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="vtki.UniformGrid.spacing">
+<code class="descname">spacing</code><a class="headerlink" href="#vtki.UniformGrid.spacing" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the spacing for each axial direction.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="vtki.UniformGrid.x">
+<code class="descname">x</code><a class="headerlink" href="#vtki.UniformGrid.x" title="Permalink to this definition">¶</a></dt>
+<dd><p>all the X points</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="vtki.UniformGrid.y">
+<code class="descname">y</code><a class="headerlink" href="#vtki.UniformGrid.y" title="Permalink to this definition">¶</a></dt>
+<dd><p>all the Y points</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="vtki.UniformGrid.z">
+<code class="descname">z</code><a class="headerlink" href="#vtki.UniformGrid.z" title="Permalink to this definition">¶</a></dt>
+<dd><p>all the Z points</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="container.html" class="btn btn-neutral float-right" title="Multiple Block Datasets" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="point-grids.html" class="btn btn-neutral float-left" title="Point-Based Grids" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2017-2019, Alex Kaszynski
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
