@@ -870,36 +870,72 @@ The picked_cells are input as the first parameter to this function.</p></li>
 <dt id="vtki.BasePlotter.enable_image_style">
 <code class="descname">enable_image_style</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#vtki.BasePlotter.enable_image_style" title="Permalink to this definition">¶</a></dt>
 <dd><p>sets the interactive style to image</p>
+<dl class="simple">
+<dt>Controls:</dt><dd><ul class="simple">
+<li><p>Left Mouse button triggers window level events</p></li>
+<li><p>CTRL Left Mouse spins the camera around its view plane normal</p></li>
+<li><p>SHIFT Left Mouse pans the camera</p></li>
+<li><p>CTRL SHIFT Left Mouse dollys (a positional zoom) the camera</p></li>
+<li><p>Middle mouse button pans the camera</p></li>
+<li><p>Right mouse button dollys the camera.</p></li>
+<li><p>SHIFT Right Mouse triggers pick events</p></li>
+</ul>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="method">
 <dt id="vtki.BasePlotter.enable_joystick_style">
 <code class="descname">enable_joystick_style</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#vtki.BasePlotter.enable_joystick_style" title="Permalink to this definition">¶</a></dt>
 <dd><p>sets the interactive style to joystick</p>
+<p>allows the user to move (rotate, pan, etc.) the camera, the point of
+view for the scene.  The position of the mouse relative to the center of
+the scene determines the speed at which the camera moves, and the speed
+of the mouse movement determines the acceleration of the camera, so the
+camera continues to move even if the mouse if not moving.</p>
+<p>For a 3-button mouse, the left button is for rotation, the right button
+for zooming, the middle button for panning, and ctrl + left button for
+spinning.  (With fewer mouse buttons, ctrl + shift + left button is
+for zooming, and shift + left button is for panning.)</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="vtki.BasePlotter.enable_rubber_band_style">
 <code class="descname">enable_rubber_band_style</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#vtki.BasePlotter.enable_rubber_band_style" title="Permalink to this definition">¶</a></dt>
 <dd><p>sets the interactive style to rubber band picking</p>
+<p>This interactor style allows the user to draw a rectangle in the render
+window by hitting ‘r’ and then using the left mouse button.
+When the mouse button is released, the attached picker operates on the
+pixel in the center of the selection rectangle. If the picker happens to
+be a vtkAreaPicker it will operate on the entire selection rectangle.
+When the ‘p’ key is hit the above pick operation occurs on a 1x1
+rectangle. In other respects it behaves the same as its parent class.</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="vtki.BasePlotter.enable_terrain_style">
 <code class="descname">enable_terrain_style</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#vtki.BasePlotter.enable_terrain_style" title="Permalink to this definition">¶</a></dt>
 <dd><p>sets the interactive style to terrain</p>
+<p>Used to manipulate a camera which is viewing a scene with a natural
+view up, e.g., terrain. The camera in such a scene is manipulated by
+specifying azimuth (angle around the view up vector) and elevation
+(the angle from the horizon).</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="vtki.BasePlotter.enable_trackball_style">
 <code class="descname">enable_trackball_style</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#vtki.BasePlotter.enable_trackball_style" title="Permalink to this definition">¶</a></dt>
-<dd><p>sets the interactive style to trackball</p>
+<dd><p>sets the interactive style to trackball - the default syle</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="vtki.BasePlotter.enable_zoom_style">
 <code class="descname">enable_zoom_style</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#vtki.BasePlotter.enable_zoom_style" title="Permalink to this definition">¶</a></dt>
 <dd><p>sets the interactive style to rubber band zoom</p>
+<p>This interactor style allows the user to draw a rectangle in the render
+window using the left mouse button.  When the mouse button is released,
+the current camera zooms by an amount determined from the shorter side
+of the drawn rectangle.</p>
 </dd></dl>
 
 <dl class="method">
