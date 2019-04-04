@@ -59,12 +59,12 @@ Create an animated MP4 movie of a rendering scene
 
 
 
-.. figure:: ../../images/sphere-shrinking.mp4
+.. figure:: ../../images/auto-generated/sphere-shrinking.mp4
 
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  6.017 seconds)
+   **Total running time of the script:** ( 0 minutes  5.964 seconds)
 
 
 .. _sphx_glr_download_examples_02-plot_plot-movie.py:
