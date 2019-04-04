@@ -4,6 +4,11 @@
 
 .. _sphx_glr_examples:
 
+.. _ref_examples:
+
+Quick Examples
+==============
+
 Here is a gallery of all the quick examples demonstrating what ``vtki`` can do!
 
 
@@ -16,7 +21,7 @@ Here is a gallery of all the quick examples demonstrating what ``vtki`` can do!
 .. _sphx_glr_examples_00-load:
 
 Loading and Creating Meshes
-===========================
+---------------------------
 
 
 
@@ -128,7 +133,7 @@ Loading and Creating Meshes
 .. _sphx_glr_examples_01-filter:
 
 Filtering
-=========
+---------
 
 
 
@@ -220,7 +225,7 @@ Filtering
 .. _sphx_glr_examples_02-plot:
 
 Plotting Examples
-=================
+-----------------
 
 
 

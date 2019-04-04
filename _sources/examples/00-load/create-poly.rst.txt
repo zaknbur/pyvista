@@ -10,7 +10,7 @@
 .. _ref_create_poly:
 
 Create PolyData
----------------
+~~~~~~~~~~~~~~~
 
 Creating a PolyData object from NumPy arrays
 A PolyData object can be created quickly from numpy arrays.  The vertex array
@@ -52,7 +52,7 @@ number of points for each face and the indices of each of those faces.
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  0.298 seconds)
+   **Total running time of the script:** ( 0 minutes  0.312 seconds)
 
 
 .. _sphx_glr_download_examples_00-load_create-poly.py:
