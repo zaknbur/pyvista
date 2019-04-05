@@ -213,7 +213,8 @@ Computing mass properties such as the volume or area of datasetsin <code class="
 is quite easy using the <a class="reference internal" href="../../tools/filters.html#vtki.DataSetFilters.compute_cell_sizes" title="vtki.DataSetFilters.compute_cell_sizes"><code class="xref py py-func docutils literal notranslate"><span class="pre">vtki.DataSetFilters.compute_cell_sizes()</span></code></a> filter
 and the <a class="reference internal" href="../../types/common.html#vtki.Common.volume" title="vtki.Common.volume"><code class="xref py py-attr docutils literal notranslate"><span class="pre">vtki.Common.volume</span></code></a> property on all <code class="docutils literal notranslate"><span class="pre">vtki</span></code> meshes.</p>
 <p>Let’s get started with a simple gridded mesh:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># sphinx_gallery_thumbnail_number = 4</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="kn">import</span> <span class="nn">vtki</span>
 <span class="kn">from</span> <span class="nn">vtki</span> <span class="k">import</span> <span class="n">examples</span>
 
@@ -377,12 +378,11 @@ Body 20 volume: 2270.000
 </pre></div>
 </div>
 <p>And visualize all the different volumes:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># sphinx_gallery_thumbnail_number = 4</span>
-<span class="n">bodies</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">scalars</span><span class="o">=</span><span class="s1">&#39;TOTAL VOLUME&#39;</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="s1">&#39;viridis&#39;</span><span class="p">,</span> <span class="n">show_grid</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">bodies</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">scalars</span><span class="o">=</span><span class="s1">&#39;TOTAL VOLUME&#39;</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="s1">&#39;viridis&#39;</span><span class="p">,</span> <span class="n">show_grid</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 </pre></div>
 </div>
 <img alt="../../_images/sphx_glr_compute-volume_004.png" class="sphx-glr-single-img" src="../../_images/sphx_glr_compute-volume_004.png" />
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  18.624 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  19.122 seconds)</p>
 <div class="sphx-glr-footer class sphx-glr-footer-example docutils container" id="sphx-glr-download-examples-01-filter-compute-volume-py">
 <div class="sphx-glr-download docutils container">
 <p><a class="reference download internal" download="" href="../../_downloads/86e96b4763988892e9254c0f4184ac76/compute-volume.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">compute-volume.py</span></code></a></p>

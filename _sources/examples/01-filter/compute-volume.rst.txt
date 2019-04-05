@@ -22,6 +22,7 @@ Let's get started with a simple gridded mesh:
 .. code-block:: default
 
 
+    # sphinx_gallery_thumbnail_number = 4
     import numpy as np
     import vtki
     from vtki import examples
@@ -320,7 +321,6 @@ And visualize all the different volumes:
 .. code-block:: default
 
 
-    # sphinx_gallery_thumbnail_number = 4
     bodies.plot(scalars='TOTAL VOLUME', cmap='viridis', show_grid=True)
 
 
@@ -334,7 +334,7 @@ And visualize all the different volumes:
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  18.624 seconds)
+   **Total running time of the script:** ( 0 minutes  19.122 seconds)
 
 
 .. _sphx_glr_download_examples_01-filter_compute-volume.py:
