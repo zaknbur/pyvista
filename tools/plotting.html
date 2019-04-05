@@ -329,6 +329,39 @@ Must contain the same number of items as cent.</p></li>
 <col style="width: 90%" />
 </colgroup>
 <tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#vtki.BasePlotter.background_color" title="vtki.BasePlotter.background_color"><code class="xref py py-obj docutils literal notranslate"><span class="pre">background_color</span></code></a></p></td>
+<td><p>Returns background color of the first render window</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#vtki.BasePlotter.bounds" title="vtki.BasePlotter.bounds"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bounds</span></code></a></p></td>
+<td><p>Returns the bounds of the active renderer</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#vtki.BasePlotter.camera" title="vtki.BasePlotter.camera"><code class="xref py py-obj docutils literal notranslate"><span class="pre">camera</span></code></a></p></td>
+<td><p>The active camera of the active renderer</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#vtki.BasePlotter.camera_position" title="vtki.BasePlotter.camera_position"><code class="xref py py-obj docutils literal notranslate"><span class="pre">camera_position</span></code></a></p></td>
+<td><p>Returns camera position of the active render window</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#vtki.BasePlotter.camera_set" title="vtki.BasePlotter.camera_set"><code class="xref py py-obj docutils literal notranslate"><span class="pre">camera_set</span></code></a></p></td>
+<td><p>Returns if the camera of the active renderer has been set</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#vtki.BasePlotter.center" title="vtki.BasePlotter.center"><code class="xref py py-obj docutils literal notranslate"><span class="pre">center</span></code></a></p></td>
+<td><p>Returns the center of the active renderer</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#vtki.BasePlotter.image" title="vtki.BasePlotter.image"><code class="xref py py-obj docutils literal notranslate"><span class="pre">image</span></code></a></p></td>
+<td><p>Returns an image array of current render window</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#vtki.BasePlotter.image_depth" title="vtki.BasePlotter.image_depth"><code class="xref py py-obj docutils literal notranslate"><span class="pre">image_depth</span></code></a></p></td>
+<td><p>Returns an image array of current render window</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#vtki.BasePlotter.renderer" title="vtki.BasePlotter.renderer"><code class="xref py py-obj docutils literal notranslate"><span class="pre">renderer</span></code></a></p></td>
+<td><p>simply returns the active renderer</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#vtki.BasePlotter.scale" title="vtki.BasePlotter.scale"><code class="xref py py-obj docutils literal notranslate"><span class="pre">scale</span></code></a></p></td>
+<td><p>The scaling of the active renderer.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#vtki.BasePlotter.window_size" title="vtki.BasePlotter.window_size"><code class="xref py py-obj docutils literal notranslate"><span class="pre">window_size</span></code></a></p></td>
+<td><p>returns render window size</p></td>
+</tr>
 </tbody>
 </table>
 <p class="rubric">Methods</p>
@@ -338,6 +371,210 @@ Must contain the same number of items as cent.</p></li>
 <col style="width: 90%" />
 </colgroup>
 <tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#vtki.BasePlotter.add_actor" title="vtki.BasePlotter.add_actor"><code class="xref py py-obj docutils literal notranslate"><span class="pre">add_actor</span></code></a>(uinput[, reset_camera, name, loc, …])</p></td>
+<td><p>Adds an actor to render window.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#vtki.BasePlotter.add_arrows" title="vtki.BasePlotter.add_arrows"><code class="xref py py-obj docutils literal notranslate"><span class="pre">add_arrows</span></code></a>(cent, direction[, mag])</p></td>
+<td><p>Adds arrows to plotting object</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#vtki.BasePlotter.add_axes" title="vtki.BasePlotter.add_axes"><code class="xref py py-obj docutils literal notranslate"><span class="pre">add_axes</span></code></a>([interactive, color])</p></td>
+<td><p>Add an interactive axes widget</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#vtki.BasePlotter.add_axes_at_origin" title="vtki.BasePlotter.add_axes_at_origin"><code class="xref py py-obj docutils literal notranslate"><span class="pre">add_axes_at_origin</span></code></a>([loc])</p></td>
+<td><p>Add axes actor at the origin of a render window.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#vtki.BasePlotter.add_bounding_box" title="vtki.BasePlotter.add_bounding_box"><code class="xref py py-obj docutils literal notranslate"><span class="pre">add_bounding_box</span></code></a>([color, corner_factor, …])</p></td>
+<td><p>Adds an unlabeled and unticked box at the boundaries of plot.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#vtki.BasePlotter.add_bounds_axes" title="vtki.BasePlotter.add_bounds_axes"><code class="xref py py-obj docutils literal notranslate"><span class="pre">add_bounds_axes</span></code></a>(*args, **kwargs)</p></td>
+<td><p>Deprecated</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#vtki.BasePlotter.add_legend" title="vtki.BasePlotter.add_legend"><code class="xref py py-obj docutils literal notranslate"><span class="pre">add_legend</span></code></a>([labels, bcolor, border, size, name])</p></td>
+<td><p>Adds a legend to render window.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#vtki.BasePlotter.add_lines" title="vtki.BasePlotter.add_lines"><code class="xref py py-obj docutils literal notranslate"><span class="pre">add_lines</span></code></a>(lines[, color, width, label, name])</p></td>
+<td><p>Adds lines to the plotting object.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#vtki.BasePlotter.add_mesh" title="vtki.BasePlotter.add_mesh"><code class="xref py py-obj docutils literal notranslate"><span class="pre">add_mesh</span></code></a>(mesh[, color, style, scalars, rng, …])</p></td>
+<td><p>Adds a unstructured, structured, or surface mesh to the plotting object.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#vtki.BasePlotter.add_point_labels" title="vtki.BasePlotter.add_point_labels"><code class="xref py py-obj docutils literal notranslate"><span class="pre">add_point_labels</span></code></a>(points, labels[, italic, …])</p></td>
+<td><p>Creates a point actor with one label from list labels assigned to each point.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#vtki.BasePlotter.add_points" title="vtki.BasePlotter.add_points"><code class="xref py py-obj docutils literal notranslate"><span class="pre">add_points</span></code></a>(points, **kwargs)</p></td>
+<td><p>Add points to a mesh</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#vtki.BasePlotter.add_scalar_bar" title="vtki.BasePlotter.add_scalar_bar"><code class="xref py py-obj docutils literal notranslate"><span class="pre">add_scalar_bar</span></code></a>([title, n_labels, italic, …])</p></td>
+<td><p>Creates scalar bar using the ranges as set by the last input mesh.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#vtki.BasePlotter.add_text" title="vtki.BasePlotter.add_text"><code class="xref py py-obj docutils literal notranslate"><span class="pre">add_text</span></code></a>(text[, position, font_size, color, …])</p></td>
+<td><p>Adds text to plot object in the top left corner by default</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#vtki.BasePlotter.clear" title="vtki.BasePlotter.clear"><code class="xref py py-obj docutils literal notranslate"><span class="pre">clear</span></code></a>()</p></td>
+<td><p>Clears plot by removing all actors and properties</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#vtki.BasePlotter.close" title="vtki.BasePlotter.close"><code class="xref py py-obj docutils literal notranslate"><span class="pre">close</span></code></a>()</p></td>
+<td><p>closes render window</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#vtki.BasePlotter.disable" title="vtki.BasePlotter.disable"><code class="xref py py-obj docutils literal notranslate"><span class="pre">disable</span></code></a>()</p></td>
+<td><p>Disable this renderer’s camera from being interactive</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#vtki.BasePlotter.disable_eye_dome_lighting" title="vtki.BasePlotter.disable_eye_dome_lighting"><code class="xref py py-obj docutils literal notranslate"><span class="pre">disable_eye_dome_lighting</span></code></a>()</p></td>
+<td><p>Disable eye dome lighting (EDL) for active renderer</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#vtki.BasePlotter.enable" title="vtki.BasePlotter.enable"><code class="xref py py-obj docutils literal notranslate"><span class="pre">enable</span></code></a>()</p></td>
+<td><p>Enable this renderer’s camera to be interactive</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#vtki.BasePlotter.enable_cell_picking" title="vtki.BasePlotter.enable_cell_picking"><code class="xref py py-obj docutils literal notranslate"><span class="pre">enable_cell_picking</span></code></a>([mesh, callback])</p></td>
+<td><p>Enables picking of cells.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#vtki.BasePlotter.enable_eye_dome_lighting" title="vtki.BasePlotter.enable_eye_dome_lighting"><code class="xref py py-obj docutils literal notranslate"><span class="pre">enable_eye_dome_lighting</span></code></a>()</p></td>
+<td><p>Enable eye dome lighting (EDL) for active renderer</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#vtki.BasePlotter.enable_image_style" title="vtki.BasePlotter.enable_image_style"><code class="xref py py-obj docutils literal notranslate"><span class="pre">enable_image_style</span></code></a>()</p></td>
+<td><p>sets the interactive style to image</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#vtki.BasePlotter.enable_joystick_style" title="vtki.BasePlotter.enable_joystick_style"><code class="xref py py-obj docutils literal notranslate"><span class="pre">enable_joystick_style</span></code></a>()</p></td>
+<td><p>sets the interactive style to joystick</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#vtki.BasePlotter.enable_rubber_band_style" title="vtki.BasePlotter.enable_rubber_band_style"><code class="xref py py-obj docutils literal notranslate"><span class="pre">enable_rubber_band_style</span></code></a>()</p></td>
+<td><p>sets the interactive style to rubber band picking</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#vtki.BasePlotter.enable_terrain_style" title="vtki.BasePlotter.enable_terrain_style"><code class="xref py py-obj docutils literal notranslate"><span class="pre">enable_terrain_style</span></code></a>()</p></td>
+<td><p>sets the interactive style to terrain</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#vtki.BasePlotter.enable_trackball_style" title="vtki.BasePlotter.enable_trackball_style"><code class="xref py py-obj docutils literal notranslate"><span class="pre">enable_trackball_style</span></code></a>()</p></td>
+<td><p>sets the interactive style to trackball - the default syle</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#vtki.BasePlotter.enable_zoom_style" title="vtki.BasePlotter.enable_zoom_style"><code class="xref py py-obj docutils literal notranslate"><span class="pre">enable_zoom_style</span></code></a>()</p></td>
+<td><p>sets the interactive style to rubber band zoom</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#vtki.BasePlotter.export_vtkjs" title="vtki.BasePlotter.export_vtkjs"><code class="xref py py-obj docutils literal notranslate"><span class="pre">export_vtkjs</span></code></a>(filename[, compress_arrays])</p></td>
+<td><p>Export the current rendering scene as a VTKjs scene for rendering in a web browser</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#vtki.BasePlotter.fly_to" title="vtki.BasePlotter.fly_to"><code class="xref py py-obj docutils literal notranslate"><span class="pre">fly_to</span></code></a>()</p></td>
+<td><p>Given a position point, move the current camera’s focal point to that point.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#vtki.BasePlotter.generate_orbital_path" title="vtki.BasePlotter.generate_orbital_path"><code class="xref py py-obj docutils literal notranslate"><span class="pre">generate_orbital_path</span></code></a>([factor, n_points, …])</p></td>
+<td><p>Genrates an orbital path around the data scene</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#vtki.BasePlotter.get_default_cam_pos" title="vtki.BasePlotter.get_default_cam_pos"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_default_cam_pos</span></code></a>()</p></td>
+<td><p>Return the default camera position of the active renderer</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#vtki.BasePlotter.hide_axes" title="vtki.BasePlotter.hide_axes"><code class="xref py py-obj docutils literal notranslate"><span class="pre">hide_axes</span></code></a>()</p></td>
+<td><p>Hide the axes orientation widget</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#vtki.BasePlotter.index_to_loc" title="vtki.BasePlotter.index_to_loc"><code class="xref py py-obj docutils literal notranslate"><span class="pre">index_to_loc</span></code></a>(index)</p></td>
+<td><p>Convert a 1D index location to the 2D location on the plotting grid</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#vtki.BasePlotter.isometric_view" title="vtki.BasePlotter.isometric_view"><code class="xref py py-obj docutils literal notranslate"><span class="pre">isometric_view</span></code></a>()</p></td>
+<td><p>DEPRECATED: Please use <code class="docutils literal notranslate"><span class="pre">view_isometric</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#vtki.BasePlotter.isometric_view_interactive" title="vtki.BasePlotter.isometric_view_interactive"><code class="xref py py-obj docutils literal notranslate"><span class="pre">isometric_view_interactive</span></code></a>()</p></td>
+<td><p>sets the current interactive render window to isometric view</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#vtki.BasePlotter.key_press_event" title="vtki.BasePlotter.key_press_event"><code class="xref py py-obj docutils literal notranslate"><span class="pre">key_press_event</span></code></a>(obj, event)</p></td>
+<td><p>Listens for key press event</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#vtki.BasePlotter.left_button_down" title="vtki.BasePlotter.left_button_down"><code class="xref py py-obj docutils literal notranslate"><span class="pre">left_button_down</span></code></a>(obj, event_type)</p></td>
+<td><p>Register the event for a left button down click</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#vtki.BasePlotter.loc_to_index" title="vtki.BasePlotter.loc_to_index"><code class="xref py py-obj docutils literal notranslate"><span class="pre">loc_to_index</span></code></a>(loc)</p></td>
+<td><p>Return index of the render window given a location index.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#vtki.BasePlotter.open_gif" title="vtki.BasePlotter.open_gif"><code class="xref py py-obj docutils literal notranslate"><span class="pre">open_gif</span></code></a>(filename)</p></td>
+<td><p>Open a gif file.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#vtki.BasePlotter.open_movie" title="vtki.BasePlotter.open_movie"><code class="xref py py-obj docutils literal notranslate"><span class="pre">open_movie</span></code></a>(filename[, framerate])</p></td>
+<td><p>Establishes a connection to the ffmpeg writer</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#vtki.BasePlotter.orbit_on_path" title="vtki.BasePlotter.orbit_on_path"><code class="xref py py-obj docutils literal notranslate"><span class="pre">orbit_on_path</span></code></a>([path, focus, step, viewup, bkg])</p></td>
+<td><p>Orbit on the given path focusing on the focus point</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#vtki.BasePlotter.remove_actor" title="vtki.BasePlotter.remove_actor"><code class="xref py py-obj docutils literal notranslate"><span class="pre">remove_actor</span></code></a>(actor[, reset_camera])</p></td>
+<td><p>Removes an actor from the Plotter.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#vtki.BasePlotter.remove_bounding_box" title="vtki.BasePlotter.remove_bounding_box"><code class="xref py py-obj docutils literal notranslate"><span class="pre">remove_bounding_box</span></code></a>([loc])</p></td>
+<td><p>Removes bounding box from the active renderer.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#vtki.BasePlotter.remove_bounds_axes" title="vtki.BasePlotter.remove_bounds_axes"><code class="xref py py-obj docutils literal notranslate"><span class="pre">remove_bounds_axes</span></code></a>([loc])</p></td>
+<td><p>Removes bounds axes from the active renderer.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#vtki.BasePlotter.remove_legend" title="vtki.BasePlotter.remove_legend"><code class="xref py py-obj docutils literal notranslate"><span class="pre">remove_legend</span></code></a>()</p></td>
+<td><p>Removes legend actor</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#vtki.BasePlotter.remove_scalar_bar" title="vtki.BasePlotter.remove_scalar_bar"><code class="xref py py-obj docutils literal notranslate"><span class="pre">remove_scalar_bar</span></code></a>()</p></td>
+<td><p>Removes scalar bar</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#vtki.BasePlotter.reset_camera" title="vtki.BasePlotter.reset_camera"><code class="xref py py-obj docutils literal notranslate"><span class="pre">reset_camera</span></code></a>()</p></td>
+<td><p>Reset camera so it slides along the vector defined from camera position to focal point until all of the actors can be seen.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#vtki.BasePlotter.screenshot" title="vtki.BasePlotter.screenshot"><code class="xref py py-obj docutils literal notranslate"><span class="pre">screenshot</span></code></a>([filename, …])</p></td>
+<td><p>Takes screenshot at current camera position</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#vtki.BasePlotter.set_background" title="vtki.BasePlotter.set_background"><code class="xref py py-obj docutils literal notranslate"><span class="pre">set_background</span></code></a>(color[, loc])</p></td>
+<td><p>Sets background color</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#vtki.BasePlotter.set_focus" title="vtki.BasePlotter.set_focus"><code class="xref py py-obj docutils literal notranslate"><span class="pre">set_focus</span></code></a>(point)</p></td>
+<td><p>sets focus to a point</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#vtki.BasePlotter.set_position" title="vtki.BasePlotter.set_position"><code class="xref py py-obj docutils literal notranslate"><span class="pre">set_position</span></code></a>(point)</p></td>
+<td><p>sets camera position to a point</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#vtki.BasePlotter.set_scale" title="vtki.BasePlotter.set_scale"><code class="xref py py-obj docutils literal notranslate"><span class="pre">set_scale</span></code></a>([xscale, yscale, zscale, reset_camera])</p></td>
+<td><p>Scale all the datasets in the scene of the active renderer.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#vtki.BasePlotter.set_viewup" title="vtki.BasePlotter.set_viewup"><code class="xref py py-obj docutils literal notranslate"><span class="pre">set_viewup</span></code></a>(vector)</p></td>
+<td><p>sets camera viewup vector</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#vtki.BasePlotter.show_axes" title="vtki.BasePlotter.show_axes"><code class="xref py py-obj docutils literal notranslate"><span class="pre">show_axes</span></code></a>()</p></td>
+<td><p>Show the axes orientation widget</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#vtki.BasePlotter.show_bounds" title="vtki.BasePlotter.show_bounds"><code class="xref py py-obj docutils literal notranslate"><span class="pre">show_bounds</span></code></a>([mesh, bounds, show_xaxis, …])</p></td>
+<td><p>Adds bounds axes.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#vtki.BasePlotter.show_grid" title="vtki.BasePlotter.show_grid"><code class="xref py py-obj docutils literal notranslate"><span class="pre">show_grid</span></code></a>(**kwargs)</p></td>
+<td><p>A wrapped implementation of <code class="docutils literal notranslate"><span class="pre">show_bounds</span></code> to change default behaviour to use gridlines and showing the axes labels on the outer edges.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#vtki.BasePlotter.subplot" title="vtki.BasePlotter.subplot"><code class="xref py py-obj docutils literal notranslate"><span class="pre">subplot</span></code></a>(index_x, index_y)</p></td>
+<td><p>Sets the active subplot.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#vtki.BasePlotter.update" title="vtki.BasePlotter.update"><code class="xref py py-obj docutils literal notranslate"><span class="pre">update</span></code></a>([stime, force_redraw])</p></td>
+<td><p>Update window, redraw, process messages query</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#vtki.BasePlotter.update_bounds_axes" title="vtki.BasePlotter.update_bounds_axes"><code class="xref py py-obj docutils literal notranslate"><span class="pre">update_bounds_axes</span></code></a>()</p></td>
+<td><p>Update the bounds of the active renderer</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#vtki.BasePlotter.update_coordinates" title="vtki.BasePlotter.update_coordinates"><code class="xref py py-obj docutils literal notranslate"><span class="pre">update_coordinates</span></code></a>(points[, mesh, render])</p></td>
+<td><p>Updates the points of the an object in the plotter.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#vtki.BasePlotter.update_scalar_bar_range" title="vtki.BasePlotter.update_scalar_bar_range"><code class="xref py py-obj docutils literal notranslate"><span class="pre">update_scalar_bar_range</span></code></a>(clim[, name])</p></td>
+<td><p>Update the value range of the active or named scalar bar.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#vtki.BasePlotter.update_scalars" title="vtki.BasePlotter.update_scalars"><code class="xref py py-obj docutils literal notranslate"><span class="pre">update_scalars</span></code></a>(scalars[, mesh, render])</p></td>
+<td><p>Updates scalars of the an object in the plotter.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#vtki.BasePlotter.update_style" title="vtki.BasePlotter.update_style"><code class="xref py py-obj docutils literal notranslate"><span class="pre">update_style</span></code></a>()</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#vtki.BasePlotter.view_isometric" title="vtki.BasePlotter.view_isometric"><code class="xref py py-obj docutils literal notranslate"><span class="pre">view_isometric</span></code></a>()</p></td>
+<td><p>Resets the camera to a default isometric view showing all the actors in the scene.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#vtki.BasePlotter.view_vector" title="vtki.BasePlotter.view_vector"><code class="xref py py-obj docutils literal notranslate"><span class="pre">view_vector</span></code></a>(vector[, viewup])</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#vtki.BasePlotter.view_xy" title="vtki.BasePlotter.view_xy"><code class="xref py py-obj docutils literal notranslate"><span class="pre">view_xy</span></code></a>([negative])</p></td>
+<td><p>View the XY plane</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#vtki.BasePlotter.view_xz" title="vtki.BasePlotter.view_xz"><code class="xref py py-obj docutils literal notranslate"><span class="pre">view_xz</span></code></a>([negative])</p></td>
+<td><p>View the XZ plane</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#vtki.BasePlotter.view_yz" title="vtki.BasePlotter.view_yz"><code class="xref py py-obj docutils literal notranslate"><span class="pre">view_yz</span></code></a>([negative])</p></td>
+<td><p>View the YZ plane</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#vtki.BasePlotter.write_frame" title="vtki.BasePlotter.write_frame"><code class="xref py py-obj docutils literal notranslate"><span class="pre">write_frame</span></code></a>()</p></td>
+<td><p>Writes a single frame to the movie file</p></td>
+</tr>
 </tbody>
 </table>
 <dl class="class">
@@ -1483,6 +1720,15 @@ actors in the scene.</p>
 <col style="width: 90%" />
 </colgroup>
 <tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#vtki.Plotter.last_update_time" title="vtki.Plotter.last_update_time"><code class="xref py py-obj docutils literal notranslate"><span class="pre">last_update_time</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#vtki.Plotter.q_pressed" title="vtki.Plotter.q_pressed"><code class="xref py py-obj docutils literal notranslate"><span class="pre">q_pressed</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#vtki.Plotter.right_timer_id" title="vtki.Plotter.right_timer_id"><code class="xref py py-obj docutils literal notranslate"><span class="pre">right_timer_id</span></code></a></p></td>
+<td><p></p></td>
+</tr>
 </tbody>
 </table>
 <p class="rubric">Methods</p>
@@ -1492,6 +1738,15 @@ actors in the scene.</p>
 <col style="width: 90%" />
 </colgroup>
 <tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#vtki.Plotter.plot" title="vtki.Plotter.plot"><code class="xref py py-obj docutils literal notranslate"><span class="pre">plot</span></code></a>(*args, **kwargs)</p></td>
+<td><p>Present for backwards compatibility.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#vtki.Plotter.render" title="vtki.Plotter.render"><code class="xref py py-obj docutils literal notranslate"><span class="pre">render</span></code></a>()</p></td>
+<td><p>renders main window</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#vtki.Plotter.show" title="vtki.Plotter.show"><code class="xref py py-obj docutils literal notranslate"><span class="pre">show</span></code></a>([title, window_size, interactive, …])</p></td>
+<td><p>Creates plotting window</p></td>
+</tr>
 </tbody>
 </table>
 <dl class="class">
@@ -1599,6 +1854,18 @@ window_size.  Default False.</p></li>
 <col style="width: 90%" />
 </colgroup>
 <tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#vtki.Renderer.bounds" title="vtki.Renderer.bounds"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bounds</span></code></a></p></td>
+<td><p>Bounds of all actors present in the rendering window</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#vtki.Renderer.camera" title="vtki.Renderer.camera"><code class="xref py py-obj docutils literal notranslate"><span class="pre">camera</span></code></a></p></td>
+<td><p>The active camera for the rendering scene</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#vtki.Renderer.camera_position" title="vtki.Renderer.camera_position"><code class="xref py py-obj docutils literal notranslate"><span class="pre">camera_position</span></code></a></p></td>
+<td><p>Returns camera position of active render window</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#vtki.Renderer.center" title="vtki.Renderer.center"><code class="xref py py-obj docutils literal notranslate"><span class="pre">center</span></code></a></p></td>
+<td><p>Center of the bounding box around all data present in the scene</p></td>
+</tr>
 </tbody>
 </table>
 <p class="rubric">Methods</p>
@@ -1608,6 +1875,75 @@ window_size.  Default False.</p></li>
 <col style="width: 90%" />
 </colgroup>
 <tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#vtki.Renderer.add_actor" title="vtki.Renderer.add_actor"><code class="xref py py-obj docutils literal notranslate"><span class="pre">add_actor</span></code></a>(uinput[, reset_camera, name, loc, …])</p></td>
+<td><p>Adds an actor to render window.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#vtki.Renderer.add_axes_at_origin" title="vtki.Renderer.add_axes_at_origin"><code class="xref py py-obj docutils literal notranslate"><span class="pre">add_axes_at_origin</span></code></a>()</p></td>
+<td><p>Add axes actor at origin</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#vtki.Renderer.add_border" title="vtki.Renderer.add_border"><code class="xref py py-obj docutils literal notranslate"><span class="pre">add_border</span></code></a>([color, width])</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#vtki.Renderer.add_bounding_box" title="vtki.Renderer.add_bounding_box"><code class="xref py py-obj docutils literal notranslate"><span class="pre">add_bounding_box</span></code></a>([color, corner_factor, …])</p></td>
+<td><p>Adds an unlabeled and unticked box at the boundaries of plot.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#vtki.Renderer.add_bounds_axes" title="vtki.Renderer.add_bounds_axes"><code class="xref py py-obj docutils literal notranslate"><span class="pre">add_bounds_axes</span></code></a>(*args, **kwargs)</p></td>
+<td><p>Deprecated</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#vtki.Renderer.disable" title="vtki.Renderer.disable"><code class="xref py py-obj docutils literal notranslate"><span class="pre">disable</span></code></a>()</p></td>
+<td><p>Disable this renderer’s camera from being interactive</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#vtki.Renderer.disable_eye_dome_lighting" title="vtki.Renderer.disable_eye_dome_lighting"><code class="xref py py-obj docutils literal notranslate"><span class="pre">disable_eye_dome_lighting</span></code></a>()</p></td>
+<td><p>Disable eye dome lighting (EDL)</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#vtki.Renderer.enable" title="vtki.Renderer.enable"><code class="xref py py-obj docutils literal notranslate"><span class="pre">enable</span></code></a>()</p></td>
+<td><p>Enable this renderer’s camera to be interactive</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#vtki.Renderer.enable_eye_dome_lighting" title="vtki.Renderer.enable_eye_dome_lighting"><code class="xref py py-obj docutils literal notranslate"><span class="pre">enable_eye_dome_lighting</span></code></a>()</p></td>
+<td><p>Enable eye dome lighting (EDL)</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#vtki.Renderer.get_default_cam_pos" title="vtki.Renderer.get_default_cam_pos"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_default_cam_pos</span></code></a>()</p></td>
+<td><p>Returns the default focal points and viewup.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#vtki.Renderer.isometric_view" title="vtki.Renderer.isometric_view"><code class="xref py py-obj docutils literal notranslate"><span class="pre">isometric_view</span></code></a>()</p></td>
+<td><p>DEPRECATED: Please use <code class="docutils literal notranslate"><span class="pre">view_isometric</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#vtki.Renderer.remove_actor" title="vtki.Renderer.remove_actor"><code class="xref py py-obj docutils literal notranslate"><span class="pre">remove_actor</span></code></a>(actor[, reset_camera])</p></td>
+<td><p>Removes an actor from the Renderer.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#vtki.Renderer.remove_bounding_box" title="vtki.Renderer.remove_bounding_box"><code class="xref py py-obj docutils literal notranslate"><span class="pre">remove_bounding_box</span></code></a>()</p></td>
+<td><p>Removes bounding box</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#vtki.Renderer.remove_bounds_axes" title="vtki.Renderer.remove_bounds_axes"><code class="xref py py-obj docutils literal notranslate"><span class="pre">remove_bounds_axes</span></code></a>()</p></td>
+<td><p>Removes bounds axes</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#vtki.Renderer.reset_camera" title="vtki.Renderer.reset_camera"><code class="xref py py-obj docutils literal notranslate"><span class="pre">reset_camera</span></code></a>()</p></td>
+<td><p>Reset camera so it slides along the vector defined from camera position to focal point until all of the actors can be seen.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#vtki.Renderer.set_scale" title="vtki.Renderer.set_scale"><code class="xref py py-obj docutils literal notranslate"><span class="pre">set_scale</span></code></a>([xscale, yscale, zscale, reset_camera])</p></td>
+<td><p>Scale all the datasets in the scene.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#vtki.Renderer.show_bounds" title="vtki.Renderer.show_bounds"><code class="xref py py-obj docutils literal notranslate"><span class="pre">show_bounds</span></code></a>([mesh, bounds, show_xaxis, …])</p></td>
+<td><p>Adds bounds axes.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#vtki.Renderer.update_bounds_axes" title="vtki.Renderer.update_bounds_axes"><code class="xref py py-obj docutils literal notranslate"><span class="pre">update_bounds_axes</span></code></a>()</p></td>
+<td><p>Update the bounds axes of the render window</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#vtki.Renderer.view_isometric" title="vtki.Renderer.view_isometric"><code class="xref py py-obj docutils literal notranslate"><span class="pre">view_isometric</span></code></a>()</p></td>
+<td><p>Resets the camera to a default isometric view showing all the actors in the scene.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#vtki.Renderer.view_vector" title="vtki.Renderer.view_vector"><code class="xref py py-obj docutils literal notranslate"><span class="pre">view_vector</span></code></a>(vector[, viewup])</p></td>
+<td><p>Point the camera in the direction of the given vector</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#vtki.Renderer.view_xy" title="vtki.Renderer.view_xy"><code class="xref py py-obj docutils literal notranslate"><span class="pre">view_xy</span></code></a>([negative])</p></td>
+<td><p>View the XY plane</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#vtki.Renderer.view_xz" title="vtki.Renderer.view_xz"><code class="xref py py-obj docutils literal notranslate"><span class="pre">view_xz</span></code></a>([negative])</p></td>
+<td><p>View the XZ plane</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#vtki.Renderer.view_yz" title="vtki.Renderer.view_yz"><code class="xref py py-obj docutils literal notranslate"><span class="pre">view_yz</span></code></a>([negative])</p></td>
+<td><p>View the YZ plane</p></td>
+</tr>
 </tbody>
 </table>
 <dl class="class">

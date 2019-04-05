@@ -201,6 +201,9 @@ are encompassed int their shared inheritance of <a class="reference internal" hr
 <col style="width: 90%" />
 </colgroup>
 <tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#vtki.Grid.dimensions" title="vtki.Grid.dimensions"><code class="xref py py-obj docutils literal notranslate"><span class="pre">dimensions</span></code></a></p></td>
+<td><p>Returns a length 3 tuple of the grid’s dimensions</p></td>
+</tr>
 </tbody>
 </table>
 <p class="rubric">Methods</p>
@@ -234,6 +237,18 @@ are encompassed int their shared inheritance of <a class="reference internal" hr
 <col style="width: 90%" />
 </colgroup>
 <tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#vtki.RectilinearGrid.points" title="vtki.RectilinearGrid.points"><code class="xref py py-obj docutils literal notranslate"><span class="pre">points</span></code></a></p></td>
+<td><p>returns a pointer to the points as a numpy object</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#vtki.RectilinearGrid.x" title="vtki.RectilinearGrid.x"><code class="xref py py-obj docutils literal notranslate"><span class="pre">x</span></code></a></p></td>
+<td><p>Get the coordinates along the X-direction</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#vtki.RectilinearGrid.y" title="vtki.RectilinearGrid.y"><code class="xref py py-obj docutils literal notranslate"><span class="pre">y</span></code></a></p></td>
+<td><p>Get the coordinates along the Y-direction</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#vtki.RectilinearGrid.z" title="vtki.RectilinearGrid.z"><code class="xref py py-obj docutils literal notranslate"><span class="pre">z</span></code></a></p></td>
+<td><p>Get the coordinates along the Z-direction</p></td>
+</tr>
 </tbody>
 </table>
 <p class="rubric">Methods</p>
@@ -243,6 +258,9 @@ are encompassed int their shared inheritance of <a class="reference internal" hr
 <col style="width: 90%" />
 </colgroup>
 <tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#vtki.RectilinearGrid.save" title="vtki.RectilinearGrid.save"><code class="xref py py-obj docutils literal notranslate"><span class="pre">save</span></code></a>(filename[, binary])</p></td>
+<td><p>Writes a rectilinear grid to disk.</p></td>
+</tr>
 </tbody>
 </table>
 <dl class="class">
@@ -337,6 +355,24 @@ only with the legacy writer.</p>
 <col style="width: 90%" />
 </colgroup>
 <tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#vtki.UniformGrid.origin" title="vtki.UniformGrid.origin"><code class="xref py py-obj docutils literal notranslate"><span class="pre">origin</span></code></a></p></td>
+<td><p>Origin of the grid (bottom southwest corner)</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#vtki.UniformGrid.points" title="vtki.UniformGrid.points"><code class="xref py py-obj docutils literal notranslate"><span class="pre">points</span></code></a></p></td>
+<td><p>returns a pointer to the points as a numpy object</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#vtki.UniformGrid.spacing" title="vtki.UniformGrid.spacing"><code class="xref py py-obj docutils literal notranslate"><span class="pre">spacing</span></code></a></p></td>
+<td><p>Get the spacing for each axial direction.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#vtki.UniformGrid.x" title="vtki.UniformGrid.x"><code class="xref py py-obj docutils literal notranslate"><span class="pre">x</span></code></a></p></td>
+<td><p>all the X points</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#vtki.UniformGrid.y" title="vtki.UniformGrid.y"><code class="xref py py-obj docutils literal notranslate"><span class="pre">y</span></code></a></p></td>
+<td><p>all the Y points</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#vtki.UniformGrid.z" title="vtki.UniformGrid.z"><code class="xref py py-obj docutils literal notranslate"><span class="pre">z</span></code></a></p></td>
+<td><p>all the Z points</p></td>
+</tr>
 </tbody>
 </table>
 <p class="rubric">Methods</p>
@@ -346,6 +382,9 @@ only with the legacy writer.</p>
 <col style="width: 90%" />
 </colgroup>
 <tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#vtki.UniformGrid.save" title="vtki.UniformGrid.save"><code class="xref py py-obj docutils literal notranslate"><span class="pre">save</span></code></a>(filename[, binary])</p></td>
+<td><p>Writes image data grid to disk.</p></td>
+</tr>
 </tbody>
 </table>
 <dl class="class">

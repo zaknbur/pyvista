@@ -197,6 +197,12 @@ filtering/plotting routines.</p>
 <col style="width: 90%" />
 </colgroup>
 <tbody>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">bounds</span></code></p></td>
+<td><p>Finds min/max for bounds across blocks</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">n_blocks</span></code></p></td>
+<td><p>The total number of blocks set</p></td>
+</tr>
 </tbody>
 </table>
 <p class="rubric">Methods</p>
@@ -206,6 +212,45 @@ filtering/plotting routines.</p>
 <col style="width: 90%" />
 </colgroup>
 <tbody>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">append</span></code>(data)</p></td>
+<td><p>Add a data set to the next block index</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">combine</span></code>([merge_points])</p></td>
+<td><p>Appends all blocks into a single unstructured grid.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">extract_geometry</span></code>()</p></td>
+<td><p>Combines the geomertry of all blocks into a single <code class="docutils literal notranslate"><span class="pre">PolyData</span></code> object.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">get</span></code>(index)</p></td>
+<td><p>Get a block by its index or name (if the name is non-unique then returns the first occurence)</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_block_name</span></code>(index)</p></td>
+<td><p>Returns the string name of the block at the given index</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_data_range</span></code>(name)</p></td>
+<td><p>Gets the min/max of a scalar given its name across all blocks</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_index_by_name</span></code>(name)</p></td>
+<td><p>Find the index number by block name</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">keys</span></code>()</p></td>
+<td><p>Get all the block names in the dataset</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">next</span></code>()</p></td>
+<td><p>Get the next block from the iterator</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">plot</span></code>([off_screen, full_screen, screenshot, …])</p></td>
+<td><p>Convenience plotting function for a vtk or numpy object.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">pop</span></code>(index)</p></td>
+<td><p>Pops off a block at the specified index</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">save</span></code>(filename[, binary])</p></td>
+<td><p>Writes a <code class="docutils literal notranslate"><span class="pre">MultiBlock</span></code> dataset to disk.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">set_block_name</span></code>(index, name)</p></td>
+<td><p>Set a block’s string name at the specified index</p></td>
+</tr>
 </tbody>
 </table>
 <dl class="class">

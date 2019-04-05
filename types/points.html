@@ -294,6 +294,36 @@ object.  It inherits all methods from the original vtk object,
 <col style="width: 90%" />
 </colgroup>
 <tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#vtki.PolyData.area" title="vtki.PolyData.area"><code class="xref py py-obj docutils literal notranslate"><span class="pre">area</span></code></a></p></td>
+<td><p>Mesh surface area</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#vtki.PolyData.cell_normals" title="vtki.PolyData.cell_normals"><code class="xref py py-obj docutils literal notranslate"><span class="pre">cell_normals</span></code></a></p></td>
+<td><p>Cell normals</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#vtki.PolyData.face_normals" title="vtki.PolyData.face_normals"><code class="xref py py-obj docutils literal notranslate"><span class="pre">face_normals</span></code></a></p></td>
+<td><p>Cell normals</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#vtki.PolyData.faces" title="vtki.PolyData.faces"><code class="xref py py-obj docutils literal notranslate"><span class="pre">faces</span></code></a></p></td>
+<td><p>returns a pointer to the points as a numpy object</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#vtki.PolyData.lines" title="vtki.PolyData.lines"><code class="xref py py-obj docutils literal notranslate"><span class="pre">lines</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#vtki.PolyData.n_faces" title="vtki.PolyData.n_faces"><code class="xref py py-obj docutils literal notranslate"><span class="pre">n_faces</span></code></a></p></td>
+<td><p>alias for <code class="docutils literal notranslate"><span class="pre">n_cells</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#vtki.PolyData.number_of_faces" title="vtki.PolyData.number_of_faces"><code class="xref py py-obj docutils literal notranslate"><span class="pre">number_of_faces</span></code></a></p></td>
+<td><p>returns the number of cells</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#vtki.PolyData.obbTree" title="vtki.PolyData.obbTree"><code class="xref py py-obj docutils literal notranslate"><span class="pre">obbTree</span></code></a></p></td>
+<td><p>obbTree is an object to generate oriented bounding box (OBB) trees.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#vtki.PolyData.point_normals" title="vtki.PolyData.point_normals"><code class="xref py py-obj docutils literal notranslate"><span class="pre">point_normals</span></code></a></p></td>
+<td><p>Point normals</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#vtki.PolyData.volume" title="vtki.PolyData.volume"><code class="xref py py-obj docutils literal notranslate"><span class="pre">volume</span></code></a></p></td>
+<td><p>Mesh volume</p></td>
+</tr>
 </tbody>
 </table>
 <p class="rubric">Methods</p>
@@ -303,6 +333,87 @@ object.  It inherits all methods from the original vtk object,
 <col style="width: 90%" />
 </colgroup>
 <tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#vtki.PolyData.boolean_add" title="vtki.PolyData.boolean_add"><code class="xref py py-obj docutils literal notranslate"><span class="pre">boolean_add</span></code></a>(mesh[, inplace])</p></td>
+<td><p>Add a mesh to the current mesh.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#vtki.PolyData.boolean_cut" title="vtki.PolyData.boolean_cut"><code class="xref py py-obj docutils literal notranslate"><span class="pre">boolean_cut</span></code></a>(cut[, tolerance, inplace])</p></td>
+<td><p>Performs a Boolean cut using another mesh.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#vtki.PolyData.boolean_difference" title="vtki.PolyData.boolean_difference"><code class="xref py py-obj docutils literal notranslate"><span class="pre">boolean_difference</span></code></a>(mesh[, inplace])</p></td>
+<td><p>Combines two meshes and retains only the volume in common between the meshes.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#vtki.PolyData.boolean_union" title="vtki.PolyData.boolean_union"><code class="xref py py-obj docutils literal notranslate"><span class="pre">boolean_union</span></code></a>(mesh[, inplace])</p></td>
+<td><p>Combines two meshes and attempts to create a manifold mesh.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#vtki.PolyData.center_of_mass" title="vtki.PolyData.center_of_mass"><code class="xref py py-obj docutils literal notranslate"><span class="pre">center_of_mass</span></code></a>([scalars_weight])</p></td>
+<td><p>Returns the coordinates for the center of mass of the mesh.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#vtki.PolyData.clean" title="vtki.PolyData.clean"><code class="xref py py-obj docutils literal notranslate"><span class="pre">clean</span></code></a>([point_merging, merge_tol, …])</p></td>
+<td><p>Cleans mesh by merging duplicate points, remove unused points, and/or remove degenerate cells.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#vtki.PolyData.clip_with_plane" title="vtki.PolyData.clip_with_plane"><code class="xref py py-obj docutils literal notranslate"><span class="pre">clip_with_plane</span></code></a>(origin, normal[, value, inplace])</p></td>
+<td><p>Clip a vtki.PolyData or vtk.vtkPolyData with a plane.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#vtki.PolyData.compute_normals" title="vtki.PolyData.compute_normals"><code class="xref py py-obj docutils literal notranslate"><span class="pre">compute_normals</span></code></a>([cell_normals, …])</p></td>
+<td><p>Compute point and/or cell normals for a mesh.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#vtki.PolyData.curvature" title="vtki.PolyData.curvature"><code class="xref py py-obj docutils literal notranslate"><span class="pre">curvature</span></code></a>([curv_type])</p></td>
+<td><p>Returns the pointwise curvature of a mesh</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#vtki.PolyData.decimate" title="vtki.PolyData.decimate"><code class="xref py py-obj docutils literal notranslate"><span class="pre">decimate</span></code></a>(target_reduction[, …])</p></td>
+<td><p>Reduces the number of triangles in a triangular mesh using vtkQuadricDecimation.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#vtki.PolyData.delaunay_2d" title="vtki.PolyData.delaunay_2d"><code class="xref py py-obj docutils literal notranslate"><span class="pre">delaunay_2d</span></code></a>([tol, alpha, offset, bound])</p></td>
+<td><p>Apply a delaunay 2D filter along the best fitting plane</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#vtki.PolyData.delauney_2d" title="vtki.PolyData.delauney_2d"><code class="xref py py-obj docutils literal notranslate"><span class="pre">delauney_2d</span></code></a>()</p></td>
+<td><p>DEPRECATED.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#vtki.PolyData.edge_mask" title="vtki.PolyData.edge_mask"><code class="xref py py-obj docutils literal notranslate"><span class="pre">edge_mask</span></code></a>(angle)</p></td>
+<td><p>Returns a mask of the points of a surface mesh that have a surface angle greater than angle</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#vtki.PolyData.extract_edges" title="vtki.PolyData.extract_edges"><code class="xref py py-obj docutils literal notranslate"><span class="pre">extract_edges</span></code></a>([feature_angle, …])</p></td>
+<td><p>Extracts edges from a surface.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#vtki.PolyData.extract_largest" title="vtki.PolyData.extract_largest"><code class="xref py py-obj docutils literal notranslate"><span class="pre">extract_largest</span></code></a>([inplace])</p></td>
+<td><p>Extract largest connected set in mesh.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#vtki.PolyData.fill_holes" title="vtki.PolyData.fill_holes"><code class="xref py py-obj docutils literal notranslate"><span class="pre">fill_holes</span></code></a>(hole_size)</p></td>
+<td><p>Fill holes in a vtki.PolyData or vtk.vtkPolyData object.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#vtki.PolyData.flip_normals" title="vtki.PolyData.flip_normals"><code class="xref py py-obj docutils literal notranslate"><span class="pre">flip_normals</span></code></a>()</p></td>
+<td><p>Flip normals of a triangular mesh by reversing the point ordering.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#vtki.PolyData.plot_boundaries" title="vtki.PolyData.plot_boundaries"><code class="xref py py-obj docutils literal notranslate"><span class="pre">plot_boundaries</span></code></a>(**kwargs)</p></td>
+<td><p>Plots boundaries of a mesh</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#vtki.PolyData.plot_curvature" title="vtki.PolyData.plot_curvature"><code class="xref py py-obj docutils literal notranslate"><span class="pre">plot_curvature</span></code></a>([curv_type])</p></td>
+<td><p>Plots curvature</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#vtki.PolyData.plot_normals" title="vtki.PolyData.plot_normals"><code class="xref py py-obj docutils literal notranslate"><span class="pre">plot_normals</span></code></a>([show_mesh, mag, flip, use_every])</p></td>
+<td><p>Plot the point normals of a mesh.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#vtki.PolyData.ray_trace" title="vtki.PolyData.ray_trace"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ray_trace</span></code></a>(origin, end_point[, first_point, …])</p></td>
+<td><p>Performs a single ray trace calculation given a mesh and a line segment defined by an origin and end_point.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#vtki.PolyData.remove_points" title="vtki.PolyData.remove_points"><code class="xref py py-obj docutils literal notranslate"><span class="pre">remove_points</span></code></a>(remove[, mode, keep_scalars, …])</p></td>
+<td><p>Rebuild a mesh by removing points.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#vtki.PolyData.save" title="vtki.PolyData.save"><code class="xref py py-obj docutils literal notranslate"><span class="pre">save</span></code></a>(filename[, binary])</p></td>
+<td><p>Writes a surface mesh to disk.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#vtki.PolyData.smooth" title="vtki.PolyData.smooth"><code class="xref py py-obj docutils literal notranslate"><span class="pre">smooth</span></code></a>([n_iter, convergence])</p></td>
+<td><p>Adjust point coordinates using Laplacian smoothing.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#vtki.PolyData.subdivide" title="vtki.PolyData.subdivide"><code class="xref py py-obj docutils literal notranslate"><span class="pre">subdivide</span></code></a>(nsub[, subfilter, inplace])</p></td>
+<td><p>Increase the number of triangles in a single, connected triangular mesh.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#vtki.PolyData.tri_filter" title="vtki.PolyData.tri_filter"><code class="xref py py-obj docutils literal notranslate"><span class="pre">tri_filter</span></code></a>([inplace])</p></td>
+<td><p>Returns an all triangle mesh.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#vtki.PolyData.tube" title="vtki.PolyData.tube"><code class="xref py py-obj docutils literal notranslate"><span class="pre">tube</span></code></a>([radius, scalars, capping, n_sides, …])</p></td>
+<td><p>Generate a tube around each input line.</p></td>
+</tr>
 </tbody>
 </table>
 <dl class="class">

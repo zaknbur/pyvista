@@ -470,6 +470,18 @@ to show the exact value of certain points.</p>
 <col style="width: 90%" />
 </colgroup>
 <tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#vtki.UnstructuredGrid.cells" title="vtki.UnstructuredGrid.cells"><code class="xref py py-obj docutils literal notranslate"><span class="pre">cells</span></code></a></p></td>
+<td><p>returns a pointer to the cells as a numpy object</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#vtki.UnstructuredGrid.celltypes" title="vtki.UnstructuredGrid.celltypes"><code class="xref py py-obj docutils literal notranslate"><span class="pre">celltypes</span></code></a></p></td>
+<td><p>Get the cell types array</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#vtki.UnstructuredGrid.offset" title="vtki.UnstructuredGrid.offset"><code class="xref py py-obj docutils literal notranslate"><span class="pre">offset</span></code></a></p></td>
+<td><p>Get Cell Locations Array</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#vtki.UnstructuredGrid.quality" title="vtki.UnstructuredGrid.quality"><code class="xref py py-obj docutils literal notranslate"><span class="pre">quality</span></code></a></p></td>
+<td><p>Returns cell quality</p></td>
+</tr>
 </tbody>
 </table>
 <p class="rubric">Methods</p>
@@ -479,6 +491,21 @@ to show the exact value of certain points.</p>
 <col style="width: 90%" />
 </colgroup>
 <tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#vtki.UnstructuredGrid.delaunay_2d" title="vtki.UnstructuredGrid.delaunay_2d"><code class="xref py py-obj docutils literal notranslate"><span class="pre">delaunay_2d</span></code></a>([tol, alpha, offset, bound])</p></td>
+<td><p>Apply a delaunay 2D filter along the best fitting plane.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#vtki.UnstructuredGrid.extract_cells" title="vtki.UnstructuredGrid.extract_cells"><code class="xref py py-obj docutils literal notranslate"><span class="pre">extract_cells</span></code></a>(ind)</p></td>
+<td><p>Returns a subset of the grid</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#vtki.UnstructuredGrid.linear_copy" title="vtki.UnstructuredGrid.linear_copy"><code class="xref py py-obj docutils literal notranslate"><span class="pre">linear_copy</span></code></a>([deep])</p></td>
+<td><p>Returns a copy of the input unstructured grid containing only linear cells.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#vtki.UnstructuredGrid.merge" title="vtki.UnstructuredGrid.merge"><code class="xref py py-obj docutils literal notranslate"><span class="pre">merge</span></code></a>([grid, merge_points, inplace, …])</p></td>
+<td><p>Join one or many other grids to this grid.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#vtki.UnstructuredGrid.save" title="vtki.UnstructuredGrid.save"><code class="xref py py-obj docutils literal notranslate"><span class="pre">save</span></code></a>(filename[, binary])</p></td>
+<td><p>Writes an unstructured grid to disk.</p></td>
+</tr>
 </tbody>
 </table>
 <dl class="class">
@@ -657,6 +684,18 @@ only “.vtk” files</p>
 <col style="width: 90%" />
 </colgroup>
 <tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#vtki.StructuredGrid.quality" title="vtki.StructuredGrid.quality"><code class="xref py py-obj docutils literal notranslate"><span class="pre">quality</span></code></a></p></td>
+<td><p>Computes the minimum scaled jacobian of each cell.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#vtki.StructuredGrid.x" title="vtki.StructuredGrid.x"><code class="xref py py-obj docutils literal notranslate"><span class="pre">x</span></code></a></p></td>
+<td><p>The X coordinates of all points</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#vtki.StructuredGrid.y" title="vtki.StructuredGrid.y"><code class="xref py py-obj docutils literal notranslate"><span class="pre">y</span></code></a></p></td>
+<td><p>The Y coordinates of all points</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#vtki.StructuredGrid.z" title="vtki.StructuredGrid.z"><code class="xref py py-obj docutils literal notranslate"><span class="pre">z</span></code></a></p></td>
+<td><p>The Z coordinates of all points</p></td>
+</tr>
 </tbody>
 </table>
 <p class="rubric">Methods</p>
@@ -666,6 +705,9 @@ only “.vtk” files</p>
 <col style="width: 90%" />
 </colgroup>
 <tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#vtki.StructuredGrid.save" title="vtki.StructuredGrid.save"><code class="xref py py-obj docutils literal notranslate"><span class="pre">save</span></code></a>(filename[, binary])</p></td>
+<td><p>Writes a structured grid to disk.</p></td>
+</tr>
 </tbody>
 </table>
 <dl class="class">
@@ -773,6 +815,9 @@ only with the legacy writer.</p>
 <col style="width: 90%" />
 </colgroup>
 <tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#vtki.PointGrid.volume" title="vtki.PointGrid.volume"><code class="xref py py-obj docutils literal notranslate"><span class="pre">volume</span></code></a></p></td>
+<td><p>Computes volume by extracting the external surface and computing interior volume</p></td>
+</tr>
 </tbody>
 </table>
 <p class="rubric">Methods</p>
@@ -782,6 +827,18 @@ only with the legacy writer.</p>
 <col style="width: 90%" />
 </colgroup>
 <tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#vtki.PointGrid.extract_edges" title="vtki.PointGrid.extract_edges"><code class="xref py py-obj docutils literal notranslate"><span class="pre">extract_edges</span></code></a>([feature_angle, …])</p></td>
+<td><p>Extracts edges from the surface of the grid.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#vtki.PointGrid.extract_surface" title="vtki.PointGrid.extract_surface"><code class="xref py py-obj docutils literal notranslate"><span class="pre">extract_surface</span></code></a>([pass_pointid, pass_cellid])</p></td>
+<td><p>Extract surface mesh of the grid</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#vtki.PointGrid.plot_curvature" title="vtki.PointGrid.plot_curvature"><code class="xref py py-obj docutils literal notranslate"><span class="pre">plot_curvature</span></code></a>([curv_type])</p></td>
+<td><p>Plots the curvature of the external surface of the grid</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#vtki.PointGrid.surface_indices" title="vtki.PointGrid.surface_indices"><code class="xref py py-obj docutils literal notranslate"><span class="pre">surface_indices</span></code></a>()</p></td>
+<td><p>The surface indices of a grid.</p></td>
+</tr>
 </tbody>
 </table>
 <dl class="class">

@@ -227,6 +227,75 @@ all the the following filters available as callable methods directly from any
 <col style="width: 90%" />
 </colgroup>
 <tbody>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">cell_centers</span></code>([vertex])</p></td>
+<td><p>Generate points at the center of the cells in this dataset.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">cell_data_to_point_data</span></code>([pass_cell_data])</p></td>
+<td><p>Transforms cell data (i.e., data specified per cell) into point data (i.e., data specified at cell points).</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">clip</span></code>([normal, origin, invert])</p></td>
+<td><p>Clip a dataset by a plane by specifying the origin and normal.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">clip_box</span></code>([bounds, invert, factor])</p></td>
+<td><p>Clips a dataset by a bounding box defined by the bounds.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">compute_cell_sizes</span></code>([length, area, volume])</p></td>
+<td><p>This filter computes sizes for 1D (length), 2D (area) and 3D (volume) cells.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">connectivity</span></code>([largest])</p></td>
+<td><p>Find and label connected bodies/volumes.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">contour</span></code>([isosurfaces, scalars, …])</p></td>
+<td><p>Contours an input dataset by an array.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">delaunay_3d</span></code>([alpha, tol, offset])</p></td>
+<td><p>Constructs a 3D Delaunay triangulation of the mesh.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">elevation</span></code>([low_point, high_point, …])</p></td>
+<td><p>Generate scalar values on a dataset.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">extract_geometry</span></code>()</p></td>
+<td><p>Extract the outer surface of a volume or structured grid dataset as PolyData.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">glyph</span></code>([orient, scale, factor, geom])</p></td>
+<td><p>Copies a geometric representation (called a glyph) to every point in the input dataset.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">outline</span></code>([generate_faces])</p></td>
+<td><p>Produces an outline of the full extent for the input dataset.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">outline_corners</span></code>([factor])</p></td>
+<td><p>Produces an outline of the corners for the input dataset.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">slice</span></code>([normal, origin, generate_triangles, …])</p></td>
+<td><p>Slice a dataset by a plane at the specified origin and normal vector orientation.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">slice_along_axis</span></code>([n, axis, tolerance, …])</p></td>
+<td><p>Create many slices of the input dataset along a specified axis.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">slice_orthogonal</span></code>([x, y, z, …])</p></td>
+<td><p>Creates three orthogonal slices through the dataset on the three caresian planes.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">split_bodies</span></code>([label])</p></td>
+<td><p>Find, label, and split connected bodies/volumes.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">texture_map_to_plane</span></code>([origin, point_u, …])</p></td>
+<td><p>Texture map this dataset to a user defined plane.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">threshold</span></code>([value, scalars, invert, …])</p></td>
+<td><p>This filter will apply a <code class="docutils literal notranslate"><span class="pre">vtkThreshold</span></code> filter to the input dataset and return the resulting object.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">threshold_percent</span></code>([percent, scalars, …])</p></td>
+<td><p>Thresholds the dataset by a percentage of its range on the active scalar array or as specified</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">triangulate</span></code>()</p></td>
+<td><p>Returns an all triangle mesh.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">warp_by_scalar</span></code>([scalars, scale_factor, …])</p></td>
+<td><p>Warp the dataset’s points by a point data scalar array’s values.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">wireframe</span></code>()</p></td>
+<td><p>Extract all the internal/external edges of the dataset as PolyData.</p></td>
+</tr>
 </tbody>
 </table>
 <dl class="class">
