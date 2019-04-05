@@ -942,7 +942,7 @@ will be replaced by the new actor.</p></li>
 
 <dl class="method">
 <dt id="vtki.BasePlotter.add_scalar_bar">
-<code class="descname">add_scalar_bar</code><span class="sig-paren">(</span><em>title=None</em>, <em>n_labels=5</em>, <em>italic=False</em>, <em>bold=True</em>, <em>title_font_size=None</em>, <em>label_font_size=None</em>, <em>color=None</em>, <em>font_family=None</em>, <em>shadow=False</em>, <em>mapper=None</em>, <em>width=None</em>, <em>height=None</em>, <em>position_x=None</em>, <em>position_y=None</em>, <em>vertical=None</em>, <em>interactive=False</em>, <em>fmt=None</em><span class="sig-paren">)</span><a class="headerlink" href="#vtki.BasePlotter.add_scalar_bar" title="Permalink to this definition">¶</a></dt>
+<code class="descname">add_scalar_bar</code><span class="sig-paren">(</span><em>title=None</em>, <em>n_labels=5</em>, <em>italic=False</em>, <em>bold=True</em>, <em>title_font_size=None</em>, <em>label_font_size=None</em>, <em>color=None</em>, <em>font_family=None</em>, <em>shadow=False</em>, <em>mapper=None</em>, <em>width=None</em>, <em>height=None</em>, <em>position_x=None</em>, <em>position_y=None</em>, <em>vertical=None</em>, <em>interactive=False</em>, <em>fmt=None</em>, <em>use_opacity=True</em>, <em>outline=False</em><span class="sig-paren">)</span><a class="headerlink" href="#vtki.BasePlotter.add_scalar_bar" title="Permalink to this definition">¶</a></dt>
 <dd><p>Creates scalar bar using the ranges as set by the last input
 mesh.</p>
 <dl class="field-list simple">
@@ -973,6 +973,9 @@ direction to place the bottom left corner of the colorbar</p></li>
 <li><p><strong>position_y</strong> (<em>float</em><em>, </em><em>optional</em>) – The percentage (0 to 1) along the windows’s vertical
 direction to place the bottom left corner of the colorbar</p></li>
 <li><p><strong>interactive</strong> (<em>bool</em><em>, </em><em>optional</em>) – Use a widget to control the size and location of the scalar bar.</p></li>
+<li><p><strong>use_opacity</strong> (<em>bool</em><em>, </em><em>optional</em>) – Optionally disply the opacity mapping on the scalar bar</p></li>
+<li><p><strong>outline</strong> (<em>bool</em><em>, </em><em>optional</em>) – Optionally outline the scalar bar to make opacity mappings more
+obvious.</p></li>
 </ul>
 </dd>
 </dl>
