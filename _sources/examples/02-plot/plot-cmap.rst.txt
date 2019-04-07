@@ -15,7 +15,8 @@ Any colormap built for ``matplotlib`` is fully compatible with ``vtki``.
 Colormaps are typically specifiedby passing the string name of the
 ``matplotlib`` colormap to the plotting routine via the ``cmap`` argument.
 
-See `this page` for a complete list of available colormaps.
+See `this page`_ for a complete list of available colormaps.
+
 .. _this page: https://matplotlib.org/tutorials/colors/colormaps.html
 
 To get started using a custom colormap, download some data with scalars to
@@ -70,7 +71,7 @@ Simply pass the colormap to the plotting routine!
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  1.320 seconds)
+   **Total running time of the script:** ( 0 minutes  1.334 seconds)
 
 
 .. _sphx_glr_download_examples_02-plot_plot-cmap.py:

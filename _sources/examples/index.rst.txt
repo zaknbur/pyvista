@@ -67,6 +67,26 @@ Loading and Creating Meshes
 
 .. raw:: html
 
+    <div class="sphx-glr-thumbcontainer" tooltip="Create a surface from a set of points through a Delaunay triangulation.">
+
+.. only:: html
+
+    .. figure:: /examples/00-load/images/thumb/sphx_glr_create-tri-surface_thumb.png
+
+        :ref:`sphx_glr_examples_00-load_create-tri-surface.py`
+
+.. raw:: html
+
+    </div>
+
+
+.. toctree::
+   :hidden:
+
+   /examples/00-load/create-tri-surface
+
+.. raw:: html
+
     <div class="sphx-glr-thumbcontainer" tooltip="Create a simple uniform grid from a 3D NumPy array of values.">
 
 .. only:: html

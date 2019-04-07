@@ -5,6 +5,8 @@
 ./_downloads/14c0c0d24179269d8186204665bc4d9b/plot-multi-window.py
 ./_downloads/1cd574077a10ab46e5a568689536af51/poly-ray-trace.ipynb
 ./_downloads/2289b249c09a4286ca15abf6594cc053/using-filters.ipynb
+./_downloads/374227c77cf80fb5628a26fd08042f08/create-tri-surface.py
+./_downloads/39ab274cc3cd300bc162850325df7c07/create-tri-surface.ipynb
 ./_downloads/39f7c502a66fd186e6cd19f177e51a02/create-poly.py
 ./_downloads/4005562e9b7843812cea9f9471a75f7a/plot-movie.ipynb
 ./_downloads/437dc62e728909a91ee67f4c26b0c6c2/compute-normals.py
@@ -71,6 +73,9 @@
 ./_images/sphx_glr_create-structured-surface_001.png
 ./_images/sphx_glr_create-structured-surface_002.png
 ./_images/sphx_glr_create-structured-surface_thumb.png
+./_images/sphx_glr_create-tri-surface_001.png
+./_images/sphx_glr_create-tri-surface_002.png
+./_images/sphx_glr_create-tri-surface_thumb.png
 ./_images/sphx_glr_create-uniform-grid_001.png
 ./_images/sphx_glr_create-uniform-grid_002.png
 ./_images/sphx_glr_create-uniform-grid_thumb.png
@@ -135,6 +140,7 @@
 ./_images/vectorfield.png
 ./_sources/examples/00-load/create-poly.rst.txt
 ./_sources/examples/00-load/create-structured-surface.rst.txt
+./_sources/examples/00-load/create-tri-surface.rst.txt
 ./_sources/examples/00-load/create-uniform-grid.rst.txt
 ./_sources/examples/00-load/create-unstructured-surface.rst.txt
 ./_sources/examples/00-load/read-file.rst.txt
@@ -236,6 +242,7 @@
 ./_static/underscore.js
 ./examples/00-load/create-poly.html
 ./examples/00-load/create-structured-surface.html
+./examples/00-load/create-tri-surface.html
 ./examples/00-load/create-uniform-grid.html
 ./examples/00-load/create-unstructured-surface.html
 ./examples/00-load/read-file.html
