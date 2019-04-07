@@ -20,9 +20,11 @@
 ./_downloads/6f60d9f2a2bf02755ac79a6de7a0bfc3/plot-glyphs.py
 ./_downloads/72d710a5ff0175eb141b3d0fb3088192/plot-scalar-bars.py
 ./_downloads/7c646a2f4fdef11d7d770b8c82a7e03d/plot-edl.py
+./_downloads/823ef82703bd8155ad2739f9caff3dea/create-geometric-objects.py
 ./_downloads/86e96b4763988892e9254c0f4184ac76/compute-volume.py
 ./_downloads/884c248e2efc112ff97963ff8f2daf50/volume-smoothing.py
 ./_downloads/8b5c40dde9d52a5f8b08f8c0237b7d6a/read-image.py
+./_downloads/8ef8acf95a9baa2a7d5070a426a14a9b/create-geometric-objects.ipynb
 ./_downloads/9de975b9b9580d79fe42c7965e22e2a8/create-uniform-grid.py
 ./_downloads/9e31d84969726fad2f919f6067ef280a/plot-clear.ipynb
 ./_downloads/aff9b0f31547f12d46da169f6b1a5c0f/plot-movie.py
@@ -68,6 +70,14 @@
 ./_images/sphx_glr_compute-volume_003.png
 ./_images/sphx_glr_compute-volume_004.png
 ./_images/sphx_glr_compute-volume_thumb.png
+./_images/sphx_glr_create-geometric-objects_001.png
+./_images/sphx_glr_create-geometric-objects_002.png
+./_images/sphx_glr_create-geometric-objects_003.png
+./_images/sphx_glr_create-geometric-objects_004.png
+./_images/sphx_glr_create-geometric-objects_005.png
+./_images/sphx_glr_create-geometric-objects_006.png
+./_images/sphx_glr_create-geometric-objects_007.png
+./_images/sphx_glr_create-geometric-objects_thumb.png
 ./_images/sphx_glr_create-poly_001.png
 ./_images/sphx_glr_create-poly_thumb.png
 ./_images/sphx_glr_create-structured-surface_001.png
@@ -138,6 +148,7 @@
 ./_images/structured_cube.png
 ./_images/threshold-tool.gif
 ./_images/vectorfield.png
+./_sources/examples/00-load/create-geometric-objects.rst.txt
 ./_sources/examples/00-load/create-poly.rst.txt
 ./_sources/examples/00-load/create-structured-surface.rst.txt
 ./_sources/examples/00-load/create-tri-surface.rst.txt
@@ -240,6 +251,7 @@
 ./_static/style.css
 ./_static/underscore-1.3.1.js
 ./_static/underscore.js
+./examples/00-load/create-geometric-objects.html
 ./examples/00-load/create-poly.html
 ./examples/00-load/create-structured-surface.html
 ./examples/00-load/create-tri-surface.html

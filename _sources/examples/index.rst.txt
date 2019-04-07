@@ -27,6 +27,26 @@ Loading and Creating Meshes
 
 .. raw:: html
 
+    <div class="sphx-glr-thumbcontainer" tooltip="The &quot;Hello, world!&quot; of VTK">
+
+.. only:: html
+
+    .. figure:: /examples/00-load/images/thumb/sphx_glr_create-geometric-objects_thumb.png
+
+        :ref:`sphx_glr_examples_00-load_create-geometric-objects.py`
+
+.. raw:: html
+
+    </div>
+
+
+.. toctree::
+   :hidden:
+
+   /examples/00-load/create-geometric-objects
+
+.. raw:: html
+
     <div class="sphx-glr-thumbcontainer" tooltip="Creating a PolyData object from NumPy arrays">
 
 .. only:: html
