@@ -139,6 +139,26 @@ Filtering
 
 .. raw:: html
 
+    <div class="sphx-glr-thumbcontainer" tooltip=" Compute normals on a surface.">
+
+.. only:: html
+
+    .. figure:: /examples/01-filter/images/thumb/sphx_glr_compute-normals_thumb.png
+
+        :ref:`sphx_glr_examples_01-filter_compute-normals.py`
+
+.. raw:: html
+
+    </div>
+
+
+.. toctree::
+   :hidden:
+
+   /examples/01-filter/compute-normals
+
+.. raw:: html
+
     <div class="sphx-glr-thumbcontainer" tooltip=" Calculate mass properties such as the volume or area of datasets">
 
 .. only:: html
@@ -388,6 +408,26 @@ Plotting Examples
    :hidden:
 
    /examples/02-plot/plot-scalar-bars
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbcontainer" tooltip="Plot a mesh with an image projected onto it as a texture.">
+
+.. only:: html
+
+    .. figure:: /examples/02-plot/images/thumb/sphx_glr_plot-texture_thumb.png
+
+        :ref:`sphx_glr_examples_02-plot_plot-texture.py`
+
+.. raw:: html
+
+    </div>
+
+
+.. toctree::
+   :hidden:
+
+   /examples/02-plot/plot-texture
 .. raw:: html
 
     <div style='clear:both'></div>

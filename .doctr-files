@@ -7,6 +7,7 @@
 ./_downloads/2289b249c09a4286ca15abf6594cc053/using-filters.ipynb
 ./_downloads/39f7c502a66fd186e6cd19f177e51a02/create-poly.py
 ./_downloads/4005562e9b7843812cea9f9471a75f7a/plot-movie.ipynb
+./_downloads/437dc62e728909a91ee67f4c26b0c6c2/compute-normals.py
 ./_downloads/486d712873eb63457b0ca8de8c00251e/read-file.ipynb
 ./_downloads/5386e72fd65b6c83346353c2d1757aaa/plot-clear.py
 ./_downloads/5cabf0d0c1111972d87561c959fe9ba0/plot-gif.ipynb
@@ -25,10 +26,13 @@
 ./_downloads/cfde9598b621dc37bb79ae0462a7d062/create-unstructured-surface.py
 ./_downloads/d46ac6297f4bb4e454011dd70b83fe9f/create-poly.ipynb
 ./_downloads/d79a533af7335164ff57a85055101e37/plot-edl.ipynb
+./_downloads/da60b9606906e247c27114099f9d92e8/plot-texture.py
 ./_downloads/e2ae8dac5171eea6d192d8d09375ad03/volume-smoothing.ipynb
 ./_downloads/e44412434f375359ce98266b12af47bf/poly-ray-trace.py
 ./_downloads/e77616ba1ceeaa441207badad233b23e/compute-volume.ipynb
 ./_downloads/eabfdcb8f80911a748c1d70d021f691b/read-file.py
+./_downloads/ed10fa1d558440eb30972d977e6040aa/compute-normals.ipynb
+./_downloads/efbdebcdaf254a807f219a2d8018cfc4/plot-texture.ipynb
 ./_downloads/f24086cd14b09ec4ed083f8ced76e13a/plot-opacity.py
 ./_downloads/f34da779b6983967107bc28812651311/plot-opacity.ipynb
 ./_downloads/fa8c60f0c6083ff0552584c43a7311e3/create-uniform-grid.ipynb
@@ -50,6 +54,9 @@
 ./_images/shrink-globe.gif
 ./_images/slicer-tool.gif
 ./_images/sphere-shrinking.mp4
+./_images/sphx_glr_compute-normals_001.png
+./_images/sphx_glr_compute-normals_002.png
+./_images/sphx_glr_compute-normals_thumb.png
 ./_images/sphx_glr_compute-volume_001.png
 ./_images/sphx_glr_compute-volume_002.png
 ./_images/sphx_glr_compute-volume_003.png
@@ -85,11 +92,18 @@
 ./_images/sphx_glr_plot-multi-window_002.png
 ./_images/sphx_glr_plot-multi-window_thumb.png
 ./_images/sphx_glr_plot-opacity_001.png
+./_images/sphx_glr_plot-opacity_002.png
 ./_images/sphx_glr_plot-opacity_thumb.png
 ./_images/sphx_glr_plot-scalar-bars_001.png
 ./_images/sphx_glr_plot-scalar-bars_002.png
 ./_images/sphx_glr_plot-scalar-bars_003.png
 ./_images/sphx_glr_plot-scalar-bars_thumb.png
+./_images/sphx_glr_plot-texture_001.png
+./_images/sphx_glr_plot-texture_002.png
+./_images/sphx_glr_plot-texture_003.png
+./_images/sphx_glr_plot-texture_004.png
+./_images/sphx_glr_plot-texture_005.png
+./_images/sphx_glr_plot-texture_thumb.png
 ./_images/sphx_glr_poly-ray-trace_001.png
 ./_images/sphx_glr_poly-ray-trace_thumb.png
 ./_images/sphx_glr_read-file_001.png
@@ -116,6 +130,7 @@
 ./_sources/examples/00-load/create-unstructured-surface.rst.txt
 ./_sources/examples/00-load/read-file.rst.txt
 ./_sources/examples/00-load/sg_execution_times.rst.txt
+./_sources/examples/01-filter/compute-normals.rst.txt
 ./_sources/examples/01-filter/compute-volume.rst.txt
 ./_sources/examples/01-filter/poly-ray-trace.rst.txt
 ./_sources/examples/01-filter/sg_execution_times.rst.txt
@@ -129,6 +144,7 @@
 ./_sources/examples/02-plot/plot-multi-window.rst.txt
 ./_sources/examples/02-plot/plot-opacity.rst.txt
 ./_sources/examples/02-plot/plot-scalar-bars.rst.txt
+./_sources/examples/02-plot/plot-texture.rst.txt
 ./_sources/examples/02-plot/sg_execution_times.rst.txt
 ./_sources/examples/index.rst.txt
 ./_sources/external_examples.rst.txt
@@ -213,6 +229,7 @@
 ./examples/00-load/create-unstructured-surface.html
 ./examples/00-load/read-file.html
 ./examples/00-load/sg_execution_times.html
+./examples/01-filter/compute-normals.html
 ./examples/01-filter/compute-volume.html
 ./examples/01-filter/poly-ray-trace.html
 ./examples/01-filter/sg_execution_times.html
@@ -226,6 +243,7 @@
 ./examples/02-plot/plot-multi-window.html
 ./examples/02-plot/plot-opacity.html
 ./examples/02-plot/plot-scalar-bars.html
+./examples/02-plot/plot-texture.html
 ./examples/02-plot/sg_execution_times.html
 ./examples/index.html
 ./external_examples.html

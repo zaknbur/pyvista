@@ -36,7 +36,56 @@ Opacity transfer function options are:
 
 
 
+
+
 .. image:: /examples/02-plot/images/sphx_glr_plot-opacity_001.png
+    :class: sphx-glr-single-img
+
+
+
+
+Opacity mapping is often useful when plotting DICOM images. For example,
+download the sample knee DICOM image:
+
+
+.. code-block:: default
+
+    knee = examples.download_knee()
+
+
+
+
+
+
+
+And here we inspect the DICOM image with a few different colormaps and opacity
+mappings:
+
+
+.. code-block:: default
+
+    p = vtki.Plotter(shape=(2,2), border=False)
+
+    p.add_mesh(knee, cmap='bone', show_scalar_bar=0)
+    p.view_xy()
+
+    p.subplot(0,1)
+    p.add_mesh(knee, cmap='bone', opacity='linear', show_scalar_bar=0)
+    p.view_xy()
+
+    p.subplot(1,0)
+    p.add_mesh(knee, cmap='nipy_spectral', show_scalar_bar=0)
+    p.view_xy()
+
+    p.subplot(1,1)
+    p.add_mesh(knee, cmap='nipy_spectral', opacity='linear', show_scalar_bar=0)
+    p.view_xy()
+
+    p.show()
+
+
+
+.. image:: /examples/02-plot/images/sphx_glr_plot-opacity_002.png
     :class: sphx-glr-single-img
 
 
@@ -45,7 +94,7 @@ Opacity transfer function options are:
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  1.306 seconds)
+   **Total running time of the script:** ( 0 minutes  4.319 seconds)
 
 
 .. _sphx_glr_download_examples_02-plot_plot-opacity.py:
