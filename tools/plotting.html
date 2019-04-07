@@ -1499,7 +1499,7 @@ A scale of zero is illegal and will be replaced with one.</p>
 
 <dl class="method">
 <dt id="vtki.BasePlotter.show_bounds">
-<code class="descname">show_bounds</code><span class="sig-paren">(</span><em>mesh=None</em>, <em>bounds=None</em>, <em>show_xaxis=True</em>, <em>show_yaxis=True</em>, <em>show_zaxis=True</em>, <em>show_xlabels=True</em>, <em>show_ylabels=True</em>, <em>show_zlabels=True</em>, <em>italic=False</em>, <em>bold=True</em>, <em>shadow=False</em>, <em>font_size=None</em>, <em>font_family=None</em>, <em>color=None</em>, <em>xlabel='X Axis'</em>, <em>ylabel='Y Axis'</em>, <em>zlabel='Z Axis'</em>, <em>use_2d=False</em>, <em>grid=None</em>, <em>location='closest'</em>, <em>ticks=None</em>, <em>all_edges=False</em>, <em>corner_factor=0.5</em>, <em>fmt=None</em>, <em>minor_ticks=False</em>, <em>loc=None</em><span class="sig-paren">)</span><a class="headerlink" href="#vtki.BasePlotter.show_bounds" title="Permalink to this definition">¶</a></dt>
+<code class="descname">show_bounds</code><span class="sig-paren">(</span><em>mesh=None</em>, <em>bounds=None</em>, <em>show_xaxis=True</em>, <em>show_yaxis=True</em>, <em>show_zaxis=True</em>, <em>show_xlabels=True</em>, <em>show_ylabels=True</em>, <em>show_zlabels=True</em>, <em>italic=False</em>, <em>bold=True</em>, <em>shadow=False</em>, <em>font_size=None</em>, <em>font_family=None</em>, <em>color=None</em>, <em>xlabel='X Axis'</em>, <em>ylabel='Y Axis'</em>, <em>zlabel='Z Axis'</em>, <em>use_2d=False</em>, <em>grid=None</em>, <em>location='closest'</em>, <em>ticks=None</em>, <em>all_edges=False</em>, <em>corner_factor=0.5</em>, <em>fmt=None</em>, <em>minor_ticks=False</em>, <em>loc=None</em>, <em>padding=0.0</em><span class="sig-paren">)</span><a class="headerlink" href="#vtki.BasePlotter.show_bounds" title="Permalink to this definition">¶</a></dt>
 <dd><p>Adds bounds axes.  Shows the bounds of the most recent input
 mesh unless mesh is specified.</p>
 <dl class="field-list simple">
@@ -1553,6 +1553,9 @@ draw the default box. Dafuault is 0.5 to show the full box.</p></li>
 <li><p><strong>loc</strong> (<em>int</em><em>, </em><em>tuple</em><em>, or </em><em>list</em>) – Index of the renderer to add the actor to.  For example,
 <code class="docutils literal notranslate"><span class="pre">loc=2</span></code> or <code class="docutils literal notranslate"><span class="pre">loc=(1,</span> <span class="pre">1)</span></code>.  If None, selects the last
 active Renderer.</p></li>
+<li><p><strong>padding</strong> (<em>float</em><em>, </em><em>optional</em>) – An optional percent padding along each axial direction to cushion
+the datasets in the scene from the axes annotations. Defaults to
+have no padding</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns</dt>
@@ -2132,7 +2135,7 @@ A scale of zero is illegal and will be replaced with one.</p>
 
 <dl class="method">
 <dt id="vtki.Renderer.show_bounds">
-<code class="descname">show_bounds</code><span class="sig-paren">(</span><em>mesh=None</em>, <em>bounds=None</em>, <em>show_xaxis=True</em>, <em>show_yaxis=True</em>, <em>show_zaxis=True</em>, <em>show_xlabels=True</em>, <em>show_ylabels=True</em>, <em>show_zlabels=True</em>, <em>italic=False</em>, <em>bold=True</em>, <em>shadow=False</em>, <em>font_size=None</em>, <em>font_family=None</em>, <em>color=None</em>, <em>xlabel='X Axis'</em>, <em>ylabel='Y Axis'</em>, <em>zlabel='Z Axis'</em>, <em>use_2d=False</em>, <em>grid=None</em>, <em>location='closest'</em>, <em>ticks=None</em>, <em>all_edges=False</em>, <em>corner_factor=0.5</em>, <em>loc=None</em>, <em>fmt=None</em>, <em>minor_ticks=False</em><span class="sig-paren">)</span><a class="headerlink" href="#vtki.Renderer.show_bounds" title="Permalink to this definition">¶</a></dt>
+<code class="descname">show_bounds</code><span class="sig-paren">(</span><em>mesh=None</em>, <em>bounds=None</em>, <em>show_xaxis=True</em>, <em>show_yaxis=True</em>, <em>show_zaxis=True</em>, <em>show_xlabels=True</em>, <em>show_ylabels=True</em>, <em>show_zlabels=True</em>, <em>italic=False</em>, <em>bold=True</em>, <em>shadow=False</em>, <em>font_size=None</em>, <em>font_family=None</em>, <em>color=None</em>, <em>xlabel='X Axis'</em>, <em>ylabel='Y Axis'</em>, <em>zlabel='Z Axis'</em>, <em>use_2d=False</em>, <em>grid=None</em>, <em>location='closest'</em>, <em>ticks=None</em>, <em>all_edges=False</em>, <em>corner_factor=0.5</em>, <em>loc=None</em>, <em>fmt=None</em>, <em>minor_ticks=False</em>, <em>padding=0.0</em><span class="sig-paren">)</span><a class="headerlink" href="#vtki.Renderer.show_bounds" title="Permalink to this definition">¶</a></dt>
 <dd><p>Adds bounds axes.  Shows the bounds of the most recent input
 mesh unless mesh is specified.</p>
 <dl class="field-list simple">
@@ -2186,6 +2189,9 @@ draw the default box. Dafuault is 0.5 to show the full box.</p></li>
 <li><p><strong>loc</strong> (<em>int</em><em>, </em><em>tuple</em><em>, or </em><em>list</em>) – Index of the renderer to add the actor to.  For example,
 <code class="docutils literal notranslate"><span class="pre">loc=2</span></code> or <code class="docutils literal notranslate"><span class="pre">loc=(1,</span> <span class="pre">1)</span></code>.  If None, selects the last
 active Renderer.</p></li>
+<li><p><strong>padding</strong> (<em>float</em><em>, </em><em>optional</em>) – An optional percent padding along each axial direction to cushion
+the datasets in the scene from the axes annotations. Defaults to
+have no padding</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns</dt>
