@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Clearing a Mesh or the Entire Plot &mdash; vtki 0.17.5 documentation</title>
+  <title>Custom Colormaps &mdash; vtki 0.17.5 documentation</title>
   
 
   
@@ -41,8 +41,8 @@
   <link rel="stylesheet" href="../../_static/copybutton.css" type="text/css" />
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Custom Colormaps" href="plot-cmap.html" />
-    <link rel="prev" title="Volume Smoothing" href="../01-filter/volume-smoothing.html" /> 
+    <link rel="next" title="Plot Eye Dome Lighting" href="plot-edl.html" />
+    <link rel="prev" title="Clearing a Mesh or the Entire Plot" href="plot-clear.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -114,8 +114,8 @@
 <li class="toctree-l2"><a class="reference internal" href="../index.html#loading-and-creating-meshes">Loading and Creating Meshes</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../index.html#filtering">Filtering</a></li>
 <li class="toctree-l2 current"><a class="reference internal" href="../index.html#plotting-examples">Plotting Examples</a><ul class="current">
-<li class="toctree-l3 current"><a class="current reference internal" href="#">Clearing a Mesh or the Entire Plot</a></li>
-<li class="toctree-l3"><a class="reference internal" href="plot-cmap.html">Custom Colormaps</a></li>
+<li class="toctree-l3"><a class="reference internal" href="plot-clear.html">Clearing a Mesh or the Entire Plot</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Custom Colormaps</a></li>
 <li class="toctree-l3"><a class="reference internal" href="plot-edl.html">Plot Eye Dome Lighting</a></li>
 <li class="toctree-l3"><a class="reference internal" href="plot-gif.html">Create a GIF Movie</a></li>
 <li class="toctree-l3"><a class="reference internal" href="plot-glyphs.html">Plotting Glyphs</a></li>
@@ -185,13 +185,13 @@
         
           <li><a href="../index.html">Quick Examples</a> &raquo;</li>
         
-      <li>Clearing a Mesh or the Entire Plot</li>
+      <li>Custom Colormaps</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
             
-            <a href="../../_sources/examples/02-plot/plot-clear.rst.txt" rel="nofollow"> View page source</a>
+            <a href="../../_sources/examples/02-plot/plot-cmap.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -206,47 +206,42 @@
             
   <div class="sphx-glr-download-link-note admonition note">
 <p class="admonition-title">Note</p>
-<p>Click <a class="reference internal" href="#sphx-glr-download-examples-02-plot-plot-clear-py"><span class="std std-ref">here</span></a> to download the full example code</p>
+<p>Click <a class="reference internal" href="#sphx-glr-download-examples-02-plot-plot-cmap-py"><span class="std std-ref">here</span></a> to download the full example code</p>
 </div>
-<div class="sphx-glr-example-title section" id="clearing-a-mesh-or-the-entire-plot">
-<span id="sphx-glr-examples-02-plot-plot-clear-py"></span><h1>Clearing a Mesh or the Entire Plot<a class="headerlink" href="#clearing-a-mesh-or-the-entire-plot" title="Permalink to this headline">¶</a></h1>
-<p>This example demonstrates how to remove elements from a scene.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># sphinx_gallery_thumbnail_number = 3</span>
-<span class="kn">import</span> <span class="nn">vtki</span>
+<div class="sphx-glr-example-title section" id="custom-colormaps">
+<span id="sphx-glr-examples-02-plot-plot-cmap-py"></span><h1>Custom Colormaps<a class="headerlink" href="#custom-colormaps" title="Permalink to this headline">¶</a></h1>
+<p>Use a custom built colormap when plotting scalar values.
+Any colormap built for <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code> is fully compatible with <code class="docutils literal notranslate"><span class="pre">vtki</span></code>.
+Colormaps are typically specifiedby passing the string name of the
+<code class="docutils literal notranslate"><span class="pre">matplotlib</span></code> colormap to the plotting routine via the <code class="docutils literal notranslate"><span class="pre">cmap</span></code> argument.</p>
+<p>See <cite>this page</cite> for a complete list of available colormaps.
+.. _this page: <a class="reference external" href="https://matplotlib.org/tutorials/colors/colormaps.html">https://matplotlib.org/tutorials/colors/colormaps.html</a></p>
+<p>To get started using a custom colormap, download some data with scalars to
+plot.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">vtki</span>
+<span class="kn">from</span> <span class="nn">vtki</span> <span class="k">import</span> <span class="n">examples</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
 
-<span class="n">plotter</span> <span class="o">=</span> <span class="n">vtki</span><span class="o">.</span><span class="n">Plotter</span><span class="p">()</span>
-<span class="n">actor</span> <span class="o">=</span> <span class="n">plotter</span><span class="o">.</span><span class="n">add_mesh</span><span class="p">(</span><span class="n">vtki</span><span class="o">.</span><span class="n">Sphere</span><span class="p">())</span>
-<span class="n">plotter</span><span class="o">.</span><span class="n">remove_actor</span><span class="p">(</span><span class="n">actor</span><span class="p">)</span>
-<span class="n">plotter</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+<span class="n">mesh</span> <span class="o">=</span> <span class="n">examples</span><span class="o">.</span><span class="n">download_st_helens</span><span class="p">()</span><span class="o">.</span><span class="n">warp_by_scalar</span><span class="p">()</span>
 </pre></div>
 </div>
-<img alt="../../_images/sphx_glr_plot-clear_001.png" class="sphx-glr-single-img" src="../../_images/sphx_glr_plot-clear_001.png" />
-<p>Clearing the entire plotting window:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">plotter</span> <span class="o">=</span> <span class="n">vtki</span><span class="o">.</span><span class="n">Plotter</span><span class="p">()</span>
-<span class="n">plotter</span><span class="o">.</span><span class="n">add_mesh</span><span class="p">(</span><span class="n">vtki</span><span class="o">.</span><span class="n">Sphere</span><span class="p">())</span>
-<span class="n">plotter</span><span class="o">.</span><span class="n">add_mesh</span><span class="p">(</span><span class="n">vtki</span><span class="o">.</span><span class="n">Plane</span><span class="p">())</span>
-<span class="n">plotter</span><span class="o">.</span><span class="n">clear</span><span class="p">()</span>  <span class="c1"># clears all actors</span>
-<span class="n">plotter</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+<p>Build a custom colormap - here we just make a viridis map with 5 discrete
+colors, but you could make this as complex or simple as you desire.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cmap</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">cm</span><span class="o">.</span><span class="n">get_cmap</span><span class="p">(</span><span class="s1">&#39;viridis&#39;</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
 </pre></div>
 </div>
-<img alt="../../_images/sphx_glr_plot-clear_002.png" class="sphx-glr-single-img" src="../../_images/sphx_glr_plot-clear_002.png" />
-<p>Or you can give any actor a <code class="docutils literal notranslate"><span class="pre">name</span></code> when adding it and if an actor is added
-with that same name at a later time, it will replace the previous actor:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">plotter</span> <span class="o">=</span> <span class="n">vtki</span><span class="o">.</span><span class="n">Plotter</span><span class="p">()</span>
-<span class="n">plotter</span><span class="o">.</span><span class="n">add_mesh</span><span class="p">(</span><span class="n">vtki</span><span class="o">.</span><span class="n">Sphere</span><span class="p">(),</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;mydata&#39;</span><span class="p">)</span>
-<span class="n">plotter</span><span class="o">.</span><span class="n">add_mesh</span><span class="p">(</span><span class="n">vtki</span><span class="o">.</span><span class="n">Plane</span><span class="p">(),</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;mydata&#39;</span><span class="p">)</span>
-<span class="c1"># Only the Plane is shown!</span>
-<span class="n">plotter</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+<p>Simply pass the colormap to the plotting routine!</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mesh</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">cmap</span><span class="o">=</span><span class="n">cmap</span><span class="p">,</span> <span class="n">cpos</span><span class="o">=</span><span class="s1">&#39;xy&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
-<img alt="../../_images/sphx_glr_plot-clear_003.png" class="sphx-glr-single-img" src="../../_images/sphx_glr_plot-clear_003.png" />
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  0.878 seconds)</p>
-<div class="sphx-glr-footer class sphx-glr-footer-example docutils container" id="sphx-glr-download-examples-02-plot-plot-clear-py">
+<img alt="../../_images/sphx_glr_plot-cmap_001.png" class="sphx-glr-single-img" src="../../_images/sphx_glr_plot-cmap_001.png" />
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  1.320 seconds)</p>
+<div class="sphx-glr-footer class sphx-glr-footer-example docutils container" id="sphx-glr-download-examples-02-plot-plot-cmap-py">
 <div class="sphx-glr-download docutils container">
-<p><a class="reference download internal" download="" href="../../_downloads/5386e72fd65b6c83346353c2d1757aaa/plot-clear.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">plot-clear.py</span></code></a></p>
+<p><a class="reference download internal" download="" href="../../_downloads/4eb4430fbc8f4ba2f3907139cd9b812c/plot-cmap.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">plot-cmap.py</span></code></a></p>
 </div>
 <div class="sphx-glr-download docutils container">
-<p><a class="reference download internal" download="" href="../../_downloads/9e31d84969726fad2f919f6067ef280a/plot-clear.ipynb"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Jupyter</span> <span class="pre">notebook:</span> <span class="pre">plot-clear.ipynb</span></code></a></p>
+<p><a class="reference download internal" download="" href="../../_downloads/da1a3493c761049607b69a09af3458c5/plot-cmap.ipynb"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Jupyter</span> <span class="pre">notebook:</span> <span class="pre">plot-cmap.ipynb</span></code></a></p>
 </div>
 </div>
 <p class="sphx-glr-signature"><a class="reference external" href="https://sphinx-gallery.readthedocs.io">Gallery generated by Sphinx-Gallery</a></p>
@@ -260,10 +255,10 @@ with that same name at a later time, it will replace the previous actor:</p>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="plot-cmap.html" class="btn btn-neutral float-right" title="Custom Colormaps" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="plot-edl.html" class="btn btn-neutral float-right" title="Plot Eye Dome Lighting" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="../01-filter/volume-smoothing.html" class="btn btn-neutral float-left" title="Volume Smoothing" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="plot-clear.html" class="btn btn-neutral float-left" title="Clearing a Mesh or the Entire Plot" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

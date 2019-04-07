@@ -124,6 +124,26 @@ Loading and Creating Meshes
    :hidden:
 
    /examples/00-load/read-file
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbcontainer" tooltip="Read and plot image files (JPEG, TIFF, PNG, etc).">
+
+.. only:: html
+
+    .. figure:: /examples/00-load/images/thumb/sphx_glr_read-image_thumb.png
+
+        :ref:`sphx_glr_examples_00-load_read-image.py`
+
+.. raw:: html
+
+    </div>
+
+
+.. toctree::
+   :hidden:
+
+   /examples/00-load/read-image
 .. raw:: html
 
     <div style='clear:both'></div>
@@ -268,6 +288,26 @@ Plotting Examples
    :hidden:
 
    /examples/02-plot/plot-clear
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbcontainer" tooltip="Use a custom built colormap when plotting scalar values.">
+
+.. only:: html
+
+    .. figure:: /examples/02-plot/images/thumb/sphx_glr_plot-cmap_thumb.png
+
+        :ref:`sphx_glr_examples_02-plot_plot-cmap.py`
+
+.. raw:: html
+
+    </div>
+
+
+.. toctree::
+   :hidden:
+
+   /examples/02-plot/plot-cmap
 
 .. raw:: html
 

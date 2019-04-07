@@ -7,6 +7,8 @@
 .. _sphx_glr_examples_02-plot_plot-texture.py:
 
 
+.. _ref_texture_example:
+
 Applying Textures
 ~~~~~~~~~~~~~~~~~
 
@@ -79,8 +81,8 @@ Note that this process can be completed with any image texture!
 .. code-block:: default
 
 
-    # use the earth map image
-    tex = examples.load_globe_texture()
+    # use the puppy image
+    tex = examples.download_puppy_texture()
     curvsurf.plot(texture=tex)
 
 
@@ -155,7 +157,7 @@ NumPy (X by Y by RGB) arrays can be converted to textures using
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  3.476 seconds)
+   **Total running time of the script:** ( 0 minutes  3.264 seconds)
 
 
 .. _sphx_glr_download_examples_02-plot_plot-texture.py:

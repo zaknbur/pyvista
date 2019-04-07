@@ -9,6 +9,7 @@
 ./_downloads/4005562e9b7843812cea9f9471a75f7a/plot-movie.ipynb
 ./_downloads/437dc62e728909a91ee67f4c26b0c6c2/compute-normals.py
 ./_downloads/486d712873eb63457b0ca8de8c00251e/read-file.ipynb
+./_downloads/4eb4430fbc8f4ba2f3907139cd9b812c/plot-cmap.py
 ./_downloads/5386e72fd65b6c83346353c2d1757aaa/plot-clear.py
 ./_downloads/5cabf0d0c1111972d87561c959fe9ba0/plot-gif.ipynb
 ./_downloads/5d5c24786114e7c8698161726bb2df17/plot-multi-window.ipynb
@@ -19,13 +20,16 @@
 ./_downloads/7c646a2f4fdef11d7d770b8c82a7e03d/plot-edl.py
 ./_downloads/86e96b4763988892e9254c0f4184ac76/compute-volume.py
 ./_downloads/884c248e2efc112ff97963ff8f2daf50/volume-smoothing.py
+./_downloads/8b5c40dde9d52a5f8b08f8c0237b7d6a/read-image.py
 ./_downloads/9de975b9b9580d79fe42c7965e22e2a8/create-uniform-grid.py
 ./_downloads/9e31d84969726fad2f919f6067ef280a/plot-clear.ipynb
 ./_downloads/aff9b0f31547f12d46da169f6b1a5c0f/plot-movie.py
+./_downloads/b237c840ab9b84bff915a327d2a6427a/read-image.ipynb
 ./_downloads/b8892364a4f8c2465d3fc39b00acb139/plot-scalar-bars.ipynb
 ./_downloads/cfde9598b621dc37bb79ae0462a7d062/create-unstructured-surface.py
 ./_downloads/d46ac6297f4bb4e454011dd70b83fe9f/create-poly.ipynb
 ./_downloads/d79a533af7335164ff57a85055101e37/plot-edl.ipynb
+./_downloads/da1a3493c761049607b69a09af3458c5/plot-cmap.ipynb
 ./_downloads/da60b9606906e247c27114099f9d92e8/plot-texture.py
 ./_downloads/e2ae8dac5171eea6d192d8d09375ad03/volume-smoothing.ipynb
 ./_downloads/e44412434f375359ce98266b12af47bf/poly-ray-trace.py
@@ -76,6 +80,8 @@
 ./_images/sphx_glr_plot-clear_002.png
 ./_images/sphx_glr_plot-clear_003.png
 ./_images/sphx_glr_plot-clear_thumb.png
+./_images/sphx_glr_plot-cmap_001.png
+./_images/sphx_glr_plot-cmap_thumb.png
 ./_images/sphx_glr_plot-edl_001.png
 ./_images/sphx_glr_plot-edl_002.png
 ./_images/sphx_glr_plot-edl_003.png
@@ -112,6 +118,9 @@
 ./_images/sphx_glr_read-file_004.png
 ./_images/sphx_glr_read-file_005.png
 ./_images/sphx_glr_read-file_thumb.png
+./_images/sphx_glr_read-image_001.png
+./_images/sphx_glr_read-image_002.png
+./_images/sphx_glr_read-image_thumb.png
 ./_images/sphx_glr_using-filters_001.png
 ./_images/sphx_glr_using-filters_002.png
 ./_images/sphx_glr_using-filters_003.png
@@ -129,6 +138,7 @@
 ./_sources/examples/00-load/create-uniform-grid.rst.txt
 ./_sources/examples/00-load/create-unstructured-surface.rst.txt
 ./_sources/examples/00-load/read-file.rst.txt
+./_sources/examples/00-load/read-image.rst.txt
 ./_sources/examples/00-load/sg_execution_times.rst.txt
 ./_sources/examples/01-filter/compute-normals.rst.txt
 ./_sources/examples/01-filter/compute-volume.rst.txt
@@ -137,6 +147,7 @@
 ./_sources/examples/01-filter/using-filters.rst.txt
 ./_sources/examples/01-filter/volume-smoothing.rst.txt
 ./_sources/examples/02-plot/plot-clear.rst.txt
+./_sources/examples/02-plot/plot-cmap.rst.txt
 ./_sources/examples/02-plot/plot-edl.rst.txt
 ./_sources/examples/02-plot/plot-gif.rst.txt
 ./_sources/examples/02-plot/plot-glyphs.rst.txt
@@ -228,6 +239,7 @@
 ./examples/00-load/create-uniform-grid.html
 ./examples/00-load/create-unstructured-surface.html
 ./examples/00-load/read-file.html
+./examples/00-load/read-image.html
 ./examples/00-load/sg_execution_times.html
 ./examples/01-filter/compute-normals.html
 ./examples/01-filter/compute-volume.html
@@ -236,6 +248,7 @@
 ./examples/01-filter/using-filters.html
 ./examples/01-filter/volume-smoothing.html
 ./examples/02-plot/plot-clear.html
+./examples/02-plot/plot-cmap.html
 ./examples/02-plot/plot-edl.html
 ./examples/02-plot/plot-gif.html
 ./examples/02-plot/plot-glyphs.html
