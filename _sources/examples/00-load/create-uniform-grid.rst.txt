@@ -11,11 +11,6 @@ Creating a Uniform Grid
 ~~~~~~~~~~~~~~~~~~~~~~~
 
 Create a simple uniform grid from a 3D NumPy array of values.
-Take a 3D NumPy array of data values that holds some spatial data where each
-axis corresponds to the XYZ cartesian axes. This example will create a
-:class:`vtki.UniformGrid` object that will hold the spatial reference for a
-3D grid which a 3D NumPy array of values can be plotted against.
-
 
 .. code-block:: default
 
@@ -28,6 +23,11 @@ axis corresponds to the XYZ cartesian axes. This example will create a
 
 
 
+
+Take a 3D NumPy array of data values that holds some spatial data where each
+axis corresponds to the XYZ cartesian axes. This example will create a
+:class:`vtki.UniformGrid` object that will hold the spatial reference for a
+3D grid which a 3D NumPy array of values can be plotted against.
 
 Create the 3D NumPy array of spatially referenced data
 This is spatially referenced such that the grid is 20 by 5 by 10 (nx by ny by nz)
@@ -104,7 +104,7 @@ grid dimensions upon initialization.
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  1.739 seconds)
+   **Total running time of the script:** ( 0 minutes  1.653 seconds)
 
 
 .. _sphx_glr_download_examples_00-load_create-uniform-grid.py:

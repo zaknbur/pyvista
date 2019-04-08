@@ -23,7 +23,6 @@ Single line segment ray tracing for PolyData objects.
 .. code-block:: default
 
 
-    # Use built-in sphere and test against a single ray
     import vtki
 
     # Create source to ray trace
@@ -51,7 +50,7 @@ Single line segment ray tracing for PolyData objects.
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  0.628 seconds)
+   **Total running time of the script:** ( 0 minutes  0.582 seconds)
 
 
 .. _sphx_glr_download_examples_01-filter_poly-ray-trace.py:

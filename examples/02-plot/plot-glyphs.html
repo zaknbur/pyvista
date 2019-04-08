@@ -212,14 +212,14 @@
 </div>
 <div class="sphx-glr-example-title section" id="plotting-glyphs">
 <span id="sphx-glr-examples-02-plot-plot-glyphs-py"></span><h1>Plotting Glyphs<a class="headerlink" href="#plotting-glyphs" title="Permalink to this headline">¶</a></h1>
-<p>Use vectors in a dataset to plot and orient glyphs/geometric objects.
-Glyphying can be done via the <a class="reference internal" href="../../tools/filters.html#vtki.DataSetFilters.glyph" title="vtki.DataSetFilters.glyph"><code class="xref py py-func docutils literal notranslate"><span class="pre">vtki.DataSetFilters.glyph()</span></code></a> filter</p>
+<p>Use vectors in a dataset to plot and orient glyphs/geometric objects.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># sphinx_gallery_thumbnail_number = 3</span>
 <span class="kn">import</span> <span class="nn">vtki</span>
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 </pre></div>
 </div>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Make a grid</span>
+<p>Glyphying can be done via the <a class="reference internal" href="../../tools/filters.html#vtki.DataSetFilters.glyph" title="vtki.DataSetFilters.glyph"><code class="xref py py-func docutils literal notranslate"><span class="pre">vtki.DataSetFilters.glyph()</span></code></a> filter</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Make a grid:</span>
 <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">z</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">meshgrid</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">20</span><span class="p">),</span>
                   <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">20</span><span class="p">),</span>
                   <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span>
@@ -242,10 +242,7 @@ Glyphying can be done via the <a class="reference internal" href="../../tools/fi
 <img alt="../../_images/sphx_glr_plot-glyphs_001.png" class="sphx-glr-single-img" src="../../_images/sphx_glr_plot-glyphs_001.png" />
 <p>Another approach is to load the vectors directly to the grid object and then
 access the <a class="reference internal" href="../../types/common.html#vtki.Common.arrows" title="vtki.Common.arrows"><code class="xref py py-attr docutils literal notranslate"><span class="pre">vtki.Common.arrows</span></code></a> property.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">vtki</span>
-<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-
-<span class="n">sphere</span> <span class="o">=</span> <span class="n">vtki</span><span class="o">.</span><span class="n">Sphere</span><span class="p">(</span><span class="n">radius</span><span class="o">=</span><span class="mf">3.14</span><span class="p">)</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sphere</span> <span class="o">=</span> <span class="n">vtki</span><span class="o">.</span><span class="n">Sphere</span><span class="p">(</span><span class="n">radius</span><span class="o">=</span><span class="mf">3.14</span><span class="p">)</span>
 
 <span class="c1"># make cool swirly pattern</span>
 <span class="n">vectors</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">vstack</span><span class="p">((</span><span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">sphere</span><span class="o">.</span><span class="n">points</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">]),</span>
@@ -257,21 +254,18 @@ access the <a class="reference internal" href="../../types/common.html#vtki.Comm
 
 <span class="c1"># plot just the arrows</span>
 <span class="n">sphere</span><span class="o">.</span><span class="n">arrows</span><span class="o">.</span><span class="n">plot</span><span class="p">()</span>
-
-<span class="c1"># plot the arrows and the sphere</span>
+</pre></div>
+</div>
+<img alt="../../_images/sphx_glr_plot-glyphs_002.png" class="sphx-glr-single-img" src="../../_images/sphx_glr_plot-glyphs_002.png" />
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># plot the arrows and the sphere</span>
 <span class="n">p</span> <span class="o">=</span> <span class="n">vtki</span><span class="o">.</span><span class="n">Plotter</span><span class="p">()</span>
 <span class="n">p</span><span class="o">.</span><span class="n">add_mesh</span><span class="p">(</span><span class="n">sphere</span><span class="o">.</span><span class="n">arrows</span><span class="p">,</span> <span class="n">lighting</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">stitle</span><span class="o">=</span><span class="s1">&#39;Vector Magnitude&#39;</span><span class="p">)</span>
 <span class="n">p</span><span class="o">.</span><span class="n">add_mesh</span><span class="p">(</span><span class="n">sphere</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;grey&#39;</span><span class="p">,</span> <span class="n">ambient</span><span class="o">=</span><span class="mf">0.6</span><span class="p">,</span> <span class="n">opacity</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">show_edges</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
 <span class="n">p</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
-<ul class="sphx-glr-horizontal">
-<li><img alt="../../_images/sphx_glr_plot-glyphs_002.png" class="sphx-glr-multi-img" src="../../_images/sphx_glr_plot-glyphs_002.png" />
-</li>
-<li><img alt="../../_images/sphx_glr_plot-glyphs_003.png" class="sphx-glr-multi-img" src="../../_images/sphx_glr_plot-glyphs_003.png" />
-</li>
-</ul>
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  2.833 seconds)</p>
+<img alt="../../_images/sphx_glr_plot-glyphs_003.png" class="sphx-glr-single-img" src="../../_images/sphx_glr_plot-glyphs_003.png" />
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  2.489 seconds)</p>
 <div class="sphx-glr-footer class sphx-glr-footer-example docutils container" id="sphx-glr-download-examples-02-plot-plot-glyphs-py">
 <div class="sphx-glr-download docutils container">
 <p><a class="reference download internal" download="" href="../../_downloads/6f60d9f2a2bf02755ac79a6de7a0bfc3/plot-glyphs.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">plot-glyphs.py</span></code></a></p>

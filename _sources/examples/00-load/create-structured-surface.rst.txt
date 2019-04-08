@@ -16,6 +16,7 @@ Create a StructuredGrid surface from NumPy arrays
 
 .. code-block:: default
 
+
     # sphinx_gallery_thumbnail_number = 2
     import vtki
     import numpy as np
@@ -56,24 +57,27 @@ Now pass the NumPy meshgrid to ``vtki``
     grid = vtki.StructuredGrid(x, y, z)
     grid.plot()
 
+
+
+
+.. image:: /examples/00-load/images/sphx_glr_create-structured-surface_001.png
+    :class: sphx-glr-single-img
+
+
+
+
+
+.. code-block:: default
+
+
     # Plot mean curvature as well
     grid.plot_curvature(clim=[-1, 1])
 
 
 
 
-.. rst-class:: sphx-glr-horizontal
-
-
-    *
-
-      .. image:: /examples/00-load/images/sphx_glr_create-structured-surface_001.png
-            :class: sphx-glr-multi-img
-
-    *
-
-      .. image:: /examples/00-load/images/sphx_glr_create-structured-surface_002.png
-            :class: sphx-glr-multi-img
+.. image:: /examples/00-load/images/sphx_glr_create-structured-surface_002.png
+    :class: sphx-glr-single-img
 
 
 
@@ -85,17 +89,30 @@ the resulting surface can be accessed as a NumPy array:
 .. code-block:: default
 
 
-    grid.points
+    print(grid.points)
 
 
 
 
+.. rst-class:: sphx-glr-script-out
+
+ Out:
+
+ .. code-block:: none
+
+    [[-10.         -10.           0.99998766]
+     [-10.          -9.75         0.98546793]
+     [-10.          -9.5          0.9413954 ]
+     ...
+     [  9.75         9.25         0.76645876]
+     [  9.75         9.5          0.86571785]
+     [  9.75         9.75         0.93985707]]
 
 
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  1.767 seconds)
+   **Total running time of the script:** ( 0 minutes  1.604 seconds)
 
 
 .. _sphx_glr_download_examples_00-load_create-structured-surface.py:

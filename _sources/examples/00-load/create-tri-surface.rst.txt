@@ -11,8 +11,6 @@ Create Triangulated Surface
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Create a surface from a set of points through a Delaunay triangulation.
-First, create some points for the surface.
-
 
 .. code-block:: default
 
@@ -20,6 +18,18 @@ First, create some points for the surface.
     # sphinx_gallery_thumbnail_number = 2
     import vtki
     import numpy as np
+
+
+
+
+
+
+
+First, create some points for the surface.
+
+
+.. code-block:: default
+
 
     # Define a simple Gaussian surface
     xx, yy = np.meshgrid(np.linspace(-200,200,20), np.linspace(-200,200,20))
@@ -88,7 +98,7 @@ triangulation to turn those boring discrete points into a connected surface.
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  0.692 seconds)
+   **Total running time of the script:** ( 0 minutes  0.660 seconds)
 
 
 .. _sphx_glr_download_examples_00-load_create-tri-surface.py:

@@ -12,6 +12,20 @@ Customize Scalar Bars
 
 Walk through of all the different capabilities of scalar bars and
 how a user can customize scalar bars.
+
+.. code-block:: default
+
+
+    # sphinx_gallery_thumbnail_number = 2
+    import vtki
+    from vtki import examples
+
+
+
+
+
+
+
 By default, when plotting a dataset with a scalar array, a scalar bar for that
 array is added. To turn off this behavior, a user could specify
 ``show_scalar_bar=False`` when calling ``.add_mesh()``. Let's start with a
@@ -21,10 +35,6 @@ scalar bar plotting:
 
 .. code-block:: default
 
-
-    # sphinx_gallery_thumbnail_number = 2
-    import vtki
-    from vtki import examples
 
     # Load St Helens DEM and warp the topography
     mesh = examples.download_st_helens().warp_by_scalar()
@@ -122,7 +132,7 @@ The text properties of the scalar bar can also be controlled:
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  4.311 seconds)
+   **Total running time of the script:** ( 0 minutes  3.879 seconds)
 
 
 .. _sphx_glr_download_examples_02-plot_plot-scalar-bars.py:

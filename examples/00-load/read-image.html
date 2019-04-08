@@ -210,16 +210,17 @@
 </div>
 <div class="sphx-glr-example-title section" id="read-image-files">
 <span id="sphx-glr-examples-00-load-read-image-py"></span><h1>Read Image Files<a class="headerlink" href="#read-image-files" title="Permalink to this headline">¶</a></h1>
-<p>Read and plot image files (JPEG, TIFF, PNG, etc).
-<code class="docutils literal notranslate"><span class="pre">vtki</span></code> fully supportes reading images into their own spatially referenced
+<p>Read and plot image files (JPEG, TIFF, PNG, etc).</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">vtki</span> <span class="k">import</span> <span class="n">examples</span>
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">vtki</span></code> fully supportes reading images into their own spatially referenced
 data objects (this example) as well as supports texture mapping of images onto
 datasets (see <a class="reference internal" href="../02-plot/plot-texture.html#ref-texture-example"><span class="std std-ref">Applying Textures</span></a>).</p>
 <p>Download a JPEG image of a puppy and load it to <a class="reference internal" href="../../types/grids.html#vtki.UniformGrid" title="vtki.UniformGrid"><code class="xref py py-class docutils literal notranslate"><span class="pre">vtki.UniformGrid</span></code></a>.
 This could similarly be implemented with any image file by using the
 <a class="reference internal" href="../../tools/utilities.html#vtki.read" title="vtki.read"><code class="xref py py-func docutils literal notranslate"><span class="pre">vtki.read()</span></code></a> function and passing the path to the image file.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">vtki</span> <span class="k">import</span> <span class="n">examples</span>
-
-<span class="n">image</span> <span class="o">=</span> <span class="n">examples</span><span class="o">.</span><span class="n">download_puppy</span><span class="p">()</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">image</span> <span class="o">=</span> <span class="n">examples</span><span class="o">.</span><span class="n">download_puppy</span><span class="p">()</span>
 <span class="c1"># or...</span>
 <span class="c1"># image = vtki.read(&#39;my_image.jpg&#39;)</span>
 </pre></div>
@@ -237,7 +238,7 @@ image’s true colors are used and not mapped.</p>
 </pre></div>
 </div>
 <img alt="../../_images/sphx_glr_read-image_002.png" class="sphx-glr-single-img" src="../../_images/sphx_glr_read-image_002.png" />
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  9.733 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  8.838 seconds)</p>
 <div class="sphx-glr-footer class sphx-glr-footer-example docutils container" id="sphx-glr-download-examples-00-load-read-image-py">
 <div class="sphx-glr-download docutils container">
 <p><a class="reference download internal" download="" href="../../_downloads/8b5c40dde9d52a5f8b08f8c0237b7d6a/read-image.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">read-image.py</span></code></a></p>

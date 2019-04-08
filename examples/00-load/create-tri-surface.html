@@ -210,13 +210,14 @@
 </div>
 <div class="sphx-glr-example-title section" id="create-triangulated-surface">
 <span id="sphx-glr-examples-00-load-create-tri-surface-py"></span><h1>Create Triangulated Surface<a class="headerlink" href="#create-triangulated-surface" title="Permalink to this headline">¶</a></h1>
-<p>Create a surface from a set of points through a Delaunay triangulation.
-First, create some points for the surface.</p>
+<p>Create a surface from a set of points through a Delaunay triangulation.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># sphinx_gallery_thumbnail_number = 2</span>
 <span class="kn">import</span> <span class="nn">vtki</span>
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-
-<span class="c1"># Define a simple Gaussian surface</span>
+</pre></div>
+</div>
+<p>First, create some points for the surface.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Define a simple Gaussian surface</span>
 <span class="n">xx</span><span class="p">,</span> <span class="n">yy</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">meshgrid</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="mi">200</span><span class="p">,</span><span class="mi">200</span><span class="p">,</span><span class="mi">20</span><span class="p">),</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="mi">200</span><span class="p">,</span><span class="mi">200</span><span class="p">,</span><span class="mi">20</span><span class="p">))</span>
 <span class="n">A</span><span class="p">,</span> <span class="n">b</span> <span class="o">=</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">100</span>
 <span class="n">zz</span> <span class="o">=</span> <span class="n">A</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="mf">0.5</span><span class="o">*</span><span class="p">((</span><span class="n">xx</span><span class="o">/</span><span class="n">b</span><span class="p">)</span><span class="o">**</span><span class="mf">2.</span> <span class="o">+</span> <span class="p">(</span><span class="n">yy</span><span class="o">/</span><span class="n">b</span><span class="p">)</span><span class="o">**</span><span class="mf">2.</span><span class="p">))</span>
@@ -249,7 +250,7 @@ triangulation to turn those boring discrete points into a connected surface.</p>
 </pre></div>
 </div>
 <img alt="../../_images/sphx_glr_create-tri-surface_002.png" class="sphx-glr-single-img" src="../../_images/sphx_glr_create-tri-surface_002.png" />
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  0.692 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  0.660 seconds)</p>
 <div class="sphx-glr-footer class sphx-glr-footer-example docutils container" id="sphx-glr-download-examples-00-load-create-tri-surface-py">
 <div class="sphx-glr-download docutils container">
 <p><a class="reference download internal" download="" href="../../_downloads/374227c77cf80fb5628a26fd08042f08/create-tri-surface.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">create-tri-surface.py</span></code></a></p>

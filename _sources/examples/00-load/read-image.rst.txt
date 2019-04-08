@@ -11,6 +11,18 @@ Read Image Files
 ~~~~~~~~~~~~~~~~
 
 Read and plot image files (JPEG, TIFF, PNG, etc).
+
+.. code-block:: default
+
+
+    from vtki import examples
+
+
+
+
+
+
+
 ``vtki`` fully supportes reading images into their own spatially referenced
 data objects (this example) as well as supports texture mapping of images onto
 datasets (see :ref:`ref_texture_example`).
@@ -22,7 +34,6 @@ This could similarly be implemented with any image file by using the
 
 .. code-block:: default
 
-    from vtki import examples
 
     image = examples.download_puppy()
     # or...
@@ -72,7 +83,7 @@ image's true colors are used and not mapped.
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  9.733 seconds)
+   **Total running time of the script:** ( 0 minutes  8.838 seconds)
 
 
 .. _sphx_glr_download_examples_00-load_read-image.py:

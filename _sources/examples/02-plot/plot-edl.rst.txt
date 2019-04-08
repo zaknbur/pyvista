@@ -22,11 +22,23 @@ Take this Lidar point cloud for example:
 
 .. code-block:: default
 
+
     # sphinx_gallery_thumbnail_number = 2
     import vtki
     from vtki import examples
 
-    # Load a sample point cloud.
+
+
+
+
+
+
+Load a sample point cloud.
+
+
+.. code-block:: default
+
+
     point_cloud = examples.download_lidar()
 
 
@@ -103,7 +115,7 @@ The eye dome lighting mode can also handle plotting scalar arrays:
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  33.249 seconds)
+   **Total running time of the script:** ( 0 minutes  30.629 seconds)
 
 
 .. _sphx_glr_download_examples_02-plot_plot-edl.py:

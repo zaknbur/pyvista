@@ -212,8 +212,12 @@
 </div>
 <div class="sphx-glr-example-title section" id="plot-with-opacity">
 <span id="sphx-glr-examples-02-plot-plot-opacity-py"></span><h1>Plot with Opacity<a class="headerlink" href="#plot-with-opacity" title="Permalink to this headline">¶</a></h1>
-<p>Plot a mesh’s scalar array with an opacity trasfer funciton
-It’s possible to apply an opacity mapping to any scalar array plotted. You can
+<p>Plot a mesh’s scalar array with an opacity trasfer funciton</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">vtki</span>
+<span class="kn">from</span> <span class="nn">vtki</span> <span class="k">import</span> <span class="n">examples</span>
+</pre></div>
+</div>
+<p>It’s possible to apply an opacity mapping to any scalar array plotted. You can
 specify either a single static value to make the mesh opaque on all cells, or
 use a transfer function where the scalar array plotted is mapped to the opacity.</p>
 <p>Opacity transfer function options are:</p>
@@ -223,10 +227,7 @@ use a transfer function where the scalar array plotted is mapped to the opacity.
 <li><p><code class="docutils literal notranslate"><span class="pre">'geom'</span></code>: on a log scale, vary (increase) opacity across the plotted scalar range from low to high</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">'geom_r'</span></code>: on a log scale, vary (increase) opacity across the plotted scalar range from high to low</p></li>
 </ul>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">vtki</span>
-<span class="kn">from</span> <span class="nn">vtki</span> <span class="k">import</span> <span class="n">examples</span>
-
-<span class="c1"># Load St Helens DEM and warp the topography</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Load St Helens DEM and warp the topography</span>
 <span class="n">mesh</span> <span class="o">=</span> <span class="n">examples</span><span class="o">.</span><span class="n">download_st_helens</span><span class="p">()</span><span class="o">.</span><span class="n">warp_by_scalar</span><span class="p">()</span>
 
 <span class="n">mesh</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">opacity</span><span class="o">=</span><span class="s1">&#39;linear&#39;</span><span class="p">)</span>
@@ -261,7 +262,7 @@ mappings:</p>
 </pre></div>
 </div>
 <img alt="../../_images/sphx_glr_plot-opacity_002.png" class="sphx-glr-single-img" src="../../_images/sphx_glr_plot-opacity_002.png" />
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  4.771 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  4.427 seconds)</p>
 <div class="sphx-glr-footer class sphx-glr-footer-example docutils container" id="sphx-glr-download-examples-02-plot-plot-opacity-py">
 <div class="sphx-glr-download docutils container">
 <p><a class="reference download internal" download="" href="../../_downloads/f24086cd14b09ec4ed083f8ced76e13a/plot-opacity.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">plot-opacity.py</span></code></a></p>

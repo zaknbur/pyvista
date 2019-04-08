@@ -13,10 +13,6 @@ Applying Textures
 ~~~~~~~~~~~~~~~~~
 
 Plot a mesh with an image projected onto it as a texture.
-Texture mapping is easily implemented using ``vtki``. Many of the geometric
-objects come preloaded with texture coordinates, so quickly creating a surface
-and displaying an image is simply:
-
 
 .. code-block:: default
 
@@ -24,6 +20,21 @@ and displaying an image is simply:
     import vtki
     from vtki import examples
     import numpy as np
+    from matplotlib.cm import get_cmap
+
+
+
+
+
+
+
+Texture mapping is easily implemented using ``vtki``. Many of the geometric
+objects come preloaded with texture coordinates, so quickly creating a surface
+and displaying an image is simply:
+
+
+.. code-block:: default
+
 
     # load a sample texture
     tex = examples.download_masonry_texture()
@@ -139,7 +150,6 @@ NumPy (X by Y by RGB) arrays can be converted to textures using
     zz = A*np.exp(-0.5*((xx/b)**2. + (yy/b)**2.))
 
     # Creating a custom RGB image
-    from matplotlib.cm import get_cmap
     cmap = get_cmap('nipy_spectral')
     norm = lambda x: (x - np.nanmin(x)) / (np.nanmax(x) - np.nanmin(x))
     hue = norm(zz.ravel())
@@ -231,7 +241,7 @@ Now display all the puppies!
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  4.185 seconds)
+   **Total running time of the script:** ( 0 minutes  3.831 seconds)
 
 
 .. _sphx_glr_download_examples_02-plot_plot-texture.py:

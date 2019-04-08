@@ -212,15 +212,16 @@
 </div>
 <div class="sphx-glr-example-title section" id="multi-window-plot">
 <span id="sphx-glr-examples-02-plot-plot-multi-window-py"></span><h1>Multi-Window Plot<a class="headerlink" href="#multi-window-plot" title="Permalink to this headline">¶</a></h1>
-<p>Subplotting: having multiple scenes in a signle window
-This example shows how to create a multi-window plotter by specifying the
+<p>Subplotting: having multiple scenes in a signle window</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">vtki</span>
+<span class="kn">from</span> <span class="nn">vtki</span> <span class="k">import</span> <span class="n">examples</span>
+</pre></div>
+</div>
+<p>This example shows how to create a multi-window plotter by specifying the
 <code class="docutils literal notranslate"><span class="pre">shape</span></code> parameter.  The window generated is a two by two window by setting
 <code class="docutils literal notranslate"><span class="pre">shape=(2,</span> <span class="pre">2)</span></code>. Use the <a class="reference internal" href="../../tools/plotting.html#vtki.BasePlotter.subplot" title="vtki.BasePlotter.subplot"><code class="xref py py-func docutils literal notranslate"><span class="pre">vtki.BasePlotter.subplot()</span></code></a> function to select
 the subplot you wish to be the active subplot.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">vtki</span>
-<span class="kn">from</span> <span class="nn">vtki</span> <span class="k">import</span> <span class="n">examples</span>
-
-<span class="n">plotter</span> <span class="o">=</span> <span class="n">vtki</span><span class="o">.</span><span class="n">Plotter</span><span class="p">(</span><span class="n">shape</span><span class="o">=</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">))</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">plotter</span> <span class="o">=</span> <span class="n">vtki</span><span class="o">.</span><span class="n">Plotter</span><span class="p">(</span><span class="n">shape</span><span class="o">=</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">))</span>
 
 <span class="n">plotter</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span>
 <span class="n">plotter</span><span class="o">.</span><span class="n">add_text</span><span class="p">(</span><span class="s1">&#39;Render Window 0&#39;</span><span class="p">,</span> <span class="n">position</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">font_size</span><span class="o">=</span><span class="mi">30</span><span class="p">)</span>
@@ -248,10 +249,7 @@ the subplot you wish to be the active subplot.</p>
 </pre></div>
 </div>
 <img alt="../../_images/sphx_glr_plot-multi-window_001.png" class="sphx-glr-single-img" src="../../_images/sphx_glr_plot-multi-window_001.png" />
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">vtki</span>
-<span class="kn">from</span> <span class="nn">vtki</span> <span class="k">import</span> <span class="n">examples</span>
-
-<span class="n">plotter</span> <span class="o">=</span> <span class="n">vtki</span><span class="o">.</span><span class="n">Plotter</span><span class="p">(</span><span class="n">shape</span><span class="o">=</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">))</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">plotter</span> <span class="o">=</span> <span class="n">vtki</span><span class="o">.</span><span class="n">Plotter</span><span class="p">(</span><span class="n">shape</span><span class="o">=</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">))</span>
 
 <span class="c1"># Note that the (0, 0) location is active by default</span>
 <span class="c1"># load and plot an airplane on the left half of the screen</span>
@@ -268,7 +266,7 @@ the subplot you wish to be the active subplot.</p>
 </pre></div>
 </div>
 <img alt="../../_images/sphx_glr_plot-multi-window_002.png" class="sphx-glr-single-img" src="../../_images/sphx_glr_plot-multi-window_002.png" />
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  2.408 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  2.244 seconds)</p>
 <div class="sphx-glr-footer class sphx-glr-footer-example docutils container" id="sphx-glr-download-examples-02-plot-plot-multi-window-py">
 <div class="sphx-glr-download docutils container">
 <p><a class="reference download internal" download="" href="../../_downloads/14c0c0d24179269d8186204665bc4d9b/plot-multi-window.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">plot-multi-window.py</span></code></a></p>

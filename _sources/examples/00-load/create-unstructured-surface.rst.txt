@@ -13,6 +13,20 @@ Creating an Unstructured Surface
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Create an irregular, unstructured grid from NumPy arrays
+
+.. code-block:: default
+
+
+    import vtki
+    import vtk
+    import numpy as np
+
+
+
+
+
+
+
 An unstructured grid can be created directly from numpy arrays.
 This is useful when creating a grid from scratch or copying it from another
 format.  See `vtkUnstructuredGrid <https://www.vtk.org/doc/nightly/html/classvtkUnstructuredGrid.html>`_
@@ -21,10 +35,6 @@ for available cell types and their descriptions.
 
 .. code-block:: default
 
-
-    import vtki
-    import vtk
-    import numpy as np
 
     # offset array.  Identifies the start of each cell in the cells array
     offset = np.array([0, 9])
@@ -75,7 +85,7 @@ for available cell types and their descriptions.
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  0.420 seconds)
+   **Total running time of the script:** ( 0 minutes  0.392 seconds)
 
 
 .. _sphx_glr_download_examples_00-load_create-unstructured-surface.py:

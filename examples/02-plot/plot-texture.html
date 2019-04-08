@@ -217,15 +217,17 @@
 </div>
 <div class="sphx-glr-example-title section" id="applying-textures">
 <span id="ref-texture-example"></span><span id="sphx-glr-examples-02-plot-plot-texture-py"></span><h1>Applying Textures<a class="headerlink" href="#applying-textures" title="Permalink to this headline">¶</a></h1>
-<p>Plot a mesh with an image projected onto it as a texture.
-Texture mapping is easily implemented using <code class="docutils literal notranslate"><span class="pre">vtki</span></code>. Many of the geometric
-objects come preloaded with texture coordinates, so quickly creating a surface
-and displaying an image is simply:</p>
+<p>Plot a mesh with an image projected onto it as a texture.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">vtki</span>
 <span class="kn">from</span> <span class="nn">vtki</span> <span class="k">import</span> <span class="n">examples</span>
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-
-<span class="c1"># load a sample texture</span>
+<span class="kn">from</span> <span class="nn">matplotlib.cm</span> <span class="k">import</span> <span class="n">get_cmap</span>
+</pre></div>
+</div>
+<p>Texture mapping is easily implemented using <code class="docutils literal notranslate"><span class="pre">vtki</span></code>. Many of the geometric
+objects come preloaded with texture coordinates, so quickly creating a surface
+and displaying an image is simply:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># load a sample texture</span>
 <span class="n">tex</span> <span class="o">=</span> <span class="n">examples</span><span class="o">.</span><span class="n">download_masonry_texture</span><span class="p">()</span>
 
 <span class="c1"># create a surface to host this texture</span>
@@ -286,7 +288,6 @@ NumPy (X by Y by RGB) arrays can be converted to textures using
 <span class="n">zz</span> <span class="o">=</span> <span class="n">A</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="mf">0.5</span><span class="o">*</span><span class="p">((</span><span class="n">xx</span><span class="o">/</span><span class="n">b</span><span class="p">)</span><span class="o">**</span><span class="mf">2.</span> <span class="o">+</span> <span class="p">(</span><span class="n">yy</span><span class="o">/</span><span class="n">b</span><span class="p">)</span><span class="o">**</span><span class="mf">2.</span><span class="p">))</span>
 
 <span class="c1"># Creating a custom RGB image</span>
-<span class="kn">from</span> <span class="nn">matplotlib.cm</span> <span class="k">import</span> <span class="n">get_cmap</span>
 <span class="n">cmap</span> <span class="o">=</span> <span class="n">get_cmap</span><span class="p">(</span><span class="s1">&#39;nipy_spectral&#39;</span><span class="p">)</span>
 <span class="n">norm</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="p">(</span><span class="n">x</span> <span class="o">-</span> <span class="n">np</span><span class="o">.</span><span class="n">nanmin</span><span class="p">(</span><span class="n">x</span><span class="p">))</span> <span class="o">/</span> <span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">nanmax</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="o">-</span> <span class="n">np</span><span class="o">.</span><span class="n">nanmin</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>
 <span class="n">hue</span> <span class="o">=</span> <span class="n">norm</span><span class="p">(</span><span class="n">zz</span><span class="o">.</span><span class="n">ravel</span><span class="p">())</span>
@@ -336,7 +337,7 @@ mappings of a single texture:</p>
 </pre></div>
 </div>
 <img alt="../../_images/sphx_glr_plot-texture_006.png" class="sphx-glr-single-img" src="../../_images/sphx_glr_plot-texture_006.png" />
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  4.185 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  3.831 seconds)</p>
 <div class="sphx-glr-footer class sphx-glr-footer-example docutils container" id="sphx-glr-download-examples-02-plot-plot-texture-py">
 <div class="sphx-glr-download docutils container">
 <p><a class="reference download internal" download="" href="../../_downloads/da60b9606906e247c27114099f9d92e8/plot-texture.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">plot-texture.py</span></code></a></p>

@@ -212,18 +212,19 @@
 </div>
 <div class="sphx-glr-example-title section" id="custom-colormaps">
 <span id="sphx-glr-examples-02-plot-plot-cmap-py"></span><h1>Custom Colormaps<a class="headerlink" href="#custom-colormaps" title="Permalink to this headline">¶</a></h1>
-<p>Use a custom built colormap when plotting scalar values.
-Any colormap built for <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code> is fully compatible with <code class="docutils literal notranslate"><span class="pre">vtki</span></code>.
+<p>Use a custom built colormap when plotting scalar values.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">vtki</span>
+<span class="kn">from</span> <span class="nn">vtki</span> <span class="k">import</span> <span class="n">examples</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+</pre></div>
+</div>
+<p>Any colormap built for <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code> is fully compatible with <code class="docutils literal notranslate"><span class="pre">vtki</span></code>.
 Colormaps are typically specifiedby passing the string name of the
 <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code> colormap to the plotting routine via the <code class="docutils literal notranslate"><span class="pre">cmap</span></code> argument.</p>
 <p>See <a class="reference external" href="https://matplotlib.org/tutorials/colors/colormaps.html">this page</a> for a complete list of available colormaps.</p>
 <p>To get started using a custom colormap, download some data with scalars to
 plot.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">vtki</span>
-<span class="kn">from</span> <span class="nn">vtki</span> <span class="k">import</span> <span class="n">examples</span>
-<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
-
-<span class="n">mesh</span> <span class="o">=</span> <span class="n">examples</span><span class="o">.</span><span class="n">download_st_helens</span><span class="p">()</span><span class="o">.</span><span class="n">warp_by_scalar</span><span class="p">()</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mesh</span> <span class="o">=</span> <span class="n">examples</span><span class="o">.</span><span class="n">download_st_helens</span><span class="p">()</span><span class="o">.</span><span class="n">warp_by_scalar</span><span class="p">()</span>
 </pre></div>
 </div>
 <p>Build a custom colormap - here we just make a viridis map with 5 discrete
@@ -236,7 +237,7 @@ colors, but you could make this as complex or simple as you desire.</p>
 </pre></div>
 </div>
 <img alt="../../_images/sphx_glr_plot-cmap_001.png" class="sphx-glr-single-img" src="../../_images/sphx_glr_plot-cmap_001.png" />
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  1.557 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  1.402 seconds)</p>
 <div class="sphx-glr-footer class sphx-glr-footer-example docutils container" id="sphx-glr-download-examples-02-plot-plot-cmap-py">
 <div class="sphx-glr-download docutils container">
 <p><a class="reference download internal" download="" href="../../_downloads/4eb4430fbc8f4ba2f3907139cd9b812c/plot-cmap.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">plot-cmap.py</span></code></a></p>

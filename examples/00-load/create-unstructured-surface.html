@@ -210,16 +210,17 @@
 </div>
 <div class="sphx-glr-example-title section" id="creating-an-unstructured-surface">
 <span id="ref-create-unstructured"></span><span id="sphx-glr-examples-00-load-create-unstructured-surface-py"></span><h1>Creating an Unstructured Surface<a class="headerlink" href="#creating-an-unstructured-surface" title="Permalink to this headline">¶</a></h1>
-<p>Create an irregular, unstructured grid from NumPy arrays
-An unstructured grid can be created directly from numpy arrays.
-This is useful when creating a grid from scratch or copying it from another
-format.  See <a class="reference external" href="https://www.vtk.org/doc/nightly/html/classvtkUnstructuredGrid.html">vtkUnstructuredGrid</a>
-for available cell types and their descriptions.</p>
+<p>Create an irregular, unstructured grid from NumPy arrays</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">vtki</span>
 <span class="kn">import</span> <span class="nn">vtk</span>
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-
-<span class="c1"># offset array.  Identifies the start of each cell in the cells array</span>
+</pre></div>
+</div>
+<p>An unstructured grid can be created directly from numpy arrays.
+This is useful when creating a grid from scratch or copying it from another
+format.  See <a class="reference external" href="https://www.vtk.org/doc/nightly/html/classvtkUnstructuredGrid.html">vtkUnstructuredGrid</a>
+for available cell types and their descriptions.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># offset array.  Identifies the start of each cell in the cells array</span>
 <span class="n">offset</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">9</span><span class="p">])</span>
 
 <span class="c1"># Contains information on the points composing each cell.</span>
@@ -259,7 +260,7 @@ for available cell types and their descriptions.</p>
 </pre></div>
 </div>
 <img alt="../../_images/sphx_glr_create-unstructured-surface_001.png" class="sphx-glr-single-img" src="../../_images/sphx_glr_create-unstructured-surface_001.png" />
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  0.420 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  0.392 seconds)</p>
 <div class="sphx-glr-footer class sphx-glr-footer-example docutils container" id="sphx-glr-download-examples-00-load-create-unstructured-surface-py">
 <div class="sphx-glr-download docutils container">
 <p><a class="reference download internal" download="" href="../../_downloads/cfde9598b621dc37bb79ae0462a7d062/create-unstructured-surface.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">create-unstructured-surface.py</span></code></a></p>

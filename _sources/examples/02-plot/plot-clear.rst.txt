@@ -14,8 +14,19 @@ This example demonstrates how to remove elements from a scene.
 
 .. code-block:: default
 
+
     # sphinx_gallery_thumbnail_number = 3
     import vtki
+
+
+
+
+
+
+
+
+.. code-block:: default
+
 
     plotter = vtki.Plotter()
     actor = plotter.add_mesh(vtki.Sphere())
@@ -78,7 +89,7 @@ with that same name at a later time, it will replace the previous actor:
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  0.975 seconds)
+   **Total running time of the script:** ( 0 minutes  0.907 seconds)
 
 
 .. _sphx_glr_download_examples_02-plot_plot-clear.py:

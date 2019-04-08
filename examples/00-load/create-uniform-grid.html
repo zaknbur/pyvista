@@ -210,15 +210,15 @@
 </div>
 <div class="sphx-glr-example-title section" id="creating-a-uniform-grid">
 <span id="sphx-glr-examples-00-load-create-uniform-grid-py"></span><h1>Creating a Uniform Grid<a class="headerlink" href="#creating-a-uniform-grid" title="Permalink to this headline">¶</a></h1>
-<p>Create a simple uniform grid from a 3D NumPy array of values.
-Take a 3D NumPy array of data values that holds some spatial data where each
-axis corresponds to the XYZ cartesian axes. This example will create a
-<a class="reference internal" href="../../types/grids.html#vtki.UniformGrid" title="vtki.UniformGrid"><code class="xref py py-class docutils literal notranslate"><span class="pre">vtki.UniformGrid</span></code></a> object that will hold the spatial reference for a
-3D grid which a 3D NumPy array of values can be plotted against.</p>
+<p>Create a simple uniform grid from a 3D NumPy array of values.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">vtki</span>
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 </pre></div>
 </div>
+<p>Take a 3D NumPy array of data values that holds some spatial data where each
+axis corresponds to the XYZ cartesian axes. This example will create a
+<a class="reference internal" href="../../types/grids.html#vtki.UniformGrid" title="vtki.UniformGrid"><code class="xref py py-class docutils literal notranslate"><span class="pre">vtki.UniformGrid</span></code></a> object that will hold the spatial reference for a
+3D grid which a 3D NumPy array of values can be plotted against.</p>
 <p>Create the 3D NumPy array of spatially referenced data
 This is spatially referenced such that the grid is 20 by 5 by 10 (nx by ny by nz)</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">values</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">1000</span><span class="p">)</span><span class="o">.</span><span class="n">reshape</span><span class="p">((</span><span class="mi">20</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">10</span><span class="p">))</span>
@@ -268,7 +268,7 @@ grid dimensions upon initialization.</p>
 </pre></div>
 </div>
 <img alt="../../_images/sphx_glr_create-uniform-grid_002.png" class="sphx-glr-single-img" src="../../_images/sphx_glr_create-uniform-grid_002.png" />
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  1.739 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  1.653 seconds)</p>
 <div class="sphx-glr-footer class sphx-glr-footer-example docutils container" id="sphx-glr-download-examples-00-load-create-uniform-grid-py">
 <div class="sphx-glr-download docutils container">
 <p><a class="reference download internal" download="" href="../../_downloads/9de975b9b9580d79fe42c7965e22e2a8/create-uniform-grid.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">create-uniform-grid.py</span></code></a></p>

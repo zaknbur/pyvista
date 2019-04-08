@@ -12,6 +12,19 @@ Multi-Window Plot
 
 
 Subplotting: having multiple scenes in a signle window
+
+.. code-block:: default
+
+
+    import vtki
+    from vtki import examples
+
+
+
+
+
+
+
 This example shows how to create a multi-window plotter by specifying the
 ``shape`` parameter.  The window generated is a two by two window by setting
 ``shape=(2, 2)``. Use the :func:`vtki.BasePlotter.subplot` function to select
@@ -20,9 +33,6 @@ the subplot you wish to be the active subplot.
 
 .. code-block:: default
 
-
-    import vtki
-    from vtki import examples
 
     plotter = vtki.Plotter(shape=(2, 2))
 
@@ -64,10 +74,6 @@ the subplot you wish to be the active subplot.
 .. code-block:: default
 
 
-
-    import vtki
-    from vtki import examples
-
     plotter = vtki.Plotter(shape=(1, 2))
 
     # Note that the (0, 0) location is active by default
@@ -94,7 +100,7 @@ the subplot you wish to be the active subplot.
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  2.408 seconds)
+   **Total running time of the script:** ( 0 minutes  2.244 seconds)
 
 
 .. _sphx_glr_download_examples_02-plot_plot-multi-window.py:

@@ -11,8 +11,6 @@ Plotting Glyphs
 ~~~~~~~~~~~~~~~
 
 Use vectors in a dataset to plot and orient glyphs/geometric objects.
-Glyphying can be done via the :func:`vtki.DataSetFilters.glyph` filter
-
 
 .. code-block:: default
 
@@ -27,11 +25,13 @@ Glyphying can be done via the :func:`vtki.DataSetFilters.glyph` filter
 
 
 
+Glyphying can be done via the :func:`vtki.DataSetFilters.glyph` filter
+
 
 .. code-block:: default
 
 
-    # Make a grid
+    # Make a grid:
     x, y, z = np.meshgrid(np.linspace(-5, 5, 20),
                       np.linspace(-5, 5, 20),
                       np.linspace(-5, 5, 5))
@@ -66,9 +66,6 @@ access the :attr:`vtki.Common.arrows` property.
 .. code-block:: default
 
 
-    import vtki
-    import numpy as np
-
     sphere = vtki.Sphere(radius=3.14)
 
     # make cool swirly pattern
@@ -82,6 +79,19 @@ access the :attr:`vtki.Common.arrows` property.
     # plot just the arrows
     sphere.arrows.plot()
 
+
+
+
+.. image:: /examples/02-plot/images/sphx_glr_plot-glyphs_002.png
+    :class: sphx-glr-single-img
+
+
+
+
+
+.. code-block:: default
+
+
     # plot the arrows and the sphere
     p = vtki.Plotter()
     p.add_mesh(sphere.arrows, lighting=False, stitle='Vector Magnitude')
@@ -90,18 +100,8 @@ access the :attr:`vtki.Common.arrows` property.
 
 
 
-.. rst-class:: sphx-glr-horizontal
-
-
-    *
-
-      .. image:: /examples/02-plot/images/sphx_glr_plot-glyphs_002.png
-            :class: sphx-glr-multi-img
-
-    *
-
-      .. image:: /examples/02-plot/images/sphx_glr_plot-glyphs_003.png
-            :class: sphx-glr-multi-img
+.. image:: /examples/02-plot/images/sphx_glr_plot-glyphs_003.png
+    :class: sphx-glr-single-img
 
 
 
@@ -109,7 +109,7 @@ access the :attr:`vtki.Common.arrows` property.
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  2.833 seconds)
+   **Total running time of the script:** ( 0 minutes  2.489 seconds)
 
 
 .. _sphx_glr_download_examples_02-plot_plot-glyphs.py:

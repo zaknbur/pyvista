@@ -11,6 +11,19 @@ Plot with Opacity
 ~~~~~~~~~~~~~~~~~
 
 Plot a mesh's scalar array with an opacity trasfer funciton
+
+.. code-block:: default
+
+
+    import vtki
+    from vtki import examples
+
+
+
+
+
+
+
 It's possible to apply an opacity mapping to any scalar array plotted. You can
 specify either a single static value to make the mesh opaque on all cells, or
 use a transfer function where the scalar array plotted is mapped to the opacity.
@@ -25,9 +38,6 @@ Opacity transfer function options are:
 
 .. code-block:: default
 
-
-    import vtki
-    from vtki import examples
 
     # Load St Helens DEM and warp the topography
     mesh = examples.download_st_helens().warp_by_scalar()
@@ -94,7 +104,7 @@ mappings:
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  4.771 seconds)
+   **Total running time of the script:** ( 0 minutes  4.427 seconds)
 
 
 .. _sphx_glr_download_examples_02-plot_plot-opacity.py:
