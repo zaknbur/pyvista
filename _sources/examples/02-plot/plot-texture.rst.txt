@@ -168,7 +168,11 @@ Repeating Textures
 What if you have a single texture that you'd like to repeat across a mesh?
 Simply define the texture coordinates for all nodes explicitly.
 
-Here we create a the texture coordinates to fill up the grid with several
+.. warning:: This example is not correct
+
+   Would you like to help us make this example better? Please consider opening a pull request
+
+Here we create the texture coordinates to fill up the grid with several
 mappings of a single texture:
 
 
@@ -227,7 +231,7 @@ Now display all the puppies!
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  3.821 seconds)
+   **Total running time of the script:** ( 0 minutes  4.185 seconds)
 
 
 .. _sphx_glr_download_examples_02-plot_plot-texture.py:
