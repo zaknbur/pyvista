@@ -95,6 +95,9 @@ Note that this process can be completed with any image texture!
 
 
 
+Textures from Files
++++++++++++++++++++
+
 What about loading your own texture from an image? This is often most easily
 done using the :func:`vtki.read_texture` function - simply pass an image
 file's path, and this function with handle making a ``vtkTexture`` for you to
@@ -117,6 +120,9 @@ use.
 
 
 
+
+NumPy Arrays as Textures
+++++++++++++++++++++++++
 
 Wan't to use a programmaticaly built image? :class:`vtki.UniformGrid` objects
 can be converted to textures using :func:`vtki.image_to_texture` and 3D
@@ -148,7 +154,71 @@ NumPy (X by Y by RGB) arrays can be converted to textures using
 
 
 
+
+
 .. image:: /examples/02-plot/images/sphx_glr_plot-texture_005.png
+    :class: sphx-glr-single-img
+
+
+
+
+Repeating Textures
+++++++++++++++++++
+
+What if you have a single texture that you'd like to repeat across a mesh?
+Simply define the texture coordinates for all nodes explicitly.
+
+Here we create a the texture coordinates to fill up the grid with several
+mappings of a single texture:
+
+
+.. code-block:: default
+
+
+    axial_num_puppies = 4
+    dx = curvsurf.dimensions[0] // axial_num_puppies
+    dy = curvsurf.dimensions[1] // axial_num_puppies
+
+    xc = np.full((axial_num_puppies, dx), np.linspace(0, 1, dx))
+    yc = np.full((axial_num_puppies, dy), np.linspace(0, 1, dy))
+
+    xxc, yyc = np.meshgrid(xc, yc)
+    puppy_coords = np.c_[yyc.ravel(), xxc.ravel()]
+
+
+
+
+
+
+
+Then we must associate those texture coordinates with the mesh through the
+:attr:`vtki.Common.t_coords` property.
+
+
+.. code-block:: default
+
+
+    curvsurf.t_coords = puppy_coords
+
+
+
+
+
+
+
+Now display all the puppies!
+
+
+.. code-block:: default
+
+
+    # use the puppy image
+    tex = examples.download_puppy_texture()
+    curvsurf.plot(texture=tex, cpos='yx')
+
+
+
+.. image:: /examples/02-plot/images/sphx_glr_plot-texture_006.png
     :class: sphx-glr-single-img
 
 
@@ -157,7 +227,7 @@ NumPy (X by Y by RGB) arrays can be converted to textures using
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  3.299 seconds)
+   **Total running time of the script:** ( 0 minutes  3.821 seconds)
 
 
 .. _sphx_glr_download_examples_02-plot_plot-texture.py:

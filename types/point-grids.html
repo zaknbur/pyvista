@@ -686,16 +686,19 @@ only “.vtk” files</p>
 <col style="width: 90%" />
 </colgroup>
 <tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="#vtki.StructuredGrid.quality" title="vtki.StructuredGrid.quality"><code class="xref py py-obj docutils literal notranslate"><span class="pre">quality</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#vtki.StructuredGrid.dimensions" title="vtki.StructuredGrid.dimensions"><code class="xref py py-obj docutils literal notranslate"><span class="pre">dimensions</span></code></a></p></td>
+<td><p>Returns a length 3 tuple of the grid’s dimensions</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#vtki.StructuredGrid.quality" title="vtki.StructuredGrid.quality"><code class="xref py py-obj docutils literal notranslate"><span class="pre">quality</span></code></a></p></td>
 <td><p>Computes the minimum scaled jacobian of each cell.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#vtki.StructuredGrid.x" title="vtki.StructuredGrid.x"><code class="xref py py-obj docutils literal notranslate"><span class="pre">x</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#vtki.StructuredGrid.x" title="vtki.StructuredGrid.x"><code class="xref py py-obj docutils literal notranslate"><span class="pre">x</span></code></a></p></td>
 <td><p>The X coordinates of all points</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#vtki.StructuredGrid.y" title="vtki.StructuredGrid.y"><code class="xref py py-obj docutils literal notranslate"><span class="pre">y</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#vtki.StructuredGrid.y" title="vtki.StructuredGrid.y"><code class="xref py py-obj docutils literal notranslate"><span class="pre">y</span></code></a></p></td>
 <td><p>The Y coordinates of all points</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#vtki.StructuredGrid.z" title="vtki.StructuredGrid.z"><code class="xref py py-obj docutils literal notranslate"><span class="pre">z</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#vtki.StructuredGrid.z" title="vtki.StructuredGrid.z"><code class="xref py py-obj docutils literal notranslate"><span class="pre">z</span></code></a></p></td>
 <td><p>The Z coordinates of all points</p></td>
 </tr>
 </tbody>
@@ -748,6 +751,12 @@ from point arrays</p>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">grid</span> <span class="o">=</span> <span class="n">vtki</span><span class="o">.</span><span class="n">StructuredGrid</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">z</span><span class="p">)</span>
 </pre></div>
 </div>
+<dl class="attribute">
+<dt id="vtki.StructuredGrid.dimensions">
+<code class="descname">dimensions</code><a class="headerlink" href="#vtki.StructuredGrid.dimensions" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a length 3 tuple of the grid’s dimensions</p>
+</dd></dl>
+
 <dl class="attribute">
 <dt id="vtki.StructuredGrid.quality">
 <code class="descname">quality</code><a class="headerlink" href="#vtki.StructuredGrid.quality" title="Permalink to this definition">¶</a></dt>

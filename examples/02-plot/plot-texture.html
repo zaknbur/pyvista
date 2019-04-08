@@ -123,7 +123,12 @@
 <li class="toctree-l3"><a class="reference internal" href="plot-multi-window.html">Multi-Window Plot</a></li>
 <li class="toctree-l3"><a class="reference internal" href="plot-opacity.html">Plot with Opacity</a></li>
 <li class="toctree-l3"><a class="reference internal" href="plot-scalar-bars.html">Customize Scalar Bars</a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="#">Applying Textures</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Applying Textures</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#textures-from-files">Textures from Files</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#numpy-arrays-as-textures">NumPy Arrays as Textures</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#repeating-textures">Repeating Textures</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -256,6 +261,8 @@ For example, let’s map that same image of bricks to a curvey surface:</p>
 </pre></div>
 </div>
 <img alt="../../_images/sphx_glr_plot-texture_003.png" class="sphx-glr-single-img" src="../../_images/sphx_glr_plot-texture_003.png" />
+<div class="section" id="textures-from-files">
+<h2>Textures from Files<a class="headerlink" href="#textures-from-files" title="Permalink to this headline">¶</a></h2>
 <p>What about loading your own texture from an image? This is often most easily
 done using the <a class="reference internal" href="../../tools/utilities.html#vtki.read_texture" title="vtki.read_texture"><code class="xref py py-func docutils literal notranslate"><span class="pre">vtki.read_texture()</span></code></a> function - simply pass an image
 file’s path, and this function with handle making a <code class="docutils literal notranslate"><span class="pre">vtkTexture</span></code> for you to
@@ -266,6 +273,9 @@ use.</p>
 </pre></div>
 </div>
 <img alt="../../_images/sphx_glr_plot-texture_004.png" class="sphx-glr-single-img" src="../../_images/sphx_glr_plot-texture_004.png" />
+</div>
+<div class="section" id="numpy-arrays-as-textures">
+<h2>NumPy Arrays as Textures<a class="headerlink" href="#numpy-arrays-as-textures" title="Permalink to this headline">¶</a></h2>
 <p>Wan’t to use a programmaticaly built image? <a class="reference internal" href="../../types/grids.html#vtki.UniformGrid" title="vtki.UniformGrid"><code class="xref py py-class docutils literal notranslate"><span class="pre">vtki.UniformGrid</span></code></a> objects
 can be converted to textures using <code class="xref py py-func docutils literal notranslate"><span class="pre">vtki.image_to_texture()</span></code> and 3D
 NumPy (X by Y by RGB) arrays can be converted to textures using
@@ -291,7 +301,37 @@ NumPy (X by Y by RGB) arrays can be converted to textures using
 </pre></div>
 </div>
 <img alt="../../_images/sphx_glr_plot-texture_005.png" class="sphx-glr-single-img" src="../../_images/sphx_glr_plot-texture_005.png" />
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  3.299 seconds)</p>
+</div>
+<div class="section" id="repeating-textures">
+<h2>Repeating Textures<a class="headerlink" href="#repeating-textures" title="Permalink to this headline">¶</a></h2>
+<p>What if you have a single texture that you’d like to repeat across a mesh?
+Simply define the texture coordinates for all nodes explicitly.</p>
+<p>Here we create a the texture coordinates to fill up the grid with several
+mappings of a single texture:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">axial_num_puppies</span> <span class="o">=</span> <span class="mi">4</span>
+<span class="n">dx</span> <span class="o">=</span> <span class="n">curvsurf</span><span class="o">.</span><span class="n">dimensions</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">//</span> <span class="n">axial_num_puppies</span>
+<span class="n">dy</span> <span class="o">=</span> <span class="n">curvsurf</span><span class="o">.</span><span class="n">dimensions</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">//</span> <span class="n">axial_num_puppies</span>
+
+<span class="n">xc</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">full</span><span class="p">((</span><span class="n">axial_num_puppies</span><span class="p">,</span> <span class="n">dx</span><span class="p">),</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">dx</span><span class="p">))</span>
+<span class="n">yc</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">full</span><span class="p">((</span><span class="n">axial_num_puppies</span><span class="p">,</span> <span class="n">dy</span><span class="p">),</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">dy</span><span class="p">))</span>
+
+<span class="n">xxc</span><span class="p">,</span> <span class="n">yyc</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">meshgrid</span><span class="p">(</span><span class="n">xc</span><span class="p">,</span> <span class="n">yc</span><span class="p">)</span>
+<span class="n">puppy_coords</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">c_</span><span class="p">[</span><span class="n">yyc</span><span class="o">.</span><span class="n">ravel</span><span class="p">(),</span> <span class="n">xxc</span><span class="o">.</span><span class="n">ravel</span><span class="p">()]</span>
+</pre></div>
+</div>
+<p>Then we must associate those texture coordinates with the mesh through the
+<a class="reference internal" href="../../types/common.html#vtki.Common.t_coords" title="vtki.Common.t_coords"><code class="xref py py-attr docutils literal notranslate"><span class="pre">vtki.Common.t_coords</span></code></a> property.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">curvsurf</span><span class="o">.</span><span class="n">t_coords</span> <span class="o">=</span> <span class="n">puppy_coords</span>
+</pre></div>
+</div>
+<p>Now display all the puppies!</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># use the puppy image</span>
+<span class="n">tex</span> <span class="o">=</span> <span class="n">examples</span><span class="o">.</span><span class="n">download_puppy_texture</span><span class="p">()</span>
+<span class="n">curvsurf</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">texture</span><span class="o">=</span><span class="n">tex</span><span class="p">,</span> <span class="n">cpos</span><span class="o">=</span><span class="s1">&#39;yx&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<img alt="../../_images/sphx_glr_plot-texture_006.png" class="sphx-glr-single-img" src="../../_images/sphx_glr_plot-texture_006.png" />
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  3.821 seconds)</p>
 <div class="sphx-glr-footer class sphx-glr-footer-example docutils container" id="sphx-glr-download-examples-02-plot-plot-texture-py">
 <div class="sphx-glr-download docutils container">
 <p><a class="reference download internal" download="" href="../../_downloads/da60b9606906e247c27114099f9d92e8/plot-texture.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">plot-texture.py</span></code></a></p>
@@ -301,6 +341,7 @@ NumPy (X by Y by RGB) arrays can be converted to textures using
 </div>
 </div>
 <p class="sphx-glr-signature"><a class="reference external" href="https://sphinx-gallery.readthedocs.io">Gallery generated by Sphinx-Gallery</a></p>
+</div>
 </div>
 
 
