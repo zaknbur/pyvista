@@ -5,15 +5,15 @@
 
 Computation times
 =================
-**00:57.864** total execution time for **examples_02-plot** files:
+**00:57.904** total execution time for **examples_02-plot** files:
 
-- **00:29.425**: :ref:`sphx_glr_examples_02-plot_plot-edl.py` (``plot-edl.py``)
-- **00:05.972**: :ref:`sphx_glr_examples_02-plot_plot-movie.py` (``plot-movie.py``)
-- **00:04.376**: :ref:`sphx_glr_examples_02-plot_plot-opacity.py` (``plot-opacity.py``)
-- **00:03.839**: :ref:`sphx_glr_examples_02-plot_plot-gif.py` (``plot-gif.py``)
-- **00:03.771**: :ref:`sphx_glr_examples_02-plot_plot-texture.py` (``plot-texture.py``)
-- **00:03.701**: :ref:`sphx_glr_examples_02-plot_plot-scalar-bars.py` (``plot-scalar-bars.py``)
-- **00:02.408**: :ref:`sphx_glr_examples_02-plot_plot-glyphs.py` (``plot-glyphs.py``)
-- **00:02.141**: :ref:`sphx_glr_examples_02-plot_plot-multi-window.py` (``plot-multi-window.py``)
+- **00:29.249**: :ref:`sphx_glr_examples_02-plot_plot-edl.py` (``plot-edl.py``)
+- **00:05.993**: :ref:`sphx_glr_examples_02-plot_plot-movie.py` (``plot-movie.py``)
+- **00:04.453**: :ref:`sphx_glr_examples_02-plot_plot-opacity.py` (``plot-opacity.py``)
+- **00:03.900**: :ref:`sphx_glr_examples_02-plot_plot-gif.py` (``plot-gif.py``)
+- **00:03.818**: :ref:`sphx_glr_examples_02-plot_plot-scalar-bars.py` (``plot-scalar-bars.py``)
+- **00:03.733**: :ref:`sphx_glr_examples_02-plot_plot-texture.py` (``plot-texture.py``)
+- **00:02.401**: :ref:`sphx_glr_examples_02-plot_plot-glyphs.py` (``plot-glyphs.py``)
+- **00:02.117**: :ref:`sphx_glr_examples_02-plot_plot-multi-window.py` (``plot-multi-window.py``)
 - **00:01.343**: :ref:`sphx_glr_examples_02-plot_plot-cmap.py` (``plot-cmap.py``)
-- **00:00.888**: :ref:`sphx_glr_examples_02-plot_plot-clear.py` (``plot-clear.py``)
+- **00:00.897**: :ref:`sphx_glr_examples_02-plot_plot-clear.py` (``plot-clear.py``)
