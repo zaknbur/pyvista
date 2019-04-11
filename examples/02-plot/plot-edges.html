@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Read Image Files &mdash; vtki 0.17.5 documentation</title>
+  <title>Show Edges &mdash; vtki 0.17.5 documentation</title>
   
 
   
@@ -41,8 +41,8 @@
   <link rel="stylesheet" href="../../_static/copybutton.css" type="text/css" />
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Computing Surface Normals" href="../01-filter/compute-normals.html" />
-    <link rel="prev" title="Load and Plot from a File" href="read-file.html" /> 
+    <link rel="next" title="Eye Dome Lighting" href="plot-edl.html" />
+    <link rel="prev" title="Custom Colormaps" href="plot-cmap.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -111,19 +111,22 @@
 <p class="caption"><span class="caption-text">Examples</span></p>
 <ul class="current">
 <li class="toctree-l1 current"><a class="reference internal" href="../index.html">Quick Examples</a><ul class="current">
-<li class="toctree-l2 current"><a class="reference internal" href="../index.html#loading-and-creating-meshes">Loading and Creating Meshes</a><ul class="current">
-<li class="toctree-l3"><a class="reference internal" href="create-geometric-objects.html">Geometric Objects</a></li>
-<li class="toctree-l3"><a class="reference internal" href="create-poly.html">Create PolyData</a></li>
-<li class="toctree-l3"><a class="reference internal" href="create-structured-surface.html">Creating a Structured Surface</a></li>
-<li class="toctree-l3"><a class="reference internal" href="create-tri-surface.html">Create Triangulated Surface</a></li>
-<li class="toctree-l3"><a class="reference internal" href="create-uniform-grid.html">Creating a Uniform Grid</a></li>
-<li class="toctree-l3"><a class="reference internal" href="create-unstructured-surface.html">Creating an Unstructured Surface</a></li>
-<li class="toctree-l3"><a class="reference internal" href="read-file.html">Load and Plot from a File</a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="#">Read Image Files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index.html#loading-and-creating-meshes">Loading and Creating Meshes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index.html#filtering">Filtering</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html#plotting-examples">Plotting Examples</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="plot-clear.html">Clearing a Mesh or the Entire Plot</a></li>
+<li class="toctree-l3"><a class="reference internal" href="plot-cmap.html">Custom Colormaps</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Show Edges</a></li>
+<li class="toctree-l3"><a class="reference internal" href="plot-edl.html">Eye Dome Lighting</a></li>
+<li class="toctree-l3"><a class="reference internal" href="plot-gif.html">Create a GIF Movie</a></li>
+<li class="toctree-l3"><a class="reference internal" href="plot-glyphs.html">Plotting Glyphs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="plot-movie.html">Create a MP4 Movie</a></li>
+<li class="toctree-l3"><a class="reference internal" href="plot-multi-window.html">Multi-Window Plot</a></li>
+<li class="toctree-l3"><a class="reference internal" href="plot-opacity.html">Plot with Opacity</a></li>
+<li class="toctree-l3"><a class="reference internal" href="plot-scalar-bars.html">Customize Scalar Bars</a></li>
+<li class="toctree-l3"><a class="reference internal" href="plot-texture.html">Applying Textures</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../index.html#filtering">Filtering</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../index.html#plotting-examples">Plotting Examples</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../external_examples.html">External Examples</a></li>
@@ -183,14 +186,14 @@
         
           <li><a href="../index.html">Quick Examples</a> &raquo;</li>
         
-      <li>Read Image Files</li>
+      <li>Show Edges</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
             
             
-              <a href="https://github.com/vtkiorg/vtki/blob/master/docs/examples/00-load/read-image.rst" class="fa fa-github"> Edit on GitHub</a>
+              <a href="https://github.com/vtkiorg/vtki/blob/master/docs/examples/02-plot/plot-edges.rst" class="fa fa-github"> Edit on GitHub</a>
             
           
         
@@ -206,45 +209,38 @@
             
   <div class="sphx-glr-download-link-note admonition note">
 <p class="admonition-title">Note</p>
-<p>Click <a class="reference internal" href="#sphx-glr-download-examples-00-load-read-image-py"><span class="std std-ref">here</span></a> to download the full example code</p>
+<p>Click <a class="reference internal" href="#sphx-glr-download-examples-02-plot-plot-edges-py"><span class="std std-ref">here</span></a> to download the full example code</p>
 </div>
-<div class="sphx-glr-example-title section" id="read-image-files">
-<span id="sphx-glr-examples-00-load-read-image-py"></span><h1>Read Image Files<a class="headerlink" href="#read-image-files" title="Permalink to this headline">¶</a></h1>
-<p>Read and plot image files (JPEG, TIFF, PNG, etc).</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">vtki</span> <span class="k">import</span> <span class="n">examples</span>
+<div class="sphx-glr-example-title section" id="show-edges">
+<span id="sphx-glr-examples-02-plot-plot-edges-py"></span><h1>Show Edges<a class="headerlink" href="#show-edges" title="Permalink to this headline">¶</a></h1>
+<p>Show the edges of all geometries within a mesh
+Sometimes it can be useful to show all of the edges of a mesh when rendering
+to communicate aspects of the dataset like resolution.</p>
+<p>Showing the edges for any rendered dataset is a simple as specifying the
+the <code class="docutils literal notranslate"><span class="pre">show_edges</span></code> keyword argument to <code class="docutils literal notranslate"><span class="pre">True</span></code> when plotting a dataset.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># sphinx_gallery_thumbnail_number = 1</span>
+<span class="kn">import</span> <span class="nn">vtki</span>
+<span class="kn">from</span> <span class="nn">vtki</span> <span class="k">import</span> <span class="n">examples</span>
+
+<span class="n">nefertiti</span> <span class="o">=</span> <span class="n">examples</span><span class="o">.</span><span class="n">download_nefertiti</span><span class="p">()</span>
+
+<span class="c1"># Camera position to zoom to face</span>
+<span class="n">face_view</span> <span class="o">=</span> <span class="p">[(</span><span class="mf">194.57658338658473</span><span class="p">,</span> <span class="o">-</span><span class="mf">327.5539184202715</span><span class="p">,</span> <span class="mf">28.106692235139377</span><span class="p">),</span>
+             <span class="p">(</span><span class="o">-</span><span class="mf">10.46795453395034</span><span class="p">,</span> <span class="o">-</span><span class="mf">67.33281919301498</span><span class="p">,</span> <span class="o">-</span><span class="mf">19.938084799559192</span><span class="p">),</span>
+             <span class="p">(</span><span class="o">-</span><span class="mf">0.05444711191580967</span><span class="p">,</span> <span class="mf">0.13964269728441056</span><span class="p">,</span> <span class="mf">0.9887039137674948</span><span class="p">)]</span>
+
+
+<span class="n">nefertiti</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">cpos</span><span class="o">=</span><span class="n">face_view</span><span class="p">,</span> <span class="n">show_edges</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 </pre></div>
 </div>
-<p><code class="docutils literal notranslate"><span class="pre">vtki</span></code> fully supportes reading images into their own spatially referenced
-data objects (this example) as well as supports texture mapping of images onto
-datasets (see <a class="reference internal" href="../02-plot/plot-texture.html#ref-texture-example"><span class="std std-ref">Applying Textures</span></a>).</p>
-<p>Download a JPEG image of a puppy and load it to <a class="reference internal" href="../../types/grids.html#vtki.UniformGrid" title="vtki.UniformGrid"><code class="xref py py-class docutils literal notranslate"><span class="pre">vtki.UniformGrid</span></code></a>.
-This could similarly be implemented with any image file by using the
-<a class="reference internal" href="../../tools/utilities.html#vtki.read" title="vtki.read"><code class="xref py py-func docutils literal notranslate"><span class="pre">vtki.read()</span></code></a> function and passing the path to the image file.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">image</span> <span class="o">=</span> <span class="n">examples</span><span class="o">.</span><span class="n">download_puppy</span><span class="p">()</span>
-<span class="c1"># or...</span>
-<span class="c1"># image = vtki.read(&#39;my_image.jpg&#39;)</span>
-</pre></div>
-</div>
-<p>When plotting images stored in <a class="reference internal" href="../../types/grids.html#vtki.UniformGrid" title="vtki.UniformGrid"><code class="xref py py-class docutils literal notranslate"><span class="pre">vtki.UniformGrid</span></code></a> objects, it is
-important to specify usign the <cite>rgb</cite> option when plotting to ensure that the
-image’s true colors are used and not mapped.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># True image colors</span>
-<span class="n">image</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">rgb</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">cpos</span><span class="o">=</span><span class="s1">&#39;xy&#39;</span><span class="p">)</span>
-</pre></div>
-</div>
-<img alt="../../_images/sphx_glr_read-image_001.png" class="sphx-glr-single-img" src="../../_images/sphx_glr_read-image_001.png" />
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Mapped image colors</span>
-<span class="n">image</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">cpos</span><span class="o">=</span><span class="s1">&#39;xy&#39;</span><span class="p">)</span>
-</pre></div>
-</div>
-<img alt="../../_images/sphx_glr_read-image_002.png" class="sphx-glr-single-img" src="../../_images/sphx_glr_read-image_002.png" />
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  13.128 seconds)</p>
-<div class="sphx-glr-footer class sphx-glr-footer-example docutils container" id="sphx-glr-download-examples-00-load-read-image-py">
+<img alt="../../_images/sphx_glr_plot-edges_001.png" class="sphx-glr-single-img" src="../../_images/sphx_glr_plot-edges_001.png" />
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  15.032 seconds)</p>
+<div class="sphx-glr-footer class sphx-glr-footer-example docutils container" id="sphx-glr-download-examples-02-plot-plot-edges-py">
 <div class="sphx-glr-download docutils container">
-<p><a class="reference download internal" download="" href="../../_downloads/8b5c40dde9d52a5f8b08f8c0237b7d6a/read-image.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">read-image.py</span></code></a></p>
+<p><a class="reference download internal" download="" href="../../_downloads/9fbb1ed636408e8891c359467e2d82c9/plot-edges.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">plot-edges.py</span></code></a></p>
 </div>
 <div class="sphx-glr-download docutils container">
-<p><a class="reference download internal" download="" href="../../_downloads/b237c840ab9b84bff915a327d2a6427a/read-image.ipynb"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Jupyter</span> <span class="pre">notebook:</span> <span class="pre">read-image.ipynb</span></code></a></p>
+<p><a class="reference download internal" download="" href="../../_downloads/7c6246d9665c6258e0a0bb6127152037/plot-edges.ipynb"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Jupyter</span> <span class="pre">notebook:</span> <span class="pre">plot-edges.ipynb</span></code></a></p>
 </div>
 </div>
 <p class="sphx-glr-signature"><a class="reference external" href="https://sphinx-gallery.readthedocs.io">Gallery generated by Sphinx-Gallery</a></p>
@@ -258,10 +254,10 @@ image’s true colors are used and not mapped.</p>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../01-filter/compute-normals.html" class="btn btn-neutral float-right" title="Computing Surface Normals" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="plot-edl.html" class="btn btn-neutral float-right" title="Eye Dome Lighting" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="read-file.html" class="btn btn-neutral float-left" title="Load and Plot from a File" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="plot-cmap.html" class="btn btn-neutral float-left" title="Custom Colormaps" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

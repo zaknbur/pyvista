@@ -19,6 +19,7 @@
 ./_downloads/6c42b06359872339319723d32f234367/create-unstructured-surface.ipynb
 ./_downloads/6f60d9f2a2bf02755ac79a6de7a0bfc3/plot-glyphs.py
 ./_downloads/72d710a5ff0175eb141b3d0fb3088192/plot-scalar-bars.py
+./_downloads/7c6246d9665c6258e0a0bb6127152037/plot-edges.ipynb
 ./_downloads/7c646a2f4fdef11d7d770b8c82a7e03d/plot-edl.py
 ./_downloads/823ef82703bd8155ad2739f9caff3dea/create-geometric-objects.py
 ./_downloads/86e96b4763988892e9254c0f4184ac76/compute-volume.py
@@ -27,6 +28,7 @@
 ./_downloads/8ef8acf95a9baa2a7d5070a426a14a9b/create-geometric-objects.ipynb
 ./_downloads/9de975b9b9580d79fe42c7965e22e2a8/create-uniform-grid.py
 ./_downloads/9e31d84969726fad2f919f6067ef280a/plot-clear.ipynb
+./_downloads/9fbb1ed636408e8891c359467e2d82c9/plot-edges.py
 ./_downloads/aff9b0f31547f12d46da169f6b1a5c0f/plot-movie.py
 ./_downloads/b237c840ab9b84bff915a327d2a6427a/read-image.ipynb
 ./_downloads/b8892364a4f8c2465d3fc39b00acb139/plot-scalar-bars.ipynb
@@ -97,10 +99,13 @@
 ./_images/sphx_glr_plot-clear_thumb.png
 ./_images/sphx_glr_plot-cmap_001.png
 ./_images/sphx_glr_plot-cmap_thumb.png
+./_images/sphx_glr_plot-edges_001.png
+./_images/sphx_glr_plot-edges_thumb.png
 ./_images/sphx_glr_plot-edl_001.png
 ./_images/sphx_glr_plot-edl_002.png
 ./_images/sphx_glr_plot-edl_003.png
 ./_images/sphx_glr_plot-edl_004.png
+./_images/sphx_glr_plot-edl_005.png
 ./_images/sphx_glr_plot-edl_thumb.png
 ./_images/sphx_glr_plot-gif_001.png
 ./_images/sphx_glr_plot-gif_thumb.png
@@ -167,6 +172,7 @@
 ./_sources/examples/01-filter/volume-smoothing.rst.txt
 ./_sources/examples/02-plot/plot-clear.rst.txt
 ./_sources/examples/02-plot/plot-cmap.rst.txt
+./_sources/examples/02-plot/plot-edges.rst.txt
 ./_sources/examples/02-plot/plot-edl.rst.txt
 ./_sources/examples/02-plot/plot-gif.rst.txt
 ./_sources/examples/02-plot/plot-glyphs.rst.txt
@@ -270,6 +276,7 @@
 ./examples/01-filter/volume-smoothing.html
 ./examples/02-plot/plot-clear.html
 ./examples/02-plot/plot-cmap.html
+./examples/02-plot/plot-edges.html
 ./examples/02-plot/plot-edl.html
 ./examples/02-plot/plot-gif.html
 ./examples/02-plot/plot-glyphs.html

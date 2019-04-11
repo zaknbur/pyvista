@@ -357,6 +357,26 @@ Plotting Examples
 
 .. raw:: html
 
+    <div class="sphx-glr-thumbcontainer" tooltip="Show the edges of all geometries within a mesh">
+
+.. only:: html
+
+    .. figure:: /examples/02-plot/images/thumb/sphx_glr_plot-edges_thumb.png
+
+        :ref:`sphx_glr_examples_02-plot_plot-edges.py`
+
+.. raw:: html
+
+    </div>
+
+
+.. toctree::
+   :hidden:
+
+   /examples/02-plot/plot-edges
+
+.. raw:: html
+
     <div class="sphx-glr-thumbcontainer" tooltip="Eye-Dome Lighting (EDL) is a non-photorealistic, image-based shading technique designed to impr...">
 
 .. only:: html

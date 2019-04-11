@@ -42,7 +42,7 @@
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="Create a GIF Movie" href="plot-gif.html" />
-    <link rel="prev" title="Custom Colormaps" href="plot-cmap.html" /> 
+    <link rel="prev" title="Show Edges" href="plot-edges.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -116,6 +116,7 @@
 <li class="toctree-l2 current"><a class="reference internal" href="../index.html#plotting-examples">Plotting Examples</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="plot-clear.html">Clearing a Mesh or the Entire Plot</a></li>
 <li class="toctree-l3"><a class="reference internal" href="plot-cmap.html">Custom Colormaps</a></li>
+<li class="toctree-l3"><a class="reference internal" href="plot-edges.html">Show Edges</a></li>
 <li class="toctree-l3 current"><a class="current reference internal" href="#">Eye Dome Lighting</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#statue">Statue</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#point-cloud">Point Cloud</a></li>
@@ -230,8 +231,12 @@ To learn more, please see <a class="reference external" href="https://blog.kitwa
 incredebily sophisticated meshes like the creative commons Queen Nefertiti
 statue:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">nefertiti</span> <span class="o">=</span> <span class="n">examples</span><span class="o">.</span><span class="n">download_nefertiti</span><span class="p">()</span>
-
-<span class="n">p</span> <span class="o">=</span> <span class="n">vtki</span><span class="o">.</span><span class="n">Plotter</span><span class="p">(</span><span class="n">shape</span><span class="o">=</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">))</span>
+<span class="n">nefertiti</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">eye_dome_lighting</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">cpos</span><span class="o">=</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="mf">0.2</span><span class="p">])</span>
+</pre></div>
+</div>
+<img alt="../../_images/sphx_glr_plot-edl_001.png" class="sphx-glr-single-img" src="../../_images/sphx_glr_plot-edl_001.png" />
+<p>Here we will compare a EDL shading side by side with normal shading</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">p</span> <span class="o">=</span> <span class="n">vtki</span><span class="o">.</span><span class="n">Plotter</span><span class="p">(</span><span class="n">shape</span><span class="o">=</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span> <span class="n">border</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
 
 <span class="c1"># With eye-dome lighting</span>
 <span class="n">p</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span>
@@ -249,7 +254,7 @@ statue:</p>
 <span class="n">p</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
-<img alt="../../_images/sphx_glr_plot-edl_001.png" class="sphx-glr-single-img" src="../../_images/sphx_glr_plot-edl_001.png" />
+<img alt="../../_images/sphx_glr_plot-edl_002.png" class="sphx-glr-single-img" src="../../_images/sphx_glr_plot-edl_002.png" />
 </div>
 <div class="section" id="point-cloud">
 <h2>Point Cloud<a class="headerlink" href="#point-cloud" title="Permalink to this headline">¶</a></h2>
@@ -265,7 +270,7 @@ Take this Lidar point cloud for example:</p>
 <span class="n">p</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
-<img alt="../../_images/sphx_glr_plot-edl_002.png" class="sphx-glr-single-img" src="../../_images/sphx_glr_plot-edl_002.png" />
+<img alt="../../_images/sphx_glr_plot-edl_003.png" class="sphx-glr-single-img" src="../../_images/sphx_glr_plot-edl_003.png" />
 <p>We can improve the depth mapping by enabling eye dome lighting on the renderer.
 Reference <a class="reference internal" href="../../tools/plotting.html#vtki.Renderer.enable_eye_dome_lighting" title="vtki.Renderer.enable_eye_dome_lighting"><code class="xref py py-func docutils literal notranslate"><span class="pre">vtki.Renderer.enable_eye_dome_lighting()</span></code></a>.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Plot with EDL</span>
@@ -275,7 +280,7 @@ Reference <a class="reference internal" href="../../tools/plotting.html#vtki.Ren
 <span class="n">p</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
-<img alt="../../_images/sphx_glr_plot-edl_003.png" class="sphx-glr-single-img" src="../../_images/sphx_glr_plot-edl_003.png" />
+<img alt="../../_images/sphx_glr_plot-edl_004.png" class="sphx-glr-single-img" src="../../_images/sphx_glr_plot-edl_004.png" />
 <p>The eye dome lighting mode can also handle plotting scalar arrays:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Plot with EDL and scalar data</span>
 <span class="n">p</span> <span class="o">=</span> <span class="n">vtki</span><span class="o">.</span><span class="n">Plotter</span><span class="p">()</span>
@@ -284,8 +289,8 @@ Reference <a class="reference internal" href="../../tools/plotting.html#vtki.Ren
 <span class="n">p</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
-<img alt="../../_images/sphx_glr_plot-edl_004.png" class="sphx-glr-single-img" src="../../_images/sphx_glr_plot-edl_004.png" />
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  47.793 seconds)</p>
+<img alt="../../_images/sphx_glr_plot-edl_005.png" class="sphx-glr-single-img" src="../../_images/sphx_glr_plot-edl_005.png" />
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  53.115 seconds)</p>
 <div class="sphx-glr-footer class sphx-glr-footer-example docutils container" id="sphx-glr-download-examples-02-plot-plot-edl-py">
 <div class="sphx-glr-download docutils container">
 <p><a class="reference download internal" download="" href="../../_downloads/7c646a2f4fdef11d7d770b8c82a7e03d/plot-edl.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">plot-edl.py</span></code></a></p>
@@ -309,7 +314,7 @@ Reference <a class="reference internal" href="../../tools/plotting.html#vtki.Ren
         <a href="plot-gif.html" class="btn btn-neutral float-right" title="Create a GIF Movie" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="plot-cmap.html" class="btn btn-neutral float-left" title="Custom Colormaps" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="plot-edges.html" class="btn btn-neutral float-left" title="Show Edges" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
