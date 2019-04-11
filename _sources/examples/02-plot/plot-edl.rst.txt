@@ -7,8 +7,8 @@
 .. _sphx_glr_examples_02-plot_plot-edl.py:
 
 
-Plot Eye Dome Lighting
-~~~~~~~~~~~~~~~~~~~~~~
+Eye Dome Lighting
+~~~~~~~~~~~~~~~~~
 
 Eye-Dome Lighting (EDL) is a non-photorealistic, image-based shading technique
 designed to improve depth perception in scientific visualization images.
@@ -16,14 +16,10 @@ To learn more, please see `this blog post`_.
 
 .. _this blog post: https://blog.kitware.com/eye-dome-lighting-a-non-photorealistic-shading-technique/
 
-
-When plotting a simple point cloud, it can be difficult to perceive depth.
-Take this Lidar point cloud for example:
-
 .. code-block:: default
 
 
-    # sphinx_gallery_thumbnail_number = 2
+    # sphinx_gallery_thumbnail_number = 1
     import vtki
     from vtki import examples
 
@@ -33,7 +29,50 @@ Take this Lidar point cloud for example:
 
 
 
-Load a sample point cloud.
+Statue
++++++++++++
+
+Eye-Dome Lighting can dramatically improve depth perception when plotting
+incredebily sophisticated meshes like the creative commons Queen Nefertiti
+statue:
+
+
+.. code-block:: default
+
+
+    nefertiti = examples.download_nefertiti()
+
+    p = vtki.Plotter(shape=(1, 2))
+
+    # With eye-dome lighting
+    p.subplot(0,0)
+    p.add_mesh(nefertiti)
+    p.enable_eye_dome_lighting()
+    p.add_text('Eye-Dome Lighting')
+    p.camera_position = [-1,-1,0.2]
+
+    # No eye-dome lighting
+    p.subplot(0,1)
+    p.add_mesh(nefertiti)
+    p.add_text('No Eye-Dome Lighting')
+    p.camera_position = [-1,-1,0.2]
+
+    p.show()
+
+
+
+
+.. image:: /examples/02-plot/images/sphx_glr_plot-edl_001.png
+    :class: sphx-glr-single-img
+
+
+
+
+Point Cloud
++++++++++++
+
+When plotting a simple point cloud, it can be difficult to perceive depth.
+Take this Lidar point cloud for example:
 
 
 .. code-block:: default
@@ -56,14 +95,14 @@ And now plot this point cloud as-is:
 
     # Plot a typical point cloud with no EDL
     p = vtki.Plotter()
-    p.add_mesh(point_cloud, color='orange', point_size=5)
+    p.add_mesh(point_cloud, color='tan', point_size=5)
     p.show()
 
 
 
 
 
-.. image:: /examples/02-plot/images/sphx_glr_plot-edl_001.png
+.. image:: /examples/02-plot/images/sphx_glr_plot-edl_002.png
     :class: sphx-glr-single-img
 
 
@@ -78,7 +117,7 @@ Reference :func:`vtki.Renderer.enable_eye_dome_lighting`.
 
     # Plot with EDL
     p = vtki.Plotter()
-    p.add_mesh(point_cloud, color='orange', point_size=5)
+    p.add_mesh(point_cloud, color='tan', point_size=5)
     p.enable_eye_dome_lighting()
     p.show()
 
@@ -86,7 +125,7 @@ Reference :func:`vtki.Renderer.enable_eye_dome_lighting`.
 
 
 
-.. image:: /examples/02-plot/images/sphx_glr_plot-edl_002.png
+.. image:: /examples/02-plot/images/sphx_glr_plot-edl_003.png
     :class: sphx-glr-single-img
 
 
@@ -106,7 +145,7 @@ The eye dome lighting mode can also handle plotting scalar arrays:
 
 
 
-.. image:: /examples/02-plot/images/sphx_glr_plot-edl_003.png
+.. image:: /examples/02-plot/images/sphx_glr_plot-edl_004.png
     :class: sphx-glr-single-img
 
 
@@ -115,7 +154,7 @@ The eye dome lighting mode can also handle plotting scalar arrays:
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  29.204 seconds)
+   **Total running time of the script:** ( 0 minutes  47.793 seconds)
 
 
 .. _sphx_glr_download_examples_02-plot_plot-edl.py:
