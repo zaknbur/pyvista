@@ -155,6 +155,7 @@
 ./_images/structured_cube.png
 ./_images/threshold-tool.gif
 ./_images/vectorfield.png
+./_sources/authors.rst.txt
 ./_sources/dev/contributing.rst.txt
 ./_sources/dev/guidelines.rst.txt
 ./_sources/dev/testing.rst.txt
@@ -262,6 +263,7 @@
 ./_static/style.css
 ./_static/underscore-1.3.1.js
 ./_static/underscore.js
+./authors.html
 ./dev/contributing.html
 ./dev/guidelines.html
 ./dev/testing.html

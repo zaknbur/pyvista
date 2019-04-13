@@ -42,7 +42,7 @@
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Basic API Usage" href="simple.html" />
-    <link rel="prev" title="Why vtki?" href="../why.html" /> 
+    <link rel="prev" title="Authors" href="../authors.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -93,6 +93,7 @@
               <ul>
 <li class="toctree-l1"><a class="reference internal" href="../index.html">vtki Documentation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../why.html">Why <code class="docutils literal notranslate"><span class="pre">vtki</span></code>?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../authors.html">Authors</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Getting Started</span></p>
 <ul class="current">
@@ -101,10 +102,7 @@
 <li class="toctree-l2"><a class="reference internal" href="#anaconda">Anaconda</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#optional-dependencies">Optional Dependencies</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#source-developers">Source / Developers</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#test-installation">Test Installation</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#development-testing">Development Testing</a></li>
-</ul>
-</li>
+<li class="toctree-l2"><a class="reference internal" href="#test-installation">Test Installation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#running-on-ci-services">Running on CI Services</a></li>
 </ul>
 </li>
@@ -282,16 +280,9 @@ which should be installed by pip automatically.</p>
 <span class="k">print</span><span class="p">(</span><span class="nb">dir</span><span class="p">(</span><span class="n">examples</span><span class="p">))</span>
 </pre></div>
 </div>
-<div class="section" id="development-testing">
-<h3>Development Testing<a class="headerlink" href="#development-testing" title="Permalink to this headline">¶</a></h3>
-<p>To run the full suite of tests when cloned into the repository, execute:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="o">-</span><span class="n">m</span> <span class="n">pytest</span> <span class="o">-</span><span class="n">v</span> <span class="o">--</span><span class="n">cov</span> <span class="n">vtki</span>
-</pre></div>
-</div>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p>The requirements defined under <code class="docutils literal notranslate"><span class="pre">requirements_test.txt</span></code> are required for testing.</p>
-</div>
+<p>Developers, please see <a class="reference internal" href="../dev/testing.html#testing-ref"><span class="std std-ref">Test Framework</span></a> for details on development testing</p>
 </div>
 </div>
 <div class="section" id="running-on-ci-services">
@@ -320,6 +311,7 @@ the following in your <code class="docutils literal notranslate"><span class="pr
 <code class="docutils literal notranslate"><span class="pre">.travis.yml</span></code> file:</p>
 <div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">before_script</span><span class="p">:</span> <span class="c1"># configure a headless display to test plot generation</span>
   <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">export DISPLAY=:99.0</span>
+  <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">export VTKI_OFF_SCREEN=True</span>
   <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">which Xvfb</span>
   <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">Xvfb :99 -screen 0 1024x768x24 &gt; /dev/null 2&gt;&amp;1 &amp;</span>
   <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">sleep 3</span> <span class="c1"># give xvfb some time to start</span>
@@ -329,6 +321,7 @@ the following in your <code class="docutils literal notranslate"><span class="pr
 set up script that will run everytime your Docker container is launched:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/bin/bash</span>
 <span class="nb">export</span> <span class="nv">DISPLAY</span><span class="o">=</span>:99.0
+<span class="nb">export</span> <span class="nv">VTKI_OFF_SCREEN</span><span class="o">=</span>True
 which Xvfb
 Xvfb :99 -screen <span class="m">0</span> 1024x768x24 &gt; /dev/null <span class="m">2</span>&gt;<span class="p">&amp;</span><span class="m">1</span> <span class="p">&amp;</span>
 sleep <span class="m">3</span>
@@ -362,7 +355,7 @@ at <a class="reference external" href="https://github.com/OpenGeoVis/PVGeo-Examp
         <a href="simple.html" class="btn btn-neutral float-right" title="Basic API Usage" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="../why.html" class="btn btn-neutral float-left" title="Why vtki?" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="../authors.html" class="btn btn-neutral float-left" title="Authors" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
