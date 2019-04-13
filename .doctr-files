@@ -5,12 +5,14 @@
 ./_downloads/14c0c0d24179269d8186204665bc4d9b/plot-multi-window.py
 ./_downloads/1cd574077a10ab46e5a568689536af51/poly-ray-trace.ipynb
 ./_downloads/2289b249c09a4286ca15abf6594cc053/using-filters.ipynb
+./_downloads/26e18d8aaaffa16da755230b44034168/extract-edges.py
 ./_downloads/374227c77cf80fb5628a26fd08042f08/create-tri-surface.py
 ./_downloads/39ab274cc3cd300bc162850325df7c07/create-tri-surface.ipynb
 ./_downloads/39f7c502a66fd186e6cd19f177e51a02/create-poly.py
 ./_downloads/4005562e9b7843812cea9f9471a75f7a/plot-movie.ipynb
 ./_downloads/437dc62e728909a91ee67f4c26b0c6c2/compute-normals.py
 ./_downloads/486d712873eb63457b0ca8de8c00251e/read-file.ipynb
+./_downloads/4b3293e33ef75d3aa0177cc7cf50ba94/extract-edges.ipynb
 ./_downloads/4eb4430fbc8f4ba2f3907139cd9b812c/plot-cmap.py
 ./_downloads/5386e72fd65b6c83346353c2d1757aaa/plot-clear.py
 ./_downloads/5cabf0d0c1111972d87561c959fe9ba0/plot-gif.ipynb
@@ -93,6 +95,9 @@
 ./_images/sphx_glr_create-uniform-grid_thumb.png
 ./_images/sphx_glr_create-unstructured-surface_001.png
 ./_images/sphx_glr_create-unstructured-surface_thumb.png
+./_images/sphx_glr_extract-edges_001.png
+./_images/sphx_glr_extract-edges_002.png
+./_images/sphx_glr_extract-edges_thumb.png
 ./_images/sphx_glr_plot-clear_001.png
 ./_images/sphx_glr_plot-clear_002.png
 ./_images/sphx_glr_plot-clear_003.png
@@ -170,6 +175,7 @@
 ./_sources/examples/00-load/sg_execution_times.rst.txt
 ./_sources/examples/01-filter/compute-normals.rst.txt
 ./_sources/examples/01-filter/compute-volume.rst.txt
+./_sources/examples/01-filter/extract-edges.rst.txt
 ./_sources/examples/01-filter/poly-ray-trace.rst.txt
 ./_sources/examples/01-filter/sg_execution_times.rst.txt
 ./_sources/examples/01-filter/using-filters.rst.txt
@@ -278,6 +284,7 @@
 ./examples/00-load/sg_execution_times.html
 ./examples/01-filter/compute-normals.html
 ./examples/01-filter/compute-volume.html
+./examples/01-filter/extract-edges.html
 ./examples/01-filter/poly-ray-trace.html
 ./examples/01-filter/sg_execution_times.html
 ./examples/01-filter/using-filters.html

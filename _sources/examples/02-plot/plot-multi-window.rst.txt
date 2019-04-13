@@ -48,7 +48,7 @@ the subplot you wish to be the active subplot.
     plotter.add_text('Render Window 2', font_size=30)
     sphere = vtki.Sphere()
     plotter.add_mesh(sphere, scalars=sphere.points[:, 2])
-    plotter.add_scalar_bar('Z', vertical=True)
+    plotter.add_scalar_bar('Z')
     # plotter.add_axes()
     plotter.add_axes(interactive=True)
 
@@ -100,7 +100,7 @@ the subplot you wish to be the active subplot.
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  3.874 seconds)
+   **Total running time of the script:** ( 0 minutes  4.002 seconds)
 
 
 .. _sphx_glr_download_examples_02-plot_plot-multi-window.py:

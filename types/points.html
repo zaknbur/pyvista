@@ -331,7 +331,7 @@ object.  It inherits all methods from the original vtk object,
 <td><p>Point normals</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="#vtki.PolyData.volume" title="vtki.PolyData.volume"><code class="xref py py-obj docutils literal notranslate"><span class="pre">volume</span></code></a></p></td>
-<td><p>Mesh volume</p></td>
+<td><p>Mesh volume - will throw a VTK error/warning if not a closed surface</p></td>
 </tr>
 </tbody>
 </table>
@@ -1139,10 +1139,10 @@ set to linearly vary with a scalar value.</p>
 <dl class="attribute">
 <dt id="vtki.PolyData.volume">
 <code class="descname">volume</code><a class="headerlink" href="#vtki.PolyData.volume" title="Permalink to this definition">¶</a></dt>
-<dd><p>Mesh volume</p>
+<dd><p>Mesh volume - will throw a VTK error/warning if not a closed surface</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p><strong>area</strong> – Total area of the mesh.</p>
+<dd class="field-odd"><p><strong>volume</strong> – Total volume of the mesh.</p>
 </dd>
 <dt class="field-even">Return type</dt>
 <dd class="field-even"><p>float</p>

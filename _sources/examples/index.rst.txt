@@ -245,6 +245,26 @@ Filtering
 
 .. raw:: html
 
+    <div class="sphx-glr-thumbcontainer" tooltip="Extracts edges from a surface.">
+
+.. only:: html
+
+    .. figure:: /examples/01-filter/images/thumb/sphx_glr_extract-edges_thumb.png
+
+        :ref:`sphx_glr_examples_01-filter_extract-edges.py`
+
+.. raw:: html
+
+    </div>
+
+
+.. toctree::
+   :hidden:
+
+   /examples/01-filter/extract-edges
+
+.. raw:: html
+
     <div class="sphx-glr-thumbcontainer" tooltip="Single line segment ray tracing for PolyData objects.">
 
 .. only:: html
