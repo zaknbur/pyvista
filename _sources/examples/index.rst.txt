@@ -285,6 +285,26 @@ Filtering
 
 .. raw:: html
 
+    <div class="sphx-glr-thumbcontainer" tooltip="Extract thin planar slices from a volume">
+
+.. only:: html
+
+    .. figure:: /examples/01-filter/images/thumb/sphx_glr_slicing_thumb.png
+
+        :ref:`sphx_glr_examples_01-filter_slicing.py`
+
+.. raw:: html
+
+    </div>
+
+
+.. toctree::
+   :hidden:
+
+   /examples/01-filter/slicing
+
+.. raw:: html
+
     <div class="sphx-glr-thumbcontainer" tooltip="Using common filters like thresholding and clipping">
 
 .. only:: html
