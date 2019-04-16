@@ -862,6 +862,7 @@ class BasePlotter(object):
                                      reset_camera=reset_camera,
                                      name=name, loc=loc, culling=backface_culling)
 
+
         # Try to plot something if no preference given
         if scalars is None and color is None and texture is None:
             # Prefer texture first
@@ -876,6 +877,12 @@ class BasePlotter(object):
                 else:
                     if stitle is None:
                         stitle = mesh.active_scalar_info[1]
+
+        # If user specified array name as opacity
+        if isinstance(opacity, np.ndarray):
+            arr = mesh.get_scalar(opacity)
+            if arr is not None:
+                opacity = arr
 
         if texture == True or isinstance(texture, (str, int)):
             texture = mesh._activate_texture(texture)
@@ -933,21 +940,24 @@ class BasePlotter(object):
             if scalars.dtype == np.bool:
                 scalars = scalars.astype(np.float)
 
-            # Scalar interpolation approach
-            if scalars.shape[0] == mesh.n_points:
-                self.mesh._add_point_scalar(scalars, title, append_scalars)
-                self.mapper.SetScalarModeToUsePointData()
-                self.mapper.GetLookupTable().SetNumberOfTableValues(n_colors)
-                if interpolate_before_map:
-                    self.mapper.InterpolateScalarsBeforeMappingOn()
-            elif scalars.shape[0] == mesh.n_cells:
-                self.mesh._add_cell_scalar(scalars, title, append_scalars)
-                self.mapper.SetScalarModeToUseCellData()
-                self.mapper.GetLookupTable().SetNumberOfTableValues(n_colors)
-                if interpolate_before_map:
-                    self.mapper.InterpolateScalarsBeforeMappingOn()
-            else:
-                _raise_not_matching(scalars, mesh)
+            def map_scalars(scalars):
+                # Scalar interpolation approach
+                if scalars.shape[0] == mesh.n_points:
+                    self.mesh._add_point_scalar(scalars, title, append_scalars)
+                    self.mapper.SetScalarModeToUsePointData()
+                    self.mapper.GetLookupTable().SetNumberOfTableValues(n_colors)
+                    if interpolate_before_map:
+                        self.mapper.InterpolateScalarsBeforeMappingOn()
+                elif scalars.shape[0] == mesh.n_cells:
+                    self.mesh._add_cell_scalar(scalars, title, append_scalars)
+                    self.mapper.SetScalarModeToUseCellData()
+                    self.mapper.GetLookupTable().SetNumberOfTableValues(n_colors)
+                    if interpolate_before_map:
+                        self.mapper.InterpolateScalarsBeforeMappingOn()
+                else:
+                    _raise_not_matching(scalars, mesh)
+
+            map_scalars(scalars)
 
             # Set scalar range
             if rng is None:
@@ -978,6 +988,7 @@ class BasePlotter(object):
                     ctable = np.ascontiguousarray(ctable[::-1])
                 table.SetTable(VN.numpy_to_vtk(ctable))
 
+
             else:  # no cmap specified
                 if flip_scalars:
                     table.SetHueRange(0.0, 0.66667)
@@ -986,6 +997,21 @@ class BasePlotter(object):
 
         else:
             self.mapper.SetScalarModeToUseFieldData()
+
+        if isinstance(opacity, np.ndarray):
+            norm = lambda x: (x - np.nanmin(x)) / (np.nanmax(x) - np.nanmin(x))
+            # change colour based on position on the x axis
+            hue = norm(scalars)
+            colors = cmap(hue)[:, :3]
+            # change alpha based on position on the z axis
+            if flip_scalars:
+                alpha = 1 - norm(opacities)
+            else:
+                alpha = norm(opacities)
+            # combine hue and alpha into a Nx4 matrix
+            rgba_vals = np.concatenate((colors, alpha[:, None]), axis=1)
+            rgba_vals = (rgba_vals * 255).astype(np.uint8)
+            map_scalars(scalars)
 
         # select view style
         if not style:
