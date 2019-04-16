@@ -37,6 +37,7 @@
 ./_downloads/aff9b0f31547f12d46da169f6b1a5c0f/plot-movie.py
 ./_downloads/b237c840ab9b84bff915a327d2a6427a/read-image.ipynb
 ./_downloads/b8892364a4f8c2465d3fc39b00acb139/plot-scalar-bars.ipynb
+./_downloads/c2a9f47e21ee1d49f87068552a01177e/plot-screenshot.py
 ./_downloads/cfde9598b621dc37bb79ae0462a7d062/create-unstructured-surface.py
 ./_downloads/d46ac6297f4bb4e454011dd70b83fe9f/create-poly.ipynb
 ./_downloads/d79a533af7335164ff57a85055101e37/plot-edl.ipynb
@@ -45,6 +46,7 @@
 ./_downloads/e2ae8dac5171eea6d192d8d09375ad03/volume-smoothing.ipynb
 ./_downloads/e44412434f375359ce98266b12af47bf/poly-ray-trace.py
 ./_downloads/e77616ba1ceeaa441207badad233b23e/compute-volume.ipynb
+./_downloads/e819ba3e898876fb61abe102e05db6a1/plot-screenshot.ipynb
 ./_downloads/eabfdcb8f80911a748c1d70d021f691b/read-file.py
 ./_downloads/ed10fa1d558440eb30972d977e6040aa/compute-normals.ipynb
 ./_downloads/efbdebcdaf254a807f219a2d8018cfc4/plot-texture.ipynb
@@ -136,6 +138,9 @@
 ./_images/sphx_glr_plot-scalar-bars_002.png
 ./_images/sphx_glr_plot-scalar-bars_003.png
 ./_images/sphx_glr_plot-scalar-bars_thumb.png
+./_images/sphx_glr_plot-screenshot_001.png
+./_images/sphx_glr_plot-screenshot_002.png
+./_images/sphx_glr_plot-screenshot_thumb.png
 ./_images/sphx_glr_plot-texture_001.png
 ./_images/sphx_glr_plot-texture_002.png
 ./_images/sphx_glr_plot-texture_003.png
@@ -204,6 +209,7 @@
 ./_sources/examples/02-plot/plot-multi-window.rst.txt
 ./_sources/examples/02-plot/plot-opacity.rst.txt
 ./_sources/examples/02-plot/plot-scalar-bars.rst.txt
+./_sources/examples/02-plot/plot-screenshot.rst.txt
 ./_sources/examples/02-plot/plot-texture.rst.txt
 ./_sources/examples/02-plot/sg_execution_times.rst.txt
 ./_sources/examples/index.rst.txt
@@ -315,6 +321,7 @@
 ./examples/02-plot/plot-multi-window.html
 ./examples/02-plot/plot-opacity.html
 ./examples/02-plot/plot-scalar-bars.html
+./examples/02-plot/plot-screenshot.html
 ./examples/02-plot/plot-texture.html
 ./examples/02-plot/sg_execution_times.html
 ./examples/index.html
