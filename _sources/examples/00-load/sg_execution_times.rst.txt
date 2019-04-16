@@ -5,13 +5,13 @@
 
 Computation times
 =================
-**00:29.320** total execution time for **examples_00-load** files:
+**00:31.619** total execution time for **examples_00-load** files:
 
-- **00:12.944**: :ref:`sphx_glr_examples_00-load_read-image.py` (``read-image.py``)
-- **00:04.554**: :ref:`sphx_glr_examples_00-load_create-geometric-objects.py` (``create-geometric-objects.py``)
-- **00:03.680**: :ref:`sphx_glr_examples_00-load_create-structured-surface.py` (``create-structured-surface.py``)
-- **00:03.277**: :ref:`sphx_glr_examples_00-load_create-uniform-grid.py` (``create-uniform-grid.py``)
-- **00:02.358**: :ref:`sphx_glr_examples_00-load_read-file.py` (``read-file.py``)
-- **00:01.254**: :ref:`sphx_glr_examples_00-load_create-tri-surface.py` (``create-tri-surface.py``)
-- **00:00.694**: :ref:`sphx_glr_examples_00-load_create-unstructured-surface.py` (``create-unstructured-surface.py``)
-- **00:00.558**: :ref:`sphx_glr_examples_00-load_create-poly.py` (``create-poly.py``)
+- **00:14.350**: :ref:`sphx_glr_examples_00-load_read-image.py` (``read-image.py``)
+- **00:04.948**: :ref:`sphx_glr_examples_00-load_create-geometric-objects.py` (``create-geometric-objects.py``)
+- **00:03.872**: :ref:`sphx_glr_examples_00-load_create-structured-surface.py` (``create-structured-surface.py``)
+- **00:03.439**: :ref:`sphx_glr_examples_00-load_create-uniform-grid.py` (``create-uniform-grid.py``)
+- **00:02.399**: :ref:`sphx_glr_examples_00-load_read-file.py` (``read-file.py``)
+- **00:01.269**: :ref:`sphx_glr_examples_00-load_create-tri-surface.py` (``create-tri-surface.py``)
+- **00:00.749**: :ref:`sphx_glr_examples_00-load_create-unstructured-surface.py` (``create-unstructured-surface.py``)
+- **00:00.593**: :ref:`sphx_glr_examples_00-load_create-poly.py` (``create-poly.py``)

@@ -222,7 +222,7 @@
 <span class="kn">import</span> <span class="nn">vtki</span>
 <span class="kn">from</span> <span class="nn">vtki</span> <span class="k">import</span> <span class="n">examples</span>
 
-<span class="n">sphere</span> <span class="o">=</span> <span class="n">vtki</span><span class="o">.</span><span class="n">Sphere</span><span class="p">()</span>
+<span class="n">sphere</span> <span class="o">=</span> <span class="n">examples</span><span class="o">.</span><span class="n">load_globe</span><span class="p">()</span>
 </pre></div>
 </div>
 <p>Get teh geodesic path as a new <a class="reference internal" href="../../types/points.html#vtki.PolyData" title="vtki.PolyData"><code class="xref py py-class docutils literal notranslate"><span class="pre">vtki.PolyData</span></code></a> object:</p>
@@ -231,8 +231,8 @@
 </div>
 <p>Render the path along the sphere</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">p</span> <span class="o">=</span> <span class="n">vtki</span><span class="o">.</span><span class="n">Plotter</span><span class="p">()</span>
-<span class="n">p</span><span class="o">.</span><span class="n">add_mesh</span><span class="p">(</span><span class="n">geodesic</span><span class="p">,</span> <span class="n">line_width</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;red&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Sphere&#39;</span><span class="p">)</span>
-<span class="n">p</span><span class="o">.</span><span class="n">add_mesh</span><span class="p">(</span><span class="n">sphere</span><span class="p">,</span> <span class="n">show_edges</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Geodesic Path&#39;</span><span class="p">)</span>
+<span class="n">p</span><span class="o">.</span><span class="n">add_mesh</span><span class="p">(</span><span class="n">geodesic</span><span class="p">,</span> <span class="n">line_width</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;red&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Geodesic Path&#39;</span><span class="p">)</span>
+<span class="n">p</span><span class="o">.</span><span class="n">add_mesh</span><span class="p">(</span><span class="n">sphere</span><span class="p">,</span> <span class="n">show_edges</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="p">)</span>
 <span class="n">p</span><span class="o">.</span><span class="n">camera_position</span> <span class="o">=</span> <span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">]</span>
 <span class="n">p</span><span class="o">.</span><span class="n">add_legend</span><span class="p">()</span>
 <span class="n">p</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
@@ -245,10 +245,10 @@
 </pre></div>
 </div>
 <p class="sphx-glr-script-out">Out:</p>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>1.1150846507262078
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>14245988630.628836
 </pre></div>
 </div>
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  1.112 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  1.373 seconds)</p>
 <div class="sphx-glr-footer class sphx-glr-footer-example docutils container" id="sphx-glr-download-examples-01-filter-geodesic-py">
 <div class="sphx-glr-download docutils container">
 <p><a class="reference download internal" download="" href="../../_downloads/52a5dd4a1b911e83ac90797848050c9d/geodesic.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">geodesic.py</span></code></a></p>
