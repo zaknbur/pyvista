@@ -305,6 +305,26 @@ Filtering
 
 .. raw:: html
 
+    <div class="sphx-glr-thumbcontainer" tooltip="Resample one mesh&#x27;s point/cell arrays onto another meshes nodes.">
+
+.. only:: html
+
+    .. figure:: /examples/01-filter/images/thumb/sphx_glr_resample_thumb.png
+
+        :ref:`sphx_glr_examples_01-filter_resample.py`
+
+.. raw:: html
+
+    </div>
+
+
+.. toctree::
+   :hidden:
+
+   /examples/01-filter/resample
+
+.. raw:: html
+
     <div class="sphx-glr-thumbcontainer" tooltip="Extract thin planar slices from a volume">
 
 .. only:: html
