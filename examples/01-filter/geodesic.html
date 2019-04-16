@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Extract Edges &mdash; vtki 0.18.2 documentation</title>
+  <title>Geodesic Paths &mdash; vtki 0.18.2 documentation</title>
   
 
   
@@ -41,8 +41,8 @@
   <link rel="stylesheet" href="../../_static/copybutton.css" type="text/css" />
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Geodesic Paths" href="geodesic.html" />
-    <link rel="prev" title="Volumetric Analysis" href="compute-volume.html" /> 
+    <link rel="next" title="Ray Tracing" href="poly-ray-trace.html" />
+    <link rel="prev" title="Extract Edges" href="extract-edges.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -116,8 +116,8 @@
 <li class="toctree-l2 current"><a class="reference internal" href="../index.html#filtering">Filtering</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="compute-normals.html">Computing Surface Normals</a></li>
 <li class="toctree-l3"><a class="reference internal" href="compute-volume.html">Volumetric Analysis</a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="#">Extract Edges</a></li>
-<li class="toctree-l3"><a class="reference internal" href="geodesic.html">Geodesic Paths</a></li>
+<li class="toctree-l3"><a class="reference internal" href="extract-edges.html">Extract Edges</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Geodesic Paths</a></li>
 <li class="toctree-l3"><a class="reference internal" href="poly-ray-trace.html">Ray Tracing</a></li>
 <li class="toctree-l3"><a class="reference internal" href="slicing.html">Slicing</a></li>
 <li class="toctree-l3"><a class="reference internal" href="using-filters.html">Using Common Filters</a></li>
@@ -190,14 +190,14 @@
         
           <li><a href="../index.html">Quick Examples</a> &raquo;</li>
         
-      <li>Extract Edges</li>
+      <li>Geodesic Paths</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
             
             
-              <a href="https://github.com/vtkiorg/vtki/blob/master/docs/examples/01-filter/extract-edges.rst" class="fa fa-github"> Edit on GitHub</a>
+              <a href="https://github.com/vtkiorg/vtki/blob/master/docs/examples/01-filter/geodesic.rst" class="fa fa-github"> Edit on GitHub</a>
             
           
         
@@ -213,67 +213,48 @@
             
   <div class="sphx-glr-download-link-note admonition note">
 <p class="admonition-title">Note</p>
-<p>Click <a class="reference internal" href="#sphx-glr-download-examples-01-filter-extract-edges-py"><span class="std std-ref">here</span></a> to download the full example code</p>
+<p>Click <a class="reference internal" href="#sphx-glr-download-examples-01-filter-geodesic-py"><span class="std std-ref">here</span></a> to download the full example code</p>
 </div>
-<div class="sphx-glr-example-title section" id="extract-edges">
-<span id="sphx-glr-examples-01-filter-extract-edges-py"></span><h1>Extract Edges<a class="headerlink" href="#extract-edges" title="Permalink to this headline">¶</a></h1>
-<p>Extracts edges from a surface.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># sphinx_gallery_thumbnail_number = 2</span>
+<div class="sphx-glr-example-title section" id="geodesic-paths">
+<span id="sphx-glr-examples-01-filter-geodesic-py"></span><h1>Geodesic Paths<a class="headerlink" href="#geodesic-paths" title="Permalink to this headline">¶</a></h1>
+<p>Calculates the geodesic path betweeen two vertices using Dijkstra’s algorithm</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># sphinx_gallery_thumbnail_number = 1</span>
 <span class="kn">import</span> <span class="nn">vtki</span>
 <span class="kn">from</span> <span class="nn">vtki</span> <span class="k">import</span> <span class="n">examples</span>
+
+<span class="n">sphere</span> <span class="o">=</span> <span class="n">vtki</span><span class="o">.</span><span class="n">Sphere</span><span class="p">()</span>
 </pre></div>
 </div>
-<p>From vtk documentation, the edges are one of the following:</p>
-<ol class="arabic simple">
-<li><p>boundary (used by one polygon) or a line cell</p></li>
-<li><p>non-manifold (used by three or more polygons)</p></li>
-<li><p>feature edges (edges used by two triangles and whose dihedral angle &gt; feature_angle)</p></li>
-<li><p>manifold edges (edges used by exactly two polygons).</p></li>
-</ol>
-<p>This filter will extract those edges given a feature angle and return a datset
-with lines that represent the edges of the original mesh.
-To demonstrate, we will first extract the edges around Queen Nefertiti’s eyes:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Load Queen Nefertiti mesh</span>
-<span class="n">mesh</span> <span class="o">=</span> <span class="n">examples</span><span class="o">.</span><span class="n">download_nefertiti</span><span class="p">()</span>
-
-<span class="c1"># Extract the edges above a 12 degree feature angle</span>
-<span class="n">edges</span> <span class="o">=</span> <span class="n">mesh</span><span class="o">.</span><span class="n">extract_edges</span><span class="p">(</span><span class="mi">12</span><span class="p">)</span>
-
-<span class="c1"># Render the edge lines ontop of the original mesh</span>
-<span class="n">p</span> <span class="o">=</span> <span class="n">vtki</span><span class="o">.</span><span class="n">Plotter</span><span class="p">()</span>
-<span class="n">p</span><span class="o">.</span><span class="n">add_mesh</span><span class="p">(</span><span class="n">mesh</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-<span class="n">p</span><span class="o">.</span><span class="n">add_mesh</span><span class="p">(</span><span class="n">edges</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;red&#39;</span><span class="p">,</span> <span class="n">line_width</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>
-<span class="c1"># Define a camera position that will zoom to her eye</span>
-<span class="n">p</span><span class="o">.</span><span class="n">camera_position</span> <span class="o">=</span> <span class="p">[(</span><span class="mf">96.</span><span class="p">,</span> <span class="o">-</span><span class="mf">197.</span><span class="p">,</span> <span class="mf">45.</span><span class="p">),</span>
-                     <span class="p">(</span><span class="mf">7.</span><span class="p">,</span> <span class="o">-</span><span class="mf">109.</span><span class="p">,</span> <span class="mf">22.</span><span class="p">),</span>
-                     <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">)]</span>
+<p>Get teh geodesic path as a new <a class="reference internal" href="../../types/points.html#vtki.PolyData" title="vtki.PolyData"><code class="xref py py-class docutils literal notranslate"><span class="pre">vtki.PolyData</span></code></a> object:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">geodesic</span> <span class="o">=</span> <span class="n">sphere</span><span class="o">.</span><span class="n">geodesic</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">sphere</span><span class="o">.</span><span class="n">n_points</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Render the path along the sphere</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">p</span> <span class="o">=</span> <span class="n">vtki</span><span class="o">.</span><span class="n">Plotter</span><span class="p">()</span>
+<span class="n">p</span><span class="o">.</span><span class="n">add_mesh</span><span class="p">(</span><span class="n">geodesic</span><span class="p">,</span> <span class="n">line_width</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;red&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Sphere&#39;</span><span class="p">)</span>
+<span class="n">p</span><span class="o">.</span><span class="n">add_mesh</span><span class="p">(</span><span class="n">sphere</span><span class="p">,</span> <span class="n">show_edges</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Geodesic Path&#39;</span><span class="p">)</span>
+<span class="n">p</span><span class="o">.</span><span class="n">camera_position</span> <span class="o">=</span> <span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">]</span>
+<span class="n">p</span><span class="o">.</span><span class="n">add_legend</span><span class="p">()</span>
 <span class="n">p</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
-<img alt="../../_images/sphx_glr_extract-edges_001.png" class="sphx-glr-single-img" src="../../_images/sphx_glr_extract-edges_001.png" />
-<p>We can do this anaylsis for any <a class="reference internal" href="../../types/points.html#vtki.PolyData" title="vtki.PolyData"><code class="xref py py-class docutils literal notranslate"><span class="pre">vtki.PolyData</span></code></a> object. Let’s try the
-cow mesh example:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mesh</span> <span class="o">=</span> <span class="n">examples</span><span class="o">.</span><span class="n">download_cow</span><span class="p">()</span>
-
-<span class="n">edges</span> <span class="o">=</span> <span class="n">mesh</span><span class="o">.</span><span class="n">extract_edges</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span>
-
-<span class="n">p</span> <span class="o">=</span> <span class="n">vtki</span><span class="o">.</span><span class="n">Plotter</span><span class="p">()</span>
-<span class="n">p</span><span class="o">.</span><span class="n">add_mesh</span><span class="p">(</span><span class="n">mesh</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-<span class="n">p</span><span class="o">.</span><span class="n">add_mesh</span><span class="p">(</span><span class="n">edges</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;red&#39;</span><span class="p">,</span> <span class="n">line_width</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>
-<span class="n">p</span><span class="o">.</span><span class="n">camera_position</span> <span class="o">=</span> <span class="p">[(</span><span class="mf">9.5</span><span class="p">,</span> <span class="mf">3.</span><span class="p">,</span> <span class="mf">5.5</span><span class="p">),</span>
-                     <span class="p">(</span><span class="mf">2.5</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span>
-                     <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">)]</span>
-<span class="n">p</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+<img alt="../../_images/sphx_glr_geodesic_001.png" class="sphx-glr-single-img" src="../../_images/sphx_glr_geodesic_001.png" />
+<p>How long is that path?</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">distance</span> <span class="o">=</span> <span class="n">sphere</span><span class="o">.</span><span class="n">geodesic_distance</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">sphere</span><span class="o">.</span><span class="n">n_points</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">distance</span><span class="p">)</span>
 </pre></div>
 </div>
-<img alt="../../_images/sphx_glr_extract-edges_002.png" class="sphx-glr-single-img" src="../../_images/sphx_glr_extract-edges_002.png" />
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  12.776 seconds)</p>
-<div class="sphx-glr-footer class sphx-glr-footer-example docutils container" id="sphx-glr-download-examples-01-filter-extract-edges-py">
+<p class="sphx-glr-script-out">Out:</p>
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>1.1150846507262078
+</pre></div>
+</div>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  1.112 seconds)</p>
+<div class="sphx-glr-footer class sphx-glr-footer-example docutils container" id="sphx-glr-download-examples-01-filter-geodesic-py">
 <div class="sphx-glr-download docutils container">
-<p><a class="reference download internal" download="" href="../../_downloads/26e18d8aaaffa16da755230b44034168/extract-edges.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">extract-edges.py</span></code></a></p>
+<p><a class="reference download internal" download="" href="../../_downloads/52a5dd4a1b911e83ac90797848050c9d/geodesic.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">geodesic.py</span></code></a></p>
 </div>
 <div class="sphx-glr-download docutils container">
-<p><a class="reference download internal" download="" href="../../_downloads/4b3293e33ef75d3aa0177cc7cf50ba94/extract-edges.ipynb"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Jupyter</span> <span class="pre">notebook:</span> <span class="pre">extract-edges.ipynb</span></code></a></p>
+<p><a class="reference download internal" download="" href="../../_downloads/f7dbe3d405833f47a7124eed08455a3d/geodesic.ipynb"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Jupyter</span> <span class="pre">notebook:</span> <span class="pre">geodesic.ipynb</span></code></a></p>
 </div>
 </div>
 <p class="sphx-glr-signature"><a class="reference external" href="https://sphinx-gallery.readthedocs.io">Gallery generated by Sphinx-Gallery</a></p>
@@ -287,10 +268,10 @@ cow mesh example:</p>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="geodesic.html" class="btn btn-neutral float-right" title="Geodesic Paths" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="poly-ray-trace.html" class="btn btn-neutral float-right" title="Ray Tracing" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="compute-volume.html" class="btn btn-neutral float-left" title="Volumetric Analysis" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="extract-edges.html" class="btn btn-neutral float-left" title="Extract Edges" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

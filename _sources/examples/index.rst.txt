@@ -265,6 +265,26 @@ Filtering
 
 .. raw:: html
 
+    <div class="sphx-glr-thumbcontainer" tooltip="Calculates the geodesic path betweeen two vertices using Dijkstra&#x27;s algorithm">
+
+.. only:: html
+
+    .. figure:: /examples/01-filter/images/thumb/sphx_glr_geodesic_thumb.png
+
+        :ref:`sphx_glr_examples_01-filter_geodesic.py`
+
+.. raw:: html
+
+    </div>
+
+
+.. toctree::
+   :hidden:
+
+   /examples/01-filter/geodesic
+
+.. raw:: html
+
     <div class="sphx-glr-thumbcontainer" tooltip="Single line segment ray tracing for PolyData objects.">
 
 .. only:: html

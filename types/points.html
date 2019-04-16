@@ -393,6 +393,12 @@ object.  It inherits all methods from the original vtk object,
 <tr class="row-odd"><td><p><a class="reference internal" href="#vtki.PolyData.flip_normals" title="vtki.PolyData.flip_normals"><code class="xref py py-obj docutils literal notranslate"><span class="pre">flip_normals</span></code></a>()</p></td>
 <td><p>Flip normals of a triangular mesh by reversing the point ordering.</p></td>
 </tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#vtki.PolyData.geodesic" title="vtki.PolyData.geodesic"><code class="xref py py-obj docutils literal notranslate"><span class="pre">geodesic</span></code></a>(start_vertex, end_vertex)</p></td>
+<td><p>Calculates the geodesic path betweeen two vertices using Dijkstra’s algorithm.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#vtki.PolyData.geodesic_distance" title="vtki.PolyData.geodesic_distance"><code class="xref py py-obj docutils literal notranslate"><span class="pre">geodesic_distance</span></code></a>(start_vertex, end_vertex)</p></td>
+<td><p>Calculates the geodesic distance betweeen two vertices using Dijkstra’s algorithm.</p></td>
+</tr>
 <tr class="row-even"><td><p><a class="reference internal" href="#vtki.PolyData.plot_boundaries" title="vtki.PolyData.plot_boundaries"><code class="xref py py-obj docutils literal notranslate"><span class="pre">plot_boundaries</span></code></a>(**kwargs)</p></td>
 <td><p>Plots boundaries of a mesh</p></td>
 </tr>
@@ -885,6 +891,49 @@ without first triangulating the hole.</p>
 <dt id="vtki.PolyData.flip_normals">
 <code class="descname">flip_normals</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#vtki.PolyData.flip_normals" title="Permalink to this definition">¶</a></dt>
 <dd><p>Flip normals of a triangular mesh by reversing the point ordering.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="vtki.PolyData.geodesic">
+<code class="descname">geodesic</code><span class="sig-paren">(</span><em>start_vertex</em>, <em>end_vertex</em><span class="sig-paren">)</span><a class="headerlink" href="#vtki.PolyData.geodesic" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calculates the geodesic path betweeen two vertices using Dijkstra’s
+algorithm.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>start_vertex</strong> (<em>int</em>) – Vertex index indicating the start point of the geodesic segment.</p></li>
+<li><p><strong>end_vertex</strong> (<em>int</em>) – Vertex index indicating the end point of the geodesic segment.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>output</strong> – PolyData object consisting of the line segment between the two given
+vertices.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="#vtki.PolyData" title="vtki.PolyData">vtki.PolyData</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="vtki.PolyData.geodesic_distance">
+<code class="descname">geodesic_distance</code><span class="sig-paren">(</span><em>start_vertex</em>, <em>end_vertex</em><span class="sig-paren">)</span><a class="headerlink" href="#vtki.PolyData.geodesic_distance" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calculates the geodesic distance betweeen two vertices using Dijkstra’s
+algorithm.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>start_vertex</strong> (<em>int</em>) – Vertex index indicating the start point of the geodesic segment.</p></li>
+<li><p><strong>end_vertex</strong> (<em>int</em>) – Vertex index indicating the end point of the geodesic segment.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>length</strong> – Length of the geodesic segment.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="attribute">

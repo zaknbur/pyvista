@@ -15,6 +15,7 @@
 ./_downloads/486d712873eb63457b0ca8de8c00251e/read-file.ipynb
 ./_downloads/4b3293e33ef75d3aa0177cc7cf50ba94/extract-edges.ipynb
 ./_downloads/4eb4430fbc8f4ba2f3907139cd9b812c/plot-cmap.py
+./_downloads/52a5dd4a1b911e83ac90797848050c9d/geodesic.py
 ./_downloads/5386e72fd65b6c83346353c2d1757aaa/plot-clear.py
 ./_downloads/5cabf0d0c1111972d87561c959fe9ba0/plot-gif.ipynb
 ./_downloads/5d5c24786114e7c8698161726bb2df17/plot-multi-window.ipynb
@@ -49,6 +50,7 @@
 ./_downloads/efbdebcdaf254a807f219a2d8018cfc4/plot-texture.ipynb
 ./_downloads/f24086cd14b09ec4ed083f8ced76e13a/plot-opacity.py
 ./_downloads/f34da779b6983967107bc28812651311/plot-opacity.ipynb
+./_downloads/f7dbe3d405833f47a7124eed08455a3d/geodesic.ipynb
 ./_downloads/fa8c60f0c6083ff0552584c43a7311e3/create-uniform-grid.ipynb
 ./_downloads/fdaa749a4fef622f3460dcf41c210e8f/plot-gif.py
 ./_images/AntsAndPlane.png
@@ -100,6 +102,8 @@
 ./_images/sphx_glr_extract-edges_001.png
 ./_images/sphx_glr_extract-edges_002.png
 ./_images/sphx_glr_extract-edges_thumb.png
+./_images/sphx_glr_geodesic_001.png
+./_images/sphx_glr_geodesic_thumb.png
 ./_images/sphx_glr_plot-clear_001.png
 ./_images/sphx_glr_plot-clear_002.png
 ./_images/sphx_glr_plot-clear_003.png
@@ -184,6 +188,7 @@
 ./_sources/examples/01-filter/compute-normals.rst.txt
 ./_sources/examples/01-filter/compute-volume.rst.txt
 ./_sources/examples/01-filter/extract-edges.rst.txt
+./_sources/examples/01-filter/geodesic.rst.txt
 ./_sources/examples/01-filter/poly-ray-trace.rst.txt
 ./_sources/examples/01-filter/sg_execution_times.rst.txt
 ./_sources/examples/01-filter/slicing.rst.txt
@@ -294,6 +299,7 @@
 ./examples/01-filter/compute-normals.html
 ./examples/01-filter/compute-volume.html
 ./examples/01-filter/extract-edges.html
+./examples/01-filter/geodesic.html
 ./examples/01-filter/poly-ray-trace.html
 ./examples/01-filter/sg_execution_times.html
 ./examples/01-filter/slicing.html
