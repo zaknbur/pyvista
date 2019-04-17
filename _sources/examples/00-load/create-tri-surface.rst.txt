@@ -12,7 +12,6 @@ Create Triangulated Surface
 
 Create a surface from a set of points through a Delaunay triangulation.
 
-
 .. code-block:: default
 
 

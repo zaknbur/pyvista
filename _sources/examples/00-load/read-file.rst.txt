@@ -11,8 +11,6 @@ Load and Plot from a File
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Read a dataset from a known file type.
-
-
 Loading a mesh is trivial.  The following code block uses a built-in example
 file and displays an airplane mesh.
 

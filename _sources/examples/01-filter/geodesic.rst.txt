@@ -12,7 +12,6 @@ Geodesic Paths
 
 Calculates the geodesic path betweeen two vertices using Dijkstra's algorithm
 
-
 .. code-block:: default
 
     # sphinx_gallery_thumbnail_number = 1

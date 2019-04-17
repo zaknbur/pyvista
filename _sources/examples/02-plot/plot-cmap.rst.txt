@@ -12,7 +12,6 @@ Custom Colormaps
 
 Use a custom built colormap when plotting scalar values.
 
-
 .. code-block:: default
 
 

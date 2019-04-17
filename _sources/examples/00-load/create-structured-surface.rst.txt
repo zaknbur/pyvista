@@ -14,7 +14,6 @@ Creating a Structured Surface
 
 Create a StructuredGrid surface from NumPy arrays
 
-
 .. code-block:: default
 
 

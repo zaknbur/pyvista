@@ -13,7 +13,6 @@ Ray Tracing
 Single line segment ray tracing for PolyData objects.
 
 
-
 .. image:: /examples/01-filter/images/sphx_glr_poly-ray-trace_001.png
     :class: sphx-glr-single-img
 
