@@ -12,7 +12,6 @@ Extract Edges
 
 Extracts edges from a surface.
 
-
 .. code-block:: default
 
 

@@ -10,7 +10,6 @@
 Saving Screenshots
 ~~~~~~~~~~~~~~~~~~
 
-
 .. code-block:: default
 
     # sphinx_gallery_thumbnail_number = 2

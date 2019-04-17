@@ -12,7 +12,6 @@ Volume Smoothing
 
 Smoothing rough edges of a volumetric surface
 
-
 .. code-block:: default
 
 

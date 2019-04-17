@@ -13,7 +13,6 @@ Create a GIF Movie
 Generate a moving gif from an active plotter
 
 
-
 .. image:: /examples/02-plot/images/sphx_glr_plot-gif_001.png
     :class: sphx-glr-single-img
 

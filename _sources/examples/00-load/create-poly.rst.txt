@@ -14,8 +14,6 @@ Create PolyData
 
 Creating a PolyData object from NumPy arrays
 
-
-
 .. code-block:: default
 
 

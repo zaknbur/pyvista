@@ -12,7 +12,6 @@ Slicing
 
 Extract thin planar slices from a volume
 
-
 .. code-block:: default
 
     # sphinx_gallery_thumbnail_number = 2

@@ -12,7 +12,6 @@ Using Common Filters
 
 Using common filters like thresholding and clipping
 
-
 .. code-block:: default
 
 
