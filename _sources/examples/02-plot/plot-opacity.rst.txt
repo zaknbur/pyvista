@@ -12,6 +12,7 @@ Plot with Opacity
 
 Plot a mesh's scalar array with an opacity trasfer funciton
 
+
 .. code-block:: default
 
 
@@ -104,7 +105,7 @@ mappings:
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  8.762 seconds)
+   **Total running time of the script:** ( 0 minutes  8.857 seconds)
 
 
 .. _sphx_glr_download_examples_02-plot_plot-opacity.py:

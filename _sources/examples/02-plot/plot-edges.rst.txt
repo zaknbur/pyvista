@@ -11,6 +11,7 @@ Show Edges
 ~~~~~~~~~~
 
 Show the edges of all geometries within a mesh
+
 Sometimes it can be useful to show all of the edges of a mesh when rendering
 to communicate aspects of the dataset like resolution.
 
@@ -46,7 +47,7 @@ the ``show_edges`` keyword argument to ``True`` when plotting a dataset.
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  15.166 seconds)
+   **Total running time of the script:** ( 0 minutes  15.300 seconds)
 
 
 .. _sphx_glr_download_examples_02-plot_plot-edges.py:
