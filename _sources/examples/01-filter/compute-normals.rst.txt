@@ -13,6 +13,7 @@ Computing Surface Normals
 
 Compute normals on a surface.
 
+
 .. code-block:: default
 
 
@@ -76,7 +77,7 @@ exaggerated topographic relief.
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  16.172 seconds)
+   **Total running time of the script:** ( 0 minutes  16.474 seconds)
 
 
 .. _sphx_glr_download_examples_01-filter_compute-normals.py:

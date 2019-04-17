@@ -12,6 +12,7 @@ Create a MP4 Movie
 
 Create an animated MP4 movie of a rendering scene
 
+
 .. code-block:: default
 
 
@@ -64,7 +65,7 @@ Create an animated MP4 movie of a rendering scene
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  18.867 seconds)
+   **Total running time of the script:** ( 0 minutes  19.283 seconds)
 
 
 .. _sphx_glr_download_examples_02-plot_plot-movie.py:
