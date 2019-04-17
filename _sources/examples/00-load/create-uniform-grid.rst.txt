@@ -12,8 +12,6 @@ Creating a Uniform Grid
 
 Create a simple uniform grid from a 3D NumPy array of values.
 
-
-
 .. code-block:: default
 
 
@@ -106,7 +104,7 @@ grid dimensions upon initialization.
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  3.401 seconds)
+   **Total running time of the script:** ( 0 minutes  3.217 seconds)
 
 
 .. _sphx_glr_download_examples_00-load_create-uniform-grid.py:

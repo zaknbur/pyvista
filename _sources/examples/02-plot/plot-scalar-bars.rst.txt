@@ -13,8 +13,6 @@ Customize Scalar Bars
 Walk through of all the different capabilities of scalar bars and
 how a user can customize scalar bars.
 
-
-
 .. code-block:: default
 
 
@@ -134,7 +132,7 @@ The text properties of the scalar bar can also be controlled:
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  10.017 seconds)
+   **Total running time of the script:** ( 0 minutes  9.994 seconds)
 
 
 .. _sphx_glr_download_examples_02-plot_plot-scalar-bars.py:

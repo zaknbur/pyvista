@@ -10,7 +10,6 @@
 Saving Screenshots
 ~~~~~~~~~~~~~~~~~~
 
-
 .. code-block:: default
 
     # sphinx_gallery_thumbnail_number = 2
@@ -72,7 +71,7 @@ The ``img`` array can be used to plot the screenshot in ``matplotlib``:
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  0.875 seconds)
+   **Total running time of the script:** ( 0 minutes  0.909 seconds)
 
 
 .. _sphx_glr_download_examples_02-plot_plot-screenshot.py:
