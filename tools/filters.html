@@ -279,7 +279,7 @@ all the the following filters available as callable methods directly from any
 <td><p>Transforms point data (i.e., data specified per node) into cell data (i.e., data specified within cells).</p></td>
 </tr>
 <tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">sample</span></code>(target[, tolerance, …])</p></td>
-<td><p>Resample scalar data between from a mesh onto this mesh using <code class="xref py py-class docutils literal notranslate"><span class="pre">vtk.vtkResampleWithDataSet</span></code>.</p></td>
+<td><p>Resample scalar data from a passed mesh onto this mesh using <code class="xref py py-class docutils literal notranslate"><span class="pre">vtk.vtkResampleWithDataSet</span></code>.</p></td>
 </tr>
 <tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">slice</span></code>([normal, origin, generate_triangles, …])</p></td>
 <td><p>Slice a dataset by a plane at the specified origin and normal vector orientation.</p></td>
@@ -564,8 +564,8 @@ Optionally, the input point data can be passed through to the output.</p>
 <dl class="method">
 <dt id="vtki.DataSetFilters.sample">
 <code class="descname">sample</code><span class="sig-paren">(</span><em>target</em>, <em>tolerance=None</em>, <em>pass_cell_arrays=True</em>, <em>pass_point_arrays=True</em><span class="sig-paren">)</span><a class="headerlink" href="#vtki.DataSetFilters.sample" title="Permalink to this definition">¶</a></dt>
-<dd><p>Resample scalar data between from a mesh onto this mesh
-using <code class="xref py py-class docutils literal notranslate"><span class="pre">vtk.vtkResampleWithDataSet</span></code>.</p>
+<dd><p>Resample scalar data from a passed mesh onto this mesh using
+<code class="xref py py-class docutils literal notranslate"><span class="pre">vtk.vtkResampleWithDataSet</span></code>.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
