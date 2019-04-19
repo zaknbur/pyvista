@@ -190,6 +190,26 @@ Loading and Creating Meshes
    :hidden:
 
    /examples/00-load/read-image
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbcontainer" tooltip="The VTK library supports parallel file foramts. Reading meshes broken up into several files is ...">
+
+.. only:: html
+
+    .. figure:: /examples/00-load/images/thumb/sphx_glr_read-parallel_thumb.png
+
+        :ref:`sphx_glr_examples_00-load_read-parallel.py`
+
+.. raw:: html
+
+    </div>
+
+
+.. toctree::
+   :hidden:
+
+   /examples/00-load/read-parallel
 .. raw:: html
 
     <div style='clear:both'></div>

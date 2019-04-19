@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Create PolyData &mdash; vtki 0.18.2 documentation</title>
+  <title>Parallel Files &mdash; vtki 0.18.2 documentation</title>
   
 
   
@@ -41,8 +41,8 @@
   <link rel="stylesheet" href="../../_static/copybutton.css" type="text/css" />
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Creating a Structured Surface" href="create-structured-surface.html" />
-    <link rel="prev" title="Geometric Objects" href="create-geometric-objects.html" /> 
+    <link rel="next" title="Computing Surface Normals" href="../01-filter/compute-normals.html" />
+    <link rel="prev" title="Read Image Files" href="read-image.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -114,14 +114,14 @@
 <li class="toctree-l1 current"><a class="reference internal" href="../index.html">Quick Examples</a><ul class="current">
 <li class="toctree-l2 current"><a class="reference internal" href="../index.html#loading-and-creating-meshes">Loading and Creating Meshes</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="create-geometric-objects.html">Geometric Objects</a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="#">Create PolyData</a></li>
+<li class="toctree-l3"><a class="reference internal" href="create-poly.html">Create PolyData</a></li>
 <li class="toctree-l3"><a class="reference internal" href="create-structured-surface.html">Creating a Structured Surface</a></li>
 <li class="toctree-l3"><a class="reference internal" href="create-tri-surface.html">Create Triangulated Surface</a></li>
 <li class="toctree-l3"><a class="reference internal" href="create-uniform-grid.html">Creating a Uniform Grid</a></li>
 <li class="toctree-l3"><a class="reference internal" href="create-unstructured-surface.html">Creating an Unstructured Surface</a></li>
 <li class="toctree-l3"><a class="reference internal" href="read-file.html">Load and Plot from a File</a></li>
 <li class="toctree-l3"><a class="reference internal" href="read-image.html">Read Image Files</a></li>
-<li class="toctree-l3"><a class="reference internal" href="read-parallel.html">Parallel Files</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Parallel Files</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../index.html#filtering">Filtering</a></li>
@@ -191,14 +191,14 @@
         
           <li><a href="../index.html">Quick Examples</a> &raquo;</li>
         
-      <li>Create PolyData</li>
+      <li>Parallel Files</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
             
             
-              <a href="https://github.com/vtkiorg/vtki/blob/master/docs/examples/00-load/create-poly.rst" class="fa fa-github"> Edit on GitHub</a>
+              <a href="https://github.com/vtkiorg/vtki/blob/master/docs/examples/00-load/read-parallel.rst" class="fa fa-github"> Edit on GitHub</a>
             
           
         
@@ -214,44 +214,80 @@
             
   <div class="sphx-glr-download-link-note admonition note">
 <p class="admonition-title">Note</p>
-<p>Click <a class="reference internal" href="#sphx-glr-download-examples-00-load-create-poly-py"><span class="std std-ref">here</span></a> to download the full example code</p>
+<p>Click <a class="reference internal" href="#sphx-glr-download-examples-00-load-read-parallel-py"><span class="std std-ref">here</span></a> to download the full example code</p>
 </div>
-<div class="sphx-glr-example-title section" id="create-polydata">
-<span id="ref-create-poly"></span><span id="sphx-glr-examples-00-load-create-poly-py"></span><h1>Create PolyData<a class="headerlink" href="#create-polydata" title="Permalink to this headline">¶</a></h1>
-<p>Creating a PolyData object from NumPy arrays</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<div class="sphx-glr-example-title section" id="parallel-files">
+<span id="sphx-glr-examples-00-load-read-parallel-py"></span><h1>Parallel Files<a class="headerlink" href="#parallel-files" title="Permalink to this headline">¶</a></h1>
+<p>The VTK library supports parallel file foramts. Reading meshes broken up into
+several files is natively supported by VTK and <code class="docutils literal notranslate"><span class="pre">vtki</span></code></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># sphinx_gallery_thumbnail_number = 1</span>
 <span class="kn">import</span> <span class="nn">vtki</span>
+<span class="kn">from</span> <span class="nn">vtki</span> <span class="k">import</span> <span class="n">examples</span>
+<span class="kn">import</span> <span class="nn">glob</span>
+<span class="kn">import</span> <span class="nn">os</span>
+<span class="n">vtki</span><span class="o">.</span><span class="n">rcParams</span><span class="p">[</span><span class="s1">&#39;use_panel&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="kc">False</span>
 </pre></div>
 </div>
-<p>A PolyData object can be created quickly from numpy arrays.  The vertex array
-contains the locations of the points of the mesh and the face array contains the
-number of points for each face and the indices of each of those faces.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># mesh points</span>
-<span class="n">vertices</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span>
-                     <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span>
-                     <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span>
-                     <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span>
-             <span class="p">[</span><span class="mf">0.5</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">]])</span>
-
-<span class="c1"># mesh faces</span>
-<span class="n">faces</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">hstack</span><span class="p">([[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span>  <span class="c1"># square</span>
-                   <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">],</span>     <span class="c1"># triangle</span>
-                   <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">]])</span>    <span class="c1"># triangle</span>
-
-<span class="n">surf</span> <span class="o">=</span> <span class="n">vtki</span><span class="o">.</span><span class="n">PolyData</span><span class="p">(</span><span class="n">vertices</span><span class="p">,</span> <span class="n">faces</span><span class="p">)</span>
-
-<span class="c1"># plot each face with a different color</span>
-<span class="n">surf</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">scalars</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">3</span><span class="p">),</span> <span class="n">cpos</span><span class="o">=</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mf">0.5</span><span class="p">])</span>
+<p>Let’s go ahead and download the sample dataset containing an
+<a class="reference internal" href="../../types/point-grids.html#vtki.UnstructuredGrid" title="vtki.UnstructuredGrid"><code class="xref py py-class docutils literal notranslate"><span class="pre">vtki.UnstructuredGrid</span></code></a> broken up into several files.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Do not capture output because we&#39;ll demo how to read the file</span>
+<span class="n">examples</span><span class="o">.</span><span class="n">download_blood_vessels</span><span class="p">()</span>
 </pre></div>
 </div>
-<img alt="../../_images/sphx_glr_create-poly_001.png" class="sphx-glr-single-img" src="../../_images/sphx_glr_create-poly_001.png" />
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  0.535 seconds)</p>
-<div class="sphx-glr-footer class sphx-glr-footer-example docutils container" id="sphx-glr-download-examples-00-load-create-poly-py">
+<p>The above code downloaded a dataset containing a set of parallel files for a
+blood vessel mesh and returned an <a class="reference internal" href="../../types/point-grids.html#vtki.UnstructuredGrid" title="vtki.UnstructuredGrid"><code class="xref py py-class docutils literal notranslate"><span class="pre">vtki.UnstructuredGrid</span></code></a> - we did not
+grab that UnstructuredGrid, so that we could demo how to use these types of
+files.</p>
+<p>Let’s inspect where this downloaded our dataset:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">path</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">vtki</span><span class="o">.</span><span class="n">EXAMPLES_PATH</span><span class="p">,</span> <span class="s1">&#39;blood_vessels&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">listdir</span><span class="p">(</span><span class="n">path</span><span class="p">))</span>
+</pre></div>
+</div>
+<p class="sphx-glr-script-out">Out:</p>
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>[&#39;T0000000500&#39;, &#39;T0000000500.pvtu&#39;]
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">listdir</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="s1">&#39;T0000000500&#39;</span><span class="p">)))</span>
+</pre></div>
+</div>
+<p class="sphx-glr-script-out">Out:</p>
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>[&#39;003.vtu&#39;, &#39;001.vtu&#39;, &#39;002.vtu&#39;, &#39;000.vtu&#39;]
+</pre></div>
+</div>
+<p>Note that a <code class="docutils literal notranslate"><span class="pre">.pvtu</span></code> file is available along side a directory. This directory
+contains all the parallel files or pieces that make the whole mesh. We can
+simply read the <code class="docutils literal notranslate"><span class="pre">.pvtu</span></code> file and VTK will handle putting the mesh together.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">filename</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="s1">&#39;T0000000500.pvtu&#39;</span><span class="p">)</span>
+<span class="n">mesh</span> <span class="o">=</span> <span class="n">vtki</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">mesh</span><span class="p">)</span>
+</pre></div>
+</div>
+<p class="sphx-glr-script-out">Out:</p>
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>UnstructuredGrid (0x7f4302445708)
+  N Cells:      39353
+  N Points:     48823
+  X Bounds:     5.300e+01, 1.210e+02
+  Y Bounds:     5.000e+01, 9.700e+01
+  Z Bounds:     6.400e+01, 1.820e+02
+  N Scalars:    5
+</pre></div>
+</div>
+<p>Plot the pieced together mesh</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mesh</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">scalars</span><span class="o">=</span><span class="s1">&#39;node_value&#39;</span><span class="p">,</span> <span class="n">categories</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+<img alt="../../_images/sphx_glr_read-parallel_001.png" class="sphx-glr-single-img" src="../../_images/sphx_glr_read-parallel_001.png" />
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mesh</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">scalars</span><span class="o">=</span><span class="s1">&#39;density&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<img alt="../../_images/sphx_glr_read-parallel_002.png" class="sphx-glr-single-img" src="../../_images/sphx_glr_read-parallel_002.png" />
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  2.571 seconds)</p>
+<div class="sphx-glr-footer class sphx-glr-footer-example docutils container" id="sphx-glr-download-examples-00-load-read-parallel-py">
 <div class="sphx-glr-download docutils container">
-<p><a class="reference download internal" download="" href="../../_downloads/39f7c502a66fd186e6cd19f177e51a02/create-poly.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">create-poly.py</span></code></a></p>
+<p><a class="reference download internal" download="" href="../../_downloads/8d3c9a3f01ac4eb5f653499bccabd2fd/read-parallel.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">read-parallel.py</span></code></a></p>
 </div>
 <div class="sphx-glr-download docutils container">
-<p><a class="reference download internal" download="" href="../../_downloads/d46ac6297f4bb4e454011dd70b83fe9f/create-poly.ipynb"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Jupyter</span> <span class="pre">notebook:</span> <span class="pre">create-poly.ipynb</span></code></a></p>
+<p><a class="reference download internal" download="" href="../../_downloads/4397315dd5bbc1854b0ae9c217f87514/read-parallel.ipynb"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Jupyter</span> <span class="pre">notebook:</span> <span class="pre">read-parallel.ipynb</span></code></a></p>
 </div>
 </div>
 <p class="sphx-glr-signature"><a class="reference external" href="https://sphinx-gallery.readthedocs.io">Gallery generated by Sphinx-Gallery</a></p>
@@ -265,10 +301,10 @@ number of points for each face and the indices of each of those faces.</p>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="create-structured-surface.html" class="btn btn-neutral float-right" title="Creating a Structured Surface" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="../01-filter/compute-normals.html" class="btn btn-neutral float-right" title="Computing Surface Normals" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="create-geometric-objects.html" class="btn btn-neutral float-left" title="Geometric Objects" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="read-image.html" class="btn btn-neutral float-left" title="Read Image Files" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

@@ -12,6 +12,7 @@
 ./_downloads/4005562e9b7843812cea9f9471a75f7a/plot-movie.ipynb
 ./_downloads/41b3f5c857017da88e6c4a2a940f5a22/slicing.py
 ./_downloads/437dc62e728909a91ee67f4c26b0c6c2/compute-normals.py
+./_downloads/4397315dd5bbc1854b0ae9c217f87514/read-parallel.ipynb
 ./_downloads/486d712873eb63457b0ca8de8c00251e/read-file.ipynb
 ./_downloads/4a82f33a8e1309e0aa6c75ed900ed597/resample.ipynb
 ./_downloads/4b3293e33ef75d3aa0177cc7cf50ba94/extract-edges.ipynb
@@ -32,6 +33,7 @@
 ./_downloads/86e96b4763988892e9254c0f4184ac76/compute-volume.py
 ./_downloads/884c248e2efc112ff97963ff8f2daf50/volume-smoothing.py
 ./_downloads/8b5c40dde9d52a5f8b08f8c0237b7d6a/read-image.py
+./_downloads/8d3c9a3f01ac4eb5f653499bccabd2fd/read-parallel.py
 ./_downloads/8ef8acf95a9baa2a7d5070a426a14a9b/create-geometric-objects.ipynb
 ./_downloads/9de975b9b9580d79fe42c7965e22e2a8/create-uniform-grid.py
 ./_downloads/9e31d84969726fad2f919f6067ef280a/plot-clear.ipynb
@@ -161,6 +163,9 @@
 ./_images/sphx_glr_read-image_001.png
 ./_images/sphx_glr_read-image_002.png
 ./_images/sphx_glr_read-image_thumb.png
+./_images/sphx_glr_read-parallel_001.png
+./_images/sphx_glr_read-parallel_002.png
+./_images/sphx_glr_read-parallel_thumb.png
 ./_images/sphx_glr_resample_001.png
 ./_images/sphx_glr_resample_002.png
 ./_images/sphx_glr_resample_thumb.png
@@ -194,6 +199,7 @@
 ./_sources/examples/00-load/create-unstructured-surface.rst.txt
 ./_sources/examples/00-load/read-file.rst.txt
 ./_sources/examples/00-load/read-image.rst.txt
+./_sources/examples/00-load/read-parallel.rst.txt
 ./_sources/examples/00-load/sg_execution_times.rst.txt
 ./_sources/examples/01-filter/compute-normals.rst.txt
 ./_sources/examples/01-filter/compute-volume.rst.txt
@@ -307,6 +313,7 @@
 ./examples/00-load/create-unstructured-surface.html
 ./examples/00-load/read-file.html
 ./examples/00-load/read-image.html
+./examples/00-load/read-parallel.html
 ./examples/00-load/sg_execution_times.html
 ./examples/01-filter/compute-normals.html
 ./examples/01-filter/compute-volume.html

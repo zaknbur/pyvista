@@ -805,7 +805,7 @@ will be replaced by the new actor.</p></li>
 
 <dl class="method">
 <dt id="vtki.BasePlotter.add_mesh">
-<code class="descname">add_mesh</code><span class="sig-paren">(</span><em>mesh</em>, <em>color=None</em>, <em>style=None</em>, <em>scalars=None</em>, <em>rng=None</em>, <em>stitle=None</em>, <em>show_edges=None</em>, <em>point_size=5.0</em>, <em>opacity=1.0</em>, <em>line_width=None</em>, <em>flip_scalars=False</em>, <em>lighting=None</em>, <em>n_colors=256</em>, <em>interpolate_before_map=False</em>, <em>cmap=None</em>, <em>label=None</em>, <em>reset_camera=None</em>, <em>scalar_bar_args=None</em>, <em>multi_colors=False</em>, <em>name=None</em>, <em>texture=None</em>, <em>render_points_as_spheres=None</em>, <em>render_lines_as_tubes=False</em>, <em>edge_color='black'</em>, <em>ambient=0.0</em>, <em>show_scalar_bar=None</em>, <em>nan_color=None</em>, <em>nan_opacity=1.0</em>, <em>loc=None</em>, <em>backface_culling=False</em>, <em>rgb=False</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#vtki.BasePlotter.add_mesh" title="Permalink to this definition">¶</a></dt>
+<code class="descname">add_mesh</code><span class="sig-paren">(</span><em>mesh</em>, <em>color=None</em>, <em>style=None</em>, <em>scalars=None</em>, <em>rng=None</em>, <em>stitle=None</em>, <em>show_edges=None</em>, <em>point_size=5.0</em>, <em>opacity=1.0</em>, <em>line_width=None</em>, <em>flip_scalars=False</em>, <em>lighting=None</em>, <em>n_colors=256</em>, <em>interpolate_before_map=False</em>, <em>cmap=None</em>, <em>label=None</em>, <em>reset_camera=None</em>, <em>scalar_bar_args=None</em>, <em>multi_colors=False</em>, <em>name=None</em>, <em>texture=None</em>, <em>render_points_as_spheres=None</em>, <em>render_lines_as_tubes=False</em>, <em>edge_color='black'</em>, <em>ambient=0.0</em>, <em>show_scalar_bar=None</em>, <em>nan_color=None</em>, <em>nan_opacity=1.0</em>, <em>loc=None</em>, <em>backface_culling=False</em>, <em>rgb=False</em>, <em>categories=False</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#vtki.BasePlotter.add_mesh" title="Permalink to this definition">¶</a></dt>
 <dd><p>Adds a unstructured, structured, or surface mesh to the
 plotting object.</p>
 <p>Also accepts a 3D numpy.ndarray</p>
@@ -883,6 +883,9 @@ especially when edges are visible, but can cause flat
 meshes to be partially displayed.  Default False.</p></li>
 <li><p><strong>rgb</strong> (<em>bool</em><em>, </em><em>optional</em>) – If an 2 dimensional array is passed as the scalars, plot those
 values as RGB+A colors! <code class="docutils literal notranslate"><span class="pre">rgba</span></code> is also accepted alias for this.</p></li>
+<li><p><strong>categories</strong> (<em>bool</em><em>, </em><em>optional</em>) – If fetching a colormap from matplotlib, this is the number of
+categories to use in that colormap. If set to <code class="docutils literal notranslate"><span class="pre">True</span></code>, then
+the number of unique values in the scalar array will be used.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns</dt>
