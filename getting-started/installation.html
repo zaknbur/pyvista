@@ -104,6 +104,7 @@
 <li class="toctree-l2"><a class="reference internal" href="#source-developers">Source / Developers</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#test-installation">Test Installation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#running-on-ci-services">Running on CI Services</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#running-on-remote-servers">Running on remote servers</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="simple.html">Basic API Usage</a></li>
@@ -341,6 +342,40 @@ at <a class="reference external" href="https://github.com/OpenGeoVis/PVGeo-Examp
 </pre></div>
 </div>
 </div>
+</div>
+<div class="section" id="running-on-remote-servers">
+<h2>Running on remote servers<a class="headerlink" href="#running-on-remote-servers" title="Permalink to this headline">¶</a></h2>
+<p>Using <code class="docutils literal notranslate"><span class="pre">vtki</span></code> on remote servers requires similar setup steps as in the above Docker case. As an example, here are the complete steps to use <code class="docutils literal notranslate"><span class="pre">vtki</span></code> on AWS EC2 Ubuntu 18.04 LTS (<code class="docutils literal notranslate"><span class="pre">ami-0a313d6098716f372</span></code> in <code class="docutils literal notranslate"><span class="pre">us-east-1</span></code>). Other servers would work similarly.</p>
+<p>After logging into the remote server, install Miniconda and related packages:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>wget https://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86_64.sh -O miniconda.sh
+bash miniconda.sh -b -p miniconda
+<span class="nb">echo</span> <span class="s1">&#39;. $HOME/miniconda/etc/profile.d/conda.sh&#39;</span> &gt;&gt; ~/.bashrc <span class="o">&amp;&amp;</span> <span class="nb">source</span> ~/.bashrc
+conda create --name vtk_env <span class="nv">python</span><span class="o">=</span><span class="m">3</span>.7
+conda activate vtk_env
+conda install nodejs  <span class="c1"># required when importing vtki in Jupyter</span>
+pip install jupyter vtki panel
+
+<span class="c1"># To avoid &quot;ModuleNotFoundError: No module named &#39;vtkOpenGLKitPython&#39; &quot; when importing vtk</span>
+<span class="c1"># https://stackoverflow.com/q/32389599</span>
+<span class="c1"># https://askubuntu.com/q/629692</span>
+sudo apt update <span class="o">&amp;&amp;</span> sudo apt install python-qt4 libgl1-mesa-glx
+</pre></div>
+</div>
+<p>Then, configure the headless display:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo apt-get install xvfb
+<span class="nb">export</span> <span class="nv">DISPLAY</span><span class="o">=</span>:99.0
+<span class="nb">export</span> <span class="nv">VTKI_OFF_SCREEN</span><span class="o">=</span>True
+Xvfb :99 -screen <span class="m">0</span> 1024x768x24 &gt; /dev/null <span class="m">2</span>&gt;<span class="p">&amp;</span><span class="m">1</span> <span class="p">&amp;</span>
+sleep <span class="m">3</span>
+</pre></div>
+</div>
+<p>Reconnect to the server with port-forwarding, and start Jupyter:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ssh -i <span class="s2">&quot;your-ssh-key&quot;</span> your-user-name@your-server-ip -L <span class="m">8888</span>:localhost:8888
+conda activate vtk_env
+jupyter notebook --NotebookApp.token<span class="o">=</span><span class="s1">&#39;&#39;</span> --no-browser --port<span class="o">=</span><span class="m">8888</span>
+</pre></div>
+</div>
+<p>Visit <code class="docutils literal notranslate"><span class="pre">localhost:8888</span></code> in the web browser.</p>
 </div>
 </div>
 
