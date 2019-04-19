@@ -104,7 +104,8 @@
 <li class="toctree-l2"><a class="reference internal" href="#source-developers">Source / Developers</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#test-installation">Test Installation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#running-on-ci-services">Running on CI Services</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#running-on-remote-servers">Running on remote servers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#running-on-mybinder">Running on MyBinder</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#running-on-remote-servers">Running on Remote Servers</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="simple.html">Basic API Usage</a></li>
@@ -288,64 +289,47 @@ using <code class="docutils literal notranslate"><span class="pre">pip</span></c
 </div>
 <div class="section" id="running-on-ci-services">
 <h2>Running on CI Services<a class="headerlink" href="#running-on-ci-services" title="Permalink to this headline">¶</a></h2>
+<p>Please head over to <a class="reference external" href="https://github.com/vtkiorg/gl-ci-helpers">vtkiorg/gl-ci-hepers</a> for details on setting up CI
+services like Travis and AppVeyor to run <code class="docutils literal notranslate"><span class="pre">vtki</span></code>.</p>
+</div>
+<div class="section" id="running-on-mybinder">
+<h2>Running on MyBinder<a class="headerlink" href="#running-on-mybinder" title="Permalink to this headline">¶</a></h2>
 <p>This section is for advanced users that would like to install and use <code class="docutils literal notranslate"><span class="pre">vtki</span></code>
-with headless displays and Docker containers. The steps here will work for
-using <code class="docutils literal notranslate"><span class="pre">vtki</span></code> on Linux based continuous integration services like Travis CI
-and on notebook hosting services like <a class="reference external" href="https://mybinder.org">MyBinder</a>.</p>
+with headless displays on notebook hosting services like <a class="reference external" href="https://mybinder.org">MyBinder</a>.</p>
 <p>Please see <a class="reference external" href="https://github.com/vtkiorg/cookiecutter-vtki-binder">this project</a> for a convenient <a class="reference external" href="https://github.com/audreyr/cookiecutter">Cookiecutter</a> to get started using
 <code class="docutils literal notranslate"><span class="pre">vtki</span></code> on the notebook hosting service <a class="reference external" href="https://mybinder.org">MyBinder</a>.</p>
 <p>To get started, the Docker container will need to have <code class="docutils literal notranslate"><span class="pre">libgl1-mesa-dev</span></code> and
-<code class="docutils literal notranslate"><span class="pre">xvfb</span></code> installed through and <code class="docutils literal notranslate"><span class="pre">apt-get</span></code>. In a Travis scripts, simply include
-the following in your <code class="docutils literal notranslate"><span class="pre">.travis.yml</span></code> file:</p>
-<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">addons</span><span class="p">:</span>
-  <span class="nt">apt</span><span class="p">:</span>
-    <span class="nt">packages</span><span class="p">:</span>
-      <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">xvfb</span>
-</pre></div>
-</div>
-<p>and for MyBinder, include the following in a file called <code class="docutils literal notranslate"><span class="pre">apt.txt</span></code>:</p>
+<code class="docutils literal notranslate"><span class="pre">xvfb</span></code> installed through <code class="docutils literal notranslate"><span class="pre">apt-get</span></code>. For MyBinder, include the following in
+a file called <code class="docutils literal notranslate"><span class="pre">apt.txt</span></code>:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">libgl1</span><span class="o">-</span><span class="n">mesa</span><span class="o">-</span><span class="n">dev</span>
 <span class="n">xvfb</span>
 </pre></div>
 </div>
-<p>Then, you need to configure the headless display, on Travis, add this to the
-<code class="docutils literal notranslate"><span class="pre">.travis.yml</span></code> file:</p>
-<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">before_script</span><span class="p">:</span> <span class="c1"># configure a headless display to test plot generation</span>
-  <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">export DISPLAY=:99.0</span>
-  <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">export VTKI_OFF_SCREEN=True</span>
-  <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">which Xvfb</span>
-  <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">Xvfb :99 -screen 0 1024x768x24 &gt; /dev/null 2&gt;&amp;1 &amp;</span>
-  <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">sleep 3</span> <span class="c1"># give xvfb some time to start</span>
-</pre></div>
-</div>
-<p>Likewise for MyBinder, create a file called <code class="docutils literal notranslate"><span class="pre">start</span></code> and include the following
-set up script that will run everytime your Docker container is launched:</p>
+<p>Then, you need to configure the headless display, for MyBinder, create a file
+called <code class="docutils literal notranslate"><span class="pre">start</span></code> and include the following set up script that will run every
+time your Docker container is launched:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/bin/bash</span>
+<span class="nb">set</span> -x
 <span class="nb">export</span> <span class="nv">DISPLAY</span><span class="o">=</span>:99.0
 <span class="nb">export</span> <span class="nv">VTKI_OFF_SCREEN</span><span class="o">=</span>True
 which Xvfb
 Xvfb :99 -screen <span class="m">0</span> 1024x768x24 &gt; /dev/null <span class="m">2</span>&gt;<span class="p">&amp;</span><span class="m">1</span> <span class="p">&amp;</span>
 sleep <span class="m">3</span>
+<span class="nb">set</span> +x
 <span class="nb">exec</span> <span class="s2">&quot;</span><span class="nv">$@</span><span class="s2">&quot;</span>
 </pre></div>
 </div>
 <p>And that’s it! Include <code class="docutils literal notranslate"><span class="pre">vtki</span></code> in your Python requirements and get to
 visualizing your data! If you need more help than this on setting up <code class="docutils literal notranslate"><span class="pre">vtki</span></code>
-for CI-like services, hop on Slack and chat with the developers or take a look
-at <a class="reference external" href="https://github.com/OpenGeoVis/PVGeo-Examples">this repository</a> that is currently using <code class="docutils literal notranslate"><span class="pre">vtki</span></code> on MyBinder.</p>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>Offscreen rendering is required for headless displays</p>
-<p>Note that <code class="docutils literal notranslate"><span class="pre">vtki</span></code> will have to be used in offscreen mode. This can be forced on import with:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">vtki</span>
-<span class="n">vtki</span><span class="o">.</span><span class="n">OFF_SCREEN</span> <span class="o">=</span> <span class="bp">True</span>
-</pre></div>
-</div>
-</div>
+for these types of services, hop on Slack and chat with the developers or take
+a look at <a class="reference external" href="https://github.com/OpenGeoVis/PVGeo-Examples">this repository</a> that is currently using <code class="docutils literal notranslate"><span class="pre">vtki</span></code> on MyBinder.</p>
 </div>
 <div class="section" id="running-on-remote-servers">
-<h2>Running on remote servers<a class="headerlink" href="#running-on-remote-servers" title="Permalink to this headline">¶</a></h2>
-<p>Using <code class="docutils literal notranslate"><span class="pre">vtki</span></code> on remote servers requires similar setup steps as in the above Docker case. As an example, here are the complete steps to use <code class="docutils literal notranslate"><span class="pre">vtki</span></code> on AWS EC2 Ubuntu 18.04 LTS (<code class="docutils literal notranslate"><span class="pre">ami-0a313d6098716f372</span></code> in <code class="docutils literal notranslate"><span class="pre">us-east-1</span></code>). Other servers would work similarly.</p>
+<h2>Running on Remote Servers<a class="headerlink" href="#running-on-remote-servers" title="Permalink to this headline">¶</a></h2>
+<p>Using <code class="docutils literal notranslate"><span class="pre">vtki</span></code> on remote servers requires similar setup steps as in the above
+Docker case. As an example, here are the complete steps to use <code class="docutils literal notranslate"><span class="pre">vtki</span></code> on AWS
+EC2 Ubuntu 18.04 LTS (<code class="docutils literal notranslate"><span class="pre">ami-0a313d6098716f372</span></code> in <code class="docutils literal notranslate"><span class="pre">us-east-1</span></code>).
+Other servers would work similarly.</p>
 <p>After logging into the remote server, install Miniconda and related packages:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>wget https://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86_64.sh -O miniconda.sh
 bash miniconda.sh -b -p miniconda
