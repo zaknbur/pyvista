@@ -5,14 +5,14 @@
 
 Computation times
 =================
-**01:30.261** total execution time for **examples_01-filter** files:
+**01:28.608** total execution time for **examples_01-filter** files:
 
-- **00:21.807**: :ref:`sphx_glr_examples_01-filter_compute-volume.py` (``compute-volume.py``)
-- **00:17.009**: :ref:`sphx_glr_examples_01-filter_compute-normals.py` (``compute-normals.py``)
-- **00:14.554**: :ref:`sphx_glr_examples_01-filter_extract-edges.py` (``extract-edges.py``)
-- **00:13.994**: :ref:`sphx_glr_examples_01-filter_slicing.py` (``slicing.py``)
-- **00:09.831**: :ref:`sphx_glr_examples_01-filter_volume-smoothing.py` (``volume-smoothing.py``)
-- **00:05.862**: :ref:`sphx_glr_examples_01-filter_using-filters.py` (``using-filters.py``)
-- **00:04.747**: :ref:`sphx_glr_examples_01-filter_resample.py` (``resample.py``)
-- **00:01.317**: :ref:`sphx_glr_examples_01-filter_geodesic.py` (``geodesic.py``)
-- **00:01.140**: :ref:`sphx_glr_examples_01-filter_poly-ray-trace.py` (``poly-ray-trace.py``)
+- **00:21.860**: :ref:`sphx_glr_examples_01-filter_compute-volume.py` (``compute-volume.py``)
+- **00:16.292**: :ref:`sphx_glr_examples_01-filter_compute-normals.py` (``compute-normals.py``)
+- **00:14.376**: :ref:`sphx_glr_examples_01-filter_extract-edges.py` (``extract-edges.py``)
+- **00:13.699**: :ref:`sphx_glr_examples_01-filter_slicing.py` (``slicing.py``)
+- **00:09.659**: :ref:`sphx_glr_examples_01-filter_volume-smoothing.py` (``volume-smoothing.py``)
+- **00:05.698**: :ref:`sphx_glr_examples_01-filter_using-filters.py` (``using-filters.py``)
+- **00:04.638**: :ref:`sphx_glr_examples_01-filter_resample.py` (``resample.py``)
+- **00:01.300**: :ref:`sphx_glr_examples_01-filter_geodesic.py` (``geodesic.py``)
+- **00:01.086**: :ref:`sphx_glr_examples_01-filter_poly-ray-trace.py` (``poly-ray-trace.py``)
