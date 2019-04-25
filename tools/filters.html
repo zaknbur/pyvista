@@ -749,7 +749,7 @@ down into triangles.</p>
 
 <dl class="method">
 <dt id="vtki.DataSetFilters.warp_by_scalar">
-<code class="descname">warp_by_scalar</code><span class="sig-paren">(</span><em>scalars=None</em>, <em>scale_factor=1.0</em>, <em>normal=None</em>, <em>in_place=False</em><span class="sig-paren">)</span><a class="headerlink" href="#vtki.DataSetFilters.warp_by_scalar" title="Permalink to this definition">¶</a></dt>
+<code class="descname">warp_by_scalar</code><span class="sig-paren">(</span><em>scalars=None</em>, <em>scale_factor=1.0</em>, <em>normal=None</em>, <em>inplace=False</em><span class="sig-paren">)</span><a class="headerlink" href="#vtki.DataSetFilters.warp_by_scalar" title="Permalink to this definition">¶</a></dt>
 <dd><p>Warp the dataset’s points by a point data scalar array’s values.
 This modifies point coordinates by moving points along point normals by
 the scalar amount times the scale factor.</p>
@@ -760,7 +760,7 @@ the scalar amount times the scale factor.</p>
 <li><p><strong>scale_factor</strong> (<em>float</em><em>, </em><em>optional</em>) – A scalaing factor to increase the scaling effect</p></li>
 <li><p><strong>normal</strong> (<em>np.array</em><em>, </em><em>list</em><em>, </em><em>tuple of length 3</em>) – User specified normal. If given, data normals will be ignored and
 the given normal will be used to project the warp.</p></li>
-<li><p><strong>in_place</strong> (<em>bool</em>) – If True, the points of the give dataset will be updated.</p></li>
+<li><p><strong>inplace</strong> (<em>bool</em>) – If True, the points of the give dataset will be updated.</p></li>
 </ul>
 </dd>
 </dl>

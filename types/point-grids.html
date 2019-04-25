@@ -616,7 +616,7 @@ False.  Cells and cell types are always copied.</p>
 
 <dl class="method">
 <dt id="vtki.UnstructuredGrid.merge">
-<code class="descname">merge</code><span class="sig-paren">(</span><em>grid=None</em>, <em>merge_points=True</em>, <em>inplace=True</em>, <em>main_has_priority=True</em><span class="sig-paren">)</span><a class="headerlink" href="#vtki.UnstructuredGrid.merge" title="Permalink to this definition">¶</a></dt>
+<code class="descname">merge</code><span class="sig-paren">(</span><em>grid=None</em>, <em>merge_points=True</em>, <em>inplace=False</em>, <em>main_has_priority=True</em><span class="sig-paren">)</span><a class="headerlink" href="#vtki.UnstructuredGrid.merge" title="Permalink to this definition">¶</a></dt>
 <dd><p>Join one or many other grids to this grid.  Grid is updated
 in-place by default.</p>
 <p>Can be used to merge points of adjcent cells when no grids
@@ -848,7 +848,7 @@ only with the legacy writer.</p>
 <tr class="row-odd"><td><p><a class="reference internal" href="#vtki.PointGrid.extract_edges" title="vtki.PointGrid.extract_edges"><code class="xref py py-obj docutils literal notranslate"><span class="pre">extract_edges</span></code></a>([feature_angle, …])</p></td>
 <td><p>Extracts edges from the surface of the grid.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#vtki.PointGrid.extract_surface" title="vtki.PointGrid.extract_surface"><code class="xref py py-obj docutils literal notranslate"><span class="pre">extract_surface</span></code></a>([pass_pointid, pass_cellid])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#vtki.PointGrid.extract_surface" title="vtki.PointGrid.extract_surface"><code class="xref py py-obj docutils literal notranslate"><span class="pre">extract_surface</span></code></a>([pass_pointid, pass_cellid, …])</p></td>
 <td><p>Extract surface mesh of the grid</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="#vtki.PointGrid.plot_curvature" title="vtki.PointGrid.plot_curvature"><code class="xref py py-obj docutils literal notranslate"><span class="pre">plot_curvature</span></code></a>([curv_type])</p></td>
@@ -866,7 +866,7 @@ only with the legacy writer.</p>
 <p>Class in common with structured and unstructured grids</p>
 <dl class="method">
 <dt id="vtki.PointGrid.extract_edges">
-<code class="descname">extract_edges</code><span class="sig-paren">(</span><em>feature_angle=30</em>, <em>boundary_edges=True</em>, <em>non_manifold_edges=True</em>, <em>feature_edges=True</em>, <em>manifold_edges=True</em><span class="sig-paren">)</span><a class="headerlink" href="#vtki.PointGrid.extract_edges" title="Permalink to this definition">¶</a></dt>
+<code class="descname">extract_edges</code><span class="sig-paren">(</span><em>feature_angle=30</em>, <em>boundary_edges=True</em>, <em>non_manifold_edges=True</em>, <em>feature_edges=True</em>, <em>manifold_edges=True</em>, <em>inplace=False</em><span class="sig-paren">)</span><a class="headerlink" href="#vtki.PointGrid.extract_edges" title="Permalink to this definition">¶</a></dt>
 <dd><p>Extracts edges from the surface of the grid.  From vtk documentation:</p>
 <dl class="simple">
 <dt>These edges are either</dt><dd><ol class="arabic simple">
@@ -886,6 +886,7 @@ dihedral angle &gt; feature_angle)</p></li>
 <li><p><strong>non_manifold_edges</strong> (<em>bool</em><em>, </em><em>optional</em>) – Defaults to True</p></li>
 <li><p><strong>feature_edges</strong> (<em>bool</em><em>, </em><em>optional</em>) – Defaults to True</p></li>
 <li><p><strong>manifold_edges</strong> (<em>bool</em><em>, </em><em>optional</em>) – Defaults to True</p></li>
+<li><p><strong>inplace</strong> (<em>bool</em><em>, </em><em>optional</em>) – Return new mesh or overwrite input.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns</dt>
@@ -899,7 +900,7 @@ dihedral angle &gt; feature_angle)</p></li>
 
 <dl class="method">
 <dt id="vtki.PointGrid.extract_surface">
-<code class="descname">extract_surface</code><span class="sig-paren">(</span><em>pass_pointid=True</em>, <em>pass_cellid=True</em><span class="sig-paren">)</span><a class="headerlink" href="#vtki.PointGrid.extract_surface" title="Permalink to this definition">¶</a></dt>
+<code class="descname">extract_surface</code><span class="sig-paren">(</span><em>pass_pointid=True</em>, <em>pass_cellid=True</em>, <em>inplace=False</em><span class="sig-paren">)</span><a class="headerlink" href="#vtki.PointGrid.extract_surface" title="Permalink to this definition">¶</a></dt>
 <dd><p>Extract surface mesh of the grid</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -908,6 +909,7 @@ dihedral angle &gt; feature_angle)</p></li>
 original points these surface points correspond to</p></li>
 <li><p><strong>pass_cellid</strong> (<em>bool</em><em>, </em><em>optional</em>) – Adds a cell scalar “vtkOriginalPointIds” that idenfities which
 original cells these surface cells correspond to</p></li>
+<li><p><strong>inplace</strong> (<em>bool</em><em>, </em><em>optional</em>) – Return new mesh or overwrite input.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns</dt>

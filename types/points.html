@@ -372,61 +372,64 @@ object.  It inherits all methods from the original vtk object,
 <tr class="row-even"><td><p><a class="reference internal" href="#vtki.PolyData.decimate" title="vtki.PolyData.decimate"><code class="xref py py-obj docutils literal notranslate"><span class="pre">decimate</span></code></a>(target_reduction[, …])</p></td>
 <td><p>Reduces the number of triangles in a triangular mesh using vtkQuadricDecimation.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#vtki.PolyData.delaunay_2d" title="vtki.PolyData.delaunay_2d"><code class="xref py py-obj docutils literal notranslate"><span class="pre">delaunay_2d</span></code></a>([tol, alpha, offset, bound])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#vtki.PolyData.decimate_pro" title="vtki.PolyData.decimate_pro"><code class="xref py py-obj docutils literal notranslate"><span class="pre">decimate_pro</span></code></a>(reduction[, feature_angle, …])</p></td>
+<td><p>Reduce the number of triangles in a triangular mesh, forming a good approximation to the original geometry.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#vtki.PolyData.delaunay_2d" title="vtki.PolyData.delaunay_2d"><code class="xref py py-obj docutils literal notranslate"><span class="pre">delaunay_2d</span></code></a>([tol, alpha, offset, bound, inplace])</p></td>
 <td><p>Apply a delaunay 2D filter along the best fitting plane</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#vtki.PolyData.delauney_2d" title="vtki.PolyData.delauney_2d"><code class="xref py py-obj docutils literal notranslate"><span class="pre">delauney_2d</span></code></a>()</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#vtki.PolyData.delauney_2d" title="vtki.PolyData.delauney_2d"><code class="xref py py-obj docutils literal notranslate"><span class="pre">delauney_2d</span></code></a>()</p></td>
 <td><p>DEPRECATED.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#vtki.PolyData.edge_mask" title="vtki.PolyData.edge_mask"><code class="xref py py-obj docutils literal notranslate"><span class="pre">edge_mask</span></code></a>(angle)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#vtki.PolyData.edge_mask" title="vtki.PolyData.edge_mask"><code class="xref py py-obj docutils literal notranslate"><span class="pre">edge_mask</span></code></a>(angle)</p></td>
 <td><p>Returns a mask of the points of a surface mesh that have a surface angle greater than angle</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#vtki.PolyData.extract_edges" title="vtki.PolyData.extract_edges"><code class="xref py py-obj docutils literal notranslate"><span class="pre">extract_edges</span></code></a>([feature_angle, …])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#vtki.PolyData.extract_edges" title="vtki.PolyData.extract_edges"><code class="xref py py-obj docutils literal notranslate"><span class="pre">extract_edges</span></code></a>([feature_angle, …])</p></td>
 <td><p>Extracts edges from a surface.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#vtki.PolyData.extract_largest" title="vtki.PolyData.extract_largest"><code class="xref py py-obj docutils literal notranslate"><span class="pre">extract_largest</span></code></a>([inplace])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#vtki.PolyData.extract_largest" title="vtki.PolyData.extract_largest"><code class="xref py py-obj docutils literal notranslate"><span class="pre">extract_largest</span></code></a>([inplace])</p></td>
 <td><p>Extract largest connected set in mesh.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#vtki.PolyData.fill_holes" title="vtki.PolyData.fill_holes"><code class="xref py py-obj docutils literal notranslate"><span class="pre">fill_holes</span></code></a>(hole_size)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#vtki.PolyData.fill_holes" title="vtki.PolyData.fill_holes"><code class="xref py py-obj docutils literal notranslate"><span class="pre">fill_holes</span></code></a>(hole_size[, inplace])</p></td>
 <td><p>Fill holes in a vtki.PolyData or vtk.vtkPolyData object.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#vtki.PolyData.flip_normals" title="vtki.PolyData.flip_normals"><code class="xref py py-obj docutils literal notranslate"><span class="pre">flip_normals</span></code></a>()</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#vtki.PolyData.flip_normals" title="vtki.PolyData.flip_normals"><code class="xref py py-obj docutils literal notranslate"><span class="pre">flip_normals</span></code></a>()</p></td>
 <td><p>Flip normals of a triangular mesh by reversing the point ordering.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#vtki.PolyData.geodesic" title="vtki.PolyData.geodesic"><code class="xref py py-obj docutils literal notranslate"><span class="pre">geodesic</span></code></a>(start_vertex, end_vertex)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#vtki.PolyData.geodesic" title="vtki.PolyData.geodesic"><code class="xref py py-obj docutils literal notranslate"><span class="pre">geodesic</span></code></a>(start_vertex, end_vertex[, inplace])</p></td>
 <td><p>Calculates the geodesic path betweeen two vertices using Dijkstra’s algorithm.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#vtki.PolyData.geodesic_distance" title="vtki.PolyData.geodesic_distance"><code class="xref py py-obj docutils literal notranslate"><span class="pre">geodesic_distance</span></code></a>(start_vertex, end_vertex)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#vtki.PolyData.geodesic_distance" title="vtki.PolyData.geodesic_distance"><code class="xref py py-obj docutils literal notranslate"><span class="pre">geodesic_distance</span></code></a>(start_vertex, end_vertex)</p></td>
 <td><p>Calculates the geodesic distance betweeen two vertices using Dijkstra’s algorithm.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#vtki.PolyData.plot_boundaries" title="vtki.PolyData.plot_boundaries"><code class="xref py py-obj docutils literal notranslate"><span class="pre">plot_boundaries</span></code></a>(**kwargs)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#vtki.PolyData.plot_boundaries" title="vtki.PolyData.plot_boundaries"><code class="xref py py-obj docutils literal notranslate"><span class="pre">plot_boundaries</span></code></a>(**kwargs)</p></td>
 <td><p>Plots boundaries of a mesh</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#vtki.PolyData.plot_curvature" title="vtki.PolyData.plot_curvature"><code class="xref py py-obj docutils literal notranslate"><span class="pre">plot_curvature</span></code></a>([curv_type])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#vtki.PolyData.plot_curvature" title="vtki.PolyData.plot_curvature"><code class="xref py py-obj docutils literal notranslate"><span class="pre">plot_curvature</span></code></a>([curv_type])</p></td>
 <td><p>Plots curvature</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#vtki.PolyData.plot_normals" title="vtki.PolyData.plot_normals"><code class="xref py py-obj docutils literal notranslate"><span class="pre">plot_normals</span></code></a>([show_mesh, mag, flip, use_every])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#vtki.PolyData.plot_normals" title="vtki.PolyData.plot_normals"><code class="xref py py-obj docutils literal notranslate"><span class="pre">plot_normals</span></code></a>([show_mesh, mag, flip, use_every])</p></td>
 <td><p>Plot the point normals of a mesh.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#vtki.PolyData.ray_trace" title="vtki.PolyData.ray_trace"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ray_trace</span></code></a>(origin, end_point[, first_point, …])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#vtki.PolyData.ray_trace" title="vtki.PolyData.ray_trace"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ray_trace</span></code></a>(origin, end_point[, first_point, …])</p></td>
 <td><p>Performs a single ray trace calculation given a mesh and a line segment defined by an origin and end_point.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#vtki.PolyData.remove_points" title="vtki.PolyData.remove_points"><code class="xref py py-obj docutils literal notranslate"><span class="pre">remove_points</span></code></a>(remove[, mode, keep_scalars, …])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#vtki.PolyData.remove_points" title="vtki.PolyData.remove_points"><code class="xref py py-obj docutils literal notranslate"><span class="pre">remove_points</span></code></a>(remove[, mode, keep_scalars, …])</p></td>
 <td><p>Rebuild a mesh by removing points.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#vtki.PolyData.save" title="vtki.PolyData.save"><code class="xref py py-obj docutils literal notranslate"><span class="pre">save</span></code></a>(filename[, binary])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#vtki.PolyData.save" title="vtki.PolyData.save"><code class="xref py py-obj docutils literal notranslate"><span class="pre">save</span></code></a>(filename[, binary])</p></td>
 <td><p>Writes a surface mesh to disk.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#vtki.PolyData.smooth" title="vtki.PolyData.smooth"><code class="xref py py-obj docutils literal notranslate"><span class="pre">smooth</span></code></a>([n_iter, convergence])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#vtki.PolyData.smooth" title="vtki.PolyData.smooth"><code class="xref py py-obj docutils literal notranslate"><span class="pre">smooth</span></code></a>([n_iter, convergence, edge_angle, …])</p></td>
 <td><p>Adjust point coordinates using Laplacian smoothing.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#vtki.PolyData.subdivide" title="vtki.PolyData.subdivide"><code class="xref py py-obj docutils literal notranslate"><span class="pre">subdivide</span></code></a>(nsub[, subfilter, inplace])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#vtki.PolyData.subdivide" title="vtki.PolyData.subdivide"><code class="xref py py-obj docutils literal notranslate"><span class="pre">subdivide</span></code></a>(nsub[, subfilter, inplace])</p></td>
 <td><p>Increase the number of triangles in a single, connected triangular mesh.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#vtki.PolyData.tri_filter" title="vtki.PolyData.tri_filter"><code class="xref py py-obj docutils literal notranslate"><span class="pre">tri_filter</span></code></a>([inplace])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#vtki.PolyData.tri_filter" title="vtki.PolyData.tri_filter"><code class="xref py py-obj docutils literal notranslate"><span class="pre">tri_filter</span></code></a>([inplace])</p></td>
 <td><p>Returns an all triangle mesh.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#vtki.PolyData.tube" title="vtki.PolyData.tube"><code class="xref py py-obj docutils literal notranslate"><span class="pre">tube</span></code></a>([radius, scalars, capping, n_sides, …])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#vtki.PolyData.tube" title="vtki.PolyData.tube"><code class="xref py py-obj docutils literal notranslate"><span class="pre">tube</span></code></a>([radius, scalars, capping, n_sides, …])</p></td>
 <td><p>Generate a tube around each input line.</p></td>
 </tr>
 </tbody>
@@ -594,7 +597,7 @@ between the meshes.</p>
 
 <dl class="method">
 <dt id="vtki.PolyData.clean">
-<code class="descname">clean</code><span class="sig-paren">(</span><em>point_merging=True</em>, <em>merge_tol=None</em>, <em>lines_to_points=True</em>, <em>polys_to_lines=True</em>, <em>strips_to_polys=True</em>, <em>inplace=True</em><span class="sig-paren">)</span><a class="headerlink" href="#vtki.PolyData.clean" title="Permalink to this definition">¶</a></dt>
+<code class="descname">clean</code><span class="sig-paren">(</span><em>point_merging=True</em>, <em>merge_tol=None</em>, <em>lines_to_points=True</em>, <em>polys_to_lines=True</em>, <em>strips_to_polys=True</em>, <em>inplace=False</em><span class="sig-paren">)</span><a class="headerlink" href="#vtki.PolyData.clean" title="Permalink to this definition">¶</a></dt>
 <dd><p>Cleans mesh by merging duplicate points, remove unused
 points, and/or remove degenerate cells.</p>
 <dl class="field-list simple">
@@ -622,7 +625,7 @@ default.</p></li>
 
 <dl class="method">
 <dt id="vtki.PolyData.clip_with_plane">
-<code class="descname">clip_with_plane</code><span class="sig-paren">(</span><em>origin</em>, <em>normal</em>, <em>value=0</em>, <em>inplace=True</em><span class="sig-paren">)</span><a class="headerlink" href="#vtki.PolyData.clip_with_plane" title="Permalink to this definition">¶</a></dt>
+<code class="descname">clip_with_plane</code><span class="sig-paren">(</span><em>origin</em>, <em>normal</em>, <em>value=0</em>, <em>inplace=False</em><span class="sig-paren">)</span><a class="headerlink" href="#vtki.PolyData.clip_with_plane" title="Permalink to this definition">¶</a></dt>
 <dd><p>Clip a vtki.PolyData or vtk.vtkPolyData with a plane.</p>
 <p>Can be used to open a mesh which has been closed along a well-defined
 plane.</p>
@@ -637,7 +640,7 @@ normal parameter.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns</dt>
-<dd class="field-even"><p><strong>mesh</strong> – Updated mesh with cell and point normals if inplace=False</p>
+<dd class="field-even"><p><strong>mesh</strong> – Updated mesh with cell and point normals if inplace=False. Otherwise None.</p>
 </dd>
 <dt class="field-odd">Return type</dt>
 <dd class="field-odd"><p><a class="reference internal" href="#vtki.PolyData" title="vtki.PolyData">vtki.PolyData</a></p>
@@ -649,7 +652,7 @@ normal parameter.</p></li>
 
 <dl class="method">
 <dt id="vtki.PolyData.compute_normals">
-<code class="descname">compute_normals</code><span class="sig-paren">(</span><em>cell_normals=True</em>, <em>point_normals=True</em>, <em>split_vertices=False</em>, <em>flip_normals=False</em>, <em>consistent_normals=True</em>, <em>auto_orient_normals=False</em>, <em>non_manifold_traversal=True</em>, <em>feature_angle=30.0</em>, <em>inplace=True</em><span class="sig-paren">)</span><a class="headerlink" href="#vtki.PolyData.compute_normals" title="Permalink to this definition">¶</a></dt>
+<code class="descname">compute_normals</code><span class="sig-paren">(</span><em>cell_normals=True</em>, <em>point_normals=True</em>, <em>split_vertices=False</em>, <em>flip_normals=False</em>, <em>consistent_normals=True</em>, <em>auto_orient_normals=False</em>, <em>non_manifold_traversal=True</em>, <em>feature_angle=30.0</em>, <em>inplace=False</em><span class="sig-paren">)</span><a class="headerlink" href="#vtki.PolyData.compute_normals" title="Permalink to this definition">¶</a></dt>
 <dd><p>Compute point and/or cell normals for a mesh.</p>
 <p>The filter can reorder polygons to insure consistent orientation across
 polygon neighbors. Sharp edges can be split and points duplicated
@@ -684,7 +687,7 @@ corrupted due to topological loops. Defaults to True.</p></li>
 <li><p><strong>feature_angle</strong> (<em>float</em><em>, </em><em>optional</em>) – The angle that defines a sharp edge. If the difference in angle
 across neighboring polygons is greater than this value, the shared
 edge is considered “sharp”. Defaults to 30.0.</p></li>
-<li><p><strong>inplace</strong> (<em>bool</em><em>, </em><em>optional</em>) – Updates mesh in-place while returning nothing. Defaults to True.</p></li>
+<li><p><strong>inplace</strong> (<em>bool</em><em>, </em><em>optional</em>) – Updates mesh in-place while returning nothing. Defaults to False.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns</dt>
@@ -729,7 +732,7 @@ Minimum</p></li>
 
 <dl class="method">
 <dt id="vtki.PolyData.decimate">
-<code class="descname">decimate</code><span class="sig-paren">(</span><em>target_reduction</em>, <em>volume_preservation=False</em>, <em>attribute_error=False</em>, <em>scalars=True</em>, <em>vectors=True</em>, <em>normals=False</em>, <em>tcoords=True</em>, <em>tensors=True</em>, <em>scalars_weight=0.1</em>, <em>vectors_weight=0.1</em>, <em>normals_weight=0.1</em>, <em>tcoords_weight=0.1</em>, <em>tensors_weight=0.1</em>, <em>inplace=True</em><span class="sig-paren">)</span><a class="headerlink" href="#vtki.PolyData.decimate" title="Permalink to this definition">¶</a></dt>
+<code class="descname">decimate</code><span class="sig-paren">(</span><em>target_reduction</em>, <em>volume_preservation=False</em>, <em>attribute_error=False</em>, <em>scalars=True</em>, <em>vectors=True</em>, <em>normals=False</em>, <em>tcoords=True</em>, <em>tensors=True</em>, <em>scalars_weight=0.1</em>, <em>vectors_weight=0.1</em>, <em>normals_weight=0.1</em>, <em>tcoords_weight=0.1</em>, <em>tensors_weight=0.1</em>, <em>inplace=False</em><span class="sig-paren">)</span><a class="headerlink" href="#vtki.PolyData.decimate" title="Permalink to this definition">¶</a></dt>
 <dd><p>Reduces the number of triangles in a triangular mesh using
 vtkQuadricDecimation.</p>
 <dl class="field-list simple">
@@ -775,8 +778,45 @@ the error metric. Defaults to 0.1.</p></li>
 </dd></dl>
 
 <dl class="method">
+<dt id="vtki.PolyData.decimate_pro">
+<code class="descname">decimate_pro</code><span class="sig-paren">(</span><em>reduction</em>, <em>feature_angle=45.0</em>, <em>split_angle=75.0</em>, <em>splitting=True</em>, <em>pre_split_mesh=False</em>, <em>preserve_topology=False</em>, <em>inplace=False</em><span class="sig-paren">)</span><a class="headerlink" href="#vtki.PolyData.decimate_pro" title="Permalink to this definition">¶</a></dt>
+<dd><p>Reduce the number of triangles in a triangular mesh, forming a good
+approximation to the original geometry. Based on the algorithm originally
+described in “Decimation of Triangle Meshes”, Proc Siggraph <a href="#id1"><span class="problematic" id="id2">`</span></a>92.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>reduction</strong> (<em>float</em>) – Reduction factor. A value of 0.9 will leave 10 % of the original number
+of vertices.</p></li>
+<li><p><strong>feature_angle</strong> (<em>float</em><em>, </em><em>optional</em>) – Angle used to define what an edge is (i.e., if the surface normal between
+two adjacent triangles is &gt;= feature_angle, an edge exists).</p></li>
+<li><p><strong>split_angle</strong> (<em>float</em><em>, </em><em>optional</em>) – Angle used to control the splitting of the mesh. A split line exists
+when the surface normals between two edge connected triangles are &gt;= split_angle.</p></li>
+<li><p><strong>splitting</strong> (<em>bool</em><em>, </em><em>optional</em>) – Controls the splitting of the mesh at corners, along edges, at non-manifold
+points, or anywhere else a split is required. Turning splitting off
+will better preserve the original topology of the mesh, but may not
+necessarily give the exact requested decimation.</p></li>
+<li><p><strong>pre_split_mesh</strong> (<em>bool</em><em>, </em><em>optional</em>) – Separates the mesh into semi-planar patches, which are disconnected
+from each other. This can give superior results in some cases. If pre_split_mesh
+is set to True, the mesh is split with the specified split_angle. Otherwise
+mesh splitting is deferred as long as possible.</p></li>
+<li><p><strong>preserve_topology</strong> (<em>bool</em><em>, </em><em>optional</em>) – Controls topology preservation. If on, mesh splitting and hole elimination
+will not occur. This may limit the maximum reduction that may be achieved.</p></li>
+<li><p><strong>inplace</strong> (<em>bool</em><em>, </em><em>optional</em>) – Updates mesh in-place while returning nothing.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>mesh</strong> – Decimated mesh. None when inplace=True.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="#vtki.PolyData" title="vtki.PolyData">vtki.PolyData</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
 <dt id="vtki.PolyData.delaunay_2d">
-<code class="descname">delaunay_2d</code><span class="sig-paren">(</span><em>tol=1e-05</em>, <em>alpha=0.0</em>, <em>offset=1.0</em>, <em>bound=False</em><span class="sig-paren">)</span><a class="headerlink" href="#vtki.PolyData.delaunay_2d" title="Permalink to this definition">¶</a></dt>
+<code class="descname">delaunay_2d</code><span class="sig-paren">(</span><em>tol=1e-05</em>, <em>alpha=0.0</em>, <em>offset=1.0</em>, <em>bound=False</em>, <em>inplace=False</em><span class="sig-paren">)</span><a class="headerlink" href="#vtki.PolyData.delaunay_2d" title="Permalink to this definition">¶</a></dt>
 <dd><p>Apply a delaunay 2D filter along the best fitting plane</p>
 </dd></dl>
 
@@ -800,7 +840,7 @@ angle greater than angle</p>
 
 <dl class="method">
 <dt id="vtki.PolyData.extract_edges">
-<code class="descname">extract_edges</code><span class="sig-paren">(</span><em>feature_angle=30</em>, <em>boundary_edges=True</em>, <em>non_manifold_edges=True</em>, <em>feature_edges=True</em>, <em>manifold_edges=True</em><span class="sig-paren">)</span><a class="headerlink" href="#vtki.PolyData.extract_edges" title="Permalink to this definition">¶</a></dt>
+<code class="descname">extract_edges</code><span class="sig-paren">(</span><em>feature_angle=30</em>, <em>boundary_edges=True</em>, <em>non_manifold_edges=True</em>, <em>feature_edges=True</em>, <em>manifold_edges=True</em>, <em>inplace=False</em><span class="sig-paren">)</span><a class="headerlink" href="#vtki.PolyData.extract_edges" title="Permalink to this definition">¶</a></dt>
 <dd><p>Extracts edges from a surface.  From vtk documentation, the edges are
 one of the following</p>
 <blockquote>
@@ -820,10 +860,11 @@ dihedral angle &gt; feature_angle)</p></li>
 <li><p><strong>non_manifold_edges</strong> (<em>bool</em><em>, </em><em>optional</em>) – Defaults to True</p></li>
 <li><p><strong>feature_edges</strong> (<em>bool</em><em>, </em><em>optional</em>) – Defaults to True</p></li>
 <li><p><strong>manifold_edges</strong> (<em>bool</em><em>, </em><em>optional</em>) – Defaults to True</p></li>
+<li><p><strong>inplace</strong> (<em>bool</em><em>, </em><em>optional</em>) – Return new mesh or overwrite input.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns</dt>
-<dd class="field-even"><p><strong>edges</strong> – Extracted edges</p>
+<dd class="field-even"><p><strong>edges</strong> – Extracted edges. None if inplace=True.</p>
 </dd>
 <dt class="field-odd">Return type</dt>
 <dd class="field-odd"><p>vtki.vtkPolyData</p>
@@ -865,7 +906,7 @@ the main component of the image.</p>
 
 <dl class="method">
 <dt id="vtki.PolyData.fill_holes">
-<code class="descname">fill_holes</code><span class="sig-paren">(</span><em>hole_size</em><span class="sig-paren">)</span><a class="headerlink" href="#vtki.PolyData.fill_holes" title="Permalink to this definition">¶</a></dt>
+<code class="descname">fill_holes</code><span class="sig-paren">(</span><em>hole_size</em>, <em>inplace=False</em><span class="sig-paren">)</span><a class="headerlink" href="#vtki.PolyData.fill_holes" title="Permalink to this definition">¶</a></dt>
 <dd><p>Fill holes in a vtki.PolyData or vtk.vtkPolyData object.</p>
 <p>Holes are identified by locating boundary edges, linking them together
 into loops, and then triangulating the resulting loops. Note that you
@@ -873,10 +914,13 @@ can specify an approximate limit to the size of the hole that can be
 filled.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>hole_size</strong> (<em>float</em>) – Specifies the maximum hole size to fill. This is represented as a
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>hole_size</strong> (<em>float</em>) – Specifies the maximum hole size to fill. This is represented as a
 radius to the bounding circumsphere containing the hole. Note that
 this is an approximate area; the actual area cannot be computed
-without first triangulating the hole.</p>
+without first triangulating the hole.</p></li>
+<li><p><strong>inplace</strong> (<em>bool</em><em>, </em><em>optional</em>) – Return new mesh or overwrite input.</p></li>
+</ul>
 </dd>
 <dt class="field-even">Returns</dt>
 <dd class="field-even"><p><strong>mesh</strong> – Mesh with holes filled.  None when inplace=True</p>
@@ -895,7 +939,7 @@ without first triangulating the hole.</p>
 
 <dl class="method">
 <dt id="vtki.PolyData.geodesic">
-<code class="descname">geodesic</code><span class="sig-paren">(</span><em>start_vertex</em>, <em>end_vertex</em><span class="sig-paren">)</span><a class="headerlink" href="#vtki.PolyData.geodesic" title="Permalink to this definition">¶</a></dt>
+<code class="descname">geodesic</code><span class="sig-paren">(</span><em>start_vertex</em>, <em>end_vertex</em>, <em>inplace=False</em><span class="sig-paren">)</span><a class="headerlink" href="#vtki.PolyData.geodesic" title="Permalink to this definition">¶</a></dt>
 <dd><p>Calculates the geodesic path betweeen two vertices using Dijkstra’s
 algorithm.</p>
 <dl class="field-list simple">
@@ -1087,17 +1131,28 @@ file size.</p>
 
 <dl class="method">
 <dt id="vtki.PolyData.smooth">
-<code class="descname">smooth</code><span class="sig-paren">(</span><em>n_iter=20</em>, <em>convergence=0.0</em><span class="sig-paren">)</span><a class="headerlink" href="#vtki.PolyData.smooth" title="Permalink to this definition">¶</a></dt>
+<code class="descname">smooth</code><span class="sig-paren">(</span><em>n_iter=20</em>, <em>convergence=0.0</em>, <em>edge_angle=15</em>, <em>feature_angle=45</em>, <em>boundary_smoothing=True</em>, <em>feature_smoothing=False</em>, <em>inplace=False</em><span class="sig-paren">)</span><a class="headerlink" href="#vtki.PolyData.smooth" title="Permalink to this definition">¶</a></dt>
 <dd><p>Adjust point coordinates using Laplacian smoothing.
 The effect is to “relax” the mesh, making the cells better shaped and
 the vertices more evenly distributed.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>n_iter</strong> (<em>int</em>) – number of iterations for Laplacian smoothing,</p></li>
-<li><p><strong>conversion</strong> (<em>float</em><em>, </em><em>optional</em>) – convergence criterion for the iteration process. Smaller numbers
+<li><p><strong>n_iter</strong> (<em>int</em>) – Number of iterations for Laplacian smoothing,</p></li>
+<li><p><strong>convergence</strong> (<em>float</em><em>, </em><em>optional</em>) – Convergence criterion for the iteration process. Smaller numbers
 result in more smoothing iterations. Range from (0 to 1).</p></li>
+<li><p><strong>edge_angle</strong> (<em>float</em><em>, </em><em>optional</em>) – Edge angle to control smoothing along edges (either interior or boundary).</p></li>
+<li><p><strong>feature_angle</strong> (<em>float</em><em>, </em><em>optional</em>) – Feature angle for sharp edge identification.</p></li>
+<li><p><strong>boundary_smoothing</strong> (<em>bool</em><em>, </em><em>optional</em>) – Boolean flag to control smoothing of boundary edges.</p></li>
+<li><p><strong>feature_smoothing</strong> (<em>bool</em><em>, </em><em>optional</em>) – Boolean flag to control smoothing of feature edges.</p></li>
+<li><p><strong>inplace</strong> (<em>bool</em><em>, </em><em>optional</em>) – Updates mesh in-place while returning nothing.</p></li>
 </ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>mesh</strong> – Decimated mesh. None when inplace=True.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="#vtki.PolyData" title="vtki.PolyData">vtki.PolyData</a></p>
 </dd>
 </dl>
 </dd></dl>
@@ -1168,7 +1223,7 @@ down into triangles.</p>
 
 <dl class="method">
 <dt id="vtki.PolyData.tube">
-<code class="descname">tube</code><span class="sig-paren">(</span><em>radius=None</em>, <em>scalars=None</em>, <em>capping=True</em>, <em>n_sides=20</em>, <em>radius_factor=10</em>, <em>preference='point'</em><span class="sig-paren">)</span><a class="headerlink" href="#vtki.PolyData.tube" title="Permalink to this definition">¶</a></dt>
+<code class="descname">tube</code><span class="sig-paren">(</span><em>radius=None</em>, <em>scalars=None</em>, <em>capping=True</em>, <em>n_sides=20</em>, <em>radius_factor=10</em>, <em>preference='point'</em>, <em>inplace=False</em><span class="sig-paren">)</span><a class="headerlink" href="#vtki.PolyData.tube" title="Permalink to this definition">¶</a></dt>
 <dd><p>Generate a tube around each input line. The radius of the tube can be
 set to linearly vary with a scalar value.</p>
 <dl class="field-list simple">
@@ -1180,7 +1235,14 @@ set to linearly vary with a scalar value.</p>
 <li><p><strong>n_sides</strong> (<em>int</em>) – Set the number of sides for the tube. Minimum of 3.</p></li>
 <li><p><strong>radius_factor</strong> (<em>float</em>) – Maximum tube radius in terms of a multiple of the minimum radius.</p></li>
 <li><p><strong>preference</strong> (<em>str</em>) – The field preference when searching for the scalar array by name</p></li>
+<li><p><strong>inplace</strong> (<em>bool</em><em>, </em><em>optional</em>) – Updates mesh in-place while returning nothing.</p></li>
 </ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>mesh</strong> – Tube-filtered mesh. None when inplace=True.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="#vtki.PolyData" title="vtki.PolyData">vtki.PolyData</a></p>
 </dd>
 </dl>
 </dd></dl>
