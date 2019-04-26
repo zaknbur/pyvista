@@ -11,13 +11,18 @@ Load and Plot from a File
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Read a dataset from a known file type.
-Loading a mesh is trivial.  The following code block uses a built-in example
-file and displays an airplane mesh.
+Loading a mesh is trivial - if your data is in one of the many supported
+file formats, simply use :func:`vtki.read` to load your spatially referneced
+dataset into a ``vtki`` mesh object.
+
+The following code block uses a built-in example file and displays an airplane
+mesh.
 
 
 .. code-block:: default
 
 
+    # sphinx_gallery_thumbnail_number = 5
     import vtki
     from vtki import examples
     import numpy as np
@@ -29,9 +34,8 @@ file and displays an airplane mesh.
 
 
 
-Loading a mesh is trivial.  The following code block uses a built-in example
-file, displays an airplane mesh, saves a screenshot, and returns the camera's
-position:
+The following code block uses a built-in example
+file, displays an airplane mesh and returns the camera's position:
 
 
 .. code-block:: default
@@ -39,6 +43,28 @@ position:
 
     # Get a sample file
     filename = examples.planefile
+    print(filename)
+
+
+
+
+
+.. rst-class:: sphx-glr-script-out
+
+ Out:
+
+ .. code-block:: none
+
+    /home/travis/build/vtkiorg/vtki/vtki/examples/airplane.ply
+
+
+Note the above filename, it's a ``.ply`` file - one of the many supported
+formats in ``vtki``.
+
+
+.. code-block:: default
+
+
     mesh = vtki.read(filename)
     cpos = mesh.plot()
 
@@ -51,8 +77,8 @@ position:
 
 
 
-You can also take a screenshot without creating an interactive plot window using
-the ``Plotter``:
+You can also take a screenshot without creating an interactive plot window
+using the ``Plotter``:
 
 
 .. code-block:: default
@@ -60,75 +86,13 @@ the ``Plotter``:
 
     plotter = vtki.Plotter(off_screen=True)
     plotter.add_mesh(mesh)
-    plotter.show(auto_close=False)
-    # plotter.screenshot('airplane.png')
-    plotter.close()
+    plotter.show(screenshot='myscreenshot.png')
+
 
 
 
 
 .. image:: /examples/00-load/images/sphx_glr_read-file_002.png
-    :class: sphx-glr-single-img
-
-
-
-
-The ``img`` array can be used to plot the screenshot in ``matplotlib``:
-
-
-.. code-block:: default
-
-
-    plt.imshow(plotter.image)
-    plt.show()
-
-
-
-
-.. image:: /examples/00-load/images/sphx_glr_read-file_003.png
-    :class: sphx-glr-single-img
-
-
-
-
-If you need to setup the camera you can do this by plotting first and getting
-the camera after running the ``plot`` function:
-
-
-.. code-block:: default
-
-
-    plotter = vtki.Plotter()
-    plotter.add_mesh(mesh)
-    cpos = plotter.show()
-
-
-
-
-.. image:: /examples/00-load/images/sphx_glr_read-file_004.png
-    :class: sphx-glr-single-img
-
-
-
-
-You can then use this cached camera for additional plotting without having to
-manually interact with the ``vtk`` plot window:
-
-
-.. code-block:: default
-
-
-    plotter = vtki.Plotter(off_screen=True)
-    plotter.add_mesh(mesh)
-    plotter.camera_position = cpos
-    plotter.show(auto_close=False)
-    # plotter.screenshot('airplane.png')
-    plotter.close()
-
-
-
-
-.. image:: /examples/00-load/images/sphx_glr_read-file_005.png
     :class: sphx-glr-single-img
 
 
@@ -189,10 +153,91 @@ The faces from the mesh are also directly accessible as a NumPy array:
      [1325 1334 1324]]
 
 
+Loading other files types is just as easy! Simply pass your file path to the
+:func:`vtki.read` function and that's it!
+
+Here are a few other examples - siply replace ``examples.download_*`` in the
+examples below with ``vtki.read('path/to/you/file.ext')``
+
+Example STL file:
+
+
+.. code-block:: default
+
+    mesh = examples.download_cad_model()
+    cpos = [(107., 68.5, 204.),
+            (128., 86.5, 223.5),
+            (0.45, 0.36, -0.8)]
+    mesh.plot(cpos=cpos)
+
+
+
+
+.. image:: /examples/00-load/images/sphx_glr_read-file_003.png
+    :class: sphx-glr-single-img
+
+
+
+
+Example OBJ file
+
+
+.. code-block:: default
+
+    mesh = examples.download_doorman()
+    mesh.plot(cpos='xy')
+
+
+
+
+
+.. image:: /examples/00-load/images/sphx_glr_read-file_004.png
+    :class: sphx-glr-single-img
+
+
+
+
+Example BYU file
+
+
+.. code-block:: default
+
+    mesh = examples.download_teapot()
+    mesh.plot(cpos=[-1, 2, -5], show_edges=True)
+
+
+
+
+
+.. image:: /examples/00-load/images/sphx_glr_read-file_005.png
+    :class: sphx-glr-single-img
+
+
+
+
+Example VTK file
+
+
+.. code-block:: default
+
+    mesh = examples.download_bunny_coarse()
+    cpos = [(0.2, 0.3, 0.9),
+            (0,0,0),
+            (0,1,0)]
+    mesh.plot(cpos=cpos, show_edges=True, color=True)
+
+
+
+.. image:: /examples/00-load/images/sphx_glr_read-file_006.png
+    :class: sphx-glr-single-img
+
+
+
+
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  2.379 seconds)
+   **Total running time of the script:** ( 0 minutes  5.984 seconds)
 
 
 .. _sphx_glr_download_examples_00-load_read-file.py:
