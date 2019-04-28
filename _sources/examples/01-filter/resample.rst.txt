@@ -7,8 +7,8 @@
 .. _sphx_glr_examples_01-filter_resample.py:
 
 
-Resampling Data Sets
-~~~~~~~~~~~~~~~~~~~~
+Resampling & Interpolating
+~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Resample one mesh's point/cell arrays onto another meshes nodes.
 This example will resample a volumetric mesh's  scalar data onto the surface
@@ -18,7 +18,7 @@ of a sphere contained in that volume.
 .. code-block:: default
 
 
-    # sphinx_gallery_thumbnail_number = 1
+    # sphinx_gallery_thumbnail_number = 4
     import vtki
     from vtki import examples
     import numpy as np
@@ -75,7 +75,60 @@ Run the algorithm and plot the result
 
 
 
+
+
+
 .. image:: /examples/01-filter/images/sphx_glr_resample_002.png
+    :class: sphx-glr-single-img
+
+
+
+
+Interpolate
++++++++++++
+
+Run a resampling from an interpolation built using a Gaussian kernal
+
+
+.. code-block:: default
+
+
+    # Download sample data
+    surface = examples.download_saddle_surface()
+    points = examples.download_sparse_points()
+
+
+    p = vtki.Plotter()
+    p.add_mesh(points, point_size=30.0, render_points_as_spheres=True)
+    p.add_mesh(surface)
+    p.show()
+
+
+
+
+.. image:: /examples/01-filter/images/sphx_glr_resample_003.png
+    :class: sphx-glr-single-img
+
+
+
+
+Run the interpolation
+
+
+.. code-block:: default
+
+
+    interpolated = surface.interpolate(points, radius=12.0)
+
+
+    p = vtki.Plotter()
+    p.add_mesh(points, point_size=30.0, render_points_as_spheres=True)
+    p.add_mesh(interpolated, scalars='val')
+    p.show()
+
+
+
+.. image:: /examples/01-filter/images/sphx_glr_resample_004.png
     :class: sphx-glr-single-img
 
 
@@ -84,7 +137,7 @@ Run the algorithm and plot the result
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  4.614 seconds)
+   **Total running time of the script:** ( 0 minutes  9.072 seconds)
 
 
 .. _sphx_glr_download_examples_01-filter_resample.py:

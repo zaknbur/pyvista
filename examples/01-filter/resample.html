@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Resampling Data Sets &mdash; vtki 0.18.4 documentation</title>
+  <title>Resampling &amp; Interpolating &mdash; vtki 0.18.4 documentation</title>
   
 
   
@@ -121,7 +121,10 @@
 <li class="toctree-l3"><a class="reference internal" href="extract-edges.html">Extract Edges</a></li>
 <li class="toctree-l3"><a class="reference internal" href="geodesic.html">Geodesic Paths</a></li>
 <li class="toctree-l3"><a class="reference internal" href="poly-ray-trace.html">Ray Tracing</a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="#">Resampling Data Sets</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Resampling &amp; Interpolating</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#interpolate">Interpolate</a></li>
+</ul>
+</li>
 <li class="toctree-l3"><a class="reference internal" href="slicing.html">Slicing</a></li>
 <li class="toctree-l3"><a class="reference internal" href="streamlines.html">Streamlines</a></li>
 <li class="toctree-l3"><a class="reference internal" href="using-filters.html">Using Common Filters</a></li>
@@ -194,7 +197,7 @@
         
           <li><a href="../index.html">Quick Examples</a> &raquo;</li>
         
-      <li>Resampling Data Sets</li>
+      <li>Resampling &amp; Interpolating</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -219,12 +222,12 @@
 <p class="admonition-title">Note</p>
 <p>Click <a class="reference internal" href="#sphx-glr-download-examples-01-filter-resample-py"><span class="std std-ref">here</span></a> to download the full example code</p>
 </div>
-<div class="sphx-glr-example-title section" id="resampling-data-sets">
-<span id="sphx-glr-examples-01-filter-resample-py"></span><h1>Resampling Data Sets<a class="headerlink" href="#resampling-data-sets" title="Permalink to this headline">¶</a></h1>
+<div class="sphx-glr-example-title section" id="resampling-interpolating">
+<span id="sphx-glr-examples-01-filter-resample-py"></span><h1>Resampling &amp; Interpolating<a class="headerlink" href="#resampling-interpolating" title="Permalink to this headline">¶</a></h1>
 <p>Resample one mesh’s point/cell arrays onto another meshes nodes.
 This example will resample a volumetric mesh’s  scalar data onto the surface
 of a sphere contained in that volume.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># sphinx_gallery_thumbnail_number = 1</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># sphinx_gallery_thumbnail_number = 4</span>
 <span class="kn">import</span> <span class="nn">vtki</span>
 <span class="kn">from</span> <span class="nn">vtki</span> <span class="k">import</span> <span class="n">examples</span>
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
@@ -252,7 +255,33 @@ of a sphere contained in that volume.</p>
 </pre></div>
 </div>
 <img alt="../../_images/sphx_glr_resample_002.png" class="sphx-glr-single-img" src="../../_images/sphx_glr_resample_002.png" />
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  4.614 seconds)</p>
+<div class="section" id="interpolate">
+<h2>Interpolate<a class="headerlink" href="#interpolate" title="Permalink to this headline">¶</a></h2>
+<p>Run a resampling from an interpolation built using a Gaussian kernal</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Download sample data</span>
+<span class="n">surface</span> <span class="o">=</span> <span class="n">examples</span><span class="o">.</span><span class="n">download_saddle_surface</span><span class="p">()</span>
+<span class="n">points</span> <span class="o">=</span> <span class="n">examples</span><span class="o">.</span><span class="n">download_sparse_points</span><span class="p">()</span>
+
+
+<span class="n">p</span> <span class="o">=</span> <span class="n">vtki</span><span class="o">.</span><span class="n">Plotter</span><span class="p">()</span>
+<span class="n">p</span><span class="o">.</span><span class="n">add_mesh</span><span class="p">(</span><span class="n">points</span><span class="p">,</span> <span class="n">point_size</span><span class="o">=</span><span class="mf">30.0</span><span class="p">,</span> <span class="n">render_points_as_spheres</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">p</span><span class="o">.</span><span class="n">add_mesh</span><span class="p">(</span><span class="n">surface</span><span class="p">)</span>
+<span class="n">p</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+<img alt="../../_images/sphx_glr_resample_003.png" class="sphx-glr-single-img" src="../../_images/sphx_glr_resample_003.png" />
+<p>Run the interpolation</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">interpolated</span> <span class="o">=</span> <span class="n">surface</span><span class="o">.</span><span class="n">interpolate</span><span class="p">(</span><span class="n">points</span><span class="p">,</span> <span class="n">radius</span><span class="o">=</span><span class="mf">12.0</span><span class="p">)</span>
+
+
+<span class="n">p</span> <span class="o">=</span> <span class="n">vtki</span><span class="o">.</span><span class="n">Plotter</span><span class="p">()</span>
+<span class="n">p</span><span class="o">.</span><span class="n">add_mesh</span><span class="p">(</span><span class="n">points</span><span class="p">,</span> <span class="n">point_size</span><span class="o">=</span><span class="mf">30.0</span><span class="p">,</span> <span class="n">render_points_as_spheres</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">p</span><span class="o">.</span><span class="n">add_mesh</span><span class="p">(</span><span class="n">interpolated</span><span class="p">,</span> <span class="n">scalars</span><span class="o">=</span><span class="s1">&#39;val&#39;</span><span class="p">)</span>
+<span class="n">p</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+<img alt="../../_images/sphx_glr_resample_004.png" class="sphx-glr-single-img" src="../../_images/sphx_glr_resample_004.png" />
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  9.072 seconds)</p>
 <div class="sphx-glr-footer class sphx-glr-footer-example docutils container" id="sphx-glr-download-examples-01-filter-resample-py">
 <div class="sphx-glr-download docutils container">
 <p><a class="reference download internal" download="" href="../../_downloads/673207048ef640e9ccf222fe62cccc8a/resample.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">resample.py</span></code></a></p>
@@ -262,6 +291,7 @@ of a sphere contained in that volume.</p>
 </div>
 </div>
 <p class="sphx-glr-signature"><a class="reference external" href="https://sphinx-gallery.readthedocs.io">Gallery generated by Sphinx-Gallery</a></p>
+</div>
 </div>
 
 

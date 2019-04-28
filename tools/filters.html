@@ -272,52 +272,55 @@ all the the following filters available as callable methods directly from any
 <tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">glyph</span></code>([orient, scale, factor, geom])</p></td>
 <td><p>Copies a geometric representation (called a glyph) to every point in the input dataset.</p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">outline</span></code>([generate_faces])</p></td>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">interpolate</span></code>(points[, sharpness, radius, …])</p></td>
+<td><p>Interpolate values onto this mesh from the point data of a given <a class="reference internal" href="../types/points.html#vtki.PolyData" title="vtki.PolyData"><code class="xref py py-class docutils literal notranslate"><span class="pre">vtki.PolyData</span></code></a> object (typically a point cloud).</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">outline</span></code>([generate_faces])</p></td>
 <td><p>Produces an outline of the full extent for the input dataset.</p></td>
 </tr>
-<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">outline_corners</span></code>([factor])</p></td>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">outline_corners</span></code>([factor])</p></td>
 <td><p>Produces an outline of the corners for the input dataset.</p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">point_data_to_cell_data</span></code>([pass_point_data])</p></td>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">point_data_to_cell_data</span></code>([pass_point_data])</p></td>
 <td><p>Transforms point data (i.e., data specified per node) into cell data (i.e., data specified within cells).</p></td>
 </tr>
-<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">sample</span></code>(target[, tolerance, …])</p></td>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">sample</span></code>(target[, tolerance, …])</p></td>
 <td><p>Resample scalar data from a passed mesh onto this mesh using <code class="xref py py-class docutils literal notranslate"><span class="pre">vtk.vtkResampleWithDataSet</span></code>.</p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">select_enclosed_points</span></code>(surface[, tolerance, …])</p></td>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">select_enclosed_points</span></code>(surface[, tolerance, …])</p></td>
 <td><p>Mark points as to whether they are inside a closed surface.</p></td>
 </tr>
-<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">slice</span></code>([normal, origin, generate_triangles, …])</p></td>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">slice</span></code>([normal, origin, generate_triangles, …])</p></td>
 <td><p>Slice a dataset by a plane at the specified origin and normal vector orientation.</p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">slice_along_axis</span></code>([n, axis, tolerance, …])</p></td>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">slice_along_axis</span></code>([n, axis, tolerance, …])</p></td>
 <td><p>Create many slices of the input dataset along a specified axis.</p></td>
 </tr>
-<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">slice_orthogonal</span></code>([x, y, z, …])</p></td>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">slice_orthogonal</span></code>([x, y, z, …])</p></td>
 <td><p>Creates three orthogonal slices through the dataset on the three caresian planes.</p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">split_bodies</span></code>([label])</p></td>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">split_bodies</span></code>([label])</p></td>
 <td><p>Find, label, and split connected bodies/volumes.</p></td>
 </tr>
-<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">streamlines</span></code>([vectors, source_center, …])</p></td>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">streamlines</span></code>([vectors, source_center, …])</p></td>
 <td><p>Integrate a vector field to generate streamlines.</p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">texture_map_to_plane</span></code>([origin, point_u, …])</p></td>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">texture_map_to_plane</span></code>([origin, point_u, …])</p></td>
 <td><p>Texture map this dataset to a user defined plane.</p></td>
 </tr>
-<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">threshold</span></code>([value, scalars, invert, …])</p></td>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">threshold</span></code>([value, scalars, invert, …])</p></td>
 <td><p>This filter will apply a <code class="docutils literal notranslate"><span class="pre">vtkThreshold</span></code> filter to the input dataset and return the resulting object.</p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">threshold_percent</span></code>([percent, scalars, …])</p></td>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">threshold_percent</span></code>([percent, scalars, …])</p></td>
 <td><p>Thresholds the dataset by a percentage of its range on the active scalar array or as specified</p></td>
 </tr>
-<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">triangulate</span></code>()</p></td>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">triangulate</span></code>()</p></td>
 <td><p>Returns an all triangle mesh.</p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">warp_by_scalar</span></code>([scalars, scale_factor, …])</p></td>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">warp_by_scalar</span></code>([scalars, scale_factor, …])</p></td>
 <td><p>Warp the dataset’s points by a point data scalar array’s values.</p></td>
 </tr>
-<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">wireframe</span></code>()</p></td>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">wireframe</span></code>()</p></td>
 <td><p>Extract all the internal/external edges of the dataset as PolyData.</p></td>
 </tr>
 </tbody>
@@ -543,6 +546,31 @@ data or vector magnitude.</p>
 <li><p><strong>scale</strong> (<em>bool</em>) – Use the active scalars to scale the glyphs</p></li>
 <li><p><strong>factor</strong> (<em>float</em>) – Scale factor applied to sclaing array</p></li>
 <li><p><strong>geom</strong> (<em>vtk.vtkDataSet</em>) – The geometry to use for the glyph</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="vtki.DataSetFilters.interpolate">
+<code class="descname">interpolate</code><span class="sig-paren">(</span><em>points</em>, <em>sharpness=2</em>, <em>radius=1.0</em>, <em>dimensions=(101</em>, <em>101</em>, <em>101)</em>, <em>pass_cell_arrays=True</em>, <em>pass_point_arrays=True</em><span class="sig-paren">)</span><a class="headerlink" href="#vtki.DataSetFilters.interpolate" title="Permalink to this definition">¶</a></dt>
+<dd><p>Interpolate values onto this mesh from the point data of a given
+<a class="reference internal" href="../types/points.html#vtki.PolyData" title="vtki.PolyData"><code class="xref py py-class docutils literal notranslate"><span class="pre">vtki.PolyData</span></code></a> object (typically a point cloud).</p>
+<p>This uses a guassian interpolation kernel. Use the <code class="docutils literal notranslate"><span class="pre">sharpness</span></code> and
+<code class="docutils literal notranslate"><span class="pre">radius</span></code> parameters to adjust this kernel.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>points</strong> (<a class="reference internal" href="../types/points.html#vtki.PolyData" title="vtki.PolyData"><em>vtki.PolyData</em></a>) – The points whose values will be interpolated onto this mesh.</p></li>
+<li><p><strong>sharpness</strong> (<em>float</em>) – Set / Get the sharpness (i.e., falloff) of the Gaussian. By
+default Sharpness=2. As the sharpness increases the effects of
+distant points are reduced.</p></li>
+<li><p><strong>radius</strong> (<em>float</em>) – Specify the radius within which the basis points must lie.</p></li>
+<li><p><strong>dimensions</strong> (<em>tuple</em><em>(</em><em>int</em><em>)</em>) – When interpolating the points, they are first interpolating on to a
+<a class="reference internal" href="../types/grids.html#vtki.UniformGrid" title="vtki.UniformGrid"><code class="xref py py-class docutils literal notranslate"><span class="pre">vtki.UniformGrid</span></code></a> with the same spatial extent -
+<code class="docutils literal notranslate"><span class="pre">dimensions</span></code> is number of points along each axis for that grid.</p></li>
+<li><p><strong>pass_cell_arrays</strong> (<em>bool</em><em>, </em><em>optional</em>) – Preserve source mesh’s original cell data arrays</p></li>
+<li><p><strong>pass_point_arrays</strong> (<em>bool</em><em>, </em><em>optional</em>) – Preserve source mesh’s original point data arrays</p></li>
 </ul>
 </dd>
 </dl>
