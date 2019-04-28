@@ -315,40 +315,43 @@ This base class is analogous to VTK’s <code class="docutils literal notranslat
 <tr class="row-odd"><td><p><a class="reference internal" href="#vtki.Common.extent" title="vtki.Common.extent"><code class="xref py py-obj docutils literal notranslate"><span class="pre">extent</span></code></a></p></td>
 <td><p>The range of the bounding box</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#vtki.Common.n_cells" title="vtki.Common.n_cells"><code class="xref py py-obj docutils literal notranslate"><span class="pre">n_cells</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#vtki.Common.length" title="vtki.Common.length"><code class="xref py py-obj docutils literal notranslate"><span class="pre">length</span></code></a></p></td>
+<td><p>the length of the diagonal of the bounding box</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#vtki.Common.n_cells" title="vtki.Common.n_cells"><code class="xref py py-obj docutils literal notranslate"><span class="pre">n_cells</span></code></a></p></td>
 <td><p>The number of cells in the entire dataset</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#vtki.Common.n_points" title="vtki.Common.n_points"><code class="xref py py-obj docutils literal notranslate"><span class="pre">n_points</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#vtki.Common.n_points" title="vtki.Common.n_points"><code class="xref py py-obj docutils literal notranslate"><span class="pre">n_points</span></code></a></p></td>
 <td><p>The number of points in the entire dataset</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#vtki.Common.n_scalars" title="vtki.Common.n_scalars"><code class="xref py py-obj docutils literal notranslate"><span class="pre">n_scalars</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#vtki.Common.n_scalars" title="vtki.Common.n_scalars"><code class="xref py py-obj docutils literal notranslate"><span class="pre">n_scalars</span></code></a></p></td>
 <td><p>The number of scalara arrays present in the dataset</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#vtki.Common.number_of_cells" title="vtki.Common.number_of_cells"><code class="xref py py-obj docutils literal notranslate"><span class="pre">number_of_cells</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#vtki.Common.number_of_cells" title="vtki.Common.number_of_cells"><code class="xref py py-obj docutils literal notranslate"><span class="pre">number_of_cells</span></code></a></p></td>
 <td><p>returns the number of cells</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#vtki.Common.number_of_points" title="vtki.Common.number_of_points"><code class="xref py py-obj docutils literal notranslate"><span class="pre">number_of_points</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#vtki.Common.number_of_points" title="vtki.Common.number_of_points"><code class="xref py py-obj docutils literal notranslate"><span class="pre">number_of_points</span></code></a></p></td>
 <td><p>returns the number of points</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#vtki.Common.point_arrays" title="vtki.Common.point_arrays"><code class="xref py py-obj docutils literal notranslate"><span class="pre">point_arrays</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#vtki.Common.point_arrays" title="vtki.Common.point_arrays"><code class="xref py py-obj docutils literal notranslate"><span class="pre">point_arrays</span></code></a></p></td>
 <td><p>Returns the all point arrays</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#vtki.Common.points" title="vtki.Common.points"><code class="xref py py-obj docutils literal notranslate"><span class="pre">points</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#vtki.Common.points" title="vtki.Common.points"><code class="xref py py-obj docutils literal notranslate"><span class="pre">points</span></code></a></p></td>
 <td><p>returns a pointer to the points as a numpy object</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#vtki.Common.scalar_names" title="vtki.Common.scalar_names"><code class="xref py py-obj docutils literal notranslate"><span class="pre">scalar_names</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#vtki.Common.scalar_names" title="vtki.Common.scalar_names"><code class="xref py py-obj docutils literal notranslate"><span class="pre">scalar_names</span></code></a></p></td>
 <td><p>A list of scalar names for the dataset.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#vtki.Common.t_coords" title="vtki.Common.t_coords"><code class="xref py py-obj docutils literal notranslate"><span class="pre">t_coords</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#vtki.Common.t_coords" title="vtki.Common.t_coords"><code class="xref py py-obj docutils literal notranslate"><span class="pre">t_coords</span></code></a></p></td>
 <td><p>The active texture coordinates on the points</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#vtki.Common.textures" title="vtki.Common.textures"><code class="xref py py-obj docutils literal notranslate"><span class="pre">textures</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#vtki.Common.textures" title="vtki.Common.textures"><code class="xref py py-obj docutils literal notranslate"><span class="pre">textures</span></code></a></p></td>
 <td><p>A dictionary to hold <code class="docutils literal notranslate"><span class="pre">vtk.vtkTexture</span></code> objects that can be associated with this dataset.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#vtki.Common.vectors" title="vtki.Common.vectors"><code class="xref py py-obj docutils literal notranslate"><span class="pre">vectors</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#vtki.Common.vectors" title="vtki.Common.vectors"><code class="xref py py-obj docutils literal notranslate"><span class="pre">vectors</span></code></a></p></td>
 <td><p>Returns active vectors</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#vtki.Common.volume" title="vtki.Common.volume"><code class="xref py py-obj docutils literal notranslate"><span class="pre">volume</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#vtki.Common.volume" title="vtki.Common.volume"><code class="xref py py-obj docutils literal notranslate"><span class="pre">volume</span></code></a></p></td>
 <td><p>Mesh volume</p></td>
 </tr>
 </tbody>
@@ -563,6 +566,12 @@ search for in the dataset.  Must be either <code class="docutils literal notrans
 <code class="descname">head</code><span class="sig-paren">(</span><em>display=True</em>, <em>html=None</em><span class="sig-paren">)</span><a class="headerlink" href="#vtki.Common.head" title="Permalink to this definition">¶</a></dt>
 <dd><p>Return the header stats of this dataset. If in IPython, this will
 be formatted to HTML. Otherwise returns a console friendly string</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="vtki.Common.length">
+<code class="descname">length</code><a class="headerlink" href="#vtki.Common.length" title="Permalink to this definition">¶</a></dt>
+<dd><p>the length of the diagonal of the bounding box</p>
 </dd></dl>
 
 <dl class="attribute">

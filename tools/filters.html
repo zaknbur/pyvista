@@ -257,29 +257,35 @@ all the the following filters available as callable methods directly from any
 <tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">contour</span></code>([isosurfaces, scalars, …])</p></td>
 <td><p>Contours an input dataset by an array.</p></td>
 </tr>
-<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">delaunay_3d</span></code>([alpha, tol, offset])</p></td>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">decimate_boundary</span></code>([target_reduction])</p></td>
+<td><p>Return a decimated version of a triangulation of the boundary of this mesh’s outer surface</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">delaunay_3d</span></code>([alpha, tol, offset])</p></td>
 <td><p>Constructs a 3D Delaunay triangulation of the mesh.</p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">elevation</span></code>([low_point, high_point, …])</p></td>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">elevation</span></code>([low_point, high_point, …])</p></td>
 <td><p>Generate scalar values on a dataset.</p></td>
 </tr>
-<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">extract_geometry</span></code>()</p></td>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">extract_geometry</span></code>()</p></td>
 <td><p>Extract the outer surface of a volume or structured grid dataset as PolyData.</p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">glyph</span></code>([orient, scale, factor, geom])</p></td>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">glyph</span></code>([orient, scale, factor, geom])</p></td>
 <td><p>Copies a geometric representation (called a glyph) to every point in the input dataset.</p></td>
 </tr>
-<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">outline</span></code>([generate_faces])</p></td>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">outline</span></code>([generate_faces])</p></td>
 <td><p>Produces an outline of the full extent for the input dataset.</p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">outline_corners</span></code>([factor])</p></td>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">outline_corners</span></code>([factor])</p></td>
 <td><p>Produces an outline of the corners for the input dataset.</p></td>
 </tr>
-<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">point_data_to_cell_data</span></code>([pass_point_data])</p></td>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">point_data_to_cell_data</span></code>([pass_point_data])</p></td>
 <td><p>Transforms point data (i.e., data specified per node) into cell data (i.e., data specified within cells).</p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">sample</span></code>(target[, tolerance, …])</p></td>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">sample</span></code>(target[, tolerance, …])</p></td>
 <td><p>Resample scalar data from a passed mesh onto this mesh using <code class="xref py py-class docutils literal notranslate"><span class="pre">vtk.vtkResampleWithDataSet</span></code>.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">select_enclosed_points</span></code>(surface[, tolerance, …])</p></td>
+<td><p>Mark points as to whether they are inside a closed surface.</p></td>
 </tr>
 <tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">slice</span></code>([normal, origin, generate_triangles, …])</p></td>
 <td><p>Slice a dataset by a plane at the specified origin and normal vector orientation.</p></td>
@@ -293,22 +299,25 @@ all the the following filters available as callable methods directly from any
 <tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">split_bodies</span></code>([label])</p></td>
 <td><p>Find, label, and split connected bodies/volumes.</p></td>
 </tr>
-<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">texture_map_to_plane</span></code>([origin, point_u, …])</p></td>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">streamlines</span></code>([vectors, source_center, …])</p></td>
+<td><p>Integrate a vector field to generate streamlines.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">texture_map_to_plane</span></code>([origin, point_u, …])</p></td>
 <td><p>Texture map this dataset to a user defined plane.</p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">threshold</span></code>([value, scalars, invert, …])</p></td>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">threshold</span></code>([value, scalars, invert, …])</p></td>
 <td><p>This filter will apply a <code class="docutils literal notranslate"><span class="pre">vtkThreshold</span></code> filter to the input dataset and return the resulting object.</p></td>
 </tr>
-<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">threshold_percent</span></code>([percent, scalars, …])</p></td>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">threshold_percent</span></code>([percent, scalars, …])</p></td>
 <td><p>Thresholds the dataset by a percentage of its range on the active scalar array or as specified</p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">triangulate</span></code>()</p></td>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">triangulate</span></code>()</p></td>
 <td><p>Returns an all triangle mesh.</p></td>
 </tr>
-<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">warp_by_scalar</span></code>([scalars, scale_factor, …])</p></td>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">warp_by_scalar</span></code>([scalars, scale_factor, …])</p></td>
 <td><p>Warp the dataset’s points by a point data scalar array’s values.</p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">wireframe</span></code>()</p></td>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">wireframe</span></code>()</p></td>
 <td><p>Extract all the internal/external edges of the dataset as PolyData.</p></td>
 </tr>
 </tbody>
@@ -434,6 +443,21 @@ data range.</p></li>
 <li><p><strong>preference</strong> (<em>str</em><em>, </em><em>optional</em>) – When scalars is specified, this is the perfered scalar type to
 search for in the dataset.  Must be either <code class="docutils literal notranslate"><span class="pre">'point'</span></code> or <code class="docutils literal notranslate"><span class="pre">'cell'</span></code></p></li>
 </ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="vtki.DataSetFilters.decimate_boundary">
+<code class="descname">decimate_boundary</code><span class="sig-paren">(</span><em>target_reduction=0.5</em><span class="sig-paren">)</span><a class="headerlink" href="#vtki.DataSetFilters.decimate_boundary" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return a decimated version of a triangulation of the boundary of
+this mesh’s outer surface</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>target_reduction</strong> (<em>float</em>) – Fraction of the original mesh to remove. Default is <code class="docutils literal notranslate"><span class="pre">0.5</span></code>
+TargetReduction is set to <code class="docutils literal notranslate"><span class="pre">0.9</span></code>, this filter will try to reduce
+the data set to 10% of its original size and will remove 90%
+of the input triangles.</p>
 </dd>
 </dl>
 </dd></dl>
@@ -582,6 +606,41 @@ cell of the input.  If not given, tolerance automatically generated.</p></li>
 </dd></dl>
 
 <dl class="method">
+<dt id="vtki.DataSetFilters.select_enclosed_points">
+<code class="descname">select_enclosed_points</code><span class="sig-paren">(</span><em>surface</em>, <em>tolerance=0.001</em>, <em>inside_out=False</em>, <em>check_surface=True</em><span class="sig-paren">)</span><a class="headerlink" href="#vtki.DataSetFilters.select_enclosed_points" title="Permalink to this definition">¶</a></dt>
+<dd><p>Mark points as to whether they are inside a closed surface.
+This evaluates all the input points to determine whether they are in an
+enclosed surface. The filter produces a (0,1) mask
+(in the form of a vtkDataArray) that indicates whether points are
+outside (mask value=0) or inside (mask value=1) a provided surface.
+(The name of the output vtkDataArray is “SelectedPointsArray”.)</p>
+<p>The filter assumes that the surface is closed and manifold. A boolean
+flag can be set to force the filter to first check whether this is
+true. If false, all points will be marked outside. Note that if this
+check is not performed and the surface is not closed, the results are
+undefined.</p>
+<p>This filter produces and output data array, but does not modify the
+input dataset. If you wish to extract cells or poinrs, various
+threshold filters are available (i.e., threshold the output array).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>surface</strong> (<a class="reference internal" href="../types/points.html#vtki.PolyData" title="vtki.PolyData"><em>vtki.PolyData</em></a>) – Set the surface to be used to test for containment. This must be a
+<a class="reference internal" href="../types/points.html#vtki.PolyData" title="vtki.PolyData"><code class="xref py py-class docutils literal notranslate"><span class="pre">vtki.PolyData</span></code></a> object.</p></li>
+<li><p><strong>tolerance</strong> (<em>float</em>) – The tolerance on the intersection. The tolerance is expressed as a
+fraction of the bounding box of the enclosing surface.</p></li>
+<li><p><strong>inside_out</strong> (<em>bool</em>) – By default, points inside the surface are marked inside or sent
+to the output. If <code class="docutils literal notranslate"><span class="pre">inside_out</span></code> is <code class="docutils literal notranslate"><span class="pre">True</span></code>, then the points
+outside the surface are marked inside.</p></li>
+<li><p><strong>check_surface</strong> (<em>bool</em>) – Specify whether to check the surface for closure. If on, then the
+algorithm first checks to see if the surface is closed and
+manifold.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
 <dt id="vtki.DataSetFilters.slice">
 <code class="descname">slice</code><span class="sig-paren">(</span><em>normal='x'</em>, <em>origin=None</em>, <em>generate_triangles=False</em>, <em>contour=False</em><span class="sig-paren">)</span><a class="headerlink" href="#vtki.DataSetFilters.slice" title="Permalink to this definition">¶</a></dt>
 <dd><p>Slice a dataset by a plane at the specified origin and normal vector
@@ -650,6 +709,72 @@ different connected bodies into blocks in a MultiBlock dataset.</p>
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>label</strong> (<em>bool</em>) – A flag on whether to keep the ID arrays given by the
 <code class="docutils literal notranslate"><span class="pre">connectivity</span></code> filter.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="vtki.DataSetFilters.streamlines">
+<code class="descname">streamlines</code><span class="sig-paren">(</span><em>vectors=None</em>, <em>source_center=None</em>, <em>source_radius=None</em>, <em>n_points=100</em>, <em>integrator_type=45</em>, <em>integration_direction='both'</em>, <em>surface_streamlines=False</em>, <em>initial_step_length=0.5</em>, <em>step_unit='cl'</em>, <em>min_step_length=0.01</em>, <em>max_step_length=1.0</em>, <em>max_steps=2000</em>, <em>terminal_speed=1e-12</em>, <em>max_error=1e-06</em>, <em>max_time=None</em>, <em>compute_vorticity=True</em>, <em>rotation_scale=1.0</em>, <em>interpolator_type='point'</em>, <em>start_position=(0.0</em>, <em>0.0</em>, <em>0.0)</em>, <em>return_source=False</em><span class="sig-paren">)</span><a class="headerlink" href="#vtki.DataSetFilters.streamlines" title="Permalink to this definition">¶</a></dt>
+<dd><p>Integrate a vector field to generate streamlines. The integration is
+performed using a specified integrator, by default Runge-Kutta2.
+This supports integration through any type of dataset.
+Thus if the dataset contains 2D cells like polygons or triangles, the
+integration is constrained to lie on the surface defined by 2D cells.</p>
+<p>This produces polylines as the output, with each cell
+(i.e., polyline) representing a streamline. The attribute values
+associated with each streamline are stored in the cell data, whereas
+those associated with streamline-points are stored in the point data.</p>
+<p>This uses a Sphere as the source - set it’s location and radius via
+the <code class="docutils literal notranslate"><span class="pre">source_center</span></code> and <code class="docutils literal notranslate"><span class="pre">source_radius</span></code> keyword arguments.
+You can retrieve the source as <a class="reference internal" href="../types/points.html#vtki.PolyData" title="vtki.PolyData"><code class="xref py py-class docutils literal notranslate"><span class="pre">vtki.PolyData</span></code></a> by specifying
+<code class="docutils literal notranslate"><span class="pre">return_source=True</span></code>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>vectors</strong> (<em>str</em>) – The string name of the active vector field to integrate across</p></li>
+<li><p><strong>source_center</strong> (<em>tuple</em><em>(</em><em>float</em><em>)</em>) – Length 3 tuple of floats defining the center of the source
+particles. Defaults to the center of the dataset</p></li>
+<li><p><strong>source_radius</strong> (<em>float</em>) – Float radius of the source particle cloud. Defaults to one-tenth of
+the diagonal of the dataset’s spatial extent</p></li>
+<li><p><strong>n_points</strong> (<em>int</em>) – Number of particles present in source sphere</p></li>
+<li><p><strong>integrator_type</strong> (<em>int</em>) – The integrator type to be used for streamline generation.
+The default is Runge-Kutta45. The recognized solvers are:
+RUNGE_KUTTA2 (<code class="docutils literal notranslate"><span class="pre">2</span></code>),  RUNGE_KUTTA4 (<code class="docutils literal notranslate"><span class="pre">4</span></code>), and RUNGE_KUTTA45
+(<code class="docutils literal notranslate"><span class="pre">45</span></code>). Options are <code class="docutils literal notranslate"><span class="pre">2</span></code>, <code class="docutils literal notranslate"><span class="pre">4</span></code>, or <code class="docutils literal notranslate"><span class="pre">45</span></code>. Default is <code class="docutils literal notranslate"><span class="pre">45</span></code>.</p></li>
+<li><p><strong>integration_direction</strong> (<em>str</em>) – Specify whether the streamline is integrated in the upstream or
+downstream directions (or both). Options are <code class="docutils literal notranslate"><span class="pre">'both'</span></code>,
+<code class="docutils literal notranslate"><span class="pre">'backward'</span></code>, or <code class="docutils literal notranslate"><span class="pre">'forward'</span></code>.</p></li>
+<li><p><strong>surface_streamlines</strong> (<em>bool</em>) – Compute streamlines on a surface. Default <code class="docutils literal notranslate"><span class="pre">False</span></code></p></li>
+<li><p><strong>initial_step_length</strong> (<em>float</em>) – Initial step size used for line integration, expressed ib length
+unitsL or cell length units (see <code class="docutils literal notranslate"><span class="pre">step_unit</span></code> parameter).
+either the starting size for an adaptive integrator, e.g., RK45, or
+the constant / fixed size for non-adaptive ones, i.e., RK2 and RK4)</p></li>
+<li><p><strong>step_unit</strong> (<em>str</em>) – Uniform integration step unit. The valid unit is now limited to
+only LENGTH_UNIT (<code class="docutils literal notranslate"><span class="pre">'l'</span></code>) and CELL_LENGTH_UNIT (<code class="docutils literal notranslate"><span class="pre">'cl'</span></code>).
+Default is CELL_LENGTH_UNIT: <code class="docutils literal notranslate"><span class="pre">'cl'</span></code>.</p></li>
+<li><p><strong>min_step_length</strong> (<em>float</em>) – Minimum step size used for line integration, expressed in length or
+cell length units. Only valid for an adaptive integrator, e.g., RK45</p></li>
+<li><p><strong>max_step_length</strong> (<em>float</em>) – Maxmimum step size used for line integration, expressed in length or
+cell length units. Only valid for an adaptive integrator, e.g., RK45</p></li>
+<li><p><strong>max_steps</strong> (<em>int</em>) – Maximum number of steps for integrating a streamline.
+Defaults to <code class="docutils literal notranslate"><span class="pre">2000</span></code></p></li>
+<li><p><strong>terminal_speed</strong> (<em>float</em>) – Terminal speed value, below which integration is terminated.</p></li>
+<li><p><strong>max_error</strong> (<em>float</em>) – Maximum error tolerated throughout streamline integration.</p></li>
+<li><p><strong>max_time</strong> (<em>float</em>) – Specify the maximum length of a streamline expressed in LENGTH_UNIT.</p></li>
+<li><p><strong>compute_vorticity</strong> (<em>bool</em>) – Vorticity computation at streamline points (necessary for generating
+proper stream-ribbons using the <code class="docutils literal notranslate"><span class="pre">vtkRibbonFilter</span></code>.</p></li>
+<li><p><strong>interpolator_type</strong> (<em>str</em>) – Set the type of the velocity field interpolator to locate cells
+during streamline integration either by points or cells.
+The cell locator is more robust then the point locator. Options
+are <code class="docutils literal notranslate"><span class="pre">'point'</span></code> or <code class="docutils literal notranslate"><span class="pre">'cell'</span></code> (abreviations of <code class="docutils literal notranslate"><span class="pre">'p'</span></code> and <code class="docutils literal notranslate"><span class="pre">'c'</span></code>
+are also supported).</p></li>
+<li><p><strong>rotation_scale</strong> (<em>float</em>) – This can be used to scale the rate with which the streamribbons
+twist. The default is 1.</p></li>
+<li><p><strong>start_position</strong> (<em>tuple</em><em>(</em><em>float</em><em>)</em>) – Set the start position. Default is <code class="docutils literal notranslate"><span class="pre">(0.0,</span> <span class="pre">0.0,</span> <span class="pre">0.0)</span></code></p></li>
+<li><p><strong>return_source</strong> (<em>bool</em>) – Return the source particles as <a class="reference internal" href="../types/points.html#vtki.PolyData" title="vtki.PolyData"><code class="xref py py-class docutils literal notranslate"><span class="pre">vtki.PolyData</span></code></a> as well as the
+streamlines. This will be the second value returned if <code class="docutils literal notranslate"><span class="pre">True</span></code>.</p></li>
+</ul>
 </dd>
 </dl>
 </dd></dl>

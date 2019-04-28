@@ -265,6 +265,46 @@ Filtering
 
 .. raw:: html
 
+    <div class="sphx-glr-thumbcontainer" tooltip="Decaimate a mesh">
+
+.. only:: html
+
+    .. figure:: /examples/01-filter/images/thumb/sphx_glr_decimate_thumb.png
+
+        :ref:`sphx_glr_examples_01-filter_decimate.py`
+
+.. raw:: html
+
+    </div>
+
+
+.. toctree::
+   :hidden:
+
+   /examples/01-filter/decimate
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbcontainer" tooltip="Extract the cells in a mesh that exist inside or outside a closed surface of another mesh">
+
+.. only:: html
+
+    .. figure:: /examples/01-filter/images/thumb/sphx_glr_extract-cells-inside-surface_thumb.png
+
+        :ref:`sphx_glr_examples_01-filter_extract-cells-inside-surface.py`
+
+.. raw:: html
+
+    </div>
+
+
+.. toctree::
+   :hidden:
+
+   /examples/01-filter/extract-cells-inside-surface
+
+.. raw:: html
+
     <div class="sphx-glr-thumbcontainer" tooltip="Extracts edges from a surface.">
 
 .. only:: html
@@ -362,6 +402,26 @@ Filtering
    :hidden:
 
    /examples/01-filter/slicing
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbcontainer" tooltip="Integrate a vector field to generate streamlines.">
+
+.. only:: html
+
+    .. figure:: /examples/01-filter/images/thumb/sphx_glr_streamlines_thumb.png
+
+        :ref:`sphx_glr_examples_01-filter_streamlines.py`
+
+.. raw:: html
+
+    </div>
+
+
+.. toctree::
+   :hidden:
+
+   /examples/01-filter/streamlines
 
 .. raw:: html
 
