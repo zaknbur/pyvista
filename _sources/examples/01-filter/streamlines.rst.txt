@@ -94,7 +94,7 @@ was measured with low resolution, many streamlines travel outside the artery.
 
  .. code-block:: none
 
-    <PIL.Image.Image image mode=RGB size=2048x1536 at 0x7F6A25E29128>
+    <PIL.Image.Image image mode=RGB size=2048x1536 at 0x7F1BF303E3C8>
 
 
 Here is another example of blood flow:
@@ -140,13 +140,13 @@ Here is another example of blood flow:
 
  .. code-block:: none
 
-    <PIL.Image.Image image mode=RGB size=2048x1536 at 0x7F6A25E77898>
+    <PIL.Image.Image image mode=RGB size=2048x1536 at 0x7F1BF2FCEF60>
 
 
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  7.536 seconds)
+   **Total running time of the script:** ( 0 minutes  7.449 seconds)
 
 
 .. _sphx_glr_download_examples_01-filter_streamlines.py:
