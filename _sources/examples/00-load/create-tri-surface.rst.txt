@@ -32,7 +32,10 @@ First, create some points for the surface.
 
 
     # Define a simple Gaussian surface
-    xx, yy = np.meshgrid(np.linspace(-200,200,20), np.linspace(-200,200,20))
+    n = 20
+    x = np.linspace(-200,200, num=n) + np.random.uniform(-5, 5, size=n)
+    y = np.linspace(-200,200, num=n) + np.random.uniform(-5, 5, size=n)
+    xx, yy = np.meshgrid(x, y)
     A, b = 100, 100
     zz = A*np.exp(-0.5*((xx/b)**2. + (yy/b)**2.))
 
@@ -50,11 +53,11 @@ First, create some points for the surface.
 
  .. code-block:: none
 
-    [[-200.         -200.            1.83156389]
-     [-178.94736842 -200.            2.72934636]
-     [-157.89473684 -200.            3.89087003]
-     [-136.84210526 -200.            5.30623263]
-     [-115.78947368 -200.            6.92272913]]
+    [[-201.86923788 -200.20982538    1.75665603]
+     [-181.97628472 -200.20982538    2.57333588]
+     [-159.05173606 -200.20982538    3.80417345]
+     [-132.71771756 -200.20982538    5.58604682]
+     [-120.40913117 -200.20982538    6.52769264]]
 
 
 Now use those points to create a point cloud ``vtki`` data object. This will
@@ -99,7 +102,7 @@ triangulation to turn those boring discrete points into a connected surface.
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  1.249 seconds)
+   **Total running time of the script:** ( 0 minutes  1.231 seconds)
 
 
 .. _sphx_glr_download_examples_00-load_create-tri-surface.py:
