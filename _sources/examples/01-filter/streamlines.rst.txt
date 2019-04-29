@@ -19,7 +19,7 @@ by experimenting with the data.
 .. code-block:: default
 
 
-    # sphinx_gallery_thumbnail_number = 1
+    # sphinx_gallery_thumbnail_number = 4
     import vtki
     from vtki import examples
 
@@ -29,6 +29,8 @@ by experimenting with the data.
 
 
 
+Carotid
++++++++
 Download a sample dataset containing a vector field that can be integrated.
 
 
@@ -36,8 +38,6 @@ Download a sample dataset containing a vector field that can be integrated.
 
 
     mesh = examples.download_carotid()
-
-
 
 
 
@@ -69,7 +69,7 @@ was measured with low resolution, many streamlines travel outside the artery.
 .. code-block:: default
 
 
-    p = vtki.Plotter(notebook=1)
+    p = vtki.Plotter()
     p.add_mesh(mesh.outline(), color='k')
     p.add_mesh(streamlines.tube(radius=0.15))
     p.add_mesh(src)
@@ -88,19 +88,15 @@ was measured with low resolution, many streamlines travel outside the artery.
     :class: sphx-glr-single-img
 
 
-.. rst-class:: sphx-glr-script-out
-
- Out:
-
- .. code-block:: none
-
-    <PIL.Image.Image image mode=RGB size=2048x1536 at 0x7F1BF303E3C8>
 
 
+Blood Vessels
++++++++++++++
 Here is another example of blood flow:
 
 
 .. code-block:: default
+
 
     mesh = examples.download_blood_vessels().cell_data_to_point_data()
     mesh.set_active_scalar('velocity')
@@ -119,7 +115,7 @@ Here is another example of blood flow:
 
     boundary = mesh.decimate_boundary().wireframe()
 
-    p = vtki.Plotter(notebook=1)
+    p = vtki.Plotter()
     p.add_mesh(streamlines.tube(radius=0.2), ligthing=False)
     p.add_mesh(src)
     p.add_mesh(boundary, color='grey', opacity=0.25)
@@ -130,23 +126,68 @@ Here is another example of blood flow:
 
 
 
+
+
 .. image:: /examples/01-filter/images/sphx_glr_streamlines_002.png
     :class: sphx-glr-single-img
 
 
-.. rst-class:: sphx-glr-script-out
 
- Out:
 
- .. code-block:: none
+Kitchen
++++++++
 
-    <PIL.Image.Image image mode=RGB size=2048x1536 at 0x7F1BF2FCEF60>
+
+
+.. code-block:: default
+
+    kpos = [(-6.68, 11.9, 11.6),
+            (3.5, 2.5, 1.26),
+            (0.45, -0.4, 0.8)]
+
+    mesh = examples.download_kitchen()
+    kitchen = examples.download_kitchen(split=True)
+
+
+
+
+
+
+
+
+.. code-block:: default
+
+    streamlines = mesh.streamlines(n_points=40,
+                                   source_center=(0.08, 3, 0.71))
+
+
+
+
+
+
+
+
+.. code-block:: default
+
+    p = vtki.Plotter()
+    p.add_mesh(mesh.outline(), color='k')
+    p.add_mesh(kitchen, color=True)
+    p.add_mesh(streamlines.tube(radius=0.01), scalars='velocity', lighting=False)
+    p.camera_position = kpos
+    p.show()
+
+
+
+.. image:: /examples/01-filter/images/sphx_glr_streamlines_003.png
+    :class: sphx-glr-single-img
+
+
 
 
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  7.449 seconds)
+   **Total running time of the script:** ( 0 minutes  13.950 seconds)
 
 
 .. _sphx_glr_download_examples_01-filter_streamlines.py:
