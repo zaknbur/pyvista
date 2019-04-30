@@ -317,7 +317,7 @@ all the the following filters available as callable methods directly from any
 <tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">triangulate</span></code>()</p></td>
 <td><p>Returns an all triangle mesh.</p></td>
 </tr>
-<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">warp_by_scalar</span></code>([scalars, scale_factor, …])</p></td>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">warp_by_scalar</span></code>([scalars, factor, normal, …])</p></td>
 <td><p>Warp the dataset’s points by a point data scalar array’s values.</p></td>
 </tr>
 <tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">wireframe</span></code>()</p></td>
@@ -902,7 +902,7 @@ down into triangles.</p>
 
 <dl class="method">
 <dt id="vtki.DataSetFilters.warp_by_scalar">
-<code class="descname">warp_by_scalar</code><span class="sig-paren">(</span><em>scalars=None</em>, <em>scale_factor=1.0</em>, <em>normal=None</em>, <em>inplace=False</em><span class="sig-paren">)</span><a class="headerlink" href="#vtki.DataSetFilters.warp_by_scalar" title="Permalink to this definition">¶</a></dt>
+<code class="descname">warp_by_scalar</code><span class="sig-paren">(</span><em>scalars=None</em>, <em>factor=1.0</em>, <em>normal=None</em>, <em>inplace=False</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#vtki.DataSetFilters.warp_by_scalar" title="Permalink to this definition">¶</a></dt>
 <dd><p>Warp the dataset’s points by a point data scalar array’s values.
 This modifies point coordinates by moving points along point normals by
 the scalar amount times the scale factor.</p>
@@ -910,7 +910,8 @@ the scalar amount times the scale factor.</p>
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>scalars</strong> (<em>str</em><em>, </em><em>optional</em>) – Name of scalars to warb by. Defaults to currently active scalars.</p></li>
-<li><p><strong>scale_factor</strong> (<em>float</em><em>, </em><em>optional</em>) – A scalaing factor to increase the scaling effect</p></li>
+<li><p><strong>factor</strong> (<em>float</em><em>, </em><em>optional</em>) – A scalaing factor to increase the scaling effect. Alias
+<code class="docutils literal notranslate"><span class="pre">scale_factor</span></code> also accepted - if present, overrides <code class="docutils literal notranslate"><span class="pre">factor</span></code>.</p></li>
 <li><p><strong>normal</strong> (<em>np.array</em><em>, </em><em>list</em><em>, </em><em>tuple of length 3</em>) – User specified normal. If given, data normals will be ignored and
 the given normal will be used to project the warp.</p></li>
 <li><p><strong>inplace</strong> (<em>bool</em>) – If True, the points of the give dataset will be updated.</p></li>

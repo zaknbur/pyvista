@@ -60,7 +60,7 @@ exaggerated topographic relief.
     mesh.compute_normals() # this activates the normals as well
 
     # Now use those normals to warp the surface
-    warp = mesh.warp_by_scalar(scale_factor=0.5e-5)
+    warp = mesh.warp_by_scalar(factor=0.5e-5)
 
     # And let's see it!
     warp.plot(cmap='gist_earth', show_scalar_bar=False)
@@ -76,7 +76,7 @@ exaggerated topographic relief.
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  16.366 seconds)
+   **Total running time of the script:** ( 0 minutes  16.482 seconds)
 
 
 .. _sphx_glr_download_examples_01-filter_compute-normals.py:
