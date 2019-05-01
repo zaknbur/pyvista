@@ -10,9 +10,13 @@ import vtki
 READERS = {
     # Standard dataset readers:
     '.vtk': vtk.vtkDataSetReader,
+    '.pvtk': vtk.vtkPDataSetReader,
     '.vti': vtk.vtkXMLImageDataReader,
+    '.pvti': vtk.vtkXMLPImageDataReader,
     '.vtr': vtk.vtkXMLRectilinearGridReader,
+    '.pvtr': vtk.vtkXMLPRectilinearGridReader,
     '.vtu': vtk.vtkXMLUnstructuredGridReader,
+    '.pvtu': vtk.vtkXMLPUnstructuredGridReader,
     '.ply': vtk.vtkPLYReader,
     '.obj': vtk.vtkOBJReader,
     '.stl': vtk.vtkSTLReader,
@@ -34,7 +38,8 @@ READERS = {
     '.tiff': vtk.vtkTIFFReader,
     '.tif': vtk.vtkTIFFReader,
     # Other formats:
-    '.byu': vtk.vtkBYUReader, # TODO: not tested
+    '.byu': vtk.vtkBYUReader, # TODO: not tested with this extension
+    '.g': vtk.vtkBYUReader,
     # '.chemml': vtk.vtkCMLMoleculeReader, # TODO: not tested
     # '.cml': vtk.vtkCMLMoleculeReader, # vtkMolecule is not supported by vtki
     # TODO: '.csv': vtk.vtkCSVReader, # vtkTables are currently not supported
@@ -50,13 +55,18 @@ READERS = {
     # '.particles': vtk.vtkParticleReader, # TODO: not tested
     #TODO: '.pht': vtk.vtkPhasta??????,
     #TODO: '.vpc': vtk.vtkVPIC?????,
+    # '.bin': vtk.vtkMultiBlockPLOT3DReader,# TODO: non-default routine
+    # '.tri': vtk.vtkMCubesReader, # TODO: Breaks vtki wrapping on point arrays
 }
 
 
 if (vtk.vtkVersion().GetVTKMajorVersion() >= 8 and
     vtk.vtkVersion().GetVTKMinorVersion() >= 2):
-    READERS['.sgy'] = vtk.vtkSegYReader
-    READERS['.segy'] = vtk.vtkSegYReader
+    try:
+        READERS['.sgy'] = vtk.vtkSegYReader
+        READERS['.segy'] = vtk.vtkSegYReader
+    except AttributeError:
+        pass
 
 
 def get_ext(filename):

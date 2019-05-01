@@ -653,6 +653,11 @@ class Common(DataSetFilters, object):
         return list(self.GetBounds())
 
     @property
+    def length(self):
+        """the length of the diagonal of the bounding box"""
+        return self.GetLength()
+
+    @property
     def center(self):
         """ Center of the bounding box """
         return list(self.GetCenter())
@@ -850,6 +855,10 @@ class Common(DataSetFilters, object):
 
     def __repr__(self):
         """Object representation"""
+        return self.head(display=False, html=False)
+
+    def __str__(self):
+        """Object string representation"""
         return self.head(display=False, html=False)
 
     def overwrite(self, mesh):

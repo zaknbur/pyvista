@@ -300,4 +300,23 @@ def test_smooth():
     vol = data.threshold_percent(30)
     surf = vol.extract_geometry()
     smooth = surf.smooth()
-    assert np.any(smooth)
+    assert np.any(smooth.points)
+
+
+def test_resample():
+    mesh = vtki.Sphere(center=(4.5,4.5,4.5), radius=4.5)
+    data_to_probe = examples.load_uniform()
+    result = mesh.sample(data_to_probe)
+    name = 'Spatial Point Data'
+    assert name in result.scalar_names
+    assert isinstance(result, type(mesh))
+
+
+def test_streamlines():
+    mesh = examples.download_carotid()
+    stream, src = mesh.streamlines(return_source=True, max_time=100.0,
+                            initial_step_length=2., terminal_speed=0.1,
+                           n_points=25, source_radius=2.0,
+                           source_center=(133.1, 116.3, 5.0) )
+    assert stream.n_points > 0
+    assert src.n_points == 25

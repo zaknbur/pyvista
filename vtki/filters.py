@@ -811,8 +811,8 @@ class DataSetFilters(object):
         return bodies
 
 
-    def warp_by_scalar(dataset, scalars=None, scale_factor=1.0, normal=None,
-                       in_place=False):
+    def warp_by_scalar(dataset, scalars=None, factor=1.0, normal=None,
+                       inplace=False, **kwargs):
         """
         Warp the dataset's points by a point data scalar array's values.
         This modifies point coordinates by moving points along point normals by
@@ -823,14 +823,15 @@ class DataSetFilters(object):
         scalars : str, optional
             Name of scalars to warb by. Defaults to currently active scalars.
 
-        scale_factor : float, optional
-            A scalaing factor to increase the scaling effect
+        factor : float, optional
+            A scalaing factor to increase the scaling effect. Alias
+            ``scale_factor`` also accepted - if present, overrides ``factor``.
 
         normal : np.array, list, tuple of length 3
             User specified normal. If given, data normals will be ignored and
             the given normal will be used to project the warp.
 
-        in_place : bool
+        inplace : bool
             If True, the points of the give dataset will be updated.
         """
         if scalars is None:
@@ -838,17 +839,20 @@ class DataSetFilters(object):
         arr, field = get_scalar(dataset, scalars, preference='point', info=True)
         if field != vtki.POINT_DATA_FIELD:
             raise AssertionError('Dataset can only by warped by a point data array.')
+        scale_factor = kwargs.get('scale_factor', None)
+        if scale_factor is not None:
+            factor = scale_factor
         # Run the algorithm
         alg = vtk.vtkWarpScalar()
         alg.SetInputDataObject(dataset)
         alg.SetInputArrayToProcess(0, 0, 0, field, scalars) # args: (idx, port, connection, field, name)
-        alg.SetScaleFactor(scale_factor)
+        alg.SetScaleFactor(factor)
         if normal is not None:
             alg.SetNormal(normal)
             alg.SetUseNormal(True)
         alg.Update()
         output = _get_output(alg)
-        if in_place:
+        if inplace:
             dataset.points = output.points
             return
         return output
@@ -939,3 +943,339 @@ class DataSetFilters(object):
         alg.SetOffset(offset)
         alg.Update()
         return _get_output(alg)
+
+    def select_enclosed_points(dataset, surface, tolerance=0.001,
+                inside_out=False, check_surface=True):
+        """Mark points as to whether they are inside a closed surface.
+        This evaluates all the input points to determine whether they are in an
+        enclosed surface. The filter produces a (0,1) mask
+        (in the form of a vtkDataArray) that indicates whether points are
+        outside (mask value=0) or inside (mask value=1) a provided surface.
+        (The name of the output vtkDataArray is "SelectedPointsArray".)
+
+        The filter assumes that the surface is closed and manifold. A boolean
+        flag can be set to force the filter to first check whether this is
+        true. If false, all points will be marked outside. Note that if this
+        check is not performed and the surface is not closed, the results are
+        undefined.
+
+        This filter produces and output data array, but does not modify the
+        input dataset. If you wish to extract cells or poinrs, various
+        threshold filters are available (i.e., threshold the output array).
+
+        Parameters
+        ----------
+        surface : vtki.PolyData
+            Set the surface to be used to test for containment. This must be a
+            :class:`vtki.PolyData` object.
+
+        tolerance : float
+            The tolerance on the intersection. The tolerance is expressed as a
+            fraction of the bounding box of the enclosing surface.
+
+        inside_out : bool
+            By default, points inside the surface are marked inside or sent
+            to the output. If ``inside_out`` is ``True``, then the points
+            outside the surface are marked inside.
+
+        check_surface : bool
+            Specify whether to check the surface for closure. If on, then the
+            algorithm first checks to see if the surface is closed and
+            manifold.
+        """
+        alg = vtk.vtkSelectEnclosedPoints()
+        alg.SetInputData(dataset)
+        alg.SetSurfaceData(surface)
+        alg.SetTolerance(tolerance)
+        alg.SetCheckSurface(check_surface)
+        alg.Update()
+        return _get_output(alg)
+
+
+
+    def sample(dataset, target, tolerance=None, pass_cell_arrays=True,
+                    pass_point_arrays=True):
+        """Resample scalar data from a passed mesh onto this mesh using
+        :class:`vtk.vtkResampleWithDataSet`.
+
+        Parameters
+        ----------
+        dataset: vtki.Common
+            The source vtk data object as the mesh to sample values on to
+
+        target: vtki.Common
+            The vtk data object to sample from - point and cell arrays from
+            this object are sampled onto the nodes of the ``dataset`` mesh
+
+        tolerance: flaot, optional
+            tolerance used to compute whether a point in the source is in a
+            cell of the input.  If not given, tolerance automatically generated.
+
+        pass_cell_arrays: bool, optional
+            Preserve source mesh's original cell data arrays
+
+        pass_point_arrays: bool, optional
+            Preserve source mesh's original point data arrays
+        """
+        alg = vtk.vtkResampleWithDataSet() # Construct the ResampleWithDataSet object
+        alg.SetInputData(dataset)  # Set the Input data (actually the source i.e. where to sample from)
+        alg.SetSourceData(target) # Set the Source data (actually the target, i.e. where to sample to)
+        alg.SetPassCellArrays(pass_cell_arrays)
+        alg.SetPassPointArrays(pass_point_arrays)
+        if tolerance is not None:
+            alg.SetComputeTolerance(False)
+            alg.SetTolerance(tolerance)
+        alg.Update() # Perfrom the resampling
+        return _get_output(alg)
+
+
+    def interpolate(dataset, points, sharpness=2, radius=1.0,
+            dimensions=(101, 101, 101), pass_cell_arrays=True, pass_point_arrays=True):
+        """Interpolate values onto this mesh from the point data of a given
+        :class:`vtki.PolyData` object (typically a point cloud).
+
+        This uses a guassian interpolation kernel. Use the ``sharpness`` and
+        ``radius`` parameters to adjust this kernel.
+
+        Parameters
+        ----------
+        points : vtki.PolyData
+            The points whose values will be interpolated onto this mesh.
+
+        sharpness : float
+            Set / Get the sharpness (i.e., falloff) of the Gaussian. By
+            default Sharpness=2. As the sharpness increases the effects of
+            distant points are reduced.
+
+        radius : float
+            Specify the radius within which the basis points must lie.
+
+        dimensions : tuple(int)
+            When interpolating the points, they are first interpolating on to a
+            :class:`vtki.UniformGrid` with the same spatial extent -
+            ``dimensions`` is number of points along each axis for that grid.
+
+        pass_cell_arrays: bool, optional
+            Preserve source mesh's original cell data arrays
+
+        pass_point_arrays: bool, optional
+            Preserve source mesh's original point data arrays
+        """
+        bounds = np.array(dataset.bounds)
+        dimensions = np.array(dimensions)
+        box = vtki.UniformGrid()
+        box.dimensions = dimensions
+        box.spacing = (bounds[1::2] - bounds[:-1:2]) / (dimensions - 1)
+        box.origin = bounds[::2]
+
+        gaussian_kernel = vtk.vtkGaussianKernel()
+        gaussian_kernel.SetSharpness(sharpness)
+        gaussian_kernel.SetRadius(radius)
+
+        interpolator = vtk.vtkPointInterpolator()
+        interpolator.SetInputData(box)
+        interpolator.SetSourceData(points)
+        interpolator.SetKernel(gaussian_kernel)
+        interpolator.Update()
+
+        return dataset.sample(interpolator.GetOutput(),
+                    pass_cell_arrays=pass_cell_arrays,
+                    pass_point_arrays=pass_point_arrays)
+
+    def streamlines(dataset, vectors=None, source_center=None,
+                    source_radius=None, n_points=100,
+                    integrator_type=45, integration_direction='both',
+                    surface_streamlines=False, initial_step_length=0.5,
+                    step_unit='cl', min_step_length=0.01, max_step_length=1.0,
+                    max_steps=2000, terminal_speed=1e-12, max_error=1e-6,
+                    max_time=None, compute_vorticity=True, rotation_scale=1.0,
+                    interpolator_type='point', start_position=(0.0, 0.0, 0.0),
+                    return_source=False):
+        """Integrate a vector field to generate streamlines. The integration is
+        performed using a specified integrator, by default Runge-Kutta2.
+        This supports integration through any type of dataset.
+        Thus if the dataset contains 2D cells like polygons or triangles, the
+        integration is constrained to lie on the surface defined by 2D cells.
+
+        This produces polylines as the output, with each cell
+        (i.e., polyline) representing a streamline. The attribute values
+        associated with each streamline are stored in the cell data, whereas
+        those associated with streamline-points are stored in the point data.
+
+        This uses a Sphere as the source - set it's location and radius via
+        the ``source_center`` and ``source_radius`` keyword arguments.
+        You can retrieve the source as :class:`vtki.PolyData` by specifying
+        ``return_source=True``.
+
+        Parameters
+        ----------
+        vectors : str
+            The string name of the active vector field to integrate across
+
+        source_center : tuple(float)
+            Length 3 tuple of floats defining the center of the source
+            particles. Defaults to the center of the dataset
+
+        source_radius : float
+            Float radius of the source particle cloud. Defaults to one-tenth of
+            the diagonal of the dataset's spatial extent
+
+        n_points : int
+            Number of particles present in source sphere
+
+        integrator_type : int
+            The integrator type to be used for streamline generation.
+            The default is Runge-Kutta45. The recognized solvers are:
+            RUNGE_KUTTA2 (``2``),  RUNGE_KUTTA4 (``4``), and RUNGE_KUTTA45
+            (``45``). Options are ``2``, ``4``, or ``45``. Default is ``45``.
+
+        integration_direction : str
+            Specify whether the streamline is integrated in the upstream or
+            downstream directions (or both). Options are ``'both'``,
+            ``'backward'``, or ``'forward'``.
+
+        surface_streamlines : bool
+            Compute streamlines on a surface. Default ``False``
+
+        initial_step_length : float
+            Initial step size used for line integration, expressed ib length
+            unitsL or cell length units (see ``step_unit`` parameter).
+            either the starting size for an adaptive integrator, e.g., RK45, or
+            the constant / fixed size for non-adaptive ones, i.e., RK2 and RK4)
+
+        step_unit : str
+            Uniform integration step unit. The valid unit is now limited to
+            only LENGTH_UNIT (``'l'``) and CELL_LENGTH_UNIT (``'cl'``).
+            Default is CELL_LENGTH_UNIT: ``'cl'``.
+
+        min_step_length : float
+            Minimum step size used for line integration, expressed in length or
+            cell length units. Only valid for an adaptive integrator, e.g., RK45
+
+        max_step_length : float
+            Maxmimum step size used for line integration, expressed in length or
+            cell length units. Only valid for an adaptive integrator, e.g., RK45
+
+        max_steps : int
+            Maximum number of steps for integrating a streamline.
+            Defaults to ``2000``
+
+        terminal_speed : float
+            Terminal speed value, below which integration is terminated.
+
+        max_error : float
+            Maximum error tolerated throughout streamline integration.
+
+        max_time : float
+            Specify the maximum length of a streamline expressed in LENGTH_UNIT.
+
+        compute_vorticity : bool
+            Vorticity computation at streamline points (necessary for generating
+            proper stream-ribbons using the ``vtkRibbonFilter``.
+
+        interpolator_type : str
+            Set the type of the velocity field interpolator to locate cells
+            during streamline integration either by points or cells.
+            The cell locator is more robust then the point locator. Options
+            are ``'point'`` or ``'cell'`` (abreviations of ``'p'`` and ``'c'``
+            are also supported).
+
+        rotation_scale : float
+            This can be used to scale the rate with which the streamribbons
+            twist. The default is 1.
+
+        start_position : tuple(float)
+            Set the start position. Default is ``(0.0, 0.0, 0.0)``
+
+        return_source : bool
+            Return the source particles as :class:`vtki.PolyData` as well as the
+            streamlines. This will be the second value returned if ``True``.
+        """
+        integration_direction = str(integration_direction).strip().lower()
+        if integration_direction not in ['both', 'back', 'backward', 'forward']:
+            raise RuntimeError("integration direction must be one of: 'backward', 'forward', or 'both' - not '{}'.".format(integration_direction))
+        if integrator_type not in [2, 4, 45]:
+            raise RuntimeError('integrator type must be one of `2`, `4`, or `45`.')
+        if interpolator_type not in ['c', 'cell', 'p', 'point']:
+            raise RuntimeError("interpolator type must be either 'cell' or 'point'")
+        if step_unit not in ['l', 'cl']:
+            raise RuntimeError("step unit must be either 'l' or 'cl'")
+        step_unit = {'cl':vtk.vtkStreamTracer.CELL_LENGTH_UNIT,
+                     'l':vtk.vtkStreamTracer.LENGTH_UNIT}[step_unit]
+        if isinstance(vectors, str):
+            dataset.set_active_scalar(vectors)
+            dataset.set_active_vectors(vectors)
+        if max_time is None:
+            max_velocity = dataset.get_data_range()[-1]
+            max_time = 4.0 * dataset.GetLength() / max_velocity
+        # Generate the source
+        if source_center is None:
+            source_center = dataset.center
+        if source_radius is None:
+            source_radius = dataset.length / 10.0
+        source = vtk.vtkPointSource()
+        source.SetNumberOfPoints(n_points);
+        source.SetCenter(source_center);
+        source.SetRadius(source_radius);
+        # Build the algorithm
+        alg = vtk.vtkStreamTracer()
+        # Inputs
+        alg.SetInputDataObject(dataset)
+        # NOTE: not sure why we can't pass a PolyData object
+        #       setting the connection is the only I could get it to work
+        alg.SetSourceConnection(source.GetOutputPort())
+        # general parameters
+        alg.SetComputeVorticity(compute_vorticity)
+        alg.SetInitialIntegrationStep(initial_step_length)
+        alg.SetIntegrationStepUnit(step_unit)
+        alg.SetMaximumError(max_error)
+        alg.SetMaximumIntegrationStep(max_step_length)
+        alg.SetMaximumNumberOfSteps(max_steps)
+        alg.SetMaximumPropagation(max_time)
+        alg.SetMinimumIntegrationStep(min_step_length)
+        alg.SetRotationScale(rotation_scale)
+        alg.SetStartPosition(start_position)
+        alg.SetSurfaceStreamlines(surface_streamlines)
+        alg.SetTerminalSpeed(terminal_speed)
+        # Model parameters
+        if integration_direction == 'forward':
+            alg.SetIntegrationDirectionToForward()
+        elif integration_direction in ['backward', 'back']:
+            alg.SetIntegrationDirectionToBackward()
+        else:
+            alg.SetIntegrationDirectionToBoth()
+        # set integrator type
+        if integrator_type == 2:
+            alg.SetIntegratorTypeToRungeKutta2()
+        elif integrator_type == 4:
+            alg.SetIntegratorTypeToRungeKutta4()
+        else:
+            alg.SetIntegratorTypeToRungeKutta45()
+        # set interpolator type
+        if interpolator_type in ['c', 'cell']:
+            alg.SetInterpolatorTypeToCellLocator()
+        else:
+            alg.SetInterpolatorTypeToDataSetPointLocator()
+        # run the algorithm
+        alg.Update()
+        output = _get_output(alg)
+        if return_source:
+            source.Update()
+            src = vtki.wrap(source.GetOutput())
+            return output, src
+        return output
+
+
+    def decimate_boundary(dataset, target_reduction=0.5):
+        """Return a decimated version of a triangulation of the boundary of
+        this mesh's outer surface
+
+        Parameters
+        ----------
+        target_reduction : float
+            Fraction of the original mesh to remove. Default is ``0.5``
+            TargetReduction is set to ``0.9``, this filter will try to reduce
+            the data set to 10% of its original size and will remove 90%
+            of the input triangles.
+        """
+        return dataset.extract_geometry().tri_filter().decimate(target_reduction)

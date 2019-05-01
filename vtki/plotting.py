@@ -77,6 +77,7 @@ rcParams = {
     'interactive' : False,
     'render_points_as_spheres' : False,
     'use_panel' : True,
+    'transparent_background' : False
 }
 
 DEFAULT_THEME = dict(rcParams)
@@ -283,17 +284,22 @@ def plot_arrows(cent, direction, **kwargs):
     return plot([cent, direction], **kwargs)
 
 
-def running_xserver():
+def system_supports_plotting():
     """
     Check if x server is running
 
     Returns
     -------
-    running_xserver : bool
+    system_supports_plotting : bool
         True when on Linux and running an xserver.  Returns None when
         on a non-linux platform.
 
     """
+    try:
+        if os.environ['ALLOW_PLOTTING'].lower() == 'true':
+            return True
+    except KeyError:
+        pass
     try:
         p = Popen(["xset", "-q"], stdout=PIPE, stderr=PIPE)
         p.communicate()
@@ -336,7 +342,7 @@ class BasePlotter(object):
     def __init__(self, shape=(1, 1), border=None, border_color='k',
                  border_width=1.0):
         """ Initialize base plotter """
-        self.image_transparent_background = False
+        self.image_transparent_background = rcParams['transparent_background']
 
         # by default add border for multiple plots
         if border is None:
@@ -375,9 +381,11 @@ class BasePlotter(object):
         self._actors = {}
         # track if the camera has been setup
         # self.camera_set = False
-        self.first_time = True
+        self._first_time = True
         # Keep track of the scale
         self._labels = []
+        # Set default style
+        self._style = vtk.vtkInteractorStyleRubberBandPick()
 
         # Add self to open plotters
         _ALL_PLOTTERS[str(hex(id(self)))] = self
@@ -477,12 +485,15 @@ class BasePlotter(object):
         self.camera.SetFocalPoint(point)
         self._render()
 
-    def set_position(self, point):
+    def set_position(self, point, reset=False):
         """ sets camera position to a point """
         if isinstance(point, np.ndarray):
             if point.ndim != 1:
                 point = point.ravel()
         self.camera.SetPosition(point)
+        if reset:
+            self.reset_camera()
+        self.camera_set = True
         self._render()
 
     def set_viewup(self, vector):
@@ -498,7 +509,7 @@ class BasePlotter(object):
         if hasattr(self, 'ren_win'):
             if hasattr(self, 'render_trigger'):
                 self.render_trigger.emit()
-            elif not self.first_time:
+            elif not self._first_time:
                 self.render()
 
     def add_axes(self, interactive=None, color=None):
@@ -537,6 +548,8 @@ class BasePlotter(object):
         log.debug('Key %s pressed' % key)
         if key == 'q':
             self.q_pressed = True
+            # Grab screenshot right before renderer closes
+            self.last_image = self.screenshot(True, return_img=True)
         elif key == 'b':
             self.observer = self.iren.AddObserver('LeftButtonPressEvent',
                                                   self.left_button_down)
@@ -609,7 +622,7 @@ class BasePlotter(object):
                  render_lines_as_tubes=False, edge_color='black',
                  ambient=0.0, show_scalar_bar=None, nan_color=None,
                  nan_opacity=1.0, loc=None, backface_culling=False,
-                 rgb=False, **kwargs):
+                 rgb=False, categories=False, **kwargs):
         """
         Adds a unstructured, structured, or surface mesh to the
         plotting object.
@@ -731,6 +744,11 @@ class BasePlotter(object):
             If an 2 dimensional array is passed as the scalars, plot those
             values as RGB+A colors! ``rgba`` is also accepted alias for this.
 
+        categories : bool, optional
+            If fetching a colormap from matplotlib, this is the number of
+            categories to use in that colormap. If set to ``True``, then
+            the number of unique values in the scalar array will be used.
+
         Returns
         -------
         actor: vtk.vtkActor
@@ -787,10 +805,14 @@ class BasePlotter(object):
                     raise RuntimeError('Scalar array must be given as a string name for multiblock datasets.')
             if multi_colors:
                 # Compute unique colors for each index of the block
-                import matplotlib as mpl
-                from itertools import cycle
-                cycler = mpl.rcParams['axes.prop_cycle']
-                colors = cycle(cycler)
+                try:
+                    import matplotlib as mpl
+                    from itertools import cycle
+                    cycler = mpl.rcParams['axes.prop_cycle']
+                    colors = cycle(cycler)
+                except ImportError:
+                    multi_colors = False
+                    logging.warning('Please install matplotlib for color cycles')
             # Now iteratively plot each element of the multiblock dataset
             actors = []
             for idx in range(mesh.GetNumberOfBlocks()):
@@ -903,10 +925,14 @@ class BasePlotter(object):
             self.mapper.SetScalarModeToUsePointFieldData()
 
         # Scalar formatting ===================================================
-        if cmap is None:
+        if cmap is None: # grab alias for cmaps: colormap
             cmap = kwargs.get('colormap', None)
-        if cmap is None:
-            cmap = rcParams['cmap']
+        if cmap is None: # Set default map if matplotlib is avaialble
+            try:
+                import matplotlib
+                cmap = rcParams['cmap']
+            except ImportError:
+                pass
         title = 'Data' if stitle is None else stitle
         if scalars is not None:
             # if scalars is a string, then get the first array found with that name
@@ -975,9 +1001,20 @@ class BasePlotter(object):
                 try:
                     from matplotlib.cm import get_cmap
                 except ImportError:
+                    cmap = None
+                    logging.warning('Please install matplotlib for color maps.')
+            if cmap is not None:
+                try:
+                    from matplotlib.cm import get_cmap
+                except ImportError:
                     raise Exception('cmap requires matplotlib')
                 if isinstance(cmap, str):
-                    cmap = get_cmap(cmap)
+                    if categories:
+                        if categories is True:
+                            categories = len(np.unique(scalars))
+                        cmap = get_cmap(cmap, categories)
+                    else:
+                        cmap = get_cmap(cmap)
                     # ELSE: assume cmap is callable
                 ctable = cmap(np.linspace(0, 1, n_colors))*255
                 ctable = ctable.astype(np.uint8)
@@ -1959,7 +1996,7 @@ class BasePlotter(object):
             # Set the position of the text to the top left corner
             window_size = self.window_size
             x = (window_size[0] * 0.02) / self.shape[0]
-            y = (window_size[1] * 0.90) / self.shape[0]
+            y = (window_size[1] * 0.85) / self.shape[0]
             position = [x, y]
 
         self.textActor = vtk.vtkTextActor()
@@ -2294,7 +2331,7 @@ class BasePlotter(object):
 
         return image
 
-    def screenshot(self, filename=None, transparent_background=False,
+    def screenshot(self, filename=None, transparent_background=None,
                    return_img=None, window_size=None):
         """
         Takes screenshot at current camera position
@@ -2330,6 +2367,8 @@ class BasePlotter(object):
             self.window_size = window_size
 
         # configure image filter
+        if transparent_background is None:
+            transparent_background = rcParams['transparent_background']
         self.image_transparent_background = transparent_background
 
         # This if statement allows you to save screenshots of closed plotters
@@ -2860,12 +2899,12 @@ class Plotter(BasePlotter):
         if use_panel is None:
             use_panel = rcParams['use_panel']
         # reset unless camera for the first render unless camera is set
-        if self.first_time:  # and not self.camera_set:
+        if self._first_time:  # and not self.camera_set:
             for renderer in self.renderers:
                 if not renderer.camera_set:
                     renderer.camera_position = renderer.get_default_cam_pos()
                     renderer.ResetCamera()
-            self.first_time = False
+            self._first_time = False
 
         if title:
             self.ren_win.SetWindowName(title)
@@ -2883,6 +2922,10 @@ class Plotter(BasePlotter):
         log.debug('Rendering')
         self.ren_win.Render()
 
+        # Keep track of image for sphinx-gallery
+        self.last_image = self.screenshot(screenshot, return_img=True)
+        disp = None
+
         if interactive and (not self.off_screen):
             try:  # interrupts will be caught here
                 log.debug('Starting iren')
@@ -2894,42 +2937,50 @@ class Plotter(BasePlotter):
                 log.debug('KeyboardInterrupt')
                 self.close()
                 raise KeyboardInterrupt
-
-        # Keep track of image for sphinx-gallery
-        self.last_image = self.screenshot(screenshot, return_img=True)
+        elif self.notebook and use_panel:
+            try:
+                from panel.pane import VTK as panel_display
+                disp = panel_display(self.ren_win, sizing_mode='stretch_width',
+                                     height=400)
+            except:
+                pass
+        # NOTE: after this point, nothing from the render window can be accessed
+        #       as if a user presed the close button, then it destroys the
+        #       the render view and a stream of errors will kill the Python
+        #       kernel if code here tries to access that renderer.
+        #       See issues #135 and #186 for insight before editing the
+        #       remainder of this function.
 
         # Get camera position before closing
         cpos = self.camera_position
 
-        if self.notebook:
+        # NOTE: our conversion to panel currently does not support mult-view
+        #       so we should display the static screenshot in notebooks for
+        #       multi-view plots until we implement this feature
+        # If notebook is true and panel display failed:
+        if self.notebook and (disp is None or self.shape != (1,1)):
+            import PIL.Image
             # sanity check
             try:
                 import IPython
             except ImportError:
                 raise Exception('Install IPython to display image in a notebook')
+            disp = IPython.display.display(PIL.Image.fromarray(self.last_image))
 
-            disp = None
-            if use_panel:
-                try:
-                    from panel.pane import VTK as panel_display
-                    disp = panel_display(self.ren_win, sizing_mode='stretch_width',
-                                         height=400)
-                except:
-                    pass
-
-            if disp is None or self.shape != (1,1):
-                import PIL.Image
-                disp = IPython.display.display(PIL.Image.fromarray(self.last_image))
-
+        # Cleanup
         if auto_close:
             self.close()
 
+        # Return the notebook display: either panel object or image display
         if self.notebook:
             return disp
 
+        # If user asked for screenshot, return as numpy array after camera
+        # position
         if return_img or screenshot == True:
             return cpos, self.last_image
 
+        # default to returning last used camera position
         return cpos
 
     def plot(self, *args, **kwargs):

@@ -101,6 +101,10 @@ class RectilinearGrid(vtkRectilinearGrid, Grid):
         return vtki.Common.__repr__(self)
 
 
+    def __str__(self):
+        return vtki.Common.__str__(self)
+
+
     def _from_arrays(self, x, y, z):
         """
         Create VTK rectilinear grid directly from numpy arrays. Each array
@@ -170,7 +174,7 @@ class RectilinearGrid(vtkRectilinearGrid, Grid):
         filename = os.path.abspath(os.path.expanduser(filename))
         # check file exists
         if not os.path.isfile(filename):
-            raise Exception('%s does not exist')
+            raise Exception('{} does not exist'.format(filename))
 
         # Check file extention
         if '.vtr' in filename:
@@ -358,6 +362,10 @@ class UniformGrid(vtkImageData, Grid):
         return vtki.Common.__repr__(self)
 
 
+    def __str__(self):
+        return vtki.Common.__str__(self)
+
+
     def _from_specs(self, dims, spacing=(1.0,1.0,1.0), origin=(0.0, 0.0, 0.0)):
         """
         Create VTK image data directly from numpy arrays. A uniform grid is
@@ -438,7 +446,7 @@ class UniformGrid(vtkImageData, Grid):
         filename = os.path.abspath(os.path.expanduser(filename))
         # check file exists
         if not os.path.isfile(filename):
-            raise Exception('%s does not exist')
+            raise Exception('{} does not exist'.format(filename))
 
         # Check file extention
         if '.vti' in filename:
