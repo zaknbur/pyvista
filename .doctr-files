@@ -18,6 +18,7 @@
 ./_downloads/486d712873eb63457b0ca8de8c00251e/read-file.ipynb
 ./_downloads/4a82f33a8e1309e0aa6c75ed900ed597/resample.ipynb
 ./_downloads/4b3293e33ef75d3aa0177cc7cf50ba94/extract-edges.ipynb
+./_downloads/4e7bd81c819ed9f7d82d6b41070113d7/plot-labels.ipynb
 ./_downloads/4eb4430fbc8f4ba2f3907139cd9b812c/plot-cmap.py
 ./_downloads/52a5dd4a1b911e83ac90797848050c9d/geodesic.py
 ./_downloads/532e14419bedf6028df21b2832f9fe45/extract-cells-inside-surface.py
@@ -50,6 +51,7 @@
 ./_downloads/cfde9598b621dc37bb79ae0462a7d062/create-unstructured-surface.py
 ./_downloads/d46ac6297f4bb4e454011dd70b83fe9f/create-poly.ipynb
 ./_downloads/d79a533af7335164ff57a85055101e37/plot-edl.ipynb
+./_downloads/d8a71b0f65e1a2b46d4978f7620c33cf/plot-labels.py
 ./_downloads/da1a3493c761049607b69a09af3458c5/plot-cmap.ipynb
 ./_downloads/da60b9606906e247c27114099f9d92e8/plot-texture.py
 ./_downloads/e2ae8dac5171eea6d192d8d09375ad03/volume-smoothing.ipynb
@@ -138,6 +140,10 @@
 ./_images/sphx_glr_plot-glyphs_002.png
 ./_images/sphx_glr_plot-glyphs_003.png
 ./_images/sphx_glr_plot-glyphs_thumb.png
+./_images/sphx_glr_plot-labels_001.png
+./_images/sphx_glr_plot-labels_002.png
+./_images/sphx_glr_plot-labels_003.png
+./_images/sphx_glr_plot-labels_thumb.png
 ./_images/sphx_glr_plot-movie_001.png
 ./_images/sphx_glr_plot-movie_thumb.png
 ./_images/sphx_glr_plot-multi-window_001.png
@@ -235,6 +241,7 @@
 ./_sources/examples/02-plot/plot-edl.rst.txt
 ./_sources/examples/02-plot/plot-gif.rst.txt
 ./_sources/examples/02-plot/plot-glyphs.rst.txt
+./_sources/examples/02-plot/plot-labels.rst.txt
 ./_sources/examples/02-plot/plot-movie.rst.txt
 ./_sources/examples/02-plot/plot-multi-window.rst.txt
 ./_sources/examples/02-plot/plot-opacity.rst.txt
@@ -352,6 +359,7 @@
 ./examples/02-plot/plot-edl.html
 ./examples/02-plot/plot-gif.html
 ./examples/02-plot/plot-glyphs.html
+./examples/02-plot/plot-labels.html
 ./examples/02-plot/plot-movie.html
 ./examples/02-plot/plot-multi-window.html
 ./examples/02-plot/plot-opacity.html

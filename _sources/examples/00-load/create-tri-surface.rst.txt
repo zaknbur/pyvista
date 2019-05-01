@@ -53,11 +53,11 @@ First, create some points for the surface.
 
  .. code-block:: none
 
-    [[-199.68186942 -195.05879568    2.03222459]
-     [-176.62839132 -195.05879568    3.13583055]
-     [-159.87646475 -195.05879568    4.15681559]
-     [-137.56862881 -195.05879568    5.79222856]
-     [-112.56598651 -195.05879568    7.91863174]]
+    [[-199.34862487 -204.48413069    1.69467077]
+     [-176.19485101 -204.48413069    2.61758183]
+     [-158.55770372 -204.48413069    3.51646045]
+     [-135.35556868 -204.48413069    4.94524101]
+     [-114.15735865 -204.48413069    6.44230937]]
 
 
 Now use those points to create a point cloud ``vtki`` data object. This will
@@ -101,7 +101,7 @@ triangulation to turn those boring discrete points into a connected surface.
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  1.289 seconds)
+   **Total running time of the script:** ( 0 minutes  1.248 seconds)
 
 
 .. _sphx_glr_download_examples_00-load_create-tri-surface.py:
