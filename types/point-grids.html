@@ -506,13 +506,16 @@ to show the exact value of certain points.</p>
 <tr class="row-even"><td><p><a class="reference internal" href="#vtki.UnstructuredGrid.extract_cells" title="vtki.UnstructuredGrid.extract_cells"><code class="xref py py-obj docutils literal notranslate"><span class="pre">extract_cells</span></code></a>(ind)</p></td>
 <td><p>Returns a subset of the grid</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#vtki.UnstructuredGrid.linear_copy" title="vtki.UnstructuredGrid.linear_copy"><code class="xref py py-obj docutils literal notranslate"><span class="pre">linear_copy</span></code></a>([deep])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#vtki.UnstructuredGrid.extract_selection_points" title="vtki.UnstructuredGrid.extract_selection_points"><code class="xref py py-obj docutils literal notranslate"><span class="pre">extract_selection_points</span></code></a>(ind)</p></td>
+<td><p>Returns a subset of the grid that contains the cells that contain any of the point indices.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#vtki.UnstructuredGrid.linear_copy" title="vtki.UnstructuredGrid.linear_copy"><code class="xref py py-obj docutils literal notranslate"><span class="pre">linear_copy</span></code></a>([deep])</p></td>
 <td><p>Returns a copy of the input unstructured grid containing only linear cells.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#vtki.UnstructuredGrid.merge" title="vtki.UnstructuredGrid.merge"><code class="xref py py-obj docutils literal notranslate"><span class="pre">merge</span></code></a>([grid, merge_points, inplace, …])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#vtki.UnstructuredGrid.merge" title="vtki.UnstructuredGrid.merge"><code class="xref py py-obj docutils literal notranslate"><span class="pre">merge</span></code></a>([grid, merge_points, inplace, …])</p></td>
 <td><p>Join one or many other grids to this grid.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#vtki.UnstructuredGrid.save" title="vtki.UnstructuredGrid.save"><code class="xref py py-obj docutils literal notranslate"><span class="pre">save</span></code></a>(filename[, binary])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#vtki.UnstructuredGrid.save" title="vtki.UnstructuredGrid.save"><code class="xref py py-obj docutils literal notranslate"><span class="pre">save</span></code></a>(filename[, binary])</p></td>
 <td><p>Writes an unstructured grid to disk.</p></td>
 </tr>
 </tbody>
@@ -581,6 +584,24 @@ extracts the grid’s points and perfoms the triangulation on those alone.</p>
 </dd>
 <dt class="field-even">Returns</dt>
 <dd class="field-even"><p><strong>subgrid</strong> – Subselected grid</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="#vtki.UnstructuredGrid" title="vtki.UnstructuredGrid">vtki.UnstructuredGrid</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="vtki.UnstructuredGrid.extract_selection_points">
+<code class="descname">extract_selection_points</code><span class="sig-paren">(</span><em>ind</em><span class="sig-paren">)</span><a class="headerlink" href="#vtki.UnstructuredGrid.extract_selection_points" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a subset of the grid that contains the cells that
+contain any of the point indices.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>ind</strong> (<em>np.ndarray</em><em>, </em><em>list</em><em>, or </em><em>iterable</em>) – Numpy array of point indices to be extracted.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>subgrid</strong> – Subselected grid.</p>
 </dd>
 <dt class="field-odd">Return type</dt>
 <dd class="field-odd"><p><a class="reference internal" href="#vtki.UnstructuredGrid" title="vtki.UnstructuredGrid">vtki.UnstructuredGrid</a></p>
