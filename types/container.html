@@ -227,6 +227,12 @@ filtering/plotting routines.</p>
 <tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">combine</span></code>([merge_points])</p></td>
 <td><p>Appends all blocks into a single unstructured grid.</p></td>
 </tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">copy</span></code>([deep])</p></td>
+<td><p>Returns a copy of the object</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">copy_meta_from</span></code>(ido)</p></td>
+<td><p>Copies vtki meta data onto this object from another object</p></td>
+</tr>
 <tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">extract_geometry</span></code>()</p></td>
 <td><p>Combines the geomertry of all blocks into a single <code class="docutils literal notranslate"><span class="pre">PolyData</span></code> object.</p></td>
 </tr>
@@ -298,6 +304,29 @@ easily plot these data sets and use the container in a Pythonic manner.</p>
 <dd class="field-odd"><p><strong>merge_points</strong> (<em>bool</em><em>, </em><em>optional</em>) – Merge coincidental points.</p>
 </dd>
 </dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="vtki.MultiBlock.copy">
+<code class="descname">copy</code><span class="sig-paren">(</span><em>deep=True</em><span class="sig-paren">)</span><a class="headerlink" href="#vtki.MultiBlock.copy" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a copy of the object</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>deep</strong> (<em>bool</em><em>, </em><em>optional</em>) – When True makes a full copy of the object.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>newobject</strong> – Deep or shallow copy of the input.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>same as input</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="vtki.MultiBlock.copy_meta_from">
+<code class="descname">copy_meta_from</code><span class="sig-paren">(</span><em>ido</em><span class="sig-paren">)</span><a class="headerlink" href="#vtki.MultiBlock.copy_meta_from" title="Permalink to this definition">¶</a></dt>
+<dd><p>Copies vtki meta data onto this object from another object</p>
 </dd></dl>
 
 <dl class="method">
