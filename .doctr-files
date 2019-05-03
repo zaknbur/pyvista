@@ -47,9 +47,11 @@
 ./_downloads/b237c840ab9b84bff915a327d2a6427a/read-image.ipynb
 ./_downloads/b8892364a4f8c2465d3fc39b00acb139/plot-scalar-bars.ipynb
 ./_downloads/c2a9f47e21ee1d49f87068552a01177e/plot-screenshot.py
+./_downloads/c88b4482023a95fe97ea4b4bb8b6b846/plot-logo.py
 ./_downloads/c98c0a790921fac446f145188e485a0f/decimate.py
 ./_downloads/cfde9598b621dc37bb79ae0462a7d062/create-unstructured-surface.py
 ./_downloads/d46ac6297f4bb4e454011dd70b83fe9f/create-poly.ipynb
+./_downloads/d62448ced98ca224b72005181fad8232/plot-logo.ipynb
 ./_downloads/d79a533af7335164ff57a85055101e37/plot-edl.ipynb
 ./_downloads/d8a71b0f65e1a2b46d4978f7620c33cf/plot-labels.py
 ./_downloads/da1a3493c761049607b69a09af3458c5/plot-cmap.ipynb
@@ -144,6 +146,9 @@
 ./_images/sphx_glr_plot-labels_002.png
 ./_images/sphx_glr_plot-labels_003.png
 ./_images/sphx_glr_plot-labels_thumb.png
+./_images/sphx_glr_plot-logo_001.png
+./_images/sphx_glr_plot-logo_002.png
+./_images/sphx_glr_plot-logo_thumb.png
 ./_images/sphx_glr_plot-movie_001.png
 ./_images/sphx_glr_plot-movie_thumb.png
 ./_images/sphx_glr_plot-multi-window_001.png
@@ -242,6 +247,7 @@
 ./_sources/examples/02-plot/plot-gif.rst.txt
 ./_sources/examples/02-plot/plot-glyphs.rst.txt
 ./_sources/examples/02-plot/plot-labels.rst.txt
+./_sources/examples/02-plot/plot-logo.rst.txt
 ./_sources/examples/02-plot/plot-movie.rst.txt
 ./_sources/examples/02-plot/plot-multi-window.rst.txt
 ./_sources/examples/02-plot/plot-opacity.rst.txt
@@ -326,6 +332,7 @@
 ./_static/style.css
 ./_static/underscore-1.3.1.js
 ./_static/underscore.js
+./_static/vtki_logo.png
 ./authors.html
 ./dev/contributing.html
 ./dev/guidelines.html
@@ -360,6 +367,7 @@
 ./examples/02-plot/plot-gif.html
 ./examples/02-plot/plot-glyphs.html
 ./examples/02-plot/plot-labels.html
+./examples/02-plot/plot-logo.html
 ./examples/02-plot/plot-movie.html
 ./examples/02-plot/plot-multi-window.html
 ./examples/02-plot/plot-opacity.html

@@ -617,6 +617,26 @@ Plotting Examples
 
 .. raw:: html
 
+    <div class="sphx-glr-thumbcontainer" tooltip="Think our logo is awesome? Create it yourself!">
+
+.. only:: html
+
+    .. figure:: /examples/02-plot/images/thumb/sphx_glr_plot-logo_thumb.png
+
+        :ref:`sphx_glr_examples_02-plot_plot-logo.py`
+
+.. raw:: html
+
+    </div>
+
+
+.. toctree::
+   :hidden:
+
+   /examples/02-plot/plot-logo
+
+.. raw:: html
+
     <div class="sphx-glr-thumbcontainer" tooltip="Create an animated MP4 movie of a rendering scene">
 
 .. only:: html
