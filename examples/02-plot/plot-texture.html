@@ -100,15 +100,6 @@
 <li class="toctree-l1"><a class="reference internal" href="../../getting-started/installation.html">Installation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../getting-started/simple.html">Basic API Usage</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Data Types</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../../types/common.html">Datasets</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../types/common.html#the-common-model">The Common Model</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../types/points.html">Point Data</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../types/point-grids.html">Point-Based Grids</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../types/grids.html">Gridded Data</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../types/container.html">Multiple Block Datasets</a></li>
-</ul>
 <p class="caption"><span class="caption-text">Examples</span></p>
 <ul class="current">
 <li class="toctree-l1 current"><a class="reference internal" href="../index.html">Quick Examples</a><ul class="current">
@@ -138,6 +129,15 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../external_examples.html">External Examples</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Data Types</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../types/common.html">Datasets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../types/common.html#the-common-model">The Common Model</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../types/points.html">Point Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../types/point-grids.html">Point-Based Grids</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../types/grids.html">Gridded Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../types/container.html">Multiple Block Datasets</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Tools</span></p>
 <ul>
@@ -289,9 +289,9 @@ use.</p>
 <div class="section" id="numpy-arrays-as-textures">
 <h2>NumPy Arrays as Textures<a class="headerlink" href="#numpy-arrays-as-textures" title="Permalink to this headline">¶</a></h2>
 <p>Wan’t to use a programmaticaly built image? <a class="reference internal" href="../../types/grids.html#vtki.UniformGrid" title="vtki.UniformGrid"><code class="xref py py-class docutils literal notranslate"><span class="pre">vtki.UniformGrid</span></code></a> objects
-can be converted to textures using <code class="xref py py-func docutils literal notranslate"><span class="pre">vtki.image_to_texture()</span></code> and 3D
+can be converted to textures using <a class="reference internal" href="../../tools/utilities.html#vtki.image_to_texture" title="vtki.image_to_texture"><code class="xref py py-func docutils literal notranslate"><span class="pre">vtki.image_to_texture()</span></code></a> and 3D
 NumPy (X by Y by RGB) arrays can be converted to textures using
-<code class="xref py py-func docutils literal notranslate"><span class="pre">vtki.numpy_to_texture()</span></code>.</p>
+<a class="reference internal" href="../../tools/utilities.html#vtki.numpy_to_texture" title="vtki.numpy_to_texture"><code class="xref py py-func docutils literal notranslate"><span class="pre">vtki.numpy_to_texture()</span></code></a>.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># create an image using Numpy,</span>
 <span class="n">xx</span><span class="p">,</span> <span class="n">yy</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">meshgrid</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="mi">200</span><span class="p">,</span><span class="mi">200</span><span class="p">,</span><span class="mi">20</span><span class="p">),</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="mi">200</span><span class="p">,</span><span class="mi">200</span><span class="p">,</span><span class="mi">20</span><span class="p">))</span>
 <span class="n">A</span><span class="p">,</span> <span class="n">b</span> <span class="o">=</span> <span class="mi">500</span><span class="p">,</span> <span class="mi">100</span>
@@ -347,7 +347,7 @@ mappings of a single texture:</p>
 </pre></div>
 </div>
 <img alt="../../_images/sphx_glr_plot-texture_006.png" class="sphx-glr-single-img" src="../../_images/sphx_glr_plot-texture_006.png" />
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  10.248 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  10.028 seconds)</p>
 <div class="sphx-glr-footer class sphx-glr-footer-example docutils container" id="sphx-glr-download-examples-02-plot-plot-texture-py">
 <div class="sphx-glr-download docutils container">
 <p><a class="reference download internal" download="" href="../../_downloads/da60b9606906e247c27114099f9d92e8/plot-texture.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">plot-texture.py</span></code></a></p>
@@ -380,7 +380,7 @@ mappings of a single texture:</p>
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2017-2019, vtkiorg Developers
+        &copy; Copyright 2017-2019, The vtkiorg Developers
 
     </p>
   </div>

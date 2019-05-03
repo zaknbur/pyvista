@@ -99,6 +99,11 @@
 <li class="toctree-l1"><a class="reference internal" href="getting-started/installation.html">Installation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="getting-started/simple.html">Basic API Usage</a></li>
 </ul>
+<p class="caption"><span class="caption-text">Examples</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="examples/index.html">Quick Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="external_examples.html">External Examples</a></li>
+</ul>
 <p class="caption"><span class="caption-text">Data Types</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="types/common.html">Datasets</a></li>
@@ -107,11 +112,6 @@
 <li class="toctree-l1"><a class="reference internal" href="types/point-grids.html">Point-Based Grids</a></li>
 <li class="toctree-l1"><a class="reference internal" href="types/grids.html">Gridded Data</a></li>
 <li class="toctree-l1"><a class="reference internal" href="types/container.html">Multiple Block Datasets</a></li>
-</ul>
-<p class="caption"><span class="caption-text">Examples</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="examples/index.html">Quick Examples</a></li>
-<li class="toctree-l1"><a class="reference internal" href="external_examples.html">External Examples</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Tools</span></p>
 <ul>
@@ -361,6 +361,8 @@
 </li>
       <li><a href="types/points.html#vtki.PolyData.cell_normals">cell_normals (vtki.PolyData attribute)</a>
 </li>
+      <li><a href="tools/utilities.html#vtki.cell_scalar">cell_scalar() (in module vtki)</a>
+</li>
       <li><a href="types/point-grids.html#vtki.UnstructuredGrid.cells">cells (vtki.UnstructuredGrid attribute)</a>
 </li>
       <li><a href="types/point-grids.html#vtki.UnstructuredGrid.celltypes">celltypes (vtki.UnstructuredGrid attribute)</a>
@@ -406,6 +408,10 @@
       <li><a href="tools/filters.html#vtki.DataSetFilters.connectivity">connectivity() (vtki.DataSetFilters method)</a>
 </li>
       <li><a href="tools/filters.html#vtki.DataSetFilters.contour">contour() (vtki.DataSetFilters method)</a>
+</li>
+      <li><a href="tools/utilities.html#vtki.convert_array">convert_array() (in module vtki)</a>
+</li>
+      <li><a href="tools/utilities.html#vtki.convert_string_array">convert_string_array() (in module vtki)</a>
 </li>
       <li><a href="types/common.html#vtki.Common.copy">copy() (vtki.Common method)</a>
 </li>
@@ -575,7 +581,13 @@
       </ul></li>
       <li><a href="types/container.html#vtki.MultiBlock.get_index_by_name">get_index_by_name() (vtki.MultiBlock method)</a>
 </li>
-      <li><a href="types/common.html#vtki.Common.get_scalar">get_scalar() (vtki.Common method)</a>
+      <li><a href="tools/utilities.html#vtki.get_scalar">get_scalar() (in module vtki)</a>
+
+      <ul>
+        <li><a href="types/common.html#vtki.Common.get_scalar">(vtki.Common method)</a>
+</li>
+      </ul></li>
+      <li><a href="tools/utilities.html#vtki.get_vtk_type">get_vtk_type() (in module vtki)</a>
 </li>
       <li><a href="tools/filters.html#vtki.DataSetFilters.glyph">glyph() (vtki.DataSetFilters method)</a>
 </li>
@@ -605,11 +617,17 @@
 </li>
       <li><a href="tools/plotting.html#vtki.BasePlotter.image_depth">image_depth (vtki.BasePlotter attribute)</a>
 </li>
+      <li><a href="tools/utilities.html#vtki.image_to_texture">image_to_texture() (in module vtki)</a>
+</li>
       <li><a href="tools/plotting.html#vtki.BasePlotter.index_to_loc">index_to_loc() (vtki.BasePlotter method)</a>
 </li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="tools/filters.html#vtki.DataSetFilters.interpolate">interpolate() (vtki.DataSetFilters method)</a>
+</li>
+      <li><a href="tools/utilities.html#vtki.is_inside_bounds">is_inside_bounds() (in module vtki)</a>
+</li>
+      <li><a href="tools/utilities.html#vtki.is_vtki_obj">is_vtki_obj() (in module vtki)</a>
 </li>
       <li><a href="tools/plotting.html#vtki.BasePlotter.isometric_view">isometric_view() (vtki.BasePlotter method)</a>
 
@@ -683,10 +701,10 @@
 </li>
       <li><a href="types/common.html#vtki.Common.n_points">n_points (vtki.Common attribute)</a>
 </li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="types/common.html#vtki.Common.n_scalars">n_scalars (vtki.Common attribute)</a>
 </li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="types/container.html#vtki.MultiBlock.next">next() (vtki.MultiBlock method)</a>
 </li>
       <li><a href="types/common.html#vtki.Common.number_of_cells">number_of_cells (vtki.Common attribute)</a>
@@ -694,6 +712,8 @@
       <li><a href="types/points.html#vtki.PolyData.number_of_faces">number_of_faces (vtki.PolyData attribute)</a>
 </li>
       <li><a href="types/common.html#vtki.Common.number_of_points">number_of_points (vtki.Common attribute)</a>
+</li>
+      <li><a href="tools/utilities.html#vtki.numpy_to_texture">numpy_to_texture() (in module vtki)</a>
 </li>
   </ul></td>
 </tr></table>
@@ -762,6 +782,8 @@
       <li><a href="tools/filters.html#vtki.DataSetFilters.point_data_to_cell_data">point_data_to_cell_data() (vtki.DataSetFilters method)</a>
 </li>
       <li><a href="types/points.html#vtki.PolyData.point_normals">point_normals (vtki.PolyData attribute)</a>
+</li>
+      <li><a href="tools/utilities.html#vtki.point_scalar">point_scalar() (in module vtki)</a>
 </li>
       <li><a href="types/point-grids.html#vtki.PointGrid">PointGrid (class in vtki)</a>
 </li>
@@ -1073,6 +1095,8 @@
         <li><a href="types/points.html#vtki.PolyData.volume">(vtki.PolyData attribute)</a>
 </li>
       </ul></li>
+      <li><a href="tools/utilities.html#vtki.vtk_bit_array_to_char">vtk_bit_array_to_char() (in module vtki)</a>
+</li>
       <li><a href="tools/utilities.html#vtki.vtk_points">vtk_points() (in module vtki)</a>
 </li>
       <li><a href="types/container.html#module-vtki.container">vtki.container (module)</a>
@@ -1160,7 +1184,7 @@
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2017-2019, vtkiorg Developers
+        &copy; Copyright 2017-2019, The vtkiorg Developers
 
     </p>
   </div>

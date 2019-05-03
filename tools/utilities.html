@@ -100,6 +100,11 @@
 <li class="toctree-l1"><a class="reference internal" href="../getting-started/installation.html">Installation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../getting-started/simple.html">Basic API Usage</a></li>
 </ul>
+<p class="caption"><span class="caption-text">Examples</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../examples/index.html">Quick Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../external_examples.html">External Examples</a></li>
+</ul>
 <p class="caption"><span class="caption-text">Data Types</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../types/common.html">Datasets</a></li>
@@ -109,11 +114,6 @@
 <li class="toctree-l1"><a class="reference internal" href="../types/grids.html">Gridded Data</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../types/container.html">Multiple Block Datasets</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Examples</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../examples/index.html">Quick Examples</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../external_examples.html">External Examples</a></li>
-</ul>
 <p class="caption"><span class="caption-text">Tools</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="geometric.html">Geometric Objects</a></li>
@@ -121,7 +121,13 @@
 <li class="toctree-l1"><a class="reference internal" href="filters.html">Filters</a></li>
 <li class="toctree-l1"><a class="reference internal" href="ipy_tools.html">IPython Tools</a></li>
 <li class="toctree-l1"><a class="reference internal" href="qt_plotting.html">vtki PyQt Interface</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Utilities</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Utilities</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#object-conversions">Object Conversions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#file-io">File IO</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#mesh-creation">Mesh Creation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#array-access">Array Access</a></li>
+</ul>
+</li>
 </ul>
 <p class="caption"><span class="caption-text">Contributing</span></p>
 <ul>
@@ -198,12 +204,54 @@
 <span id="utilities"></span><h1>Utilities<a class="headerlink" href="#module-vtki.utilities" title="Permalink to this headline">¶</a></h1>
 <p>Supporting functions for polydata and grid objects</p>
 <dl class="function">
+<dt id="vtki.set_error_output_file">
+<code class="descclassname">vtki.</code><code class="descname">set_error_output_file</code><span class="sig-paren">(</span><em>filename</em><span class="sig-paren">)</span><a class="headerlink" href="#vtki.set_error_output_file" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets a file to write out the VTK errors</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="vtki.trans_from_matrix">
+<code class="descclassname">vtki.</code><code class="descname">trans_from_matrix</code><span class="sig-paren">(</span><em>matrix</em><span class="sig-paren">)</span><a class="headerlink" href="#vtki.trans_from_matrix" title="Permalink to this definition">¶</a></dt>
+<dd><p>Convert a vtk matrix to a numpy.ndarray</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="vtki.is_inside_bounds">
+<code class="descclassname">vtki.</code><code class="descname">is_inside_bounds</code><span class="sig-paren">(</span><em>point</em>, <em>bounds</em><span class="sig-paren">)</span><a class="headerlink" href="#vtki.is_inside_bounds" title="Permalink to this definition">¶</a></dt>
+<dd><p>Checks if a point is inside a set of bounds. This is implemented
+through recursion so that this is N-dimensional.</p>
+</dd></dl>
+
+<div class="section" id="object-conversions">
+<h2>Object Conversions<a class="headerlink" href="#object-conversions" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
 <dt id="vtki.wrap">
 <code class="descclassname">vtki.</code><code class="descname">wrap</code><span class="sig-paren">(</span><em>vtkdataset</em><span class="sig-paren">)</span><a class="headerlink" href="#vtki.wrap" title="Permalink to this definition">¶</a></dt>
 <dd><p>This is a convenience method to safely wrap any given VTK data object
 to its appropriate <code class="docutils literal notranslate"><span class="pre">vtki</span></code> data object.</p>
 </dd></dl>
 
+<dl class="function">
+<dt id="vtki.is_vtki_obj">
+<code class="descclassname">vtki.</code><code class="descname">is_vtki_obj</code><span class="sig-paren">(</span><em>obj</em><span class="sig-paren">)</span><a class="headerlink" href="#vtki.is_vtki_obj" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return True if the Object is a <code class="docutils literal notranslate"><span class="pre">vtki</span></code> wrapped dataset</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="vtki.image_to_texture">
+<code class="descclassname">vtki.</code><code class="descname">image_to_texture</code><span class="sig-paren">(</span><em>image</em><span class="sig-paren">)</span><a class="headerlink" href="#vtki.image_to_texture" title="Permalink to this definition">¶</a></dt>
+<dd><p>Converts <code class="docutils literal notranslate"><span class="pre">vtkImageData</span></code> (<a class="reference internal" href="../types/grids.html#vtki.UniformGrid" title="vtki.UniformGrid"><code class="xref py py-class docutils literal notranslate"><span class="pre">vtki.UniformGrid</span></code></a>) to a <code class="docutils literal notranslate"><span class="pre">vtkTexture</span></code></p>
+</dd></dl>
+
+<dl class="function">
+<dt id="vtki.numpy_to_texture">
+<code class="descclassname">vtki.</code><code class="descname">numpy_to_texture</code><span class="sig-paren">(</span><em>image</em><span class="sig-paren">)</span><a class="headerlink" href="#vtki.numpy_to_texture" title="Permalink to this definition">¶</a></dt>
+<dd><p>Convert a NumPy image array to a vtk.vtkTexture</p>
+</dd></dl>
+
+</div>
+<div class="section" id="file-io">
+<h2>File IO<a class="headerlink" href="#file-io" title="Permalink to this headline">¶</a></h2>
 <dl class="function">
 <dt id="vtki.read">
 <code class="descclassname">vtki.</code><code class="descname">read</code><span class="sig-paren">(</span><em>filename</em>, <em>attrs=None</em><span class="sig-paren">)</span><a class="headerlink" href="#vtki.read" title="Permalink to this definition">¶</a></dt>
@@ -237,6 +285,9 @@ value.</p>
 <dd><p>Use VTK’s legacy reader to read a file</p>
 </dd></dl>
 
+</div>
+<div class="section" id="mesh-creation">
+<h2>Mesh Creation<a class="headerlink" href="#mesh-creation" title="Permalink to this headline">¶</a></h2>
 <dl class="function">
 <dt id="vtki.lines_from_points">
 <code class="descclassname">vtki.</code><code class="descname">lines_from_points</code><span class="sig-paren">(</span><em>points</em><span class="sig-paren">)</span><a class="headerlink" href="#vtki.lines_from_points" title="Permalink to this definition">¶</a></dt>
@@ -292,18 +343,93 @@ would be represented as:</p>
 </dl>
 </dd></dl>
 
+</div>
+<div class="section" id="array-access">
+<h2>Array Access<a class="headerlink" href="#array-access" title="Permalink to this headline">¶</a></h2>
 <dl class="function">
-<dt id="vtki.trans_from_matrix">
-<code class="descclassname">vtki.</code><code class="descname">trans_from_matrix</code><span class="sig-paren">(</span><em>matrix</em><span class="sig-paren">)</span><a class="headerlink" href="#vtki.trans_from_matrix" title="Permalink to this definition">¶</a></dt>
-<dd><p>Convert a vtk matrix to a numpy.ndarray</p>
+<dt id="vtki.get_scalar">
+<code class="descclassname">vtki.</code><code class="descname">get_scalar</code><span class="sig-paren">(</span><em>mesh</em>, <em>name</em>, <em>preference='cell'</em>, <em>info=False</em>, <em>err=False</em><span class="sig-paren">)</span><a class="headerlink" href="#vtki.get_scalar" title="Permalink to this definition">¶</a></dt>
+<dd><p>Searches both point and cell data for an array</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>name</strong> (<em>str</em>) – The name of the array to get the range.</p></li>
+<li><p><strong>preference</strong> (<em>str</em><em>, </em><em>optional</em>) – When scalars is specified, this is the perfered scalar type to
+search for in the dataset.  Must be either <code class="docutils literal notranslate"><span class="pre">'point'</span></code> or <code class="docutils literal notranslate"><span class="pre">'cell'</span></code></p></li>
+<li><p><strong>info</strong> (<em>bool</em>) – Return info about the scalar rather than the array itself.</p></li>
+<li><p><strong>err</strong> (<em>bool</em>) – Boolean to control whether to throw an error if array is not present.</p></li>
+</ul>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="function">
-<dt id="vtki.set_error_output_file">
-<code class="descclassname">vtki.</code><code class="descname">set_error_output_file</code><span class="sig-paren">(</span><em>filename</em><span class="sig-paren">)</span><a class="headerlink" href="#vtki.set_error_output_file" title="Permalink to this definition">¶</a></dt>
-<dd><p>Sets a file to write out the VTK errors</p>
+<dt id="vtki.convert_array">
+<code class="descclassname">vtki.</code><code class="descname">convert_array</code><span class="sig-paren">(</span><em>arr</em>, <em>name=None</em>, <em>deep=0</em>, <em>array_type=None</em><span class="sig-paren">)</span><a class="headerlink" href="#vtki.convert_array" title="Permalink to this definition">¶</a></dt>
+<dd><p>A helper to convert a NumPy array to a vtkDataArray or vice versa</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>arr</strong> (<em>ndarray</em><em> or </em><em>vtkDataArry</em>) – A numpy array or vtkDataArry to convert</p></li>
+<li><p><strong>name</strong> (<em>str</em>) – The name of the data array for VTK</p></li>
+<li><p><strong>deep</strong> (<em>bool</em>) – if input is numpy array then deep copy values</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>the converted array (if input is a NumPy ndaray then returns
+<code class="docutils literal notranslate"><span class="pre">vtkDataArray</span></code> or is input is <code class="docutils literal notranslate"><span class="pre">vtkDataArray</span></code> then returns NumPy
+<code class="docutils literal notranslate"><span class="pre">ndarray</span></code>). If pdf==True and the input is <code class="docutils literal notranslate"><span class="pre">vtkDataArry</span></code>,
+return a pandas DataFrame.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>vtkDataArray, ndarray, or DataFrame</p>
+</dd>
+</dl>
 </dd></dl>
 
+<dl class="function">
+<dt id="vtki.point_scalar">
+<code class="descclassname">vtki.</code><code class="descname">point_scalar</code><span class="sig-paren">(</span><em>mesh</em>, <em>name</em><span class="sig-paren">)</span><a class="headerlink" href="#vtki.point_scalar" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns point scalars of a vtk object</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="vtki.cell_scalar">
+<code class="descclassname">vtki.</code><code class="descname">cell_scalar</code><span class="sig-paren">(</span><em>mesh</em>, <em>name</em><span class="sig-paren">)</span><a class="headerlink" href="#vtki.cell_scalar" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns cell scalars of a vtk object</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="vtki.get_vtk_type">
+<code class="descclassname">vtki.</code><code class="descname">get_vtk_type</code><span class="sig-paren">(</span><em>typ</em><span class="sig-paren">)</span><a class="headerlink" href="#vtki.get_vtk_type" title="Permalink to this definition">¶</a></dt>
+<dd><p>This looks up the VTK type for a give python data type. Corrects for
+string type mapping issues.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><strong>int</strong></p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>the integer type id specified in vtkType.h</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="vtki.vtk_bit_array_to_char">
+<code class="descclassname">vtki.</code><code class="descname">vtk_bit_array_to_char</code><span class="sig-paren">(</span><em>vtkarr_bint</em><span class="sig-paren">)</span><a class="headerlink" href="#vtki.vtk_bit_array_to_char" title="Permalink to this definition">¶</a></dt>
+<dd><p>Cast vtk bit array to a char array</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="vtki.convert_string_array">
+<code class="descclassname">vtki.</code><code class="descname">convert_string_array</code><span class="sig-paren">(</span><em>arr</em>, <em>name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#vtki.convert_string_array" title="Permalink to this definition">¶</a></dt>
+<dd><p>A helper to convert a numpy array of strings to a vtkStringArray
+or vice versa. Note that this is terribly inefficient - inefficient support
+is better than no support :). If you have ideas on how to make this faster,
+please consider opening a pull request.</p>
+</dd></dl>
+
+</div>
 </div>
 
 
@@ -326,7 +452,7 @@ would be represented as:</p>
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2017-2019, vtkiorg Developers
+        &copy; Copyright 2017-2019, The vtkiorg Developers
 
     </p>
   </div>
