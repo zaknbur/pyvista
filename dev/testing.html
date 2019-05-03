@@ -203,23 +203,23 @@ request. The following tests will be executed after any commit or pull request,
 so we ask that you perform the following sequence locally to track down any new
 issues from your changes.
 To run our comprehensive suite of unit tests, install all the dependencies
-listed in <code class="docutils literal notranslate"><span class="pre">requirements.txt</span></code>, <code class="docutils literal notranslate"><span class="pre">requirements_docs.txt</span></code>, and the following
-list:</p>
+listed in <code class="docutils literal notranslate"><span class="pre">requirements.txt</span></code>, <code class="docutils literal notranslate"><span class="pre">requirements_docs.txt</span></code>:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip install -r requirements.txt
 pip install -r requirements_docs.txt
 </pre></div>
 </div>
 <p>Then, if you have everything installed, you can run the various test suites:</p>
 <p>Run the primary test suite and generate coverage report:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pytest -v --cov vtki
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python -m pytest -v --cov vtki
 </pre></div>
 </div>
 <p>Run all code examples in the docstrings:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pytest -v --doctest-modules vtki
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python -m pytest -v --doctest-modules vtki
 </pre></div>
 </div>
 <p>Now make sure notebooks are running</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pytest -v --nbval-lax --current-env --disable-warnings notebooks/*.ipynb<span class="p">;</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python -m pytest -v --nbval-lax --current-env --disable-warnings notebooks/*.ipynb
+python -m pytest -v --nbval-lax --current-env --disable-warnings tests/*.ipynb
 </pre></div>
 </div>
 <p>And finally, test the documentation examples:</p>
