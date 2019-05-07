@@ -352,13 +352,14 @@ would be represented as:</p>
 <dl class="function">
 <dt id="vtki.get_scalar">
 <code class="descclassname">vtki.</code><code class="descname">get_scalar</code><span class="sig-paren">(</span><em>mesh</em>, <em>name</em>, <em>preference='cell'</em>, <em>info=False</em>, <em>err=False</em><span class="sig-paren">)</span><a class="headerlink" href="#vtki.get_scalar" title="Permalink to this definition">¶</a></dt>
-<dd><p>Searches both point and cell data for an array</p>
+<dd><p>Searches point, cell and field data for an array</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>name</strong> (<em>str</em>) – The name of the array to get the range.</p></li>
 <li><p><strong>preference</strong> (<em>str</em><em>, </em><em>optional</em>) – When scalars is specified, this is the perfered scalar type to
-search for in the dataset.  Must be either <code class="docutils literal notranslate"><span class="pre">'point'</span></code> or <code class="docutils literal notranslate"><span class="pre">'cell'</span></code></p></li>
+search for in the dataset.  Must be either <code class="docutils literal notranslate"><span class="pre">'point'</span></code>, <code class="docutils literal notranslate"><span class="pre">'cell'</span></code>, or
+<code class="docutils literal notranslate"><span class="pre">'field'</span></code></p></li>
 <li><p><strong>info</strong> (<em>bool</em>) – Return info about the scalar rather than the array itself.</p></li>
 <li><p><strong>err</strong> (<em>bool</em>) – Boolean to control whether to throw an error if array is not present.</p></li>
 </ul>
