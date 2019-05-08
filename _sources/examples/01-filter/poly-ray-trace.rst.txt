@@ -23,10 +23,10 @@ Single line segment ray tracing for PolyData objects.
 .. code-block:: default
 
 
-    import vtki
+    import vista
 
     # Create source to ray trace
-    sphere = vtki.Sphere(radius=0.85)
+    sphere = vista.Sphere(radius=0.85)
 
     # Define line segment
     start = [0, 0, 0]
@@ -36,11 +36,11 @@ Single line segment ray tracing for PolyData objects.
     points, ind = sphere.ray_trace(start, stop)
 
     # Create geometry to represent ray trace
-    ray = vtki.Line(start, stop)
-    intersection = vtki.PolyData(points)
+    ray = vista.Line(start, stop)
+    intersection = vista.PolyData(points)
 
     # Render the result
-    p = vtki.Plotter()
+    p = vista.Plotter()
     p.add_mesh(sphere, show_edges=True, opacity=0.5, color='w', lighting=False, label='Test Mesh')
     p.add_mesh(ray, color='blue', line_width=5, label='Ray Segment')
     p.add_mesh(intersection, color='maroon', point_size=10, label='Intersection Points')
@@ -50,7 +50,7 @@ Single line segment ray tracing for PolyData objects.
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  1.089 seconds)
+   **Total running time of the script:** ( 0 minutes  1.087 seconds)
 
 
 .. _sphx_glr_download_examples_01-filter_poly-ray-trace.py:

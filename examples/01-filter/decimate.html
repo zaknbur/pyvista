@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Decimation &mdash; vtki 0.18.4 documentation</title>
+  <title>Decimation &mdash; vista 0.19.0 documentation</title>
   
 
   
@@ -61,7 +61,7 @@
 
           
             
-            <img src="../../_static/vtki_logo.png" class="logo" alt="Logo"/>
+            <img src="../../_static/vista_logo.png" class="logo" alt="Logo"/>
           
           </a>
 
@@ -69,7 +69,7 @@
             
             
               <div class="version">
-                0.18.4
+                0.19.0
               </div>
             
           
@@ -95,7 +95,7 @@
             
               <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../index.html">About</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../why.html">Why <code class="docutils literal notranslate"><span class="pre">vtki</span></code>?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../why.html">Why <code class="docutils literal notranslate"><span class="pre">vista</span></code>?</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../authors.html">Authors</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Getting Started</span></p>
@@ -142,7 +142,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../../tools/plotting.html">Plotting</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../tools/filters.html">Filters</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../tools/ipy_tools.html">IPython Tools</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../tools/qt_plotting.html">vtki PyQt Interface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../tools/qt_plotting.html">vista PyQt Interface</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../tools/utilities.html">Utilities</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Contributing</span></p>
@@ -164,7 +164,7 @@
       <nav class="wy-nav-top" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../../index.html">vtki</a>
+          <a href="../../index.html">vista</a>
         
       </nav>
 
@@ -204,7 +204,7 @@
         
             
             
-              <a href="https://github.com/vtkiorg/vtki/blob/master/docs/examples/01-filter/decimate.rst" class="fa fa-github"> Edit on GitHub</a>
+              <a href="https://github.com/pyvista/vista/blob/master/docs/examples/01-filter/decimate.rst" class="fa fa-github"> Edit on GitHub</a>
             
           
         
@@ -226,8 +226,8 @@
 <span id="sphx-glr-examples-01-filter-decimate-py"></span><h1>Decimation<a class="headerlink" href="#decimation" title="Permalink to this headline">¶</a></h1>
 <p>Decaimate a mesh</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># sphinx_gallery_thumbnail_number = 4</span>
-<span class="kn">import</span> <span class="nn">vtki</span>
-<span class="kn">from</span> <span class="nn">vtki</span> <span class="k">import</span> <span class="n">examples</span>
+<span class="kn">import</span> <span class="nn">vista</span>
+<span class="kn">from</span> <span class="nn">vista</span> <span class="k">import</span> <span class="n">examples</span>
 
 <span class="n">mesh</span> <span class="o">=</span> <span class="n">examples</span><span class="o">.</span><span class="n">download_face</span><span class="p">()</span>
 
@@ -241,7 +241,7 @@
 </div>
 <img alt="../../_images/sphx_glr_decimate_001.png" class="sphx-glr-single-img" src="../../_images/sphx_glr_decimate_001.png" />
 <p>Now let’s define a target reduction and compare the
-<a class="reference internal" href="../../types/points.html#vtki.PolyData.decimate" title="vtki.PolyData.decimate"><code class="xref py py-func docutils literal notranslate"><span class="pre">vtki.PolyData.decimate()</span></code></a> and <a class="reference internal" href="../../types/points.html#vtki.PolyData.decimate_pro" title="vtki.PolyData.decimate_pro"><code class="xref py py-func docutils literal notranslate"><span class="pre">vtki.PolyData.decimate_pro()</span></code></a> filters.</p>
+<a class="reference internal" href="../../types/points.html#vista.PolyData.decimate" title="vista.PolyData.decimate"><code class="xref py py-func docutils literal notranslate"><span class="pre">vista.PolyData.decimate()</span></code></a> and <a class="reference internal" href="../../types/points.html#vista.PolyData.decimate_pro" title="vista.PolyData.decimate_pro"><code class="xref py py-func docutils literal notranslate"><span class="pre">vista.PolyData.decimate_pro()</span></code></a> filters.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">target_reduction</span> <span class="o">=</span> <span class="mf">0.7</span>
 <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Reducing </span><span class="si">{}</span><span class="s1"> percent out of the original mesh&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">target_reduction</span> <span class="o">*</span> <span class="mf">100.</span><span class="p">))</span>
 </pre></div>
@@ -263,7 +263,7 @@
 </div>
 <img alt="../../_images/sphx_glr_decimate_003.png" class="sphx-glr-single-img" src="../../_images/sphx_glr_decimate_003.png" />
 <p>Side by side comparison:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">p</span> <span class="o">=</span> <span class="n">vtki</span><span class="o">.</span><span class="n">Plotter</span><span class="p">(</span><span class="n">shape</span><span class="o">=</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">))</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">p</span> <span class="o">=</span> <span class="n">vista</span><span class="o">.</span><span class="n">Plotter</span><span class="p">(</span><span class="n">shape</span><span class="o">=</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">))</span>
 <span class="n">p</span><span class="o">.</span><span class="n">add_mesh</span><span class="p">(</span><span class="n">mesh</span><span class="p">,</span> <span class="o">**</span><span class="n">dargs</span><span class="p">)</span>
 <span class="n">p</span><span class="o">.</span><span class="n">add_text</span><span class="p">(</span><span class="s1">&#39;Input mesh&#39;</span><span class="p">,</span> <span class="n">font_size</span><span class="o">=</span><span class="mi">24</span><span class="p">)</span>
 <span class="n">p</span><span class="o">.</span><span class="n">camera_position</span> <span class="o">=</span> <span class="n">cpos</span>
@@ -282,13 +282,13 @@
 </pre></div>
 </div>
 <img alt="../../_images/sphx_glr_decimate_004.png" class="sphx-glr-single-img" src="../../_images/sphx_glr_decimate_004.png" />
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  4.836 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  5.358 seconds)</p>
 <div class="sphx-glr-footer class sphx-glr-footer-example docutils container" id="sphx-glr-download-examples-01-filter-decimate-py">
 <div class="sphx-glr-download docutils container">
-<p><a class="reference download internal" download="" href="../../_downloads/c98c0a790921fac446f145188e485a0f/decimate.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">decimate.py</span></code></a></p>
+<p><a class="reference download internal" download="" href="../../_downloads/04568c0af1eedbaa97e4c93c17ff9235/decimate.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">decimate.py</span></code></a></p>
 </div>
 <div class="sphx-glr-download docutils container">
-<p><a class="reference download internal" download="" href="../../_downloads/6b5beef0a284ac0ba82dd9db48376ee1/decimate.ipynb"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Jupyter</span> <span class="pre">notebook:</span> <span class="pre">decimate.ipynb</span></code></a></p>
+<p><a class="reference download internal" download="" href="../../_downloads/3a17137b1c1ce9961296b4995cedf62d/decimate.ipynb"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Jupyter</span> <span class="pre">notebook:</span> <span class="pre">decimate.ipynb</span></code></a></p>
 </div>
 </div>
 <p class="sphx-glr-signature"><a class="reference external" href="https://sphinx-gallery.readthedocs.io">Gallery generated by Sphinx-Gallery</a></p>
@@ -314,7 +314,7 @@
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2017-2019, The vtkiorg Developers
+        &copy; Copyright 2017-2019, The vista Developers
 
     </p>
   </div>

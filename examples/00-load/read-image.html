@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Read Image Files &mdash; vtki 0.18.4 documentation</title>
+  <title>Read Image Files &mdash; vista 0.19.0 documentation</title>
   
 
   
@@ -61,7 +61,7 @@
 
           
             
-            <img src="../../_static/vtki_logo.png" class="logo" alt="Logo"/>
+            <img src="../../_static/vista_logo.png" class="logo" alt="Logo"/>
           
           </a>
 
@@ -69,7 +69,7 @@
             
             
               <div class="version">
-                0.18.4
+                0.19.0
               </div>
             
           
@@ -95,7 +95,7 @@
             
               <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../index.html">About</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../why.html">Why <code class="docutils literal notranslate"><span class="pre">vtki</span></code>?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../why.html">Why <code class="docutils literal notranslate"><span class="pre">vista</span></code>?</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../authors.html">Authors</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Getting Started</span></p>
@@ -139,7 +139,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../../tools/plotting.html">Plotting</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../tools/filters.html">Filters</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../tools/ipy_tools.html">IPython Tools</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../tools/qt_plotting.html">vtki PyQt Interface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../tools/qt_plotting.html">vista PyQt Interface</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../tools/utilities.html">Utilities</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Contributing</span></p>
@@ -161,7 +161,7 @@
       <nav class="wy-nav-top" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../../index.html">vtki</a>
+          <a href="../../index.html">vista</a>
         
       </nav>
 
@@ -201,7 +201,7 @@
         
             
             
-              <a href="https://github.com/vtkiorg/vtki/blob/master/docs/examples/00-load/read-image.rst" class="fa fa-github"> Edit on GitHub</a>
+              <a href="https://github.com/pyvista/vista/blob/master/docs/examples/00-load/read-image.rst" class="fa fa-github"> Edit on GitHub</a>
             
           
         
@@ -222,21 +222,21 @@
 <div class="sphx-glr-example-title section" id="read-image-files">
 <span id="sphx-glr-examples-00-load-read-image-py"></span><h1>Read Image Files<a class="headerlink" href="#read-image-files" title="Permalink to this headline">¶</a></h1>
 <p>Read and plot image files (JPEG, TIFF, PNG, etc).</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">vtki</span> <span class="k">import</span> <span class="n">examples</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">vista</span> <span class="k">import</span> <span class="n">examples</span>
 </pre></div>
 </div>
-<p><code class="docutils literal notranslate"><span class="pre">vtki</span></code> fully supportes reading images into their own spatially referenced
+<p><code class="docutils literal notranslate"><span class="pre">vista</span></code> fully supportes reading images into their own spatially referenced
 data objects (this example) as well as supports texture mapping of images onto
 datasets (see <a class="reference internal" href="../02-plot/plot-texture.html#ref-texture-example"><span class="std std-ref">Applying Textures</span></a>).</p>
-<p>Download a JPEG image of a puppy and load it to <a class="reference internal" href="../../types/grids.html#vtki.UniformGrid" title="vtki.UniformGrid"><code class="xref py py-class docutils literal notranslate"><span class="pre">vtki.UniformGrid</span></code></a>.
+<p>Download a JPEG image of a puppy and load it to <a class="reference internal" href="../../types/grids.html#vista.UniformGrid" title="vista.UniformGrid"><code class="xref py py-class docutils literal notranslate"><span class="pre">vista.UniformGrid</span></code></a>.
 This could similarly be implemented with any image file by using the
-<a class="reference internal" href="../../tools/utilities.html#vtki.read" title="vtki.read"><code class="xref py py-func docutils literal notranslate"><span class="pre">vtki.read()</span></code></a> function and passing the path to the image file.</p>
+<a class="reference internal" href="../../tools/utilities.html#vista.read" title="vista.read"><code class="xref py py-func docutils literal notranslate"><span class="pre">vista.read()</span></code></a> function and passing the path to the image file.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">image</span> <span class="o">=</span> <span class="n">examples</span><span class="o">.</span><span class="n">download_puppy</span><span class="p">()</span>
 <span class="c1"># or...</span>
-<span class="c1"># image = vtki.read(&#39;my_image.jpg&#39;)</span>
+<span class="c1"># image = vista.read(&#39;my_image.jpg&#39;)</span>
 </pre></div>
 </div>
-<p>When plotting images stored in <a class="reference internal" href="../../types/grids.html#vtki.UniformGrid" title="vtki.UniformGrid"><code class="xref py py-class docutils literal notranslate"><span class="pre">vtki.UniformGrid</span></code></a> objects, it is
+<p>When plotting images stored in <a class="reference internal" href="../../types/grids.html#vista.UniformGrid" title="vista.UniformGrid"><code class="xref py py-class docutils literal notranslate"><span class="pre">vista.UniformGrid</span></code></a> objects, it is
 important to specify usign the <cite>rgb</cite> option when plotting to ensure that the
 image’s true colors are used and not mapped.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># True image colors</span>
@@ -249,13 +249,13 @@ image’s true colors are used and not mapped.</p>
 </pre></div>
 </div>
 <img alt="../../_images/sphx_glr_read-image_002.png" class="sphx-glr-single-img" src="../../_images/sphx_glr_read-image_002.png" />
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  13.636 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  16.107 seconds)</p>
 <div class="sphx-glr-footer class sphx-glr-footer-example docutils container" id="sphx-glr-download-examples-00-load-read-image-py">
 <div class="sphx-glr-download docutils container">
-<p><a class="reference download internal" download="" href="../../_downloads/8b5c40dde9d52a5f8b08f8c0237b7d6a/read-image.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">read-image.py</span></code></a></p>
+<p><a class="reference download internal" download="" href="../../_downloads/4e6ee2b2b08e0fab5dddf07b1e34c2dc/read-image.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">read-image.py</span></code></a></p>
 </div>
 <div class="sphx-glr-download docutils container">
-<p><a class="reference download internal" download="" href="../../_downloads/b237c840ab9b84bff915a327d2a6427a/read-image.ipynb"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Jupyter</span> <span class="pre">notebook:</span> <span class="pre">read-image.ipynb</span></code></a></p>
+<p><a class="reference download internal" download="" href="../../_downloads/50a1ffc6460864d8222804a24021d570/read-image.ipynb"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Jupyter</span> <span class="pre">notebook:</span> <span class="pre">read-image.ipynb</span></code></a></p>
 </div>
 </div>
 <p class="sphx-glr-signature"><a class="reference external" href="https://sphinx-gallery.readthedocs.io">Gallery generated by Sphinx-Gallery</a></p>
@@ -281,7 +281,7 @@ image’s true colors are used and not mapped.</p>
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2017-2019, The vtkiorg Developers
+        &copy; Copyright 2017-2019, The vista Developers
 
     </p>
   </div>

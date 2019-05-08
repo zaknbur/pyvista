@@ -18,7 +18,7 @@ Create a StructuredGrid surface from NumPy arrays
 
 
     # sphinx_gallery_thumbnail_number = 2
-    import vtki
+    import vista
     import numpy as np
 
 
@@ -47,14 +47,14 @@ Create a simple meshgrid using NumPy
 
 
 
-Now pass the NumPy meshgrid to ``vtki``
+Now pass the NumPy meshgrid to ``vista``
 
 
 .. code-block:: default
 
 
     # Create and plot structured grid
-    grid = vtki.StructuredGrid(x, y, z)
+    grid = vista.StructuredGrid(x, y, z)
     grid.plot()
 
 
@@ -112,7 +112,7 @@ the resulting surface can be accessed as a NumPy array:
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  3.611 seconds)
+   **Total running time of the script:** ( 0 minutes  3.436 seconds)
 
 
 .. _sphx_glr_download_examples_00-load_create-structured-surface.py:

@@ -16,8 +16,8 @@ Extracts edges from a surface.
 
 
     # sphinx_gallery_thumbnail_number = 2
-    import vtki
-    from vtki import examples
+    import vista
+    from vista import examples
 
 
 
@@ -47,7 +47,7 @@ To demonstrate, we will first extract the edges around Queen Nefertiti's eyes:
     edges = mesh.extract_edges(12)
 
     # Render the edge lines ontop of the original mesh
-    p = vtki.Plotter()
+    p = vista.Plotter()
     p.add_mesh(mesh, color=True)
     p.add_mesh(edges, color='red', line_width=5)
     # Define a camera position that will zoom to her eye
@@ -65,7 +65,7 @@ To demonstrate, we will first extract the edges around Queen Nefertiti's eyes:
 
 
 
-We can do this anaylsis for any :class:`vtki.PolyData` object. Let's try the
+We can do this anaylsis for any :class:`vista.PolyData` object. Let's try the
 cow mesh example:
 
 
@@ -76,7 +76,7 @@ cow mesh example:
 
     edges = mesh.extract_edges(20)
 
-    p = vtki.Plotter()
+    p = vista.Plotter()
     p.add_mesh(mesh, color=True)
     p.add_mesh(edges, color='red', line_width=5)
     p.camera_position = [(9.5, 3., 5.5),
@@ -95,7 +95,7 @@ cow mesh example:
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  14.005 seconds)
+   **Total running time of the script:** ( 0 minutes  15.001 seconds)
 
 
 .. _sphx_glr_download_examples_01-filter_extract-edges.py:

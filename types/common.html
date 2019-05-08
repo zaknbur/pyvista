@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Datasets &mdash; vtki 0.18.4 documentation</title>
+  <title>Datasets &mdash; vista 0.19.0 documentation</title>
   
 
   
@@ -61,7 +61,7 @@
 
           
             
-            <img src="../_static/vtki_logo.png" class="logo" alt="Logo"/>
+            <img src="../_static/vista_logo.png" class="logo" alt="Logo"/>
           
           </a>
 
@@ -69,7 +69,7 @@
             
             
               <div class="version">
-                0.18.4
+                0.19.0
               </div>
             
           
@@ -95,7 +95,7 @@
             
               <ul>
 <li class="toctree-l1"><a class="reference internal" href="../index.html">About</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../why.html">Why <code class="docutils literal notranslate"><span class="pre">vtki</span></code>?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../why.html">Why <code class="docutils literal notranslate"><span class="pre">vista</span></code>?</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../authors.html">Authors</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Getting Started</span></p>
@@ -131,7 +131,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../tools/plotting.html">Plotting</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../tools/filters.html">Filters</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../tools/ipy_tools.html">IPython Tools</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../tools/qt_plotting.html">vtki PyQt Interface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tools/qt_plotting.html">vista PyQt Interface</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../tools/utilities.html">Utilities</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Contributing</span></p>
@@ -153,7 +153,7 @@
       <nav class="wy-nav-top" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../index.html">vtki</a>
+          <a href="../index.html">vista</a>
         
       </nav>
 
@@ -191,7 +191,7 @@
         
             
             
-              <a href="https://github.com/vtkiorg/vtki/blob/master/docs/types/common.rst" class="fa fa-github"> Edit on GitHub</a>
+              <a href="https://github.com/pyvista/vista/blob/master/docs/types/common.rst" class="fa fa-github"> Edit on GitHub</a>
             
           
         
@@ -210,7 +210,7 @@
 <p>Datasets are any spatially reference information and usually consist of
 geometrical representations of a surface or volume in 3D space.
 In VTK, this superclass is represented by the <code class="docutils literal notranslate"><span class="pre">vtk.vtkDataSet</span></code> abstract class.</p>
-<p>In VTK, datasets consist of geometry, topology, and attributes to which <code class="docutils literal notranslate"><span class="pre">vtki</span></code>
+<p>In VTK, datasets consist of geometry, topology, and attributes to which <code class="docutils literal notranslate"><span class="pre">vista</span></code>
 provides direct access:</p>
 <ul class="simple">
 <li><p>Geometry is the collection of points and cells in 2D or 3D space.</p></li>
@@ -219,64 +219,64 @@ provides direct access:</p>
 </ul>
 <p>All of the following data types are listed subclasses of a dataset and share a
 set of common functionality which we wrap into the base class
-<a class="reference internal" href="#vtki.Common" title="vtki.Common"><code class="xref py py-class docutils literal notranslate"><span class="pre">vtki.Common</span></code></a>.</p>
+<a class="reference internal" href="#vista.Common" title="vista.Common"><code class="xref py py-class docutils literal notranslate"><span class="pre">vista.Common</span></code></a>.</p>
 <div class="section" id="polydata">
 <h2>PolyData<a class="headerlink" href="#polydata" title="Permalink to this headline">¶</a></h2>
-<p><a class="reference internal" href="points.html#vtki.PolyData" title="vtki.PolyData"><code class="xref py py-class docutils literal notranslate"><span class="pre">vtki.PolyData</span></code></a> consists of any 1D or 2D geometries to construct
+<p><a class="reference internal" href="points.html#vista.PolyData" title="vista.PolyData"><code class="xref py py-class docutils literal notranslate"><span class="pre">vista.PolyData</span></code></a> consists of any 1D or 2D geometries to construct
 vertices, lines, polygons, and triangles.
 We generally use <code class="docutils literal notranslate"><span class="pre">PolyData</span></code> to construct scattered points and closed/open
 surfaces (non-volumetric datasets).
-The <a class="reference internal" href="points.html#vtki.PolyData" title="vtki.PolyData"><code class="xref py py-class docutils literal notranslate"><span class="pre">vtki.PolyData</span></code></a> class is an extension of <code class="docutils literal notranslate"><span class="pre">vtk.vtkPolyData</span></code>.</p>
+The <a class="reference internal" href="points.html#vista.PolyData" title="vista.PolyData"><code class="xref py py-class docutils literal notranslate"><span class="pre">vista.PolyData</span></code></a> class is an extension of <code class="docutils literal notranslate"><span class="pre">vtk.vtkPolyData</span></code>.</p>
 </div>
 <div class="section" id="unstructuredgrid">
 <h2>UnstructuredGrid<a class="headerlink" href="#unstructuredgrid" title="Permalink to this headline">¶</a></h2>
-<p>An <a class="reference internal" href="point-grids.html#vtki.UnstructuredGrid" title="vtki.UnstructuredGrid"><code class="xref py py-class docutils literal notranslate"><span class="pre">vtki.UnstructuredGrid</span></code></a> is the most general dataset type that can hold
+<p>An <a class="reference internal" href="point-grids.html#vista.UnstructuredGrid" title="vista.UnstructuredGrid"><code class="xref py py-class docutils literal notranslate"><span class="pre">vista.UnstructuredGrid</span></code></a> is the most general dataset type that can hold
 any 1D, 2D, or 3D cell geometries.
 You can think of this as a 3D extension of <code class="docutils literal notranslate"><span class="pre">PolyData</span></code> that allows volumetric
 cells to be present.
 It’s fairly uncommon to explicitly make unstructured grids but they are often
 the result of different processing routines that might extract subsets of larger
 datasets.
-The <a class="reference internal" href="point-grids.html#vtki.UnstructuredGrid" title="vtki.UnstructuredGrid"><code class="xref py py-class docutils literal notranslate"><span class="pre">vtki.UnstructuredGrid</span></code></a> class is an extension of
+The <a class="reference internal" href="point-grids.html#vista.UnstructuredGrid" title="vista.UnstructuredGrid"><code class="xref py py-class docutils literal notranslate"><span class="pre">vista.UnstructuredGrid</span></code></a> class is an extension of
 <code class="docutils literal notranslate"><span class="pre">vtk.UnstructuredGrid</span></code>.</p>
 </div>
 <div class="section" id="structuredgrid">
 <h2>StructuredGrid<a class="headerlink" href="#structuredgrid" title="Permalink to this headline">¶</a></h2>
-<p>A <a class="reference internal" href="point-grids.html#vtki.StructuredGrid" title="vtki.StructuredGrid"><code class="xref py py-class docutils literal notranslate"><span class="pre">vtki.StructuredGrid</span></code></a> is a regular lattice of points aligned with an
+<p>A <a class="reference internal" href="point-grids.html#vista.StructuredGrid" title="vista.StructuredGrid"><code class="xref py py-class docutils literal notranslate"><span class="pre">vista.StructuredGrid</span></code></a> is a regular lattice of points aligned with an
 internal coordinate axes such that the connectivity can be defined by a grid
 ordering.
 These are commonly made from <code class="xref py py-func docutils literal notranslate"><span class="pre">np.meshgrid()</span></code>. The cell types of structured
 grids must be 2D Quads or 3D Hexahedrons.
-The <a class="reference internal" href="point-grids.html#vtki.StructuredGrid" title="vtki.StructuredGrid"><code class="xref py py-class docutils literal notranslate"><span class="pre">vtki.StructuredGrid</span></code></a> class is an extension of
+The <a class="reference internal" href="point-grids.html#vista.StructuredGrid" title="vista.StructuredGrid"><code class="xref py py-class docutils literal notranslate"><span class="pre">vista.StructuredGrid</span></code></a> class is an extension of
 <code class="docutils literal notranslate"><span class="pre">vtk.vtkStructuredGrid</span></code>.</p>
 </div>
 <div class="section" id="rectilineargrid">
 <h2>RectilinearGrid<a class="headerlink" href="#rectilineargrid" title="Permalink to this headline">¶</a></h2>
-<p>A <a class="reference internal" href="grids.html#vtki.RectilinearGrid" title="vtki.RectilinearGrid"><code class="xref py py-class docutils literal notranslate"><span class="pre">vtki.RectilinearGrid</span></code></a> defines meshes with implicit geometries along the axes
+<p>A <a class="reference internal" href="grids.html#vista.RectilinearGrid" title="vista.RectilinearGrid"><code class="xref py py-class docutils literal notranslate"><span class="pre">vista.RectilinearGrid</span></code></a> defines meshes with implicit geometries along the axes
 directions that are rectangular and regular.
-The <a class="reference internal" href="grids.html#vtki.RectilinearGrid" title="vtki.RectilinearGrid"><code class="xref py py-class docutils literal notranslate"><span class="pre">vtki.RectilinearGrid</span></code></a> class is an extension of
+The <a class="reference internal" href="grids.html#vista.RectilinearGrid" title="vista.RectilinearGrid"><code class="xref py py-class docutils literal notranslate"><span class="pre">vista.RectilinearGrid</span></code></a> class is an extension of
 <code class="docutils literal notranslate"><span class="pre">vtk.vtkRectilinearGrid</span></code>.</p>
 </div>
 <div class="section" id="imagedata">
 <h2>ImageData<a class="headerlink" href="#imagedata" title="Permalink to this headline">¶</a></h2>
 <p>Image data, commonly referenced to as uniform grids, and defined by the
-<a class="reference internal" href="grids.html#vtki.UniformGrid" title="vtki.UniformGrid"><code class="xref py py-class docutils literal notranslate"><span class="pre">vtki.UniformGrid</span></code></a> class are meshes with implicit geometries where cell
+<a class="reference internal" href="grids.html#vista.UniformGrid" title="vista.UniformGrid"><code class="xref py py-class docutils literal notranslate"><span class="pre">vista.UniformGrid</span></code></a> class are meshes with implicit geometries where cell
 sizes are uniformly assigned along each axis and the spatial reference is built
 out from an origin point.
-The <a class="reference internal" href="grids.html#vtki.UniformGrid" title="vtki.UniformGrid"><code class="xref py py-class docutils literal notranslate"><span class="pre">vtki.UniformGrid</span></code></a> class is an extension of <code class="docutils literal notranslate"><span class="pre">vtk.vtkImageData</span></code>.</p>
+The <a class="reference internal" href="grids.html#vista.UniformGrid" title="vista.UniformGrid"><code class="xref py py-class docutils literal notranslate"><span class="pre">vista.UniformGrid</span></code></a> class is an extension of <code class="docutils literal notranslate"><span class="pre">vtk.vtkImageData</span></code>.</p>
 </div>
 <div class="section" id="multiblock">
 <h2>MultiBlock<a class="headerlink" href="#multiblock" title="Permalink to this headline">¶</a></h2>
-<p><a class="reference internal" href="container.html#vtki.MultiBlock" title="vtki.MultiBlock"><code class="xref py py-class docutils literal notranslate"><span class="pre">vtki.MultiBlock</span></code></a> datasets are containers to hold several VTK datasets in
+<p><a class="reference internal" href="container.html#vista.MultiBlock" title="vista.MultiBlock"><code class="xref py py-class docutils literal notranslate"><span class="pre">vista.MultiBlock</span></code></a> datasets are containers to hold several VTK datasets in
 one accessible and spatially referenced object.
-The <a class="reference internal" href="container.html#vtki.MultiBlock" title="vtki.MultiBlock"><code class="xref py py-class docutils literal notranslate"><span class="pre">vtki.MultiBlock</span></code></a> class is an extension of
+The <a class="reference internal" href="container.html#vista.MultiBlock" title="vista.MultiBlock"><code class="xref py py-class docutils literal notranslate"><span class="pre">vista.MultiBlock</span></code></a> class is an extension of
 <code class="docutils literal notranslate"><span class="pre">vtk.vtkMultiBlockDataSet</span></code>.</p>
 </div>
 </div>
 <div class="section" id="the-common-model">
 <h1>The Common Model<a class="headerlink" href="#the-common-model" title="Permalink to this headline">¶</a></h1>
-<p>The <a class="reference internal" href="#vtki.Common" title="vtki.Common"><code class="xref py py-class docutils literal notranslate"><span class="pre">vtki.Common</span></code></a> class holds attributes that are <em>common</em> to all
-spatially referenced datasets in <code class="docutils literal notranslate"><span class="pre">vtki</span></code>.
+<p>The <a class="reference internal" href="#vista.Common" title="vista.Common"><code class="xref py py-class docutils literal notranslate"><span class="pre">vista.Common</span></code></a> class holds attributes that are <em>common</em> to all
+spatially referenced datasets in <code class="docutils literal notranslate"><span class="pre">vista</span></code>.
 This base class is analogous to VTK’s <code class="docutils literal notranslate"><span class="pre">vtk.vtkDataSet</span></code> class.</p>
 <p class="rubric">Attributes</p>
 <table class="longtable docutils align-center">
@@ -285,79 +285,79 @@ This base class is analogous to VTK’s <code class="docutils literal notranslat
 <col style="width: 90%" />
 </colgroup>
 <tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="#vtki.Common.active_scalar" title="vtki.Common.active_scalar"><code class="xref py py-obj docutils literal notranslate"><span class="pre">active_scalar</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#vista.Common.active_scalar" title="vista.Common.active_scalar"><code class="xref py py-obj docutils literal notranslate"><span class="pre">active_scalar</span></code></a></p></td>
 <td><p>Returns the active scalar as an array</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#vtki.Common.active_scalar_info" title="vtki.Common.active_scalar_info"><code class="xref py py-obj docutils literal notranslate"><span class="pre">active_scalar_info</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#vista.Common.active_scalar_info" title="vista.Common.active_scalar_info"><code class="xref py py-obj docutils literal notranslate"><span class="pre">active_scalar_info</span></code></a></p></td>
 <td><p>[field, name]</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#vtki.Common.active_scalar_name" title="vtki.Common.active_scalar_name"><code class="xref py py-obj docutils literal notranslate"><span class="pre">active_scalar_name</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#vista.Common.active_scalar_name" title="vista.Common.active_scalar_name"><code class="xref py py-obj docutils literal notranslate"><span class="pre">active_scalar_name</span></code></a></p></td>
 <td><p>Returns the active scalar’s name</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#vtki.Common.active_vectors" title="vtki.Common.active_vectors"><code class="xref py py-obj docutils literal notranslate"><span class="pre">active_vectors</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#vista.Common.active_vectors" title="vista.Common.active_vectors"><code class="xref py py-obj docutils literal notranslate"><span class="pre">active_vectors</span></code></a></p></td>
 <td><p>The active vectors array</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#vtki.Common.active_vectors_info" title="vtki.Common.active_vectors_info"><code class="xref py py-obj docutils literal notranslate"><span class="pre">active_vectors_info</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#vista.Common.active_vectors_info" title="vista.Common.active_vectors_info"><code class="xref py py-obj docutils literal notranslate"><span class="pre">active_vectors_info</span></code></a></p></td>
 <td><p>[field, name]</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#vtki.Common.active_vectors_name" title="vtki.Common.active_vectors_name"><code class="xref py py-obj docutils literal notranslate"><span class="pre">active_vectors_name</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#vista.Common.active_vectors_name" title="vista.Common.active_vectors_name"><code class="xref py py-obj docutils literal notranslate"><span class="pre">active_vectors_name</span></code></a></p></td>
 <td><p>The name of the active vectors array</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#vtki.Common.arrows" title="vtki.Common.arrows"><code class="xref py py-obj docutils literal notranslate"><span class="pre">arrows</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#vista.Common.arrows" title="vista.Common.arrows"><code class="xref py py-obj docutils literal notranslate"><span class="pre">arrows</span></code></a></p></td>
 <td><p>Returns a glyph representation of the active vector data as arrows.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#vtki.Common.bounds" title="vtki.Common.bounds"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bounds</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#vista.Common.bounds" title="vista.Common.bounds"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bounds</span></code></a></p></td>
 <td><p>bounding box of this dataset in the form (xmin,xmax, ymin,ymax, zmin,zmax)</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#vtki.Common.cell_arrays" title="vtki.Common.cell_arrays"><code class="xref py py-obj docutils literal notranslate"><span class="pre">cell_arrays</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#vista.Common.cell_arrays" title="vista.Common.cell_arrays"><code class="xref py py-obj docutils literal notranslate"><span class="pre">cell_arrays</span></code></a></p></td>
 <td><p>Returns the all cell arrays</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#vtki.Common.center" title="vtki.Common.center"><code class="xref py py-obj docutils literal notranslate"><span class="pre">center</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#vista.Common.center" title="vista.Common.center"><code class="xref py py-obj docutils literal notranslate"><span class="pre">center</span></code></a></p></td>
 <td><p>Center of the bounding box</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#vtki.Common.extent" title="vtki.Common.extent"><code class="xref py py-obj docutils literal notranslate"><span class="pre">extent</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#vista.Common.extent" title="vista.Common.extent"><code class="xref py py-obj docutils literal notranslate"><span class="pre">extent</span></code></a></p></td>
 <td><p>The range of the bounding box</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#vtki.Common.field_arrays" title="vtki.Common.field_arrays"><code class="xref py py-obj docutils literal notranslate"><span class="pre">field_arrays</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#vista.Common.field_arrays" title="vista.Common.field_arrays"><code class="xref py py-obj docutils literal notranslate"><span class="pre">field_arrays</span></code></a></p></td>
 <td><p>Returns all field arrays</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#vtki.Common.length" title="vtki.Common.length"><code class="xref py py-obj docutils literal notranslate"><span class="pre">length</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#vista.Common.length" title="vista.Common.length"><code class="xref py py-obj docutils literal notranslate"><span class="pre">length</span></code></a></p></td>
 <td><p>the length of the diagonal of the bounding box</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#vtki.Common.n_cells" title="vtki.Common.n_cells"><code class="xref py py-obj docutils literal notranslate"><span class="pre">n_cells</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#vista.Common.n_cells" title="vista.Common.n_cells"><code class="xref py py-obj docutils literal notranslate"><span class="pre">n_cells</span></code></a></p></td>
 <td><p>The number of cells in the entire dataset</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#vtki.Common.n_points" title="vtki.Common.n_points"><code class="xref py py-obj docutils literal notranslate"><span class="pre">n_points</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#vista.Common.n_points" title="vista.Common.n_points"><code class="xref py py-obj docutils literal notranslate"><span class="pre">n_points</span></code></a></p></td>
 <td><p>The number of points in the entire dataset</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#vtki.Common.n_scalars" title="vtki.Common.n_scalars"><code class="xref py py-obj docutils literal notranslate"><span class="pre">n_scalars</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#vista.Common.n_scalars" title="vista.Common.n_scalars"><code class="xref py py-obj docutils literal notranslate"><span class="pre">n_scalars</span></code></a></p></td>
 <td><p>The number of scalara arrays present in the dataset</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#vtki.Common.number_of_cells" title="vtki.Common.number_of_cells"><code class="xref py py-obj docutils literal notranslate"><span class="pre">number_of_cells</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#vista.Common.number_of_cells" title="vista.Common.number_of_cells"><code class="xref py py-obj docutils literal notranslate"><span class="pre">number_of_cells</span></code></a></p></td>
 <td><p>returns the number of cells</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#vtki.Common.number_of_points" title="vtki.Common.number_of_points"><code class="xref py py-obj docutils literal notranslate"><span class="pre">number_of_points</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#vista.Common.number_of_points" title="vista.Common.number_of_points"><code class="xref py py-obj docutils literal notranslate"><span class="pre">number_of_points</span></code></a></p></td>
 <td><p>returns the number of points</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#vtki.Common.point_arrays" title="vtki.Common.point_arrays"><code class="xref py py-obj docutils literal notranslate"><span class="pre">point_arrays</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#vista.Common.point_arrays" title="vista.Common.point_arrays"><code class="xref py py-obj docutils literal notranslate"><span class="pre">point_arrays</span></code></a></p></td>
 <td><p>Returns the all point arrays</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#vtki.Common.points" title="vtki.Common.points"><code class="xref py py-obj docutils literal notranslate"><span class="pre">points</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#vista.Common.points" title="vista.Common.points"><code class="xref py py-obj docutils literal notranslate"><span class="pre">points</span></code></a></p></td>
 <td><p>returns a pointer to the points as a numpy object</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#vtki.Common.scalar_names" title="vtki.Common.scalar_names"><code class="xref py py-obj docutils literal notranslate"><span class="pre">scalar_names</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#vista.Common.scalar_names" title="vista.Common.scalar_names"><code class="xref py py-obj docutils literal notranslate"><span class="pre">scalar_names</span></code></a></p></td>
 <td><p>A list of scalar names for the dataset.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#vtki.Common.t_coords" title="vtki.Common.t_coords"><code class="xref py py-obj docutils literal notranslate"><span class="pre">t_coords</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#vista.Common.t_coords" title="vista.Common.t_coords"><code class="xref py py-obj docutils literal notranslate"><span class="pre">t_coords</span></code></a></p></td>
 <td><p>The active texture coordinates on the points</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#vtki.Common.textures" title="vtki.Common.textures"><code class="xref py py-obj docutils literal notranslate"><span class="pre">textures</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#vista.Common.textures" title="vista.Common.textures"><code class="xref py py-obj docutils literal notranslate"><span class="pre">textures</span></code></a></p></td>
 <td><p>A dictionary to hold <code class="docutils literal notranslate"><span class="pre">vtk.vtkTexture</span></code> objects that can be associated with this dataset.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#vtki.Common.vectors" title="vtki.Common.vectors"><code class="xref py py-obj docutils literal notranslate"><span class="pre">vectors</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#vista.Common.vectors" title="vista.Common.vectors"><code class="xref py py-obj docutils literal notranslate"><span class="pre">vectors</span></code></a></p></td>
 <td><p>Returns active vectors</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#vtki.Common.volume" title="vtki.Common.volume"><code class="xref py py-obj docutils literal notranslate"><span class="pre">volume</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#vista.Common.volume" title="vista.Common.volume"><code class="xref py py-obj docutils literal notranslate"><span class="pre">volume</span></code></a></p></td>
 <td><p>Mesh volume</p></td>
 </tr>
 </tbody>
@@ -369,76 +369,76 @@ This base class is analogous to VTK’s <code class="docutils literal notranslat
 <col style="width: 90%" />
 </colgroup>
 <tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="#vtki.Common.add_field_array" title="vtki.Common.add_field_array"><code class="xref py py-obj docutils literal notranslate"><span class="pre">add_field_array</span></code></a>(scalars, name[, deep])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#vista.Common.add_field_array" title="vista.Common.add_field_array"><code class="xref py py-obj docutils literal notranslate"><span class="pre">add_field_array</span></code></a>(scalars, name[, deep])</p></td>
 <td><p></p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#vtki.Common.cast_to_unstructured_grid" title="vtki.Common.cast_to_unstructured_grid"><code class="xref py py-obj docutils literal notranslate"><span class="pre">cast_to_unstructured_grid</span></code></a>()</p></td>
-<td><p>Get a new representation of this object as an <a class="reference internal" href="point-grids.html#vtki.UnstructuredGrid" title="vtki.UnstructuredGrid"><code class="xref py py-class docutils literal notranslate"><span class="pre">vtki.UnstructuredGrid</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#vista.Common.cast_to_unstructured_grid" title="vista.Common.cast_to_unstructured_grid"><code class="xref py py-obj docutils literal notranslate"><span class="pre">cast_to_unstructured_grid</span></code></a>()</p></td>
+<td><p>Get a new representation of this object as an <a class="reference internal" href="point-grids.html#vista.UnstructuredGrid" title="vista.UnstructuredGrid"><code class="xref py py-class docutils literal notranslate"><span class="pre">vista.UnstructuredGrid</span></code></a></p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#vtki.Common.copy" title="vtki.Common.copy"><code class="xref py py-obj docutils literal notranslate"><span class="pre">copy</span></code></a>([deep])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#vista.Common.copy" title="vista.Common.copy"><code class="xref py py-obj docutils literal notranslate"><span class="pre">copy</span></code></a>([deep])</p></td>
 <td><p>Returns a copy of the object</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#vtki.Common.copy_meta_from" title="vtki.Common.copy_meta_from"><code class="xref py py-obj docutils literal notranslate"><span class="pre">copy_meta_from</span></code></a>(ido)</p></td>
-<td><p>Copies vtki meta data onto this object from another object</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#vista.Common.copy_meta_from" title="vista.Common.copy_meta_from"><code class="xref py py-obj docutils literal notranslate"><span class="pre">copy_meta_from</span></code></a>(ido)</p></td>
+<td><p>Copies vista meta data onto this object from another object</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#vtki.Common.get_data_range" title="vtki.Common.get_data_range"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_data_range</span></code></a>([arr, preference])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#vista.Common.get_data_range" title="vista.Common.get_data_range"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_data_range</span></code></a>([arr, preference])</p></td>
 <td><p>Get the non-NaN min and max of a named scalar array</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#vtki.Common.get_scalar" title="vtki.Common.get_scalar"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_scalar</span></code></a>(name[, preference, info])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#vista.Common.get_scalar" title="vista.Common.get_scalar"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_scalar</span></code></a>(name[, preference, info])</p></td>
 <td><p>Searches both point, cell and field data for an array</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#vtki.Common.head" title="vtki.Common.head"><code class="xref py py-obj docutils literal notranslate"><span class="pre">head</span></code></a>([display, html])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#vista.Common.head" title="vista.Common.head"><code class="xref py py-obj docutils literal notranslate"><span class="pre">head</span></code></a>([display, html])</p></td>
 <td><p>Return the header stats of this dataset.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#vtki.Common.overwrite" title="vtki.Common.overwrite"><code class="xref py py-obj docutils literal notranslate"><span class="pre">overwrite</span></code></a>(mesh)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#vista.Common.overwrite" title="vista.Common.overwrite"><code class="xref py py-obj docutils literal notranslate"><span class="pre">overwrite</span></code></a>(mesh)</p></td>
 <td><p>Overwrites this mesh inplace with the new mesh’s geometries and data</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#vtki.Common.plot" title="vtki.Common.plot"><code class="xref py py-obj docutils literal notranslate"><span class="pre">plot</span></code></a>([off_screen, full_screen, screenshot, …])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#vista.Common.plot" title="vista.Common.plot"><code class="xref py py-obj docutils literal notranslate"><span class="pre">plot</span></code></a>([off_screen, full_screen, screenshot, …])</p></td>
 <td><p>Convenience plotting function for a vtk or numpy object.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#vtki.Common.points_to_double" title="vtki.Common.points_to_double"><code class="xref py py-obj docutils literal notranslate"><span class="pre">points_to_double</span></code></a>()</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#vista.Common.points_to_double" title="vista.Common.points_to_double"><code class="xref py py-obj docutils literal notranslate"><span class="pre">points_to_double</span></code></a>()</p></td>
 <td><p>Makes points double precision</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#vtki.Common.rename_scalar" title="vtki.Common.rename_scalar"><code class="xref py py-obj docutils literal notranslate"><span class="pre">rename_scalar</span></code></a>(old_name, new_name[, preference])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#vista.Common.rename_scalar" title="vista.Common.rename_scalar"><code class="xref py py-obj docutils literal notranslate"><span class="pre">rename_scalar</span></code></a>(old_name, new_name[, preference])</p></td>
 <td><p>Changes array name by searching for the array then renaming it</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#vtki.Common.rotate_x" title="vtki.Common.rotate_x"><code class="xref py py-obj docutils literal notranslate"><span class="pre">rotate_x</span></code></a>(angle)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#vista.Common.rotate_x" title="vista.Common.rotate_x"><code class="xref py py-obj docutils literal notranslate"><span class="pre">rotate_x</span></code></a>(angle)</p></td>
 <td><p>Rotates mesh about the x-axis.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#vtki.Common.rotate_y" title="vtki.Common.rotate_y"><code class="xref py py-obj docutils literal notranslate"><span class="pre">rotate_y</span></code></a>(angle)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#vista.Common.rotate_y" title="vista.Common.rotate_y"><code class="xref py py-obj docutils literal notranslate"><span class="pre">rotate_y</span></code></a>(angle)</p></td>
 <td><p>Rotates mesh about the y-axis.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#vtki.Common.rotate_z" title="vtki.Common.rotate_z"><code class="xref py py-obj docutils literal notranslate"><span class="pre">rotate_z</span></code></a>(angle)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#vista.Common.rotate_z" title="vista.Common.rotate_z"><code class="xref py py-obj docutils literal notranslate"><span class="pre">rotate_z</span></code></a>(angle)</p></td>
 <td><p>Rotates mesh about the z-axis.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#vtki.Common.set_active_scalar" title="vtki.Common.set_active_scalar"><code class="xref py py-obj docutils literal notranslate"><span class="pre">set_active_scalar</span></code></a>(name[, preference])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#vista.Common.set_active_scalar" title="vista.Common.set_active_scalar"><code class="xref py py-obj docutils literal notranslate"><span class="pre">set_active_scalar</span></code></a>(name[, preference])</p></td>
 <td><p>Finds the scalar by name and appropriately sets it as active</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#vtki.Common.set_active_vectors" title="vtki.Common.set_active_vectors"><code class="xref py py-obj docutils literal notranslate"><span class="pre">set_active_vectors</span></code></a>(name[, preference])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#vista.Common.set_active_vectors" title="vista.Common.set_active_vectors"><code class="xref py py-obj docutils literal notranslate"><span class="pre">set_active_vectors</span></code></a>(name[, preference])</p></td>
 <td><p>Finds the vectors by name and appropriately sets it as active</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#vtki.Common.transform" title="vtki.Common.transform"><code class="xref py py-obj docutils literal notranslate"><span class="pre">transform</span></code></a>(trans)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#vista.Common.transform" title="vista.Common.transform"><code class="xref py py-obj docutils literal notranslate"><span class="pre">transform</span></code></a>(trans)</p></td>
 <td><p>Compute a transformation in place using a 4x4 transform.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#vtki.Common.translate" title="vtki.Common.translate"><code class="xref py py-obj docutils literal notranslate"><span class="pre">translate</span></code></a>(xyz)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#vista.Common.translate" title="vista.Common.translate"><code class="xref py py-obj docutils literal notranslate"><span class="pre">translate</span></code></a>(xyz)</p></td>
 <td><p>Translates the mesh.</p></td>
 </tr>
 </tbody>
 </table>
 <dl class="class">
-<dt id="vtki.Common">
-<em class="property">class </em><code class="descclassname">vtki.</code><code class="descname">Common</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#vtki.Common" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">vtki.filters.DataSetFilters</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dt id="vista.Common">
+<em class="property">class </em><code class="descclassname">vista.</code><code class="descname">Common</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#vista.Common" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">vista.filters.DataSetFilters</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <p>Methods in common to grid and surface objects</p>
 <dl class="attribute">
-<dt id="vtki.Common.active_scalar">
-<code class="descname">active_scalar</code><a class="headerlink" href="#vtki.Common.active_scalar" title="Permalink to this definition">¶</a></dt>
+<dt id="vista.Common.active_scalar">
+<code class="descname">active_scalar</code><a class="headerlink" href="#vista.Common.active_scalar" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns the active scalar as an array</p>
 </dd></dl>
 
 <dl class="attribute">
-<dt id="vtki.Common.active_scalar_info">
-<code class="descname">active_scalar_info</code><a class="headerlink" href="#vtki.Common.active_scalar_info" title="Permalink to this definition">¶</a></dt>
+<dt id="vista.Common.active_scalar_info">
+<code class="descname">active_scalar_info</code><a class="headerlink" href="#vista.Common.active_scalar_info" title="Permalink to this definition">¶</a></dt>
 <dd><p>[field, name]</p>
 <dl class="field-list simple">
 <dt class="field-odd">Type</dt>
@@ -448,20 +448,20 @@ This base class is analogous to VTK’s <code class="docutils literal notranslat
 </dd></dl>
 
 <dl class="attribute">
-<dt id="vtki.Common.active_scalar_name">
-<code class="descname">active_scalar_name</code><a class="headerlink" href="#vtki.Common.active_scalar_name" title="Permalink to this definition">¶</a></dt>
+<dt id="vista.Common.active_scalar_name">
+<code class="descname">active_scalar_name</code><a class="headerlink" href="#vista.Common.active_scalar_name" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns the active scalar’s name</p>
 </dd></dl>
 
 <dl class="attribute">
-<dt id="vtki.Common.active_vectors">
-<code class="descname">active_vectors</code><a class="headerlink" href="#vtki.Common.active_vectors" title="Permalink to this definition">¶</a></dt>
+<dt id="vista.Common.active_vectors">
+<code class="descname">active_vectors</code><a class="headerlink" href="#vista.Common.active_vectors" title="Permalink to this definition">¶</a></dt>
 <dd><p>The active vectors array</p>
 </dd></dl>
 
 <dl class="attribute">
-<dt id="vtki.Common.active_vectors_info">
-<code class="descname">active_vectors_info</code><a class="headerlink" href="#vtki.Common.active_vectors_info" title="Permalink to this definition">¶</a></dt>
+<dt id="vista.Common.active_vectors_info">
+<code class="descname">active_vectors_info</code><a class="headerlink" href="#vista.Common.active_vectors_info" title="Permalink to this definition">¶</a></dt>
 <dd><p>[field, name]</p>
 <dl class="field-list simple">
 <dt class="field-odd">Type</dt>
@@ -471,19 +471,19 @@ This base class is analogous to VTK’s <code class="docutils literal notranslat
 </dd></dl>
 
 <dl class="attribute">
-<dt id="vtki.Common.active_vectors_name">
-<code class="descname">active_vectors_name</code><a class="headerlink" href="#vtki.Common.active_vectors_name" title="Permalink to this definition">¶</a></dt>
+<dt id="vista.Common.active_vectors_name">
+<code class="descname">active_vectors_name</code><a class="headerlink" href="#vista.Common.active_vectors_name" title="Permalink to this definition">¶</a></dt>
 <dd><p>The name of the active vectors array</p>
 </dd></dl>
 
 <dl class="method">
-<dt id="vtki.Common.add_field_array">
-<code class="descname">add_field_array</code><span class="sig-paren">(</span><em>scalars</em>, <em>name</em>, <em>deep=True</em><span class="sig-paren">)</span><a class="headerlink" href="#vtki.Common.add_field_array" title="Permalink to this definition">¶</a></dt>
+<dt id="vista.Common.add_field_array">
+<code class="descname">add_field_array</code><span class="sig-paren">(</span><em>scalars</em>, <em>name</em>, <em>deep=True</em><span class="sig-paren">)</span><a class="headerlink" href="#vista.Common.add_field_array" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
-<dt id="vtki.Common.arrows">
-<code class="descname">arrows</code><a class="headerlink" href="#vtki.Common.arrows" title="Permalink to this definition">¶</a></dt>
+<dt id="vista.Common.arrows">
+<code class="descname">arrows</code><a class="headerlink" href="#vista.Common.arrows" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns a glyph representation of the active vector data as
 arrows.  Arrows will be located at the points of the mesh and
 their size will be dependent on the length of the vector.
@@ -493,40 +493,40 @@ Their direction will be the “direction” of the vector</p>
 <dd class="field-odd"><p><strong>arrows</strong> – Active scalars represented as arrows.</p>
 </dd>
 <dt class="field-even">Return type</dt>
-<dd class="field-even"><p><a class="reference internal" href="points.html#vtki.PolyData" title="vtki.PolyData">vtki.PolyData</a></p>
+<dd class="field-even"><p><a class="reference internal" href="points.html#vista.PolyData" title="vista.PolyData">vista.PolyData</a></p>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="attribute">
-<dt id="vtki.Common.bounds">
-<code class="descname">bounds</code><a class="headerlink" href="#vtki.Common.bounds" title="Permalink to this definition">¶</a></dt>
+<dt id="vista.Common.bounds">
+<code class="descname">bounds</code><a class="headerlink" href="#vista.Common.bounds" title="Permalink to this definition">¶</a></dt>
 <dd><p>bounding box of this dataset in the form
 (xmin,xmax, ymin,ymax, zmin,zmax)</p>
 </dd></dl>
 
 <dl class="method">
-<dt id="vtki.Common.cast_to_unstructured_grid">
-<code class="descname">cast_to_unstructured_grid</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#vtki.Common.cast_to_unstructured_grid" title="Permalink to this definition">¶</a></dt>
+<dt id="vista.Common.cast_to_unstructured_grid">
+<code class="descname">cast_to_unstructured_grid</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#vista.Common.cast_to_unstructured_grid" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get a new representation of this object as an
-<a class="reference internal" href="point-grids.html#vtki.UnstructuredGrid" title="vtki.UnstructuredGrid"><code class="xref py py-class docutils literal notranslate"><span class="pre">vtki.UnstructuredGrid</span></code></a></p>
+<a class="reference internal" href="point-grids.html#vista.UnstructuredGrid" title="vista.UnstructuredGrid"><code class="xref py py-class docutils literal notranslate"><span class="pre">vista.UnstructuredGrid</span></code></a></p>
 </dd></dl>
 
 <dl class="attribute">
-<dt id="vtki.Common.cell_arrays">
-<code class="descname">cell_arrays</code><a class="headerlink" href="#vtki.Common.cell_arrays" title="Permalink to this definition">¶</a></dt>
+<dt id="vista.Common.cell_arrays">
+<code class="descname">cell_arrays</code><a class="headerlink" href="#vista.Common.cell_arrays" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns the all cell arrays</p>
 </dd></dl>
 
 <dl class="attribute">
-<dt id="vtki.Common.center">
-<code class="descname">center</code><a class="headerlink" href="#vtki.Common.center" title="Permalink to this definition">¶</a></dt>
+<dt id="vista.Common.center">
+<code class="descname">center</code><a class="headerlink" href="#vista.Common.center" title="Permalink to this definition">¶</a></dt>
 <dd><p>Center of the bounding box</p>
 </dd></dl>
 
 <dl class="method">
-<dt id="vtki.Common.copy">
-<code class="descname">copy</code><span class="sig-paren">(</span><em>deep=True</em><span class="sig-paren">)</span><a class="headerlink" href="#vtki.Common.copy" title="Permalink to this definition">¶</a></dt>
+<dt id="vista.Common.copy">
+<code class="descname">copy</code><span class="sig-paren">(</span><em>deep=True</em><span class="sig-paren">)</span><a class="headerlink" href="#vista.Common.copy" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns a copy of the object</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -542,26 +542,26 @@ Their direction will be the “direction” of the vector</p>
 </dd></dl>
 
 <dl class="method">
-<dt id="vtki.Common.copy_meta_from">
-<code class="descname">copy_meta_from</code><span class="sig-paren">(</span><em>ido</em><span class="sig-paren">)</span><a class="headerlink" href="#vtki.Common.copy_meta_from" title="Permalink to this definition">¶</a></dt>
-<dd><p>Copies vtki meta data onto this object from another object</p>
+<dt id="vista.Common.copy_meta_from">
+<code class="descname">copy_meta_from</code><span class="sig-paren">(</span><em>ido</em><span class="sig-paren">)</span><a class="headerlink" href="#vista.Common.copy_meta_from" title="Permalink to this definition">¶</a></dt>
+<dd><p>Copies vista meta data onto this object from another object</p>
 </dd></dl>
 
 <dl class="attribute">
-<dt id="vtki.Common.extent">
-<code class="descname">extent</code><a class="headerlink" href="#vtki.Common.extent" title="Permalink to this definition">¶</a></dt>
+<dt id="vista.Common.extent">
+<code class="descname">extent</code><a class="headerlink" href="#vista.Common.extent" title="Permalink to this definition">¶</a></dt>
 <dd><p>The range of the bounding box</p>
 </dd></dl>
 
 <dl class="attribute">
-<dt id="vtki.Common.field_arrays">
-<code class="descname">field_arrays</code><a class="headerlink" href="#vtki.Common.field_arrays" title="Permalink to this definition">¶</a></dt>
+<dt id="vista.Common.field_arrays">
+<code class="descname">field_arrays</code><a class="headerlink" href="#vista.Common.field_arrays" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns all field arrays</p>
 </dd></dl>
 
 <dl class="method">
-<dt id="vtki.Common.get_data_range">
-<code class="descname">get_data_range</code><span class="sig-paren">(</span><em>arr=None</em>, <em>preference='cell'</em><span class="sig-paren">)</span><a class="headerlink" href="#vtki.Common.get_data_range" title="Permalink to this definition">¶</a></dt>
+<dt id="vista.Common.get_data_range">
+<code class="descname">get_data_range</code><span class="sig-paren">(</span><em>arr=None</em>, <em>preference='cell'</em><span class="sig-paren">)</span><a class="headerlink" href="#vista.Common.get_data_range" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get the non-NaN min and max of a named scalar array</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -570,64 +570,64 @@ Their direction will be the “direction” of the vector</p>
 is used</p></li>
 <li><p><strong>preference</strong> (<em>str</em><em>, </em><em>optional</em>) – When scalars is specified, this is the perfered scalar type to
 search for in the dataset.  Must be either <code class="docutils literal notranslate"><span class="pre">'point'</span></code>, <code class="docutils literal notranslate"><span class="pre">'cell'</span></code>,
-or``’field’<a href="#id1"><span class="problematic" id="id2">``</span></a>.</p></li>
+or <code class="docutils literal notranslate"><span class="pre">'field'</span></code>.</p></li>
 </ul>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="method">
-<dt id="vtki.Common.get_scalar">
-<code class="descname">get_scalar</code><span class="sig-paren">(</span><em>name</em>, <em>preference='cell'</em>, <em>info=False</em><span class="sig-paren">)</span><a class="headerlink" href="#vtki.Common.get_scalar" title="Permalink to this definition">¶</a></dt>
+<dt id="vista.Common.get_scalar">
+<code class="descname">get_scalar</code><span class="sig-paren">(</span><em>name</em>, <em>preference='cell'</em>, <em>info=False</em><span class="sig-paren">)</span><a class="headerlink" href="#vista.Common.get_scalar" title="Permalink to this definition">¶</a></dt>
 <dd><p>Searches both point, cell and field data for an array</p>
 </dd></dl>
 
 <dl class="method">
-<dt id="vtki.Common.head">
-<code class="descname">head</code><span class="sig-paren">(</span><em>display=True</em>, <em>html=None</em><span class="sig-paren">)</span><a class="headerlink" href="#vtki.Common.head" title="Permalink to this definition">¶</a></dt>
+<dt id="vista.Common.head">
+<code class="descname">head</code><span class="sig-paren">(</span><em>display=True</em>, <em>html=None</em><span class="sig-paren">)</span><a class="headerlink" href="#vista.Common.head" title="Permalink to this definition">¶</a></dt>
 <dd><p>Return the header stats of this dataset. If in IPython, this will
 be formatted to HTML. Otherwise returns a console friendly string</p>
 </dd></dl>
 
 <dl class="attribute">
-<dt id="vtki.Common.length">
-<code class="descname">length</code><a class="headerlink" href="#vtki.Common.length" title="Permalink to this definition">¶</a></dt>
+<dt id="vista.Common.length">
+<code class="descname">length</code><a class="headerlink" href="#vista.Common.length" title="Permalink to this definition">¶</a></dt>
 <dd><p>the length of the diagonal of the bounding box</p>
 </dd></dl>
 
 <dl class="attribute">
-<dt id="vtki.Common.n_cells">
-<code class="descname">n_cells</code><a class="headerlink" href="#vtki.Common.n_cells" title="Permalink to this definition">¶</a></dt>
+<dt id="vista.Common.n_cells">
+<code class="descname">n_cells</code><a class="headerlink" href="#vista.Common.n_cells" title="Permalink to this definition">¶</a></dt>
 <dd><p>The number of cells in the entire dataset</p>
 </dd></dl>
 
 <dl class="attribute">
-<dt id="vtki.Common.n_points">
-<code class="descname">n_points</code><a class="headerlink" href="#vtki.Common.n_points" title="Permalink to this definition">¶</a></dt>
+<dt id="vista.Common.n_points">
+<code class="descname">n_points</code><a class="headerlink" href="#vista.Common.n_points" title="Permalink to this definition">¶</a></dt>
 <dd><p>The number of points in the entire dataset</p>
 </dd></dl>
 
 <dl class="attribute">
-<dt id="vtki.Common.n_scalars">
-<code class="descname">n_scalars</code><a class="headerlink" href="#vtki.Common.n_scalars" title="Permalink to this definition">¶</a></dt>
+<dt id="vista.Common.n_scalars">
+<code class="descname">n_scalars</code><a class="headerlink" href="#vista.Common.n_scalars" title="Permalink to this definition">¶</a></dt>
 <dd><p>The number of scalara arrays present in the dataset</p>
 </dd></dl>
 
 <dl class="attribute">
-<dt id="vtki.Common.number_of_cells">
-<code class="descname">number_of_cells</code><a class="headerlink" href="#vtki.Common.number_of_cells" title="Permalink to this definition">¶</a></dt>
+<dt id="vista.Common.number_of_cells">
+<code class="descname">number_of_cells</code><a class="headerlink" href="#vista.Common.number_of_cells" title="Permalink to this definition">¶</a></dt>
 <dd><p>returns the number of cells</p>
 </dd></dl>
 
 <dl class="attribute">
-<dt id="vtki.Common.number_of_points">
-<code class="descname">number_of_points</code><a class="headerlink" href="#vtki.Common.number_of_points" title="Permalink to this definition">¶</a></dt>
+<dt id="vista.Common.number_of_points">
+<code class="descname">number_of_points</code><a class="headerlink" href="#vista.Common.number_of_points" title="Permalink to this definition">¶</a></dt>
 <dd><p>returns the number of points</p>
 </dd></dl>
 
 <dl class="method">
-<dt id="vtki.Common.overwrite">
-<code class="descname">overwrite</code><span class="sig-paren">(</span><em>mesh</em><span class="sig-paren">)</span><a class="headerlink" href="#vtki.Common.overwrite" title="Permalink to this definition">¶</a></dt>
+<dt id="vista.Common.overwrite">
+<code class="descname">overwrite</code><span class="sig-paren">(</span><em>mesh</em><span class="sig-paren">)</span><a class="headerlink" href="#vista.Common.overwrite" title="Permalink to this definition">¶</a></dt>
 <dd><p>Overwrites this mesh inplace with the new mesh’s geometries and data</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -637,8 +637,8 @@ be formatted to HTML. Otherwise returns a console friendly string</p>
 </dd></dl>
 
 <dl class="method">
-<dt id="vtki.Common.plot">
-<code class="descname">plot</code><span class="sig-paren">(</span><em>off_screen=None</em>, <em>full_screen=False</em>, <em>screenshot=None</em>, <em>interactive=True</em>, <em>cpos=None</em>, <em>window_size=None</em>, <em>show_bounds=False</em>, <em>show_axes=True</em>, <em>notebook=None</em>, <em>background=None</em>, <em>text=''</em>, <em>return_img=False</em>, <em>eye_dome_lighting=False</em>, <em>use_panel=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#vtki.Common.plot" title="Permalink to this definition">¶</a></dt>
+<dt id="vista.Common.plot">
+<code class="descname">plot</code><span class="sig-paren">(</span><em>off_screen=None</em>, <em>full_screen=False</em>, <em>screenshot=None</em>, <em>interactive=True</em>, <em>cpos=None</em>, <em>window_size=None</em>, <em>show_bounds=False</em>, <em>show_axes=True</em>, <em>notebook=None</em>, <em>background=None</em>, <em>text=''</em>, <em>return_img=False</em>, <em>eye_dome_lighting=False</em>, <em>use_panel=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#vista.Common.plot" title="Permalink to this definition">¶</a></dt>
 <dd><p>Convenience plotting function for a vtk or numpy object.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -649,7 +649,7 @@ without a window popping up.</p></li>
 <li><p><strong>full_screen</strong> (<em>bool</em><em>, </em><em>optional</em>) – Opens window in full screen.  When enabled, ignores window_size.
 Default False.</p></li>
 <li><p><strong>screenshot</strong> (<em>str</em><em> or </em><em>bool</em><em>, </em><em>optional</em>) – <p>Saves screenshot to file when enabled.  See:
-help(vtkinterface.Plotter.screenshot).  Default disabled.</p>
+help(vistanterface.Plotter.screenshot).  Default disabled.</p>
 <p>When True, takes screenshot and returns numpy array of image.</p>
 </p></li>
 <li><p><strong>window_size</strong> (<em>list</em><em>, </em><em>optional</em>) – Window size in pixels.  Defaults to [1024, 768]</p></li>
@@ -676,32 +676,32 @@ Returned only when screenshot enabled</p></li>
 </dd></dl>
 
 <dl class="attribute">
-<dt id="vtki.Common.point_arrays">
-<code class="descname">point_arrays</code><a class="headerlink" href="#vtki.Common.point_arrays" title="Permalink to this definition">¶</a></dt>
+<dt id="vista.Common.point_arrays">
+<code class="descname">point_arrays</code><a class="headerlink" href="#vista.Common.point_arrays" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns the all point arrays</p>
 </dd></dl>
 
 <dl class="attribute">
-<dt id="vtki.Common.points">
-<code class="descname">points</code><a class="headerlink" href="#vtki.Common.points" title="Permalink to this definition">¶</a></dt>
+<dt id="vista.Common.points">
+<code class="descname">points</code><a class="headerlink" href="#vista.Common.points" title="Permalink to this definition">¶</a></dt>
 <dd><p>returns a pointer to the points as a numpy object</p>
 </dd></dl>
 
 <dl class="method">
-<dt id="vtki.Common.points_to_double">
-<code class="descname">points_to_double</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#vtki.Common.points_to_double" title="Permalink to this definition">¶</a></dt>
+<dt id="vista.Common.points_to_double">
+<code class="descname">points_to_double</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#vista.Common.points_to_double" title="Permalink to this definition">¶</a></dt>
 <dd><p>Makes points double precision</p>
 </dd></dl>
 
 <dl class="method">
-<dt id="vtki.Common.rename_scalar">
-<code class="descname">rename_scalar</code><span class="sig-paren">(</span><em>old_name</em>, <em>new_name</em>, <em>preference='cell'</em><span class="sig-paren">)</span><a class="headerlink" href="#vtki.Common.rename_scalar" title="Permalink to this definition">¶</a></dt>
+<dt id="vista.Common.rename_scalar">
+<code class="descname">rename_scalar</code><span class="sig-paren">(</span><em>old_name</em>, <em>new_name</em>, <em>preference='cell'</em><span class="sig-paren">)</span><a class="headerlink" href="#vista.Common.rename_scalar" title="Permalink to this definition">¶</a></dt>
 <dd><p>Changes array name by searching for the array then renaming it</p>
 </dd></dl>
 
 <dl class="method">
-<dt id="vtki.Common.rotate_x">
-<code class="descname">rotate_x</code><span class="sig-paren">(</span><em>angle</em><span class="sig-paren">)</span><a class="headerlink" href="#vtki.Common.rotate_x" title="Permalink to this definition">¶</a></dt>
+<dt id="vista.Common.rotate_x">
+<code class="descname">rotate_x</code><span class="sig-paren">(</span><em>angle</em><span class="sig-paren">)</span><a class="headerlink" href="#vista.Common.rotate_x" title="Permalink to this definition">¶</a></dt>
 <dd><p>Rotates mesh about the x-axis.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -711,8 +711,8 @@ Returned only when screenshot enabled</p></li>
 </dd></dl>
 
 <dl class="method">
-<dt id="vtki.Common.rotate_y">
-<code class="descname">rotate_y</code><span class="sig-paren">(</span><em>angle</em><span class="sig-paren">)</span><a class="headerlink" href="#vtki.Common.rotate_y" title="Permalink to this definition">¶</a></dt>
+<dt id="vista.Common.rotate_y">
+<code class="descname">rotate_y</code><span class="sig-paren">(</span><em>angle</em><span class="sig-paren">)</span><a class="headerlink" href="#vista.Common.rotate_y" title="Permalink to this definition">¶</a></dt>
 <dd><p>Rotates mesh about the y-axis.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -722,8 +722,8 @@ Returned only when screenshot enabled</p></li>
 </dd></dl>
 
 <dl class="method">
-<dt id="vtki.Common.rotate_z">
-<code class="descname">rotate_z</code><span class="sig-paren">(</span><em>angle</em><span class="sig-paren">)</span><a class="headerlink" href="#vtki.Common.rotate_z" title="Permalink to this definition">¶</a></dt>
+<dt id="vista.Common.rotate_z">
+<code class="descname">rotate_z</code><span class="sig-paren">(</span><em>angle</em><span class="sig-paren">)</span><a class="headerlink" href="#vista.Common.rotate_z" title="Permalink to this definition">¶</a></dt>
 <dd><p>Rotates mesh about the z-axis.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -733,41 +733,41 @@ Returned only when screenshot enabled</p></li>
 </dd></dl>
 
 <dl class="attribute">
-<dt id="vtki.Common.scalar_names">
-<code class="descname">scalar_names</code><a class="headerlink" href="#vtki.Common.scalar_names" title="Permalink to this definition">¶</a></dt>
+<dt id="vista.Common.scalar_names">
+<code class="descname">scalar_names</code><a class="headerlink" href="#vista.Common.scalar_names" title="Permalink to this definition">¶</a></dt>
 <dd><p>A list of scalar names for the dataset. This makes
 sure to put the active scalar’s name first in the list.</p>
 </dd></dl>
 
 <dl class="method">
-<dt id="vtki.Common.set_active_scalar">
-<code class="descname">set_active_scalar</code><span class="sig-paren">(</span><em>name</em>, <em>preference='cell'</em><span class="sig-paren">)</span><a class="headerlink" href="#vtki.Common.set_active_scalar" title="Permalink to this definition">¶</a></dt>
+<dt id="vista.Common.set_active_scalar">
+<code class="descname">set_active_scalar</code><span class="sig-paren">(</span><em>name</em>, <em>preference='cell'</em><span class="sig-paren">)</span><a class="headerlink" href="#vista.Common.set_active_scalar" title="Permalink to this definition">¶</a></dt>
 <dd><p>Finds the scalar by name and appropriately sets it as active</p>
 </dd></dl>
 
 <dl class="method">
-<dt id="vtki.Common.set_active_vectors">
-<code class="descname">set_active_vectors</code><span class="sig-paren">(</span><em>name</em>, <em>preference='cell'</em><span class="sig-paren">)</span><a class="headerlink" href="#vtki.Common.set_active_vectors" title="Permalink to this definition">¶</a></dt>
+<dt id="vista.Common.set_active_vectors">
+<code class="descname">set_active_vectors</code><span class="sig-paren">(</span><em>name</em>, <em>preference='cell'</em><span class="sig-paren">)</span><a class="headerlink" href="#vista.Common.set_active_vectors" title="Permalink to this definition">¶</a></dt>
 <dd><p>Finds the vectors by name and appropriately sets it as active</p>
 </dd></dl>
 
 <dl class="attribute">
-<dt id="vtki.Common.t_coords">
-<code class="descname">t_coords</code><a class="headerlink" href="#vtki.Common.t_coords" title="Permalink to this definition">¶</a></dt>
+<dt id="vista.Common.t_coords">
+<code class="descname">t_coords</code><a class="headerlink" href="#vista.Common.t_coords" title="Permalink to this definition">¶</a></dt>
 <dd><p>The active texture coordinates on the points</p>
 </dd></dl>
 
 <dl class="attribute">
-<dt id="vtki.Common.textures">
-<code class="descname">textures</code><a class="headerlink" href="#vtki.Common.textures" title="Permalink to this definition">¶</a></dt>
+<dt id="vista.Common.textures">
+<code class="descname">textures</code><a class="headerlink" href="#vista.Common.textures" title="Permalink to this definition">¶</a></dt>
 <dd><p>A dictionary to hold <code class="docutils literal notranslate"><span class="pre">vtk.vtkTexture</span></code> objects that can be
 associated with this dataset. When casting back to a VTK dataset or
 filtering this dataset, these textures will not be passed.</p>
 </dd></dl>
 
 <dl class="method">
-<dt id="vtki.Common.transform">
-<code class="descname">transform</code><span class="sig-paren">(</span><em>trans</em><span class="sig-paren">)</span><a class="headerlink" href="#vtki.Common.transform" title="Permalink to this definition">¶</a></dt>
+<dt id="vista.Common.transform">
+<code class="descname">transform</code><span class="sig-paren">(</span><em>trans</em><span class="sig-paren">)</span><a class="headerlink" href="#vista.Common.transform" title="Permalink to this definition">¶</a></dt>
 <dd><p>Compute a transformation in place using a 4x4 transform.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -777,8 +777,8 @@ filtering this dataset, these textures will not be passed.</p>
 </dd></dl>
 
 <dl class="method">
-<dt id="vtki.Common.translate">
-<code class="descname">translate</code><span class="sig-paren">(</span><em>xyz</em><span class="sig-paren">)</span><a class="headerlink" href="#vtki.Common.translate" title="Permalink to this definition">¶</a></dt>
+<dt id="vista.Common.translate">
+<code class="descname">translate</code><span class="sig-paren">(</span><em>xyz</em><span class="sig-paren">)</span><a class="headerlink" href="#vista.Common.translate" title="Permalink to this definition">¶</a></dt>
 <dd><p>Translates the mesh.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -788,14 +788,14 @@ filtering this dataset, these textures will not be passed.</p>
 </dd></dl>
 
 <dl class="attribute">
-<dt id="vtki.Common.vectors">
-<code class="descname">vectors</code><a class="headerlink" href="#vtki.Common.vectors" title="Permalink to this definition">¶</a></dt>
+<dt id="vista.Common.vectors">
+<code class="descname">vectors</code><a class="headerlink" href="#vista.Common.vectors" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns active vectors</p>
 </dd></dl>
 
 <dl class="attribute">
-<dt id="vtki.Common.volume">
-<code class="descname">volume</code><a class="headerlink" href="#vtki.Common.volume" title="Permalink to this definition">¶</a></dt>
+<dt id="vista.Common.volume">
+<code class="descname">volume</code><a class="headerlink" href="#vista.Common.volume" title="Permalink to this definition">¶</a></dt>
 <dd><p>Mesh volume</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
@@ -831,7 +831,7 @@ filtering this dataset, these textures will not be passed.</p>
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2017-2019, The vtkiorg Developers
+        &copy; Copyright 2017-2019, The vista Developers
 
     </p>
   </div>

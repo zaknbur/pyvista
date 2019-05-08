@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Volumetric Analysis &mdash; vtki 0.18.4 documentation</title>
+  <title>Volumetric Analysis &mdash; vista 0.19.0 documentation</title>
   
 
   
@@ -61,7 +61,7 @@
 
           
             
-            <img src="../../_static/vtki_logo.png" class="logo" alt="Logo"/>
+            <img src="../../_static/vista_logo.png" class="logo" alt="Logo"/>
           
           </a>
 
@@ -69,7 +69,7 @@
             
             
               <div class="version">
-                0.18.4
+                0.19.0
               </div>
             
           
@@ -95,7 +95,7 @@
             
               <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../index.html">About</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../why.html">Why <code class="docutils literal notranslate"><span class="pre">vtki</span></code>?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../why.html">Why <code class="docutils literal notranslate"><span class="pre">vista</span></code>?</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../authors.html">Authors</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Getting Started</span></p>
@@ -146,7 +146,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../../tools/plotting.html">Plotting</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../tools/filters.html">Filters</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../tools/ipy_tools.html">IPython Tools</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../tools/qt_plotting.html">vtki PyQt Interface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../tools/qt_plotting.html">vista PyQt Interface</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../tools/utilities.html">Utilities</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Contributing</span></p>
@@ -168,7 +168,7 @@
       <nav class="wy-nav-top" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../../index.html">vtki</a>
+          <a href="../../index.html">vista</a>
         
       </nav>
 
@@ -208,7 +208,7 @@
         
             
             
-              <a href="https://github.com/vtkiorg/vtki/blob/master/docs/examples/01-filter/compute-volume.rst" class="fa fa-github"> Edit on GitHub</a>
+              <a href="https://github.com/pyvista/vista/blob/master/docs/examples/01-filter/compute-volume.rst" class="fa fa-github"> Edit on GitHub</a>
             
           
         
@@ -231,13 +231,13 @@
 <p>Calculate mass properties such as the volume or area of datasets</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># sphinx_gallery_thumbnail_number = 4</span>
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-<span class="kn">import</span> <span class="nn">vtki</span>
-<span class="kn">from</span> <span class="nn">vtki</span> <span class="k">import</span> <span class="n">examples</span>
+<span class="kn">import</span> <span class="nn">vista</span>
+<span class="kn">from</span> <span class="nn">vista</span> <span class="k">import</span> <span class="n">examples</span>
 </pre></div>
 </div>
-<p>Computing mass properties such as the volume or area of datasetsin <code class="docutils literal notranslate"><span class="pre">vtki</span></code>
-is quite easy using the <a class="reference internal" href="../../tools/filters.html#vtki.DataSetFilters.compute_cell_sizes" title="vtki.DataSetFilters.compute_cell_sizes"><code class="xref py py-func docutils literal notranslate"><span class="pre">vtki.DataSetFilters.compute_cell_sizes()</span></code></a> filter
-and the <a class="reference internal" href="../../types/common.html#vtki.Common.volume" title="vtki.Common.volume"><code class="xref py py-attr docutils literal notranslate"><span class="pre">vtki.Common.volume</span></code></a> property on all <code class="docutils literal notranslate"><span class="pre">vtki</span></code> meshes.</p>
+<p>Computing mass properties such as the volume or area of datasetsin <code class="docutils literal notranslate"><span class="pre">vista</span></code>
+is quite easy using the <a class="reference internal" href="../../tools/filters.html#vista.DataSetFilters.compute_cell_sizes" title="vista.DataSetFilters.compute_cell_sizes"><code class="xref py py-func docutils literal notranslate"><span class="pre">vista.DataSetFilters.compute_cell_sizes()</span></code></a> filter
+and the <a class="reference internal" href="../../types/common.html#vista.Common.volume" title="vista.Common.volume"><code class="xref py py-attr docutils literal notranslate"><span class="pre">vista.Common.volume</span></code></a> property on all <code class="docutils literal notranslate"><span class="pre">vista</span></code> meshes.</p>
 <p>Let’s get started with a simple gridded mesh:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Load a simple example mesh</span>
 <span class="n">dataset</span> <span class="o">=</span> <span class="n">examples</span><span class="o">.</span><span class="n">load_uniform</span><span class="p">()</span>
@@ -313,8 +313,8 @@ thresholded dataset:</p>
 <span id="split-vol-ref"></span><h2>Splitting Volumes<a class="headerlink" href="#splitting-volumes" title="Permalink to this headline">¶</a></h2>
 <p>What if instead, we wanted to split all the different connected bodies/volumes
 in a dataset like the one above? We could use the
-<a class="reference internal" href="../../tools/filters.html#vtki.DataSetFilters.split_bodies" title="vtki.DataSetFilters.split_bodies"><code class="xref py py-func docutils literal notranslate"><span class="pre">vtki.DataSetFilters.split_bodies()</span></code></a> filter to extract all the different
-connected volumes in a dataset into blocks in a <a class="reference internal" href="../../types/container.html#vtki.MultiBlock" title="vtki.MultiBlock"><code class="xref py py-class docutils literal notranslate"><span class="pre">vtki.MultiBlock</span></code></a>
+<a class="reference internal" href="../../tools/filters.html#vista.DataSetFilters.split_bodies" title="vista.DataSetFilters.split_bodies"><code class="xref py py-func docutils literal notranslate"><span class="pre">vista.DataSetFilters.split_bodies()</span></code></a> filter to extract all the different
+connected volumes in a dataset into blocks in a <a class="reference internal" href="../../types/container.html#vista.MultiBlock" title="vista.MultiBlock"><code class="xref py py-class docutils literal notranslate"><span class="pre">vista.MultiBlock</span></code></a>
 dataset. For example, lets split the thresholded volume in the example above:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Load a simple example mesh</span>
 <span class="n">dataset</span> <span class="o">=</span> <span class="n">examples</span><span class="o">.</span><span class="n">load_uniform</span><span class="p">()</span>
@@ -395,13 +395,13 @@ Body 20 volume: 2270.000
 </pre></div>
 </div>
 <img alt="../../_images/sphx_glr_compute-volume_004.png" class="sphx-glr-single-img" src="../../_images/sphx_glr_compute-volume_004.png" />
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  21.834 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  25.099 seconds)</p>
 <div class="sphx-glr-footer class sphx-glr-footer-example docutils container" id="sphx-glr-download-examples-01-filter-compute-volume-py">
 <div class="sphx-glr-download docutils container">
-<p><a class="reference download internal" download="" href="../../_downloads/86e96b4763988892e9254c0f4184ac76/compute-volume.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">compute-volume.py</span></code></a></p>
+<p><a class="reference download internal" download="" href="../../_downloads/dc789639cd408fdb0cc123391b0e90d6/compute-volume.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">compute-volume.py</span></code></a></p>
 </div>
 <div class="sphx-glr-download docutils container">
-<p><a class="reference download internal" download="" href="../../_downloads/e77616ba1ceeaa441207badad233b23e/compute-volume.ipynb"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Jupyter</span> <span class="pre">notebook:</span> <span class="pre">compute-volume.ipynb</span></code></a></p>
+<p><a class="reference download internal" download="" href="../../_downloads/79fa9997fc03980316243de77cb14404/compute-volume.ipynb"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Jupyter</span> <span class="pre">notebook:</span> <span class="pre">compute-volume.ipynb</span></code></a></p>
 </div>
 </div>
 <p class="sphx-glr-signature"><a class="reference external" href="https://sphinx-gallery.readthedocs.io">Gallery generated by Sphinx-Gallery</a></p>
@@ -428,7 +428,7 @@ Body 20 volume: 2270.000
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2017-2019, The vtkiorg Developers
+        &copy; Copyright 2017-2019, The vista Developers
 
     </p>
   </div>

@@ -16,8 +16,8 @@ Smoothing rough edges of a volumetric surface
 
 
     # sphinx_gallery_thumbnail_number = 4
-    import vtki
-    from vtki import examples
+    import vista
+    from vista import examples
 
 
 
@@ -28,7 +28,7 @@ Smoothing rough edges of a volumetric surface
 Suppose you extract a volumetric subset of a dataset that has roughly defined
 edges. Perhaps you'd like a smooth representation of that model region. This
 can be achieved by extracting the bounding surface of the volume and applying
-a :func:`vtki.PolyData.smooth` filter.
+a :func:`vista.PolyData.smooth` filter.
 
 The below code snippet loads a sample roughly edged volumetric dataset:
 
@@ -55,7 +55,7 @@ The below code snippet loads a sample roughly edged volumetric dataset:
 
 
 Extract the outer surface of the volume using the
-:func:`vtki.DataSetFilters.extract_geometry` filter and then apply the
+:func:`vista.DataSetFilters.extract_geometry` filter and then apply the
 smoothing filter:
 
 
@@ -119,7 +119,7 @@ smoothing algorithm to a crazy high value:
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  9.617 seconds)
+   **Total running time of the script:** ( 0 minutes  9.293 seconds)
 
 
 .. _sphx_glr_download_examples_01-filter_volume-smoothing.py:

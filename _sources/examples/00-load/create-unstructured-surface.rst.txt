@@ -17,7 +17,7 @@ Create an irregular, unstructured grid from NumPy arrays
 .. code-block:: default
 
 
-    import vtki
+    import vista
     import vtk
     import numpy as np
 
@@ -69,7 +69,7 @@ for available cell types and their descriptions.
     points = np.vstack((cell1, cell2))
 
     # create the unstructured grid directly from the numpy arrays
-    grid = vtki.UnstructuredGrid(offset, cells, cell_type, points)
+    grid = vista.UnstructuredGrid(offset, cells, cell_type, points)
 
     # plot the grid
     grid.plot(show_edges=True)
@@ -85,7 +85,7 @@ for available cell types and their descriptions.
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  0.698 seconds)
+   **Total running time of the script:** ( 0 minutes  0.763 seconds)
 
 
 .. _sphx_glr_download_examples_00-load_create-unstructured-surface.py:

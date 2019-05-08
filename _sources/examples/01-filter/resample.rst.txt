@@ -19,8 +19,8 @@ of a sphere contained in that volume.
 
 
     # sphinx_gallery_thumbnail_number = 4
-    import vtki
-    from vtki import examples
+    import vista
+    from vista import examples
     import numpy as np
 
 
@@ -34,7 +34,7 @@ Querry a grids points onto a sphere
 
 .. code-block:: default
 
-    mesh = vtki.Sphere(center=(4.5,4.5,4.5), radius=4.5)
+    mesh = vista.Sphere(center=(4.5,4.5,4.5), radius=4.5)
     data_to_probe = examples.load_uniform()
 
 
@@ -48,7 +48,7 @@ Plot the two datasets
 
 .. code-block:: default
 
-    p = vtki.Plotter()
+    p = vista.Plotter()
     p.add_mesh(mesh, color=True)
     p.add_mesh(data_to_probe, opacity=0.5)
     p.show()
@@ -98,7 +98,7 @@ Run a resampling from an interpolation built using a Gaussian kernal
     points = examples.download_sparse_points()
 
 
-    p = vtki.Plotter()
+    p = vista.Plotter()
     p.add_mesh(points, point_size=30.0, render_points_as_spheres=True)
     p.add_mesh(surface)
     p.show()
@@ -121,7 +121,7 @@ Run the interpolation
     interpolated = surface.interpolate(points, radius=12.0)
 
 
-    p = vtki.Plotter()
+    p = vista.Plotter()
     p.add_mesh(points, point_size=30.0, render_points_as_spheres=True)
     p.add_mesh(interpolated, scalars='val')
     p.show()
@@ -137,7 +137,7 @@ Run the interpolation
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  9.368 seconds)
+   **Total running time of the script:** ( 0 minutes  8.789 seconds)
 
 
 .. _sphx_glr_download_examples_01-filter_resample.py:

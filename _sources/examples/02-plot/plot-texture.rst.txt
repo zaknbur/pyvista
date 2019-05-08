@@ -17,8 +17,8 @@ Plot a mesh with an image projected onto it as a texture.
 .. code-block:: default
 
 
-    import vtki
-    from vtki import examples
+    import vista
+    from vista import examples
     import numpy as np
     from matplotlib.cm import get_cmap
 
@@ -28,7 +28,7 @@ Plot a mesh with an image projected onto it as a texture.
 
 
 
-Texture mapping is easily implemented using ``vtki``. Many of the geometric
+Texture mapping is easily implemented using ``vista``. Many of the geometric
 objects come preloaded with texture coordinates, so quickly creating a surface
 and displaying an image is simply:
 
@@ -40,7 +40,7 @@ and displaying an image is simply:
     tex = examples.download_masonry_texture()
 
     # create a surface to host this texture
-    surf = vtki.Cylinder()
+    surf = vista.Cylinder()
 
     surf.plot(texture=tex)
 
@@ -55,7 +55,7 @@ and displaying an image is simply:
 
 
 But what if your dataset doesn't have texture coordinates? Then you can
-harness the :func:`vtki.DataSetFilters.texture_map_to_plane` filter to
+harness the :func:`vista.DataSetFilters.texture_map_to_plane` filter to
 properly map an image to a dataset's surface.
 For example, let's map that same image of bricks to a curvey surface:
 
@@ -69,7 +69,7 @@ For example, let's map that same image of bricks to a curvey surface:
     x, y = np.meshgrid(x, y)
     r = np.sqrt(x**2 + y**2)
     z = np.sin(r)
-    curvsurf = vtki.StructuredGrid(x, y, z)
+    curvsurf = vista.StructuredGrid(x, y, z)
 
     # Map the curved surface to a plane - use best fitting plane
     curvsurf.texture_map_to_plane(inplace=True)
@@ -110,7 +110,7 @@ Textures from Files
 +++++++++++++++++++
 
 What about loading your own texture from an image? This is often most easily
-done using the :func:`vtki.read_texture` function - simply pass an image
+done using the :func:`vista.read_texture` function - simply pass an image
 file's path, and this function with handle making a ``vtkTexture`` for you to
 use.
 
@@ -119,7 +119,7 @@ use.
 
 
     image_file = examples.mapfile
-    tex = vtki.read_texture(image_file)
+    tex = vista.read_texture(image_file)
     curvsurf.plot(texture=tex)
 
 
@@ -135,10 +135,10 @@ use.
 NumPy Arrays as Textures
 ++++++++++++++++++++++++
 
-Wan't to use a programmaticaly built image? :class:`vtki.UniformGrid` objects
-can be converted to textures using :func:`vtki.image_to_texture` and 3D
+Wan't to use a programmaticaly built image? :class:`vista.UniformGrid` objects
+can be converted to textures using :func:`vista.image_to_texture` and 3D
 NumPy (X by Y by RGB) arrays can be converted to textures using
-:func:`vtki.numpy_to_texture`.
+:func:`vista.numpy_to_texture`.
 
 
 .. code-block:: default
@@ -157,7 +157,7 @@ NumPy (X by Y by RGB) arrays can be converted to textures using
     image = colors.reshape((xx.shape[0], xx.shape[1], 3), order='F')
 
     # Convert 3D numpy array to texture
-    tex = vtki.numpy_to_texture(image)
+    tex = vista.numpy_to_texture(image)
 
     # Render it!
     curvsurf.plot(texture=tex)
@@ -206,7 +206,7 @@ mappings of a single texture:
 
 
 Then we must associate those texture coordinates with the mesh through the
-:attr:`vtki.Common.t_coords` property.
+:attr:`vista.Common.t_coords` property.
 
 
 .. code-block:: default
@@ -241,7 +241,7 @@ Now display all the puppies!
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  10.297 seconds)
+   **Total running time of the script:** ( 0 minutes  9.822 seconds)
 
 
 .. _sphx_glr_download_examples_02-plot_plot-texture.py:

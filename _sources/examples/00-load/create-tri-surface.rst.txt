@@ -16,7 +16,7 @@ Create a surface from a set of points through a Delaunay triangulation.
 
 
     # sphinx_gallery_thumbnail_number = 2
-    import vtki
+    import vista
     import numpy as np
 
 
@@ -53,22 +53,22 @@ First, create some points for the surface.
 
  .. code-block:: none
 
-    [[-203.69654513 -200.02542573    1.69901303]
-     [-182.9224079  -200.02542573    2.53864703]
-     [-153.19175097 -200.02542573    4.18403466]
-     [-132.0491353  -200.02542573    5.65654302]
-     [-115.44296503 -200.02542573    6.94698485]]
+    [[-203.0813954  -203.02841034    1.61937579]
+     [-176.6419547  -203.02841034    2.67520071]
+     [-158.13127069 -203.02841034    3.64686713]
+     [-139.43748522 -203.02841034    4.8162846 ]
+     [-120.16463906 -203.02841034    6.18524361]]
 
 
-Now use those points to create a point cloud ``vtki`` data object. This will
-be encompassed in a :class:`vtki.PolyData` object.
+Now use those points to create a point cloud ``vista`` data object. This will
+be encompassed in a :class:`vista.PolyData` object.
 
 
 .. code-block:: default
 
 
     # simply pass the numpy points to the PolyData constructor
-    cloud = vtki.PolyData(points)
+    cloud = vista.PolyData(points)
     cloud.plot(point_size=15)
 
 
@@ -80,7 +80,7 @@ be encompassed in a :class:`vtki.PolyData` object.
 
 
 
-Now that we have a ``vtki`` data structure of the points, we can perform a
+Now that we have a ``vista`` data structure of the points, we can perform a
 triangulation to turn those boring discrete points into a connected surface.
 
 
@@ -101,7 +101,7 @@ triangulation to turn those boring discrete points into a connected surface.
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  1.234 seconds)
+   **Total running time of the script:** ( 0 minutes  1.242 seconds)
 
 
 .. _sphx_glr_download_examples_00-load_create-tri-surface.py:

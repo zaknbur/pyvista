@@ -17,8 +17,8 @@ Compute normals on a surface.
 
 
     # sphinx_gallery_thumbnail_number = 2
-    import vtki
-    from vtki import examples
+    import vista
+    from vista import examples
 
 
 
@@ -26,7 +26,7 @@ Compute normals on a surface.
 
 
 
-Computing the normals of a surace is quite easy using :class:`vtki.PolyData`'s
+Computing the normals of a surace is quite easy using :class:`vista.PolyData`'s
 ``compute_normals`` method
 
 
@@ -47,7 +47,7 @@ Computing the normals of a surace is quite easy using :class:`vtki.PolyData`'s
 
 Now we have a surface dataset of the globe loaded - unfortunately, the dataset
 shows the globe with a uniform radius which hides topographic releif.
-Using :func:`vtki.PolyData.compute_normals`, we can compute the normal vectors
+Using :func:`vista.PolyData.compute_normals`, we can compute the normal vectors
 on the globe at all points in the dataset, then use the values given in the
 dataset to warp the surface in the normals direction to create some
 exaggerated topographic relief.
@@ -76,7 +76,7 @@ exaggerated topographic relief.
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  16.107 seconds)
+   **Total running time of the script:** ( 1 minutes  4.635 seconds)
 
 
 .. _sphx_glr_download_examples_01-filter_compute-normals.py:

@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Gridded Data &mdash; vtki 0.18.4 documentation</title>
+  <title>Gridded Data &mdash; vista 0.19.0 documentation</title>
   
 
   
@@ -61,7 +61,7 @@
 
           
             
-            <img src="../_static/vtki_logo.png" class="logo" alt="Logo"/>
+            <img src="../_static/vista_logo.png" class="logo" alt="Logo"/>
           
           </a>
 
@@ -69,7 +69,7 @@
             
             
               <div class="version">
-                0.18.4
+                0.19.0
               </div>
             
           
@@ -95,7 +95,7 @@
             
               <ul>
 <li class="toctree-l1"><a class="reference internal" href="../index.html">About</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../why.html">Why <code class="docutils literal notranslate"><span class="pre">vtki</span></code>?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../why.html">Why <code class="docutils literal notranslate"><span class="pre">vista</span></code>?</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../authors.html">Authors</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Getting Started</span></p>
@@ -127,7 +127,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../tools/plotting.html">Plotting</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../tools/filters.html">Filters</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../tools/ipy_tools.html">IPython Tools</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../tools/qt_plotting.html">vtki PyQt Interface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tools/qt_plotting.html">vista PyQt Interface</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../tools/utilities.html">Utilities</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Contributing</span></p>
@@ -149,7 +149,7 @@
       <nav class="wy-nav-top" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../index.html">vtki</a>
+          <a href="../index.html">vista</a>
         
       </nav>
 
@@ -187,7 +187,7 @@
         
             
             
-              <a href="https://github.com/vtkiorg/vtki/blob/master/docs/types/grids.rst" class="fa fa-github"> Edit on GitHub</a>
+              <a href="https://github.com/pyvista/vista/blob/master/docs/types/grids.rst" class="fa fa-github"> Edit on GitHub</a>
             
           
         
@@ -203,9 +203,9 @@
             
   <div class="section" id="gridded-data">
 <h1>Gridded Data<a class="headerlink" href="#gridded-data" title="Permalink to this headline">¶</a></h1>
-<p>Gridded datasets in vtki capture <code class="docutils literal notranslate"><span class="pre">vtkRectilinearGrid</span></code> and <code class="docutils literal notranslate"><span class="pre">vtkImageData</span></code>
+<p>Gridded datasets in vista capture <code class="docutils literal notranslate"><span class="pre">vtkRectilinearGrid</span></code> and <code class="docutils literal notranslate"><span class="pre">vtkImageData</span></code>
 data objects on the VTK backend. These data types have common features which
-are encompassed int their shared inheritance of <a class="reference internal" href="#vtki.Grid" title="vtki.Grid"><code class="xref py py-class docutils literal notranslate"><span class="pre">vtki.Grid</span></code></a></p>
+are encompassed int their shared inheritance of <a class="reference internal" href="#vista.Grid" title="vista.Grid"><code class="xref py py-class docutils literal notranslate"><span class="pre">vista.Grid</span></code></a></p>
 <p class="rubric">Attributes</p>
 <table class="longtable docutils align-center">
 <colgroup>
@@ -213,7 +213,7 @@ are encompassed int their shared inheritance of <a class="reference internal" hr
 <col style="width: 90%" />
 </colgroup>
 <tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="#vtki.Grid.dimensions" title="vtki.Grid.dimensions"><code class="xref py py-obj docutils literal notranslate"><span class="pre">dimensions</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#vista.Grid.dimensions" title="vista.Grid.dimensions"><code class="xref py py-obj docutils literal notranslate"><span class="pre">dimensions</span></code></a></p></td>
 <td><p>Returns a length 3 tuple of the grid’s dimensions</p></td>
 </tr>
 </tbody>
@@ -228,13 +228,13 @@ are encompassed int their shared inheritance of <a class="reference internal" hr
 </tbody>
 </table>
 <dl class="class">
-<dt id="vtki.Grid">
-<em class="property">class </em><code class="descclassname">vtki.</code><code class="descname">Grid</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#vtki.Grid" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">vtki.common.Common</span></code></p>
+<dt id="vista.Grid">
+<em class="property">class </em><code class="descclassname">vista.</code><code class="descname">Grid</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#vista.Grid" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">vista.common.Common</span></code></p>
 <p>A class full of common methods for non-pointset grids</p>
 <dl class="attribute">
-<dt id="vtki.Grid.dimensions">
-<code class="descname">dimensions</code><a class="headerlink" href="#vtki.Grid.dimensions" title="Permalink to this definition">¶</a></dt>
+<dt id="vista.Grid.dimensions">
+<code class="descname">dimensions</code><a class="headerlink" href="#vista.Grid.dimensions" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns a length 3 tuple of the grid’s dimensions</p>
 </dd></dl>
 
@@ -249,16 +249,16 @@ are encompassed int their shared inheritance of <a class="reference internal" hr
 <col style="width: 90%" />
 </colgroup>
 <tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="#vtki.RectilinearGrid.points" title="vtki.RectilinearGrid.points"><code class="xref py py-obj docutils literal notranslate"><span class="pre">points</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#vista.RectilinearGrid.points" title="vista.RectilinearGrid.points"><code class="xref py py-obj docutils literal notranslate"><span class="pre">points</span></code></a></p></td>
 <td><p>returns a pointer to the points as a numpy object</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#vtki.RectilinearGrid.x" title="vtki.RectilinearGrid.x"><code class="xref py py-obj docutils literal notranslate"><span class="pre">x</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#vista.RectilinearGrid.x" title="vista.RectilinearGrid.x"><code class="xref py py-obj docutils literal notranslate"><span class="pre">x</span></code></a></p></td>
 <td><p>Get the coordinates along the X-direction</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#vtki.RectilinearGrid.y" title="vtki.RectilinearGrid.y"><code class="xref py py-obj docutils literal notranslate"><span class="pre">y</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#vista.RectilinearGrid.y" title="vista.RectilinearGrid.y"><code class="xref py py-obj docutils literal notranslate"><span class="pre">y</span></code></a></p></td>
 <td><p>Get the coordinates along the Y-direction</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#vtki.RectilinearGrid.z" title="vtki.RectilinearGrid.z"><code class="xref py py-obj docutils literal notranslate"><span class="pre">z</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#vista.RectilinearGrid.z" title="vista.RectilinearGrid.z"><code class="xref py py-obj docutils literal notranslate"><span class="pre">z</span></code></a></p></td>
 <td><p>Get the coordinates along the Z-direction</p></td>
 </tr>
 </tbody>
@@ -270,15 +270,15 @@ are encompassed int their shared inheritance of <a class="reference internal" hr
 <col style="width: 90%" />
 </colgroup>
 <tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="#vtki.RectilinearGrid.save" title="vtki.RectilinearGrid.save"><code class="xref py py-obj docutils literal notranslate"><span class="pre">save</span></code></a>(filename[, binary])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#vista.RectilinearGrid.save" title="vista.RectilinearGrid.save"><code class="xref py py-obj docutils literal notranslate"><span class="pre">save</span></code></a>(filename[, binary])</p></td>
 <td><p>Writes a rectilinear grid to disk.</p></td>
 </tr>
 </tbody>
 </table>
 <dl class="class">
-<dt id="vtki.RectilinearGrid">
-<em class="property">class </em><code class="descclassname">vtki.</code><code class="descname">RectilinearGrid</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#vtki.RectilinearGrid" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">vtkCommonDataModelPython.vtkRectilinearGrid</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">vtki.grid.Grid</span></code></p>
+<dt id="vista.RectilinearGrid">
+<em class="property">class </em><code class="descclassname">vista.</code><code class="descname">RectilinearGrid</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#vista.RectilinearGrid" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">vtkCommonDataModelPython.vtkRectilinearGrid</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">vista.grid.Grid</span></code></p>
 <p>Extends the functionality of a vtk.vtkRectilinearGrid object
 Can be initialized in several ways:</p>
 <ul class="simple">
@@ -289,36 +289,36 @@ Can be initialized in several ways:</p>
 <p>See _from_arrays in the documentation for more details on initializing
 from point arrays</p>
 <p class="rubric">Examples</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">vtki</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">vista</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">vtk</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 </pre></div>
 </div>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="c1"># Create empty grid</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">grid</span> <span class="o">=</span> <span class="n">vtki</span><span class="o">.</span><span class="n">RectilinearGrid</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">grid</span> <span class="o">=</span> <span class="n">vista</span><span class="o">.</span><span class="n">RectilinearGrid</span><span class="p">()</span>
 </pre></div>
 </div>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="c1"># Initialize from a vtk.vtkRectilinearGrid object</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">vtkgrid</span> <span class="o">=</span> <span class="n">vtk</span><span class="o">.</span><span class="n">vtkRectilinearGrid</span><span class="p">()</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">grid</span> <span class="o">=</span> <span class="n">vtki</span><span class="o">.</span><span class="n">RectilinearGrid</span><span class="p">(</span><span class="n">vtkgrid</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">grid</span> <span class="o">=</span> <span class="n">vista</span><span class="o">.</span><span class="n">RectilinearGrid</span><span class="p">(</span><span class="n">vtkgrid</span><span class="p">)</span>
 </pre></div>
 </div>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="c1"># Create from NumPy arrays</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">xrng</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="o">-</span><span class="mi">10</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">yrng</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="o">-</span><span class="mi">10</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">zrng</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="o">-</span><span class="mi">10</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">grid</span> <span class="o">=</span> <span class="n">vtki</span><span class="o">.</span><span class="n">RectilinearGrid</span><span class="p">(</span><span class="n">xrng</span><span class="p">,</span> <span class="n">yrng</span><span class="p">,</span> <span class="n">zrng</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">grid</span> <span class="o">=</span> <span class="n">vista</span><span class="o">.</span><span class="n">RectilinearGrid</span><span class="p">(</span><span class="n">xrng</span><span class="p">,</span> <span class="n">yrng</span><span class="p">,</span> <span class="n">zrng</span><span class="p">)</span>
 </pre></div>
 </div>
 <dl class="attribute">
-<dt id="vtki.RectilinearGrid.points">
-<code class="descname">points</code><a class="headerlink" href="#vtki.RectilinearGrid.points" title="Permalink to this definition">¶</a></dt>
+<dt id="vista.RectilinearGrid.points">
+<code class="descname">points</code><a class="headerlink" href="#vista.RectilinearGrid.points" title="Permalink to this definition">¶</a></dt>
 <dd><p>returns a pointer to the points as a numpy object</p>
 </dd></dl>
 
 <dl class="method">
-<dt id="vtki.RectilinearGrid.save">
-<code class="descname">save</code><span class="sig-paren">(</span><em>filename</em>, <em>binary=True</em><span class="sig-paren">)</span><a class="headerlink" href="#vtki.RectilinearGrid.save" title="Permalink to this definition">¶</a></dt>
+<dt id="vista.RectilinearGrid.save">
+<code class="descname">save</code><span class="sig-paren">(</span><em>filename</em>, <em>binary=True</em><span class="sig-paren">)</span><a class="headerlink" href="#vista.RectilinearGrid.save" title="Permalink to this definition">¶</a></dt>
 <dd><p>Writes a rectilinear grid to disk.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -337,20 +337,20 @@ only with the legacy writer.</p>
 </dd></dl>
 
 <dl class="attribute">
-<dt id="vtki.RectilinearGrid.x">
-<code class="descname">x</code><a class="headerlink" href="#vtki.RectilinearGrid.x" title="Permalink to this definition">¶</a></dt>
+<dt id="vista.RectilinearGrid.x">
+<code class="descname">x</code><a class="headerlink" href="#vista.RectilinearGrid.x" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get the coordinates along the X-direction</p>
 </dd></dl>
 
 <dl class="attribute">
-<dt id="vtki.RectilinearGrid.y">
-<code class="descname">y</code><a class="headerlink" href="#vtki.RectilinearGrid.y" title="Permalink to this definition">¶</a></dt>
+<dt id="vista.RectilinearGrid.y">
+<code class="descname">y</code><a class="headerlink" href="#vista.RectilinearGrid.y" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get the coordinates along the Y-direction</p>
 </dd></dl>
 
 <dl class="attribute">
-<dt id="vtki.RectilinearGrid.z">
-<code class="descname">z</code><a class="headerlink" href="#vtki.RectilinearGrid.z" title="Permalink to this definition">¶</a></dt>
+<dt id="vista.RectilinearGrid.z">
+<code class="descname">z</code><a class="headerlink" href="#vista.RectilinearGrid.z" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get the coordinates along the Z-direction</p>
 </dd></dl>
 
@@ -359,7 +359,7 @@ only with the legacy writer.</p>
 </div>
 <div class="section" id="uniform-grid">
 <h2>Uniform Grid<a class="headerlink" href="#uniform-grid" title="Permalink to this headline">¶</a></h2>
-<p><cite>vtki</cite>’s definition of a uniform grid is an extension of VTK’s <code class="docutils literal notranslate"><span class="pre">vtkImageData</span></code></p>
+<p><cite>vista</cite>’s definition of a uniform grid is an extension of VTK’s <code class="docutils literal notranslate"><span class="pre">vtkImageData</span></code></p>
 <p class="rubric">Attributes</p>
 <table class="longtable docutils align-center">
 <colgroup>
@@ -367,22 +367,22 @@ only with the legacy writer.</p>
 <col style="width: 90%" />
 </colgroup>
 <tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="#vtki.UniformGrid.origin" title="vtki.UniformGrid.origin"><code class="xref py py-obj docutils literal notranslate"><span class="pre">origin</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#vista.UniformGrid.origin" title="vista.UniformGrid.origin"><code class="xref py py-obj docutils literal notranslate"><span class="pre">origin</span></code></a></p></td>
 <td><p>Origin of the grid (bottom southwest corner)</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#vtki.UniformGrid.points" title="vtki.UniformGrid.points"><code class="xref py py-obj docutils literal notranslate"><span class="pre">points</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#vista.UniformGrid.points" title="vista.UniformGrid.points"><code class="xref py py-obj docutils literal notranslate"><span class="pre">points</span></code></a></p></td>
 <td><p>returns a pointer to the points as a numpy object</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#vtki.UniformGrid.spacing" title="vtki.UniformGrid.spacing"><code class="xref py py-obj docutils literal notranslate"><span class="pre">spacing</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#vista.UniformGrid.spacing" title="vista.UniformGrid.spacing"><code class="xref py py-obj docutils literal notranslate"><span class="pre">spacing</span></code></a></p></td>
 <td><p>Get the spacing for each axial direction.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#vtki.UniformGrid.x" title="vtki.UniformGrid.x"><code class="xref py py-obj docutils literal notranslate"><span class="pre">x</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#vista.UniformGrid.x" title="vista.UniformGrid.x"><code class="xref py py-obj docutils literal notranslate"><span class="pre">x</span></code></a></p></td>
 <td><p>all the X points</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#vtki.UniformGrid.y" title="vtki.UniformGrid.y"><code class="xref py py-obj docutils literal notranslate"><span class="pre">y</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#vista.UniformGrid.y" title="vista.UniformGrid.y"><code class="xref py py-obj docutils literal notranslate"><span class="pre">y</span></code></a></p></td>
 <td><p>all the Y points</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#vtki.UniformGrid.z" title="vtki.UniformGrid.z"><code class="xref py py-obj docutils literal notranslate"><span class="pre">z</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#vista.UniformGrid.z" title="vista.UniformGrid.z"><code class="xref py py-obj docutils literal notranslate"><span class="pre">z</span></code></a></p></td>
 <td><p>all the Z points</p></td>
 </tr>
 </tbody>
@@ -394,15 +394,15 @@ only with the legacy writer.</p>
 <col style="width: 90%" />
 </colgroup>
 <tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="#vtki.UniformGrid.save" title="vtki.UniformGrid.save"><code class="xref py py-obj docutils literal notranslate"><span class="pre">save</span></code></a>(filename[, binary])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#vista.UniformGrid.save" title="vista.UniformGrid.save"><code class="xref py py-obj docutils literal notranslate"><span class="pre">save</span></code></a>(filename[, binary])</p></td>
 <td><p>Writes image data grid to disk.</p></td>
 </tr>
 </tbody>
 </table>
 <dl class="class">
-<dt id="vtki.UniformGrid">
-<em class="property">class </em><code class="descclassname">vtki.</code><code class="descname">UniformGrid</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#vtki.UniformGrid" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">vtkCommonDataModelPython.vtkImageData</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">vtki.grid.Grid</span></code></p>
+<dt id="vista.UniformGrid">
+<em class="property">class </em><code class="descclassname">vista.</code><code class="descname">UniformGrid</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#vista.UniformGrid" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">vtkCommonDataModelPython.vtkImageData</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">vista.grid.Grid</span></code></p>
 <p>Extends the functionality of a vtk.vtkImageData object
 Can be initialized in several ways:</p>
 <ul class="simple">
@@ -413,50 +413,50 @@ Can be initialized in several ways:</p>
 <p>See <code class="docutils literal notranslate"><span class="pre">_from_specs</span></code> in the documentation for more details on initializing
 from point arrays</p>
 <p class="rubric">Examples</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">vtki</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">vista</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">vtk</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 </pre></div>
 </div>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="c1"># Create empty grid</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">grid</span> <span class="o">=</span> <span class="n">vtki</span><span class="o">.</span><span class="n">UniformGrid</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">grid</span> <span class="o">=</span> <span class="n">vista</span><span class="o">.</span><span class="n">UniformGrid</span><span class="p">()</span>
 </pre></div>
 </div>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="c1"># Initialize from a vtk.vtkImageData object</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">vtkgrid</span> <span class="o">=</span> <span class="n">vtk</span><span class="o">.</span><span class="n">vtkImageData</span><span class="p">()</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">grid</span> <span class="o">=</span> <span class="n">vtki</span><span class="o">.</span><span class="n">UniformGrid</span><span class="p">(</span><span class="n">vtkgrid</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">grid</span> <span class="o">=</span> <span class="n">vista</span><span class="o">.</span><span class="n">UniformGrid</span><span class="p">(</span><span class="n">vtkgrid</span><span class="p">)</span>
 </pre></div>
 </div>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="c1"># Using just the grid dimensions</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">dims</span> <span class="o">=</span> <span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">grid</span> <span class="o">=</span> <span class="n">vtki</span><span class="o">.</span><span class="n">UniformGrid</span><span class="p">(</span><span class="n">dims</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">grid</span> <span class="o">=</span> <span class="n">vista</span><span class="o">.</span><span class="n">UniformGrid</span><span class="p">(</span><span class="n">dims</span><span class="p">)</span>
 </pre></div>
 </div>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="c1"># Using dimensions and spacing</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">spacing</span> <span class="o">=</span> <span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">grid</span> <span class="o">=</span> <span class="n">vtki</span><span class="o">.</span><span class="n">UniformGrid</span><span class="p">(</span><span class="n">dims</span><span class="p">,</span> <span class="n">spacing</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">grid</span> <span class="o">=</span> <span class="n">vista</span><span class="o">.</span><span class="n">UniformGrid</span><span class="p">(</span><span class="n">dims</span><span class="p">,</span> <span class="n">spacing</span><span class="p">)</span>
 </pre></div>
 </div>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="c1"># Using dimensions, spacing, and an origin</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">origin</span> <span class="o">=</span> <span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">35</span><span class="p">,</span> <span class="mi">50</span><span class="p">)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">grid</span> <span class="o">=</span> <span class="n">vtki</span><span class="o">.</span><span class="n">UniformGrid</span><span class="p">(</span><span class="n">dims</span><span class="p">,</span> <span class="n">spacing</span><span class="p">,</span> <span class="n">origin</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">grid</span> <span class="o">=</span> <span class="n">vista</span><span class="o">.</span><span class="n">UniformGrid</span><span class="p">(</span><span class="n">dims</span><span class="p">,</span> <span class="n">spacing</span><span class="p">,</span> <span class="n">origin</span><span class="p">)</span>
 </pre></div>
 </div>
 <dl class="attribute">
-<dt id="vtki.UniformGrid.origin">
-<code class="descname">origin</code><a class="headerlink" href="#vtki.UniformGrid.origin" title="Permalink to this definition">¶</a></dt>
+<dt id="vista.UniformGrid.origin">
+<code class="descname">origin</code><a class="headerlink" href="#vista.UniformGrid.origin" title="Permalink to this definition">¶</a></dt>
 <dd><p>Origin of the grid (bottom southwest corner)</p>
 </dd></dl>
 
 <dl class="attribute">
-<dt id="vtki.UniformGrid.points">
-<code class="descname">points</code><a class="headerlink" href="#vtki.UniformGrid.points" title="Permalink to this definition">¶</a></dt>
+<dt id="vista.UniformGrid.points">
+<code class="descname">points</code><a class="headerlink" href="#vista.UniformGrid.points" title="Permalink to this definition">¶</a></dt>
 <dd><p>returns a pointer to the points as a numpy object</p>
 </dd></dl>
 
 <dl class="method">
-<dt id="vtki.UniformGrid.save">
-<code class="descname">save</code><span class="sig-paren">(</span><em>filename</em>, <em>binary=True</em><span class="sig-paren">)</span><a class="headerlink" href="#vtki.UniformGrid.save" title="Permalink to this definition">¶</a></dt>
+<dt id="vista.UniformGrid.save">
+<code class="descname">save</code><span class="sig-paren">(</span><em>filename</em>, <em>binary=True</em><span class="sig-paren">)</span><a class="headerlink" href="#vista.UniformGrid.save" title="Permalink to this definition">¶</a></dt>
 <dd><p>Writes image data grid to disk.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -475,26 +475,26 @@ only with the legacy writer.</p>
 </dd></dl>
 
 <dl class="attribute">
-<dt id="vtki.UniformGrid.spacing">
-<code class="descname">spacing</code><a class="headerlink" href="#vtki.UniformGrid.spacing" title="Permalink to this definition">¶</a></dt>
+<dt id="vista.UniformGrid.spacing">
+<code class="descname">spacing</code><a class="headerlink" href="#vista.UniformGrid.spacing" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get the spacing for each axial direction.</p>
 </dd></dl>
 
 <dl class="attribute">
-<dt id="vtki.UniformGrid.x">
-<code class="descname">x</code><a class="headerlink" href="#vtki.UniformGrid.x" title="Permalink to this definition">¶</a></dt>
+<dt id="vista.UniformGrid.x">
+<code class="descname">x</code><a class="headerlink" href="#vista.UniformGrid.x" title="Permalink to this definition">¶</a></dt>
 <dd><p>all the X points</p>
 </dd></dl>
 
 <dl class="attribute">
-<dt id="vtki.UniformGrid.y">
-<code class="descname">y</code><a class="headerlink" href="#vtki.UniformGrid.y" title="Permalink to this definition">¶</a></dt>
+<dt id="vista.UniformGrid.y">
+<code class="descname">y</code><a class="headerlink" href="#vista.UniformGrid.y" title="Permalink to this definition">¶</a></dt>
 <dd><p>all the Y points</p>
 </dd></dl>
 
 <dl class="attribute">
-<dt id="vtki.UniformGrid.z">
-<code class="descname">z</code><a class="headerlink" href="#vtki.UniformGrid.z" title="Permalink to this definition">¶</a></dt>
+<dt id="vista.UniformGrid.z">
+<code class="descname">z</code><a class="headerlink" href="#vista.UniformGrid.z" title="Permalink to this definition">¶</a></dt>
 <dd><p>all the Z points</p>
 </dd></dl>
 
@@ -523,7 +523,7 @@ only with the legacy writer.</p>
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2017-2019, The vtkiorg Developers
+        &copy; Copyright 2017-2019, The vista Developers
 
     </p>
   </div>

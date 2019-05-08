@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Creating an Unstructured Surface &mdash; vtki 0.18.4 documentation</title>
+  <title>Creating an Unstructured Surface &mdash; vista 0.19.0 documentation</title>
   
 
   
@@ -61,7 +61,7 @@
 
           
             
-            <img src="../../_static/vtki_logo.png" class="logo" alt="Logo"/>
+            <img src="../../_static/vista_logo.png" class="logo" alt="Logo"/>
           
           </a>
 
@@ -69,7 +69,7 @@
             
             
               <div class="version">
-                0.18.4
+                0.19.0
               </div>
             
           
@@ -95,7 +95,7 @@
             
               <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../index.html">About</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../why.html">Why <code class="docutils literal notranslate"><span class="pre">vtki</span></code>?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../why.html">Why <code class="docutils literal notranslate"><span class="pre">vista</span></code>?</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../authors.html">Authors</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Getting Started</span></p>
@@ -139,7 +139,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../../tools/plotting.html">Plotting</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../tools/filters.html">Filters</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../tools/ipy_tools.html">IPython Tools</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../tools/qt_plotting.html">vtki PyQt Interface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../tools/qt_plotting.html">vista PyQt Interface</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../tools/utilities.html">Utilities</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Contributing</span></p>
@@ -161,7 +161,7 @@
       <nav class="wy-nav-top" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../../index.html">vtki</a>
+          <a href="../../index.html">vista</a>
         
       </nav>
 
@@ -201,7 +201,7 @@
         
             
             
-              <a href="https://github.com/vtkiorg/vtki/blob/master/docs/examples/00-load/create-unstructured-surface.rst" class="fa fa-github"> Edit on GitHub</a>
+              <a href="https://github.com/pyvista/vista/blob/master/docs/examples/00-load/create-unstructured-surface.rst" class="fa fa-github"> Edit on GitHub</a>
             
           
         
@@ -222,7 +222,7 @@
 <div class="sphx-glr-example-title section" id="creating-an-unstructured-surface">
 <span id="ref-create-unstructured"></span><span id="sphx-glr-examples-00-load-create-unstructured-surface-py"></span><h1>Creating an Unstructured Surface<a class="headerlink" href="#creating-an-unstructured-surface" title="Permalink to this headline">¶</a></h1>
 <p>Create an irregular, unstructured grid from NumPy arrays</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">vtki</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">vista</span>
 <span class="kn">import</span> <span class="nn">vtk</span>
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 </pre></div>
@@ -264,20 +264,20 @@ for available cell types and their descriptions.</p>
 <span class="n">points</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">vstack</span><span class="p">((</span><span class="n">cell1</span><span class="p">,</span> <span class="n">cell2</span><span class="p">))</span>
 
 <span class="c1"># create the unstructured grid directly from the numpy arrays</span>
-<span class="n">grid</span> <span class="o">=</span> <span class="n">vtki</span><span class="o">.</span><span class="n">UnstructuredGrid</span><span class="p">(</span><span class="n">offset</span><span class="p">,</span> <span class="n">cells</span><span class="p">,</span> <span class="n">cell_type</span><span class="p">,</span> <span class="n">points</span><span class="p">)</span>
+<span class="n">grid</span> <span class="o">=</span> <span class="n">vista</span><span class="o">.</span><span class="n">UnstructuredGrid</span><span class="p">(</span><span class="n">offset</span><span class="p">,</span> <span class="n">cells</span><span class="p">,</span> <span class="n">cell_type</span><span class="p">,</span> <span class="n">points</span><span class="p">)</span>
 
 <span class="c1"># plot the grid</span>
 <span class="n">grid</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">show_edges</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 </pre></div>
 </div>
 <img alt="../../_images/sphx_glr_create-unstructured-surface_001.png" class="sphx-glr-single-img" src="../../_images/sphx_glr_create-unstructured-surface_001.png" />
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  0.698 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  0.763 seconds)</p>
 <div class="sphx-glr-footer class sphx-glr-footer-example docutils container" id="sphx-glr-download-examples-00-load-create-unstructured-surface-py">
 <div class="sphx-glr-download docutils container">
-<p><a class="reference download internal" download="" href="../../_downloads/cfde9598b621dc37bb79ae0462a7d062/create-unstructured-surface.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">create-unstructured-surface.py</span></code></a></p>
+<p><a class="reference download internal" download="" href="../../_downloads/74f02bcf61fcf77d478f6626c0fd8834/create-unstructured-surface.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">create-unstructured-surface.py</span></code></a></p>
 </div>
 <div class="sphx-glr-download docutils container">
-<p><a class="reference download internal" download="" href="../../_downloads/6c42b06359872339319723d32f234367/create-unstructured-surface.ipynb"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Jupyter</span> <span class="pre">notebook:</span> <span class="pre">create-unstructured-surface.ipynb</span></code></a></p>
+<p><a class="reference download internal" download="" href="../../_downloads/316a19278ec106e81d1d90269383cef2/create-unstructured-surface.ipynb"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Jupyter</span> <span class="pre">notebook:</span> <span class="pre">create-unstructured-surface.ipynb</span></code></a></p>
 </div>
 </div>
 <p class="sphx-glr-signature"><a class="reference external" href="https://sphinx-gallery.readthedocs.io">Gallery generated by Sphinx-Gallery</a></p>
@@ -303,7 +303,7 @@ for available cell types and their descriptions.</p>
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2017-2019, The vtkiorg Developers
+        &copy; Copyright 2017-2019, The vista Developers
 
     </p>
   </div>

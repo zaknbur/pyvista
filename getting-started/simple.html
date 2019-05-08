@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Basic API Usage &mdash; vtki 0.18.4 documentation</title>
+  <title>Basic API Usage &mdash; vista 0.19.0 documentation</title>
   
 
   
@@ -61,7 +61,7 @@
 
           
             
-            <img src="../_static/vtki_logo.png" class="logo" alt="Logo"/>
+            <img src="../_static/vista_logo.png" class="logo" alt="Logo"/>
           
           </a>
 
@@ -69,7 +69,7 @@
             
             
               <div class="version">
-                0.18.4
+                0.19.0
               </div>
             
           
@@ -95,7 +95,7 @@
             
               <ul>
 <li class="toctree-l1"><a class="reference internal" href="../index.html">About</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../why.html">Why <code class="docutils literal notranslate"><span class="pre">vtki</span></code>?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../why.html">Why <code class="docutils literal notranslate"><span class="pre">vista</span></code>?</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../authors.html">Authors</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Getting Started</span></p>
@@ -129,7 +129,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../tools/plotting.html">Plotting</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../tools/filters.html">Filters</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../tools/ipy_tools.html">IPython Tools</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../tools/qt_plotting.html">vtki PyQt Interface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tools/qt_plotting.html">vista PyQt Interface</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../tools/utilities.html">Utilities</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Contributing</span></p>
@@ -151,7 +151,7 @@
       <nav class="wy-nav-top" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../index.html">vtki</a>
+          <a href="../index.html">vista</a>
         
       </nav>
 
@@ -189,7 +189,7 @@
         
             
             
-              <a href="https://github.com/vtkiorg/vtki/blob/master/docs/getting-started/simple.rst" class="fa fa-github"> Edit on GitHub</a>
+              <a href="https://github.com/pyvista/vista/blob/master/docs/getting-started/simple.rst" class="fa fa-github"> Edit on GitHub</a>
             
           
         
@@ -205,36 +205,36 @@
             
   <div class="section" id="basic-api-usage">
 <h1>Basic API Usage<a class="headerlink" href="#basic-api-usage" title="Permalink to this headline">¶</a></h1>
-<p><code class="docutils literal notranslate"><span class="pre">vtki</span></code> provides tools to get started with just about any VTK dataset
+<p><code class="docutils literal notranslate"><span class="pre">vista</span></code> provides tools to get started with just about any VTK dataset
 and wrap that object into an easily accesible data object.
 Whether you are new to the VTK library or a power user, the best place to
-get started is with <code class="docutils literal notranslate"><span class="pre">vtki</span></code>’s <a class="reference internal" href="../tools/utilities.html#vtki.wrap" title="vtki.wrap"><code class="xref py py-func docutils literal notranslate"><span class="pre">vtki.wrap()</span></code></a> and <code class="xref py py-func docutils literal notranslate"><span class="pre">vtk.read()</span></code>
+get started is with <code class="docutils literal notranslate"><span class="pre">vista</span></code>’s <a class="reference internal" href="../tools/utilities.html#vista.wrap" title="vista.wrap"><code class="xref py py-func docutils literal notranslate"><span class="pre">vista.wrap()</span></code></a> and <code class="xref py py-func docutils literal notranslate"><span class="pre">vtk.read()</span></code>
 functions to either wrap a VTK data object in memory or read a VTK or
 VTK-friendly file format.</p>
 <div class="section" id="wrapping-a-vtk-data-object">
 <h2>Wrapping a VTK Data Object<a class="headerlink" href="#wrapping-a-vtk-data-object" title="Permalink to this headline">¶</a></h2>
-<p>The wrapping function is under the <a class="reference internal" href="../tools/utilities.html#module-vtki.utilities" title="vtki.utilities"><code class="xref py py-mod docutils literal notranslate"><span class="pre">vtki.utilities</span></code></a> module which is
-usable from the top level of <code class="docutils literal notranslate"><span class="pre">vtki</span></code>:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">vtki</span>
-<span class="n">wrapped_data</span> <span class="o">=</span> <span class="n">vtki</span><span class="o">.</span><span class="n">wrap</span><span class="p">(</span><span class="n">my_vtk_data_object</span><span class="p">)</span>
+<p>The wrapping function is under the <a class="reference internal" href="../tools/utilities.html#module-vista.utilities" title="vista.utilities"><code class="xref py py-mod docutils literal notranslate"><span class="pre">vista.utilities</span></code></a> module which is
+usable from the top level of <code class="docutils literal notranslate"><span class="pre">vista</span></code>:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">vista</span>
+<span class="n">wrapped_data</span> <span class="o">=</span> <span class="n">vista</span><span class="o">.</span><span class="n">wrap</span><span class="p">(</span><span class="n">my_vtk_data_object</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>This allows users to quickly wrap any VTK dataset they have to its appropriate
-<cite>vtki</cite> object:</p>
+<cite>vista</cite> object:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">vtk</span>
-<span class="kn">import</span> <span class="nn">vtki</span>
+<span class="kn">import</span> <span class="nn">vista</span>
 <span class="n">stuff</span> <span class="o">=</span> <span class="n">vtk</span><span class="o">.</span><span class="n">vtkPolyData</span><span class="p">()</span>
-<span class="n">better</span> <span class="o">=</span> <span class="n">vtki</span><span class="o">.</span><span class="n">wrap</span><span class="p">(</span><span class="n">stuff</span><span class="p">)</span>
+<span class="n">better</span> <span class="o">=</span> <span class="n">vista</span><span class="o">.</span><span class="n">wrap</span><span class="p">(</span><span class="n">stuff</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="reading-a-vtk-file">
 <h2>Reading a VTK File<a class="headerlink" href="#reading-a-vtk-file" title="Permalink to this headline">¶</a></h2>
-<p><code class="docutils literal notranslate"><span class="pre">vtki</span></code> provides a convenience function to read VTK file formats into their
-respective <code class="docutils literal notranslate"><span class="pre">vtki</span></code> data objects. Simply call the <a class="reference internal" href="../tools/utilities.html#vtki.read" title="vtki.read"><code class="xref py py-func docutils literal notranslate"><span class="pre">vtki.read()</span></code></a> function
+<p><code class="docutils literal notranslate"><span class="pre">vista</span></code> provides a convenience function to read VTK file formats into their
+respective <code class="docutils literal notranslate"><span class="pre">vista</span></code> data objects. Simply call the <a class="reference internal" href="../tools/utilities.html#vista.read" title="vista.read"><code class="xref py py-func docutils literal notranslate"><span class="pre">vista.read()</span></code></a> function
 passing the filename:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">vtki</span>
-<span class="n">data</span> <span class="o">=</span> <span class="n">vtki</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="s1">&#39;my_strange_vtk_file.vtk&#39;</span><span class="p">)</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">vista</span>
+<span class="n">data</span> <span class="o">=</span> <span class="n">vista</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="s1">&#39;my_strange_vtk_file.vtk&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -245,8 +245,8 @@ modifying the data! Some of the most common properties to access include the
 points and point/cell data (the data attributes assigned to the nodes or cells
 of the mesh respectively).</p>
 <p>First, check out some common meta data properties:</p>
-<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">vtki</span>
-<span class="kn">from</span> <span class="nn">vtki</span> <span class="k">import</span> <span class="n">examples</span>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">vista</span>
+<span class="kn">from</span> <span class="nn">vista</span> <span class="k">import</span> <span class="n">examples</span>
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 </pre></div>
 </div>
@@ -269,7 +269,7 @@ of the mesh respectively).</p>
 </pre></div>
 </div>
 <p>Access the points by fetching the <code class="docutils literal notranslate"><span class="pre">.points</span></code> attribute on any
-<code class="docutils literal notranslate"><span class="pre">vtki</span></code> data object:</p>
+<code class="docutils literal notranslate"><span class="pre">vista</span></code> data object:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">the_pts</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">points</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="nb">isinstance</span><span class="p">(</span><span class="n">the_pts</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">)</span>
 <span class="go">True</span>
@@ -293,13 +293,13 @@ accessed and modified.</p>
 </div>
 <div class="section" id="plotting">
 <h2>Plotting<a class="headerlink" href="#plotting" title="Permalink to this headline">¶</a></h2>
-<p><code class="docutils literal notranslate"><span class="pre">vtki</span></code> includes numerous plotting routines that are intended to be intuitive
+<p><code class="docutils literal notranslate"><span class="pre">vista</span></code> includes numerous plotting routines that are intended to be intuitive
 and highly controllable with <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code> similar syntax and keyword
 arguments.
-To get started, try out the <a class="reference internal" href="../tools/plotting.html#vtki.plot" title="vtki.plot"><code class="xref py py-func docutils literal notranslate"><span class="pre">vtki.plot()</span></code></a> convenience method that is binded
-to each <code class="docutils literal notranslate"><span class="pre">vtki</span></code> data object:</p>
-<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">vtki</span>
-<span class="kn">from</span> <span class="nn">vtki</span> <span class="k">import</span> <span class="n">examples</span>
+To get started, try out the <a class="reference internal" href="../tools/plotting.html#vista.plot" title="vista.plot"><code class="xref py py-func docutils literal notranslate"><span class="pre">vista.plot()</span></code></a> convenience method that is binded
+to each <code class="docutils literal notranslate"><span class="pre">vista</span></code> data object:</p>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">vista</span>
+<span class="kn">from</span> <span class="nn">vista</span> <span class="k">import</span> <span class="n">examples</span>
 
 <span class="n">data</span> <span class="o">=</span> <span class="n">examples</span><span class="o">.</span><span class="n">load_airplane</span><span class="p">()</span>
 <span class="n">data</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">screenshot</span><span class="o">=</span><span class="s1">&#39;airplane.png&#39;</span><span class="p">)</span>
@@ -307,10 +307,10 @@ to each <code class="docutils literal notranslate"><span class="pre">vtki</span>
 </div>
 <img alt="../_images/airplane.png" src="../_images/airplane.png" />
 <p>You can also create the plotter to highly control the scene. First, instantiate
-a plotter such as <a class="reference internal" href="../tools/plotting.html#vtki.Plotter" title="vtki.Plotter"><code class="xref py py-class docutils literal notranslate"><span class="pre">vtki.Plotter</span></code></a> or <a class="reference internal" href="../tools/qt_plotting.html#vtki.BackgroundPlotter" title="vtki.BackgroundPlotter"><code class="xref py py-class docutils literal notranslate"><span class="pre">vtki.BackgroundPlotter</span></code></a>:</p>
-<p>The <a class="reference internal" href="../tools/plotting.html#vtki.Plotter" title="vtki.Plotter"><code class="xref py py-class docutils literal notranslate"><span class="pre">vtki.Plotter</span></code></a> will create a rendering window that will pause the
+a plotter such as <a class="reference internal" href="../tools/plotting.html#vista.Plotter" title="vista.Plotter"><code class="xref py py-class docutils literal notranslate"><span class="pre">vista.Plotter</span></code></a> or <a class="reference internal" href="../tools/qt_plotting.html#vista.BackgroundPlotter" title="vista.BackgroundPlotter"><code class="xref py py-class docutils literal notranslate"><span class="pre">vista.BackgroundPlotter</span></code></a>:</p>
+<p>The <a class="reference internal" href="../tools/plotting.html#vista.Plotter" title="vista.Plotter"><code class="xref py py-class docutils literal notranslate"><span class="pre">vista.Plotter</span></code></a> will create a rendering window that will pause the
 execution of the code after calling <code class="docutils literal notranslate"><span class="pre">show</span></code>.</p>
-<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="n">plotter</span> <span class="o">=</span> <span class="n">vtki</span><span class="o">.</span><span class="n">Plotter</span><span class="p">()</span>  <span class="c1"># instantiate the plotter</span>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="n">plotter</span> <span class="o">=</span> <span class="n">vista</span><span class="o">.</span><span class="n">Plotter</span><span class="p">()</span>  <span class="c1"># instantiate the plotter</span>
 <span class="n">plotter</span><span class="o">.</span><span class="n">add_mesh</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>    <span class="c1"># add a dataset to the scene</span>
 <span class="n">cpos</span> <span class="o">=</span> <span class="n">plotter</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>     <span class="c1"># show the rendering window</span>
 </pre></div>
@@ -320,7 +320,7 @@ rendering window incase you want to chose a camera position and use it agian
 later.</p>
 <p>You can then use this cached camera for additional plotting without having to
 manually interact with the plotting window:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">plotter</span> <span class="o">=</span> <span class="n">vtki</span><span class="o">.</span><span class="n">Plotter</span><span class="p">(</span><span class="n">off_screen</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">plotter</span> <span class="o">=</span> <span class="n">vista</span><span class="o">.</span><span class="n">Plotter</span><span class="p">(</span><span class="n">off_screen</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
 <span class="n">plotter</span><span class="o">.</span><span class="n">add_mesh</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;tan&#39;</span><span class="p">)</span>
 <span class="n">plotter</span><span class="o">.</span><span class="n">camera_position</span> <span class="o">=</span> <span class="n">cpos</span>
 <span class="n">plotter</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">auto_close</span><span class="o">=</span><span class="bp">False</span><span class="p">)</span>
@@ -330,9 +330,9 @@ manually interact with the plotting window:</p>
 </div>
 <p>Be sure to check out all the available plotters for your use case:</p>
 <ul class="simple">
-<li><p><a class="reference internal" href="../tools/plotting.html#vtki.Plotter" title="vtki.Plotter"><code class="xref py py-class docutils literal notranslate"><span class="pre">vtki.Plotter</span></code></a>: The standard plotter that pauses the code until closed</p></li>
-<li><p><a class="reference internal" href="../tools/qt_plotting.html#vtki.BackgroundPlotter" title="vtki.BackgroundPlotter"><code class="xref py py-class docutils literal notranslate"><span class="pre">vtki.BackgroundPlotter</span></code></a>: Creates a rendering window that is interactive and does not pause the code execution</p></li>
-<li><p><a class="reference internal" href="../tools/qt_plotting.html#vtki.ScaledPlotter" title="vtki.ScaledPlotter"><code class="xref py py-class docutils literal notranslate"><span class="pre">vtki.ScaledPlotter</span></code></a>: An IPython extension of the <a class="reference internal" href="../tools/qt_plotting.html#vtki.BackgroundPlotter" title="vtki.BackgroundPlotter"><code class="xref py py-class docutils literal notranslate"><span class="pre">vtki.BackgroundPlotter</span></code></a> that has interactive widgets for scaling the axes in the rendering scene.</p></li>
+<li><p><a class="reference internal" href="../tools/plotting.html#vista.Plotter" title="vista.Plotter"><code class="xref py py-class docutils literal notranslate"><span class="pre">vista.Plotter</span></code></a>: The standard plotter that pauses the code until closed</p></li>
+<li><p><a class="reference internal" href="../tools/qt_plotting.html#vista.BackgroundPlotter" title="vista.BackgroundPlotter"><code class="xref py py-class docutils literal notranslate"><span class="pre">vista.BackgroundPlotter</span></code></a>: Creates a rendering window that is interactive and does not pause the code execution</p></li>
+<li><p><a class="reference internal" href="../tools/qt_plotting.html#vista.ScaledPlotter" title="vista.ScaledPlotter"><code class="xref py py-class docutils literal notranslate"><span class="pre">vista.ScaledPlotter</span></code></a>: An IPython extension of the <a class="reference internal" href="../tools/qt_plotting.html#vista.BackgroundPlotter" title="vista.BackgroundPlotter"><code class="xref py py-class docutils literal notranslate"><span class="pre">vista.BackgroundPlotter</span></code></a> that has interactive widgets for scaling the axes in the rendering scene.</p></li>
 </ul>
 </div>
 </div>
@@ -357,7 +357,7 @@ manually interact with the plotting window:</p>
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2017-2019, The vtkiorg Developers
+        &copy; Copyright 2017-2019, The vista Developers
 
     </p>
   </div>

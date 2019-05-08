@@ -15,8 +15,8 @@ Extract thin planar slices from a volume
 .. code-block:: default
 
     # sphinx_gallery_thumbnail_number = 2
-    import vtki
-    from vtki import examples
+    import vista
+    from vista import examples
     import matplotlib.pyplot as plt
 
 
@@ -25,12 +25,12 @@ Extract thin planar slices from a volume
 
 
 
-``vtki`` meshes have several slicing filters bound directly to all datasets.
+``vista`` meshes have several slicing filters bound directly to all datasets.
 Thes filters allow you to slice through a volumetric dataset to extract and
 view sections through the volume of data.
 
-One of the most common slicing filters used in ``vtki`` is the
-:func:`vtki.DataSetFilters.slice_orthogonal` filter which creates three
+One of the most common slicing filters used in ``vista`` is the
+:func:`vista.DataSetFilters.slice_orthogonal` filter which creates three
 orthogonal slices through the dataset on the three caresian planes.
 For example, let's slice through the sample geostatitical training image
 volume. First, load up the volume and preview it:
@@ -95,7 +95,7 @@ The orthogonal slices can be easily translated throughout the volume:
 
 
 We can also add just a single slice of the volume by specifying the origin
-and normal of the slicing plane with the :func:`vtki.DataSetFilters.slice`
+and normal of the slicing plane with the :func:`vista.DataSetFilters.slice`
 filter:
 
 
@@ -105,7 +105,7 @@ filter:
     # Sing slice - origin defaults to center of the mesh
     single_slice = mesh.slice(normal=[1,1,0])
 
-    p = vtki.Plotter()
+    p = vista.Plotter()
     p.add_mesh(mesh.outline(), color='k')
     p.add_mesh(single_slice, cmap=cmap)
     p.show()
@@ -119,7 +119,7 @@ filter:
 
 
 Adding slicing planes uniformly across an axial direction can also be
-automated with the :func:`vtki.DataSetFilters.slice_along_axis` filter:
+automated with the :func:`vista.DataSetFilters.slice_along_axis` filter:
 
 
 .. code-block:: default
@@ -140,7 +140,7 @@ automated with the :func:`vtki.DataSetFilters.slice_along_axis` filter:
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  13.784 seconds)
+   **Total running time of the script:** ( 0 minutes  13.865 seconds)
 
 
 .. _sphx_glr_download_examples_01-filter_slicing.py:

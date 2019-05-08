@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Utilities &mdash; vtki 0.18.4 documentation</title>
+  <title>Utilities &mdash; vista 0.19.0 documentation</title>
   
 
   
@@ -42,7 +42,7 @@
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Overview" href="../dev/contributing.html" />
-    <link rel="prev" title="vtki PyQt Interface" href="qt_plotting.html" /> 
+    <link rel="prev" title="vista PyQt Interface" href="qt_plotting.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -61,7 +61,7 @@
 
           
             
-            <img src="../_static/vtki_logo.png" class="logo" alt="Logo"/>
+            <img src="../_static/vista_logo.png" class="logo" alt="Logo"/>
           
           </a>
 
@@ -69,7 +69,7 @@
             
             
               <div class="version">
-                0.18.4
+                0.19.0
               </div>
             
           
@@ -95,7 +95,7 @@
             
               <ul>
 <li class="toctree-l1"><a class="reference internal" href="../index.html">About</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../why.html">Why <code class="docutils literal notranslate"><span class="pre">vtki</span></code>?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../why.html">Why <code class="docutils literal notranslate"><span class="pre">vista</span></code>?</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../authors.html">Authors</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Getting Started</span></p>
@@ -123,7 +123,7 @@
 <li class="toctree-l1"><a class="reference internal" href="plotting.html">Plotting</a></li>
 <li class="toctree-l1"><a class="reference internal" href="filters.html">Filters</a></li>
 <li class="toctree-l1"><a class="reference internal" href="ipy_tools.html">IPython Tools</a></li>
-<li class="toctree-l1"><a class="reference internal" href="qt_plotting.html">vtki PyQt Interface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="qt_plotting.html">vista PyQt Interface</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Utilities</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#object-conversions">Object Conversions</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#file-io">File IO</a></li>
@@ -151,7 +151,7 @@
       <nav class="wy-nav-top" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../index.html">vtki</a>
+          <a href="../index.html">vista</a>
         
       </nav>
 
@@ -189,7 +189,7 @@
         
             
             
-              <a href="https://github.com/vtkiorg/vtki/blob/master/docs/tools/utilities.rst" class="fa fa-github"> Edit on GitHub</a>
+              <a href="https://github.com/pyvista/vista/blob/master/docs/tools/utilities.rst" class="fa fa-github"> Edit on GitHub</a>
             
           
         
@@ -203,24 +203,24 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="module-vtki.utilities">
-<span id="utilities"></span><h1>Utilities<a class="headerlink" href="#module-vtki.utilities" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="module-vista.utilities">
+<span id="utilities"></span><h1>Utilities<a class="headerlink" href="#module-vista.utilities" title="Permalink to this headline">¶</a></h1>
 <p>Supporting functions for polydata and grid objects</p>
 <dl class="function">
-<dt id="vtki.set_error_output_file">
-<code class="descclassname">vtki.</code><code class="descname">set_error_output_file</code><span class="sig-paren">(</span><em>filename</em><span class="sig-paren">)</span><a class="headerlink" href="#vtki.set_error_output_file" title="Permalink to this definition">¶</a></dt>
+<dt id="vista.set_error_output_file">
+<code class="descclassname">vista.</code><code class="descname">set_error_output_file</code><span class="sig-paren">(</span><em>filename</em><span class="sig-paren">)</span><a class="headerlink" href="#vista.set_error_output_file" title="Permalink to this definition">¶</a></dt>
 <dd><p>Sets a file to write out the VTK errors</p>
 </dd></dl>
 
 <dl class="function">
-<dt id="vtki.trans_from_matrix">
-<code class="descclassname">vtki.</code><code class="descname">trans_from_matrix</code><span class="sig-paren">(</span><em>matrix</em><span class="sig-paren">)</span><a class="headerlink" href="#vtki.trans_from_matrix" title="Permalink to this definition">¶</a></dt>
+<dt id="vista.trans_from_matrix">
+<code class="descclassname">vista.</code><code class="descname">trans_from_matrix</code><span class="sig-paren">(</span><em>matrix</em><span class="sig-paren">)</span><a class="headerlink" href="#vista.trans_from_matrix" title="Permalink to this definition">¶</a></dt>
 <dd><p>Convert a vtk matrix to a numpy.ndarray</p>
 </dd></dl>
 
 <dl class="function">
-<dt id="vtki.is_inside_bounds">
-<code class="descclassname">vtki.</code><code class="descname">is_inside_bounds</code><span class="sig-paren">(</span><em>point</em>, <em>bounds</em><span class="sig-paren">)</span><a class="headerlink" href="#vtki.is_inside_bounds" title="Permalink to this definition">¶</a></dt>
+<dt id="vista.is_inside_bounds">
+<code class="descclassname">vista.</code><code class="descname">is_inside_bounds</code><span class="sig-paren">(</span><em>point</em>, <em>bounds</em><span class="sig-paren">)</span><a class="headerlink" href="#vista.is_inside_bounds" title="Permalink to this definition">¶</a></dt>
 <dd><p>Checks if a point is inside a set of bounds. This is implemented
 through recursion so that this is N-dimensional.</p>
 </dd></dl>
@@ -228,27 +228,27 @@ through recursion so that this is N-dimensional.</p>
 <div class="section" id="object-conversions">
 <h2>Object Conversions<a class="headerlink" href="#object-conversions" title="Permalink to this headline">¶</a></h2>
 <dl class="function">
-<dt id="vtki.wrap">
-<code class="descclassname">vtki.</code><code class="descname">wrap</code><span class="sig-paren">(</span><em>vtkdataset</em><span class="sig-paren">)</span><a class="headerlink" href="#vtki.wrap" title="Permalink to this definition">¶</a></dt>
+<dt id="vista.wrap">
+<code class="descclassname">vista.</code><code class="descname">wrap</code><span class="sig-paren">(</span><em>vtkdataset</em><span class="sig-paren">)</span><a class="headerlink" href="#vista.wrap" title="Permalink to this definition">¶</a></dt>
 <dd><p>This is a convenience method to safely wrap any given VTK data object
-to its appropriate <code class="docutils literal notranslate"><span class="pre">vtki</span></code> data object.</p>
+to its appropriate <code class="docutils literal notranslate"><span class="pre">vista</span></code> data object.</p>
 </dd></dl>
 
 <dl class="function">
-<dt id="vtki.is_vtki_obj">
-<code class="descclassname">vtki.</code><code class="descname">is_vtki_obj</code><span class="sig-paren">(</span><em>obj</em><span class="sig-paren">)</span><a class="headerlink" href="#vtki.is_vtki_obj" title="Permalink to this definition">¶</a></dt>
-<dd><p>Return True if the Object is a <code class="docutils literal notranslate"><span class="pre">vtki</span></code> wrapped dataset</p>
+<dt id="vista.is_vista_obj">
+<code class="descclassname">vista.</code><code class="descname">is_vista_obj</code><span class="sig-paren">(</span><em>obj</em><span class="sig-paren">)</span><a class="headerlink" href="#vista.is_vista_obj" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return True if the Object is a <code class="docutils literal notranslate"><span class="pre">vista</span></code> wrapped dataset</p>
 </dd></dl>
 
 <dl class="function">
-<dt id="vtki.image_to_texture">
-<code class="descclassname">vtki.</code><code class="descname">image_to_texture</code><span class="sig-paren">(</span><em>image</em><span class="sig-paren">)</span><a class="headerlink" href="#vtki.image_to_texture" title="Permalink to this definition">¶</a></dt>
-<dd><p>Converts <code class="docutils literal notranslate"><span class="pre">vtkImageData</span></code> (<a class="reference internal" href="../types/grids.html#vtki.UniformGrid" title="vtki.UniformGrid"><code class="xref py py-class docutils literal notranslate"><span class="pre">vtki.UniformGrid</span></code></a>) to a <code class="docutils literal notranslate"><span class="pre">vtkTexture</span></code></p>
+<dt id="vista.image_to_texture">
+<code class="descclassname">vista.</code><code class="descname">image_to_texture</code><span class="sig-paren">(</span><em>image</em><span class="sig-paren">)</span><a class="headerlink" href="#vista.image_to_texture" title="Permalink to this definition">¶</a></dt>
+<dd><p>Converts <code class="docutils literal notranslate"><span class="pre">vtkImageData</span></code> (<a class="reference internal" href="../types/grids.html#vista.UniformGrid" title="vista.UniformGrid"><code class="xref py py-class docutils literal notranslate"><span class="pre">vista.UniformGrid</span></code></a>) to a <code class="docutils literal notranslate"><span class="pre">vtkTexture</span></code></p>
 </dd></dl>
 
 <dl class="function">
-<dt id="vtki.numpy_to_texture">
-<code class="descclassname">vtki.</code><code class="descname">numpy_to_texture</code><span class="sig-paren">(</span><em>image</em><span class="sig-paren">)</span><a class="headerlink" href="#vtki.numpy_to_texture" title="Permalink to this definition">¶</a></dt>
+<dt id="vista.numpy_to_texture">
+<code class="descclassname">vista.</code><code class="descname">numpy_to_texture</code><span class="sig-paren">(</span><em>image</em><span class="sig-paren">)</span><a class="headerlink" href="#vista.numpy_to_texture" title="Permalink to this definition">¶</a></dt>
 <dd><p>Convert a NumPy image array to a vtk.vtkTexture</p>
 </dd></dl>
 
@@ -256,10 +256,10 @@ to its appropriate <code class="docutils literal notranslate"><span class="pre">
 <div class="section" id="file-io">
 <h2>File IO<a class="headerlink" href="#file-io" title="Permalink to this headline">¶</a></h2>
 <dl class="function">
-<dt id="vtki.read">
-<code class="descclassname">vtki.</code><code class="descname">read</code><span class="sig-paren">(</span><em>filename</em>, <em>attrs=None</em><span class="sig-paren">)</span><a class="headerlink" href="#vtki.read" title="Permalink to this definition">¶</a></dt>
+<dt id="vista.read">
+<code class="descclassname">vista.</code><code class="descname">read</code><span class="sig-paren">(</span><em>filename</em>, <em>attrs=None</em><span class="sig-paren">)</span><a class="headerlink" href="#vista.read" title="Permalink to this definition">¶</a></dt>
 <dd><p>This will read any VTK file! It will figure out what reader to use
-then wrap the VTK object for use in <code class="docutils literal notranslate"><span class="pre">vtki</span></code>.</p>
+then wrap the VTK object for use in <code class="docutils literal notranslate"><span class="pre">vista</span></code>.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>attrs</strong> (<em>dict</em><em>, </em><em>optional</em>) – A dictionary of attributes to call on the reader. Keys of dictionary are
@@ -271,20 +271,20 @@ value.</p>
 </dd></dl>
 
 <dl class="function">
-<dt id="vtki.read_exodus">
-<code class="descclassname">vtki.</code><code class="descname">read_exodus</code><span class="sig-paren">(</span><em>filename</em>, <em>animate_mode_shapes=True</em>, <em>apply_displacements=True</em>, <em>displacement_magnitude=1.0</em>, <em>enabled_sidesets=None</em><span class="sig-paren">)</span><a class="headerlink" href="#vtki.read_exodus" title="Permalink to this definition">¶</a></dt>
+<dt id="vista.read_exodus">
+<code class="descclassname">vista.</code><code class="descname">read_exodus</code><span class="sig-paren">(</span><em>filename</em>, <em>animate_mode_shapes=True</em>, <em>apply_displacements=True</em>, <em>displacement_magnitude=1.0</em>, <em>enabled_sidesets=None</em><span class="sig-paren">)</span><a class="headerlink" href="#vista.read_exodus" title="Permalink to this definition">¶</a></dt>
 <dd><p>Read an ExodusII file (<code class="docutils literal notranslate"><span class="pre">'.e'</span></code> or <code class="docutils literal notranslate"><span class="pre">'.exo'</span></code>)</p>
 </dd></dl>
 
 <dl class="function">
-<dt id="vtki.read_texture">
-<code class="descclassname">vtki.</code><code class="descname">read_texture</code><span class="sig-paren">(</span><em>filename</em>, <em>attrs=None</em><span class="sig-paren">)</span><a class="headerlink" href="#vtki.read_texture" title="Permalink to this definition">¶</a></dt>
+<dt id="vista.read_texture">
+<code class="descclassname">vista.</code><code class="descname">read_texture</code><span class="sig-paren">(</span><em>filename</em>, <em>attrs=None</em><span class="sig-paren">)</span><a class="headerlink" href="#vista.read_texture" title="Permalink to this definition">¶</a></dt>
 <dd><p>Loads a <code class="docutils literal notranslate"><span class="pre">vtkTexture</span></code> from an image file.</p>
 </dd></dl>
 
 <dl class="function">
-<dt id="vtki.read_legacy">
-<code class="descclassname">vtki.</code><code class="descname">read_legacy</code><span class="sig-paren">(</span><em>filename</em><span class="sig-paren">)</span><a class="headerlink" href="#vtki.read_legacy" title="Permalink to this definition">¶</a></dt>
+<dt id="vista.read_legacy">
+<code class="descclassname">vista.</code><code class="descname">read_legacy</code><span class="sig-paren">(</span><em>filename</em><span class="sig-paren">)</span><a class="headerlink" href="#vista.read_legacy" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use VTK’s legacy reader to read a file</p>
 </dd></dl>
 
@@ -292,8 +292,8 @@ value.</p>
 <div class="section" id="mesh-creation">
 <h2>Mesh Creation<a class="headerlink" href="#mesh-creation" title="Permalink to this headline">¶</a></h2>
 <dl class="function">
-<dt id="vtki.lines_from_points">
-<code class="descclassname">vtki.</code><code class="descname">lines_from_points</code><span class="sig-paren">(</span><em>points</em><span class="sig-paren">)</span><a class="headerlink" href="#vtki.lines_from_points" title="Permalink to this definition">¶</a></dt>
+<dt id="vista.lines_from_points">
+<code class="descclassname">vista.</code><code class="descname">lines_from_points</code><span class="sig-paren">(</span><em>points</em><span class="sig-paren">)</span><a class="headerlink" href="#vista.lines_from_points" title="Permalink to this definition">¶</a></dt>
 <dd><p>Generates line from points.  Assumes points are ordered as line segments.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -306,35 +306,35 @@ would be represented as:</p>
 <dd class="field-even"><p><strong>lines</strong> – PolyData with lines and cells.</p>
 </dd>
 <dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p><a class="reference internal" href="../types/points.html#vtki.PolyData" title="vtki.PolyData">vtki.PolyData</a></p>
+<dd class="field-odd"><p><a class="reference internal" href="../types/points.html#vista.PolyData" title="vista.PolyData">vista.PolyData</a></p>
 </dd>
 </dl>
 <p class="rubric">Examples</p>
 <p>This example plots two line segments at right angles to each other line.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">vtki</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">vista</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">points</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">]])</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">lines</span> <span class="o">=</span> <span class="n">vtki</span><span class="o">.</span><span class="n">lines_from_points</span><span class="p">(</span><span class="n">points</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">lines</span> <span class="o">=</span> <span class="n">vista</span><span class="o">.</span><span class="n">lines_from_points</span><span class="p">(</span><span class="n">points</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">lines</span><span class="o">.</span><span class="n">plot</span><span class="p">()</span> <span class="c1"># doctest:+SKIP</span>
 </pre></div>
 </div>
 </dd></dl>
 
 <dl class="function">
-<dt id="vtki.vtk_points">
-<code class="descclassname">vtki.</code><code class="descname">vtk_points</code><span class="sig-paren">(</span><em>points</em>, <em>deep=True</em><span class="sig-paren">)</span><a class="headerlink" href="#vtki.vtk_points" title="Permalink to this definition">¶</a></dt>
+<dt id="vista.vtk_points">
+<code class="descclassname">vista.</code><code class="descname">vtk_points</code><span class="sig-paren">(</span><em>points</em>, <em>deep=True</em><span class="sig-paren">)</span><a class="headerlink" href="#vista.vtk_points" title="Permalink to this definition">¶</a></dt>
 <dd><p>Convert numpy points to a vtkPoints object</p>
 </dd></dl>
 
 <dl class="function">
-<dt id="vtki.vector_poly_data">
-<code class="descclassname">vtki.</code><code class="descname">vector_poly_data</code><span class="sig-paren">(</span><em>orig</em>, <em>vec</em><span class="sig-paren">)</span><a class="headerlink" href="#vtki.vector_poly_data" title="Permalink to this definition">¶</a></dt>
+<dt id="vista.vector_poly_data">
+<code class="descclassname">vista.</code><code class="descname">vector_poly_data</code><span class="sig-paren">(</span><em>orig</em>, <em>vec</em><span class="sig-paren">)</span><a class="headerlink" href="#vista.vector_poly_data" title="Permalink to this definition">¶</a></dt>
 <dd><p>Creates a vtkPolyData object composed of vectors</p>
 </dd></dl>
 
 <dl class="function">
-<dt id="vtki.fit_plane_to_points">
-<code class="descclassname">vtki.</code><code class="descname">fit_plane_to_points</code><span class="sig-paren">(</span><em>points</em>, <em>return_meta=False</em><span class="sig-paren">)</span><a class="headerlink" href="#vtki.fit_plane_to_points" title="Permalink to this definition">¶</a></dt>
+<dt id="vista.fit_plane_to_points">
+<code class="descclassname">vista.</code><code class="descname">fit_plane_to_points</code><span class="sig-paren">(</span><em>points</em>, <em>return_meta=False</em><span class="sig-paren">)</span><a class="headerlink" href="#vista.fit_plane_to_points" title="Permalink to this definition">¶</a></dt>
 <dd><p>Fits a plane to a set of points</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -350,8 +350,8 @@ would be represented as:</p>
 <div class="section" id="array-access">
 <h2>Array Access<a class="headerlink" href="#array-access" title="Permalink to this headline">¶</a></h2>
 <dl class="function">
-<dt id="vtki.get_scalar">
-<code class="descclassname">vtki.</code><code class="descname">get_scalar</code><span class="sig-paren">(</span><em>mesh</em>, <em>name</em>, <em>preference='cell'</em>, <em>info=False</em>, <em>err=False</em><span class="sig-paren">)</span><a class="headerlink" href="#vtki.get_scalar" title="Permalink to this definition">¶</a></dt>
+<dt id="vista.get_scalar">
+<code class="descclassname">vista.</code><code class="descname">get_scalar</code><span class="sig-paren">(</span><em>mesh</em>, <em>name</em>, <em>preference='cell'</em>, <em>info=False</em>, <em>err=False</em><span class="sig-paren">)</span><a class="headerlink" href="#vista.get_scalar" title="Permalink to this definition">¶</a></dt>
 <dd><p>Searches point, cell and field data for an array</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -368,8 +368,8 @@ search for in the dataset.  Must be either <code class="docutils literal notrans
 </dd></dl>
 
 <dl class="function">
-<dt id="vtki.convert_array">
-<code class="descclassname">vtki.</code><code class="descname">convert_array</code><span class="sig-paren">(</span><em>arr</em>, <em>name=None</em>, <em>deep=0</em>, <em>array_type=None</em><span class="sig-paren">)</span><a class="headerlink" href="#vtki.convert_array" title="Permalink to this definition">¶</a></dt>
+<dt id="vista.convert_array">
+<code class="descclassname">vista.</code><code class="descname">convert_array</code><span class="sig-paren">(</span><em>arr</em>, <em>name=None</em>, <em>deep=0</em>, <em>array_type=None</em><span class="sig-paren">)</span><a class="headerlink" href="#vista.convert_array" title="Permalink to this definition">¶</a></dt>
 <dd><p>A helper to convert a NumPy array to a vtkDataArray or vice versa</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -392,20 +392,20 @@ return a pandas DataFrame.</p>
 </dd></dl>
 
 <dl class="function">
-<dt id="vtki.point_scalar">
-<code class="descclassname">vtki.</code><code class="descname">point_scalar</code><span class="sig-paren">(</span><em>mesh</em>, <em>name</em><span class="sig-paren">)</span><a class="headerlink" href="#vtki.point_scalar" title="Permalink to this definition">¶</a></dt>
+<dt id="vista.point_scalar">
+<code class="descclassname">vista.</code><code class="descname">point_scalar</code><span class="sig-paren">(</span><em>mesh</em>, <em>name</em><span class="sig-paren">)</span><a class="headerlink" href="#vista.point_scalar" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns point scalars of a vtk object</p>
 </dd></dl>
 
 <dl class="function">
-<dt id="vtki.cell_scalar">
-<code class="descclassname">vtki.</code><code class="descname">cell_scalar</code><span class="sig-paren">(</span><em>mesh</em>, <em>name</em><span class="sig-paren">)</span><a class="headerlink" href="#vtki.cell_scalar" title="Permalink to this definition">¶</a></dt>
+<dt id="vista.cell_scalar">
+<code class="descclassname">vista.</code><code class="descname">cell_scalar</code><span class="sig-paren">(</span><em>mesh</em>, <em>name</em><span class="sig-paren">)</span><a class="headerlink" href="#vista.cell_scalar" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns cell scalars of a vtk object</p>
 </dd></dl>
 
 <dl class="function">
-<dt id="vtki.get_vtk_type">
-<code class="descclassname">vtki.</code><code class="descname">get_vtk_type</code><span class="sig-paren">(</span><em>typ</em><span class="sig-paren">)</span><a class="headerlink" href="#vtki.get_vtk_type" title="Permalink to this definition">¶</a></dt>
+<dt id="vista.get_vtk_type">
+<code class="descclassname">vista.</code><code class="descname">get_vtk_type</code><span class="sig-paren">(</span><em>typ</em><span class="sig-paren">)</span><a class="headerlink" href="#vista.get_vtk_type" title="Permalink to this definition">¶</a></dt>
 <dd><p>This looks up the VTK type for a give python data type. Corrects for
 string type mapping issues.</p>
 <dl class="field-list simple">
@@ -419,14 +419,14 @@ string type mapping issues.</p>
 </dd></dl>
 
 <dl class="function">
-<dt id="vtki.vtk_bit_array_to_char">
-<code class="descclassname">vtki.</code><code class="descname">vtk_bit_array_to_char</code><span class="sig-paren">(</span><em>vtkarr_bint</em><span class="sig-paren">)</span><a class="headerlink" href="#vtki.vtk_bit_array_to_char" title="Permalink to this definition">¶</a></dt>
+<dt id="vista.vtk_bit_array_to_char">
+<code class="descclassname">vista.</code><code class="descname">vtk_bit_array_to_char</code><span class="sig-paren">(</span><em>vtkarr_bint</em><span class="sig-paren">)</span><a class="headerlink" href="#vista.vtk_bit_array_to_char" title="Permalink to this definition">¶</a></dt>
 <dd><p>Cast vtk bit array to a char array</p>
 </dd></dl>
 
 <dl class="function">
-<dt id="vtki.convert_string_array">
-<code class="descclassname">vtki.</code><code class="descname">convert_string_array</code><span class="sig-paren">(</span><em>arr</em>, <em>name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#vtki.convert_string_array" title="Permalink to this definition">¶</a></dt>
+<dt id="vista.convert_string_array">
+<code class="descclassname">vista.</code><code class="descname">convert_string_array</code><span class="sig-paren">(</span><em>arr</em>, <em>name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#vista.convert_string_array" title="Permalink to this definition">¶</a></dt>
 <dd><p>A helper to convert a numpy array of strings to a vtkStringArray
 or vice versa. Note that this is terribly inefficient - inefficient support
 is better than no support :). If you have ideas on how to make this faster,
@@ -447,7 +447,7 @@ please consider opening a pull request.</p>
         <a href="../dev/contributing.html" class="btn btn-neutral float-right" title="Overview" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="qt_plotting.html" class="btn btn-neutral float-left" title="vtki PyQt Interface" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="qt_plotting.html" class="btn btn-neutral float-left" title="vista PyQt Interface" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -456,7 +456,7 @@ please consider opening a pull request.</p>
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2017-2019, The vtkiorg Developers
+        &copy; Copyright 2017-2019, The vista Developers
 
     </p>
   </div>

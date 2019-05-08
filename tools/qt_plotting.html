@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>vtki PyQt Interface &mdash; vtki 0.18.4 documentation</title>
+  <title>vista PyQt Interface &mdash; vista 0.19.0 documentation</title>
   
 
   
@@ -61,7 +61,7 @@
 
           
             
-            <img src="../_static/vtki_logo.png" class="logo" alt="Logo"/>
+            <img src="../_static/vista_logo.png" class="logo" alt="Logo"/>
           
           </a>
 
@@ -69,7 +69,7 @@
             
             
               <div class="version">
-                0.18.4
+                0.19.0
               </div>
             
           
@@ -95,7 +95,7 @@
             
               <ul>
 <li class="toctree-l1"><a class="reference internal" href="../index.html">About</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../why.html">Why <code class="docutils literal notranslate"><span class="pre">vtki</span></code>?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../why.html">Why <code class="docutils literal notranslate"><span class="pre">vista</span></code>?</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../authors.html">Authors</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Getting Started</span></p>
@@ -123,8 +123,8 @@
 <li class="toctree-l1"><a class="reference internal" href="plotting.html">Plotting</a></li>
 <li class="toctree-l1"><a class="reference internal" href="filters.html">Filters</a></li>
 <li class="toctree-l1"><a class="reference internal" href="ipy_tools.html">IPython Tools</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">vtki PyQt Interface</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#example-pyqt5-vtki-qtinteractor">Example PyQt5 vtki QtInteractor</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">vista PyQt Interface</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#example-pyqt5-vista-qtinteractor">Example PyQt5 vista QtInteractor</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#background-plotting">Background Plotting</a></li>
 </ul>
 </li>
@@ -149,7 +149,7 @@
       <nav class="wy-nav-top" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../index.html">vtki</a>
+          <a href="../index.html">vista</a>
         
       </nav>
 
@@ -180,14 +180,14 @@
     
       <li><a href="../index.html">Docs</a> &raquo;</li>
         
-      <li>vtki PyQt Interface</li>
+      <li>vista PyQt Interface</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
             
             
-              <a href="https://github.com/vtkiorg/vtki/blob/master/docs/tools/qt_plotting.rst" class="fa fa-github"> Edit on GitHub</a>
+              <a href="https://github.com/pyvista/vista/blob/master/docs/tools/qt_plotting.rst" class="fa fa-github"> Edit on GitHub</a>
             
           
         
@@ -201,18 +201,19 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="vtki-pyqt-interface">
-<span id="qt-ref"></span><h1>vtki PyQt Interface<a class="headerlink" href="#vtki-pyqt-interface" title="Permalink to this headline">¶</a></h1>
-<p><code class="docutils literal notranslate"><span class="pre">vtki</span></code> has an interface for placing plots in <code class="docutils literal notranslate"><span class="pre">PyQt5</span></code> that extends the functionality of the <code class="docutils literal notranslate"><span class="pre">QVTKRenderWindowInteractor</span></code> class.  The <code class="docutils literal notranslate"><span class="pre">vtki.QtInteractor</span></code> class allows you to have the same functionality of the <code class="docutils literal notranslate"><span class="pre">Plotter</span></code> class within a <code class="docutils literal notranslate"><span class="pre">PyQt5</span></code> application.  This simplifies adding meshes, updating, and controlling them when using <code class="docutils literal notranslate"><span class="pre">PyQt5</span></code>.</p>
-<div class="section" id="example-pyqt5-vtki-qtinteractor">
-<h2>Example PyQt5 vtki QtInteractor<a class="headerlink" href="#example-pyqt5-vtki-qtinteractor" title="Permalink to this headline">¶</a></h2>
-<p>The following example shows how to create a simple application that adds a sphere to an empty plotting window.</p>
+  <div class="section" id="vista-pyqt-interface">
+<span id="qt-ref"></span><h1>vista PyQt Interface<a class="headerlink" href="#vista-pyqt-interface" title="Permalink to this headline">¶</a></h1>
+<p><code class="docutils literal notranslate"><span class="pre">vista</span></code> has an interface for placing plots in <code class="docutils literal notranslate"><span class="pre">PyQt5</span></code> that extends the functionality of the <code class="docutils literal notranslate"><span class="pre">QVTKRenderWindowInteractor</span></code> class.  The <code class="docutils literal notranslate"><span class="pre">vista.QtInteractor</span></code> class allows you to have the same functionality of the <code class="docutils literal notranslate"><span class="pre">Plotter</span></code> class within a <code class="docutils literal notranslate"><span class="pre">PyQt5</span></code> application.  This simplifies adding meshes, updating, and controlling them when using <code class="docutils literal notranslate"><span class="pre">PyQt5</span></code>.</p>
+<div class="section" id="example-pyqt5-vista-qtinteractor">
+<h2>Example PyQt5 vista QtInteractor<a class="headerlink" href="#example-pyqt5-vista-qtinteractor" title="Permalink to this headline">¶</a></h2>
+<p>The following example shows how to create a simple application that adds a
+sphere to an empty plotting window.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sys</span>
 
 <span class="kn">from</span> <span class="nn">PyQt5</span> <span class="kn">import</span> <span class="n">Qt</span>
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="kn">as</span> <span class="nn">np</span>
 
-<span class="kn">import</span> <span class="nn">vtki</span>
+<span class="kn">import</span> <span class="nn">vista</span>
 
 
 <span class="k">class</span> <span class="nc">MainWindow</span><span class="p">(</span><span class="n">Qt</span><span class="o">.</span><span class="n">QMainWindow</span><span class="p">):</span>
@@ -224,8 +225,8 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">frame</span> <span class="o">=</span> <span class="n">Qt</span><span class="o">.</span><span class="n">QFrame</span><span class="p">()</span>
         <span class="n">vlayout</span> <span class="o">=</span> <span class="n">Qt</span><span class="o">.</span><span class="n">QVBoxLayout</span><span class="p">()</span>
 
-        <span class="c1"># add the vtki interactor object</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">vtk_widget</span> <span class="o">=</span> <span class="n">vtki</span><span class="o">.</span><span class="n">QtInteractor</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">frame</span><span class="p">)</span>
+        <span class="c1"># add the vista interactor object</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">vtk_widget</span> <span class="o">=</span> <span class="n">vista</span><span class="o">.</span><span class="n">QtInteractor</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">frame</span><span class="p">)</span>
         <span class="n">vlayout</span><span class="o">.</span><span class="n">addWidget</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">vtk_widget</span><span class="p">)</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">frame</span><span class="o">.</span><span class="n">setLayout</span><span class="p">(</span><span class="n">vlayout</span><span class="p">)</span>
@@ -250,7 +251,7 @@
 
     <span class="k">def</span> <span class="nf">add_sphere</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot; add a sphere to the pyqt frame &quot;&quot;&quot;</span>
-        <span class="n">sphere</span> <span class="o">=</span> <span class="n">vtki</span><span class="o">.</span><span class="n">Sphere</span><span class="p">()</span>
+        <span class="n">sphere</span> <span class="o">=</span> <span class="n">vista</span><span class="o">.</span><span class="n">Sphere</span><span class="p">()</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">vtk_widget</span><span class="o">.</span><span class="n">add_mesh</span><span class="p">(</span><span class="n">sphere</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">vtk_widget</span><span class="o">.</span><span class="n">reset_camera</span><span class="p">()</span>
 
@@ -263,17 +264,20 @@
 </div>
 <div class="figure align-center" id="id1">
 <a class="reference internal image-reference" href="../_images/qt_plotting_sphere.png"><img alt="../_images/qt_plotting_sphere.png" src="../_images/qt_plotting_sphere.png" style="width: 600pt;" /></a>
-<p class="caption"><span class="caption-text">PyQt5 vtki QtInteractor</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text">PyQt5 vista QtInteractor</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
 </div>
 </div>
 <div class="section" id="background-plotting">
 <h2>Background Plotting<a class="headerlink" href="#background-plotting" title="Permalink to this headline">¶</a></h2>
-<p>Normal <code class="docutils literal notranslate"><span class="pre">vtki</span></code> plotting windows exhibit blocking behavior, but it is possible to plot in the background and update the plotter in real-time using the <code class="docutils literal notranslate"><span class="pre">BackgroundPlotter</span></code> object.  This requires <code class="docutils literal notranslate"><span class="pre">PyQt5</span></code>, but otherwise appears and functions like a normal <code class="docutils literal notranslate"><span class="pre">vtki</span></code> <code class="docutils literal notranslate"><span class="pre">Plotter</span></code> instance.  For example:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">vtki</span>
+<p>Normal <code class="docutils literal notranslate"><span class="pre">vista</span></code> plotting windows exhibit blocking behavior, but it is possible
+to plot in the background and update the plotter in real-time using the
+<code class="docutils literal notranslate"><span class="pre">BackgroundPlotter</span></code> object.  This requires <code class="docutils literal notranslate"><span class="pre">PyQt5</span></code>, but otherwise appears
+and functions like a normal <code class="docutils literal notranslate"><span class="pre">vista</span></code> <code class="docutils literal notranslate"><span class="pre">Plotter</span></code> instance.  For example:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">vista</span>
 
-<span class="n">sphere</span> <span class="o">=</span> <span class="n">vtki</span><span class="o">.</span><span class="n">Sphere</span><span class="p">()</span>
+<span class="n">sphere</span> <span class="o">=</span> <span class="n">vista</span><span class="o">.</span><span class="n">Sphere</span><span class="p">()</span>
 
-<span class="n">plotter</span> <span class="o">=</span> <span class="n">vtki</span><span class="o">.</span><span class="n">BackgroundPlotter</span><span class="p">()</span>
+<span class="n">plotter</span> <span class="o">=</span> <span class="n">vista</span><span class="o">.</span><span class="n">BackgroundPlotter</span><span class="p">()</span>
 <span class="n">plotter</span><span class="o">.</span><span class="n">add_mesh</span><span class="p">(</span><span class="n">sphere</span><span class="p">)</span>
 
 <span class="c1"># can now operate on the sphere and have it updated in the background</span>
@@ -287,10 +291,10 @@
 <col style="width: 90%" />
 </colgroup>
 <tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="#vtki.BackgroundPlotter.ICON_TIME_STEP" title="vtki.BackgroundPlotter.ICON_TIME_STEP"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ICON_TIME_STEP</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#vista.BackgroundPlotter.ICON_TIME_STEP" title="vista.BackgroundPlotter.ICON_TIME_STEP"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ICON_TIME_STEP</span></code></a></p></td>
 <td><p></p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#vtki.BackgroundPlotter.window_size" title="vtki.BackgroundPlotter.window_size"><code class="xref py py-obj docutils literal notranslate"><span class="pre">window_size</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#vista.BackgroundPlotter.window_size" title="vista.BackgroundPlotter.window_size"><code class="xref py py-obj docutils literal notranslate"><span class="pre">window_size</span></code></a></p></td>
 <td><p>returns render window size</p></td>
 </tr>
 </tbody>
@@ -302,38 +306,38 @@
 <col style="width: 90%" />
 </colgroup>
 <tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="#vtki.BackgroundPlotter.add_actor" title="vtki.BackgroundPlotter.add_actor"><code class="xref py py-obj docutils literal notranslate"><span class="pre">add_actor</span></code></a>(actor[, reset_camera, name, loc, …])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#vista.BackgroundPlotter.add_actor" title="vista.BackgroundPlotter.add_actor"><code class="xref py py-obj docutils literal notranslate"><span class="pre">add_actor</span></code></a>(actor[, reset_camera, name, loc, …])</p></td>
 <td><p>Adds an actor to render window.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#vtki.BackgroundPlotter.clear_camera_positions" title="vtki.BackgroundPlotter.clear_camera_positions"><code class="xref py py-obj docutils literal notranslate"><span class="pre">clear_camera_positions</span></code></a>()</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#vista.BackgroundPlotter.clear_camera_positions" title="vista.BackgroundPlotter.clear_camera_positions"><code class="xref py py-obj docutils literal notranslate"><span class="pre">clear_camera_positions</span></code></a>()</p></td>
 <td><p>clears all camera positions</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#vtki.BackgroundPlotter.closeEvent" title="vtki.BackgroundPlotter.closeEvent"><code class="xref py py-obj docutils literal notranslate"><span class="pre">closeEvent</span></code></a>(self, QCloseEvent)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#vista.BackgroundPlotter.closeEvent" title="vista.BackgroundPlotter.closeEvent"><code class="xref py py-obj docutils literal notranslate"><span class="pre">closeEvent</span></code></a>(self, QCloseEvent)</p></td>
 <td><p></p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#vtki.BackgroundPlotter.save_camera_position" title="vtki.BackgroundPlotter.save_camera_position"><code class="xref py py-obj docutils literal notranslate"><span class="pre">save_camera_position</span></code></a>()</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#vista.BackgroundPlotter.save_camera_position" title="vista.BackgroundPlotter.save_camera_position"><code class="xref py py-obj docutils literal notranslate"><span class="pre">save_camera_position</span></code></a>()</p></td>
 <td><p>Saves camera position to saved camera menu for recall</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#vtki.BackgroundPlotter.scale_axes_dialog" title="vtki.BackgroundPlotter.scale_axes_dialog"><code class="xref py py-obj docutils literal notranslate"><span class="pre">scale_axes_dialog</span></code></a>([show])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#vista.BackgroundPlotter.scale_axes_dialog" title="vista.BackgroundPlotter.scale_axes_dialog"><code class="xref py py-obj docutils literal notranslate"><span class="pre">scale_axes_dialog</span></code></a>([show])</p></td>
 <td><p>Open scale axes dialog</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#vtki.BackgroundPlotter.update_app_icon" title="vtki.BackgroundPlotter.update_app_icon"><code class="xref py py-obj docutils literal notranslate"><span class="pre">update_app_icon</span></code></a>()</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#vista.BackgroundPlotter.update_app_icon" title="vista.BackgroundPlotter.update_app_icon"><code class="xref py py-obj docutils literal notranslate"><span class="pre">update_app_icon</span></code></a>()</p></td>
 <td><p>Update the app icon if the user is not trying to resize the window.</p></td>
 </tr>
 </tbody>
 </table>
 <dl class="class">
-<dt id="vtki.BackgroundPlotter">
-<em class="property">class </em><code class="descclassname">vtki.</code><code class="descname">BackgroundPlotter</code><span class="sig-paren">(</span><em>show=True</em>, <em>app=None</em>, <em>shape=(1</em>, <em>1)</em>, <em>window_size=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#vtki.BackgroundPlotter" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">vtki.qt_plotting.QtInteractor</span></code></p>
+<dt id="vista.BackgroundPlotter">
+<em class="property">class </em><code class="descclassname">vista.</code><code class="descname">BackgroundPlotter</code><span class="sig-paren">(</span><em>show=True</em>, <em>app=None</em>, <em>shape=(1</em>, <em>1)</em>, <em>window_size=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#vista.BackgroundPlotter" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">vista.qt_plotting.QtInteractor</span></code></p>
 <dl class="attribute">
-<dt id="vtki.BackgroundPlotter.ICON_TIME_STEP">
-<code class="descname">ICON_TIME_STEP</code><em class="property"> = 5.0</em><a class="headerlink" href="#vtki.BackgroundPlotter.ICON_TIME_STEP" title="Permalink to this definition">¶</a></dt>
+<dt id="vista.BackgroundPlotter.ICON_TIME_STEP">
+<code class="descname">ICON_TIME_STEP</code><em class="property"> = 5.0</em><a class="headerlink" href="#vista.BackgroundPlotter.ICON_TIME_STEP" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
-<dt id="vtki.BackgroundPlotter.add_actor">
-<code class="descname">add_actor</code><span class="sig-paren">(</span><em>actor</em>, <em>reset_camera=None</em>, <em>name=None</em>, <em>loc=None</em>, <em>culling=False</em><span class="sig-paren">)</span><a class="headerlink" href="#vtki.BackgroundPlotter.add_actor" title="Permalink to this definition">¶</a></dt>
+<dt id="vista.BackgroundPlotter.add_actor">
+<code class="descname">add_actor</code><span class="sig-paren">(</span><em>actor</em>, <em>reset_camera=None</em>, <em>name=None</em>, <em>loc=None</em>, <em>culling=False</em><span class="sig-paren">)</span><a class="headerlink" href="#vista.BackgroundPlotter.add_actor" title="Permalink to this definition">¶</a></dt>
 <dd><p>Adds an actor to render window.  Creates an actor if input is
 a mapper.</p>
 <dl class="field-list simple">
@@ -361,47 +365,47 @@ meshes to be partially displayed.  Default False.</p></li>
 </dd></dl>
 
 <dl class="method">
-<dt id="vtki.BackgroundPlotter.clear_camera_positions">
-<code class="descname">clear_camera_positions</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#vtki.BackgroundPlotter.clear_camera_positions" title="Permalink to this definition">¶</a></dt>
+<dt id="vista.BackgroundPlotter.clear_camera_positions">
+<code class="descname">clear_camera_positions</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#vista.BackgroundPlotter.clear_camera_positions" title="Permalink to this definition">¶</a></dt>
 <dd><p>clears all camera positions</p>
 </dd></dl>
 
 <dl class="method">
-<dt id="vtki.BackgroundPlotter.closeEvent">
-<code class="descname">closeEvent</code><span class="sig-paren">(</span><em>self</em>, <em>QCloseEvent</em><span class="sig-paren">)</span><a class="headerlink" href="#vtki.BackgroundPlotter.closeEvent" title="Permalink to this definition">¶</a></dt>
+<dt id="vista.BackgroundPlotter.closeEvent">
+<code class="descname">closeEvent</code><span class="sig-paren">(</span><em>self</em>, <em>QCloseEvent</em><span class="sig-paren">)</span><a class="headerlink" href="#vista.BackgroundPlotter.closeEvent" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
-<dt id="vtki.BackgroundPlotter.save_camera_position">
-<code class="descname">save_camera_position</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#vtki.BackgroundPlotter.save_camera_position" title="Permalink to this definition">¶</a></dt>
+<dt id="vista.BackgroundPlotter.save_camera_position">
+<code class="descname">save_camera_position</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#vista.BackgroundPlotter.save_camera_position" title="Permalink to this definition">¶</a></dt>
 <dd><p>Saves camera position to saved camera menu for recall</p>
 </dd></dl>
 
 <dl class="method">
-<dt id="vtki.BackgroundPlotter.scale_axes_dialog">
-<code class="descname">scale_axes_dialog</code><span class="sig-paren">(</span><em>show=True</em><span class="sig-paren">)</span><a class="headerlink" href="#vtki.BackgroundPlotter.scale_axes_dialog" title="Permalink to this definition">¶</a></dt>
+<dt id="vista.BackgroundPlotter.scale_axes_dialog">
+<code class="descname">scale_axes_dialog</code><span class="sig-paren">(</span><em>show=True</em><span class="sig-paren">)</span><a class="headerlink" href="#vista.BackgroundPlotter.scale_axes_dialog" title="Permalink to this definition">¶</a></dt>
 <dd><p>Open scale axes dialog</p>
 </dd></dl>
 
 <dl class="method">
-<dt id="vtki.BackgroundPlotter.update_app_icon">
-<code class="descname">update_app_icon</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#vtki.BackgroundPlotter.update_app_icon" title="Permalink to this definition">¶</a></dt>
+<dt id="vista.BackgroundPlotter.update_app_icon">
+<code class="descname">update_app_icon</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#vista.BackgroundPlotter.update_app_icon" title="Permalink to this definition">¶</a></dt>
 <dd><p>Update the app icon if the user is not trying to resize the window.</p>
 </dd></dl>
 
 <dl class="attribute">
-<dt id="vtki.BackgroundPlotter.window_size">
-<code class="descname">window_size</code><a class="headerlink" href="#vtki.BackgroundPlotter.window_size" title="Permalink to this definition">¶</a></dt>
+<dt id="vista.BackgroundPlotter.window_size">
+<code class="descname">window_size</code><a class="headerlink" href="#vista.BackgroundPlotter.window_size" title="Permalink to this definition">¶</a></dt>
 <dd><p>returns render window size</p>
 </dd></dl>
 
 </dd></dl>
 
 <dl class="class">
-<dt id="vtki.ScaledPlotter">
-<em class="property">class </em><code class="descclassname">vtki.</code><code class="descname">ScaledPlotter</code><span class="sig-paren">(</span><em>xscale=1.0</em>, <em>yscale=1.0</em>, <em>zscale=1.0</em>, <em>show=True</em>, <em>app=None</em>, <em>continuous_update=False</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#vtki.ScaledPlotter" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">vtki.qt_plotting.BackgroundPlotter</span></code></p>
-<p>An extension of the <code class="docutils literal notranslate"><span class="pre">vtki.BackgroundPlotter</span></code> that has
+<dt id="vista.ScaledPlotter">
+<em class="property">class </em><code class="descclassname">vista.</code><code class="descname">ScaledPlotter</code><span class="sig-paren">(</span><em>xscale=1.0</em>, <em>yscale=1.0</em>, <em>zscale=1.0</em>, <em>show=True</em>, <em>app=None</em>, <em>continuous_update=False</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#vista.ScaledPlotter" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">vista.qt_plotting.BackgroundPlotter</span></code></p>
+<p>An extension of the <code class="docutils literal notranslate"><span class="pre">vista.BackgroundPlotter</span></code> that has
 interactive widgets for scaling the axes in the rendering scene.</p>
 </dd></dl>
 
@@ -428,7 +432,7 @@ interactive widgets for scaling the axes in the rendering scene.</p>
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2017-2019, The vtkiorg Developers
+        &copy; Copyright 2017-2019, The vista Developers
 
     </p>
   </div>

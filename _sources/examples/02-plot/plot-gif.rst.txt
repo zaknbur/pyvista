@@ -23,7 +23,7 @@ Generate a moving gif from an active plotter
 .. code-block:: default
 
 
-    import vtki
+    import vista
     import numpy as np
 
     x = np.arange(-10, 10, 0.25)
@@ -33,10 +33,10 @@ Generate a moving gif from an active plotter
     z = np.sin(r)
 
     # Create and structured surface
-    grid = vtki.StructuredGrid(x, y, z)
+    grid = vista.StructuredGrid(x, y, z)
 
     # Creat a plotter object and set the scalars to the Z height
-    plotter = vtki.Plotter()
+    plotter = vista.Plotter()
     plotter.add_mesh(grid, scalars=z.ravel())
 
     # setup camera and close
@@ -62,7 +62,7 @@ Generate a moving gif from an active plotter
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  10.703 seconds)
+   **Total running time of the script:** ( 0 minutes  11.220 seconds)
 
 
 .. _sphx_glr_download_examples_02-plot_plot-gif.py:
