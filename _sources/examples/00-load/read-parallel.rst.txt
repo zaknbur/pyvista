@@ -11,13 +11,13 @@ Parallel Files
 ~~~~~~~~~~~~~~
 
 The VTK library supports parallel file foramts. Reading meshes broken up into
-several files is natively supported by VTK and ``vista``
+several files is natively supported by VTK and PyVista
 
 .. code-block:: default
 
     # sphinx_gallery_thumbnail_number = 1
-    import vista
-    from vista import examples
+    import pyvista
+    from pyvista import examples
     import os
 
 
@@ -27,7 +27,7 @@ several files is natively supported by VTK and ``vista``
 
 
 Let's go ahead and download the sample dataset containing an
-:class:`vista.UnstructuredGrid` broken up into several files.
+:class:`pyvista.UnstructuredGrid` broken up into several files.
 
 
 .. code-block:: default
@@ -43,7 +43,7 @@ Let's go ahead and download the sample dataset containing an
 
 
 The above code downloaded a dataset containing a set of parallel files for a
-blood vessel mesh and returned an :class:`vista.UnstructuredGrid` - we did not
+blood vessel mesh and returned an :class:`pyvista.UnstructuredGrid` - we did not
 grab that UnstructuredGrid, so that we could demo how to use these types of
 files.
 
@@ -52,7 +52,7 @@ Let's inspect where this downloaded our dataset:
 
 .. code-block:: default
 
-    path = os.path.join(vista.EXAMPLES_PATH, 'blood_vessels')
+    path = os.path.join(pyvista.EXAMPLES_PATH, 'blood_vessels')
     print(os.listdir(path))
 
 
@@ -94,7 +94,7 @@ simply read the ``.pvtu`` file and VTK will handle putting the mesh together.
 .. code-block:: default
 
     filename = os.path.join(path, 'T0000000500.pvtu')
-    mesh = vista.read(filename)
+    mesh = pyvista.read(filename)
     print(mesh)
 
 
@@ -107,7 +107,7 @@ simply read the ``.pvtu`` file and VTK will handle putting the mesh together.
 
  .. code-block:: none
 
-    UnstructuredGrid (0x7fcb80aac348)
+    UnstructuredGrid (0x7f6f3a230ac8)
       N Cells:      39353
       N Points:     48823
       X Bounds:     5.300e+01, 1.210e+02
@@ -149,7 +149,7 @@ Plot the pieced together mesh
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  2.833 seconds)
+   **Total running time of the script:** ( 0 minutes  3.002 seconds)
 
 
 .. _sphx_glr_download_examples_00-load_read-parallel.py:

@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Geometric Objects &mdash; vista 0.19.0 documentation</title>
+  <title>Geometric Objects &mdash; PyVista 0.19.0 documentation</title>
   
 
   
@@ -61,7 +61,7 @@
 
           
             
-            <img src="../../_static/vista_logo.png" class="logo" alt="Logo"/>
+            <img src="../../_static/pyvista_logo.png" class="logo" alt="Logo"/>
           
           </a>
 
@@ -95,7 +95,7 @@
             
               <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../index.html">About</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../why.html">Why <code class="docutils literal notranslate"><span class="pre">vista</span></code>?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../why.html">Why PyVista?</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../authors.html">Authors</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Getting Started</span></p>
@@ -139,7 +139,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../../tools/plotting.html">Plotting</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../tools/filters.html">Filters</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../tools/ipy_tools.html">IPython Tools</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../tools/qt_plotting.html">vista PyQt Interface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../tools/qt_plotting.html">PyVista PyQt Interface</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../tools/utilities.html">Utilities</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Contributing</span></p>
@@ -161,7 +161,7 @@
       <nav class="wy-nav-top" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../../index.html">vista</a>
+          <a href="../../index.html">PyVista</a>
         
       </nav>
 
@@ -201,7 +201,7 @@
         
             
             
-              <a href="https://github.com/pyvista/vista/blob/master/docs/examples/00-load/create-geometric-objects.rst" class="fa fa-github"> Edit on GitHub</a>
+              <a href="https://github.com/pyvista/pyvista/blob/master/docs/examples/00-load/create-geometric-objects.rst" class="fa fa-github"> Edit on GitHub</a>
             
           
         
@@ -222,25 +222,25 @@
 <div class="sphx-glr-example-title section" id="geometric-objects">
 <span id="ref-geometric-example"></span><span id="sphx-glr-examples-00-load-create-geometric-objects-py"></span><h1>Geometric Objects<a class="headerlink" href="#geometric-objects" title="Permalink to this headline">¶</a></h1>
 <p>The “Hello, world!” of VTK</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">vista</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pyvista</span>
 </pre></div>
 </div>
 <p>This runs through several of the available geomoetric objects available in VTK
-which <code class="docutils literal notranslate"><span class="pre">vista</span></code> provides simple conveinance methods for generating.</p>
+which PyVista provides simple conveinance methods for generating.</p>
 <p>Let’s run through creating a few geometric objects!</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cyl</span> <span class="o">=</span> <span class="n">vista</span><span class="o">.</span><span class="n">Cylinder</span><span class="p">()</span>
-<span class="n">arrow</span> <span class="o">=</span> <span class="n">vista</span><span class="o">.</span><span class="n">Arrow</span><span class="p">()</span>
-<span class="n">sphere</span> <span class="o">=</span> <span class="n">vista</span><span class="o">.</span><span class="n">Sphere</span><span class="p">()</span>
-<span class="n">plane</span> <span class="o">=</span> <span class="n">vista</span><span class="o">.</span><span class="n">Plane</span><span class="p">()</span>
-<span class="n">line</span> <span class="o">=</span> <span class="n">vista</span><span class="o">.</span><span class="n">Line</span><span class="p">()</span>
-<span class="n">box</span> <span class="o">=</span> <span class="n">vista</span><span class="o">.</span><span class="n">Box</span><span class="p">()</span>
-<span class="n">cone</span> <span class="o">=</span> <span class="n">vista</span><span class="o">.</span><span class="n">Cone</span><span class="p">()</span>
-<span class="n">poly</span> <span class="o">=</span> <span class="n">vista</span><span class="o">.</span><span class="n">Polygon</span><span class="p">()</span>
-<span class="n">disc</span> <span class="o">=</span> <span class="n">vista</span><span class="o">.</span><span class="n">Disc</span><span class="p">()</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cyl</span> <span class="o">=</span> <span class="n">pyvista</span><span class="o">.</span><span class="n">Cylinder</span><span class="p">()</span>
+<span class="n">arrow</span> <span class="o">=</span> <span class="n">pyvista</span><span class="o">.</span><span class="n">Arrow</span><span class="p">()</span>
+<span class="n">sphere</span> <span class="o">=</span> <span class="n">pyvista</span><span class="o">.</span><span class="n">Sphere</span><span class="p">()</span>
+<span class="n">plane</span> <span class="o">=</span> <span class="n">pyvista</span><span class="o">.</span><span class="n">Plane</span><span class="p">()</span>
+<span class="n">line</span> <span class="o">=</span> <span class="n">pyvista</span><span class="o">.</span><span class="n">Line</span><span class="p">()</span>
+<span class="n">box</span> <span class="o">=</span> <span class="n">pyvista</span><span class="o">.</span><span class="n">Box</span><span class="p">()</span>
+<span class="n">cone</span> <span class="o">=</span> <span class="n">pyvista</span><span class="o">.</span><span class="n">Cone</span><span class="p">()</span>
+<span class="n">poly</span> <span class="o">=</span> <span class="n">pyvista</span><span class="o">.</span><span class="n">Polygon</span><span class="p">()</span>
+<span class="n">disc</span> <span class="o">=</span> <span class="n">pyvista</span><span class="o">.</span><span class="n">Disc</span><span class="p">()</span>
 </pre></div>
 </div>
 <p>Now let’s plot them all in one window</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">p</span> <span class="o">=</span> <span class="n">vista</span><span class="o">.</span><span class="n">Plotter</span><span class="p">(</span><span class="n">shape</span><span class="o">=</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">))</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">p</span> <span class="o">=</span> <span class="n">pyvista</span><span class="o">.</span><span class="n">Plotter</span><span class="p">(</span><span class="n">shape</span><span class="o">=</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">))</span>
 <span class="c1"># Top row</span>
 <span class="n">p</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span>
 <span class="n">p</span><span class="o">.</span><span class="n">add_mesh</span><span class="p">(</span><span class="n">cyl</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;tan&#39;</span><span class="p">,</span> <span class="n">show_edges</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
@@ -267,13 +267,13 @@ which <code class="docutils literal notranslate"><span class="pre">vista</span><
 </pre></div>
 </div>
 <img alt="../../_images/sphx_glr_create-geometric-objects_001.png" class="sphx-glr-single-img" src="../../_images/sphx_glr_create-geometric-objects_001.png" />
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  1.303 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  1.329 seconds)</p>
 <div class="sphx-glr-footer class sphx-glr-footer-example docutils container" id="sphx-glr-download-examples-00-load-create-geometric-objects-py">
 <div class="sphx-glr-download docutils container">
-<p><a class="reference download internal" download="" href="../../_downloads/01b3d5e79091da4cda00cc0fc9ddd1d7/create-geometric-objects.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">create-geometric-objects.py</span></code></a></p>
+<p><a class="reference download internal" download="" href="../../_downloads/e790bc4375d890c4b04891071735715b/create-geometric-objects.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">create-geometric-objects.py</span></code></a></p>
 </div>
 <div class="sphx-glr-download docutils container">
-<p><a class="reference download internal" download="" href="../../_downloads/711e001eb406fe5da5e7906063cf3f90/create-geometric-objects.ipynb"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Jupyter</span> <span class="pre">notebook:</span> <span class="pre">create-geometric-objects.ipynb</span></code></a></p>
+<p><a class="reference download internal" download="" href="../../_downloads/a64ec127bb6b73631660d73f3a82944e/create-geometric-objects.ipynb"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Jupyter</span> <span class="pre">notebook:</span> <span class="pre">create-geometric-objects.ipynb</span></code></a></p>
 </div>
 </div>
 <p class="sphx-glr-signature"><a class="reference external" href="https://sphinx-gallery.readthedocs.io">Gallery generated by Sphinx-Gallery</a></p>
@@ -299,7 +299,7 @@ which <code class="docutils literal notranslate"><span class="pre">vista</span><
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2017-2019, The vista Developers
+        &copy; Copyright 2017-2019, The PyVista Developers
 
     </p>
   </div>

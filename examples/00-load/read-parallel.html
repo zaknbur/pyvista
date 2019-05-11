@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Parallel Files &mdash; vista 0.19.0 documentation</title>
+  <title>Parallel Files &mdash; PyVista 0.19.0 documentation</title>
   
 
   
@@ -61,7 +61,7 @@
 
           
             
-            <img src="../../_static/vista_logo.png" class="logo" alt="Logo"/>
+            <img src="../../_static/pyvista_logo.png" class="logo" alt="Logo"/>
           
           </a>
 
@@ -95,7 +95,7 @@
             
               <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../index.html">About</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../why.html">Why <code class="docutils literal notranslate"><span class="pre">vista</span></code>?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../why.html">Why PyVista?</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../authors.html">Authors</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Getting Started</span></p>
@@ -139,7 +139,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../../tools/plotting.html">Plotting</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../tools/filters.html">Filters</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../tools/ipy_tools.html">IPython Tools</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../tools/qt_plotting.html">vista PyQt Interface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../tools/qt_plotting.html">PyVista PyQt Interface</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../tools/utilities.html">Utilities</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Contributing</span></p>
@@ -161,7 +161,7 @@
       <nav class="wy-nav-top" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../../index.html">vista</a>
+          <a href="../../index.html">PyVista</a>
         
       </nav>
 
@@ -201,7 +201,7 @@
         
             
             
-              <a href="https://github.com/pyvista/vista/blob/master/docs/examples/00-load/read-parallel.rst" class="fa fa-github"> Edit on GitHub</a>
+              <a href="https://github.com/pyvista/pyvista/blob/master/docs/examples/00-load/read-parallel.rst" class="fa fa-github"> Edit on GitHub</a>
             
           
         
@@ -222,25 +222,25 @@
 <div class="sphx-glr-example-title section" id="parallel-files">
 <span id="sphx-glr-examples-00-load-read-parallel-py"></span><h1>Parallel Files<a class="headerlink" href="#parallel-files" title="Permalink to this headline">¶</a></h1>
 <p>The VTK library supports parallel file foramts. Reading meshes broken up into
-several files is natively supported by VTK and <code class="docutils literal notranslate"><span class="pre">vista</span></code></p>
+several files is natively supported by VTK and PyVista</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># sphinx_gallery_thumbnail_number = 1</span>
-<span class="kn">import</span> <span class="nn">vista</span>
-<span class="kn">from</span> <span class="nn">vista</span> <span class="k">import</span> <span class="n">examples</span>
+<span class="kn">import</span> <span class="nn">pyvista</span>
+<span class="kn">from</span> <span class="nn">pyvista</span> <span class="k">import</span> <span class="n">examples</span>
 <span class="kn">import</span> <span class="nn">os</span>
 </pre></div>
 </div>
 <p>Let’s go ahead and download the sample dataset containing an
-<a class="reference internal" href="../../types/point-grids.html#vista.UnstructuredGrid" title="vista.UnstructuredGrid"><code class="xref py py-class docutils literal notranslate"><span class="pre">vista.UnstructuredGrid</span></code></a> broken up into several files.</p>
+<a class="reference internal" href="../../types/point-grids.html#pyvista.UnstructuredGrid" title="pyvista.UnstructuredGrid"><code class="xref py py-class docutils literal notranslate"><span class="pre">pyvista.UnstructuredGrid</span></code></a> broken up into several files.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Do not capture output because we&#39;ll demo how to read the file</span>
 <span class="n">examples</span><span class="o">.</span><span class="n">download_blood_vessels</span><span class="p">()</span>
 </pre></div>
 </div>
 <p>The above code downloaded a dataset containing a set of parallel files for a
-blood vessel mesh and returned an <a class="reference internal" href="../../types/point-grids.html#vista.UnstructuredGrid" title="vista.UnstructuredGrid"><code class="xref py py-class docutils literal notranslate"><span class="pre">vista.UnstructuredGrid</span></code></a> - we did not
+blood vessel mesh and returned an <a class="reference internal" href="../../types/point-grids.html#pyvista.UnstructuredGrid" title="pyvista.UnstructuredGrid"><code class="xref py py-class docutils literal notranslate"><span class="pre">pyvista.UnstructuredGrid</span></code></a> - we did not
 grab that UnstructuredGrid, so that we could demo how to use these types of
 files.</p>
 <p>Let’s inspect where this downloaded our dataset:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">path</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">vista</span><span class="o">.</span><span class="n">EXAMPLES_PATH</span><span class="p">,</span> <span class="s1">&#39;blood_vessels&#39;</span><span class="p">)</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">path</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">pyvista</span><span class="o">.</span><span class="n">EXAMPLES_PATH</span><span class="p">,</span> <span class="s1">&#39;blood_vessels&#39;</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">listdir</span><span class="p">(</span><span class="n">path</span><span class="p">))</span>
 </pre></div>
 </div>
@@ -259,12 +259,12 @@ files.</p>
 contains all the parallel files or pieces that make the whole mesh. We can
 simply read the <code class="docutils literal notranslate"><span class="pre">.pvtu</span></code> file and VTK will handle putting the mesh together.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">filename</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="s1">&#39;T0000000500.pvtu&#39;</span><span class="p">)</span>
-<span class="n">mesh</span> <span class="o">=</span> <span class="n">vista</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span>
+<span class="n">mesh</span> <span class="o">=</span> <span class="n">pyvista</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">mesh</span><span class="p">)</span>
 </pre></div>
 </div>
 <p class="sphx-glr-script-out">Out:</p>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>UnstructuredGrid (0x7fcb80aac348)
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>UnstructuredGrid (0x7f6f3a230ac8)
   N Cells:      39353
   N Points:     48823
   X Bounds:     5.300e+01, 1.210e+02
@@ -282,13 +282,13 @@ simply read the <code class="docutils literal notranslate"><span class="pre">.pv
 </pre></div>
 </div>
 <img alt="../../_images/sphx_glr_read-parallel_002.png" class="sphx-glr-single-img" src="../../_images/sphx_glr_read-parallel_002.png" />
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  2.833 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  3.002 seconds)</p>
 <div class="sphx-glr-footer class sphx-glr-footer-example docutils container" id="sphx-glr-download-examples-00-load-read-parallel-py">
 <div class="sphx-glr-download docutils container">
-<p><a class="reference download internal" download="" href="../../_downloads/743cb88495493a01999413607d5ed3ab/read-parallel.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">read-parallel.py</span></code></a></p>
+<p><a class="reference download internal" download="" href="../../_downloads/79ee78fbb8a82d454ad85df901955c57/read-parallel.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">read-parallel.py</span></code></a></p>
 </div>
 <div class="sphx-glr-download docutils container">
-<p><a class="reference download internal" download="" href="../../_downloads/699f045487626aee44135a72edce9800/read-parallel.ipynb"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Jupyter</span> <span class="pre">notebook:</span> <span class="pre">read-parallel.ipynb</span></code></a></p>
+<p><a class="reference download internal" download="" href="../../_downloads/74b7600045d625b11dfaba4d01b70a54/read-parallel.ipynb"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Jupyter</span> <span class="pre">notebook:</span> <span class="pre">read-parallel.ipynb</span></code></a></p>
 </div>
 </div>
 <p class="sphx-glr-signature"><a class="reference external" href="https://sphinx-gallery.readthedocs.io">Gallery generated by Sphinx-Gallery</a></p>
@@ -314,7 +314,7 @@ simply read the <code class="docutils literal notranslate"><span class="pre">.pv
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2017-2019, The vista Developers
+        &copy; Copyright 2017-2019, The PyVista Developers
 
     </p>
   </div>

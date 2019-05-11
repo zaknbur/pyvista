@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Geometric Objects &mdash; vista 0.19.0 documentation</title>
+  <title>Geometric Objects &mdash; PyVista 0.19.0 documentation</title>
   
 
   
@@ -61,7 +61,7 @@
 
           
             
-            <img src="../_static/vista_logo.png" class="logo" alt="Logo"/>
+            <img src="../_static/pyvista_logo.png" class="logo" alt="Logo"/>
           
           </a>
 
@@ -95,7 +95,7 @@
             
               <ul>
 <li class="toctree-l1"><a class="reference internal" href="../index.html">About</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../why.html">Why <code class="docutils literal notranslate"><span class="pre">vista</span></code>?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../why.html">Why PyVista?</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../authors.html">Authors</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Getting Started</span></p>
@@ -123,7 +123,7 @@
 <li class="toctree-l1"><a class="reference internal" href="plotting.html">Plotting</a></li>
 <li class="toctree-l1"><a class="reference internal" href="filters.html">Filters</a></li>
 <li class="toctree-l1"><a class="reference internal" href="ipy_tools.html">IPython Tools</a></li>
-<li class="toctree-l1"><a class="reference internal" href="qt_plotting.html">vista PyQt Interface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="qt_plotting.html">PyVista PyQt Interface</a></li>
 <li class="toctree-l1"><a class="reference internal" href="utilities.html">Utilities</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Contributing</span></p>
@@ -145,7 +145,7 @@
       <nav class="wy-nav-top" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../index.html">vista</a>
+          <a href="../index.html">PyVista</a>
         
       </nav>
 
@@ -183,7 +183,7 @@
         
             
             
-              <a href="https://github.com/pyvista/vista/blob/master/docs/tools/geometric.rst" class="fa fa-github"> Edit on GitHub</a>
+              <a href="https://github.com/pyvista/pyvista/blob/master/docs/tools/geometric.rst" class="fa fa-github"> Edit on GitHub</a>
             
           
         
@@ -199,12 +199,12 @@
             
   <div class="section" id="geometric-objects">
 <h1>Geometric Objects<a class="headerlink" href="#geometric-objects" title="Permalink to this headline">¶</a></h1>
-<p><code class="docutils literal notranslate"><span class="pre">vista</span></code> includes a few functions to generate simple geometric objects.
+<p>PyVista includes a few functions to generate simple geometric objects.
 The code documentation for these functions are on this page; to see what these
 functions create, check out the example: <a class="reference internal" href="../examples/00-load/create-geometric-objects.html#ref-geometric-example"><span class="std std-ref">Geometric Objects</span></a>.</p>
 <dl class="function">
-<dt id="vista.Sphere">
-<code class="descclassname">vista.</code><code class="descname">Sphere</code><span class="sig-paren">(</span><em>radius=0.5</em>, <em>center=(0</em>, <em>0</em>, <em>0)</em>, <em>direction=(0</em>, <em>0</em>, <em>1)</em>, <em>theta_resolution=30</em>, <em>phi_resolution=30</em>, <em>start_theta=0</em>, <em>end_theta=360</em>, <em>start_phi=0</em>, <em>end_phi=180</em><span class="sig-paren">)</span><a class="headerlink" href="#vista.Sphere" title="Permalink to this definition">¶</a></dt>
+<dt id="pyvista.Sphere">
+<code class="descclassname">pyvista.</code><code class="descname">Sphere</code><span class="sig-paren">(</span><em>radius=0.5</em>, <em>center=(0</em>, <em>0</em>, <em>0)</em>, <em>direction=(0</em>, <em>0</em>, <em>1)</em>, <em>theta_resolution=30</em>, <em>phi_resolution=30</em>, <em>start_theta=0</em>, <em>end_theta=360</em>, <em>start_phi=0</em>, <em>end_phi=180</em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.Sphere" title="Permalink to this definition">¶</a></dt>
 <dd><p>Create a vtk Sphere</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -226,14 +226,14 @@ start_phi to end_phi).</p></li>
 <dd class="field-even"><p><strong>sphere</strong> – Sphere mesh.</p>
 </dd>
 <dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p><a class="reference internal" href="../types/points.html#vista.PolyData" title="vista.PolyData">vista.PolyData</a></p>
+<dd class="field-odd"><p><a class="reference internal" href="../types/points.html#pyvista.PolyData" title="pyvista.PolyData">pyvista.PolyData</a></p>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="function">
-<dt id="vista.Cylinder">
-<code class="descclassname">vista.</code><code class="descname">Cylinder</code><span class="sig-paren">(</span><em>center=(0.0</em>, <em>0.0</em>, <em>0.0)</em>, <em>direction=(1.0</em>, <em>0.0</em>, <em>0.0)</em>, <em>radius=0.5</em>, <em>height=1.0</em>, <em>resolution=100</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#vista.Cylinder" title="Permalink to this definition">¶</a></dt>
+<dt id="pyvista.Cylinder">
+<code class="descclassname">pyvista.</code><code class="descname">Cylinder</code><span class="sig-paren">(</span><em>center=(0.0</em>, <em>0.0</em>, <em>0.0)</em>, <em>direction=(1.0</em>, <em>0.0</em>, <em>0.0)</em>, <em>radius=0.5</em>, <em>height=1.0</em>, <em>resolution=100</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.Cylinder" title="Permalink to this definition">¶</a></dt>
 <dd><p>Create the surface of a cylinder.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -250,21 +250,21 @@ start_phi to end_phi).</p></li>
 <dd class="field-even"><p><strong>cylinder</strong> – Cylinder surface.</p>
 </dd>
 <dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p><a class="reference internal" href="../types/points.html#vista.PolyData" title="vista.PolyData">vista.PolyData</a></p>
+<dd class="field-odd"><p><a class="reference internal" href="../types/points.html#pyvista.PolyData" title="pyvista.PolyData">pyvista.PolyData</a></p>
 </dd>
 </dl>
 <p class="rubric">Examples</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">vista</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">pyvista</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">cylinder</span> <span class="o">=</span> <span class="n">vista</span><span class="o">.</span><span class="n">Cylinder</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]),</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">]),</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">cylinder</span> <span class="o">=</span> <span class="n">pyvista</span><span class="o">.</span><span class="n">Cylinder</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]),</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">]),</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">cylinder</span><span class="o">.</span><span class="n">plot</span><span class="p">()</span> <span class="c1"># doctest:+SKIP</span>
 </pre></div>
 </div>
 </dd></dl>
 
 <dl class="function">
-<dt id="vista.Arrow">
-<code class="descclassname">vista.</code><code class="descname">Arrow</code><span class="sig-paren">(</span><em>start=(0.0</em>, <em>0.0</em>, <em>0.0)</em>, <em>direction=(1.0</em>, <em>0.0</em>, <em>0.0)</em>, <em>tip_length=0.25</em>, <em>tip_radius=0.1</em>, <em>shaft_radius=0.05</em>, <em>shaft_resolution=20</em><span class="sig-paren">)</span><a class="headerlink" href="#vista.Arrow" title="Permalink to this definition">¶</a></dt>
+<dt id="pyvista.Arrow">
+<code class="descclassname">pyvista.</code><code class="descname">Arrow</code><span class="sig-paren">(</span><em>start=(0.0</em>, <em>0.0</em>, <em>0.0)</em>, <em>direction=(1.0</em>, <em>0.0</em>, <em>0.0)</em>, <em>tip_length=0.25</em>, <em>tip_radius=0.1</em>, <em>shaft_radius=0.05</em>, <em>shaft_resolution=20</em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.Arrow" title="Permalink to this definition">¶</a></dt>
 <dd><p>Create a vtk Arrow</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -281,14 +281,14 @@ start_phi to end_phi).</p></li>
 <dd class="field-even"><p><strong>arrow</strong> – Arrow surface.</p>
 </dd>
 <dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p><a class="reference internal" href="../types/points.html#vista.PolyData" title="vista.PolyData">vista.PolyData</a></p>
+<dd class="field-odd"><p><a class="reference internal" href="../types/points.html#pyvista.PolyData" title="pyvista.PolyData">pyvista.PolyData</a></p>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="function">
-<dt id="vista.Plane">
-<code class="descclassname">vista.</code><code class="descname">Plane</code><span class="sig-paren">(</span><em>center=(0</em>, <em>0</em>, <em>0)</em>, <em>direction=(0</em>, <em>0</em>, <em>1)</em>, <em>i_size=1</em>, <em>j_size=1</em>, <em>i_resolution=10</em>, <em>j_resolution=10</em><span class="sig-paren">)</span><a class="headerlink" href="#vista.Plane" title="Permalink to this definition">¶</a></dt>
+<dt id="pyvista.Plane">
+<code class="descclassname">pyvista.</code><code class="descname">Plane</code><span class="sig-paren">(</span><em>center=(0</em>, <em>0</em>, <em>0)</em>, <em>direction=(0</em>, <em>0</em>, <em>1)</em>, <em>i_size=1</em>, <em>j_size=1</em>, <em>i_resolution=10</em>, <em>j_resolution=10</em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.Plane" title="Permalink to this definition">¶</a></dt>
 <dd><p>Create a plane</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -305,14 +305,14 @@ start_phi to end_phi).</p></li>
 <dd class="field-even"><p><strong>plane</strong> – Plane mesh</p>
 </dd>
 <dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p><a class="reference internal" href="../types/points.html#vista.PolyData" title="vista.PolyData">vista.PolyData</a></p>
+<dd class="field-odd"><p><a class="reference internal" href="../types/points.html#pyvista.PolyData" title="pyvista.PolyData">pyvista.PolyData</a></p>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="function">
-<dt id="vista.Line">
-<code class="descclassname">vista.</code><code class="descname">Line</code><span class="sig-paren">(</span><em>pointa=(-0.5</em>, <em>0.0</em>, <em>0.0)</em>, <em>pointb=(0.5</em>, <em>0.0</em>, <em>0.0)</em>, <em>resolution=1</em><span class="sig-paren">)</span><a class="headerlink" href="#vista.Line" title="Permalink to this definition">¶</a></dt>
+<dt id="pyvista.Line">
+<code class="descclassname">pyvista.</code><code class="descname">Line</code><span class="sig-paren">(</span><em>pointa=(-0.5</em>, <em>0.0</em>, <em>0.0)</em>, <em>pointb=(0.5</em>, <em>0.0</em>, <em>0.0)</em>, <em>resolution=1</em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.Line" title="Permalink to this definition">¶</a></dt>
 <dd><p>Create a line</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -326,8 +326,8 @@ start_phi to end_phi).</p></li>
 </dd></dl>
 
 <dl class="function">
-<dt id="vista.Cube">
-<code class="descclassname">vista.</code><code class="descname">Cube</code><span class="sig-paren">(</span><em>center=(0.0</em>, <em>0.0</em>, <em>0.0)</em>, <em>x_length=1.0</em>, <em>y_length=1.0</em>, <em>z_length=1.0</em>, <em>bounds=None</em><span class="sig-paren">)</span><a class="headerlink" href="#vista.Cube" title="Permalink to this definition">¶</a></dt>
+<dt id="pyvista.Cube">
+<code class="descclassname">pyvista.</code><code class="descname">Cube</code><span class="sig-paren">(</span><em>center=(0.0</em>, <em>0.0</em>, <em>0.0)</em>, <em>x_length=1.0</em>, <em>y_length=1.0</em>, <em>z_length=1.0</em>, <em>bounds=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.Cube" title="Permalink to this definition">¶</a></dt>
 <dd><p>Create a cube by either specifying the center and side lengths or just
 the bounds of the cube. If <code class="docutils literal notranslate"><span class="pre">bounds</span></code> are given, all other arguments are
 ignored.</p>
@@ -346,8 +346,8 @@ ignored. <code class="docutils literal notranslate"><span class="pre">(xMin,xMax
 </dd></dl>
 
 <dl class="function">
-<dt id="vista.Box">
-<code class="descclassname">vista.</code><code class="descname">Box</code><span class="sig-paren">(</span><em>bounds=(-1.0</em>, <em>1.0</em>, <em>-1.0</em>, <em>1.0</em>, <em>-1.0</em>, <em>1.0)</em><span class="sig-paren">)</span><a class="headerlink" href="#vista.Box" title="Permalink to this definition">¶</a></dt>
+<dt id="pyvista.Box">
+<code class="descclassname">pyvista.</code><code class="descname">Box</code><span class="sig-paren">(</span><em>bounds=(-1.0</em>, <em>1.0</em>, <em>-1.0</em>, <em>1.0</em>, <em>-1.0</em>, <em>1.0)</em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.Box" title="Permalink to this definition">¶</a></dt>
 <dd><p>Creates a box with solid faces for the given bounds.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -358,8 +358,8 @@ ignored. <code class="docutils literal notranslate"><span class="pre">(xMin,xMax
 </dd></dl>
 
 <dl class="function">
-<dt id="vista.Cone">
-<code class="descclassname">vista.</code><code class="descname">Cone</code><span class="sig-paren">(</span><em>center=(0.0</em>, <em>0.0</em>, <em>0.0)</em>, <em>direction=(1.0</em>, <em>0.0</em>, <em>0.0)</em>, <em>height=1.0</em>, <em>radius=0.5</em>, <em>capping=True</em>, <em>angle=26.6</em>, <em>resolution=6</em><span class="sig-paren">)</span><a class="headerlink" href="#vista.Cone" title="Permalink to this definition">¶</a></dt>
+<dt id="pyvista.Cone">
+<code class="descclassname">pyvista.</code><code class="descname">Cone</code><span class="sig-paren">(</span><em>center=(0.0</em>, <em>0.0</em>, <em>0.0)</em>, <em>direction=(1.0</em>, <em>0.0</em>, <em>0.0)</em>, <em>height=1.0</em>, <em>radius=0.5</em>, <em>capping=True</em>, <em>angle=26.6</em>, <em>resolution=6</em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.Cone" title="Permalink to this definition">¶</a></dt>
 <dd><p>Create a cone</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -377,8 +377,8 @@ ignored. <code class="docutils literal notranslate"><span class="pre">(xMin,xMax
 </dd></dl>
 
 <dl class="function">
-<dt id="vista.Polygon">
-<code class="descclassname">vista.</code><code class="descname">Polygon</code><span class="sig-paren">(</span><em>center=(0.0</em>, <em>0.0</em>, <em>0.0)</em>, <em>radius=1</em>, <em>normal=(0</em>, <em>0</em>, <em>1)</em>, <em>n_sides=6</em><span class="sig-paren">)</span><a class="headerlink" href="#vista.Polygon" title="Permalink to this definition">¶</a></dt>
+<dt id="pyvista.Polygon">
+<code class="descclassname">pyvista.</code><code class="descname">Polygon</code><span class="sig-paren">(</span><em>center=(0.0</em>, <em>0.0</em>, <em>0.0)</em>, <em>radius=1</em>, <em>normal=(0</em>, <em>0</em>, <em>1)</em>, <em>n_sides=6</em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.Polygon" title="Permalink to this definition">¶</a></dt>
 <dd><p>Createa a polygonal disk with a hole in the center. The disk has zero
 height. The user can specify the inner and outer radius of the disk, and
 the radial and circumferential resolution of the polygonal representation.</p>
@@ -395,8 +395,8 @@ the radial and circumferential resolution of the polygonal representation.</p>
 </dd></dl>
 
 <dl class="function">
-<dt id="vista.Disc">
-<code class="descclassname">vista.</code><code class="descname">Disc</code><span class="sig-paren">(</span><em>center=(0.0</em>, <em>0.0</em>, <em>0.0)</em>, <em>inner=0.25</em>, <em>outer=0.5</em>, <em>normal=(0</em>, <em>0</em>, <em>1)</em>, <em>r_res=1</em>, <em>c_res=6</em><span class="sig-paren">)</span><a class="headerlink" href="#vista.Disc" title="Permalink to this definition">¶</a></dt>
+<dt id="pyvista.Disc">
+<code class="descclassname">pyvista.</code><code class="descname">Disc</code><span class="sig-paren">(</span><em>center=(0.0</em>, <em>0.0</em>, <em>0.0)</em>, <em>inner=0.25</em>, <em>outer=0.5</em>, <em>normal=(0</em>, <em>0</em>, <em>1)</em>, <em>r_res=1</em>, <em>c_res=6</em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.Disc" title="Permalink to this definition">¶</a></dt>
 <dd><p>Createa a polygonal disk with a hole in the center. The disk has zero
 height. The user can specify the inner and outer radius of the disk, and
 the radial and circumferential resolution of the polygonal representation.</p>
@@ -415,8 +415,8 @@ the radial and circumferential resolution of the polygonal representation.</p>
 </dd></dl>
 
 <dl class="function">
-<dt id="vista.Text3D">
-<code class="descclassname">vista.</code><code class="descname">Text3D</code><span class="sig-paren">(</span><em>string</em>, <em>depth=0.5</em><span class="sig-paren">)</span><a class="headerlink" href="#vista.Text3D" title="Permalink to this definition">¶</a></dt>
+<dt id="pyvista.Text3D">
+<code class="descclassname">pyvista.</code><code class="descname">Text3D</code><span class="sig-paren">(</span><em>string</em>, <em>depth=0.5</em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.Text3D" title="Permalink to this definition">¶</a></dt>
 <dd><p>Create 3D text from a string</p>
 </dd></dl>
 
@@ -442,7 +442,7 @@ the radial and circumferential resolution of the polygonal representation.</p>
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2017-2019, The vista Developers
+        &copy; Copyright 2017-2019, The PyVista Developers
 
     </p>
   </div>

@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Resampling &amp; Interpolating &mdash; vista 0.19.0 documentation</title>
+  <title>Resampling &amp; Interpolating &mdash; PyVista 0.19.0 documentation</title>
   
 
   
@@ -61,7 +61,7 @@
 
           
             
-            <img src="../../_static/vista_logo.png" class="logo" alt="Logo"/>
+            <img src="../../_static/pyvista_logo.png" class="logo" alt="Logo"/>
           
           </a>
 
@@ -95,7 +95,7 @@
             
               <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../index.html">About</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../why.html">Why <code class="docutils literal notranslate"><span class="pre">vista</span></code>?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../why.html">Why PyVista?</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../authors.html">Authors</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Getting Started</span></p>
@@ -145,7 +145,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../../tools/plotting.html">Plotting</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../tools/filters.html">Filters</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../tools/ipy_tools.html">IPython Tools</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../tools/qt_plotting.html">vista PyQt Interface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../tools/qt_plotting.html">PyVista PyQt Interface</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../tools/utilities.html">Utilities</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Contributing</span></p>
@@ -167,7 +167,7 @@
       <nav class="wy-nav-top" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../../index.html">vista</a>
+          <a href="../../index.html">PyVista</a>
         
       </nav>
 
@@ -207,7 +207,7 @@
         
             
             
-              <a href="https://github.com/pyvista/vista/blob/master/docs/examples/01-filter/resample.rst" class="fa fa-github"> Edit on GitHub</a>
+              <a href="https://github.com/pyvista/pyvista/blob/master/docs/examples/01-filter/resample.rst" class="fa fa-github"> Edit on GitHub</a>
             
           
         
@@ -231,18 +231,18 @@
 This example will resample a volumetric mesh’s  scalar data onto the surface
 of a sphere contained in that volume.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># sphinx_gallery_thumbnail_number = 4</span>
-<span class="kn">import</span> <span class="nn">vista</span>
-<span class="kn">from</span> <span class="nn">vista</span> <span class="k">import</span> <span class="n">examples</span>
+<span class="kn">import</span> <span class="nn">pyvista</span>
+<span class="kn">from</span> <span class="nn">pyvista</span> <span class="k">import</span> <span class="n">examples</span>
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 </pre></div>
 </div>
 <p>Querry a grids points onto a sphere</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mesh</span> <span class="o">=</span> <span class="n">vista</span><span class="o">.</span><span class="n">Sphere</span><span class="p">(</span><span class="n">center</span><span class="o">=</span><span class="p">(</span><span class="mf">4.5</span><span class="p">,</span><span class="mf">4.5</span><span class="p">,</span><span class="mf">4.5</span><span class="p">),</span> <span class="n">radius</span><span class="o">=</span><span class="mf">4.5</span><span class="p">)</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mesh</span> <span class="o">=</span> <span class="n">pyvista</span><span class="o">.</span><span class="n">Sphere</span><span class="p">(</span><span class="n">center</span><span class="o">=</span><span class="p">(</span><span class="mf">4.5</span><span class="p">,</span><span class="mf">4.5</span><span class="p">,</span><span class="mf">4.5</span><span class="p">),</span> <span class="n">radius</span><span class="o">=</span><span class="mf">4.5</span><span class="p">)</span>
 <span class="n">data_to_probe</span> <span class="o">=</span> <span class="n">examples</span><span class="o">.</span><span class="n">load_uniform</span><span class="p">()</span>
 </pre></div>
 </div>
 <p>Plot the two datasets</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">p</span> <span class="o">=</span> <span class="n">vista</span><span class="o">.</span><span class="n">Plotter</span><span class="p">()</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">p</span> <span class="o">=</span> <span class="n">pyvista</span><span class="o">.</span><span class="n">Plotter</span><span class="p">()</span>
 <span class="n">p</span><span class="o">.</span><span class="n">add_mesh</span><span class="p">(</span><span class="n">mesh</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 <span class="n">p</span><span class="o">.</span><span class="n">add_mesh</span><span class="p">(</span><span class="n">data_to_probe</span><span class="p">,</span> <span class="n">opacity</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span>
 <span class="n">p</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
@@ -266,7 +266,7 @@ of a sphere contained in that volume.</p>
 <span class="n">points</span> <span class="o">=</span> <span class="n">examples</span><span class="o">.</span><span class="n">download_sparse_points</span><span class="p">()</span>
 
 
-<span class="n">p</span> <span class="o">=</span> <span class="n">vista</span><span class="o">.</span><span class="n">Plotter</span><span class="p">()</span>
+<span class="n">p</span> <span class="o">=</span> <span class="n">pyvista</span><span class="o">.</span><span class="n">Plotter</span><span class="p">()</span>
 <span class="n">p</span><span class="o">.</span><span class="n">add_mesh</span><span class="p">(</span><span class="n">points</span><span class="p">,</span> <span class="n">point_size</span><span class="o">=</span><span class="mf">30.0</span><span class="p">,</span> <span class="n">render_points_as_spheres</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 <span class="n">p</span><span class="o">.</span><span class="n">add_mesh</span><span class="p">(</span><span class="n">surface</span><span class="p">)</span>
 <span class="n">p</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
@@ -277,20 +277,20 @@ of a sphere contained in that volume.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">interpolated</span> <span class="o">=</span> <span class="n">surface</span><span class="o">.</span><span class="n">interpolate</span><span class="p">(</span><span class="n">points</span><span class="p">,</span> <span class="n">radius</span><span class="o">=</span><span class="mf">12.0</span><span class="p">)</span>
 
 
-<span class="n">p</span> <span class="o">=</span> <span class="n">vista</span><span class="o">.</span><span class="n">Plotter</span><span class="p">()</span>
+<span class="n">p</span> <span class="o">=</span> <span class="n">pyvista</span><span class="o">.</span><span class="n">Plotter</span><span class="p">()</span>
 <span class="n">p</span><span class="o">.</span><span class="n">add_mesh</span><span class="p">(</span><span class="n">points</span><span class="p">,</span> <span class="n">point_size</span><span class="o">=</span><span class="mf">30.0</span><span class="p">,</span> <span class="n">render_points_as_spheres</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 <span class="n">p</span><span class="o">.</span><span class="n">add_mesh</span><span class="p">(</span><span class="n">interpolated</span><span class="p">,</span> <span class="n">scalars</span><span class="o">=</span><span class="s1">&#39;val&#39;</span><span class="p">)</span>
 <span class="n">p</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
 <img alt="../../_images/sphx_glr_resample_004.png" class="sphx-glr-single-img" src="../../_images/sphx_glr_resample_004.png" />
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  9.432 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  9.277 seconds)</p>
 <div class="sphx-glr-footer class sphx-glr-footer-example docutils container" id="sphx-glr-download-examples-01-filter-resample-py">
 <div class="sphx-glr-download docutils container">
-<p><a class="reference download internal" download="" href="../../_downloads/19b6f3914c7db7c53cf14c501eadf6a9/resample.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">resample.py</span></code></a></p>
+<p><a class="reference download internal" download="" href="../../_downloads/cb760b83d14c26db39cff14f9b97fe65/resample.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">resample.py</span></code></a></p>
 </div>
 <div class="sphx-glr-download docutils container">
-<p><a class="reference download internal" download="" href="../../_downloads/4d01c7778b799dd3894596c88a733d87/resample.ipynb"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Jupyter</span> <span class="pre">notebook:</span> <span class="pre">resample.ipynb</span></code></a></p>
+<p><a class="reference download internal" download="" href="../../_downloads/75160b6e672b56f357dc91a06c24ce5a/resample.ipynb"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Jupyter</span> <span class="pre">notebook:</span> <span class="pre">resample.ipynb</span></code></a></p>
 </div>
 </div>
 <p class="sphx-glr-signature"><a class="reference external" href="https://sphinx-gallery.readthedocs.io">Gallery generated by Sphinx-Gallery</a></p>
@@ -317,7 +317,7 @@ of a sphere contained in that volume.</p>
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2017-2019, The vista Developers
+        &copy; Copyright 2017-2019, The PyVista Developers
 
     </p>
   </div>

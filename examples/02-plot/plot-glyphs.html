@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Plotting Glyphs &mdash; vista 0.19.0 documentation</title>
+  <title>Plotting Glyphs &mdash; PyVista 0.19.0 documentation</title>
   
 
   
@@ -61,7 +61,7 @@
 
           
             
-            <img src="../../_static/vista_logo.png" class="logo" alt="Logo"/>
+            <img src="../../_static/pyvista_logo.png" class="logo" alt="Logo"/>
           
           </a>
 
@@ -95,7 +95,7 @@
             
               <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../index.html">About</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../why.html">Why <code class="docutils literal notranslate"><span class="pre">vista</span></code>?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../why.html">Why PyVista?</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../authors.html">Authors</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Getting Started</span></p>
@@ -143,7 +143,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../../tools/plotting.html">Plotting</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../tools/filters.html">Filters</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../tools/ipy_tools.html">IPython Tools</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../tools/qt_plotting.html">vista PyQt Interface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../tools/qt_plotting.html">PyVista PyQt Interface</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../tools/utilities.html">Utilities</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Contributing</span></p>
@@ -165,7 +165,7 @@
       <nav class="wy-nav-top" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../../index.html">vista</a>
+          <a href="../../index.html">PyVista</a>
         
       </nav>
 
@@ -205,7 +205,7 @@
         
             
             
-              <a href="https://github.com/pyvista/vista/blob/master/docs/examples/02-plot/plot-glyphs.rst" class="fa fa-github"> Edit on GitHub</a>
+              <a href="https://github.com/pyvista/pyvista/blob/master/docs/examples/02-plot/plot-glyphs.rst" class="fa fa-github"> Edit on GitHub</a>
             
           
         
@@ -227,22 +227,22 @@
 <span id="glyph-example"></span><span id="sphx-glr-examples-02-plot-plot-glyphs-py"></span><h1>Plotting Glyphs<a class="headerlink" href="#plotting-glyphs" title="Permalink to this headline">¶</a></h1>
 <p>Use vectors in a dataset to plot and orient glyphs/geometric objects.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># sphinx_gallery_thumbnail_number = 1</span>
-<span class="kn">import</span> <span class="nn">vista</span>
-<span class="kn">from</span> <span class="nn">vista</span> <span class="k">import</span> <span class="n">examples</span>
+<span class="kn">import</span> <span class="nn">pyvista</span>
+<span class="kn">from</span> <span class="nn">pyvista</span> <span class="k">import</span> <span class="n">examples</span>
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 </pre></div>
 </div>
-<p>Glyphying can be done via the <a class="reference internal" href="../../tools/filters.html#vista.DataSetFilters.glyph" title="vista.DataSetFilters.glyph"><code class="xref py py-func docutils literal notranslate"><span class="pre">vista.DataSetFilters.glyph()</span></code></a> filter</p>
+<p>Glyphying can be done via the <a class="reference internal" href="../../tools/filters.html#pyvista.DataSetFilters.glyph" title="pyvista.DataSetFilters.glyph"><code class="xref py py-func docutils literal notranslate"><span class="pre">pyvista.DataSetFilters.glyph()</span></code></a> filter</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mesh</span> <span class="o">=</span> <span class="n">examples</span><span class="o">.</span><span class="n">download_carotid</span><span class="p">()</span><span class="o">.</span><span class="n">threshold</span><span class="p">(</span><span class="mi">145</span><span class="p">,</span> <span class="n">scalars</span><span class="o">=</span><span class="s1">&#39;scalars&#39;</span><span class="p">)</span>
 
 <span class="c1"># Make a geometric obhect to use as the glyph</span>
-<span class="n">geom</span> <span class="o">=</span> <span class="n">vista</span><span class="o">.</span><span class="n">Arrow</span><span class="p">()</span> <span class="c1"># This could be any dataset</span>
+<span class="n">geom</span> <span class="o">=</span> <span class="n">pyvista</span><span class="o">.</span><span class="n">Arrow</span><span class="p">()</span> <span class="c1"># This could be any dataset</span>
 
 <span class="c1"># Perform the glyph</span>
 <span class="n">glyphs</span> <span class="o">=</span> <span class="n">mesh</span><span class="o">.</span><span class="n">glyph</span><span class="p">(</span><span class="n">orient</span><span class="o">=</span><span class="s1">&#39;vectors&#39;</span><span class="p">,</span> <span class="n">scale</span><span class="o">=</span><span class="s1">&#39;scalars&#39;</span><span class="p">,</span> <span class="n">factor</span><span class="o">=</span><span class="mf">0.005</span><span class="p">,</span> <span class="n">geom</span><span class="o">=</span><span class="n">geom</span><span class="p">)</span>
 
 <span class="c1"># plot using the plotting class</span>
-<span class="n">p</span> <span class="o">=</span> <span class="n">vista</span><span class="o">.</span><span class="n">Plotter</span><span class="p">()</span>
+<span class="n">p</span> <span class="o">=</span> <span class="n">pyvista</span><span class="o">.</span><span class="n">Plotter</span><span class="p">()</span>
 <span class="n">p</span><span class="o">.</span><span class="n">add_mesh</span><span class="p">(</span><span class="n">glyphs</span><span class="p">)</span>
 <span class="c1"># Set a cool camera position</span>
 <span class="n">p</span><span class="o">.</span><span class="n">camera_position</span> <span class="o">=</span> <span class="p">[(</span><span class="mf">84.58052237950857</span><span class="p">,</span> <span class="mf">77.76332116787425</span><span class="p">,</span> <span class="mf">27.208569926456548</span><span class="p">),</span>
@@ -253,8 +253,8 @@
 </div>
 <img alt="../../_images/sphx_glr_plot-glyphs_001.png" class="sphx-glr-single-img" src="../../_images/sphx_glr_plot-glyphs_001.png" />
 <p>Another approach is to load the vectors directly to the mesh object and then
-access the <a class="reference internal" href="../../types/common.html#vista.Common.arrows" title="vista.Common.arrows"><code class="xref py py-attr docutils literal notranslate"><span class="pre">vista.Common.arrows</span></code></a> property.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sphere</span> <span class="o">=</span> <span class="n">vista</span><span class="o">.</span><span class="n">Sphere</span><span class="p">(</span><span class="n">radius</span><span class="o">=</span><span class="mf">3.14</span><span class="p">)</span>
+access the <a class="reference internal" href="../../types/common.html#pyvista.Common.arrows" title="pyvista.Common.arrows"><code class="xref py py-attr docutils literal notranslate"><span class="pre">pyvista.Common.arrows</span></code></a> property.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sphere</span> <span class="o">=</span> <span class="n">pyvista</span><span class="o">.</span><span class="n">Sphere</span><span class="p">(</span><span class="n">radius</span><span class="o">=</span><span class="mf">3.14</span><span class="p">)</span>
 
 <span class="c1"># make cool swirly pattern</span>
 <span class="n">vectors</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">vstack</span><span class="p">((</span><span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">sphere</span><span class="o">.</span><span class="n">points</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">]),</span>
@@ -270,20 +270,20 @@ access the <a class="reference internal" href="../../types/common.html#vista.Com
 </div>
 <img alt="../../_images/sphx_glr_plot-glyphs_002.png" class="sphx-glr-single-img" src="../../_images/sphx_glr_plot-glyphs_002.png" />
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># plot the arrows and the sphere</span>
-<span class="n">p</span> <span class="o">=</span> <span class="n">vista</span><span class="o">.</span><span class="n">Plotter</span><span class="p">()</span>
+<span class="n">p</span> <span class="o">=</span> <span class="n">pyvista</span><span class="o">.</span><span class="n">Plotter</span><span class="p">()</span>
 <span class="n">p</span><span class="o">.</span><span class="n">add_mesh</span><span class="p">(</span><span class="n">sphere</span><span class="o">.</span><span class="n">arrows</span><span class="p">,</span> <span class="n">lighting</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">stitle</span><span class="o">=</span><span class="s1">&#39;Vector Magnitude&#39;</span><span class="p">)</span>
 <span class="n">p</span><span class="o">.</span><span class="n">add_mesh</span><span class="p">(</span><span class="n">sphere</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;grey&#39;</span><span class="p">,</span> <span class="n">ambient</span><span class="o">=</span><span class="mf">0.6</span><span class="p">,</span> <span class="n">opacity</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">show_edges</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
 <span class="n">p</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
 <img alt="../../_images/sphx_glr_plot-glyphs_003.png" class="sphx-glr-single-img" src="../../_images/sphx_glr_plot-glyphs_003.png" />
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  7.197 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  7.334 seconds)</p>
 <div class="sphx-glr-footer class sphx-glr-footer-example docutils container" id="sphx-glr-download-examples-02-plot-plot-glyphs-py">
 <div class="sphx-glr-download docutils container">
-<p><a class="reference download internal" download="" href="../../_downloads/aadf4e8919eff1940ccf37119572e6ee/plot-glyphs.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">plot-glyphs.py</span></code></a></p>
+<p><a class="reference download internal" download="" href="../../_downloads/28f51db31cc4de42756922b803a6d82f/plot-glyphs.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">plot-glyphs.py</span></code></a></p>
 </div>
 <div class="sphx-glr-download docutils container">
-<p><a class="reference download internal" download="" href="../../_downloads/dbaf06cbf8ca753ef8932dff94aeb98c/plot-glyphs.ipynb"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Jupyter</span> <span class="pre">notebook:</span> <span class="pre">plot-glyphs.ipynb</span></code></a></p>
+<p><a class="reference download internal" download="" href="../../_downloads/4c54ae91bd76ec3cbaaf26ebf7eb2a42/plot-glyphs.ipynb"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Jupyter</span> <span class="pre">notebook:</span> <span class="pre">plot-glyphs.ipynb</span></code></a></p>
 </div>
 </div>
 <p class="sphx-glr-signature"><a class="reference external" href="https://sphinx-gallery.readthedocs.io">Gallery generated by Sphinx-Gallery</a></p>
@@ -309,7 +309,7 @@ access the <a class="reference internal" href="../../types/common.html#vista.Com
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2017-2019, The vista Developers
+        &copy; Copyright 2017-2019, The PyVista Developers
 
     </p>
   </div>

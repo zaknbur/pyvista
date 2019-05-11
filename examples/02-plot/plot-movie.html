@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Create a MP4 Movie &mdash; vista 0.19.0 documentation</title>
+  <title>Create a MP4 Movie &mdash; PyVista 0.19.0 documentation</title>
   
 
   
@@ -61,7 +61,7 @@
 
           
             
-            <img src="../../_static/vista_logo.png" class="logo" alt="Logo"/>
+            <img src="../../_static/pyvista_logo.png" class="logo" alt="Logo"/>
           
           </a>
 
@@ -95,7 +95,7 @@
             
               <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../index.html">About</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../why.html">Why <code class="docutils literal notranslate"><span class="pre">vista</span></code>?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../why.html">Why PyVista?</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../authors.html">Authors</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Getting Started</span></p>
@@ -143,7 +143,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../../tools/plotting.html">Plotting</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../tools/filters.html">Filters</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../tools/ipy_tools.html">IPython Tools</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../tools/qt_plotting.html">vista PyQt Interface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../tools/qt_plotting.html">PyVista PyQt Interface</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../tools/utilities.html">Utilities</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Contributing</span></p>
@@ -165,7 +165,7 @@
       <nav class="wy-nav-top" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../../index.html">vista</a>
+          <a href="../../index.html">PyVista</a>
         
       </nav>
 
@@ -205,7 +205,7 @@
         
             
             
-              <a href="https://github.com/pyvista/vista/blob/master/docs/examples/02-plot/plot-movie.rst" class="fa fa-github"> Edit on GitHub</a>
+              <a href="https://github.com/pyvista/pyvista/blob/master/docs/examples/02-plot/plot-movie.rst" class="fa fa-github"> Edit on GitHub</a>
             
           
         
@@ -226,15 +226,15 @@
 <div class="sphx-glr-example-title section" id="create-a-mp4-movie">
 <span id="sphx-glr-examples-02-plot-plot-movie-py"></span><h1>Create a MP4 Movie<a class="headerlink" href="#create-a-mp4-movie" title="Permalink to this headline">¶</a></h1>
 <p>Create an animated MP4 movie of a rendering scene</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">vista</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pyvista</span>
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 
 <span class="n">filename</span> <span class="o">=</span> <span class="s1">&#39;sphere-shrinking.mp4&#39;</span>
 
-<span class="n">mesh</span> <span class="o">=</span> <span class="n">vista</span><span class="o">.</span><span class="n">Sphere</span><span class="p">()</span>
+<span class="n">mesh</span> <span class="o">=</span> <span class="n">pyvista</span><span class="o">.</span><span class="n">Sphere</span><span class="p">()</span>
 <span class="n">mesh</span><span class="o">.</span><span class="n">cell_arrays</span><span class="p">[</span><span class="s1">&#39;data&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">random</span><span class="p">(</span><span class="n">mesh</span><span class="o">.</span><span class="n">n_cells</span><span class="p">)</span>
 
-<span class="n">plotter</span> <span class="o">=</span> <span class="n">vista</span><span class="o">.</span><span class="n">Plotter</span><span class="p">()</span>
+<span class="n">plotter</span> <span class="o">=</span> <span class="n">pyvista</span><span class="o">.</span><span class="n">Plotter</span><span class="p">()</span>
 <span class="c1"># Open a movie file</span>
 <span class="n">plotter</span><span class="o">.</span><span class="n">open_movie</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span>
 
@@ -265,13 +265,13 @@
 <div class="figure align-center">
 <img alt="../../_images/sphere-shrinking.mp4" src="../../_images/sphere-shrinking.mp4" />
 </div>
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  19.370 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  19.865 seconds)</p>
 <div class="sphx-glr-footer class sphx-glr-footer-example docutils container" id="sphx-glr-download-examples-02-plot-plot-movie-py">
 <div class="sphx-glr-download docutils container">
-<p><a class="reference download internal" download="" href="../../_downloads/48cb52fdabca470b7629a1cb9a263c6e/plot-movie.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">plot-movie.py</span></code></a></p>
+<p><a class="reference download internal" download="" href="../../_downloads/bd7d3f187ba0234326621d13976a9c59/plot-movie.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">plot-movie.py</span></code></a></p>
 </div>
 <div class="sphx-glr-download docutils container">
-<p><a class="reference download internal" download="" href="../../_downloads/8d77c5a49b3e87453a19c029297f396b/plot-movie.ipynb"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Jupyter</span> <span class="pre">notebook:</span> <span class="pre">plot-movie.ipynb</span></code></a></p>
+<p><a class="reference download internal" download="" href="../../_downloads/07f90d98aa6176cbd1fb06fb1320a17e/plot-movie.ipynb"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Jupyter</span> <span class="pre">notebook:</span> <span class="pre">plot-movie.ipynb</span></code></a></p>
 </div>
 </div>
 <p class="sphx-glr-signature"><a class="reference external" href="https://sphinx-gallery.readthedocs.io">Gallery generated by Sphinx-Gallery</a></p>
@@ -297,7 +297,7 @@
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2017-2019, The vista Developers
+        &copy; Copyright 2017-2019, The PyVista Developers
 
     </p>
   </div>

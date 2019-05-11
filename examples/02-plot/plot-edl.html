@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Eye Dome Lighting &mdash; vista 0.19.0 documentation</title>
+  <title>Eye Dome Lighting &mdash; PyVista 0.19.0 documentation</title>
   
 
   
@@ -61,7 +61,7 @@
 
           
             
-            <img src="../../_static/vista_logo.png" class="logo" alt="Logo"/>
+            <img src="../../_static/pyvista_logo.png" class="logo" alt="Logo"/>
           
           </a>
 
@@ -95,7 +95,7 @@
             
               <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../index.html">About</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../why.html">Why <code class="docutils literal notranslate"><span class="pre">vista</span></code>?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../why.html">Why PyVista?</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../authors.html">Authors</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Getting Started</span></p>
@@ -147,7 +147,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../../tools/plotting.html">Plotting</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../tools/filters.html">Filters</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../tools/ipy_tools.html">IPython Tools</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../tools/qt_plotting.html">vista PyQt Interface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../tools/qt_plotting.html">PyVista PyQt Interface</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../tools/utilities.html">Utilities</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Contributing</span></p>
@@ -169,7 +169,7 @@
       <nav class="wy-nav-top" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../../index.html">vista</a>
+          <a href="../../index.html">PyVista</a>
         
       </nav>
 
@@ -209,7 +209,7 @@
         
             
             
-              <a href="https://github.com/pyvista/vista/blob/master/docs/examples/02-plot/plot-edl.rst" class="fa fa-github"> Edit on GitHub</a>
+              <a href="https://github.com/pyvista/pyvista/blob/master/docs/examples/02-plot/plot-edl.rst" class="fa fa-github"> Edit on GitHub</a>
             
           
         
@@ -233,8 +233,8 @@
 designed to improve depth perception in scientific visualization images.
 To learn more, please see <a class="reference external" href="https://blog.kitware.com/eye-dome-lighting-a-non-photorealistic-shading-technique/">this blog post</a>.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># sphinx_gallery_thumbnail_number = 1</span>
-<span class="kn">import</span> <span class="nn">vista</span>
-<span class="kn">from</span> <span class="nn">vista</span> <span class="k">import</span> <span class="n">examples</span>
+<span class="kn">import</span> <span class="nn">pyvista</span>
+<span class="kn">from</span> <span class="nn">pyvista</span> <span class="k">import</span> <span class="n">examples</span>
 </pre></div>
 </div>
 <div class="section" id="statue">
@@ -248,7 +248,7 @@ statue:</p>
 </div>
 <img alt="../../_images/sphx_glr_plot-edl_001.png" class="sphx-glr-single-img" src="../../_images/sphx_glr_plot-edl_001.png" />
 <p>Here we will compare a EDL shading side by side with normal shading</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">p</span> <span class="o">=</span> <span class="n">vista</span><span class="o">.</span><span class="n">Plotter</span><span class="p">(</span><span class="n">shape</span><span class="o">=</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span> <span class="n">border</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">p</span> <span class="o">=</span> <span class="n">pyvista</span><span class="o">.</span><span class="n">Plotter</span><span class="p">(</span><span class="n">shape</span><span class="o">=</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span> <span class="n">border</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
 
 <span class="c1"># With eye-dome lighting</span>
 <span class="n">p</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span>
@@ -277,16 +277,16 @@ Take this Lidar point cloud for example:</p>
 </div>
 <p>And now plot this point cloud as-is:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Plot a typical point cloud with no EDL</span>
-<span class="n">p</span> <span class="o">=</span> <span class="n">vista</span><span class="o">.</span><span class="n">Plotter</span><span class="p">()</span>
+<span class="n">p</span> <span class="o">=</span> <span class="n">pyvista</span><span class="o">.</span><span class="n">Plotter</span><span class="p">()</span>
 <span class="n">p</span><span class="o">.</span><span class="n">add_mesh</span><span class="p">(</span><span class="n">point_cloud</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;tan&#39;</span><span class="p">,</span> <span class="n">point_size</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>
 <span class="n">p</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
 <img alt="../../_images/sphx_glr_plot-edl_003.png" class="sphx-glr-single-img" src="../../_images/sphx_glr_plot-edl_003.png" />
 <p>We can improve the depth mapping by enabling eye dome lighting on the renderer.
-Reference <a class="reference internal" href="../../tools/plotting.html#vista.Renderer.enable_eye_dome_lighting" title="vista.Renderer.enable_eye_dome_lighting"><code class="xref py py-func docutils literal notranslate"><span class="pre">vista.Renderer.enable_eye_dome_lighting()</span></code></a>.</p>
+Reference <a class="reference internal" href="../../tools/plotting.html#pyvista.Renderer.enable_eye_dome_lighting" title="pyvista.Renderer.enable_eye_dome_lighting"><code class="xref py py-func docutils literal notranslate"><span class="pre">pyvista.Renderer.enable_eye_dome_lighting()</span></code></a>.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Plot with EDL</span>
-<span class="n">p</span> <span class="o">=</span> <span class="n">vista</span><span class="o">.</span><span class="n">Plotter</span><span class="p">()</span>
+<span class="n">p</span> <span class="o">=</span> <span class="n">pyvista</span><span class="o">.</span><span class="n">Plotter</span><span class="p">()</span>
 <span class="n">p</span><span class="o">.</span><span class="n">add_mesh</span><span class="p">(</span><span class="n">point_cloud</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;tan&#39;</span><span class="p">,</span> <span class="n">point_size</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>
 <span class="n">p</span><span class="o">.</span><span class="n">enable_eye_dome_lighting</span><span class="p">()</span>
 <span class="n">p</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
@@ -295,20 +295,20 @@ Reference <a class="reference internal" href="../../tools/plotting.html#vista.Re
 <img alt="../../_images/sphx_glr_plot-edl_004.png" class="sphx-glr-single-img" src="../../_images/sphx_glr_plot-edl_004.png" />
 <p>The eye dome lighting mode can also handle plotting scalar arrays:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Plot with EDL and scalar data</span>
-<span class="n">p</span> <span class="o">=</span> <span class="n">vista</span><span class="o">.</span><span class="n">Plotter</span><span class="p">()</span>
+<span class="n">p</span> <span class="o">=</span> <span class="n">pyvista</span><span class="o">.</span><span class="n">Plotter</span><span class="p">()</span>
 <span class="n">p</span><span class="o">.</span><span class="n">add_mesh</span><span class="p">(</span><span class="n">point_cloud</span><span class="p">,</span> <span class="n">scalars</span><span class="o">=</span><span class="s1">&#39;Elevation&#39;</span><span class="p">,</span> <span class="n">point_size</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>
 <span class="n">p</span><span class="o">.</span><span class="n">enable_eye_dome_lighting</span><span class="p">()</span>
 <span class="n">p</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
 <img alt="../../_images/sphx_glr_plot-edl_005.png" class="sphx-glr-single-img" src="../../_images/sphx_glr_plot-edl_005.png" />
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  52.229 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  54.951 seconds)</p>
 <div class="sphx-glr-footer class sphx-glr-footer-example docutils container" id="sphx-glr-download-examples-02-plot-plot-edl-py">
 <div class="sphx-glr-download docutils container">
-<p><a class="reference download internal" download="" href="../../_downloads/19022d99a6794983955b1febf2bb33e1/plot-edl.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">plot-edl.py</span></code></a></p>
+<p><a class="reference download internal" download="" href="../../_downloads/973b10364dc0f133909b5f2b97027f22/plot-edl.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">plot-edl.py</span></code></a></p>
 </div>
 <div class="sphx-glr-download docutils container">
-<p><a class="reference download internal" download="" href="../../_downloads/8f60fea550f98998abc33b7044019ed3/plot-edl.ipynb"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Jupyter</span> <span class="pre">notebook:</span> <span class="pre">plot-edl.ipynb</span></code></a></p>
+<p><a class="reference download internal" download="" href="../../_downloads/848359017e79c6284425ce933aee3082/plot-edl.ipynb"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Jupyter</span> <span class="pre">notebook:</span> <span class="pre">plot-edl.ipynb</span></code></a></p>
 </div>
 </div>
 <p class="sphx-glr-signature"><a class="reference external" href="https://sphinx-gallery.readthedocs.io">Gallery generated by Sphinx-Gallery</a></p>
@@ -335,7 +335,7 @@ Reference <a class="reference internal" href="../../tools/plotting.html#vista.Re
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2017-2019, The vista Developers
+        &copy; Copyright 2017-2019, The PyVista Developers
 
     </p>
   </div>

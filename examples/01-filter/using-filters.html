@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Using Common Filters &mdash; vista 0.19.0 documentation</title>
+  <title>Using Common Filters &mdash; PyVista 0.19.0 documentation</title>
   
 
   
@@ -61,7 +61,7 @@
 
           
             
-            <img src="../../_static/vista_logo.png" class="logo" alt="Logo"/>
+            <img src="../../_static/pyvista_logo.png" class="logo" alt="Logo"/>
           
           </a>
 
@@ -95,7 +95,7 @@
             
               <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../index.html">About</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../why.html">Why <code class="docutils literal notranslate"><span class="pre">vista</span></code>?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../why.html">Why PyVista?</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../authors.html">Authors</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Getting Started</span></p>
@@ -145,7 +145,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../../tools/plotting.html">Plotting</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../tools/filters.html">Filters</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../tools/ipy_tools.html">IPython Tools</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../tools/qt_plotting.html">vista PyQt Interface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../tools/qt_plotting.html">PyVista PyQt Interface</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../tools/utilities.html">Utilities</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Contributing</span></p>
@@ -167,7 +167,7 @@
       <nav class="wy-nav-top" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../../index.html">vista</a>
+          <a href="../../index.html">PyVista</a>
         
       </nav>
 
@@ -207,7 +207,7 @@
         
             
             
-              <a href="https://github.com/pyvista/vista/blob/master/docs/examples/01-filter/using-filters.rst" class="fa fa-github"> Edit on GitHub</a>
+              <a href="https://github.com/pyvista/pyvista/blob/master/docs/examples/01-filter/using-filters.rst" class="fa fa-github"> Edit on GitHub</a>
             
           
         
@@ -229,11 +229,11 @@
 <span id="sphx-glr-examples-01-filter-using-filters-py"></span><h1>Using Common Filters<a class="headerlink" href="#using-common-filters" title="Permalink to this headline">¶</a></h1>
 <p>Using common filters like thresholding and clipping</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># sphinx_gallery_thumbnail_number = 2</span>
-<span class="kn">import</span> <span class="nn">vista</span>
-<span class="kn">from</span> <span class="nn">vista</span> <span class="k">import</span> <span class="n">examples</span>
+<span class="kn">import</span> <span class="nn">pyvista</span>
+<span class="kn">from</span> <span class="nn">pyvista</span> <span class="k">import</span> <span class="n">examples</span>
 </pre></div>
 </div>
-<p><code class="docutils literal notranslate"><span class="pre">vista</span></code> wrapped data objects have a suite of common filters ready for immediate
+<p>PyVista wrapped data objects have a suite of common filters ready for immediate
 use directly on the object. These filters include the following
 (see <a class="reference internal" href="../../tools/filters.html#filters-ref"><span class="std std-ref">Filters</span></a> for a complete list):</p>
 <ul class="simple">
@@ -260,11 +260,11 @@ object:</p>
 <p>And now there is a thresholded version of the input dataset in the new
 <code class="docutils literal notranslate"><span class="pre">threshed</span></code> object. To learn more about what keyword arguments are available to
 alter how filters are executed, print the docstring for any filter attached to
-<code class="docutils literal notranslate"><span class="pre">vista</span></code> objects with either <code class="docutils literal notranslate"><span class="pre">help(dataset.threshold)</span></code> or using <code class="docutils literal notranslate"><span class="pre">shift+tab</span></code>
+PyVista objects with either <code class="docutils literal notranslate"><span class="pre">help(dataset.threshold)</span></code> or using <code class="docutils literal notranslate"><span class="pre">shift+tab</span></code>
 in an IPython environment.</p>
 <p>We can now plot this filtered dataset along side an outline of the original
 dataset</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">p</span> <span class="o">=</span> <span class="n">vista</span><span class="o">.</span><span class="n">Plotter</span><span class="p">()</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">p</span> <span class="o">=</span> <span class="n">pyvista</span><span class="o">.</span><span class="n">Plotter</span><span class="p">()</span>
 <span class="n">p</span><span class="o">.</span><span class="n">add_mesh</span><span class="p">(</span><span class="n">outline</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;k&#39;</span><span class="p">)</span>
 <span class="n">p</span><span class="o">.</span><span class="n">add_mesh</span><span class="p">(</span><span class="n">threshed</span><span class="p">)</span>
 <span class="n">p</span><span class="o">.</span><span class="n">camera_position</span> <span class="o">=</span> <span class="p">[</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">3</span><span class="p">]</span>
@@ -275,9 +275,9 @@ dataset</p>
 <p>What about other filters? Let’s collect a few filter results and compare them:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">contours</span> <span class="o">=</span> <span class="n">dataset</span><span class="o">.</span><span class="n">contour</span><span class="p">()</span>
 <span class="n">slices</span> <span class="o">=</span> <span class="n">dataset</span><span class="o">.</span><span class="n">slice_orthogonal</span><span class="p">()</span>
-<span class="n">glyphs</span> <span class="o">=</span> <span class="n">dataset</span><span class="o">.</span><span class="n">glyph</span><span class="p">(</span><span class="n">factor</span><span class="o">=</span><span class="mf">1e-3</span><span class="p">,</span> <span class="n">geom</span><span class="o">=</span><span class="n">vista</span><span class="o">.</span><span class="n">Sphere</span><span class="p">())</span>
+<span class="n">glyphs</span> <span class="o">=</span> <span class="n">dataset</span><span class="o">.</span><span class="n">glyph</span><span class="p">(</span><span class="n">factor</span><span class="o">=</span><span class="mf">1e-3</span><span class="p">,</span> <span class="n">geom</span><span class="o">=</span><span class="n">pyvista</span><span class="o">.</span><span class="n">Sphere</span><span class="p">())</span>
 
-<span class="n">p</span> <span class="o">=</span> <span class="n">vista</span><span class="o">.</span><span class="n">Plotter</span><span class="p">(</span><span class="n">shape</span><span class="o">=</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">))</span>
+<span class="n">p</span> <span class="o">=</span> <span class="n">pyvista</span><span class="o">.</span><span class="n">Plotter</span><span class="p">(</span><span class="n">shape</span><span class="o">=</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">))</span>
 <span class="c1"># Show the theshold</span>
 <span class="n">p</span><span class="o">.</span><span class="n">add_mesh</span><span class="p">(</span><span class="n">outline</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;k&#39;</span><span class="p">)</span>
 <span class="n">p</span><span class="o">.</span><span class="n">add_mesh</span><span class="p">(</span><span class="n">threshed</span><span class="p">,</span> <span class="n">show_scalar_bar</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
@@ -305,7 +305,7 @@ dataset</p>
 <div class="section" id="filter-pipeline">
 <h2>Filter Pipeline<a class="headerlink" href="#filter-pipeline" title="Permalink to this headline">¶</a></h2>
 <p>In VTK, filters are often used in a pipeline where each algorithm passes its
-output to the next filtering algorithm. In <code class="docutils literal notranslate"><span class="pre">vista</span></code>, we can mimic the filtering
+output to the next filtering algorithm. In PyVista, we can mimic the filtering
 pipeline through a chain; attaching each filter to the last filter.
 In the following example, several filters are chained together:</p>
 <ol class="arabic simple">
@@ -320,7 +320,7 @@ In the following example, several filters are chained together:</p>
 </div>
 <p>And to view this filtered data, simply call the <code class="docutils literal notranslate"><span class="pre">plot</span></code> method
 (<code class="docutils literal notranslate"><span class="pre">result.plot()</span></code>) or create a rendering scene:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">p</span> <span class="o">=</span> <span class="n">vista</span><span class="o">.</span><span class="n">Plotter</span><span class="p">()</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">p</span> <span class="o">=</span> <span class="n">pyvista</span><span class="o">.</span><span class="n">Plotter</span><span class="p">()</span>
 <span class="n">p</span><span class="o">.</span><span class="n">add_mesh</span><span class="p">(</span><span class="n">outline</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;k&#39;</span><span class="p">)</span>
 <span class="n">p</span><span class="o">.</span><span class="n">add_mesh</span><span class="p">(</span><span class="n">result</span><span class="p">,</span> <span class="n">scalars</span><span class="o">=</span><span class="s1">&#39;Elevation&#39;</span><span class="p">)</span>
 <span class="n">p</span><span class="o">.</span><span class="n">view_isometric</span><span class="p">()</span>
@@ -328,13 +328,13 @@ In the following example, several filters are chained together:</p>
 </pre></div>
 </div>
 <img alt="../../_images/sphx_glr_using-filters_003.png" class="sphx-glr-single-img" src="../../_images/sphx_glr_using-filters_003.png" />
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  5.718 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  5.677 seconds)</p>
 <div class="sphx-glr-footer class sphx-glr-footer-example docutils container" id="sphx-glr-download-examples-01-filter-using-filters-py">
 <div class="sphx-glr-download docutils container">
-<p><a class="reference download internal" download="" href="../../_downloads/803cbaf50ec962ba45b98a5eedd7d56e/using-filters.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">using-filters.py</span></code></a></p>
+<p><a class="reference download internal" download="" href="../../_downloads/822038be643ce1a47e466ddc00928453/using-filters.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">using-filters.py</span></code></a></p>
 </div>
 <div class="sphx-glr-download docutils container">
-<p><a class="reference download internal" download="" href="../../_downloads/9a01ce82f419d1d932deae1aa336c5a9/using-filters.ipynb"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Jupyter</span> <span class="pre">notebook:</span> <span class="pre">using-filters.ipynb</span></code></a></p>
+<p><a class="reference download internal" download="" href="../../_downloads/d6bf95d0761796846f8b29ea937995b9/using-filters.ipynb"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Jupyter</span> <span class="pre">notebook:</span> <span class="pre">using-filters.ipynb</span></code></a></p>
 </div>
 </div>
 <p class="sphx-glr-signature"><a class="reference external" href="https://sphinx-gallery.readthedocs.io">Gallery generated by Sphinx-Gallery</a></p>
@@ -361,7 +361,7 @@ In the following example, several filters are chained together:</p>
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2017-2019, The vista Developers
+        &copy; Copyright 2017-2019, The PyVista Developers
 
     </p>
   </div>

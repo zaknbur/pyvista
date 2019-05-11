@@ -20,8 +20,8 @@ To learn more, please see `this blog post`_.
 
 
     # sphinx_gallery_thumbnail_number = 1
-    import vista
-    from vista import examples
+    import pyvista
+    from pyvista import examples
 
 
 
@@ -58,7 +58,7 @@ Here we will compare a EDL shading side by side with normal shading
 .. code-block:: default
 
 
-    p = vista.Plotter(shape=(1, 2), border=False)
+    p = pyvista.Plotter(shape=(1, 2), border=False)
 
     # With eye-dome lighting
     p.subplot(0,0)
@@ -110,7 +110,7 @@ And now plot this point cloud as-is:
 
 
     # Plot a typical point cloud with no EDL
-    p = vista.Plotter()
+    p = pyvista.Plotter()
     p.add_mesh(point_cloud, color='tan', point_size=5)
     p.show()
 
@@ -125,14 +125,14 @@ And now plot this point cloud as-is:
 
 
 We can improve the depth mapping by enabling eye dome lighting on the renderer.
-Reference :func:`vista.Renderer.enable_eye_dome_lighting`.
+Reference :func:`pyvista.Renderer.enable_eye_dome_lighting`.
 
 
 .. code-block:: default
 
 
     # Plot with EDL
-    p = vista.Plotter()
+    p = pyvista.Plotter()
     p.add_mesh(point_cloud, color='tan', point_size=5)
     p.enable_eye_dome_lighting()
     p.show()
@@ -154,7 +154,7 @@ The eye dome lighting mode can also handle plotting scalar arrays:
 
 
     # Plot with EDL and scalar data
-    p = vista.Plotter()
+    p = pyvista.Plotter()
     p.add_mesh(point_cloud, scalars='Elevation', point_size=5)
     p.enable_eye_dome_lighting()
     p.show()
@@ -170,7 +170,7 @@ The eye dome lighting mode can also handle plotting scalar arrays:
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  52.229 seconds)
+   **Total running time of the script:** ( 0 minutes  54.951 seconds)
 
 
 .. _sphx_glr_download_examples_02-plot_plot-edl.py:

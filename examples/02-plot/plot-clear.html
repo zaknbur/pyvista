@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Clearing a Mesh or the Entire Plot &mdash; vista 0.19.0 documentation</title>
+  <title>Clearing a Mesh or the Entire Plot &mdash; PyVista 0.19.0 documentation</title>
   
 
   
@@ -61,7 +61,7 @@
 
           
             
-            <img src="../../_static/vista_logo.png" class="logo" alt="Logo"/>
+            <img src="../../_static/pyvista_logo.png" class="logo" alt="Logo"/>
           
           </a>
 
@@ -95,7 +95,7 @@
             
               <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../index.html">About</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../why.html">Why <code class="docutils literal notranslate"><span class="pre">vista</span></code>?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../why.html">Why PyVista?</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../authors.html">Authors</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Getting Started</span></p>
@@ -143,7 +143,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../../tools/plotting.html">Plotting</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../tools/filters.html">Filters</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../tools/ipy_tools.html">IPython Tools</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../tools/qt_plotting.html">vista PyQt Interface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../tools/qt_plotting.html">PyVista PyQt Interface</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../tools/utilities.html">Utilities</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Contributing</span></p>
@@ -165,7 +165,7 @@
       <nav class="wy-nav-top" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../../index.html">vista</a>
+          <a href="../../index.html">PyVista</a>
         
       </nav>
 
@@ -205,7 +205,7 @@
         
             
             
-              <a href="https://github.com/pyvista/vista/blob/master/docs/examples/02-plot/plot-clear.rst" class="fa fa-github"> Edit on GitHub</a>
+              <a href="https://github.com/pyvista/pyvista/blob/master/docs/examples/02-plot/plot-clear.rst" class="fa fa-github"> Edit on GitHub</a>
             
           
         
@@ -227,20 +227,20 @@
 <span id="sphx-glr-examples-02-plot-plot-clear-py"></span><h1>Clearing a Mesh or the Entire Plot<a class="headerlink" href="#clearing-a-mesh-or-the-entire-plot" title="Permalink to this headline">¶</a></h1>
 <p>This example demonstrates how to remove elements from a scene.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># sphinx_gallery_thumbnail_number = 3</span>
-<span class="kn">import</span> <span class="nn">vista</span>
+<span class="kn">import</span> <span class="nn">pyvista</span>
 </pre></div>
 </div>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">plotter</span> <span class="o">=</span> <span class="n">vista</span><span class="o">.</span><span class="n">Plotter</span><span class="p">()</span>
-<span class="n">actor</span> <span class="o">=</span> <span class="n">plotter</span><span class="o">.</span><span class="n">add_mesh</span><span class="p">(</span><span class="n">vista</span><span class="o">.</span><span class="n">Sphere</span><span class="p">())</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">plotter</span> <span class="o">=</span> <span class="n">pyvista</span><span class="o">.</span><span class="n">Plotter</span><span class="p">()</span>
+<span class="n">actor</span> <span class="o">=</span> <span class="n">plotter</span><span class="o">.</span><span class="n">add_mesh</span><span class="p">(</span><span class="n">pyvista</span><span class="o">.</span><span class="n">Sphere</span><span class="p">())</span>
 <span class="n">plotter</span><span class="o">.</span><span class="n">remove_actor</span><span class="p">(</span><span class="n">actor</span><span class="p">)</span>
 <span class="n">plotter</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
 <img alt="../../_images/sphx_glr_plot-clear_001.png" class="sphx-glr-single-img" src="../../_images/sphx_glr_plot-clear_001.png" />
 <p>Clearing the entire plotting window:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">plotter</span> <span class="o">=</span> <span class="n">vista</span><span class="o">.</span><span class="n">Plotter</span><span class="p">()</span>
-<span class="n">plotter</span><span class="o">.</span><span class="n">add_mesh</span><span class="p">(</span><span class="n">vista</span><span class="o">.</span><span class="n">Sphere</span><span class="p">())</span>
-<span class="n">plotter</span><span class="o">.</span><span class="n">add_mesh</span><span class="p">(</span><span class="n">vista</span><span class="o">.</span><span class="n">Plane</span><span class="p">())</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">plotter</span> <span class="o">=</span> <span class="n">pyvista</span><span class="o">.</span><span class="n">Plotter</span><span class="p">()</span>
+<span class="n">plotter</span><span class="o">.</span><span class="n">add_mesh</span><span class="p">(</span><span class="n">pyvista</span><span class="o">.</span><span class="n">Sphere</span><span class="p">())</span>
+<span class="n">plotter</span><span class="o">.</span><span class="n">add_mesh</span><span class="p">(</span><span class="n">pyvista</span><span class="o">.</span><span class="n">Plane</span><span class="p">())</span>
 <span class="n">plotter</span><span class="o">.</span><span class="n">clear</span><span class="p">()</span>  <span class="c1"># clears all actors</span>
 <span class="n">plotter</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
@@ -248,21 +248,21 @@
 <img alt="../../_images/sphx_glr_plot-clear_002.png" class="sphx-glr-single-img" src="../../_images/sphx_glr_plot-clear_002.png" />
 <p>Or you can give any actor a <code class="docutils literal notranslate"><span class="pre">name</span></code> when adding it and if an actor is added
 with that same name at a later time, it will replace the previous actor:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">plotter</span> <span class="o">=</span> <span class="n">vista</span><span class="o">.</span><span class="n">Plotter</span><span class="p">()</span>
-<span class="n">plotter</span><span class="o">.</span><span class="n">add_mesh</span><span class="p">(</span><span class="n">vista</span><span class="o">.</span><span class="n">Sphere</span><span class="p">(),</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;mydata&#39;</span><span class="p">)</span>
-<span class="n">plotter</span><span class="o">.</span><span class="n">add_mesh</span><span class="p">(</span><span class="n">vista</span><span class="o">.</span><span class="n">Plane</span><span class="p">(),</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;mydata&#39;</span><span class="p">)</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">plotter</span> <span class="o">=</span> <span class="n">pyvista</span><span class="o">.</span><span class="n">Plotter</span><span class="p">()</span>
+<span class="n">plotter</span><span class="o">.</span><span class="n">add_mesh</span><span class="p">(</span><span class="n">pyvista</span><span class="o">.</span><span class="n">Sphere</span><span class="p">(),</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;mydata&#39;</span><span class="p">)</span>
+<span class="n">plotter</span><span class="o">.</span><span class="n">add_mesh</span><span class="p">(</span><span class="n">pyvista</span><span class="o">.</span><span class="n">Plane</span><span class="p">(),</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;mydata&#39;</span><span class="p">)</span>
 <span class="c1"># Only the Plane is shown!</span>
 <span class="n">plotter</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
 <img alt="../../_images/sphx_glr_plot-clear_003.png" class="sphx-glr-single-img" src="../../_images/sphx_glr_plot-clear_003.png" />
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  1.944 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  2.002 seconds)</p>
 <div class="sphx-glr-footer class sphx-glr-footer-example docutils container" id="sphx-glr-download-examples-02-plot-plot-clear-py">
 <div class="sphx-glr-download docutils container">
-<p><a class="reference download internal" download="" href="../../_downloads/d85ae8c334fd85c2979a30c0629ccaa4/plot-clear.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">plot-clear.py</span></code></a></p>
+<p><a class="reference download internal" download="" href="../../_downloads/3e9108daa15b2f85bfcaa2ee2af7c502/plot-clear.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">plot-clear.py</span></code></a></p>
 </div>
 <div class="sphx-glr-download docutils container">
-<p><a class="reference download internal" download="" href="../../_downloads/ea28949809285e91704be144e433f159/plot-clear.ipynb"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Jupyter</span> <span class="pre">notebook:</span> <span class="pre">plot-clear.ipynb</span></code></a></p>
+<p><a class="reference download internal" download="" href="../../_downloads/a0392749606ac3bc65e656af853f68bc/plot-clear.ipynb"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Jupyter</span> <span class="pre">notebook:</span> <span class="pre">plot-clear.ipynb</span></code></a></p>
 </div>
 </div>
 <p class="sphx-glr-signature"><a class="reference external" href="https://sphinx-gallery.readthedocs.io">Gallery generated by Sphinx-Gallery</a></p>
@@ -288,7 +288,7 @@ with that same name at a later time, it will replace the previous actor:</p>
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2017-2019, The vista Developers
+        &copy; Copyright 2017-2019, The PyVista Developers
 
     </p>
   </div>

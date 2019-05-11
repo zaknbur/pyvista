@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Multi-Window Plot &mdash; vista 0.19.0 documentation</title>
+  <title>Multi-Window Plot &mdash; PyVista 0.19.0 documentation</title>
   
 
   
@@ -61,7 +61,7 @@
 
           
             
-            <img src="../../_static/vista_logo.png" class="logo" alt="Logo"/>
+            <img src="../../_static/pyvista_logo.png" class="logo" alt="Logo"/>
           
           </a>
 
@@ -95,7 +95,7 @@
             
               <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../index.html">About</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../why.html">Why <code class="docutils literal notranslate"><span class="pre">vista</span></code>?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../why.html">Why PyVista?</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../authors.html">Authors</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Getting Started</span></p>
@@ -143,7 +143,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../../tools/plotting.html">Plotting</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../tools/filters.html">Filters</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../tools/ipy_tools.html">IPython Tools</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../tools/qt_plotting.html">vista PyQt Interface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../tools/qt_plotting.html">PyVista PyQt Interface</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../tools/utilities.html">Utilities</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Contributing</span></p>
@@ -165,7 +165,7 @@
       <nav class="wy-nav-top" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../../index.html">vista</a>
+          <a href="../../index.html">PyVista</a>
         
       </nav>
 
@@ -205,7 +205,7 @@
         
             
             
-              <a href="https://github.com/pyvista/vista/blob/master/docs/examples/02-plot/plot-multi-window.rst" class="fa fa-github"> Edit on GitHub</a>
+              <a href="https://github.com/pyvista/pyvista/blob/master/docs/examples/02-plot/plot-multi-window.rst" class="fa fa-github"> Edit on GitHub</a>
             
           
         
@@ -226,15 +226,15 @@
 <div class="sphx-glr-example-title section" id="multi-window-plot">
 <span id="sphx-glr-examples-02-plot-plot-multi-window-py"></span><h1>Multi-Window Plot<a class="headerlink" href="#multi-window-plot" title="Permalink to this headline">¶</a></h1>
 <p>Subplotting: having multiple scenes in a signle window</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">vista</span>
-<span class="kn">from</span> <span class="nn">vista</span> <span class="k">import</span> <span class="n">examples</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pyvista</span>
+<span class="kn">from</span> <span class="nn">pyvista</span> <span class="k">import</span> <span class="n">examples</span>
 </pre></div>
 </div>
 <p>This example shows how to create a multi-window plotter by specifying the
 <code class="docutils literal notranslate"><span class="pre">shape</span></code> parameter.  The window generated is a two by two window by setting
-<code class="docutils literal notranslate"><span class="pre">shape=(2,</span> <span class="pre">2)</span></code>. Use the <a class="reference internal" href="../../tools/plotting.html#vista.BasePlotter.subplot" title="vista.BasePlotter.subplot"><code class="xref py py-func docutils literal notranslate"><span class="pre">vista.BasePlotter.subplot()</span></code></a> function to select
+<code class="docutils literal notranslate"><span class="pre">shape=(2,</span> <span class="pre">2)</span></code>. Use the <a class="reference internal" href="../../tools/plotting.html#pyvista.BasePlotter.subplot" title="pyvista.BasePlotter.subplot"><code class="xref py py-func docutils literal notranslate"><span class="pre">pyvista.BasePlotter.subplot()</span></code></a> function to select
 the subplot you wish to be the active subplot.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">plotter</span> <span class="o">=</span> <span class="n">vista</span><span class="o">.</span><span class="n">Plotter</span><span class="p">(</span><span class="n">shape</span><span class="o">=</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">))</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">plotter</span> <span class="o">=</span> <span class="n">pyvista</span><span class="o">.</span><span class="n">Plotter</span><span class="p">(</span><span class="n">shape</span><span class="o">=</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">))</span>
 
 <span class="n">plotter</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span>
 <span class="n">plotter</span><span class="o">.</span><span class="n">add_text</span><span class="p">(</span><span class="s1">&#39;Render Window 0&#39;</span><span class="p">,</span> <span class="n">position</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">font_size</span><span class="o">=</span><span class="mi">30</span><span class="p">)</span>
@@ -242,11 +242,11 @@ the subplot you wish to be the active subplot.</p>
 
 <span class="n">plotter</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
 <span class="n">plotter</span><span class="o">.</span><span class="n">add_text</span><span class="p">(</span><span class="s1">&#39;Render Window 1&#39;</span><span class="p">,</span> <span class="n">font_size</span><span class="o">=</span><span class="mi">30</span><span class="p">)</span>
-<span class="n">plotter</span><span class="o">.</span><span class="n">add_mesh</span><span class="p">(</span><span class="n">vista</span><span class="o">.</span><span class="n">Cube</span><span class="p">(),</span> <span class="n">show_edges</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;tan&#39;</span><span class="p">)</span>
+<span class="n">plotter</span><span class="o">.</span><span class="n">add_mesh</span><span class="p">(</span><span class="n">pyvista</span><span class="o">.</span><span class="n">Cube</span><span class="p">(),</span> <span class="n">show_edges</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;tan&#39;</span><span class="p">)</span>
 
 <span class="n">plotter</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
 <span class="n">plotter</span><span class="o">.</span><span class="n">add_text</span><span class="p">(</span><span class="s1">&#39;Render Window 2&#39;</span><span class="p">,</span> <span class="n">font_size</span><span class="o">=</span><span class="mi">30</span><span class="p">)</span>
-<span class="n">sphere</span> <span class="o">=</span> <span class="n">vista</span><span class="o">.</span><span class="n">Sphere</span><span class="p">()</span>
+<span class="n">sphere</span> <span class="o">=</span> <span class="n">pyvista</span><span class="o">.</span><span class="n">Sphere</span><span class="p">()</span>
 <span class="n">plotter</span><span class="o">.</span><span class="n">add_mesh</span><span class="p">(</span><span class="n">sphere</span><span class="p">,</span> <span class="n">scalars</span><span class="o">=</span><span class="n">sphere</span><span class="o">.</span><span class="n">points</span><span class="p">[:,</span> <span class="mi">2</span><span class="p">])</span>
 <span class="n">plotter</span><span class="o">.</span><span class="n">add_scalar_bar</span><span class="p">(</span><span class="s1">&#39;Z&#39;</span><span class="p">)</span>
 <span class="c1"># plotter.add_axes()</span>
@@ -254,7 +254,7 @@ the subplot you wish to be the active subplot.</p>
 
 <span class="n">plotter</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
 <span class="n">plotter</span><span class="o">.</span><span class="n">add_text</span><span class="p">(</span><span class="s1">&#39;Render Window 3&#39;</span><span class="p">,</span> <span class="n">font_size</span><span class="o">=</span><span class="mi">30</span><span class="p">)</span>
-<span class="n">plotter</span><span class="o">.</span><span class="n">add_mesh</span><span class="p">(</span><span class="n">vista</span><span class="o">.</span><span class="n">Cone</span><span class="p">(),</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;g&#39;</span><span class="p">,</span> <span class="n">show_edges</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">plotter</span><span class="o">.</span><span class="n">add_mesh</span><span class="p">(</span><span class="n">pyvista</span><span class="o">.</span><span class="n">Cone</span><span class="p">(),</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;g&#39;</span><span class="p">,</span> <span class="n">show_edges</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 <span class="n">plotter</span><span class="o">.</span><span class="n">show_bounds</span><span class="p">(</span><span class="n">all_edges</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 
 <span class="c1"># Display the window</span>
@@ -262,7 +262,7 @@ the subplot you wish to be the active subplot.</p>
 </pre></div>
 </div>
 <img alt="../../_images/sphx_glr_plot-multi-window_001.png" class="sphx-glr-single-img" src="../../_images/sphx_glr_plot-multi-window_001.png" />
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">plotter</span> <span class="o">=</span> <span class="n">vista</span><span class="o">.</span><span class="n">Plotter</span><span class="p">(</span><span class="n">shape</span><span class="o">=</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">))</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">plotter</span> <span class="o">=</span> <span class="n">pyvista</span><span class="o">.</span><span class="n">Plotter</span><span class="p">(</span><span class="n">shape</span><span class="o">=</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">))</span>
 
 <span class="c1"># Note that the (0, 0) location is active by default</span>
 <span class="c1"># load and plot an airplane on the left half of the screen</span>
@@ -279,13 +279,13 @@ the subplot you wish to be the active subplot.</p>
 </pre></div>
 </div>
 <img alt="../../_images/sphx_glr_plot-multi-window_002.png" class="sphx-glr-single-img" src="../../_images/sphx_glr_plot-multi-window_002.png" />
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  3.755 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  3.868 seconds)</p>
 <div class="sphx-glr-footer class sphx-glr-footer-example docutils container" id="sphx-glr-download-examples-02-plot-plot-multi-window-py">
 <div class="sphx-glr-download docutils container">
-<p><a class="reference download internal" download="" href="../../_downloads/5a4a709fa018adeaebcf99ff98d29a42/plot-multi-window.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">plot-multi-window.py</span></code></a></p>
+<p><a class="reference download internal" download="" href="../../_downloads/1029870de3a2593219174b9be63a9062/plot-multi-window.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">plot-multi-window.py</span></code></a></p>
 </div>
 <div class="sphx-glr-download docutils container">
-<p><a class="reference download internal" download="" href="../../_downloads/4009901f93b98009e28e4291ca1491c5/plot-multi-window.ipynb"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Jupyter</span> <span class="pre">notebook:</span> <span class="pre">plot-multi-window.ipynb</span></code></a></p>
+<p><a class="reference download internal" download="" href="../../_downloads/32514cbddb4dd5004615bf8191500f7b/plot-multi-window.ipynb"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Jupyter</span> <span class="pre">notebook:</span> <span class="pre">plot-multi-window.ipynb</span></code></a></p>
 </div>
 </div>
 <p class="sphx-glr-signature"><a class="reference external" href="https://sphinx-gallery.readthedocs.io">Gallery generated by Sphinx-Gallery</a></p>
@@ -311,7 +311,7 @@ the subplot you wish to be the active subplot.</p>
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2017-2019, The vista Developers
+        &copy; Copyright 2017-2019, The PyVista Developers
 
     </p>
   </div>

@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Computing Surface Normals &mdash; vista 0.19.0 documentation</title>
+  <title>Computing Surface Normals &mdash; PyVista 0.19.0 documentation</title>
   
 
   
@@ -61,7 +61,7 @@
 
           
             
-            <img src="../../_static/vista_logo.png" class="logo" alt="Logo"/>
+            <img src="../../_static/pyvista_logo.png" class="logo" alt="Logo"/>
           
           </a>
 
@@ -95,7 +95,7 @@
             
               <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../index.html">About</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../why.html">Why <code class="docutils literal notranslate"><span class="pre">vista</span></code>?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../why.html">Why PyVista?</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../authors.html">Authors</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Getting Started</span></p>
@@ -142,7 +142,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../../tools/plotting.html">Plotting</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../tools/filters.html">Filters</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../tools/ipy_tools.html">IPython Tools</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../tools/qt_plotting.html">vista PyQt Interface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../tools/qt_plotting.html">PyVista PyQt Interface</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../tools/utilities.html">Utilities</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Contributing</span></p>
@@ -164,7 +164,7 @@
       <nav class="wy-nav-top" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../../index.html">vista</a>
+          <a href="../../index.html">PyVista</a>
         
       </nav>
 
@@ -204,7 +204,7 @@
         
             
             
-              <a href="https://github.com/pyvista/vista/blob/master/docs/examples/01-filter/compute-normals.rst" class="fa fa-github"> Edit on GitHub</a>
+              <a href="https://github.com/pyvista/pyvista/blob/master/docs/examples/01-filter/compute-normals.rst" class="fa fa-github"> Edit on GitHub</a>
             
           
         
@@ -226,11 +226,11 @@
 <span id="sphx-glr-examples-01-filter-compute-normals-py"></span><h1>Computing Surface Normals<a class="headerlink" href="#computing-surface-normals" title="Permalink to this headline">¶</a></h1>
 <p>Compute normals on a surface.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># sphinx_gallery_thumbnail_number = 2</span>
-<span class="kn">import</span> <span class="nn">vista</span>
-<span class="kn">from</span> <span class="nn">vista</span> <span class="k">import</span> <span class="n">examples</span>
+<span class="kn">import</span> <span class="nn">pyvista</span>
+<span class="kn">from</span> <span class="nn">pyvista</span> <span class="k">import</span> <span class="n">examples</span>
 </pre></div>
 </div>
-<p>Computing the normals of a surace is quite easy using <a class="reference internal" href="../../types/points.html#vista.PolyData" title="vista.PolyData"><code class="xref py py-class docutils literal notranslate"><span class="pre">vista.PolyData</span></code></a>’s
+<p>Computing the normals of a surace is quite easy using <a class="reference internal" href="../../types/points.html#pyvista.PolyData" title="pyvista.PolyData"><code class="xref py py-class docutils literal notranslate"><span class="pre">pyvista.PolyData</span></code></a>’s
 <code class="docutils literal notranslate"><span class="pre">compute_normals</span></code> method</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mesh</span> <span class="o">=</span> <span class="n">examples</span><span class="o">.</span><span class="n">download_topo_global</span><span class="p">()</span>
 <span class="n">mesh</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">cmap</span><span class="o">=</span><span class="s1">&#39;gist_earth&#39;</span><span class="p">,</span> <span class="n">show_scalar_bar</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
@@ -239,7 +239,7 @@
 <img alt="../../_images/sphx_glr_compute-normals_001.png" class="sphx-glr-single-img" src="../../_images/sphx_glr_compute-normals_001.png" />
 <p>Now we have a surface dataset of the globe loaded - unfortunately, the dataset
 shows the globe with a uniform radius which hides topographic releif.
-Using <a class="reference internal" href="../../types/points.html#vista.PolyData.compute_normals" title="vista.PolyData.compute_normals"><code class="xref py py-func docutils literal notranslate"><span class="pre">vista.PolyData.compute_normals()</span></code></a>, we can compute the normal vectors
+Using <a class="reference internal" href="../../types/points.html#pyvista.PolyData.compute_normals" title="pyvista.PolyData.compute_normals"><code class="xref py py-func docutils literal notranslate"><span class="pre">pyvista.PolyData.compute_normals()</span></code></a>, we can compute the normal vectors
 on the globe at all points in the dataset, then use the values given in the
 dataset to warp the surface in the normals direction to create some
 exaggerated topographic relief.</p>
@@ -254,13 +254,13 @@ exaggerated topographic relief.</p>
 </pre></div>
 </div>
 <img alt="../../_images/sphx_glr_compute-normals_002.png" class="sphx-glr-single-img" src="../../_images/sphx_glr_compute-normals_002.png" />
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  16.034 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  16.840 seconds)</p>
 <div class="sphx-glr-footer class sphx-glr-footer-example docutils container" id="sphx-glr-download-examples-01-filter-compute-normals-py">
 <div class="sphx-glr-download docutils container">
-<p><a class="reference download internal" download="" href="../../_downloads/8ce0cd5e21ab77911ee840de8b25a066/compute-normals.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">compute-normals.py</span></code></a></p>
+<p><a class="reference download internal" download="" href="../../_downloads/586a4ef89a47a23651e9c825ebb6159a/compute-normals.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">compute-normals.py</span></code></a></p>
 </div>
 <div class="sphx-glr-download docutils container">
-<p><a class="reference download internal" download="" href="../../_downloads/99b451bf5f59982097a345ca5c4f93d2/compute-normals.ipynb"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Jupyter</span> <span class="pre">notebook:</span> <span class="pre">compute-normals.ipynb</span></code></a></p>
+<p><a class="reference download internal" download="" href="../../_downloads/d68f5c146331b420bc23dc2f6388dcd7/compute-normals.ipynb"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Jupyter</span> <span class="pre">notebook:</span> <span class="pre">compute-normals.ipynb</span></code></a></p>
 </div>
 </div>
 <p class="sphx-glr-signature"><a class="reference external" href="https://sphinx-gallery.readthedocs.io">Gallery generated by Sphinx-Gallery</a></p>
@@ -286,7 +286,7 @@ exaggerated topographic relief.</p>
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2017-2019, The vista Developers
+        &copy; Copyright 2017-2019, The PyVista Developers
 
     </p>
   </div>

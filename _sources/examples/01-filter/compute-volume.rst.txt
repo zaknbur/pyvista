@@ -18,8 +18,8 @@ Calculate mass properties such as the volume or area of datasets
 
     # sphinx_gallery_thumbnail_number = 4
     import numpy as np
-    import vista
-    from vista import examples
+    import pyvista
+    from pyvista import examples
 
 
 
@@ -27,9 +27,9 @@ Calculate mass properties such as the volume or area of datasets
 
 
 
-Computing mass properties such as the volume or area of datasetsin ``vista``
-is quite easy using the :func:`vista.DataSetFilters.compute_cell_sizes` filter
-and the :attr:`vista.Common.volume` property on all ``vista`` meshes.
+Computing mass properties such as the volume or area of datasetsin PyVista
+is quite easy using the :func:`pyvista.DataSetFilters.compute_cell_sizes` filter
+and the :attr:`pyvista.Common.volume` property on all PyVista meshes.
 
 Let's get started with a simple gridded mesh:
 
@@ -179,8 +179,8 @@ Splitting Volumes
 
 What if instead, we wanted to split all the different connected bodies/volumes
 in a dataset like the one above? We could use the
-:func:`vista.DataSetFilters.split_bodies` filter to extract all the different
-connected volumes in a dataset into blocks in a :class:`vista.MultiBlock`
+:func:`pyvista.DataSetFilters.split_bodies` filter to extract all the different
+connected volumes in a dataset into blocks in a :class:`pyvista.MultiBlock`
 dataset. For example, lets split the thresholded volume in the example above:
 
 
@@ -336,7 +336,7 @@ And visualize all the different volumes:
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  21.928 seconds)
+   **Total running time of the script:** ( 0 minutes  21.820 seconds)
 
 
 .. _sphx_glr_download_examples_01-filter_compute-volume.py:

@@ -17,8 +17,8 @@ sphinx_gallery_thumbnail_number = 2
 
 .. code-block:: default
 
-    import vista
-    from vista import examples
+    import pyvista
+    from pyvista import examples
 
     mesh = examples.download_cow()
 
@@ -31,7 +31,7 @@ sphinx_gallery_thumbnail_number = 2
     rot = mesh.copy()
     rot.rotate_y(90)
 
-    p = vista.Plotter()
+    p = pyvista.Plotter()
     p.add_mesh(mesh, color='Crimson', **dargs)
     p.add_mesh(rot, color='mintcream', opacity=0.35, **dargs)
     p.camera_position = cpos
@@ -82,7 +82,7 @@ disply the results
 .. code-block:: default
 
 
-    p = vista.Plotter()
+    p = pyvista.Plotter()
     p.add_mesh(outside, color='Crimson', **dargs)
     p.add_mesh(inside, color='green', **dargs)
     p.add_mesh(rot, color='mintcream', opacity=0.35, **dargs)
@@ -101,7 +101,7 @@ disply the results
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  3.801 seconds)
+   **Total running time of the script:** ( 0 minutes  3.863 seconds)
 
 
 .. _sphx_glr_download_examples_01-filter_extract-cells-inside-surface.py:

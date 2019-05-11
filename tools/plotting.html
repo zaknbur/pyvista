@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Plotting &mdash; vista 0.19.0 documentation</title>
+  <title>Plotting &mdash; PyVista 0.19.0 documentation</title>
   
 
   
@@ -61,7 +61,7 @@
 
           
             
-            <img src="../_static/vista_logo.png" class="logo" alt="Logo"/>
+            <img src="../_static/pyvista_logo.png" class="logo" alt="Logo"/>
           
           </a>
 
@@ -95,7 +95,7 @@
             
               <ul>
 <li class="toctree-l1"><a class="reference internal" href="../index.html">About</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../why.html">Why <code class="docutils literal notranslate"><span class="pre">vista</span></code>?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../why.html">Why PyVista?</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../authors.html">Authors</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Getting Started</span></p>
@@ -133,7 +133,7 @@
 </li>
 <li class="toctree-l1"><a class="reference internal" href="filters.html">Filters</a></li>
 <li class="toctree-l1"><a class="reference internal" href="ipy_tools.html">IPython Tools</a></li>
-<li class="toctree-l1"><a class="reference internal" href="qt_plotting.html">vista PyQt Interface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="qt_plotting.html">PyVista PyQt Interface</a></li>
 <li class="toctree-l1"><a class="reference internal" href="utilities.html">Utilities</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Contributing</span></p>
@@ -155,7 +155,7 @@
       <nav class="wy-nav-top" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../index.html">vista</a>
+          <a href="../index.html">PyVista</a>
         
       </nav>
 
@@ -193,7 +193,7 @@
         
             
             
-              <a href="https://github.com/pyvista/vista/blob/master/docs/tools/plotting.rst" class="fa fa-github"> Edit on GitHub</a>
+              <a href="https://github.com/pyvista/pyvista/blob/master/docs/tools/plotting.rst" class="fa fa-github"> Edit on GitHub</a>
             
           
         
@@ -263,8 +263,8 @@ shortcuts are available:</p>
 <div class="section" id="convenience-functions">
 <h2>Convenience Functions<a class="headerlink" href="#convenience-functions" title="Permalink to this headline">¶</a></h2>
 <dl class="function">
-<dt id="vista.plot">
-<code class="descclassname">vista.</code><code class="descname">plot</code><span class="sig-paren">(</span><em>var_item</em>, <em>off_screen=None</em>, <em>full_screen=False</em>, <em>screenshot=None</em>, <em>interactive=True</em>, <em>cpos=None</em>, <em>window_size=None</em>, <em>show_bounds=False</em>, <em>show_axes=True</em>, <em>notebook=None</em>, <em>background=None</em>, <em>text=''</em>, <em>return_img=False</em>, <em>eye_dome_lighting=False</em>, <em>use_panel=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#vista.plot" title="Permalink to this definition">¶</a></dt>
+<dt id="pyvista.plot">
+<code class="descclassname">pyvista.</code><code class="descname">plot</code><span class="sig-paren">(</span><em>var_item</em>, <em>off_screen=None</em>, <em>full_screen=False</em>, <em>screenshot=None</em>, <em>interactive=True</em>, <em>cpos=None</em>, <em>window_size=None</em>, <em>show_bounds=False</em>, <em>show_axes=True</em>, <em>notebook=None</em>, <em>background=None</em>, <em>text=''</em>, <em>return_img=False</em>, <em>eye_dome_lighting=False</em>, <em>use_panel=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.plot" title="Permalink to this definition">¶</a></dt>
 <dd><p>Convenience plotting function for a vtk or numpy object.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -275,7 +275,7 @@ without a window popping up.</p></li>
 <li><p><strong>full_screen</strong> (<em>bool</em><em>, </em><em>optional</em>) – Opens window in full screen.  When enabled, ignores window_size.
 Default False.</p></li>
 <li><p><strong>screenshot</strong> (<em>str</em><em> or </em><em>bool</em><em>, </em><em>optional</em>) – <p>Saves screenshot to file when enabled.  See:
-help(vistanterface.Plotter.screenshot).  Default disabled.</p>
+help(pyvistanterface.Plotter.screenshot).  Default disabled.</p>
 <p>When True, takes screenshot and returns numpy array of image.</p>
 </p></li>
 <li><p><strong>window_size</strong> (<em>list</em><em>, </em><em>optional</em>) – Window size in pixels.  Defaults to [1024, 768]</p></li>
@@ -302,8 +302,8 @@ Returned only when screenshot enabled</p></li>
 </dd></dl>
 
 <dl class="function">
-<dt id="vista.plot_arrows">
-<code class="descclassname">vista.</code><code class="descname">plot_arrows</code><span class="sig-paren">(</span><em>cent</em>, <em>direction</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#vista.plot_arrows" title="Permalink to this definition">¶</a></dt>
+<dt id="pyvista.plot_arrows">
+<code class="descclassname">pyvista.</code><code class="descname">plot_arrows</code><span class="sig-paren">(</span><em>cent</em>, <em>direction</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.plot_arrows" title="Permalink to this definition">¶</a></dt>
 <dd><p>Plots arrows as vectors</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -311,29 +311,29 @@ Returned only when screenshot enabled</p></li>
 <li><p><strong>cent</strong> (<em>np.ndarray</em>) – Accepts a single 3d point or array of 3d points.</p></li>
 <li><p><strong>directions</strong> (<em>np.ndarray</em>) – Accepts a single 3d point or array of 3d vectors.
 Must contain the same number of items as cent.</p></li>
-<li><p><strong>**kwargs</strong> (<em>additional arguments</em><em>, </em><em>optional</em>) – See help(vista.Plot)</p></li>
+<li><p><strong>**kwargs</strong> (<em>additional arguments</em><em>, </em><em>optional</em>) – See help(pyvista.Plot)</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns</dt>
 <dd class="field-even"><p></p>
 </dd>
 <dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p>Same as Plot.  See help(vista.Plot)</p>
+<dd class="field-odd"><p>Same as Plot.  See help(pyvista.Plot)</p>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="function">
-<dt id="vista.set_plot_theme">
-<code class="descclassname">vista.</code><code class="descname">set_plot_theme</code><span class="sig-paren">(</span><em>theme</em><span class="sig-paren">)</span><a class="headerlink" href="#vista.set_plot_theme" title="Permalink to this definition">¶</a></dt>
+<dt id="pyvista.set_plot_theme">
+<code class="descclassname">pyvista.</code><code class="descname">set_plot_theme</code><span class="sig-paren">(</span><em>theme</em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.set_plot_theme" title="Permalink to this definition">¶</a></dt>
 <dd><p>Set the plotting parameters to a predefined theme</p>
 </dd></dl>
 
 </div>
 <div class="section" id="base-plotter">
 <h2>Base Plotter<a class="headerlink" href="#base-plotter" title="Permalink to this headline">¶</a></h2>
-<p>The base plotter class that all <code class="docutils literal notranslate"><span class="pre">vista</span></code> plotters inherit. Please note that the
-<a class="reference internal" href="qt_plotting.html#vista.BackgroundPlotter" title="vista.BackgroundPlotter"><code class="xref py py-class docutils literal notranslate"><span class="pre">vista.BackgroundPlotter</span></code></a> is documented under <a class="reference internal" href="qt_plotting.html#qt-ref"><span class="std std-ref">vista PyQt Interface</span></a>.</p>
+<p>The base plotter class that all PyVista plotters inherit. Please note that the
+<a class="reference internal" href="qt_plotting.html#pyvista.BackgroundPlotter" title="pyvista.BackgroundPlotter"><code class="xref py py-class docutils literal notranslate"><span class="pre">pyvista.BackgroundPlotter</span></code></a> is documented under <a class="reference internal" href="qt_plotting.html#qt-ref"><span class="std std-ref">PyVista PyQt Interface</span></a>.</p>
 <p class="rubric">Attributes</p>
 <table class="longtable docutils align-center">
 <colgroup>
@@ -341,37 +341,37 @@ Must contain the same number of items as cent.</p></li>
 <col style="width: 90%" />
 </colgroup>
 <tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="#vista.BasePlotter.background_color" title="vista.BasePlotter.background_color"><code class="xref py py-obj docutils literal notranslate"><span class="pre">background_color</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pyvista.BasePlotter.background_color" title="pyvista.BasePlotter.background_color"><code class="xref py py-obj docutils literal notranslate"><span class="pre">background_color</span></code></a></p></td>
 <td><p>Returns background color of the first render window</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#vista.BasePlotter.bounds" title="vista.BasePlotter.bounds"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bounds</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#pyvista.BasePlotter.bounds" title="pyvista.BasePlotter.bounds"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bounds</span></code></a></p></td>
 <td><p>Returns the bounds of the active renderer</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#vista.BasePlotter.camera" title="vista.BasePlotter.camera"><code class="xref py py-obj docutils literal notranslate"><span class="pre">camera</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pyvista.BasePlotter.camera" title="pyvista.BasePlotter.camera"><code class="xref py py-obj docutils literal notranslate"><span class="pre">camera</span></code></a></p></td>
 <td><p>The active camera of the active renderer</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#vista.BasePlotter.camera_position" title="vista.BasePlotter.camera_position"><code class="xref py py-obj docutils literal notranslate"><span class="pre">camera_position</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#pyvista.BasePlotter.camera_position" title="pyvista.BasePlotter.camera_position"><code class="xref py py-obj docutils literal notranslate"><span class="pre">camera_position</span></code></a></p></td>
 <td><p>Returns camera position of the active render window</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#vista.BasePlotter.camera_set" title="vista.BasePlotter.camera_set"><code class="xref py py-obj docutils literal notranslate"><span class="pre">camera_set</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pyvista.BasePlotter.camera_set" title="pyvista.BasePlotter.camera_set"><code class="xref py py-obj docutils literal notranslate"><span class="pre">camera_set</span></code></a></p></td>
 <td><p>Returns if the camera of the active renderer has been set</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#vista.BasePlotter.center" title="vista.BasePlotter.center"><code class="xref py py-obj docutils literal notranslate"><span class="pre">center</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#pyvista.BasePlotter.center" title="pyvista.BasePlotter.center"><code class="xref py py-obj docutils literal notranslate"><span class="pre">center</span></code></a></p></td>
 <td><p>Returns the center of the active renderer</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#vista.BasePlotter.image" title="vista.BasePlotter.image"><code class="xref py py-obj docutils literal notranslate"><span class="pre">image</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pyvista.BasePlotter.image" title="pyvista.BasePlotter.image"><code class="xref py py-obj docutils literal notranslate"><span class="pre">image</span></code></a></p></td>
 <td><p>Returns an image array of current render window</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#vista.BasePlotter.image_depth" title="vista.BasePlotter.image_depth"><code class="xref py py-obj docutils literal notranslate"><span class="pre">image_depth</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#pyvista.BasePlotter.image_depth" title="pyvista.BasePlotter.image_depth"><code class="xref py py-obj docutils literal notranslate"><span class="pre">image_depth</span></code></a></p></td>
 <td><p>Returns an image array of current render window</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#vista.BasePlotter.renderer" title="vista.BasePlotter.renderer"><code class="xref py py-obj docutils literal notranslate"><span class="pre">renderer</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pyvista.BasePlotter.renderer" title="pyvista.BasePlotter.renderer"><code class="xref py py-obj docutils literal notranslate"><span class="pre">renderer</span></code></a></p></td>
 <td><p>simply returns the active renderer</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#vista.BasePlotter.scale" title="vista.BasePlotter.scale"><code class="xref py py-obj docutils literal notranslate"><span class="pre">scale</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#pyvista.BasePlotter.scale" title="pyvista.BasePlotter.scale"><code class="xref py py-obj docutils literal notranslate"><span class="pre">scale</span></code></a></p></td>
 <td><p>The scaling of the active renderer.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#vista.BasePlotter.window_size" title="vista.BasePlotter.window_size"><code class="xref py py-obj docutils literal notranslate"><span class="pre">window_size</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pyvista.BasePlotter.window_size" title="pyvista.BasePlotter.window_size"><code class="xref py py-obj docutils literal notranslate"><span class="pre">window_size</span></code></a></p></td>
 <td><p>returns render window size</p></td>
 </tr>
 </tbody>
@@ -383,218 +383,218 @@ Must contain the same number of items as cent.</p></li>
 <col style="width: 90%" />
 </colgroup>
 <tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="#vista.BasePlotter.add_actor" title="vista.BasePlotter.add_actor"><code class="xref py py-obj docutils literal notranslate"><span class="pre">add_actor</span></code></a>(uinput[, reset_camera, name, loc, …])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pyvista.BasePlotter.add_actor" title="pyvista.BasePlotter.add_actor"><code class="xref py py-obj docutils literal notranslate"><span class="pre">add_actor</span></code></a>(uinput[, reset_camera, name, loc, …])</p></td>
 <td><p>Adds an actor to render window.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#vista.BasePlotter.add_arrows" title="vista.BasePlotter.add_arrows"><code class="xref py py-obj docutils literal notranslate"><span class="pre">add_arrows</span></code></a>(cent, direction[, mag])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#pyvista.BasePlotter.add_arrows" title="pyvista.BasePlotter.add_arrows"><code class="xref py py-obj docutils literal notranslate"><span class="pre">add_arrows</span></code></a>(cent, direction[, mag])</p></td>
 <td><p>Adds arrows to plotting object</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#vista.BasePlotter.add_axes" title="vista.BasePlotter.add_axes"><code class="xref py py-obj docutils literal notranslate"><span class="pre">add_axes</span></code></a>([interactive, color])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pyvista.BasePlotter.add_axes" title="pyvista.BasePlotter.add_axes"><code class="xref py py-obj docutils literal notranslate"><span class="pre">add_axes</span></code></a>([interactive, color])</p></td>
 <td><p>Add an interactive axes widget</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#vista.BasePlotter.add_axes_at_origin" title="vista.BasePlotter.add_axes_at_origin"><code class="xref py py-obj docutils literal notranslate"><span class="pre">add_axes_at_origin</span></code></a>([loc])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#pyvista.BasePlotter.add_axes_at_origin" title="pyvista.BasePlotter.add_axes_at_origin"><code class="xref py py-obj docutils literal notranslate"><span class="pre">add_axes_at_origin</span></code></a>([loc])</p></td>
 <td><p>Add axes actor at the origin of a render window.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#vista.BasePlotter.add_bounding_box" title="vista.BasePlotter.add_bounding_box"><code class="xref py py-obj docutils literal notranslate"><span class="pre">add_bounding_box</span></code></a>([color, corner_factor, …])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pyvista.BasePlotter.add_bounding_box" title="pyvista.BasePlotter.add_bounding_box"><code class="xref py py-obj docutils literal notranslate"><span class="pre">add_bounding_box</span></code></a>([color, corner_factor, …])</p></td>
 <td><p>Adds an unlabeled and unticked box at the boundaries of plot.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#vista.BasePlotter.add_bounds_axes" title="vista.BasePlotter.add_bounds_axes"><code class="xref py py-obj docutils literal notranslate"><span class="pre">add_bounds_axes</span></code></a>(*args, **kwargs)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#pyvista.BasePlotter.add_bounds_axes" title="pyvista.BasePlotter.add_bounds_axes"><code class="xref py py-obj docutils literal notranslate"><span class="pre">add_bounds_axes</span></code></a>(*args, **kwargs)</p></td>
 <td><p>Deprecated</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#vista.BasePlotter.add_legend" title="vista.BasePlotter.add_legend"><code class="xref py py-obj docutils literal notranslate"><span class="pre">add_legend</span></code></a>([labels, bcolor, border, size, name])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pyvista.BasePlotter.add_legend" title="pyvista.BasePlotter.add_legend"><code class="xref py py-obj docutils literal notranslate"><span class="pre">add_legend</span></code></a>([labels, bcolor, border, size, name])</p></td>
 <td><p>Adds a legend to render window.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#vista.BasePlotter.add_lines" title="vista.BasePlotter.add_lines"><code class="xref py py-obj docutils literal notranslate"><span class="pre">add_lines</span></code></a>(lines[, color, width, label, name])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#pyvista.BasePlotter.add_lines" title="pyvista.BasePlotter.add_lines"><code class="xref py py-obj docutils literal notranslate"><span class="pre">add_lines</span></code></a>(lines[, color, width, label, name])</p></td>
 <td><p>Adds lines to the plotting object.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#vista.BasePlotter.add_mesh" title="vista.BasePlotter.add_mesh"><code class="xref py py-obj docutils literal notranslate"><span class="pre">add_mesh</span></code></a>(mesh[, color, style, scalars, rng, …])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pyvista.BasePlotter.add_mesh" title="pyvista.BasePlotter.add_mesh"><code class="xref py py-obj docutils literal notranslate"><span class="pre">add_mesh</span></code></a>(mesh[, color, style, scalars, rng, …])</p></td>
 <td><p>Adds a unstructured, structured, or surface mesh to the plotting object.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#vista.BasePlotter.add_point_labels" title="vista.BasePlotter.add_point_labels"><code class="xref py py-obj docutils literal notranslate"><span class="pre">add_point_labels</span></code></a>(points, labels[, italic, …])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#pyvista.BasePlotter.add_point_labels" title="pyvista.BasePlotter.add_point_labels"><code class="xref py py-obj docutils literal notranslate"><span class="pre">add_point_labels</span></code></a>(points, labels[, italic, …])</p></td>
 <td><p>Creates a point actor with one label from list labels assigned to each point.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#vista.BasePlotter.add_point_scalar_labels" title="vista.BasePlotter.add_point_scalar_labels"><code class="xref py py-obj docutils literal notranslate"><span class="pre">add_point_scalar_labels</span></code></a>(points, labels[, …])</p></td>
-<td><p>Wrapper for <a class="reference internal" href="#vista.BasePlotter.add_point_labels" title="vista.BasePlotter.add_point_labels"><code class="xref py py-func docutils literal notranslate"><span class="pre">vista.BasePlotter.add_point_labels()</span></code></a> that will label points from a dataset with their scalar values.</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pyvista.BasePlotter.add_point_scalar_labels" title="pyvista.BasePlotter.add_point_scalar_labels"><code class="xref py py-obj docutils literal notranslate"><span class="pre">add_point_scalar_labels</span></code></a>(points, labels[, …])</p></td>
+<td><p>Wrapper for <a class="reference internal" href="#pyvista.BasePlotter.add_point_labels" title="pyvista.BasePlotter.add_point_labels"><code class="xref py py-func docutils literal notranslate"><span class="pre">pyvista.BasePlotter.add_point_labels()</span></code></a> that will label points from a dataset with their scalar values.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#vista.BasePlotter.add_points" title="vista.BasePlotter.add_points"><code class="xref py py-obj docutils literal notranslate"><span class="pre">add_points</span></code></a>(points, **kwargs)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#pyvista.BasePlotter.add_points" title="pyvista.BasePlotter.add_points"><code class="xref py py-obj docutils literal notranslate"><span class="pre">add_points</span></code></a>(points, **kwargs)</p></td>
 <td><p>Add points to a mesh</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#vista.BasePlotter.add_scalar_bar" title="vista.BasePlotter.add_scalar_bar"><code class="xref py py-obj docutils literal notranslate"><span class="pre">add_scalar_bar</span></code></a>([title, n_labels, italic, …])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pyvista.BasePlotter.add_scalar_bar" title="pyvista.BasePlotter.add_scalar_bar"><code class="xref py py-obj docutils literal notranslate"><span class="pre">add_scalar_bar</span></code></a>([title, n_labels, italic, …])</p></td>
 <td><p>Creates scalar bar using the ranges as set by the last input mesh.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#vista.BasePlotter.add_text" title="vista.BasePlotter.add_text"><code class="xref py py-obj docutils literal notranslate"><span class="pre">add_text</span></code></a>(text[, position, font_size, color, …])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#pyvista.BasePlotter.add_text" title="pyvista.BasePlotter.add_text"><code class="xref py py-obj docutils literal notranslate"><span class="pre">add_text</span></code></a>(text[, position, font_size, color, …])</p></td>
 <td><p>Adds text to plot object in the top left corner by default</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#vista.BasePlotter.clear" title="vista.BasePlotter.clear"><code class="xref py py-obj docutils literal notranslate"><span class="pre">clear</span></code></a>()</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pyvista.BasePlotter.clear" title="pyvista.BasePlotter.clear"><code class="xref py py-obj docutils literal notranslate"><span class="pre">clear</span></code></a>()</p></td>
 <td><p>Clears plot by removing all actors and properties</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#vista.BasePlotter.close" title="vista.BasePlotter.close"><code class="xref py py-obj docutils literal notranslate"><span class="pre">close</span></code></a>()</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#pyvista.BasePlotter.close" title="pyvista.BasePlotter.close"><code class="xref py py-obj docutils literal notranslate"><span class="pre">close</span></code></a>()</p></td>
 <td><p>closes render window</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#vista.BasePlotter.disable" title="vista.BasePlotter.disable"><code class="xref py py-obj docutils literal notranslate"><span class="pre">disable</span></code></a>()</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pyvista.BasePlotter.disable" title="pyvista.BasePlotter.disable"><code class="xref py py-obj docutils literal notranslate"><span class="pre">disable</span></code></a>()</p></td>
 <td><p>Disable this renderer’s camera from being interactive</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#vista.BasePlotter.disable_eye_dome_lighting" title="vista.BasePlotter.disable_eye_dome_lighting"><code class="xref py py-obj docutils literal notranslate"><span class="pre">disable_eye_dome_lighting</span></code></a>()</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#pyvista.BasePlotter.disable_eye_dome_lighting" title="pyvista.BasePlotter.disable_eye_dome_lighting"><code class="xref py py-obj docutils literal notranslate"><span class="pre">disable_eye_dome_lighting</span></code></a>()</p></td>
 <td><p>Disable eye dome lighting (EDL) for active renderer</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#vista.BasePlotter.enable" title="vista.BasePlotter.enable"><code class="xref py py-obj docutils literal notranslate"><span class="pre">enable</span></code></a>()</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pyvista.BasePlotter.enable" title="pyvista.BasePlotter.enable"><code class="xref py py-obj docutils literal notranslate"><span class="pre">enable</span></code></a>()</p></td>
 <td><p>Enable this renderer’s camera to be interactive</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#vista.BasePlotter.enable_cell_picking" title="vista.BasePlotter.enable_cell_picking"><code class="xref py py-obj docutils literal notranslate"><span class="pre">enable_cell_picking</span></code></a>([mesh, callback])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#pyvista.BasePlotter.enable_cell_picking" title="pyvista.BasePlotter.enable_cell_picking"><code class="xref py py-obj docutils literal notranslate"><span class="pre">enable_cell_picking</span></code></a>([mesh, callback])</p></td>
 <td><p>Enables picking of cells.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#vista.BasePlotter.enable_eye_dome_lighting" title="vista.BasePlotter.enable_eye_dome_lighting"><code class="xref py py-obj docutils literal notranslate"><span class="pre">enable_eye_dome_lighting</span></code></a>()</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pyvista.BasePlotter.enable_eye_dome_lighting" title="pyvista.BasePlotter.enable_eye_dome_lighting"><code class="xref py py-obj docutils literal notranslate"><span class="pre">enable_eye_dome_lighting</span></code></a>()</p></td>
 <td><p>Enable eye dome lighting (EDL) for active renderer</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#vista.BasePlotter.enable_image_style" title="vista.BasePlotter.enable_image_style"><code class="xref py py-obj docutils literal notranslate"><span class="pre">enable_image_style</span></code></a>()</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#pyvista.BasePlotter.enable_image_style" title="pyvista.BasePlotter.enable_image_style"><code class="xref py py-obj docutils literal notranslate"><span class="pre">enable_image_style</span></code></a>()</p></td>
 <td><p>sets the interactive style to image</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#vista.BasePlotter.enable_joystick_style" title="vista.BasePlotter.enable_joystick_style"><code class="xref py py-obj docutils literal notranslate"><span class="pre">enable_joystick_style</span></code></a>()</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pyvista.BasePlotter.enable_joystick_style" title="pyvista.BasePlotter.enable_joystick_style"><code class="xref py py-obj docutils literal notranslate"><span class="pre">enable_joystick_style</span></code></a>()</p></td>
 <td><p>sets the interactive style to joystick</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#vista.BasePlotter.enable_rubber_band_style" title="vista.BasePlotter.enable_rubber_band_style"><code class="xref py py-obj docutils literal notranslate"><span class="pre">enable_rubber_band_style</span></code></a>()</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#pyvista.BasePlotter.enable_rubber_band_style" title="pyvista.BasePlotter.enable_rubber_band_style"><code class="xref py py-obj docutils literal notranslate"><span class="pre">enable_rubber_band_style</span></code></a>()</p></td>
 <td><p>sets the interactive style to rubber band picking</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#vista.BasePlotter.enable_terrain_style" title="vista.BasePlotter.enable_terrain_style"><code class="xref py py-obj docutils literal notranslate"><span class="pre">enable_terrain_style</span></code></a>()</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pyvista.BasePlotter.enable_terrain_style" title="pyvista.BasePlotter.enable_terrain_style"><code class="xref py py-obj docutils literal notranslate"><span class="pre">enable_terrain_style</span></code></a>()</p></td>
 <td><p>sets the interactive style to terrain</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#vista.BasePlotter.enable_trackball_style" title="vista.BasePlotter.enable_trackball_style"><code class="xref py py-obj docutils literal notranslate"><span class="pre">enable_trackball_style</span></code></a>()</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#pyvista.BasePlotter.enable_trackball_style" title="pyvista.BasePlotter.enable_trackball_style"><code class="xref py py-obj docutils literal notranslate"><span class="pre">enable_trackball_style</span></code></a>()</p></td>
 <td><p>sets the interactive style to trackball - the default syle</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#vista.BasePlotter.enable_zoom_style" title="vista.BasePlotter.enable_zoom_style"><code class="xref py py-obj docutils literal notranslate"><span class="pre">enable_zoom_style</span></code></a>()</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pyvista.BasePlotter.enable_zoom_style" title="pyvista.BasePlotter.enable_zoom_style"><code class="xref py py-obj docutils literal notranslate"><span class="pre">enable_zoom_style</span></code></a>()</p></td>
 <td><p>sets the interactive style to rubber band zoom</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#vista.BasePlotter.export_vtkjs" title="vista.BasePlotter.export_vtkjs"><code class="xref py py-obj docutils literal notranslate"><span class="pre">export_vtkjs</span></code></a>(filename[, compress_arrays])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#pyvista.BasePlotter.export_vtkjs" title="pyvista.BasePlotter.export_vtkjs"><code class="xref py py-obj docutils literal notranslate"><span class="pre">export_vtkjs</span></code></a>(filename[, compress_arrays])</p></td>
 <td><p>Export the current rendering scene as a VTKjs scene for rendering in a web browser</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#vista.BasePlotter.fly_to" title="vista.BasePlotter.fly_to"><code class="xref py py-obj docutils literal notranslate"><span class="pre">fly_to</span></code></a>()</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pyvista.BasePlotter.fly_to" title="pyvista.BasePlotter.fly_to"><code class="xref py py-obj docutils literal notranslate"><span class="pre">fly_to</span></code></a>()</p></td>
 <td><p>Given a position point, move the current camera’s focal point to that point.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#vista.BasePlotter.generate_orbital_path" title="vista.BasePlotter.generate_orbital_path"><code class="xref py py-obj docutils literal notranslate"><span class="pre">generate_orbital_path</span></code></a>([factor, n_points, …])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#pyvista.BasePlotter.generate_orbital_path" title="pyvista.BasePlotter.generate_orbital_path"><code class="xref py py-obj docutils literal notranslate"><span class="pre">generate_orbital_path</span></code></a>([factor, n_points, …])</p></td>
 <td><p>Genrates an orbital path around the data scene</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#vista.BasePlotter.get_default_cam_pos" title="vista.BasePlotter.get_default_cam_pos"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_default_cam_pos</span></code></a>()</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pyvista.BasePlotter.get_default_cam_pos" title="pyvista.BasePlotter.get_default_cam_pos"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_default_cam_pos</span></code></a>()</p></td>
 <td><p>Return the default camera position of the active renderer</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#vista.BasePlotter.hide_axes" title="vista.BasePlotter.hide_axes"><code class="xref py py-obj docutils literal notranslate"><span class="pre">hide_axes</span></code></a>()</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#pyvista.BasePlotter.hide_axes" title="pyvista.BasePlotter.hide_axes"><code class="xref py py-obj docutils literal notranslate"><span class="pre">hide_axes</span></code></a>()</p></td>
 <td><p>Hide the axes orientation widget</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#vista.BasePlotter.index_to_loc" title="vista.BasePlotter.index_to_loc"><code class="xref py py-obj docutils literal notranslate"><span class="pre">index_to_loc</span></code></a>(index)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pyvista.BasePlotter.index_to_loc" title="pyvista.BasePlotter.index_to_loc"><code class="xref py py-obj docutils literal notranslate"><span class="pre">index_to_loc</span></code></a>(index)</p></td>
 <td><p>Convert a 1D index location to the 2D location on the plotting grid</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#vista.BasePlotter.isometric_view" title="vista.BasePlotter.isometric_view"><code class="xref py py-obj docutils literal notranslate"><span class="pre">isometric_view</span></code></a>()</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#pyvista.BasePlotter.isometric_view" title="pyvista.BasePlotter.isometric_view"><code class="xref py py-obj docutils literal notranslate"><span class="pre">isometric_view</span></code></a>()</p></td>
 <td><p>DEPRECATED: Please use <code class="docutils literal notranslate"><span class="pre">view_isometric</span></code></p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#vista.BasePlotter.isometric_view_interactive" title="vista.BasePlotter.isometric_view_interactive"><code class="xref py py-obj docutils literal notranslate"><span class="pre">isometric_view_interactive</span></code></a>()</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pyvista.BasePlotter.isometric_view_interactive" title="pyvista.BasePlotter.isometric_view_interactive"><code class="xref py py-obj docutils literal notranslate"><span class="pre">isometric_view_interactive</span></code></a>()</p></td>
 <td><p>sets the current interactive render window to isometric view</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#vista.BasePlotter.key_press_event" title="vista.BasePlotter.key_press_event"><code class="xref py py-obj docutils literal notranslate"><span class="pre">key_press_event</span></code></a>(obj, event)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#pyvista.BasePlotter.key_press_event" title="pyvista.BasePlotter.key_press_event"><code class="xref py py-obj docutils literal notranslate"><span class="pre">key_press_event</span></code></a>(obj, event)</p></td>
 <td><p>Listens for key press event</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#vista.BasePlotter.left_button_down" title="vista.BasePlotter.left_button_down"><code class="xref py py-obj docutils literal notranslate"><span class="pre">left_button_down</span></code></a>(obj, event_type)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pyvista.BasePlotter.left_button_down" title="pyvista.BasePlotter.left_button_down"><code class="xref py py-obj docutils literal notranslate"><span class="pre">left_button_down</span></code></a>(obj, event_type)</p></td>
 <td><p>Register the event for a left button down click</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#vista.BasePlotter.loc_to_index" title="vista.BasePlotter.loc_to_index"><code class="xref py py-obj docutils literal notranslate"><span class="pre">loc_to_index</span></code></a>(loc)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#pyvista.BasePlotter.loc_to_index" title="pyvista.BasePlotter.loc_to_index"><code class="xref py py-obj docutils literal notranslate"><span class="pre">loc_to_index</span></code></a>(loc)</p></td>
 <td><p>Return index of the render window given a location index.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#vista.BasePlotter.open_gif" title="vista.BasePlotter.open_gif"><code class="xref py py-obj docutils literal notranslate"><span class="pre">open_gif</span></code></a>(filename)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pyvista.BasePlotter.open_gif" title="pyvista.BasePlotter.open_gif"><code class="xref py py-obj docutils literal notranslate"><span class="pre">open_gif</span></code></a>(filename)</p></td>
 <td><p>Open a gif file.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#vista.BasePlotter.open_movie" title="vista.BasePlotter.open_movie"><code class="xref py py-obj docutils literal notranslate"><span class="pre">open_movie</span></code></a>(filename[, framerate])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#pyvista.BasePlotter.open_movie" title="pyvista.BasePlotter.open_movie"><code class="xref py py-obj docutils literal notranslate"><span class="pre">open_movie</span></code></a>(filename[, framerate])</p></td>
 <td><p>Establishes a connection to the ffmpeg writer</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#vista.BasePlotter.orbit_on_path" title="vista.BasePlotter.orbit_on_path"><code class="xref py py-obj docutils literal notranslate"><span class="pre">orbit_on_path</span></code></a>([path, focus, step, viewup, bkg])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pyvista.BasePlotter.orbit_on_path" title="pyvista.BasePlotter.orbit_on_path"><code class="xref py py-obj docutils literal notranslate"><span class="pre">orbit_on_path</span></code></a>([path, focus, step, viewup, bkg])</p></td>
 <td><p>Orbit on the given path focusing on the focus point</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#vista.BasePlotter.remove_actor" title="vista.BasePlotter.remove_actor"><code class="xref py py-obj docutils literal notranslate"><span class="pre">remove_actor</span></code></a>(actor[, reset_camera])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#pyvista.BasePlotter.remove_actor" title="pyvista.BasePlotter.remove_actor"><code class="xref py py-obj docutils literal notranslate"><span class="pre">remove_actor</span></code></a>(actor[, reset_camera])</p></td>
 <td><p>Removes an actor from the Plotter.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#vista.BasePlotter.remove_bounding_box" title="vista.BasePlotter.remove_bounding_box"><code class="xref py py-obj docutils literal notranslate"><span class="pre">remove_bounding_box</span></code></a>([loc])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pyvista.BasePlotter.remove_bounding_box" title="pyvista.BasePlotter.remove_bounding_box"><code class="xref py py-obj docutils literal notranslate"><span class="pre">remove_bounding_box</span></code></a>([loc])</p></td>
 <td><p>Removes bounding box from the active renderer.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#vista.BasePlotter.remove_bounds_axes" title="vista.BasePlotter.remove_bounds_axes"><code class="xref py py-obj docutils literal notranslate"><span class="pre">remove_bounds_axes</span></code></a>([loc])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#pyvista.BasePlotter.remove_bounds_axes" title="pyvista.BasePlotter.remove_bounds_axes"><code class="xref py py-obj docutils literal notranslate"><span class="pre">remove_bounds_axes</span></code></a>([loc])</p></td>
 <td><p>Removes bounds axes from the active renderer.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#vista.BasePlotter.remove_legend" title="vista.BasePlotter.remove_legend"><code class="xref py py-obj docutils literal notranslate"><span class="pre">remove_legend</span></code></a>()</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pyvista.BasePlotter.remove_legend" title="pyvista.BasePlotter.remove_legend"><code class="xref py py-obj docutils literal notranslate"><span class="pre">remove_legend</span></code></a>()</p></td>
 <td><p>Removes legend actor</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#vista.BasePlotter.remove_scalar_bar" title="vista.BasePlotter.remove_scalar_bar"><code class="xref py py-obj docutils literal notranslate"><span class="pre">remove_scalar_bar</span></code></a>()</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#pyvista.BasePlotter.remove_scalar_bar" title="pyvista.BasePlotter.remove_scalar_bar"><code class="xref py py-obj docutils literal notranslate"><span class="pre">remove_scalar_bar</span></code></a>()</p></td>
 <td><p>Removes scalar bar</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#vista.BasePlotter.reset_camera" title="vista.BasePlotter.reset_camera"><code class="xref py py-obj docutils literal notranslate"><span class="pre">reset_camera</span></code></a>()</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pyvista.BasePlotter.reset_camera" title="pyvista.BasePlotter.reset_camera"><code class="xref py py-obj docutils literal notranslate"><span class="pre">reset_camera</span></code></a>()</p></td>
 <td><p>Reset camera so it slides along the vector defined from camera position to focal point until all of the actors can be seen.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#vista.BasePlotter.screenshot" title="vista.BasePlotter.screenshot"><code class="xref py py-obj docutils literal notranslate"><span class="pre">screenshot</span></code></a>([filename, …])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#pyvista.BasePlotter.screenshot" title="pyvista.BasePlotter.screenshot"><code class="xref py py-obj docutils literal notranslate"><span class="pre">screenshot</span></code></a>([filename, …])</p></td>
 <td><p>Takes screenshot at current camera position</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#vista.BasePlotter.set_background" title="vista.BasePlotter.set_background"><code class="xref py py-obj docutils literal notranslate"><span class="pre">set_background</span></code></a>(color[, loc])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pyvista.BasePlotter.set_background" title="pyvista.BasePlotter.set_background"><code class="xref py py-obj docutils literal notranslate"><span class="pre">set_background</span></code></a>(color[, loc])</p></td>
 <td><p>Sets background color</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#vista.BasePlotter.set_focus" title="vista.BasePlotter.set_focus"><code class="xref py py-obj docutils literal notranslate"><span class="pre">set_focus</span></code></a>(point)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#pyvista.BasePlotter.set_focus" title="pyvista.BasePlotter.set_focus"><code class="xref py py-obj docutils literal notranslate"><span class="pre">set_focus</span></code></a>(point)</p></td>
 <td><p>sets focus to a point</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#vista.BasePlotter.set_position" title="vista.BasePlotter.set_position"><code class="xref py py-obj docutils literal notranslate"><span class="pre">set_position</span></code></a>(point[, reset])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pyvista.BasePlotter.set_position" title="pyvista.BasePlotter.set_position"><code class="xref py py-obj docutils literal notranslate"><span class="pre">set_position</span></code></a>(point[, reset])</p></td>
 <td><p>sets camera position to a point</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#vista.BasePlotter.set_scale" title="vista.BasePlotter.set_scale"><code class="xref py py-obj docutils literal notranslate"><span class="pre">set_scale</span></code></a>([xscale, yscale, zscale, reset_camera])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#pyvista.BasePlotter.set_scale" title="pyvista.BasePlotter.set_scale"><code class="xref py py-obj docutils literal notranslate"><span class="pre">set_scale</span></code></a>([xscale, yscale, zscale, reset_camera])</p></td>
 <td><p>Scale all the datasets in the scene of the active renderer.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#vista.BasePlotter.set_viewup" title="vista.BasePlotter.set_viewup"><code class="xref py py-obj docutils literal notranslate"><span class="pre">set_viewup</span></code></a>(vector)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pyvista.BasePlotter.set_viewup" title="pyvista.BasePlotter.set_viewup"><code class="xref py py-obj docutils literal notranslate"><span class="pre">set_viewup</span></code></a>(vector)</p></td>
 <td><p>sets camera viewup vector</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#vista.BasePlotter.show_axes" title="vista.BasePlotter.show_axes"><code class="xref py py-obj docutils literal notranslate"><span class="pre">show_axes</span></code></a>()</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#pyvista.BasePlotter.show_axes" title="pyvista.BasePlotter.show_axes"><code class="xref py py-obj docutils literal notranslate"><span class="pre">show_axes</span></code></a>()</p></td>
 <td><p>Show the axes orientation widget</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#vista.BasePlotter.show_bounds" title="vista.BasePlotter.show_bounds"><code class="xref py py-obj docutils literal notranslate"><span class="pre">show_bounds</span></code></a>([mesh, bounds, show_xaxis, …])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pyvista.BasePlotter.show_bounds" title="pyvista.BasePlotter.show_bounds"><code class="xref py py-obj docutils literal notranslate"><span class="pre">show_bounds</span></code></a>([mesh, bounds, show_xaxis, …])</p></td>
 <td><p>Adds bounds axes.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#vista.BasePlotter.show_grid" title="vista.BasePlotter.show_grid"><code class="xref py py-obj docutils literal notranslate"><span class="pre">show_grid</span></code></a>(**kwargs)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#pyvista.BasePlotter.show_grid" title="pyvista.BasePlotter.show_grid"><code class="xref py py-obj docutils literal notranslate"><span class="pre">show_grid</span></code></a>(**kwargs)</p></td>
 <td><p>A wrapped implementation of <code class="docutils literal notranslate"><span class="pre">show_bounds</span></code> to change default behaviour to use gridlines and showing the axes labels on the outer edges.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#vista.BasePlotter.subplot" title="vista.BasePlotter.subplot"><code class="xref py py-obj docutils literal notranslate"><span class="pre">subplot</span></code></a>(index_x, index_y)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pyvista.BasePlotter.subplot" title="pyvista.BasePlotter.subplot"><code class="xref py py-obj docutils literal notranslate"><span class="pre">subplot</span></code></a>(index_x, index_y)</p></td>
 <td><p>Sets the active subplot.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#vista.BasePlotter.update" title="vista.BasePlotter.update"><code class="xref py py-obj docutils literal notranslate"><span class="pre">update</span></code></a>([stime, force_redraw])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#pyvista.BasePlotter.update" title="pyvista.BasePlotter.update"><code class="xref py py-obj docutils literal notranslate"><span class="pre">update</span></code></a>([stime, force_redraw])</p></td>
 <td><p>Update window, redraw, process messages query</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#vista.BasePlotter.update_bounds_axes" title="vista.BasePlotter.update_bounds_axes"><code class="xref py py-obj docutils literal notranslate"><span class="pre">update_bounds_axes</span></code></a>()</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pyvista.BasePlotter.update_bounds_axes" title="pyvista.BasePlotter.update_bounds_axes"><code class="xref py py-obj docutils literal notranslate"><span class="pre">update_bounds_axes</span></code></a>()</p></td>
 <td><p>Update the bounds of the active renderer</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#vista.BasePlotter.update_coordinates" title="vista.BasePlotter.update_coordinates"><code class="xref py py-obj docutils literal notranslate"><span class="pre">update_coordinates</span></code></a>(points[, mesh, render])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#pyvista.BasePlotter.update_coordinates" title="pyvista.BasePlotter.update_coordinates"><code class="xref py py-obj docutils literal notranslate"><span class="pre">update_coordinates</span></code></a>(points[, mesh, render])</p></td>
 <td><p>Updates the points of the an object in the plotter.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#vista.BasePlotter.update_scalar_bar_range" title="vista.BasePlotter.update_scalar_bar_range"><code class="xref py py-obj docutils literal notranslate"><span class="pre">update_scalar_bar_range</span></code></a>(clim[, name])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pyvista.BasePlotter.update_scalar_bar_range" title="pyvista.BasePlotter.update_scalar_bar_range"><code class="xref py py-obj docutils literal notranslate"><span class="pre">update_scalar_bar_range</span></code></a>(clim[, name])</p></td>
 <td><p>Update the value range of the active or named scalar bar.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#vista.BasePlotter.update_scalars" title="vista.BasePlotter.update_scalars"><code class="xref py py-obj docutils literal notranslate"><span class="pre">update_scalars</span></code></a>(scalars[, mesh, render])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#pyvista.BasePlotter.update_scalars" title="pyvista.BasePlotter.update_scalars"><code class="xref py py-obj docutils literal notranslate"><span class="pre">update_scalars</span></code></a>(scalars[, mesh, render])</p></td>
 <td><p>Updates scalars of the an object in the plotter.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#vista.BasePlotter.update_style" title="vista.BasePlotter.update_style"><code class="xref py py-obj docutils literal notranslate"><span class="pre">update_style</span></code></a>()</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pyvista.BasePlotter.update_style" title="pyvista.BasePlotter.update_style"><code class="xref py py-obj docutils literal notranslate"><span class="pre">update_style</span></code></a>()</p></td>
 <td><p></p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#vista.BasePlotter.view_isometric" title="vista.BasePlotter.view_isometric"><code class="xref py py-obj docutils literal notranslate"><span class="pre">view_isometric</span></code></a>()</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#pyvista.BasePlotter.view_isometric" title="pyvista.BasePlotter.view_isometric"><code class="xref py py-obj docutils literal notranslate"><span class="pre">view_isometric</span></code></a>()</p></td>
 <td><p>Resets the camera to a default isometric view showing all the actors in the scene.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#vista.BasePlotter.view_vector" title="vista.BasePlotter.view_vector"><code class="xref py py-obj docutils literal notranslate"><span class="pre">view_vector</span></code></a>(vector[, viewup])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pyvista.BasePlotter.view_vector" title="pyvista.BasePlotter.view_vector"><code class="xref py py-obj docutils literal notranslate"><span class="pre">view_vector</span></code></a>(vector[, viewup])</p></td>
 <td><p></p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#vista.BasePlotter.view_xy" title="vista.BasePlotter.view_xy"><code class="xref py py-obj docutils literal notranslate"><span class="pre">view_xy</span></code></a>([negative])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#pyvista.BasePlotter.view_xy" title="pyvista.BasePlotter.view_xy"><code class="xref py py-obj docutils literal notranslate"><span class="pre">view_xy</span></code></a>([negative])</p></td>
 <td><p>View the XY plane</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#vista.BasePlotter.view_xz" title="vista.BasePlotter.view_xz"><code class="xref py py-obj docutils literal notranslate"><span class="pre">view_xz</span></code></a>([negative])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pyvista.BasePlotter.view_xz" title="pyvista.BasePlotter.view_xz"><code class="xref py py-obj docutils literal notranslate"><span class="pre">view_xz</span></code></a>([negative])</p></td>
 <td><p>View the XZ plane</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#vista.BasePlotter.view_yz" title="vista.BasePlotter.view_yz"><code class="xref py py-obj docutils literal notranslate"><span class="pre">view_yz</span></code></a>([negative])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#pyvista.BasePlotter.view_yz" title="pyvista.BasePlotter.view_yz"><code class="xref py py-obj docutils literal notranslate"><span class="pre">view_yz</span></code></a>([negative])</p></td>
 <td><p>View the YZ plane</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#vista.BasePlotter.write_frame" title="vista.BasePlotter.write_frame"><code class="xref py py-obj docutils literal notranslate"><span class="pre">write_frame</span></code></a>()</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pyvista.BasePlotter.write_frame" title="pyvista.BasePlotter.write_frame"><code class="xref py py-obj docutils literal notranslate"><span class="pre">write_frame</span></code></a>()</p></td>
 <td><p>Writes a single frame to the movie file</p></td>
 </tr>
 </tbody>
 </table>
 <dl class="class">
-<dt id="vista.BasePlotter">
-<em class="property">class </em><code class="descclassname">vista.</code><code class="descname">BasePlotter</code><span class="sig-paren">(</span><em>shape=(1</em>, <em>1)</em>, <em>border=None</em>, <em>border_color='k'</em>, <em>border_width=1.0</em><span class="sig-paren">)</span><a class="headerlink" href="#vista.BasePlotter" title="Permalink to this definition">¶</a></dt>
+<dt id="pyvista.BasePlotter">
+<em class="property">class </em><code class="descclassname">pyvista.</code><code class="descname">BasePlotter</code><span class="sig-paren">(</span><em>shape=(1</em>, <em>1)</em>, <em>border=None</em>, <em>border_color='k'</em>, <em>border_width=1.0</em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.BasePlotter" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <p>To be used by the Plotter and QtInteractor classes.</p>
 <dl class="field-list simple">
@@ -617,8 +617,8 @@ color=’#FFFFFF’</p>
 </dd>
 </dl>
 <dl class="method">
-<dt id="vista.BasePlotter.add_actor">
-<code class="descname">add_actor</code><span class="sig-paren">(</span><em>uinput</em>, <em>reset_camera=False</em>, <em>name=None</em>, <em>loc=None</em>, <em>culling=False</em><span class="sig-paren">)</span><a class="headerlink" href="#vista.BasePlotter.add_actor" title="Permalink to this definition">¶</a></dt>
+<dt id="pyvista.BasePlotter.add_actor">
+<code class="descname">add_actor</code><span class="sig-paren">(</span><em>uinput</em>, <em>reset_camera=False</em>, <em>name=None</em>, <em>loc=None</em>, <em>culling=False</em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.BasePlotter.add_actor" title="Permalink to this definition">¶</a></dt>
 <dd><p>Adds an actor to render window.  Creates an actor if input is
 a mapper.</p>
 <dl class="field-list simple">
@@ -646,20 +646,20 @@ meshes to be partially displayed.  Default False.</p></li>
 </dd></dl>
 
 <dl class="method">
-<dt id="vista.BasePlotter.add_arrows">
-<code class="descname">add_arrows</code><span class="sig-paren">(</span><em>cent</em>, <em>direction</em>, <em>mag=1</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#vista.BasePlotter.add_arrows" title="Permalink to this definition">¶</a></dt>
+<dt id="pyvista.BasePlotter.add_arrows">
+<code class="descname">add_arrows</code><span class="sig-paren">(</span><em>cent</em>, <em>direction</em>, <em>mag=1</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.BasePlotter.add_arrows" title="Permalink to this definition">¶</a></dt>
 <dd><p>Adds arrows to plotting object</p>
 </dd></dl>
 
 <dl class="method">
-<dt id="vista.BasePlotter.add_axes">
-<code class="descname">add_axes</code><span class="sig-paren">(</span><em>interactive=None</em>, <em>color=None</em><span class="sig-paren">)</span><a class="headerlink" href="#vista.BasePlotter.add_axes" title="Permalink to this definition">¶</a></dt>
+<dt id="pyvista.BasePlotter.add_axes">
+<code class="descname">add_axes</code><span class="sig-paren">(</span><em>interactive=None</em>, <em>color=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.BasePlotter.add_axes" title="Permalink to this definition">¶</a></dt>
 <dd><p>Add an interactive axes widget</p>
 </dd></dl>
 
 <dl class="method">
-<dt id="vista.BasePlotter.add_axes_at_origin">
-<code class="descname">add_axes_at_origin</code><span class="sig-paren">(</span><em>loc=None</em><span class="sig-paren">)</span><a class="headerlink" href="#vista.BasePlotter.add_axes_at_origin" title="Permalink to this definition">¶</a></dt>
+<dt id="pyvista.BasePlotter.add_axes_at_origin">
+<code class="descname">add_axes_at_origin</code><span class="sig-paren">(</span><em>loc=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.BasePlotter.add_axes_at_origin" title="Permalink to this definition">¶</a></dt>
 <dd><p>Add axes actor at the origin of a render window.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -677,8 +677,8 @@ active render window.</p>
 </dd></dl>
 
 <dl class="method">
-<dt id="vista.BasePlotter.add_bounding_box">
-<code class="descname">add_bounding_box</code><span class="sig-paren">(</span><em>color=None</em>, <em>corner_factor=0.5</em>, <em>line_width=None</em>, <em>opacity=1.0</em>, <em>render_lines_as_tubes=False</em>, <em>lighting=None</em>, <em>reset_camera=None</em>, <em>loc=None</em><span class="sig-paren">)</span><a class="headerlink" href="#vista.BasePlotter.add_bounding_box" title="Permalink to this definition">¶</a></dt>
+<dt id="pyvista.BasePlotter.add_bounding_box">
+<code class="descname">add_bounding_box</code><span class="sig-paren">(</span><em>color=None</em>, <em>corner_factor=0.5</em>, <em>line_width=None</em>, <em>opacity=1.0</em>, <em>render_lines_as_tubes=False</em>, <em>lighting=None</em>, <em>reset_camera=None</em>, <em>loc=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.BasePlotter.add_bounding_box" title="Permalink to this definition">¶</a></dt>
 <dd><p>Adds an unlabeled and unticked box at the boundaries of
 plot.  Useful for when wanting to plot outer grids while
 still retaining all edges of the boundary.</p>
@@ -701,14 +701,14 @@ active Renderer.</p></li>
 </dd></dl>
 
 <dl class="method">
-<dt id="vista.BasePlotter.add_bounds_axes">
-<code class="descname">add_bounds_axes</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#vista.BasePlotter.add_bounds_axes" title="Permalink to this definition">¶</a></dt>
+<dt id="pyvista.BasePlotter.add_bounds_axes">
+<code class="descname">add_bounds_axes</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.BasePlotter.add_bounds_axes" title="Permalink to this definition">¶</a></dt>
 <dd><p>Deprecated</p>
 </dd></dl>
 
 <dl class="method">
-<dt id="vista.BasePlotter.add_legend">
-<code class="descname">add_legend</code><span class="sig-paren">(</span><em>labels=None</em>, <em>bcolor=(0.5</em>, <em>0.5</em>, <em>0.5)</em>, <em>border=False</em>, <em>size=None</em>, <em>name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#vista.BasePlotter.add_legend" title="Permalink to this definition">¶</a></dt>
+<dt id="pyvista.BasePlotter.add_legend">
+<code class="descname">add_legend</code><span class="sig-paren">(</span><em>labels=None</em>, <em>bcolor=(0.5</em>, <em>0.5</em>, <em>0.5)</em>, <em>border=False</em>, <em>size=None</em>, <em>name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.BasePlotter.add_legend" title="Permalink to this definition">¶</a></dt>
 <dd><p>Adds a legend to render window.  Entries must be a list
 containing one string and color entry for each item.</p>
 <dl class="field-list simple">
@@ -747,11 +747,11 @@ will be replaced by the new actor.</p></li>
 </dd>
 </dl>
 <p class="rubric">Examples</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">vista</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">vista</span> <span class="k">import</span> <span class="n">examples</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">pyvista</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">pyvista</span> <span class="k">import</span> <span class="n">examples</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">mesh</span> <span class="o">=</span> <span class="n">examples</span><span class="o">.</span><span class="n">load_hexbeam</span><span class="p">()</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">othermesh</span> <span class="o">=</span> <span class="n">examples</span><span class="o">.</span><span class="n">load_uniform</span><span class="p">()</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">plotter</span> <span class="o">=</span> <span class="n">vista</span><span class="o">.</span><span class="n">Plotter</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">plotter</span> <span class="o">=</span> <span class="n">pyvista</span><span class="o">.</span><span class="n">Plotter</span><span class="p">()</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">_</span> <span class="o">=</span> <span class="n">plotter</span><span class="o">.</span><span class="n">add_mesh</span><span class="p">(</span><span class="n">mesh</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;My Mesh&#39;</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">_</span> <span class="o">=</span> <span class="n">plotter</span><span class="o">.</span><span class="n">add_mesh</span><span class="p">(</span><span class="n">othermesh</span><span class="p">,</span> <span class="s1">&#39;k&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;My Other Mesh&#39;</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">_</span> <span class="o">=</span> <span class="n">plotter</span><span class="o">.</span><span class="n">add_legend</span><span class="p">()</span>
@@ -759,14 +759,14 @@ will be replaced by the new actor.</p></li>
 </pre></div>
 </div>
 <p>Alternative manual example</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">vista</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">vista</span> <span class="k">import</span> <span class="n">examples</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">pyvista</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">pyvista</span> <span class="k">import</span> <span class="n">examples</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">mesh</span> <span class="o">=</span> <span class="n">examples</span><span class="o">.</span><span class="n">load_hexbeam</span><span class="p">()</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">othermesh</span> <span class="o">=</span> <span class="n">examples</span><span class="o">.</span><span class="n">load_uniform</span><span class="p">()</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">legend_entries</span> <span class="o">=</span> <span class="p">[]</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">legend_entries</span><span class="o">.</span><span class="n">append</span><span class="p">([</span><span class="s1">&#39;My Mesh&#39;</span><span class="p">,</span> <span class="s1">&#39;w&#39;</span><span class="p">])</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">legend_entries</span><span class="o">.</span><span class="n">append</span><span class="p">([</span><span class="s1">&#39;My Other Mesh&#39;</span><span class="p">,</span> <span class="s1">&#39;k&#39;</span><span class="p">])</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">plotter</span> <span class="o">=</span> <span class="n">vista</span><span class="o">.</span><span class="n">Plotter</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">plotter</span> <span class="o">=</span> <span class="n">pyvista</span><span class="o">.</span><span class="n">Plotter</span><span class="p">()</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">_</span> <span class="o">=</span> <span class="n">plotter</span><span class="o">.</span><span class="n">add_mesh</span><span class="p">(</span><span class="n">mesh</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">_</span> <span class="o">=</span> <span class="n">plotter</span><span class="o">.</span><span class="n">add_mesh</span><span class="p">(</span><span class="n">othermesh</span><span class="p">,</span> <span class="s1">&#39;k&#39;</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">_</span> <span class="o">=</span> <span class="n">plotter</span><span class="o">.</span><span class="n">add_legend</span><span class="p">(</span><span class="n">legend_entries</span><span class="p">)</span>
@@ -776,13 +776,13 @@ will be replaced by the new actor.</p></li>
 </dd></dl>
 
 <dl class="method">
-<dt id="vista.BasePlotter.add_lines">
-<code class="descname">add_lines</code><span class="sig-paren">(</span><em>lines</em>, <em>color=(1</em>, <em>1</em>, <em>1)</em>, <em>width=5</em>, <em>label=None</em>, <em>name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#vista.BasePlotter.add_lines" title="Permalink to this definition">¶</a></dt>
+<dt id="pyvista.BasePlotter.add_lines">
+<code class="descname">add_lines</code><span class="sig-paren">(</span><em>lines</em>, <em>color=(1</em>, <em>1</em>, <em>1)</em>, <em>width=5</em>, <em>label=None</em>, <em>name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.BasePlotter.add_lines" title="Permalink to this definition">¶</a></dt>
 <dd><p>Adds lines to the plotting object.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>lines</strong> (<em>np.ndarray</em><em> or </em><a class="reference internal" href="../types/points.html#vista.PolyData" title="vista.PolyData"><em>vista.PolyData</em></a>) – <p>Points representing line segments.  For example, two line segments
+<li><p><strong>lines</strong> (<em>np.ndarray</em><em> or </em><a class="reference internal" href="../types/points.html#pyvista.PolyData" title="pyvista.PolyData"><em>pyvista.PolyData</em></a>) – <p>Points representing line segments.  For example, two line segments
 would be represented as:</p>
 <p>np.array([[0, 0, 0], [1, 0, 0], [1, 0, 0], [1, 1, 0]])</p>
 </p></li>
@@ -810,8 +810,8 @@ will be replaced by the new actor.</p></li>
 </dd></dl>
 
 <dl class="method">
-<dt id="vista.BasePlotter.add_mesh">
-<code class="descname">add_mesh</code><span class="sig-paren">(</span><em>mesh</em>, <em>color=None</em>, <em>style=None</em>, <em>scalars=None</em>, <em>rng=None</em>, <em>stitle=None</em>, <em>show_edges=None</em>, <em>point_size=5.0</em>, <em>opacity=1.0</em>, <em>line_width=None</em>, <em>flip_scalars=False</em>, <em>lighting=None</em>, <em>n_colors=256</em>, <em>interpolate_before_map=False</em>, <em>cmap=None</em>, <em>label=None</em>, <em>reset_camera=None</em>, <em>scalar_bar_args=None</em>, <em>multi_colors=False</em>, <em>name=None</em>, <em>texture=None</em>, <em>render_points_as_spheres=None</em>, <em>render_lines_as_tubes=False</em>, <em>edge_color=None</em>, <em>ambient=0.0</em>, <em>show_scalar_bar=None</em>, <em>nan_color=None</em>, <em>nan_opacity=1.0</em>, <em>loc=None</em>, <em>backface_culling=False</em>, <em>rgb=False</em>, <em>categories=False</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#vista.BasePlotter.add_mesh" title="Permalink to this definition">¶</a></dt>
+<dt id="pyvista.BasePlotter.add_mesh">
+<code class="descname">add_mesh</code><span class="sig-paren">(</span><em>mesh</em>, <em>color=None</em>, <em>style=None</em>, <em>scalars=None</em>, <em>rng=None</em>, <em>stitle=None</em>, <em>show_edges=None</em>, <em>point_size=5.0</em>, <em>opacity=1.0</em>, <em>line_width=None</em>, <em>flip_scalars=False</em>, <em>lighting=None</em>, <em>n_colors=256</em>, <em>interpolate_before_map=False</em>, <em>cmap=None</em>, <em>label=None</em>, <em>reset_camera=None</em>, <em>scalar_bar_args=None</em>, <em>multi_colors=False</em>, <em>name=None</em>, <em>texture=None</em>, <em>render_points_as_spheres=None</em>, <em>render_lines_as_tubes=False</em>, <em>edge_color=None</em>, <em>ambient=0.0</em>, <em>show_scalar_bar=None</em>, <em>nan_color=None</em>, <em>nan_opacity=1.0</em>, <em>loc=None</em>, <em>backface_culling=False</em>, <em>rgb=False</em>, <em>categories=False</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.BasePlotter.add_mesh" title="Permalink to this definition">¶</a></dt>
 <dd><p>Adds a unstructured, structured, or surface mesh to the
 plotting object.</p>
 <p>Also accepts a 3D numpy.ndarray</p>
@@ -904,16 +904,16 @@ the number of unique values in the scalar array will be used.</p></li>
 </dd></dl>
 
 <dl class="method">
-<dt id="vista.BasePlotter.add_point_labels">
-<code class="descname">add_point_labels</code><span class="sig-paren">(</span><em>points</em>, <em>labels</em>, <em>italic=False</em>, <em>bold=True</em>, <em>font_size=None</em>, <em>text_color=None</em>, <em>font_family=None</em>, <em>shadow=False</em>, <em>show_points=True</em>, <em>point_color=None</em>, <em>point_size=5</em>, <em>name=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#vista.BasePlotter.add_point_labels" title="Permalink to this definition">¶</a></dt>
+<dt id="pyvista.BasePlotter.add_point_labels">
+<code class="descname">add_point_labels</code><span class="sig-paren">(</span><em>points</em>, <em>labels</em>, <em>italic=False</em>, <em>bold=True</em>, <em>font_size=None</em>, <em>text_color=None</em>, <em>font_family=None</em>, <em>shadow=False</em>, <em>show_points=True</em>, <em>point_color=None</em>, <em>point_size=5</em>, <em>name=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.BasePlotter.add_point_labels" title="Permalink to this definition">¶</a></dt>
 <dd><p>Creates a point actor with one label from list labels assigned to
 each point.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>points</strong> (<em>np.ndarray</em><em> or </em><a class="reference internal" href="../types/common.html#vista.Common" title="vista.Common"><em>vista.Common</em></a>) – n x 3 numpy array of points or vista dataset with points</p></li>
+<li><p><strong>points</strong> (<em>np.ndarray</em><em> or </em><a class="reference internal" href="../types/common.html#pyvista.Common" title="pyvista.Common"><em>pyvista.Common</em></a>) – n x 3 numpy array of points or pyvista dataset with points</p></li>
 <li><p><strong>labels</strong> (<em>list</em><em> or </em><em>str</em>) – List of labels.  Must be the same length as points. If a string name
-is given with a vista.Common input for points, then these are fetched.</p></li>
+is given with a pyvista.Common input for points, then these are fetched.</p></li>
 <li><p><strong>italic</strong> (<em>bool</em><em>, </em><em>optional</em>) – Italicises title and bar labels.  Default False.</p></li>
 <li><p><strong>bold</strong> (<em>bool</em><em>, </em><em>optional</em>) – Bolds title and bar labels.  Default True</p></li>
 <li><p><strong>font_size</strong> (<em>float</em><em>, </em><em>optional</em>) – Sets the size of the title font.  Defaults to 16.</p></li>
@@ -952,14 +952,14 @@ will be replaced by the new actor.</p></li>
 </dd></dl>
 
 <dl class="method">
-<dt id="vista.BasePlotter.add_point_scalar_labels">
-<code class="descname">add_point_scalar_labels</code><span class="sig-paren">(</span><em>points</em>, <em>labels</em>, <em>fmt=None</em>, <em>preamble=''</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#vista.BasePlotter.add_point_scalar_labels" title="Permalink to this definition">¶</a></dt>
-<dd><p>Wrapper for <a class="reference internal" href="#vista.BasePlotter.add_point_labels" title="vista.BasePlotter.add_point_labels"><code class="xref py py-func docutils literal notranslate"><span class="pre">vista.BasePlotter.add_point_labels()</span></code></a> that will label
+<dt id="pyvista.BasePlotter.add_point_scalar_labels">
+<code class="descname">add_point_scalar_labels</code><span class="sig-paren">(</span><em>points</em>, <em>labels</em>, <em>fmt=None</em>, <em>preamble=''</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.BasePlotter.add_point_scalar_labels" title="Permalink to this definition">¶</a></dt>
+<dd><p>Wrapper for <a class="reference internal" href="#pyvista.BasePlotter.add_point_labels" title="pyvista.BasePlotter.add_point_labels"><code class="xref py py-func docutils literal notranslate"><span class="pre">pyvista.BasePlotter.add_point_labels()</span></code></a> that will label
 points from a dataset with their scalar values.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>points</strong> (<em>np.ndarray</em><em> or </em><a class="reference internal" href="../types/common.html#vista.Common" title="vista.Common"><em>vista.Common</em></a>) – n x 3 numpy array of points or vista dataset with points</p></li>
+<li><p><strong>points</strong> (<em>np.ndarray</em><em> or </em><a class="reference internal" href="../types/common.html#pyvista.Common" title="pyvista.Common"><em>pyvista.Common</em></a>) – n x 3 numpy array of points or pyvista dataset with points</p></li>
 <li><p><strong>labels</strong> (<em>str</em>) – String name of the point data array to use.</p></li>
 <li><p><strong>fmt</strong> (<em>str</em>) – String formatter used to format numerical data</p></li>
 </ul>
@@ -968,14 +968,14 @@ points from a dataset with their scalar values.</p>
 </dd></dl>
 
 <dl class="method">
-<dt id="vista.BasePlotter.add_points">
-<code class="descname">add_points</code><span class="sig-paren">(</span><em>points</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#vista.BasePlotter.add_points" title="Permalink to this definition">¶</a></dt>
+<dt id="pyvista.BasePlotter.add_points">
+<code class="descname">add_points</code><span class="sig-paren">(</span><em>points</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.BasePlotter.add_points" title="Permalink to this definition">¶</a></dt>
 <dd><p>Add points to a mesh</p>
 </dd></dl>
 
 <dl class="method">
-<dt id="vista.BasePlotter.add_scalar_bar">
-<code class="descname">add_scalar_bar</code><span class="sig-paren">(</span><em>title=None</em>, <em>n_labels=5</em>, <em>italic=False</em>, <em>bold=True</em>, <em>title_font_size=None</em>, <em>label_font_size=None</em>, <em>color=None</em>, <em>font_family=None</em>, <em>shadow=False</em>, <em>mapper=None</em>, <em>width=None</em>, <em>height=None</em>, <em>position_x=None</em>, <em>position_y=None</em>, <em>vertical=None</em>, <em>interactive=False</em>, <em>fmt=None</em>, <em>use_opacity=True</em>, <em>outline=False</em><span class="sig-paren">)</span><a class="headerlink" href="#vista.BasePlotter.add_scalar_bar" title="Permalink to this definition">¶</a></dt>
+<dt id="pyvista.BasePlotter.add_scalar_bar">
+<code class="descname">add_scalar_bar</code><span class="sig-paren">(</span><em>title=None</em>, <em>n_labels=5</em>, <em>italic=False</em>, <em>bold=True</em>, <em>title_font_size=None</em>, <em>label_font_size=None</em>, <em>color=None</em>, <em>font_family=None</em>, <em>shadow=False</em>, <em>mapper=None</em>, <em>width=None</em>, <em>height=None</em>, <em>position_x=None</em>, <em>position_y=None</em>, <em>vertical=None</em>, <em>interactive=False</em>, <em>fmt=None</em>, <em>use_opacity=True</em>, <em>outline=False</em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.BasePlotter.add_scalar_bar" title="Permalink to this definition">¶</a></dt>
 <dd><p>Creates scalar bar using the ranges as set by the last input
 mesh.</p>
 <dl class="field-list simple">
@@ -1018,8 +1018,8 @@ sizing for both the title and label.</p>
 </dd></dl>
 
 <dl class="method">
-<dt id="vista.BasePlotter.add_text">
-<code class="descname">add_text</code><span class="sig-paren">(</span><em>text</em>, <em>position=None</em>, <em>font_size=50</em>, <em>color=None</em>, <em>font=None</em>, <em>shadow=False</em>, <em>name=None</em>, <em>loc=None</em><span class="sig-paren">)</span><a class="headerlink" href="#vista.BasePlotter.add_text" title="Permalink to this definition">¶</a></dt>
+<dt id="pyvista.BasePlotter.add_text">
+<code class="descname">add_text</code><span class="sig-paren">(</span><em>text</em>, <em>position=None</em>, <em>font_size=50</em>, <em>color=None</em>, <em>font=None</em>, <em>shadow=False</em>, <em>name=None</em>, <em>loc=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.BasePlotter.add_text" title="Permalink to this definition">¶</a></dt>
 <dd><p>Adds text to plot object in the top left corner by default</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -1047,74 +1047,74 @@ will be replaced by the new actor.</p></li>
 </dd></dl>
 
 <dl class="attribute">
-<dt id="vista.BasePlotter.background_color">
-<code class="descname">background_color</code><a class="headerlink" href="#vista.BasePlotter.background_color" title="Permalink to this definition">¶</a></dt>
+<dt id="pyvista.BasePlotter.background_color">
+<code class="descname">background_color</code><a class="headerlink" href="#pyvista.BasePlotter.background_color" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns background color of the first render window</p>
 </dd></dl>
 
 <dl class="attribute">
-<dt id="vista.BasePlotter.bounds">
-<code class="descname">bounds</code><a class="headerlink" href="#vista.BasePlotter.bounds" title="Permalink to this definition">¶</a></dt>
+<dt id="pyvista.BasePlotter.bounds">
+<code class="descname">bounds</code><a class="headerlink" href="#pyvista.BasePlotter.bounds" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns the bounds of the active renderer</p>
 </dd></dl>
 
 <dl class="attribute">
-<dt id="vista.BasePlotter.camera">
-<code class="descname">camera</code><a class="headerlink" href="#vista.BasePlotter.camera" title="Permalink to this definition">¶</a></dt>
+<dt id="pyvista.BasePlotter.camera">
+<code class="descname">camera</code><a class="headerlink" href="#pyvista.BasePlotter.camera" title="Permalink to this definition">¶</a></dt>
 <dd><p>The active camera of the active renderer</p>
 </dd></dl>
 
 <dl class="attribute">
-<dt id="vista.BasePlotter.camera_position">
-<code class="descname">camera_position</code><a class="headerlink" href="#vista.BasePlotter.camera_position" title="Permalink to this definition">¶</a></dt>
+<dt id="pyvista.BasePlotter.camera_position">
+<code class="descname">camera_position</code><a class="headerlink" href="#pyvista.BasePlotter.camera_position" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns camera position of the active render window</p>
 </dd></dl>
 
 <dl class="attribute">
-<dt id="vista.BasePlotter.camera_set">
-<code class="descname">camera_set</code><a class="headerlink" href="#vista.BasePlotter.camera_set" title="Permalink to this definition">¶</a></dt>
+<dt id="pyvista.BasePlotter.camera_set">
+<code class="descname">camera_set</code><a class="headerlink" href="#pyvista.BasePlotter.camera_set" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns if the camera of the active renderer has been set</p>
 </dd></dl>
 
 <dl class="attribute">
-<dt id="vista.BasePlotter.center">
-<code class="descname">center</code><a class="headerlink" href="#vista.BasePlotter.center" title="Permalink to this definition">¶</a></dt>
+<dt id="pyvista.BasePlotter.center">
+<code class="descname">center</code><a class="headerlink" href="#pyvista.BasePlotter.center" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns the center of the active renderer</p>
 </dd></dl>
 
 <dl class="method">
-<dt id="vista.BasePlotter.clear">
-<code class="descname">clear</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#vista.BasePlotter.clear" title="Permalink to this definition">¶</a></dt>
+<dt id="pyvista.BasePlotter.clear">
+<code class="descname">clear</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.BasePlotter.clear" title="Permalink to this definition">¶</a></dt>
 <dd><p>Clears plot by removing all actors and properties</p>
 </dd></dl>
 
 <dl class="method">
-<dt id="vista.BasePlotter.close">
-<code class="descname">close</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#vista.BasePlotter.close" title="Permalink to this definition">¶</a></dt>
+<dt id="pyvista.BasePlotter.close">
+<code class="descname">close</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.BasePlotter.close" title="Permalink to this definition">¶</a></dt>
 <dd><p>closes render window</p>
 </dd></dl>
 
 <dl class="method">
-<dt id="vista.BasePlotter.disable">
-<code class="descname">disable</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#vista.BasePlotter.disable" title="Permalink to this definition">¶</a></dt>
+<dt id="pyvista.BasePlotter.disable">
+<code class="descname">disable</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.BasePlotter.disable" title="Permalink to this definition">¶</a></dt>
 <dd><p>Disable this renderer’s camera from being interactive</p>
 </dd></dl>
 
 <dl class="method">
-<dt id="vista.BasePlotter.disable_eye_dome_lighting">
-<code class="descname">disable_eye_dome_lighting</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#vista.BasePlotter.disable_eye_dome_lighting" title="Permalink to this definition">¶</a></dt>
+<dt id="pyvista.BasePlotter.disable_eye_dome_lighting">
+<code class="descname">disable_eye_dome_lighting</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.BasePlotter.disable_eye_dome_lighting" title="Permalink to this definition">¶</a></dt>
 <dd><p>Disable eye dome lighting (EDL) for active renderer</p>
 </dd></dl>
 
 <dl class="method">
-<dt id="vista.BasePlotter.enable">
-<code class="descname">enable</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#vista.BasePlotter.enable" title="Permalink to this definition">¶</a></dt>
+<dt id="pyvista.BasePlotter.enable">
+<code class="descname">enable</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.BasePlotter.enable" title="Permalink to this definition">¶</a></dt>
 <dd><p>Enable this renderer’s camera to be interactive</p>
 </dd></dl>
 
 <dl class="method">
-<dt id="vista.BasePlotter.enable_cell_picking">
-<code class="descname">enable_cell_picking</code><span class="sig-paren">(</span><em>mesh=None</em>, <em>callback=None</em><span class="sig-paren">)</span><a class="headerlink" href="#vista.BasePlotter.enable_cell_picking" title="Permalink to this definition">¶</a></dt>
+<dt id="pyvista.BasePlotter.enable_cell_picking">
+<code class="descname">enable_cell_picking</code><span class="sig-paren">(</span><em>mesh=None</em>, <em>callback=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.BasePlotter.enable_cell_picking" title="Permalink to this definition">¶</a></dt>
 <dd><p>Enables picking of cells.  Press r to enable retangle based
 selection.  Press “r” again to turn it off.  Selection will be
 saved to self.picked_cells.</p>
@@ -1132,14 +1132,14 @@ The picked_cells are input as the first parameter to this function.</p></li>
 </dd></dl>
 
 <dl class="method">
-<dt id="vista.BasePlotter.enable_eye_dome_lighting">
-<code class="descname">enable_eye_dome_lighting</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#vista.BasePlotter.enable_eye_dome_lighting" title="Permalink to this definition">¶</a></dt>
+<dt id="pyvista.BasePlotter.enable_eye_dome_lighting">
+<code class="descname">enable_eye_dome_lighting</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.BasePlotter.enable_eye_dome_lighting" title="Permalink to this definition">¶</a></dt>
 <dd><p>Enable eye dome lighting (EDL) for active renderer</p>
 </dd></dl>
 
 <dl class="method">
-<dt id="vista.BasePlotter.enable_image_style">
-<code class="descname">enable_image_style</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#vista.BasePlotter.enable_image_style" title="Permalink to this definition">¶</a></dt>
+<dt id="pyvista.BasePlotter.enable_image_style">
+<code class="descname">enable_image_style</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.BasePlotter.enable_image_style" title="Permalink to this definition">¶</a></dt>
 <dd><p>sets the interactive style to image</p>
 <dl class="simple">
 <dt>Controls:</dt><dd><ul class="simple">
@@ -1156,8 +1156,8 @@ The picked_cells are input as the first parameter to this function.</p></li>
 </dd></dl>
 
 <dl class="method">
-<dt id="vista.BasePlotter.enable_joystick_style">
-<code class="descname">enable_joystick_style</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#vista.BasePlotter.enable_joystick_style" title="Permalink to this definition">¶</a></dt>
+<dt id="pyvista.BasePlotter.enable_joystick_style">
+<code class="descname">enable_joystick_style</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.BasePlotter.enable_joystick_style" title="Permalink to this definition">¶</a></dt>
 <dd><p>sets the interactive style to joystick</p>
 <p>allows the user to move (rotate, pan, etc.) the camera, the point of
 view for the scene.  The position of the mouse relative to the center of
@@ -1171,8 +1171,8 @@ for zooming, and shift + left button is for panning.)</p>
 </dd></dl>
 
 <dl class="method">
-<dt id="vista.BasePlotter.enable_rubber_band_style">
-<code class="descname">enable_rubber_band_style</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#vista.BasePlotter.enable_rubber_band_style" title="Permalink to this definition">¶</a></dt>
+<dt id="pyvista.BasePlotter.enable_rubber_band_style">
+<code class="descname">enable_rubber_band_style</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.BasePlotter.enable_rubber_band_style" title="Permalink to this definition">¶</a></dt>
 <dd><p>sets the interactive style to rubber band picking</p>
 <p>This interactor style allows the user to draw a rectangle in the render
 window by hitting ‘r’ and then using the left mouse button.
@@ -1184,8 +1184,8 @@ rectangle. In other respects it behaves the same as its parent class.</p>
 </dd></dl>
 
 <dl class="method">
-<dt id="vista.BasePlotter.enable_terrain_style">
-<code class="descname">enable_terrain_style</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#vista.BasePlotter.enable_terrain_style" title="Permalink to this definition">¶</a></dt>
+<dt id="pyvista.BasePlotter.enable_terrain_style">
+<code class="descname">enable_terrain_style</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.BasePlotter.enable_terrain_style" title="Permalink to this definition">¶</a></dt>
 <dd><p>sets the interactive style to terrain</p>
 <p>Used to manipulate a camera which is viewing a scene with a natural
 view up, e.g., terrain. The camera in such a scene is manipulated by
@@ -1194,14 +1194,14 @@ specifying azimuth (angle around the view up vector) and elevation
 </dd></dl>
 
 <dl class="method">
-<dt id="vista.BasePlotter.enable_trackball_style">
-<code class="descname">enable_trackball_style</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#vista.BasePlotter.enable_trackball_style" title="Permalink to this definition">¶</a></dt>
+<dt id="pyvista.BasePlotter.enable_trackball_style">
+<code class="descname">enable_trackball_style</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.BasePlotter.enable_trackball_style" title="Permalink to this definition">¶</a></dt>
 <dd><p>sets the interactive style to trackball - the default syle</p>
 </dd></dl>
 
 <dl class="method">
-<dt id="vista.BasePlotter.enable_zoom_style">
-<code class="descname">enable_zoom_style</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#vista.BasePlotter.enable_zoom_style" title="Permalink to this definition">¶</a></dt>
+<dt id="pyvista.BasePlotter.enable_zoom_style">
+<code class="descname">enable_zoom_style</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.BasePlotter.enable_zoom_style" title="Permalink to this definition">¶</a></dt>
 <dd><p>sets the interactive style to rubber band zoom</p>
 <p>This interactor style allows the user to draw a rectangle in the render
 window using the left mouse button.  When the mouse button is released,
@@ -1210,23 +1210,23 @@ of the drawn rectangle.</p>
 </dd></dl>
 
 <dl class="method">
-<dt id="vista.BasePlotter.export_vtkjs">
-<code class="descname">export_vtkjs</code><span class="sig-paren">(</span><em>filename</em>, <em>compress_arrays=False</em><span class="sig-paren">)</span><a class="headerlink" href="#vista.BasePlotter.export_vtkjs" title="Permalink to this definition">¶</a></dt>
+<dt id="pyvista.BasePlotter.export_vtkjs">
+<code class="descname">export_vtkjs</code><span class="sig-paren">(</span><em>filename</em>, <em>compress_arrays=False</em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.BasePlotter.export_vtkjs" title="Permalink to this definition">¶</a></dt>
 <dd><p>Export the current rendering scene as a VTKjs scene for
 rendering in a web browser</p>
 </dd></dl>
 
 <dl class="method">
-<dt id="vista.BasePlotter.fly_to">
-<code class="descname">fly_to</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#vista.BasePlotter.fly_to" title="Permalink to this definition">¶</a></dt>
+<dt id="pyvista.BasePlotter.fly_to">
+<code class="descname">fly_to</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.BasePlotter.fly_to" title="Permalink to this definition">¶</a></dt>
 <dd><p>Given a position point, move the current camera’s focal point to that
 point. The movement is animated over the number of frames specified in
 NumberOfFlyFrames. The LOD desired frame rate is used.</p>
 </dd></dl>
 
 <dl class="method">
-<dt id="vista.BasePlotter.generate_orbital_path">
-<code class="descname">generate_orbital_path</code><span class="sig-paren">(</span><em>factor=3.0</em>, <em>n_points=20</em>, <em>viewup=None</em>, <em>z_shift=None</em><span class="sig-paren">)</span><a class="headerlink" href="#vista.BasePlotter.generate_orbital_path" title="Permalink to this definition">¶</a></dt>
+<dt id="pyvista.BasePlotter.generate_orbital_path">
+<code class="descname">generate_orbital_path</code><span class="sig-paren">(</span><em>factor=3.0</em>, <em>n_points=20</em>, <em>viewup=None</em>, <em>z_shift=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.BasePlotter.generate_orbital_path" title="Permalink to this definition">¶</a></dt>
 <dd><p>Genrates an orbital path around the data scene</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -1241,62 +1241,62 @@ NumberOfFlyFrames. The LOD desired frame rate is used.</p>
 </dd></dl>
 
 <dl class="method">
-<dt id="vista.BasePlotter.get_default_cam_pos">
-<code class="descname">get_default_cam_pos</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#vista.BasePlotter.get_default_cam_pos" title="Permalink to this definition">¶</a></dt>
+<dt id="pyvista.BasePlotter.get_default_cam_pos">
+<code class="descname">get_default_cam_pos</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.BasePlotter.get_default_cam_pos" title="Permalink to this definition">¶</a></dt>
 <dd><p>Return the default camera position of the active renderer</p>
 </dd></dl>
 
 <dl class="method">
-<dt id="vista.BasePlotter.hide_axes">
-<code class="descname">hide_axes</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#vista.BasePlotter.hide_axes" title="Permalink to this definition">¶</a></dt>
+<dt id="pyvista.BasePlotter.hide_axes">
+<code class="descname">hide_axes</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.BasePlotter.hide_axes" title="Permalink to this definition">¶</a></dt>
 <dd><p>Hide the axes orientation widget</p>
 </dd></dl>
 
 <dl class="attribute">
-<dt id="vista.BasePlotter.image">
-<code class="descname">image</code><a class="headerlink" href="#vista.BasePlotter.image" title="Permalink to this definition">¶</a></dt>
+<dt id="pyvista.BasePlotter.image">
+<code class="descname">image</code><a class="headerlink" href="#pyvista.BasePlotter.image" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns an image array of current render window</p>
 </dd></dl>
 
 <dl class="attribute">
-<dt id="vista.BasePlotter.image_depth">
-<code class="descname">image_depth</code><a class="headerlink" href="#vista.BasePlotter.image_depth" title="Permalink to this definition">¶</a></dt>
+<dt id="pyvista.BasePlotter.image_depth">
+<code class="descname">image_depth</code><a class="headerlink" href="#pyvista.BasePlotter.image_depth" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns an image array of current render window</p>
 </dd></dl>
 
 <dl class="method">
-<dt id="vista.BasePlotter.index_to_loc">
-<code class="descname">index_to_loc</code><span class="sig-paren">(</span><em>index</em><span class="sig-paren">)</span><a class="headerlink" href="#vista.BasePlotter.index_to_loc" title="Permalink to this definition">¶</a></dt>
+<dt id="pyvista.BasePlotter.index_to_loc">
+<code class="descname">index_to_loc</code><span class="sig-paren">(</span><em>index</em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.BasePlotter.index_to_loc" title="Permalink to this definition">¶</a></dt>
 <dd><p>Convert a 1D index location to the 2D location on the plotting grid</p>
 </dd></dl>
 
 <dl class="method">
-<dt id="vista.BasePlotter.isometric_view">
-<code class="descname">isometric_view</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#vista.BasePlotter.isometric_view" title="Permalink to this definition">¶</a></dt>
+<dt id="pyvista.BasePlotter.isometric_view">
+<code class="descname">isometric_view</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.BasePlotter.isometric_view" title="Permalink to this definition">¶</a></dt>
 <dd><p>DEPRECATED: Please use <code class="docutils literal notranslate"><span class="pre">view_isometric</span></code></p>
 </dd></dl>
 
 <dl class="method">
-<dt id="vista.BasePlotter.isometric_view_interactive">
-<code class="descname">isometric_view_interactive</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#vista.BasePlotter.isometric_view_interactive" title="Permalink to this definition">¶</a></dt>
+<dt id="pyvista.BasePlotter.isometric_view_interactive">
+<code class="descname">isometric_view_interactive</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.BasePlotter.isometric_view_interactive" title="Permalink to this definition">¶</a></dt>
 <dd><p>sets the current interactive render window to isometric view</p>
 </dd></dl>
 
 <dl class="method">
-<dt id="vista.BasePlotter.key_press_event">
-<code class="descname">key_press_event</code><span class="sig-paren">(</span><em>obj</em>, <em>event</em><span class="sig-paren">)</span><a class="headerlink" href="#vista.BasePlotter.key_press_event" title="Permalink to this definition">¶</a></dt>
+<dt id="pyvista.BasePlotter.key_press_event">
+<code class="descname">key_press_event</code><span class="sig-paren">(</span><em>obj</em>, <em>event</em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.BasePlotter.key_press_event" title="Permalink to this definition">¶</a></dt>
 <dd><p>Listens for key press event</p>
 </dd></dl>
 
 <dl class="method">
-<dt id="vista.BasePlotter.left_button_down">
-<code class="descname">left_button_down</code><span class="sig-paren">(</span><em>obj</em>, <em>event_type</em><span class="sig-paren">)</span><a class="headerlink" href="#vista.BasePlotter.left_button_down" title="Permalink to this definition">¶</a></dt>
+<dt id="pyvista.BasePlotter.left_button_down">
+<code class="descname">left_button_down</code><span class="sig-paren">(</span><em>obj</em>, <em>event_type</em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.BasePlotter.left_button_down" title="Permalink to this definition">¶</a></dt>
 <dd><p>Register the event for a left button down click</p>
 </dd></dl>
 
 <dl class="method">
-<dt id="vista.BasePlotter.loc_to_index">
-<code class="descname">loc_to_index</code><span class="sig-paren">(</span><em>loc</em><span class="sig-paren">)</span><a class="headerlink" href="#vista.BasePlotter.loc_to_index" title="Permalink to this definition">¶</a></dt>
+<dt id="pyvista.BasePlotter.loc_to_index">
+<code class="descname">loc_to_index</code><span class="sig-paren">(</span><em>loc</em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.BasePlotter.loc_to_index" title="Permalink to this definition">¶</a></dt>
 <dd><p>Return index of the render window given a location index.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -1313,8 +1313,8 @@ NumberOfFlyFrames. The LOD desired frame rate is used.</p>
 </dd></dl>
 
 <dl class="method">
-<dt id="vista.BasePlotter.open_gif">
-<code class="descname">open_gif</code><span class="sig-paren">(</span><em>filename</em><span class="sig-paren">)</span><a class="headerlink" href="#vista.BasePlotter.open_gif" title="Permalink to this definition">¶</a></dt>
+<dt id="pyvista.BasePlotter.open_gif">
+<code class="descname">open_gif</code><span class="sig-paren">(</span><em>filename</em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.BasePlotter.open_gif" title="Permalink to this definition">¶</a></dt>
 <dd><p>Open a gif file.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -1324,8 +1324,8 @@ NumberOfFlyFrames. The LOD desired frame rate is used.</p>
 </dd></dl>
 
 <dl class="method">
-<dt id="vista.BasePlotter.open_movie">
-<code class="descname">open_movie</code><span class="sig-paren">(</span><em>filename</em>, <em>framerate=24</em><span class="sig-paren">)</span><a class="headerlink" href="#vista.BasePlotter.open_movie" title="Permalink to this definition">¶</a></dt>
+<dt id="pyvista.BasePlotter.open_movie">
+<code class="descname">open_movie</code><span class="sig-paren">(</span><em>filename</em>, <em>framerate=24</em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.BasePlotter.open_movie" title="Permalink to this definition">¶</a></dt>
 <dd><p>Establishes a connection to the ffmpeg writer</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -1339,13 +1339,13 @@ but other filetypes may be supported.  See “imagio.get_writer”</p></li>
 </dd></dl>
 
 <dl class="method">
-<dt id="vista.BasePlotter.orbit_on_path">
-<code class="descname">orbit_on_path</code><span class="sig-paren">(</span><em>path=None</em>, <em>focus=None</em>, <em>step=0.5</em>, <em>viewup=None</em>, <em>bkg=True</em><span class="sig-paren">)</span><a class="headerlink" href="#vista.BasePlotter.orbit_on_path" title="Permalink to this definition">¶</a></dt>
+<dt id="pyvista.BasePlotter.orbit_on_path">
+<code class="descname">orbit_on_path</code><span class="sig-paren">(</span><em>path=None</em>, <em>focus=None</em>, <em>step=0.5</em>, <em>viewup=None</em>, <em>bkg=True</em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.BasePlotter.orbit_on_path" title="Permalink to this definition">¶</a></dt>
 <dd><p>Orbit on the given path focusing on the focus point</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>path</strong> (<a class="reference internal" href="../types/points.html#vista.PolyData" title="vista.PolyData"><em>vista.PolyData</em></a>) – Path of orbital points. The order in the points is the order of
+<li><p><strong>path</strong> (<a class="reference internal" href="../types/points.html#pyvista.PolyData" title="pyvista.PolyData"><em>pyvista.PolyData</em></a>) – Path of orbital points. The order in the points is the order of
 travel</p></li>
 <li><p><strong>focus</strong> (<em>list</em><em>(</em><em>float</em><em>) </em><em>of length 3</em><em>, </em><em>optional</em>) – The point ot focus the camera.</p></li>
 <li><p><strong>step</strong> (<em>float</em><em>, </em><em>optional</em>) – The timestep between flying to each camera position</p></li>
@@ -1356,8 +1356,8 @@ travel</p></li>
 </dd></dl>
 
 <dl class="method">
-<dt id="vista.BasePlotter.remove_actor">
-<code class="descname">remove_actor</code><span class="sig-paren">(</span><em>actor</em>, <em>reset_camera=False</em><span class="sig-paren">)</span><a class="headerlink" href="#vista.BasePlotter.remove_actor" title="Permalink to this definition">¶</a></dt>
+<dt id="pyvista.BasePlotter.remove_actor">
+<code class="descname">remove_actor</code><span class="sig-paren">(</span><em>actor</em>, <em>reset_camera=False</em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.BasePlotter.remove_actor" title="Permalink to this definition">¶</a></dt>
 <dd><p>Removes an actor from the Plotter.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -1377,8 +1377,8 @@ removed.</p>
 </dd></dl>
 
 <dl class="method">
-<dt id="vista.BasePlotter.remove_bounding_box">
-<code class="descname">remove_bounding_box</code><span class="sig-paren">(</span><em>loc=None</em><span class="sig-paren">)</span><a class="headerlink" href="#vista.BasePlotter.remove_bounding_box" title="Permalink to this definition">¶</a></dt>
+<dt id="pyvista.BasePlotter.remove_bounding_box">
+<code class="descname">remove_bounding_box</code><span class="sig-paren">(</span><em>loc=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.BasePlotter.remove_bounding_box" title="Permalink to this definition">¶</a></dt>
 <dd><p>Removes bounding box from the active renderer.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -1390,8 +1390,8 @@ active Renderer.</p>
 </dd></dl>
 
 <dl class="method">
-<dt id="vista.BasePlotter.remove_bounds_axes">
-<code class="descname">remove_bounds_axes</code><span class="sig-paren">(</span><em>loc=None</em><span class="sig-paren">)</span><a class="headerlink" href="#vista.BasePlotter.remove_bounds_axes" title="Permalink to this definition">¶</a></dt>
+<dt id="pyvista.BasePlotter.remove_bounds_axes">
+<code class="descname">remove_bounds_axes</code><span class="sig-paren">(</span><em>loc=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.BasePlotter.remove_bounds_axes" title="Permalink to this definition">¶</a></dt>
 <dd><p>Removes bounds axes from the active renderer.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -1403,39 +1403,39 @@ active Renderer.</p>
 </dd></dl>
 
 <dl class="method">
-<dt id="vista.BasePlotter.remove_legend">
-<code class="descname">remove_legend</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#vista.BasePlotter.remove_legend" title="Permalink to this definition">¶</a></dt>
+<dt id="pyvista.BasePlotter.remove_legend">
+<code class="descname">remove_legend</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.BasePlotter.remove_legend" title="Permalink to this definition">¶</a></dt>
 <dd><p>Removes legend actor</p>
 </dd></dl>
 
 <dl class="method">
-<dt id="vista.BasePlotter.remove_scalar_bar">
-<code class="descname">remove_scalar_bar</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#vista.BasePlotter.remove_scalar_bar" title="Permalink to this definition">¶</a></dt>
+<dt id="pyvista.BasePlotter.remove_scalar_bar">
+<code class="descname">remove_scalar_bar</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.BasePlotter.remove_scalar_bar" title="Permalink to this definition">¶</a></dt>
 <dd><p>Removes scalar bar</p>
 </dd></dl>
 
 <dl class="attribute">
-<dt id="vista.BasePlotter.renderer">
-<code class="descname">renderer</code><a class="headerlink" href="#vista.BasePlotter.renderer" title="Permalink to this definition">¶</a></dt>
+<dt id="pyvista.BasePlotter.renderer">
+<code class="descname">renderer</code><a class="headerlink" href="#pyvista.BasePlotter.renderer" title="Permalink to this definition">¶</a></dt>
 <dd><p>simply returns the active renderer</p>
 </dd></dl>
 
 <dl class="method">
-<dt id="vista.BasePlotter.reset_camera">
-<code class="descname">reset_camera</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#vista.BasePlotter.reset_camera" title="Permalink to this definition">¶</a></dt>
+<dt id="pyvista.BasePlotter.reset_camera">
+<code class="descname">reset_camera</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.BasePlotter.reset_camera" title="Permalink to this definition">¶</a></dt>
 <dd><p>Reset camera so it slides along the vector defined from camera
 position to focal point until all of the actors can be seen.</p>
 </dd></dl>
 
 <dl class="attribute">
-<dt id="vista.BasePlotter.scale">
-<code class="descname">scale</code><a class="headerlink" href="#vista.BasePlotter.scale" title="Permalink to this definition">¶</a></dt>
+<dt id="pyvista.BasePlotter.scale">
+<code class="descname">scale</code><a class="headerlink" href="#pyvista.BasePlotter.scale" title="Permalink to this definition">¶</a></dt>
 <dd><p>The scaling of the active renderer.</p>
 </dd></dl>
 
 <dl class="method">
-<dt id="vista.BasePlotter.screenshot">
-<code class="descname">screenshot</code><span class="sig-paren">(</span><em>filename=None</em>, <em>transparent_background=None</em>, <em>return_img=None</em>, <em>window_size=None</em><span class="sig-paren">)</span><a class="headerlink" href="#vista.BasePlotter.screenshot" title="Permalink to this definition">¶</a></dt>
+<dt id="pyvista.BasePlotter.screenshot">
+<code class="descname">screenshot</code><span class="sig-paren">(</span><em>filename=None</em>, <em>transparent_background=None</em>, <em>return_img=None</em>, <em>window_size=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.BasePlotter.screenshot" title="Permalink to this definition">¶</a></dt>
 <dd><p>Takes screenshot at current camera position</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -1456,9 +1456,9 @@ the image will be returned.</p></li>
 </dd>
 </dl>
 <p class="rubric">Examples</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">vista</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">sphere</span> <span class="o">=</span> <span class="n">vista</span><span class="o">.</span><span class="n">Sphere</span><span class="p">()</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">plotter</span> <span class="o">=</span> <span class="n">vista</span><span class="o">.</span><span class="n">Plotter</span><span class="p">()</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">pyvista</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">sphere</span> <span class="o">=</span> <span class="n">pyvista</span><span class="o">.</span><span class="n">Sphere</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">plotter</span> <span class="o">=</span> <span class="n">pyvista</span><span class="o">.</span><span class="n">Plotter</span><span class="p">()</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">actor</span> <span class="o">=</span> <span class="n">plotter</span><span class="o">.</span><span class="n">add_mesh</span><span class="p">(</span><span class="n">sphere</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">plotter</span><span class="o">.</span><span class="n">screenshot</span><span class="p">(</span><span class="s1">&#39;screenshot.png&#39;</span><span class="p">)</span> <span class="c1"># doctest:+SKIP</span>
 </pre></div>
@@ -1466,8 +1466,8 @@ the image will be returned.</p></li>
 </dd></dl>
 
 <dl class="method">
-<dt id="vista.BasePlotter.set_background">
-<code class="descname">set_background</code><span class="sig-paren">(</span><em>color</em>, <em>loc='all'</em><span class="sig-paren">)</span><a class="headerlink" href="#vista.BasePlotter.set_background" title="Permalink to this definition">¶</a></dt>
+<dt id="pyvista.BasePlotter.set_background">
+<code class="descname">set_background</code><span class="sig-paren">(</span><em>color</em>, <em>loc='all'</em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.BasePlotter.set_background" title="Permalink to this definition">¶</a></dt>
 <dd><p>Sets background color</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -1489,20 +1489,20 @@ render windows will have their background set.</p></li>
 </dd></dl>
 
 <dl class="method">
-<dt id="vista.BasePlotter.set_focus">
-<code class="descname">set_focus</code><span class="sig-paren">(</span><em>point</em><span class="sig-paren">)</span><a class="headerlink" href="#vista.BasePlotter.set_focus" title="Permalink to this definition">¶</a></dt>
+<dt id="pyvista.BasePlotter.set_focus">
+<code class="descname">set_focus</code><span class="sig-paren">(</span><em>point</em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.BasePlotter.set_focus" title="Permalink to this definition">¶</a></dt>
 <dd><p>sets focus to a point</p>
 </dd></dl>
 
 <dl class="method">
-<dt id="vista.BasePlotter.set_position">
-<code class="descname">set_position</code><span class="sig-paren">(</span><em>point</em>, <em>reset=False</em><span class="sig-paren">)</span><a class="headerlink" href="#vista.BasePlotter.set_position" title="Permalink to this definition">¶</a></dt>
+<dt id="pyvista.BasePlotter.set_position">
+<code class="descname">set_position</code><span class="sig-paren">(</span><em>point</em>, <em>reset=False</em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.BasePlotter.set_position" title="Permalink to this definition">¶</a></dt>
 <dd><p>sets camera position to a point</p>
 </dd></dl>
 
 <dl class="method">
-<dt id="vista.BasePlotter.set_scale">
-<code class="descname">set_scale</code><span class="sig-paren">(</span><em>xscale=None</em>, <em>yscale=None</em>, <em>zscale=None</em>, <em>reset_camera=True</em><span class="sig-paren">)</span><a class="headerlink" href="#vista.BasePlotter.set_scale" title="Permalink to this definition">¶</a></dt>
+<dt id="pyvista.BasePlotter.set_scale">
+<code class="descname">set_scale</code><span class="sig-paren">(</span><em>xscale=None</em>, <em>yscale=None</em>, <em>zscale=None</em>, <em>reset_camera=True</em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.BasePlotter.set_scale" title="Permalink to this definition">¶</a></dt>
 <dd><p>Scale all the datasets in the scene of the active renderer.</p>
 <p>Scaling in performed independently on the X, Y and Z axis.
 A scale of zero is illegal and will be replaced with one.</p>
@@ -1519,20 +1519,20 @@ A scale of zero is illegal and will be replaced with one.</p>
 </dd></dl>
 
 <dl class="method">
-<dt id="vista.BasePlotter.set_viewup">
-<code class="descname">set_viewup</code><span class="sig-paren">(</span><em>vector</em><span class="sig-paren">)</span><a class="headerlink" href="#vista.BasePlotter.set_viewup" title="Permalink to this definition">¶</a></dt>
+<dt id="pyvista.BasePlotter.set_viewup">
+<code class="descname">set_viewup</code><span class="sig-paren">(</span><em>vector</em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.BasePlotter.set_viewup" title="Permalink to this definition">¶</a></dt>
 <dd><p>sets camera viewup vector</p>
 </dd></dl>
 
 <dl class="method">
-<dt id="vista.BasePlotter.show_axes">
-<code class="descname">show_axes</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#vista.BasePlotter.show_axes" title="Permalink to this definition">¶</a></dt>
+<dt id="pyvista.BasePlotter.show_axes">
+<code class="descname">show_axes</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.BasePlotter.show_axes" title="Permalink to this definition">¶</a></dt>
 <dd><p>Show the axes orientation widget</p>
 </dd></dl>
 
 <dl class="method">
-<dt id="vista.BasePlotter.show_bounds">
-<code class="descname">show_bounds</code><span class="sig-paren">(</span><em>mesh=None</em>, <em>bounds=None</em>, <em>show_xaxis=True</em>, <em>show_yaxis=True</em>, <em>show_zaxis=True</em>, <em>show_xlabels=True</em>, <em>show_ylabels=True</em>, <em>show_zlabels=True</em>, <em>italic=False</em>, <em>bold=True</em>, <em>shadow=False</em>, <em>font_size=None</em>, <em>font_family=None</em>, <em>color=None</em>, <em>xlabel='X Axis'</em>, <em>ylabel='Y Axis'</em>, <em>zlabel='Z Axis'</em>, <em>use_2d=False</em>, <em>grid=None</em>, <em>location='closest'</em>, <em>ticks=None</em>, <em>all_edges=False</em>, <em>corner_factor=0.5</em>, <em>fmt=None</em>, <em>minor_ticks=False</em>, <em>loc=None</em>, <em>padding=0.0</em><span class="sig-paren">)</span><a class="headerlink" href="#vista.BasePlotter.show_bounds" title="Permalink to this definition">¶</a></dt>
+<dt id="pyvista.BasePlotter.show_bounds">
+<code class="descname">show_bounds</code><span class="sig-paren">(</span><em>mesh=None</em>, <em>bounds=None</em>, <em>show_xaxis=True</em>, <em>show_yaxis=True</em>, <em>show_zaxis=True</em>, <em>show_xlabels=True</em>, <em>show_ylabels=True</em>, <em>show_zlabels=True</em>, <em>italic=False</em>, <em>bold=True</em>, <em>shadow=False</em>, <em>font_size=None</em>, <em>font_family=None</em>, <em>color=None</em>, <em>xlabel='X Axis'</em>, <em>ylabel='Y Axis'</em>, <em>zlabel='Z Axis'</em>, <em>use_2d=False</em>, <em>grid=None</em>, <em>location='closest'</em>, <em>ticks=None</em>, <em>all_edges=False</em>, <em>corner_factor=0.5</em>, <em>fmt=None</em>, <em>minor_ticks=False</em>, <em>loc=None</em>, <em>padding=0.0</em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.BasePlotter.show_bounds" title="Permalink to this definition">¶</a></dt>
 <dd><p>Adds bounds axes.  Shows the bounds of the most recent input
 mesh unless mesh is specified.</p>
 <dl class="field-list simple">
@@ -1599,10 +1599,10 @@ have no padding</p></li>
 </dd>
 </dl>
 <p class="rubric">Examples</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">vista</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">vista</span> <span class="k">import</span> <span class="n">examples</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">mesh</span> <span class="o">=</span> <span class="n">vista</span><span class="o">.</span><span class="n">Sphere</span><span class="p">()</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">plotter</span> <span class="o">=</span> <span class="n">vista</span><span class="o">.</span><span class="n">Plotter</span><span class="p">()</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">pyvista</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">pyvista</span> <span class="k">import</span> <span class="n">examples</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">mesh</span> <span class="o">=</span> <span class="n">pyvista</span><span class="o">.</span><span class="n">Sphere</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">plotter</span> <span class="o">=</span> <span class="n">pyvista</span><span class="o">.</span><span class="n">Plotter</span><span class="p">()</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">_</span> <span class="o">=</span> <span class="n">plotter</span><span class="o">.</span><span class="n">add_mesh</span><span class="p">(</span><span class="n">mesh</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">_</span> <span class="o">=</span> <span class="n">plotter</span><span class="o">.</span><span class="n">show_bounds</span><span class="p">(</span><span class="n">grid</span><span class="o">=</span><span class="s1">&#39;front&#39;</span><span class="p">,</span> <span class="n">location</span><span class="o">=</span><span class="s1">&#39;outer&#39;</span><span class="p">,</span> <span class="n">all_edges</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">plotter</span><span class="o">.</span><span class="n">show</span><span class="p">()</span> <span class="c1"># doctest:+SKIP</span>
@@ -1611,8 +1611,8 @@ have no padding</p></li>
 </dd></dl>
 
 <dl class="method">
-<dt id="vista.BasePlotter.show_grid">
-<code class="descname">show_grid</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#vista.BasePlotter.show_grid" title="Permalink to this definition">¶</a></dt>
+<dt id="pyvista.BasePlotter.show_grid">
+<code class="descname">show_grid</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.BasePlotter.show_grid" title="Permalink to this definition">¶</a></dt>
 <dd><p>A wrapped implementation of <code class="docutils literal notranslate"><span class="pre">show_bounds</span></code> to change default
 behaviour to use gridlines and showing the axes labels on the outer
 edges. This is intended to be silimar to <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code>’s <code class="docutils literal notranslate"><span class="pre">grid</span></code>
@@ -1620,8 +1620,8 @@ function.</p>
 </dd></dl>
 
 <dl class="method">
-<dt id="vista.BasePlotter.subplot">
-<code class="descname">subplot</code><span class="sig-paren">(</span><em>index_x</em>, <em>index_y</em><span class="sig-paren">)</span><a class="headerlink" href="#vista.BasePlotter.subplot" title="Permalink to this definition">¶</a></dt>
+<dt id="pyvista.BasePlotter.subplot">
+<code class="descname">subplot</code><span class="sig-paren">(</span><em>index_x</em>, <em>index_y</em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.BasePlotter.subplot" title="Permalink to this definition">¶</a></dt>
 <dd><p>Sets the active subplot.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -1634,8 +1634,8 @@ function.</p>
 </dd></dl>
 
 <dl class="method">
-<dt id="vista.BasePlotter.update">
-<code class="descname">update</code><span class="sig-paren">(</span><em>stime=1</em>, <em>force_redraw=True</em><span class="sig-paren">)</span><a class="headerlink" href="#vista.BasePlotter.update" title="Permalink to this definition">¶</a></dt>
+<dt id="pyvista.BasePlotter.update">
+<code class="descname">update</code><span class="sig-paren">(</span><em>stime=1</em>, <em>force_redraw=True</em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.BasePlotter.update" title="Permalink to this definition">¶</a></dt>
 <dd><p>Update window, redraw, process messages query</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -1649,14 +1649,14 @@ milliseconds.</p></li>
 </dd></dl>
 
 <dl class="method">
-<dt id="vista.BasePlotter.update_bounds_axes">
-<code class="descname">update_bounds_axes</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#vista.BasePlotter.update_bounds_axes" title="Permalink to this definition">¶</a></dt>
+<dt id="pyvista.BasePlotter.update_bounds_axes">
+<code class="descname">update_bounds_axes</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.BasePlotter.update_bounds_axes" title="Permalink to this definition">¶</a></dt>
 <dd><p>Update the bounds of the active renderer</p>
 </dd></dl>
 
 <dl class="method">
-<dt id="vista.BasePlotter.update_coordinates">
-<code class="descname">update_coordinates</code><span class="sig-paren">(</span><em>points</em>, <em>mesh=None</em>, <em>render=True</em><span class="sig-paren">)</span><a class="headerlink" href="#vista.BasePlotter.update_coordinates" title="Permalink to this definition">¶</a></dt>
+<dt id="pyvista.BasePlotter.update_coordinates">
+<code class="descname">update_coordinates</code><span class="sig-paren">(</span><em>points</em>, <em>mesh=None</em>, <em>render=True</em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.BasePlotter.update_coordinates" title="Permalink to this definition">¶</a></dt>
 <dd><p>Updates the points of the an object in the plotter.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -1671,8 +1671,8 @@ None, uses last added mesh.</p></li>
 </dd></dl>
 
 <dl class="method">
-<dt id="vista.BasePlotter.update_scalar_bar_range">
-<code class="descname">update_scalar_bar_range</code><span class="sig-paren">(</span><em>clim</em>, <em>name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#vista.BasePlotter.update_scalar_bar_range" title="Permalink to this definition">¶</a></dt>
+<dt id="pyvista.BasePlotter.update_scalar_bar_range">
+<code class="descname">update_scalar_bar_range</code><span class="sig-paren">(</span><em>clim</em>, <em>name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.BasePlotter.update_scalar_bar_range" title="Permalink to this definition">¶</a></dt>
 <dd><p>Update the value range of the active or named scalar bar.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -1685,8 +1685,8 @@ None, uses last added mesh.</p></li>
 </dd></dl>
 
 <dl class="method">
-<dt id="vista.BasePlotter.update_scalars">
-<code class="descname">update_scalars</code><span class="sig-paren">(</span><em>scalars</em>, <em>mesh=None</em>, <em>render=True</em><span class="sig-paren">)</span><a class="headerlink" href="#vista.BasePlotter.update_scalars" title="Permalink to this definition">¶</a></dt>
+<dt id="pyvista.BasePlotter.update_scalars">
+<code class="descname">update_scalars</code><span class="sig-paren">(</span><em>scalars</em>, <em>mesh=None</em>, <em>render=True</em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.BasePlotter.update_scalars" title="Permalink to this definition">¶</a></dt>
 <dd><p>Updates scalars of the an object in the plotter.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -1701,49 +1701,49 @@ None, uses last added mesh.</p></li>
 </dd></dl>
 
 <dl class="method">
-<dt id="vista.BasePlotter.update_style">
-<code class="descname">update_style</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#vista.BasePlotter.update_style" title="Permalink to this definition">¶</a></dt>
+<dt id="pyvista.BasePlotter.update_style">
+<code class="descname">update_style</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.BasePlotter.update_style" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
-<dt id="vista.BasePlotter.view_isometric">
-<code class="descname">view_isometric</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#vista.BasePlotter.view_isometric" title="Permalink to this definition">¶</a></dt>
+<dt id="pyvista.BasePlotter.view_isometric">
+<code class="descname">view_isometric</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.BasePlotter.view_isometric" title="Permalink to this definition">¶</a></dt>
 <dd><p>Resets the camera to a default isometric view showing all the
 actors in the scene.</p>
 </dd></dl>
 
 <dl class="method">
-<dt id="vista.BasePlotter.view_vector">
-<code class="descname">view_vector</code><span class="sig-paren">(</span><em>vector</em>, <em>viewup=None</em><span class="sig-paren">)</span><a class="headerlink" href="#vista.BasePlotter.view_vector" title="Permalink to this definition">¶</a></dt>
+<dt id="pyvista.BasePlotter.view_vector">
+<code class="descname">view_vector</code><span class="sig-paren">(</span><em>vector</em>, <em>viewup=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.BasePlotter.view_vector" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
-<dt id="vista.BasePlotter.view_xy">
-<code class="descname">view_xy</code><span class="sig-paren">(</span><em>negative=False</em><span class="sig-paren">)</span><a class="headerlink" href="#vista.BasePlotter.view_xy" title="Permalink to this definition">¶</a></dt>
+<dt id="pyvista.BasePlotter.view_xy">
+<code class="descname">view_xy</code><span class="sig-paren">(</span><em>negative=False</em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.BasePlotter.view_xy" title="Permalink to this definition">¶</a></dt>
 <dd><p>View the XY plane</p>
 </dd></dl>
 
 <dl class="method">
-<dt id="vista.BasePlotter.view_xz">
-<code class="descname">view_xz</code><span class="sig-paren">(</span><em>negative=False</em><span class="sig-paren">)</span><a class="headerlink" href="#vista.BasePlotter.view_xz" title="Permalink to this definition">¶</a></dt>
+<dt id="pyvista.BasePlotter.view_xz">
+<code class="descname">view_xz</code><span class="sig-paren">(</span><em>negative=False</em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.BasePlotter.view_xz" title="Permalink to this definition">¶</a></dt>
 <dd><p>View the XZ plane</p>
 </dd></dl>
 
 <dl class="method">
-<dt id="vista.BasePlotter.view_yz">
-<code class="descname">view_yz</code><span class="sig-paren">(</span><em>negative=False</em><span class="sig-paren">)</span><a class="headerlink" href="#vista.BasePlotter.view_yz" title="Permalink to this definition">¶</a></dt>
+<dt id="pyvista.BasePlotter.view_yz">
+<code class="descname">view_yz</code><span class="sig-paren">(</span><em>negative=False</em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.BasePlotter.view_yz" title="Permalink to this definition">¶</a></dt>
 <dd><p>View the YZ plane</p>
 </dd></dl>
 
 <dl class="attribute">
-<dt id="vista.BasePlotter.window_size">
-<code class="descname">window_size</code><a class="headerlink" href="#vista.BasePlotter.window_size" title="Permalink to this definition">¶</a></dt>
+<dt id="pyvista.BasePlotter.window_size">
+<code class="descname">window_size</code><a class="headerlink" href="#pyvista.BasePlotter.window_size" title="Permalink to this definition">¶</a></dt>
 <dd><p>returns render window size</p>
 </dd></dl>
 
 <dl class="method">
-<dt id="vista.BasePlotter.write_frame">
-<code class="descname">write_frame</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#vista.BasePlotter.write_frame" title="Permalink to this definition">¶</a></dt>
+<dt id="pyvista.BasePlotter.write_frame">
+<code class="descname">write_frame</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.BasePlotter.write_frame" title="Permalink to this definition">¶</a></dt>
 <dd><p>Writes a single frame to the movie file</p>
 </dd></dl>
 
@@ -1759,13 +1759,13 @@ actors in the scene.</p>
 <col style="width: 90%" />
 </colgroup>
 <tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="#vista.Plotter.last_update_time" title="vista.Plotter.last_update_time"><code class="xref py py-obj docutils literal notranslate"><span class="pre">last_update_time</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pyvista.Plotter.last_update_time" title="pyvista.Plotter.last_update_time"><code class="xref py py-obj docutils literal notranslate"><span class="pre">last_update_time</span></code></a></p></td>
 <td><p></p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#vista.Plotter.q_pressed" title="vista.Plotter.q_pressed"><code class="xref py py-obj docutils literal notranslate"><span class="pre">q_pressed</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#pyvista.Plotter.q_pressed" title="pyvista.Plotter.q_pressed"><code class="xref py py-obj docutils literal notranslate"><span class="pre">q_pressed</span></code></a></p></td>
 <td><p></p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#vista.Plotter.right_timer_id" title="vista.Plotter.right_timer_id"><code class="xref py py-obj docutils literal notranslate"><span class="pre">right_timer_id</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pyvista.Plotter.right_timer_id" title="pyvista.Plotter.right_timer_id"><code class="xref py py-obj docutils literal notranslate"><span class="pre">right_timer_id</span></code></a></p></td>
 <td><p></p></td>
 </tr>
 </tbody>
@@ -1777,28 +1777,28 @@ actors in the scene.</p>
 <col style="width: 90%" />
 </colgroup>
 <tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="#vista.Plotter.plot" title="vista.Plotter.plot"><code class="xref py py-obj docutils literal notranslate"><span class="pre">plot</span></code></a>(*args, **kwargs)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pyvista.Plotter.plot" title="pyvista.Plotter.plot"><code class="xref py py-obj docutils literal notranslate"><span class="pre">plot</span></code></a>(*args, **kwargs)</p></td>
 <td><p>Present for backwards compatibility.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#vista.Plotter.render" title="vista.Plotter.render"><code class="xref py py-obj docutils literal notranslate"><span class="pre">render</span></code></a>()</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#pyvista.Plotter.render" title="pyvista.Plotter.render"><code class="xref py py-obj docutils literal notranslate"><span class="pre">render</span></code></a>()</p></td>
 <td><p>renders main window</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#vista.Plotter.show" title="vista.Plotter.show"><code class="xref py py-obj docutils literal notranslate"><span class="pre">show</span></code></a>([title, window_size, interactive, …])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pyvista.Plotter.show" title="pyvista.Plotter.show"><code class="xref py py-obj docutils literal notranslate"><span class="pre">show</span></code></a>([title, window_size, interactive, …])</p></td>
 <td><p>Creates plotting window</p></td>
 </tr>
 </tbody>
 </table>
 <dl class="class">
-<dt id="vista.Plotter">
-<em class="property">class </em><code class="descclassname">vista.</code><code class="descname">Plotter</code><span class="sig-paren">(</span><em>off_screen=None</em>, <em>notebook=None</em>, <em>shape=(1</em>, <em>1)</em>, <em>border=None</em>, <em>border_color='k'</em>, <em>border_width=1.0</em>, <em>window_size=None</em><span class="sig-paren">)</span><a class="headerlink" href="#vista.Plotter" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">vista.plotting.BasePlotter</span></code></p>
+<dt id="pyvista.Plotter">
+<em class="property">class </em><code class="descclassname">pyvista.</code><code class="descname">Plotter</code><span class="sig-paren">(</span><em>off_screen=None</em>, <em>notebook=None</em>, <em>shape=(1</em>, <em>1)</em>, <em>border=None</em>, <em>border_color='k'</em>, <em>border_width=1.0</em>, <em>window_size=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.Plotter" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">pyvista.plotting.BasePlotter</span></code></p>
 <p>Plotting object to display vtk meshes or numpy arrays.</p>
 <p class="rubric">Example</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">vista</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">vista</span> <span class="k">import</span> <span class="n">examples</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">pyvista</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">pyvista</span> <span class="k">import</span> <span class="n">examples</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">mesh</span> <span class="o">=</span> <span class="n">examples</span><span class="o">.</span><span class="n">load_hexbeam</span><span class="p">()</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">another_mesh</span> <span class="o">=</span> <span class="n">examples</span><span class="o">.</span><span class="n">load_uniform</span><span class="p">()</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">plotter</span> <span class="o">=</span> <span class="n">vista</span><span class="o">.</span><span class="n">Plotter</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">plotter</span> <span class="o">=</span> <span class="n">pyvista</span><span class="o">.</span><span class="n">Plotter</span><span class="p">()</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">_</span> <span class="o">=</span> <span class="n">plotter</span><span class="o">.</span><span class="n">add_mesh</span><span class="p">(</span><span class="n">mesh</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;red&#39;</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">_</span> <span class="o">=</span> <span class="n">plotter</span><span class="o">.</span><span class="n">add_mesh</span><span class="p">(</span><span class="n">another_mesh</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;blue&#39;</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">plotter</span><span class="o">.</span><span class="n">show</span><span class="p">()</span> <span class="c1"># doctest:+SKIP</span>
@@ -1828,35 +1828,35 @@ color=’#FFFFFF’</p>
 </dd>
 </dl>
 <dl class="attribute">
-<dt id="vista.Plotter.last_update_time">
-<code class="descname">last_update_time</code><em class="property"> = 0.0</em><a class="headerlink" href="#vista.Plotter.last_update_time" title="Permalink to this definition">¶</a></dt>
+<dt id="pyvista.Plotter.last_update_time">
+<code class="descname">last_update_time</code><em class="property"> = 0.0</em><a class="headerlink" href="#pyvista.Plotter.last_update_time" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
-<dt id="vista.Plotter.plot">
-<code class="descname">plot</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#vista.Plotter.plot" title="Permalink to this definition">¶</a></dt>
+<dt id="pyvista.Plotter.plot">
+<code class="descname">plot</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.Plotter.plot" title="Permalink to this definition">¶</a></dt>
 <dd><p>Present for backwards compatibility. Use <cite>show()</cite> instead</p>
 </dd></dl>
 
 <dl class="attribute">
-<dt id="vista.Plotter.q_pressed">
-<code class="descname">q_pressed</code><em class="property"> = False</em><a class="headerlink" href="#vista.Plotter.q_pressed" title="Permalink to this definition">¶</a></dt>
+<dt id="pyvista.Plotter.q_pressed">
+<code class="descname">q_pressed</code><em class="property"> = False</em><a class="headerlink" href="#pyvista.Plotter.q_pressed" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
-<dt id="vista.Plotter.render">
-<code class="descname">render</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#vista.Plotter.render" title="Permalink to this definition">¶</a></dt>
+<dt id="pyvista.Plotter.render">
+<code class="descname">render</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.Plotter.render" title="Permalink to this definition">¶</a></dt>
 <dd><p>renders main window</p>
 </dd></dl>
 
 <dl class="attribute">
-<dt id="vista.Plotter.right_timer_id">
-<code class="descname">right_timer_id</code><em class="property"> = -1</em><a class="headerlink" href="#vista.Plotter.right_timer_id" title="Permalink to this definition">¶</a></dt>
+<dt id="pyvista.Plotter.right_timer_id">
+<code class="descname">right_timer_id</code><em class="property"> = -1</em><a class="headerlink" href="#pyvista.Plotter.right_timer_id" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
-<dt id="vista.Plotter.show">
-<code class="descname">show</code><span class="sig-paren">(</span><em>title=None</em>, <em>window_size=None</em>, <em>interactive=True</em>, <em>auto_close=True</em>, <em>interactive_update=False</em>, <em>full_screen=False</em>, <em>screenshot=False</em>, <em>return_img=False</em>, <em>use_panel=None</em><span class="sig-paren">)</span><a class="headerlink" href="#vista.Plotter.show" title="Permalink to this definition">¶</a></dt>
+<dt id="pyvista.Plotter.show">
+<code class="descname">show</code><span class="sig-paren">(</span><em>title=None</em>, <em>window_size=None</em>, <em>interactive=True</em>, <em>auto_close=True</em>, <em>interactive_update=False</em>, <em>full_screen=False</em>, <em>screenshot=False</em>, <em>return_img=False</em>, <em>use_panel=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.Plotter.show" title="Permalink to this definition">¶</a></dt>
 <dd><p>Creates plotting window</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -1895,16 +1895,16 @@ notebooks</p></li>
 <col style="width: 90%" />
 </colgroup>
 <tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="#vista.Renderer.bounds" title="vista.Renderer.bounds"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bounds</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pyvista.Renderer.bounds" title="pyvista.Renderer.bounds"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bounds</span></code></a></p></td>
 <td><p>Bounds of all actors present in the rendering window</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#vista.Renderer.camera" title="vista.Renderer.camera"><code class="xref py py-obj docutils literal notranslate"><span class="pre">camera</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#pyvista.Renderer.camera" title="pyvista.Renderer.camera"><code class="xref py py-obj docutils literal notranslate"><span class="pre">camera</span></code></a></p></td>
 <td><p>The active camera for the rendering scene</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#vista.Renderer.camera_position" title="vista.Renderer.camera_position"><code class="xref py py-obj docutils literal notranslate"><span class="pre">camera_position</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pyvista.Renderer.camera_position" title="pyvista.Renderer.camera_position"><code class="xref py py-obj docutils literal notranslate"><span class="pre">camera_position</span></code></a></p></td>
 <td><p>Returns camera position of active render window</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#vista.Renderer.center" title="vista.Renderer.center"><code class="xref py py-obj docutils literal notranslate"><span class="pre">center</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#pyvista.Renderer.center" title="pyvista.Renderer.center"><code class="xref py py-obj docutils literal notranslate"><span class="pre">center</span></code></a></p></td>
 <td><p>Center of the bounding box around all data present in the scene</p></td>
 </tr>
 </tbody>
@@ -1916,84 +1916,84 @@ notebooks</p></li>
 <col style="width: 90%" />
 </colgroup>
 <tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="#vista.Renderer.add_actor" title="vista.Renderer.add_actor"><code class="xref py py-obj docutils literal notranslate"><span class="pre">add_actor</span></code></a>(uinput[, reset_camera, name, loc, …])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pyvista.Renderer.add_actor" title="pyvista.Renderer.add_actor"><code class="xref py py-obj docutils literal notranslate"><span class="pre">add_actor</span></code></a>(uinput[, reset_camera, name, loc, …])</p></td>
 <td><p>Adds an actor to render window.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#vista.Renderer.add_axes_at_origin" title="vista.Renderer.add_axes_at_origin"><code class="xref py py-obj docutils literal notranslate"><span class="pre">add_axes_at_origin</span></code></a>()</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#pyvista.Renderer.add_axes_at_origin" title="pyvista.Renderer.add_axes_at_origin"><code class="xref py py-obj docutils literal notranslate"><span class="pre">add_axes_at_origin</span></code></a>()</p></td>
 <td><p>Add axes actor at origin</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#vista.Renderer.add_border" title="vista.Renderer.add_border"><code class="xref py py-obj docutils literal notranslate"><span class="pre">add_border</span></code></a>([color, width])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pyvista.Renderer.add_border" title="pyvista.Renderer.add_border"><code class="xref py py-obj docutils literal notranslate"><span class="pre">add_border</span></code></a>([color, width])</p></td>
 <td><p></p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#vista.Renderer.add_bounding_box" title="vista.Renderer.add_bounding_box"><code class="xref py py-obj docutils literal notranslate"><span class="pre">add_bounding_box</span></code></a>([color, corner_factor, …])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#pyvista.Renderer.add_bounding_box" title="pyvista.Renderer.add_bounding_box"><code class="xref py py-obj docutils literal notranslate"><span class="pre">add_bounding_box</span></code></a>([color, corner_factor, …])</p></td>
 <td><p>Adds an unlabeled and unticked box at the boundaries of plot.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#vista.Renderer.add_bounds_axes" title="vista.Renderer.add_bounds_axes"><code class="xref py py-obj docutils literal notranslate"><span class="pre">add_bounds_axes</span></code></a>(*args, **kwargs)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pyvista.Renderer.add_bounds_axes" title="pyvista.Renderer.add_bounds_axes"><code class="xref py py-obj docutils literal notranslate"><span class="pre">add_bounds_axes</span></code></a>(*args, **kwargs)</p></td>
 <td><p>Deprecated</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#vista.Renderer.disable" title="vista.Renderer.disable"><code class="xref py py-obj docutils literal notranslate"><span class="pre">disable</span></code></a>()</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#pyvista.Renderer.disable" title="pyvista.Renderer.disable"><code class="xref py py-obj docutils literal notranslate"><span class="pre">disable</span></code></a>()</p></td>
 <td><p>Disable this renderer’s camera from being interactive</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#vista.Renderer.disable_eye_dome_lighting" title="vista.Renderer.disable_eye_dome_lighting"><code class="xref py py-obj docutils literal notranslate"><span class="pre">disable_eye_dome_lighting</span></code></a>()</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pyvista.Renderer.disable_eye_dome_lighting" title="pyvista.Renderer.disable_eye_dome_lighting"><code class="xref py py-obj docutils literal notranslate"><span class="pre">disable_eye_dome_lighting</span></code></a>()</p></td>
 <td><p>Disable eye dome lighting (EDL)</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#vista.Renderer.enable" title="vista.Renderer.enable"><code class="xref py py-obj docutils literal notranslate"><span class="pre">enable</span></code></a>()</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#pyvista.Renderer.enable" title="pyvista.Renderer.enable"><code class="xref py py-obj docutils literal notranslate"><span class="pre">enable</span></code></a>()</p></td>
 <td><p>Enable this renderer’s camera to be interactive</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#vista.Renderer.enable_eye_dome_lighting" title="vista.Renderer.enable_eye_dome_lighting"><code class="xref py py-obj docutils literal notranslate"><span class="pre">enable_eye_dome_lighting</span></code></a>()</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pyvista.Renderer.enable_eye_dome_lighting" title="pyvista.Renderer.enable_eye_dome_lighting"><code class="xref py py-obj docutils literal notranslate"><span class="pre">enable_eye_dome_lighting</span></code></a>()</p></td>
 <td><p>Enable eye dome lighting (EDL)</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#vista.Renderer.get_default_cam_pos" title="vista.Renderer.get_default_cam_pos"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_default_cam_pos</span></code></a>()</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#pyvista.Renderer.get_default_cam_pos" title="pyvista.Renderer.get_default_cam_pos"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_default_cam_pos</span></code></a>()</p></td>
 <td><p>Returns the default focal points and viewup.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#vista.Renderer.isometric_view" title="vista.Renderer.isometric_view"><code class="xref py py-obj docutils literal notranslate"><span class="pre">isometric_view</span></code></a>()</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pyvista.Renderer.isometric_view" title="pyvista.Renderer.isometric_view"><code class="xref py py-obj docutils literal notranslate"><span class="pre">isometric_view</span></code></a>()</p></td>
 <td><p>DEPRECATED: Please use <code class="docutils literal notranslate"><span class="pre">view_isometric</span></code></p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#vista.Renderer.remove_actor" title="vista.Renderer.remove_actor"><code class="xref py py-obj docutils literal notranslate"><span class="pre">remove_actor</span></code></a>(actor[, reset_camera])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#pyvista.Renderer.remove_actor" title="pyvista.Renderer.remove_actor"><code class="xref py py-obj docutils literal notranslate"><span class="pre">remove_actor</span></code></a>(actor[, reset_camera])</p></td>
 <td><p>Removes an actor from the Renderer.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#vista.Renderer.remove_bounding_box" title="vista.Renderer.remove_bounding_box"><code class="xref py py-obj docutils literal notranslate"><span class="pre">remove_bounding_box</span></code></a>()</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pyvista.Renderer.remove_bounding_box" title="pyvista.Renderer.remove_bounding_box"><code class="xref py py-obj docutils literal notranslate"><span class="pre">remove_bounding_box</span></code></a>()</p></td>
 <td><p>Removes bounding box</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#vista.Renderer.remove_bounds_axes" title="vista.Renderer.remove_bounds_axes"><code class="xref py py-obj docutils literal notranslate"><span class="pre">remove_bounds_axes</span></code></a>()</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#pyvista.Renderer.remove_bounds_axes" title="pyvista.Renderer.remove_bounds_axes"><code class="xref py py-obj docutils literal notranslate"><span class="pre">remove_bounds_axes</span></code></a>()</p></td>
 <td><p>Removes bounds axes</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#vista.Renderer.reset_camera" title="vista.Renderer.reset_camera"><code class="xref py py-obj docutils literal notranslate"><span class="pre">reset_camera</span></code></a>()</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pyvista.Renderer.reset_camera" title="pyvista.Renderer.reset_camera"><code class="xref py py-obj docutils literal notranslate"><span class="pre">reset_camera</span></code></a>()</p></td>
 <td><p>Reset camera so it slides along the vector defined from camera position to focal point until all of the actors can be seen.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#vista.Renderer.set_scale" title="vista.Renderer.set_scale"><code class="xref py py-obj docutils literal notranslate"><span class="pre">set_scale</span></code></a>([xscale, yscale, zscale, reset_camera])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#pyvista.Renderer.set_scale" title="pyvista.Renderer.set_scale"><code class="xref py py-obj docutils literal notranslate"><span class="pre">set_scale</span></code></a>([xscale, yscale, zscale, reset_camera])</p></td>
 <td><p>Scale all the datasets in the scene.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#vista.Renderer.show_bounds" title="vista.Renderer.show_bounds"><code class="xref py py-obj docutils literal notranslate"><span class="pre">show_bounds</span></code></a>([mesh, bounds, show_xaxis, …])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pyvista.Renderer.show_bounds" title="pyvista.Renderer.show_bounds"><code class="xref py py-obj docutils literal notranslate"><span class="pre">show_bounds</span></code></a>([mesh, bounds, show_xaxis, …])</p></td>
 <td><p>Adds bounds axes.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#vista.Renderer.update_bounds_axes" title="vista.Renderer.update_bounds_axes"><code class="xref py py-obj docutils literal notranslate"><span class="pre">update_bounds_axes</span></code></a>()</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#pyvista.Renderer.update_bounds_axes" title="pyvista.Renderer.update_bounds_axes"><code class="xref py py-obj docutils literal notranslate"><span class="pre">update_bounds_axes</span></code></a>()</p></td>
 <td><p>Update the bounds axes of the render window</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#vista.Renderer.view_isometric" title="vista.Renderer.view_isometric"><code class="xref py py-obj docutils literal notranslate"><span class="pre">view_isometric</span></code></a>()</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pyvista.Renderer.view_isometric" title="pyvista.Renderer.view_isometric"><code class="xref py py-obj docutils literal notranslate"><span class="pre">view_isometric</span></code></a>()</p></td>
 <td><p>Resets the camera to a default isometric view showing all the actors in the scene.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#vista.Renderer.view_vector" title="vista.Renderer.view_vector"><code class="xref py py-obj docutils literal notranslate"><span class="pre">view_vector</span></code></a>(vector[, viewup])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#pyvista.Renderer.view_vector" title="pyvista.Renderer.view_vector"><code class="xref py py-obj docutils literal notranslate"><span class="pre">view_vector</span></code></a>(vector[, viewup])</p></td>
 <td><p>Point the camera in the direction of the given vector</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#vista.Renderer.view_xy" title="vista.Renderer.view_xy"><code class="xref py py-obj docutils literal notranslate"><span class="pre">view_xy</span></code></a>([negative])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pyvista.Renderer.view_xy" title="pyvista.Renderer.view_xy"><code class="xref py py-obj docutils literal notranslate"><span class="pre">view_xy</span></code></a>([negative])</p></td>
 <td><p>View the XY plane</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#vista.Renderer.view_xz" title="vista.Renderer.view_xz"><code class="xref py py-obj docutils literal notranslate"><span class="pre">view_xz</span></code></a>([negative])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#pyvista.Renderer.view_xz" title="pyvista.Renderer.view_xz"><code class="xref py py-obj docutils literal notranslate"><span class="pre">view_xz</span></code></a>([negative])</p></td>
 <td><p>View the XZ plane</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#vista.Renderer.view_yz" title="vista.Renderer.view_yz"><code class="xref py py-obj docutils literal notranslate"><span class="pre">view_yz</span></code></a>([negative])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pyvista.Renderer.view_yz" title="pyvista.Renderer.view_yz"><code class="xref py py-obj docutils literal notranslate"><span class="pre">view_yz</span></code></a>([negative])</p></td>
 <td><p>View the YZ plane</p></td>
 </tr>
 </tbody>
 </table>
 <dl class="class">
-<dt id="vista.Renderer">
-<em class="property">class </em><code class="descclassname">vista.</code><code class="descname">Renderer</code><span class="sig-paren">(</span><em>parent, border=True, border_color=[1, 1, 1], border_width=2.0</em><span class="sig-paren">)</span><a class="headerlink" href="#vista.Renderer" title="Permalink to this definition">¶</a></dt>
+<dt id="pyvista.Renderer">
+<em class="property">class </em><code class="descclassname">pyvista.</code><code class="descname">Renderer</code><span class="sig-paren">(</span><em>parent, border=True, border_color=[1, 1, 1], border_width=2.0</em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.Renderer" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">vtkRenderingCorePython.vtkRenderer</span></code></p>
 <dl class="method">
-<dt id="vista.Renderer.add_actor">
-<code class="descname">add_actor</code><span class="sig-paren">(</span><em>uinput</em>, <em>reset_camera=False</em>, <em>name=None</em>, <em>loc=None</em>, <em>culling=False</em><span class="sig-paren">)</span><a class="headerlink" href="#vista.Renderer.add_actor" title="Permalink to this definition">¶</a></dt>
+<dt id="pyvista.Renderer.add_actor">
+<code class="descname">add_actor</code><span class="sig-paren">(</span><em>uinput</em>, <em>reset_camera=False</em>, <em>name=None</em>, <em>loc=None</em>, <em>culling=False</em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.Renderer.add_actor" title="Permalink to this definition">¶</a></dt>
 <dd><p>Adds an actor to render window.  Creates an actor if input is
 a mapper.</p>
 <dl class="field-list simple">
@@ -2020,8 +2020,8 @@ meshes to be partially displayed.  Default False.</p></li>
 </dd></dl>
 
 <dl class="method">
-<dt id="vista.Renderer.add_axes_at_origin">
-<code class="descname">add_axes_at_origin</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#vista.Renderer.add_axes_at_origin" title="Permalink to this definition">¶</a></dt>
+<dt id="pyvista.Renderer.add_axes_at_origin">
+<code class="descname">add_axes_at_origin</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.Renderer.add_axes_at_origin" title="Permalink to this definition">¶</a></dt>
 <dd><p>Add axes actor at origin</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
@@ -2034,13 +2034,13 @@ meshes to be partially displayed.  Default False.</p></li>
 </dd></dl>
 
 <dl class="method">
-<dt id="vista.Renderer.add_border">
-<code class="descname">add_border</code><span class="sig-paren">(</span><em>color=[1, 1, 1], width=2.0</em><span class="sig-paren">)</span><a class="headerlink" href="#vista.Renderer.add_border" title="Permalink to this definition">¶</a></dt>
+<dt id="pyvista.Renderer.add_border">
+<code class="descname">add_border</code><span class="sig-paren">(</span><em>color=[1, 1, 1], width=2.0</em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.Renderer.add_border" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
-<dt id="vista.Renderer.add_bounding_box">
-<code class="descname">add_bounding_box</code><span class="sig-paren">(</span><em>color=None</em>, <em>corner_factor=0.5</em>, <em>line_width=None</em>, <em>opacity=1.0</em>, <em>render_lines_as_tubes=False</em>, <em>lighting=None</em>, <em>reset_camera=None</em><span class="sig-paren">)</span><a class="headerlink" href="#vista.Renderer.add_bounding_box" title="Permalink to this definition">¶</a></dt>
+<dt id="pyvista.Renderer.add_bounding_box">
+<code class="descname">add_bounding_box</code><span class="sig-paren">(</span><em>color=None</em>, <em>corner_factor=0.5</em>, <em>line_width=None</em>, <em>opacity=1.0</em>, <em>render_lines_as_tubes=False</em>, <em>lighting=None</em>, <em>reset_camera=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.Renderer.add_bounding_box" title="Permalink to this definition">¶</a></dt>
 <dd><p>Adds an unlabeled and unticked box at the boundaries of
 plot.  Useful for when wanting to plot outer grids while
 still retaining all edges of the boundary.</p>
@@ -2054,75 +2054,75 @@ box.</p>
 </dd></dl>
 
 <dl class="method">
-<dt id="vista.Renderer.add_bounds_axes">
-<code class="descname">add_bounds_axes</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#vista.Renderer.add_bounds_axes" title="Permalink to this definition">¶</a></dt>
+<dt id="pyvista.Renderer.add_bounds_axes">
+<code class="descname">add_bounds_axes</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.Renderer.add_bounds_axes" title="Permalink to this definition">¶</a></dt>
 <dd><p>Deprecated</p>
 </dd></dl>
 
 <dl class="attribute">
-<dt id="vista.Renderer.bounds">
-<code class="descname">bounds</code><a class="headerlink" href="#vista.Renderer.bounds" title="Permalink to this definition">¶</a></dt>
+<dt id="pyvista.Renderer.bounds">
+<code class="descname">bounds</code><a class="headerlink" href="#pyvista.Renderer.bounds" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bounds of all actors present in the rendering window</p>
 </dd></dl>
 
 <dl class="attribute">
-<dt id="vista.Renderer.camera">
-<code class="descname">camera</code><a class="headerlink" href="#vista.Renderer.camera" title="Permalink to this definition">¶</a></dt>
+<dt id="pyvista.Renderer.camera">
+<code class="descname">camera</code><a class="headerlink" href="#pyvista.Renderer.camera" title="Permalink to this definition">¶</a></dt>
 <dd><p>The active camera for the rendering scene</p>
 </dd></dl>
 
 <dl class="attribute">
-<dt id="vista.Renderer.camera_position">
-<code class="descname">camera_position</code><a class="headerlink" href="#vista.Renderer.camera_position" title="Permalink to this definition">¶</a></dt>
+<dt id="pyvista.Renderer.camera_position">
+<code class="descname">camera_position</code><a class="headerlink" href="#pyvista.Renderer.camera_position" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns camera position of active render window</p>
 </dd></dl>
 
 <dl class="attribute">
-<dt id="vista.Renderer.center">
-<code class="descname">center</code><a class="headerlink" href="#vista.Renderer.center" title="Permalink to this definition">¶</a></dt>
+<dt id="pyvista.Renderer.center">
+<code class="descname">center</code><a class="headerlink" href="#pyvista.Renderer.center" title="Permalink to this definition">¶</a></dt>
 <dd><p>Center of the bounding box around all data present in the scene</p>
 </dd></dl>
 
 <dl class="method">
-<dt id="vista.Renderer.disable">
-<code class="descname">disable</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#vista.Renderer.disable" title="Permalink to this definition">¶</a></dt>
+<dt id="pyvista.Renderer.disable">
+<code class="descname">disable</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.Renderer.disable" title="Permalink to this definition">¶</a></dt>
 <dd><p>Disable this renderer’s camera from being interactive</p>
 </dd></dl>
 
 <dl class="method">
-<dt id="vista.Renderer.disable_eye_dome_lighting">
-<code class="descname">disable_eye_dome_lighting</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#vista.Renderer.disable_eye_dome_lighting" title="Permalink to this definition">¶</a></dt>
+<dt id="pyvista.Renderer.disable_eye_dome_lighting">
+<code class="descname">disable_eye_dome_lighting</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.Renderer.disable_eye_dome_lighting" title="Permalink to this definition">¶</a></dt>
 <dd><p>Disable eye dome lighting (EDL)</p>
 </dd></dl>
 
 <dl class="method">
-<dt id="vista.Renderer.enable">
-<code class="descname">enable</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#vista.Renderer.enable" title="Permalink to this definition">¶</a></dt>
+<dt id="pyvista.Renderer.enable">
+<code class="descname">enable</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.Renderer.enable" title="Permalink to this definition">¶</a></dt>
 <dd><p>Enable this renderer’s camera to be interactive</p>
 </dd></dl>
 
 <dl class="method">
-<dt id="vista.Renderer.enable_eye_dome_lighting">
-<code class="descname">enable_eye_dome_lighting</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#vista.Renderer.enable_eye_dome_lighting" title="Permalink to this definition">¶</a></dt>
+<dt id="pyvista.Renderer.enable_eye_dome_lighting">
+<code class="descname">enable_eye_dome_lighting</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.Renderer.enable_eye_dome_lighting" title="Permalink to this definition">¶</a></dt>
 <dd><p>Enable eye dome lighting (EDL)</p>
 </dd></dl>
 
 <dl class="method">
-<dt id="vista.Renderer.get_default_cam_pos">
-<code class="descname">get_default_cam_pos</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#vista.Renderer.get_default_cam_pos" title="Permalink to this definition">¶</a></dt>
+<dt id="pyvista.Renderer.get_default_cam_pos">
+<code class="descname">get_default_cam_pos</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.Renderer.get_default_cam_pos" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns the default focal points and viewup. Uses ResetCamera to
 make a useful view.</p>
 </dd></dl>
 
 <dl class="method">
-<dt id="vista.Renderer.isometric_view">
-<code class="descname">isometric_view</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#vista.Renderer.isometric_view" title="Permalink to this definition">¶</a></dt>
+<dt id="pyvista.Renderer.isometric_view">
+<code class="descname">isometric_view</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.Renderer.isometric_view" title="Permalink to this definition">¶</a></dt>
 <dd><p>DEPRECATED: Please use <code class="docutils literal notranslate"><span class="pre">view_isometric</span></code></p>
 </dd></dl>
 
 <dl class="method">
-<dt id="vista.Renderer.remove_actor">
-<code class="descname">remove_actor</code><span class="sig-paren">(</span><em>actor</em>, <em>reset_camera=False</em><span class="sig-paren">)</span><a class="headerlink" href="#vista.Renderer.remove_actor" title="Permalink to this definition">¶</a></dt>
+<dt id="pyvista.Renderer.remove_actor">
+<code class="descname">remove_actor</code><span class="sig-paren">(</span><em>actor</em>, <em>reset_camera=False</em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.Renderer.remove_actor" title="Permalink to this definition">¶</a></dt>
 <dd><p>Removes an actor from the Renderer.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -2142,35 +2142,35 @@ removed.</p>
 </dd></dl>
 
 <dl class="method">
-<dt id="vista.Renderer.remove_bounding_box">
-<code class="descname">remove_bounding_box</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#vista.Renderer.remove_bounding_box" title="Permalink to this definition">¶</a></dt>
+<dt id="pyvista.Renderer.remove_bounding_box">
+<code class="descname">remove_bounding_box</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.Renderer.remove_bounding_box" title="Permalink to this definition">¶</a></dt>
 <dd><p>Removes bounding box</p>
 </dd></dl>
 
 <dl class="method">
-<dt id="vista.Renderer.remove_bounds_axes">
-<code class="descname">remove_bounds_axes</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#vista.Renderer.remove_bounds_axes" title="Permalink to this definition">¶</a></dt>
+<dt id="pyvista.Renderer.remove_bounds_axes">
+<code class="descname">remove_bounds_axes</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.Renderer.remove_bounds_axes" title="Permalink to this definition">¶</a></dt>
 <dd><p>Removes bounds axes</p>
 </dd></dl>
 
 <dl class="method">
-<dt id="vista.Renderer.reset_camera">
-<code class="descname">reset_camera</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#vista.Renderer.reset_camera" title="Permalink to this definition">¶</a></dt>
+<dt id="pyvista.Renderer.reset_camera">
+<code class="descname">reset_camera</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.Renderer.reset_camera" title="Permalink to this definition">¶</a></dt>
 <dd><p>Reset camera so it slides along the vector defined from camera
 position to focal point until all of the actors can be seen.</p>
 </dd></dl>
 
 <dl class="method">
-<dt id="vista.Renderer.set_scale">
-<code class="descname">set_scale</code><span class="sig-paren">(</span><em>xscale=None</em>, <em>yscale=None</em>, <em>zscale=None</em>, <em>reset_camera=True</em><span class="sig-paren">)</span><a class="headerlink" href="#vista.Renderer.set_scale" title="Permalink to this definition">¶</a></dt>
+<dt id="pyvista.Renderer.set_scale">
+<code class="descname">set_scale</code><span class="sig-paren">(</span><em>xscale=None</em>, <em>yscale=None</em>, <em>zscale=None</em>, <em>reset_camera=True</em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.Renderer.set_scale" title="Permalink to this definition">¶</a></dt>
 <dd><p>Scale all the datasets in the scene.
 Scaling in performed independently on the X, Y and Z axis.
 A scale of zero is illegal and will be replaced with one.</p>
 </dd></dl>
 
 <dl class="method">
-<dt id="vista.Renderer.show_bounds">
-<code class="descname">show_bounds</code><span class="sig-paren">(</span><em>mesh=None</em>, <em>bounds=None</em>, <em>show_xaxis=True</em>, <em>show_yaxis=True</em>, <em>show_zaxis=True</em>, <em>show_xlabels=True</em>, <em>show_ylabels=True</em>, <em>show_zlabels=True</em>, <em>italic=False</em>, <em>bold=True</em>, <em>shadow=False</em>, <em>font_size=None</em>, <em>font_family=None</em>, <em>color=None</em>, <em>xlabel='X Axis'</em>, <em>ylabel='Y Axis'</em>, <em>zlabel='Z Axis'</em>, <em>use_2d=False</em>, <em>grid=None</em>, <em>location='closest'</em>, <em>ticks=None</em>, <em>all_edges=False</em>, <em>corner_factor=0.5</em>, <em>loc=None</em>, <em>fmt=None</em>, <em>minor_ticks=False</em>, <em>padding=0.0</em><span class="sig-paren">)</span><a class="headerlink" href="#vista.Renderer.show_bounds" title="Permalink to this definition">¶</a></dt>
+<dt id="pyvista.Renderer.show_bounds">
+<code class="descname">show_bounds</code><span class="sig-paren">(</span><em>mesh=None</em>, <em>bounds=None</em>, <em>show_xaxis=True</em>, <em>show_yaxis=True</em>, <em>show_zaxis=True</em>, <em>show_xlabels=True</em>, <em>show_ylabels=True</em>, <em>show_zlabels=True</em>, <em>italic=False</em>, <em>bold=True</em>, <em>shadow=False</em>, <em>font_size=None</em>, <em>font_family=None</em>, <em>color=None</em>, <em>xlabel='X Axis'</em>, <em>ylabel='Y Axis'</em>, <em>zlabel='Z Axis'</em>, <em>use_2d=False</em>, <em>grid=None</em>, <em>location='closest'</em>, <em>ticks=None</em>, <em>all_edges=False</em>, <em>corner_factor=0.5</em>, <em>loc=None</em>, <em>fmt=None</em>, <em>minor_ticks=False</em>, <em>padding=0.0</em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.Renderer.show_bounds" title="Permalink to this definition">¶</a></dt>
 <dd><p>Adds bounds axes.  Shows the bounds of the most recent input
 mesh unless mesh is specified.</p>
 <dl class="field-list simple">
@@ -2237,10 +2237,10 @@ have no padding</p></li>
 </dd>
 </dl>
 <p class="rubric">Examples</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">vista</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">vista</span> <span class="k">import</span> <span class="n">examples</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">mesh</span> <span class="o">=</span> <span class="n">vista</span><span class="o">.</span><span class="n">Sphere</span><span class="p">()</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">plotter</span> <span class="o">=</span> <span class="n">vista</span><span class="o">.</span><span class="n">Plotter</span><span class="p">()</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">pyvista</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">pyvista</span> <span class="k">import</span> <span class="n">examples</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">mesh</span> <span class="o">=</span> <span class="n">pyvista</span><span class="o">.</span><span class="n">Sphere</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">plotter</span> <span class="o">=</span> <span class="n">pyvista</span><span class="o">.</span><span class="n">Plotter</span><span class="p">()</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">_</span> <span class="o">=</span> <span class="n">plotter</span><span class="o">.</span><span class="n">add_mesh</span><span class="p">(</span><span class="n">mesh</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">_</span> <span class="o">=</span> <span class="n">plotter</span><span class="o">.</span><span class="n">show_bounds</span><span class="p">(</span><span class="n">grid</span><span class="o">=</span><span class="s1">&#39;front&#39;</span><span class="p">,</span> <span class="n">location</span><span class="o">=</span><span class="s1">&#39;outer&#39;</span><span class="p">,</span> <span class="n">all_edges</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">plotter</span><span class="o">.</span><span class="n">show</span><span class="p">()</span> <span class="c1"># doctest:+SKIP</span>
@@ -2249,39 +2249,39 @@ have no padding</p></li>
 </dd></dl>
 
 <dl class="method">
-<dt id="vista.Renderer.update_bounds_axes">
-<code class="descname">update_bounds_axes</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#vista.Renderer.update_bounds_axes" title="Permalink to this definition">¶</a></dt>
+<dt id="pyvista.Renderer.update_bounds_axes">
+<code class="descname">update_bounds_axes</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.Renderer.update_bounds_axes" title="Permalink to this definition">¶</a></dt>
 <dd><p>Update the bounds axes of the render window</p>
 </dd></dl>
 
 <dl class="method">
-<dt id="vista.Renderer.view_isometric">
-<code class="descname">view_isometric</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#vista.Renderer.view_isometric" title="Permalink to this definition">¶</a></dt>
+<dt id="pyvista.Renderer.view_isometric">
+<code class="descname">view_isometric</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.Renderer.view_isometric" title="Permalink to this definition">¶</a></dt>
 <dd><p>Resets the camera to a default isometric view showing all the
 actors in the scene.</p>
 </dd></dl>
 
 <dl class="method">
-<dt id="vista.Renderer.view_vector">
-<code class="descname">view_vector</code><span class="sig-paren">(</span><em>vector</em>, <em>viewup=None</em><span class="sig-paren">)</span><a class="headerlink" href="#vista.Renderer.view_vector" title="Permalink to this definition">¶</a></dt>
+<dt id="pyvista.Renderer.view_vector">
+<code class="descname">view_vector</code><span class="sig-paren">(</span><em>vector</em>, <em>viewup=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.Renderer.view_vector" title="Permalink to this definition">¶</a></dt>
 <dd><p>Point the camera in the direction of the given vector</p>
 </dd></dl>
 
 <dl class="method">
-<dt id="vista.Renderer.view_xy">
-<code class="descname">view_xy</code><span class="sig-paren">(</span><em>negative=False</em><span class="sig-paren">)</span><a class="headerlink" href="#vista.Renderer.view_xy" title="Permalink to this definition">¶</a></dt>
+<dt id="pyvista.Renderer.view_xy">
+<code class="descname">view_xy</code><span class="sig-paren">(</span><em>negative=False</em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.Renderer.view_xy" title="Permalink to this definition">¶</a></dt>
 <dd><p>View the XY plane</p>
 </dd></dl>
 
 <dl class="method">
-<dt id="vista.Renderer.view_xz">
-<code class="descname">view_xz</code><span class="sig-paren">(</span><em>negative=False</em><span class="sig-paren">)</span><a class="headerlink" href="#vista.Renderer.view_xz" title="Permalink to this definition">¶</a></dt>
+<dt id="pyvista.Renderer.view_xz">
+<code class="descname">view_xz</code><span class="sig-paren">(</span><em>negative=False</em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.Renderer.view_xz" title="Permalink to this definition">¶</a></dt>
 <dd><p>View the XZ plane</p>
 </dd></dl>
 
 <dl class="method">
-<dt id="vista.Renderer.view_yz">
-<code class="descname">view_yz</code><span class="sig-paren">(</span><em>negative=False</em><span class="sig-paren">)</span><a class="headerlink" href="#vista.Renderer.view_yz" title="Permalink to this definition">¶</a></dt>
+<dt id="pyvista.Renderer.view_yz">
+<code class="descname">view_yz</code><span class="sig-paren">(</span><em>negative=False</em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.Renderer.view_yz" title="Permalink to this definition">¶</a></dt>
 <dd><p>View the YZ plane</p>
 </dd></dl>
 
@@ -2293,14 +2293,14 @@ actors in the scene.</p>
 <p>Inline plots are possible using a Jupyter notebook.  The code snippet below
 will create a static screenshot of the rendering and display it in the Jupyter
 notebook:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">vista</span>
-<span class="n">sphere</span> <span class="o">=</span> <span class="n">vista</span><span class="o">.</span><span class="n">Sphere</span><span class="p">()</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pyvista</span>
+<span class="n">sphere</span> <span class="o">=</span> <span class="n">pyvista</span><span class="o">.</span><span class="n">Sphere</span><span class="p">()</span>
 
 <span class="c1"># short example</span>
 <span class="n">cpos</span><span class="p">,</span> <span class="n">image</span> <span class="o">=</span> <span class="n">sphere</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">notebook</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
 
 <span class="c1"># long example</span>
-<span class="n">plotter</span> <span class="o">=</span> <span class="n">vista</span><span class="o">.</span><span class="n">Plotter</span><span class="p">(</span><span class="n">notebook</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+<span class="n">plotter</span> <span class="o">=</span> <span class="n">pyvista</span><span class="o">.</span><span class="n">Plotter</span><span class="p">(</span><span class="n">notebook</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
 <span class="n">plotter</span><span class="o">.</span><span class="n">add_mesh</span><span class="p">(</span><span class="n">sphere</span><span class="p">)</span>
 <span class="n">plotter</span><span class="o">.</span><span class="n">plot</span><span class="p">()</span>
 </pre></div>
@@ -2310,14 +2310,14 @@ notebook:</p>
 <p class="caption"><span class="caption-text">Jupyter Inline Plotting</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
 </div>
 <p>To display interactive plots in Jupyter notebooks, use the
-<a class="reference internal" href="qt_plotting.html#vista.BackgroundPlotter" title="vista.BackgroundPlotter"><code class="xref py py-class docutils literal notranslate"><span class="pre">vista.BackgroundPlotter</span></code></a> to open a rendering window in the background
+<a class="reference internal" href="qt_plotting.html#pyvista.BackgroundPlotter" title="pyvista.BackgroundPlotter"><code class="xref py py-class docutils literal notranslate"><span class="pre">pyvista.BackgroundPlotter</span></code></a> to open a rendering window in the background
 that you can manipulate in real time from the Jupyter notebook:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">vista</span>
-<span class="kn">from</span> <span class="nn">vista</span> <span class="kn">import</span> <span class="n">examples</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pyvista</span>
+<span class="kn">from</span> <span class="nn">pyvista</span> <span class="kn">import</span> <span class="n">examples</span>
 
 <span class="n">dataset</span> <span class="o">=</span> <span class="n">examples</span><span class="o">.</span><span class="n">load_uniform</span><span class="p">()</span>
 
-<span class="n">plotter</span> <span class="o">=</span> <span class="n">vista</span><span class="o">.</span><span class="n">BackgroundPlotter</span><span class="p">()</span>
+<span class="n">plotter</span> <span class="o">=</span> <span class="n">pyvista</span><span class="o">.</span><span class="n">BackgroundPlotter</span><span class="p">()</span>
 <span class="n">plotter</span><span class="o">.</span><span class="n">add_mesh</span><span class="p">(</span><span class="n">dataset</span><span class="p">)</span>
 
 <span class="c1"># Then in another cell, you can add more to the plotter</span>
@@ -2327,18 +2327,18 @@ that you can manipulate in real time from the Jupyter notebook:</p>
 </div>
 <div class="section" id="background-plotting">
 <h2>Background Plotting<a class="headerlink" href="#background-plotting" title="Permalink to this headline">¶</a></h2>
-<p><code class="docutils literal notranslate"><span class="pre">vista</span></code> provides a plotter that enables users to create a rendering window in
+<p>PyVista provides a plotter that enables users to create a rendering window in
 the background that remains interactive while the user performs their
 processing. This creates the ability to make a rendering scene and interactively
 add or remove datasets from the scene as well as has some useful menu functions
 for common scene manipulation or export tasks. To get started, try instantiating
-the <a class="reference internal" href="qt_plotting.html#vista.BackgroundPlotter" title="vista.BackgroundPlotter"><code class="xref py py-class docutils literal notranslate"><span class="pre">vista.BackgroundPlotter</span></code></a>:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">vista</span>
-<span class="kn">from</span> <span class="nn">vista</span> <span class="kn">import</span> <span class="n">examples</span>
+the <a class="reference internal" href="qt_plotting.html#pyvista.BackgroundPlotter" title="pyvista.BackgroundPlotter"><code class="xref py py-class docutils literal notranslate"><span class="pre">pyvista.BackgroundPlotter</span></code></a>:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pyvista</span>
+<span class="kn">from</span> <span class="nn">pyvista</span> <span class="kn">import</span> <span class="n">examples</span>
 
 <span class="n">dataset</span> <span class="o">=</span> <span class="n">examples</span><span class="o">.</span><span class="n">load_hexbeam</span><span class="p">()</span>
 
-<span class="n">p</span> <span class="o">=</span> <span class="n">vista</span><span class="o">.</span><span class="n">BackgroundPlotter</span><span class="p">()</span>
+<span class="n">p</span> <span class="o">=</span> <span class="n">pyvista</span><span class="o">.</span><span class="n">BackgroundPlotter</span><span class="p">()</span>
 
 <span class="n">p</span><span class="o">.</span><span class="n">add_mesh</span><span class="p">(</span><span class="n">dataset</span><span class="p">)</span>
 
@@ -2348,19 +2348,19 @@ the <a class="reference internal" href="qt_plotting.html#vista.BackgroundPlotter
 </div>
 <div class="section" id="ipython-interactive-plotting-tools">
 <h2>IPython Interactive Plotting Tools<a class="headerlink" href="#ipython-interactive-plotting-tools" title="Permalink to this headline">¶</a></h2>
-<p><code class="docutils literal notranslate"><span class="pre">vista</span></code> comes packed with several interactive plotting tools to make using the
+<p>PyVista comes packed with several interactive plotting tools to make using the
 filters a bit more intuitive (see <a class="reference internal" href="ipy_tools.html#ipy-tools-ref"><span class="std std-ref">IPython Tools</span></a>).
 If in an IPython environment, call one of the tools on an input dataset to yield
 widgets that will control a filter or task in an interactive rendering scene.
-These tools create an <a class="reference internal" href="qt_plotting.html#vista.BackgroundPlotter" title="vista.BackgroundPlotter"><code class="xref py py-class docutils literal notranslate"><span class="pre">vista.BackgroundPlotter</span></code></a> instance which can be
+These tools create an <a class="reference internal" href="qt_plotting.html#pyvista.BackgroundPlotter" title="pyvista.BackgroundPlotter"><code class="xref py py-class docutils literal notranslate"><span class="pre">pyvista.BackgroundPlotter</span></code></a> instance which can be
 accessed under the <code class="docutils literal notranslate"><span class="pre">.plotter</span></code> attribute for further scene manipulation:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">vista</span>
-<span class="kn">from</span> <span class="nn">vista</span> <span class="kn">import</span> <span class="n">examples</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pyvista</span>
+<span class="kn">from</span> <span class="nn">pyvista</span> <span class="kn">import</span> <span class="n">examples</span>
 
 <span class="n">dataset</span> <span class="o">=</span> <span class="n">examples</span><span class="o">.</span><span class="n">load_hexbeam</span><span class="p">()</span>
 
 <span class="c1"># Use the slicer tool</span>
-<span class="n">tool</span> <span class="o">=</span> <span class="n">vista</span><span class="o">.</span><span class="n">OrthogonalSlicer</span><span class="p">(</span><span class="n">dataset</span><span class="p">)</span>
+<span class="n">tool</span> <span class="o">=</span> <span class="n">pyvista</span><span class="o">.</span><span class="n">OrthogonalSlicer</span><span class="p">(</span><span class="n">dataset</span><span class="p">)</span>
 
 <span class="c1"># Get the plotter for adding more datasets:</span>
 <span class="n">p</span> <span class="o">=</span> <span class="n">tool</span><span class="o">.</span><span class="n">plotter</span>
@@ -2378,8 +2378,8 @@ values change through time:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">threading</span> <span class="kn">import</span> <span class="n">Thread</span>
 <span class="kn">import</span> <span class="nn">time</span>
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="kn">as</span> <span class="nn">np</span>
-<span class="kn">import</span> <span class="nn">vista</span>
-<span class="kn">from</span> <span class="nn">vista</span> <span class="kn">import</span> <span class="n">examples</span>
+<span class="kn">import</span> <span class="nn">pyvista</span>
+<span class="kn">from</span> <span class="nn">pyvista</span> <span class="kn">import</span> <span class="n">examples</span>
 
 
 <span class="n">globe</span> <span class="o">=</span> <span class="n">examples</span><span class="o">.</span><span class="n">load_globe</span><span class="p">()</span>
@@ -2387,7 +2387,7 @@ values change through time:</p>
 <span class="n">globe</span><span class="o">.</span><span class="n">set_active_scalar</span><span class="p">(</span><span class="s1">&#39;scalars&#39;</span><span class="p">)</span>
 
 
-<span class="n">plotter</span> <span class="o">=</span> <span class="n">vista</span><span class="o">.</span><span class="n">BackgroundPlotter</span><span class="p">()</span>
+<span class="n">plotter</span> <span class="o">=</span> <span class="n">pyvista</span><span class="o">.</span><span class="n">BackgroundPlotter</span><span class="p">()</span>
 <span class="n">plotter</span><span class="o">.</span><span class="n">add_mesh</span><span class="p">(</span><span class="n">globe</span><span class="p">,</span> <span class="n">lighting</span><span class="o">=</span><span class="bp">False</span><span class="p">,</span> <span class="n">show_edges</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">texture</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">scalars</span><span class="o">=</span><span class="s1">&#39;scalars&#39;</span><span class="p">)</span>
 <span class="n">plotter</span><span class="o">.</span><span class="n">view_isometric</span><span class="p">()</span>
 
@@ -2429,7 +2429,7 @@ values change through time:</p>
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2017-2019, The vista Developers
+        &copy; Copyright 2017-2019, The PyVista Developers
 
     </p>
   </div>

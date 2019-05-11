@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Load and Plot from a File &mdash; vista 0.19.0 documentation</title>
+  <title>Load and Plot from a File &mdash; PyVista 0.19.0 documentation</title>
   
 
   
@@ -61,7 +61,7 @@
 
           
             
-            <img src="../../_static/vista_logo.png" class="logo" alt="Logo"/>
+            <img src="../../_static/pyvista_logo.png" class="logo" alt="Logo"/>
           
           </a>
 
@@ -95,7 +95,7 @@
             
               <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../index.html">About</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../why.html">Why <code class="docutils literal notranslate"><span class="pre">vista</span></code>?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../why.html">Why PyVista?</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../authors.html">Authors</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Getting Started</span></p>
@@ -139,7 +139,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../../tools/plotting.html">Plotting</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../tools/filters.html">Filters</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../tools/ipy_tools.html">IPython Tools</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../tools/qt_plotting.html">vista PyQt Interface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../tools/qt_plotting.html">PyVista PyQt Interface</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../tools/utilities.html">Utilities</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Contributing</span></p>
@@ -161,7 +161,7 @@
       <nav class="wy-nav-top" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../../index.html">vista</a>
+          <a href="../../index.html">PyVista</a>
         
       </nav>
 
@@ -201,7 +201,7 @@
         
             
             
-              <a href="https://github.com/pyvista/vista/blob/master/docs/examples/00-load/read-file.rst" class="fa fa-github"> Edit on GitHub</a>
+              <a href="https://github.com/pyvista/pyvista/blob/master/docs/examples/00-load/read-file.rst" class="fa fa-github"> Edit on GitHub</a>
             
           
         
@@ -223,13 +223,13 @@
 <span id="sphx-glr-examples-00-load-read-file-py"></span><h1>Load and Plot from a File<a class="headerlink" href="#load-and-plot-from-a-file" title="Permalink to this headline">¶</a></h1>
 <p>Read a dataset from a known file type.
 Loading a mesh is trivial - if your data is in one of the many supported
-file formats, simply use <a class="reference internal" href="../../tools/utilities.html#vista.read" title="vista.read"><code class="xref py py-func docutils literal notranslate"><span class="pre">vista.read()</span></code></a> to load your spatially referneced
-dataset into a <code class="docutils literal notranslate"><span class="pre">vista</span></code> mesh object.</p>
+file formats, simply use <a class="reference internal" href="../../tools/utilities.html#pyvista.read" title="pyvista.read"><code class="xref py py-func docutils literal notranslate"><span class="pre">pyvista.read()</span></code></a> to load your spatially referneced
+dataset into a PyVista mesh object.</p>
 <p>The following code block uses a built-in example file and displays an airplane
 mesh.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># sphinx_gallery_thumbnail_number = 5</span>
-<span class="kn">import</span> <span class="nn">vista</span>
-<span class="kn">from</span> <span class="nn">vista</span> <span class="k">import</span> <span class="n">examples</span>
+<span class="kn">import</span> <span class="nn">pyvista</span>
+<span class="kn">from</span> <span class="nn">pyvista</span> <span class="k">import</span> <span class="n">examples</span>
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
 </pre></div>
@@ -242,19 +242,19 @@ file, displays an airplane mesh and returns the camera’s position:</p>
 </pre></div>
 </div>
 <p class="sphx-glr-script-out">Out:</p>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>/home/travis/build/pyvista/vista/vista/examples/airplane.ply
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>/home/travis/build/pyvista/pyvista/pyvista/examples/airplane.ply
 </pre></div>
 </div>
 <p>Note the above filename, it’s a <code class="docutils literal notranslate"><span class="pre">.ply</span></code> file - one of the many supported
-formats in <code class="docutils literal notranslate"><span class="pre">vista</span></code>.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mesh</span> <span class="o">=</span> <span class="n">vista</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span>
+formats in PyVista.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mesh</span> <span class="o">=</span> <span class="n">pyvista</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span>
 <span class="n">cpos</span> <span class="o">=</span> <span class="n">mesh</span><span class="o">.</span><span class="n">plot</span><span class="p">()</span>
 </pre></div>
 </div>
 <img alt="../../_images/sphx_glr_read-file_001.png" class="sphx-glr-single-img" src="../../_images/sphx_glr_read-file_001.png" />
 <p>You can also take a screenshot without creating an interactive plot window
 using the <code class="docutils literal notranslate"><span class="pre">Plotter</span></code>:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">plotter</span> <span class="o">=</span> <span class="n">vista</span><span class="o">.</span><span class="n">Plotter</span><span class="p">(</span><span class="n">off_screen</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">plotter</span> <span class="o">=</span> <span class="n">pyvista</span><span class="o">.</span><span class="n">Plotter</span><span class="p">(</span><span class="n">off_screen</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 <span class="n">plotter</span><span class="o">.</span><span class="n">add_mesh</span><span class="p">(</span><span class="n">mesh</span><span class="p">)</span>
 <span class="n">plotter</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="n">screenshot</span><span class="o">=</span><span class="s1">&#39;myscreenshot.png&#39;</span><span class="p">)</span>
 </pre></div>
@@ -289,9 +289,9 @@ using the <code class="docutils literal notranslate"><span class="pre">Plotter</
 </pre></div>
 </div>
 <p>Loading other files types is just as easy! Simply pass your file path to the
-<a class="reference internal" href="../../tools/utilities.html#vista.read" title="vista.read"><code class="xref py py-func docutils literal notranslate"><span class="pre">vista.read()</span></code></a> function and that’s it!</p>
+<a class="reference internal" href="../../tools/utilities.html#pyvista.read" title="pyvista.read"><code class="xref py py-func docutils literal notranslate"><span class="pre">pyvista.read()</span></code></a> function and that’s it!</p>
 <p>Here are a few other examples - siply replace <code class="docutils literal notranslate"><span class="pre">examples.download_*</span></code> in the
-examples below with <code class="docutils literal notranslate"><span class="pre">vista.read('path/to/you/file.ext')</span></code></p>
+examples below with <code class="docutils literal notranslate"><span class="pre">pyvista.read('path/to/you/file.ext')</span></code></p>
 <p>Example STL file:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mesh</span> <span class="o">=</span> <span class="n">examples</span><span class="o">.</span><span class="n">download_cad_model</span><span class="p">()</span>
 <span class="n">cpos</span> <span class="o">=</span> <span class="p">[(</span><span class="mf">107.</span><span class="p">,</span> <span class="mf">68.5</span><span class="p">,</span> <span class="mf">204.</span><span class="p">),</span>
@@ -322,13 +322,13 @@ examples below with <code class="docutils literal notranslate"><span class="pre"
 </pre></div>
 </div>
 <img alt="../../_images/sphx_glr_read-file_006.png" class="sphx-glr-single-img" src="../../_images/sphx_glr_read-file_006.png" />
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  6.057 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  6.503 seconds)</p>
 <div class="sphx-glr-footer class sphx-glr-footer-example docutils container" id="sphx-glr-download-examples-00-load-read-file-py">
 <div class="sphx-glr-download docutils container">
-<p><a class="reference download internal" download="" href="../../_downloads/e66eb60aab277f37f7b9fdca15427f38/read-file.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">read-file.py</span></code></a></p>
+<p><a class="reference download internal" download="" href="../../_downloads/78fb854ce6db0a354590d7ab2f5998db/read-file.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">read-file.py</span></code></a></p>
 </div>
 <div class="sphx-glr-download docutils container">
-<p><a class="reference download internal" download="" href="../../_downloads/a61ca794dea107f66bfe5ae5000bcf38/read-file.ipynb"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Jupyter</span> <span class="pre">notebook:</span> <span class="pre">read-file.ipynb</span></code></a></p>
+<p><a class="reference download internal" download="" href="../../_downloads/1c986183d1e12674b3bf457791e02d81/read-file.ipynb"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Jupyter</span> <span class="pre">notebook:</span> <span class="pre">read-file.ipynb</span></code></a></p>
 </div>
 </div>
 <p class="sphx-glr-signature"><a class="reference external" href="https://sphinx-gallery.readthedocs.io">Gallery generated by Sphinx-Gallery</a></p>
@@ -354,7 +354,7 @@ examples below with <code class="docutils literal notranslate"><span class="pre"
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2017-2019, The vista Developers
+        &copy; Copyright 2017-2019, The PyVista Developers
 
     </p>
   </div>

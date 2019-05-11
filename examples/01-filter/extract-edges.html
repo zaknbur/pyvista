@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Extract Edges &mdash; vista 0.19.0 documentation</title>
+  <title>Extract Edges &mdash; PyVista 0.19.0 documentation</title>
   
 
   
@@ -61,7 +61,7 @@
 
           
             
-            <img src="../../_static/vista_logo.png" class="logo" alt="Logo"/>
+            <img src="../../_static/pyvista_logo.png" class="logo" alt="Logo"/>
           
           </a>
 
@@ -95,7 +95,7 @@
             
               <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../index.html">About</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../why.html">Why <code class="docutils literal notranslate"><span class="pre">vista</span></code>?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../why.html">Why PyVista?</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../authors.html">Authors</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Getting Started</span></p>
@@ -142,7 +142,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../../tools/plotting.html">Plotting</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../tools/filters.html">Filters</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../tools/ipy_tools.html">IPython Tools</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../tools/qt_plotting.html">vista PyQt Interface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../tools/qt_plotting.html">PyVista PyQt Interface</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../tools/utilities.html">Utilities</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Contributing</span></p>
@@ -164,7 +164,7 @@
       <nav class="wy-nav-top" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../../index.html">vista</a>
+          <a href="../../index.html">PyVista</a>
         
       </nav>
 
@@ -204,7 +204,7 @@
         
             
             
-              <a href="https://github.com/pyvista/vista/blob/master/docs/examples/01-filter/extract-edges.rst" class="fa fa-github"> Edit on GitHub</a>
+              <a href="https://github.com/pyvista/pyvista/blob/master/docs/examples/01-filter/extract-edges.rst" class="fa fa-github"> Edit on GitHub</a>
             
           
         
@@ -226,8 +226,8 @@
 <span id="sphx-glr-examples-01-filter-extract-edges-py"></span><h1>Extract Edges<a class="headerlink" href="#extract-edges" title="Permalink to this headline">¶</a></h1>
 <p>Extracts edges from a surface.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># sphinx_gallery_thumbnail_number = 2</span>
-<span class="kn">import</span> <span class="nn">vista</span>
-<span class="kn">from</span> <span class="nn">vista</span> <span class="k">import</span> <span class="n">examples</span>
+<span class="kn">import</span> <span class="nn">pyvista</span>
+<span class="kn">from</span> <span class="nn">pyvista</span> <span class="k">import</span> <span class="n">examples</span>
 </pre></div>
 </div>
 <p>From vtk documentation, the edges are one of the following:</p>
@@ -247,7 +247,7 @@ To demonstrate, we will first extract the edges around Queen Nefertiti’s eyes:
 <span class="n">edges</span> <span class="o">=</span> <span class="n">mesh</span><span class="o">.</span><span class="n">extract_edges</span><span class="p">(</span><span class="mi">12</span><span class="p">)</span>
 
 <span class="c1"># Render the edge lines ontop of the original mesh</span>
-<span class="n">p</span> <span class="o">=</span> <span class="n">vista</span><span class="o">.</span><span class="n">Plotter</span><span class="p">()</span>
+<span class="n">p</span> <span class="o">=</span> <span class="n">pyvista</span><span class="o">.</span><span class="n">Plotter</span><span class="p">()</span>
 <span class="n">p</span><span class="o">.</span><span class="n">add_mesh</span><span class="p">(</span><span class="n">mesh</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 <span class="n">p</span><span class="o">.</span><span class="n">add_mesh</span><span class="p">(</span><span class="n">edges</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;red&#39;</span><span class="p">,</span> <span class="n">line_width</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>
 <span class="c1"># Define a camera position that will zoom to her eye</span>
@@ -258,13 +258,13 @@ To demonstrate, we will first extract the edges around Queen Nefertiti’s eyes:
 </pre></div>
 </div>
 <img alt="../../_images/sphx_glr_extract-edges_001.png" class="sphx-glr-single-img" src="../../_images/sphx_glr_extract-edges_001.png" />
-<p>We can do this anaylsis for any <a class="reference internal" href="../../types/points.html#vista.PolyData" title="vista.PolyData"><code class="xref py py-class docutils literal notranslate"><span class="pre">vista.PolyData</span></code></a> object. Let’s try the
+<p>We can do this anaylsis for any <a class="reference internal" href="../../types/points.html#pyvista.PolyData" title="pyvista.PolyData"><code class="xref py py-class docutils literal notranslate"><span class="pre">pyvista.PolyData</span></code></a> object. Let’s try the
 cow mesh example:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mesh</span> <span class="o">=</span> <span class="n">examples</span><span class="o">.</span><span class="n">download_cow</span><span class="p">()</span>
 
 <span class="n">edges</span> <span class="o">=</span> <span class="n">mesh</span><span class="o">.</span><span class="n">extract_edges</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span>
 
-<span class="n">p</span> <span class="o">=</span> <span class="n">vista</span><span class="o">.</span><span class="n">Plotter</span><span class="p">()</span>
+<span class="n">p</span> <span class="o">=</span> <span class="n">pyvista</span><span class="o">.</span><span class="n">Plotter</span><span class="p">()</span>
 <span class="n">p</span><span class="o">.</span><span class="n">add_mesh</span><span class="p">(</span><span class="n">mesh</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 <span class="n">p</span><span class="o">.</span><span class="n">add_mesh</span><span class="p">(</span><span class="n">edges</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;red&#39;</span><span class="p">,</span> <span class="n">line_width</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>
 <span class="n">p</span><span class="o">.</span><span class="n">camera_position</span> <span class="o">=</span> <span class="p">[(</span><span class="mf">9.5</span><span class="p">,</span> <span class="mf">3.</span><span class="p">,</span> <span class="mf">5.5</span><span class="p">),</span>
@@ -274,13 +274,13 @@ cow mesh example:</p>
 </pre></div>
 </div>
 <img alt="../../_images/sphx_glr_extract-edges_002.png" class="sphx-glr-single-img" src="../../_images/sphx_glr_extract-edges_002.png" />
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  14.007 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  53.421 seconds)</p>
 <div class="sphx-glr-footer class sphx-glr-footer-example docutils container" id="sphx-glr-download-examples-01-filter-extract-edges-py">
 <div class="sphx-glr-download docutils container">
-<p><a class="reference download internal" download="" href="../../_downloads/7ad1afa6239a073b7bf3f7d3f24f2e80/extract-edges.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">extract-edges.py</span></code></a></p>
+<p><a class="reference download internal" download="" href="../../_downloads/24170fcc8bc23e8864b775c36a9f96b8/extract-edges.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">extract-edges.py</span></code></a></p>
 </div>
 <div class="sphx-glr-download docutils container">
-<p><a class="reference download internal" download="" href="../../_downloads/5a7238443347f0e066aa2e1beebbfec5/extract-edges.ipynb"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Jupyter</span> <span class="pre">notebook:</span> <span class="pre">extract-edges.ipynb</span></code></a></p>
+<p><a class="reference download internal" download="" href="../../_downloads/45668690d07959b2d1be8c25365d46ca/extract-edges.ipynb"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Jupyter</span> <span class="pre">notebook:</span> <span class="pre">extract-edges.ipynb</span></code></a></p>
 </div>
 </div>
 <p class="sphx-glr-signature"><a class="reference external" href="https://sphinx-gallery.readthedocs.io">Gallery generated by Sphinx-Gallery</a></p>
@@ -306,7 +306,7 @@ cow mesh example:</p>
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2017-2019, The vista Developers
+        &copy; Copyright 2017-2019, The PyVista Developers
 
     </p>
   </div>

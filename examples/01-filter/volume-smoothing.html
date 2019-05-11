@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Volume Smoothing &mdash; vista 0.19.0 documentation</title>
+  <title>Volume Smoothing &mdash; PyVista 0.19.0 documentation</title>
   
 
   
@@ -61,7 +61,7 @@
 
           
             
-            <img src="../../_static/vista_logo.png" class="logo" alt="Logo"/>
+            <img src="../../_static/pyvista_logo.png" class="logo" alt="Logo"/>
           
           </a>
 
@@ -95,7 +95,7 @@
             
               <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../index.html">About</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../why.html">Why <code class="docutils literal notranslate"><span class="pre">vista</span></code>?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../why.html">Why PyVista?</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../authors.html">Authors</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Getting Started</span></p>
@@ -142,7 +142,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../../tools/plotting.html">Plotting</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../tools/filters.html">Filters</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../tools/ipy_tools.html">IPython Tools</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../tools/qt_plotting.html">vista PyQt Interface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../tools/qt_plotting.html">PyVista PyQt Interface</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../tools/utilities.html">Utilities</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Contributing</span></p>
@@ -164,7 +164,7 @@
       <nav class="wy-nav-top" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../../index.html">vista</a>
+          <a href="../../index.html">PyVista</a>
         
       </nav>
 
@@ -204,7 +204,7 @@
         
             
             
-              <a href="https://github.com/pyvista/vista/blob/master/docs/examples/01-filter/volume-smoothing.rst" class="fa fa-github"> Edit on GitHub</a>
+              <a href="https://github.com/pyvista/pyvista/blob/master/docs/examples/01-filter/volume-smoothing.rst" class="fa fa-github"> Edit on GitHub</a>
             
           
         
@@ -226,14 +226,14 @@
 <span id="sphx-glr-examples-01-filter-volume-smoothing-py"></span><h1>Volume Smoothing<a class="headerlink" href="#volume-smoothing" title="Permalink to this headline">¶</a></h1>
 <p>Smoothing rough edges of a volumetric surface</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># sphinx_gallery_thumbnail_number = 4</span>
-<span class="kn">import</span> <span class="nn">vista</span>
-<span class="kn">from</span> <span class="nn">vista</span> <span class="k">import</span> <span class="n">examples</span>
+<span class="kn">import</span> <span class="nn">pyvista</span>
+<span class="kn">from</span> <span class="nn">pyvista</span> <span class="k">import</span> <span class="n">examples</span>
 </pre></div>
 </div>
 <p>Suppose you extract a volumetric subset of a dataset that has roughly defined
 edges. Perhaps you’d like a smooth representation of that model region. This
 can be achieved by extracting the bounding surface of the volume and applying
-a <a class="reference internal" href="../../types/points.html#vista.PolyData.smooth" title="vista.PolyData.smooth"><code class="xref py py-func docutils literal notranslate"><span class="pre">vista.PolyData.smooth()</span></code></a> filter.</p>
+a <a class="reference internal" href="../../types/points.html#pyvista.PolyData.smooth" title="pyvista.PolyData.smooth"><code class="xref py py-func docutils literal notranslate"><span class="pre">pyvista.PolyData.smooth()</span></code></a> filter.</p>
 <p>The below code snippet loads a sample roughly edged volumetric dataset:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Vector to view rough edges</span>
 <span class="n">cpos</span> <span class="o">=</span> <span class="p">[</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">3</span><span class="p">]</span>
@@ -247,7 +247,7 @@ a <a class="reference internal" href="../../types/points.html#vista.PolyData.smo
 </div>
 <img alt="../../_images/sphx_glr_volume-smoothing_001.png" class="sphx-glr-single-img" src="../../_images/sphx_glr_volume-smoothing_001.png" />
 <p>Extract the outer surface of the volume using the
-<a class="reference internal" href="../../tools/filters.html#vista.DataSetFilters.extract_geometry" title="vista.DataSetFilters.extract_geometry"><code class="xref py py-func docutils literal notranslate"><span class="pre">vista.DataSetFilters.extract_geometry()</span></code></a> filter and then apply the
+<a class="reference internal" href="../../tools/filters.html#pyvista.DataSetFilters.extract_geometry" title="pyvista.DataSetFilters.extract_geometry"><code class="xref py py-func docutils literal notranslate"><span class="pre">pyvista.DataSetFilters.extract_geometry()</span></code></a> filter and then apply the
 smoothing filter:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Get the out surface as PolyData</span>
 <span class="n">surf</span> <span class="o">=</span> <span class="n">vol</span><span class="o">.</span><span class="n">extract_geometry</span><span class="p">()</span>
@@ -273,13 +273,13 @@ smoothing algorithm to a crazy high value:</p>
 </pre></div>
 </div>
 <img alt="../../_images/sphx_glr_volume-smoothing_004.png" class="sphx-glr-single-img" src="../../_images/sphx_glr_volume-smoothing_004.png" />
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  9.471 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  9.692 seconds)</p>
 <div class="sphx-glr-footer class sphx-glr-footer-example docutils container" id="sphx-glr-download-examples-01-filter-volume-smoothing-py">
 <div class="sphx-glr-download docutils container">
-<p><a class="reference download internal" download="" href="../../_downloads/3d63126121a3fefedea6718e2f498cc6/volume-smoothing.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">volume-smoothing.py</span></code></a></p>
+<p><a class="reference download internal" download="" href="../../_downloads/c23732d01116b5db12bc0453675c29c3/volume-smoothing.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">volume-smoothing.py</span></code></a></p>
 </div>
 <div class="sphx-glr-download docutils container">
-<p><a class="reference download internal" download="" href="../../_downloads/9c1048bfb180032530c050b4f1615d30/volume-smoothing.ipynb"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Jupyter</span> <span class="pre">notebook:</span> <span class="pre">volume-smoothing.ipynb</span></code></a></p>
+<p><a class="reference download internal" download="" href="../../_downloads/8dae383028e73c6a3e1aed32bee1e0cc/volume-smoothing.ipynb"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Jupyter</span> <span class="pre">notebook:</span> <span class="pre">volume-smoothing.ipynb</span></code></a></p>
 </div>
 </div>
 <p class="sphx-glr-signature"><a class="reference external" href="https://sphinx-gallery.readthedocs.io">Gallery generated by Sphinx-Gallery</a></p>
@@ -305,7 +305,7 @@ smoothing algorithm to a crazy high value:</p>
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2017-2019, The vista Developers
+        &copy; Copyright 2017-2019, The PyVista Developers
 
     </p>
   </div>

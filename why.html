@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Why vista? &mdash; vista 0.19.0 documentation</title>
+  <title>Why PyVista? &mdash; PyVista 0.19.0 documentation</title>
   
 
   
@@ -61,7 +61,7 @@
 
           
             
-            <img src="_static/vista_logo.png" class="logo" alt="Logo"/>
+            <img src="_static/pyvista_logo.png" class="logo" alt="Logo"/>
           
           </a>
 
@@ -95,9 +95,9 @@
             
               <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="index.html">About</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Why <code class="docutils literal notranslate"><span class="pre">vista</span></code>?</a><ul>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Why PyVista?</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#plotting-a-mesh-using-python-s-vtk">Plotting a Mesh using Python’s VTK</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#plot-a-mesh-using-vista">Plot a Mesh using vista</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#plot-a-mesh-using-pyvista">Plot a Mesh using PyVista</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#advanced-plotting-with-numpy">Advanced Plotting with Numpy</a></li>
 </ul>
 </li>
@@ -128,7 +128,7 @@
 <li class="toctree-l1"><a class="reference internal" href="tools/plotting.html">Plotting</a></li>
 <li class="toctree-l1"><a class="reference internal" href="tools/filters.html">Filters</a></li>
 <li class="toctree-l1"><a class="reference internal" href="tools/ipy_tools.html">IPython Tools</a></li>
-<li class="toctree-l1"><a class="reference internal" href="tools/qt_plotting.html">vista PyQt Interface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tools/qt_plotting.html">PyVista PyQt Interface</a></li>
 <li class="toctree-l1"><a class="reference internal" href="tools/utilities.html">Utilities</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Contributing</span></p>
@@ -150,7 +150,7 @@
       <nav class="wy-nav-top" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="index.html">vista</a>
+          <a href="index.html">PyVista</a>
         
       </nav>
 
@@ -181,14 +181,14 @@
     
       <li><a href="index.html">Docs</a> &raquo;</li>
         
-      <li>Why <code class="docutils literal notranslate"><span class="pre">vista</span></code>?</li>
+      <li>Why PyVista?</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
             
             
-              <a href="https://github.com/pyvista/vista/blob/master/docs/why.rst" class="fa fa-github"> Edit on GitHub</a>
+              <a href="https://github.com/pyvista/pyvista/blob/master/docs/why.rst" class="fa fa-github"> Edit on GitHub</a>
             
           
         
@@ -202,8 +202,8 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="why-vista">
-<h1>Why <code class="docutils literal notranslate"><span class="pre">vista</span></code>?<a class="headerlink" href="#why-vista" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="why-pyvista">
+<h1>Why PyVista?<a class="headerlink" href="#why-pyvista" title="Permalink to this headline">¶</a></h1>
 <p>VTK is an excellent visualization toolkit, and with Python bindings it should be
 able to combine the speed of C++ with the rapid prototyping of Python.
 However, despite this VTK code programmed in Python generally looks the same as
@@ -254,12 +254,12 @@ loading and plotting an STL file requires a lot of code when using only the
 </pre></div>
 </div>
 </div>
-<div class="section" id="plot-a-mesh-using-vista">
-<h2>Plot a Mesh using vista<a class="headerlink" href="#plot-a-mesh-using-vista" title="Permalink to this headline">¶</a></h2>
-<p>The same stl can be loaded and plotted using vista with:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">vista</span>
+<div class="section" id="plot-a-mesh-using-pyvista">
+<h2>Plot a Mesh using PyVista<a class="headerlink" href="#plot-a-mesh-using-pyvista" title="Permalink to this headline">¶</a></h2>
+<p>The same stl can be loaded and plotted using pyvista with:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pyvista</span>
 
-<span class="n">mesh</span> <span class="o">=</span> <span class="n">vista</span><span class="o">.</span><span class="n">PolyData</span><span class="p">(</span><span class="s1">&#39;myfile.stl&#39;</span><span class="p">)</span>
+<span class="n">mesh</span> <span class="o">=</span> <span class="n">pyvista</span><span class="o">.</span><span class="n">PolyData</span><span class="p">(</span><span class="s1">&#39;myfile.stl&#39;</span><span class="p">)</span>
 <span class="n">mesh</span><span class="o">.</span><span class="n">plot</span><span class="p">()</span>
 </pre></div>
 </div>
@@ -270,7 +270,7 @@ after the user closes the VTK plotting window.</p>
 <div class="section" id="advanced-plotting-with-numpy">
 <h2>Advanced Plotting with Numpy<a class="headerlink" href="#advanced-plotting-with-numpy" title="Permalink to this headline">¶</a></h2>
 <p>When combined with numpy, you can make some truly spectacular plots:</p>
-<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">vista</span>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pyvista</span>
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 
 <span class="c1"># Make a grid</span>
@@ -287,7 +287,7 @@ after the user closes the VTK plotting window.</p>
 <span class="n">direction</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">points</span><span class="p">)</span><span class="o">**</span><span class="mi">3</span>
 
 <span class="c1"># plot using the plotting class</span>
-<span class="n">plobj</span> <span class="o">=</span> <span class="n">vista</span><span class="o">.</span><span class="n">Plotter</span><span class="p">()</span>
+<span class="n">plobj</span> <span class="o">=</span> <span class="n">pyvista</span><span class="o">.</span><span class="n">Plotter</span><span class="p">()</span>
 <span class="n">plobj</span><span class="o">.</span><span class="n">add_arrows</span><span class="p">(</span><span class="n">points</span><span class="p">,</span> <span class="n">direction</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">)</span>
 <span class="n">plobj</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="n">screenshot</span><span class="o">=</span><span class="s1">&#39;vectorfield.png&#39;</span><span class="p">)</span>
 </pre></div>
@@ -298,12 +298,12 @@ objects can.  For example, triangular surface meshes in VTK can be subdivided
 but every other object in VTK cannot.  It then makes sense that a subdivided
 method be added to the existing triangular surface mesh.
 That way, subdivision can be performed with:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">vista</span> <span class="kn">import</span> <span class="n">examples</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">pyvista</span> <span class="kn">import</span> <span class="n">examples</span>
 <span class="n">mesh</span> <span class="o">=</span> <span class="n">examples</span><span class="o">.</span><span class="n">load_ant</span><span class="p">()</span>
 <span class="n">submesh</span> <span class="o">=</span> <span class="n">mesh</span><span class="o">.</span><span class="n">subdivide</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="s1">&#39;linear&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>Additionally, the docstrings for all methods in <code class="docutils literal notranslate"><span class="pre">vista</span></code> are intended to be used
+<p>Additionally, the docstrings for all methods in PyVista are intended to be used
 within interactive coding sessions. This allows users to use sophisticated
 processing routines on the fly with immediate access to a description of how to
 use those methods:</p>
@@ -333,7 +333,7 @@ use those methods:</p>
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2017-2019, The vista Developers
+        &copy; Copyright 2017-2019, The PyVista Developers
 
     </p>
   </div>

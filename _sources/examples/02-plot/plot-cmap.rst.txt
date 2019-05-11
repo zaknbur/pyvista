@@ -15,8 +15,8 @@ Use a custom built colormap when plotting scalar values.
 .. code-block:: default
 
 
-    import vista
-    from vista import examples
+    import pyvista
+    from pyvista import examples
     import matplotlib.pyplot as plt
 
 
@@ -25,7 +25,7 @@ Use a custom built colormap when plotting scalar values.
 
 
 
-Any colormap built for ``matplotlib`` is fully compatible with ``vista``.
+Any colormap built for ``matplotlib`` is fully compatible with PyVista.
 Colormaps are typically specifiedby passing the string name of the
 ``matplotlib`` colormap to the plotting routine via the ``cmap`` argument.
 
@@ -81,7 +81,7 @@ Simply pass the colormap to the plotting routine!
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  3.848 seconds)
+   **Total running time of the script:** ( 0 minutes  5.434 seconds)
 
 
 .. _sphx_glr_download_examples_02-plot_plot-cmap.py:
