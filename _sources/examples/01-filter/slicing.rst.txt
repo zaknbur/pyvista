@@ -140,7 +140,7 @@ automated with the :func:`pyvista.DataSetFilters.slice_along_axis` filter:
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  13.986 seconds)
+   **Total running time of the script:** ( 0 minutes  13.815 seconds)
 
 
 .. _sphx_glr_download_examples_01-filter_slicing.py:
