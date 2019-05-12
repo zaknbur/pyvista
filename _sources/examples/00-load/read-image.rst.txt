@@ -14,7 +14,7 @@ Read and plot image files (JPEG, TIFF, PNG, etc).
 
 .. code-block:: default
 
-
+    import pyvista as pv
     from pyvista import examples
 
 
@@ -37,7 +37,7 @@ This could similarly be implemented with any image file by using the
 
     image = examples.download_puppy()
     # or...
-    # image = pyvista.read('my_image.jpg')
+    # image = pv.read('my_image.jpg')
 
 
 
@@ -83,7 +83,7 @@ image's true colors are used and not mapped.
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  12.810 seconds)
+   **Total running time of the script:** ( 0 minutes  13.560 seconds)
 
 
 .. _sphx_glr_download_examples_00-load_read-image.py:

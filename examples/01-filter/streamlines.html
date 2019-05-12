@@ -234,7 +234,7 @@ This example generates streamlines of blood velocity. An isosurface of speed
 provides context. The starting positions for the streamtubes were determined
 by experimenting with the data.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># sphinx_gallery_thumbnail_number = 3</span>
-<span class="kn">import</span> <span class="nn">pyvista</span>
+<span class="kn">import</span> <span class="nn">pyvista</span> <span class="k">as</span> <span class="nn">pv</span>
 <span class="kn">from</span> <span class="nn">pyvista</span> <span class="k">import</span> <span class="n">examples</span>
 </pre></div>
 </div>
@@ -253,7 +253,7 @@ by experimenting with the data.</p>
 </div>
 <p>Display the results! Please note that because this dataset’s velocity field
 was measured with low resolution, many streamlines travel outside the artery.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">p</span> <span class="o">=</span> <span class="n">pyvista</span><span class="o">.</span><span class="n">Plotter</span><span class="p">()</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">p</span> <span class="o">=</span> <span class="n">pv</span><span class="o">.</span><span class="n">Plotter</span><span class="p">()</span>
 <span class="n">p</span><span class="o">.</span><span class="n">add_mesh</span><span class="p">(</span><span class="n">mesh</span><span class="o">.</span><span class="n">outline</span><span class="p">(),</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;k&#39;</span><span class="p">)</span>
 <span class="n">p</span><span class="o">.</span><span class="n">add_mesh</span><span class="p">(</span><span class="n">streamlines</span><span class="o">.</span><span class="n">tube</span><span class="p">(</span><span class="n">radius</span><span class="o">=</span><span class="mf">0.15</span><span class="p">))</span>
 <span class="n">p</span><span class="o">.</span><span class="n">add_mesh</span><span class="p">(</span><span class="n">src</span><span class="p">)</span>
@@ -278,7 +278,7 @@ was measured with low resolution, many streamlines travel outside the artery.</p
 </div>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">boundary</span> <span class="o">=</span> <span class="n">mesh</span><span class="o">.</span><span class="n">decimate_boundary</span><span class="p">()</span><span class="o">.</span><span class="n">wireframe</span><span class="p">()</span>
 
-<span class="n">p</span> <span class="o">=</span> <span class="n">pyvista</span><span class="o">.</span><span class="n">Plotter</span><span class="p">()</span>
+<span class="n">p</span> <span class="o">=</span> <span class="n">pv</span><span class="o">.</span><span class="n">Plotter</span><span class="p">()</span>
 <span class="n">p</span><span class="o">.</span><span class="n">add_mesh</span><span class="p">(</span><span class="n">streamlines</span><span class="o">.</span><span class="n">tube</span><span class="p">(</span><span class="n">radius</span><span class="o">=</span><span class="mf">0.2</span><span class="p">),</span> <span class="n">ligthing</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
 <span class="n">p</span><span class="o">.</span><span class="n">add_mesh</span><span class="p">(</span><span class="n">src</span><span class="p">)</span>
 <span class="n">p</span><span class="o">.</span><span class="n">add_mesh</span><span class="p">(</span><span class="n">boundary</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;grey&#39;</span><span class="p">,</span> <span class="n">opacity</span><span class="o">=</span><span class="mf">0.25</span><span class="p">)</span>
@@ -304,7 +304,7 @@ was measured with low resolution, many streamlines travel outside the artery.</p
                                <span class="n">source_center</span><span class="o">=</span><span class="p">(</span><span class="mf">0.08</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mf">0.71</span><span class="p">))</span>
 </pre></div>
 </div>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">p</span> <span class="o">=</span> <span class="n">pyvista</span><span class="o">.</span><span class="n">Plotter</span><span class="p">()</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">p</span> <span class="o">=</span> <span class="n">pv</span><span class="o">.</span><span class="n">Plotter</span><span class="p">()</span>
 <span class="n">p</span><span class="o">.</span><span class="n">add_mesh</span><span class="p">(</span><span class="n">mesh</span><span class="o">.</span><span class="n">outline</span><span class="p">(),</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;k&#39;</span><span class="p">)</span>
 <span class="n">p</span><span class="o">.</span><span class="n">add_mesh</span><span class="p">(</span><span class="n">kitchen</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 <span class="n">p</span><span class="o">.</span><span class="n">add_mesh</span><span class="p">(</span><span class="n">streamlines</span><span class="o">.</span><span class="n">tube</span><span class="p">(</span><span class="n">radius</span><span class="o">=</span><span class="mf">0.01</span><span class="p">),</span> <span class="n">scalars</span><span class="o">=</span><span class="s1">&#39;velocity&#39;</span><span class="p">,</span> <span class="n">lighting</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
@@ -313,7 +313,7 @@ was measured with low resolution, many streamlines travel outside the artery.</p
 </pre></div>
 </div>
 <img alt="../../_images/sphx_glr_streamlines_003.png" class="sphx-glr-single-img" src="../../_images/sphx_glr_streamlines_003.png" />
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  17.258 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  13.830 seconds)</p>
 <div class="sphx-glr-footer class sphx-glr-footer-example docutils container" id="sphx-glr-download-examples-01-filter-streamlines-py">
 <div class="sphx-glr-download docutils container">
 <p><a class="reference download internal" download="" href="../../_downloads/997d4d99c733d57002fcb5dd38f2f720/streamlines.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">streamlines.py</span></code></a></p>

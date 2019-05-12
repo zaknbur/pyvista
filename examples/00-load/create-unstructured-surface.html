@@ -222,7 +222,7 @@
 <div class="sphx-glr-example-title section" id="creating-an-unstructured-surface">
 <span id="ref-create-unstructured"></span><span id="sphx-glr-examples-00-load-create-unstructured-surface-py"></span><h1>Creating an Unstructured Surface<a class="headerlink" href="#creating-an-unstructured-surface" title="Permalink to this headline">¶</a></h1>
 <p>Create an irregular, unstructured grid from NumPy arrays</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pyvista</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pyvista</span> <span class="k">as</span> <span class="nn">pv</span>
 <span class="kn">import</span> <span class="nn">vtk</span>
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 </pre></div>
@@ -264,14 +264,14 @@ for available cell types and their descriptions.</p>
 <span class="n">points</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">vstack</span><span class="p">((</span><span class="n">cell1</span><span class="p">,</span> <span class="n">cell2</span><span class="p">))</span>
 
 <span class="c1"># create the unstructured grid directly from the numpy arrays</span>
-<span class="n">grid</span> <span class="o">=</span> <span class="n">pyvista</span><span class="o">.</span><span class="n">UnstructuredGrid</span><span class="p">(</span><span class="n">offset</span><span class="p">,</span> <span class="n">cells</span><span class="p">,</span> <span class="n">cell_type</span><span class="p">,</span> <span class="n">points</span><span class="p">)</span>
+<span class="n">grid</span> <span class="o">=</span> <span class="n">pv</span><span class="o">.</span><span class="n">UnstructuredGrid</span><span class="p">(</span><span class="n">offset</span><span class="p">,</span> <span class="n">cells</span><span class="p">,</span> <span class="n">cell_type</span><span class="p">,</span> <span class="n">points</span><span class="p">)</span>
 
 <span class="c1"># plot the grid</span>
 <span class="n">grid</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">show_edges</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 </pre></div>
 </div>
 <img alt="../../_images/sphx_glr_create-unstructured-surface_001.png" class="sphx-glr-single-img" src="../../_images/sphx_glr_create-unstructured-surface_001.png" />
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  0.691 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  0.701 seconds)</p>
 <div class="sphx-glr-footer class sphx-glr-footer-example docutils container" id="sphx-glr-download-examples-00-load-create-unstructured-surface-py">
 <div class="sphx-glr-download docutils container">
 <p><a class="reference download internal" download="" href="../../_downloads/e245dd6f4b79373f29d868a68cf579d9/create-unstructured-surface.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">create-unstructured-surface.py</span></code></a></p>

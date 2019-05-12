@@ -215,16 +215,16 @@ VTK-friendly file format.</p>
 <h2>Wrapping a VTK Data Object<a class="headerlink" href="#wrapping-a-vtk-data-object" title="Permalink to this headline">¶</a></h2>
 <p>The wrapping function is under the <a class="reference internal" href="../tools/utilities.html#module-pyvista.utilities" title="pyvista.utilities"><code class="xref py py-mod docutils literal notranslate"><span class="pre">pyvista.utilities</span></code></a> module which is
 usable from the top level of PyVista:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pyvista</span>
-<span class="n">wrapped_data</span> <span class="o">=</span> <span class="n">pyvista</span><span class="o">.</span><span class="n">wrap</span><span class="p">(</span><span class="n">my_vtk_data_object</span><span class="p">)</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pyvista</span> <span class="kn">as</span> <span class="nn">pv</span>
+<span class="n">wrapped_data</span> <span class="o">=</span> <span class="n">pv</span><span class="o">.</span><span class="n">wrap</span><span class="p">(</span><span class="n">my_vtk_data_object</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>This allows users to quickly wrap any VTK dataset they have to its appropriate
 PyVista object:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">vtk</span>
-<span class="kn">import</span> <span class="nn">pyvista</span>
+<span class="kn">import</span> <span class="nn">pyvista</span> <span class="k">as</span> <span class="nn">pv</span>
 <span class="n">stuff</span> <span class="o">=</span> <span class="n">vtk</span><span class="o">.</span><span class="n">vtkPolyData</span><span class="p">()</span>
-<span class="n">better</span> <span class="o">=</span> <span class="n">pyvista</span><span class="o">.</span><span class="n">wrap</span><span class="p">(</span><span class="n">stuff</span><span class="p">)</span>
+<span class="n">better</span> <span class="o">=</span> <span class="n">pv</span><span class="o">.</span><span class="n">wrap</span><span class="p">(</span><span class="n">stuff</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -233,8 +233,8 @@ PyVista object:</p>
 <p>PyVista provides a convenience function to read VTK file formats into their
 respective PyVista data objects. Simply call the <a class="reference internal" href="../tools/utilities.html#pyvista.read" title="pyvista.read"><code class="xref py py-func docutils literal notranslate"><span class="pre">pyvista.read()</span></code></a> function
 passing the filename:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pyvista</span>
-<span class="n">data</span> <span class="o">=</span> <span class="n">pyvista</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="s1">&#39;my_strange_vtk_file.vtk&#39;</span><span class="p">)</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pyvista</span> <span class="kn">as</span> <span class="nn">pv</span>
+<span class="n">data</span> <span class="o">=</span> <span class="n">pv</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="s1">&#39;my_strange_vtk_file.vtk&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -245,7 +245,7 @@ modifying the data! Some of the most common properties to access include the
 points and point/cell data (the data attributes assigned to the nodes or cells
 of the mesh respectively).</p>
 <p>First, check out some common meta data properties:</p>
-<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pyvista</span>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pyvista</span> <span class="k">as</span> <span class="nn">pv</span>
 <span class="kn">from</span> <span class="nn">pyvista</span> <span class="k">import</span> <span class="n">examples</span>
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 </pre></div>
@@ -298,7 +298,7 @@ and highly controllable with <code class="docutils literal notranslate"><span cl
 arguments.
 To get started, try out the <a class="reference internal" href="../tools/plotting.html#pyvista.plot" title="pyvista.plot"><code class="xref py py-func docutils literal notranslate"><span class="pre">pyvista.plot()</span></code></a> convenience method that is binded
 to each PyVista data object:</p>
-<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pyvista</span>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pyvista</span> <span class="k">as</span> <span class="nn">pv</span>
 <span class="kn">from</span> <span class="nn">pyvista</span> <span class="k">import</span> <span class="n">examples</span>
 
 <span class="n">data</span> <span class="o">=</span> <span class="n">examples</span><span class="o">.</span><span class="n">load_airplane</span><span class="p">()</span>
@@ -310,7 +310,7 @@ to each PyVista data object:</p>
 a plotter such as <a class="reference internal" href="../tools/plotting.html#pyvista.Plotter" title="pyvista.Plotter"><code class="xref py py-class docutils literal notranslate"><span class="pre">pyvista.Plotter</span></code></a> or <a class="reference internal" href="../tools/qt_plotting.html#pyvista.BackgroundPlotter" title="pyvista.BackgroundPlotter"><code class="xref py py-class docutils literal notranslate"><span class="pre">pyvista.BackgroundPlotter</span></code></a>:</p>
 <p>The <a class="reference internal" href="../tools/plotting.html#pyvista.Plotter" title="pyvista.Plotter"><code class="xref py py-class docutils literal notranslate"><span class="pre">pyvista.Plotter</span></code></a> will create a rendering window that will pause the
 execution of the code after calling <code class="docutils literal notranslate"><span class="pre">show</span></code>.</p>
-<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="n">plotter</span> <span class="o">=</span> <span class="n">pyvista</span><span class="o">.</span><span class="n">Plotter</span><span class="p">()</span>  <span class="c1"># instantiate the plotter</span>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="n">plotter</span> <span class="o">=</span> <span class="n">pv</span><span class="o">.</span><span class="n">Plotter</span><span class="p">()</span>  <span class="c1"># instantiate the plotter</span>
 <span class="n">plotter</span><span class="o">.</span><span class="n">add_mesh</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>    <span class="c1"># add a dataset to the scene</span>
 <span class="n">cpos</span> <span class="o">=</span> <span class="n">plotter</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>     <span class="c1"># show the rendering window</span>
 </pre></div>
@@ -320,7 +320,7 @@ rendering window incase you want to chose a camera position and use it agian
 later.</p>
 <p>You can then use this cached camera for additional plotting without having to
 manually interact with the plotting window:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">plotter</span> <span class="o">=</span> <span class="n">pyvista</span><span class="o">.</span><span class="n">Plotter</span><span class="p">(</span><span class="n">off_screen</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">plotter</span> <span class="o">=</span> <span class="n">pv</span><span class="o">.</span><span class="n">Plotter</span><span class="p">(</span><span class="n">off_screen</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
 <span class="n">plotter</span><span class="o">.</span><span class="n">add_mesh</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;tan&#39;</span><span class="p">)</span>
 <span class="n">plotter</span><span class="o">.</span><span class="n">camera_position</span> <span class="o">=</span> <span class="n">cpos</span>
 <span class="n">plotter</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">auto_close</span><span class="o">=</span><span class="bp">False</span><span class="p">)</span>

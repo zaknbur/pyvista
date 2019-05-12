@@ -227,7 +227,7 @@
 <p>Extract the cells in a mesh that exist inside or outside a closed surface of
 another mesh
 sphinx_gallery_thumbnail_number = 2</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pyvista</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pyvista</span> <span class="k">as</span> <span class="nn">pv</span>
 <span class="kn">from</span> <span class="nn">pyvista</span> <span class="k">import</span> <span class="n">examples</span>
 
 <span class="n">mesh</span> <span class="o">=</span> <span class="n">examples</span><span class="o">.</span><span class="n">download_cow</span><span class="p">()</span>
@@ -241,7 +241,7 @@ sphinx_gallery_thumbnail_number = 2</p>
 <span class="n">rot</span> <span class="o">=</span> <span class="n">mesh</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
 <span class="n">rot</span><span class="o">.</span><span class="n">rotate_y</span><span class="p">(</span><span class="mi">90</span><span class="p">)</span>
 
-<span class="n">p</span> <span class="o">=</span> <span class="n">pyvista</span><span class="o">.</span><span class="n">Plotter</span><span class="p">()</span>
+<span class="n">p</span> <span class="o">=</span> <span class="n">pv</span><span class="o">.</span><span class="n">Plotter</span><span class="p">()</span>
 <span class="n">p</span><span class="o">.</span><span class="n">add_mesh</span><span class="p">(</span><span class="n">mesh</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;Crimson&#39;</span><span class="p">,</span> <span class="o">**</span><span class="n">dargs</span><span class="p">)</span>
 <span class="n">p</span><span class="o">.</span><span class="n">add_mesh</span><span class="p">(</span><span class="n">rot</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;mintcream&#39;</span><span class="p">,</span> <span class="n">opacity</span><span class="o">=</span><span class="mf">0.35</span><span class="p">,</span> <span class="o">**</span><span class="n">dargs</span><span class="p">)</span>
 <span class="n">p</span><span class="o">.</span><span class="n">camera_position</span> <span class="o">=</span> <span class="n">cpos</span>
@@ -262,7 +262,7 @@ enclosing surface.</p>
 </pre></div>
 </div>
 <p>disply the results</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">p</span> <span class="o">=</span> <span class="n">pyvista</span><span class="o">.</span><span class="n">Plotter</span><span class="p">()</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">p</span> <span class="o">=</span> <span class="n">pv</span><span class="o">.</span><span class="n">Plotter</span><span class="p">()</span>
 <span class="n">p</span><span class="o">.</span><span class="n">add_mesh</span><span class="p">(</span><span class="n">outside</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;Crimson&#39;</span><span class="p">,</span> <span class="o">**</span><span class="n">dargs</span><span class="p">)</span>
 <span class="n">p</span><span class="o">.</span><span class="n">add_mesh</span><span class="p">(</span><span class="n">inside</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;green&#39;</span><span class="p">,</span> <span class="o">**</span><span class="n">dargs</span><span class="p">)</span>
 <span class="n">p</span><span class="o">.</span><span class="n">add_mesh</span><span class="p">(</span><span class="n">rot</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;mintcream&#39;</span><span class="p">,</span> <span class="n">opacity</span><span class="o">=</span><span class="mf">0.35</span><span class="p">,</span> <span class="o">**</span><span class="n">dargs</span><span class="p">)</span>
@@ -272,7 +272,7 @@ enclosing surface.</p>
 </pre></div>
 </div>
 <img alt="../../_images/sphx_glr_extract-cells-inside-surface_002.png" class="sphx-glr-single-img" src="../../_images/sphx_glr_extract-cells-inside-surface_002.png" />
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  3.793 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  3.881 seconds)</p>
 <div class="sphx-glr-footer class sphx-glr-footer-example docutils container" id="sphx-glr-download-examples-01-filter-extract-cells-inside-surface-py">
 <div class="sphx-glr-download docutils container">
 <p><a class="reference download internal" download="" href="../../_downloads/7940ac477f2e6997311cf67548d0148b/extract-cells-inside-surface.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">extract-cells-inside-surface.py</span></code></a></p>

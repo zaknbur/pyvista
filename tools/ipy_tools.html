@@ -246,13 +246,13 @@ dataset. Simply call one of these tools on your object.</p>
 <p>The <a class="reference internal" href="#pyvista.OrthogonalSlicer" title="pyvista.OrthogonalSlicer"><code class="xref py py-class docutils literal notranslate"><span class="pre">pyvista.OrthogonalSlicer</span></code></a> tool on an example dataset to create three
 slices on the cartesian planes and move those slices through the dataset using
 slider bars directly in a Jupyter notebook:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pyvista</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pyvista</span> <span class="kn">as</span> <span class="nn">pv</span>
 <span class="kn">from</span> <span class="nn">pyvista</span> <span class="kn">import</span> <span class="n">examples</span>
 
 <span class="n">dataset</span> <span class="o">=</span> <span class="n">examples</span><span class="o">.</span><span class="n">load_hexbeam</span><span class="p">()</span>
 
 <span class="c1"># Use the slicer tool</span>
-<span class="n">pyvista</span><span class="o">.</span><span class="n">OrthogonalSlicer</span><span class="p">(</span><span class="n">dataset</span><span class="p">)</span>
+<span class="n">pv</span><span class="o">.</span><span class="n">OrthogonalSlicer</span><span class="p">(</span><span class="n">dataset</span><span class="p">)</span>
 </pre></div>
 </div>
 <div class="figure align-center">
@@ -291,13 +291,13 @@ triangles otherwise, the output will be the intersection polygons.</p></li>
 dataset using slider bars for the minimum and maximum range. This tool also
 has options to invert the threshold using checkboxes all directly in the output
 of a Jupyter notebook cell:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pyvista</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pyvista</span> <span class="kn">as</span> <span class="nn">pv</span>
 <span class="kn">from</span> <span class="nn">pyvista</span> <span class="kn">import</span> <span class="n">examples</span>
 
 <span class="n">dataset</span> <span class="o">=</span> <span class="n">examples</span><span class="o">.</span><span class="n">load_uniform</span><span class="p">()</span>
 
 <span class="c1"># Use the slicer tool</span>
-<span class="n">pyvista</span><span class="o">.</span><span class="n">Threshold</span><span class="p">(</span><span class="n">dataset</span><span class="p">)</span>
+<span class="n">pv</span><span class="o">.</span><span class="n">Threshold</span><span class="p">(</span><span class="n">dataset</span><span class="p">)</span>
 </pre></div>
 </div>
 <div class="figure align-center">
@@ -330,13 +330,13 @@ range.</p>
 evenly spaced slices of a dataset along a specified axis. The user selects the
 number of slices via a slider bar and the axis to slice against via a drop
 down menu in the Jupyter notebook cell output:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pyvista</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pyvista</span> <span class="kn">as</span> <span class="nn">pv</span>
 <span class="kn">from</span> <span class="nn">pyvista</span> <span class="kn">import</span> <span class="n">examples</span>
 
 <span class="n">dataset</span> <span class="o">=</span> <span class="n">examples</span><span class="o">.</span><span class="n">load_uniform</span><span class="p">()</span>
 
 <span class="c1"># Use the many slices tool</span>
-<span class="n">pyvista</span><span class="o">.</span><span class="n">ManySlicesAlongAxis</span><span class="p">(</span><span class="n">dataset</span><span class="p">)</span>
+<span class="n">pv</span><span class="o">.</span><span class="n">ManySlicesAlongAxis</span><span class="p">(</span><span class="n">dataset</span><span class="p">)</span>
 </pre></div>
 </div>
 <div class="figure align-center">
@@ -373,13 +373,13 @@ triangles otherwise, the output will be the intersection polygons.</p></li>
 <h2>Isocontour<a class="headerlink" href="#isocontour" title="Permalink to this headline">¶</a></h2>
 <p>The <code class="xref py py-class docutils literal notranslate"><span class="pre">pyvista.Isocontour</span></code> tool creates a single value isocontour of a dataset
 along a point scalar array</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pyvista</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pyvista</span> <span class="kn">as</span> <span class="nn">pv</span>
 <span class="kn">from</span> <span class="nn">pyvista</span> <span class="kn">import</span> <span class="n">examples</span>
 
 <span class="n">dataset</span> <span class="o">=</span> <span class="n">examples</span><span class="o">.</span><span class="n">load_uniform</span><span class="p">()</span>
 
 <span class="c1"># Use the contour tool</span>
-<span class="n">pyvista</span><span class="o">.</span><span class="n">Isocontour</span><span class="p">(</span><span class="n">dataset</span><span class="p">)</span>
+<span class="n">pv</span><span class="o">.</span><span class="n">Isocontour</span><span class="p">(</span><span class="n">dataset</span><span class="p">)</span>
 </pre></div>
 </div>
 <div class="figure align-center">
@@ -421,13 +421,13 @@ while viewing it adjacent to other dataset.</p>
 <p>The easiest approach is to use a tool to activate a new rendering window like
 performed in the above examples. This time be sure to assign the tool object
 so that you can access it’s plotting window:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pyvista</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pyvista</span> <span class="kn">as</span> <span class="nn">pv</span>
 <span class="kn">from</span> <span class="nn">pyvista</span> <span class="kn">import</span> <span class="n">examples</span>
 
 <span class="n">dataset</span> <span class="o">=</span> <span class="n">examples</span><span class="o">.</span><span class="n">load_uniform</span><span class="p">()</span>
 
 <span class="c1"># assign the tool to a variable</span>
-<span class="n">thresher</span> <span class="o">=</span> <span class="n">pyvista</span><span class="o">.</span><span class="n">Threshold</span><span class="p">(</span><span class="n">dataset</span><span class="p">)</span>
+<span class="n">thresher</span> <span class="o">=</span> <span class="n">pv</span><span class="o">.</span><span class="n">Threshold</span><span class="p">(</span><span class="n">dataset</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>Now a rendering environment will appear and the cell will output to IPython
@@ -446,7 +446,7 @@ you can access the plotting window and add features or datasets:</p>
 <p>You can also add as many tools to one rendering environment as you’d like by
 passing the plotter to the tool upon construction:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Add a second tool by passing the plotter</span>
-<span class="n">slicer</span> <span class="o">=</span> <span class="n">pyvista</span><span class="o">.</span><span class="n">OrthogonalSlicer</span><span class="p">(</span><span class="n">dataset</span><span class="p">,</span> <span class="n">plotter</span><span class="o">=</span><span class="n">p</span><span class="p">)</span>
+<span class="n">slicer</span> <span class="o">=</span> <span class="n">pv</span><span class="o">.</span><span class="n">OrthogonalSlicer</span><span class="p">(</span><span class="n">dataset</span><span class="p">,</span> <span class="n">plotter</span><span class="o">=</span><span class="n">p</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>And now you have two tools being used in one rendering window!</p>

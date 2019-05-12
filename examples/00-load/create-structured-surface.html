@@ -223,7 +223,7 @@
 <span id="ref-create-structured"></span><span id="sphx-glr-examples-00-load-create-structured-surface-py"></span><h1>Creating a Structured Surface<a class="headerlink" href="#creating-a-structured-surface" title="Permalink to this headline">¶</a></h1>
 <p>Create a StructuredGrid surface from NumPy arrays</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># sphinx_gallery_thumbnail_number = 2</span>
-<span class="kn">import</span> <span class="nn">pyvista</span>
+<span class="kn">import</span> <span class="nn">pyvista</span> <span class="k">as</span> <span class="nn">pv</span>
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 </pre></div>
 </div>
@@ -238,7 +238,7 @@
 </div>
 <p>Now pass the NumPy meshgrid to PyVista</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Create and plot structured grid</span>
-<span class="n">grid</span> <span class="o">=</span> <span class="n">pyvista</span><span class="o">.</span><span class="n">StructuredGrid</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">z</span><span class="p">)</span>
+<span class="n">grid</span> <span class="o">=</span> <span class="n">pv</span><span class="o">.</span><span class="n">StructuredGrid</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">z</span><span class="p">)</span>
 <span class="n">grid</span><span class="o">.</span><span class="n">plot</span><span class="p">()</span>
 </pre></div>
 </div>
@@ -263,7 +263,7 @@ the resulting surface can be accessed as a NumPy array:</p>
  [  9.75         9.75         0.93985707]]
 </pre></div>
 </div>
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  3.551 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  3.661 seconds)</p>
 <div class="sphx-glr-footer class sphx-glr-footer-example docutils container" id="sphx-glr-download-examples-00-load-create-structured-surface-py">
 <div class="sphx-glr-download docutils container">
 <p><a class="reference download internal" download="" href="../../_downloads/e4a96981d2ba075fb5cd46d7bd14ddc5/create-structured-surface.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">create-structured-surface.py</span></code></a></p>

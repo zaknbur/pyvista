@@ -223,7 +223,7 @@
 <span id="sphx-glr-examples-00-load-create-tri-surface-py"></span><h1>Create Triangulated Surface<a class="headerlink" href="#create-triangulated-surface" title="Permalink to this headline">¶</a></h1>
 <p>Create a surface from a set of points through a Delaunay triangulation.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># sphinx_gallery_thumbnail_number = 2</span>
-<span class="kn">import</span> <span class="nn">pyvista</span>
+<span class="kn">import</span> <span class="nn">pyvista</span> <span class="k">as</span> <span class="nn">pv</span>
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 </pre></div>
 </div>
@@ -242,17 +242,17 @@
 </pre></div>
 </div>
 <p class="sphx-glr-script-out">Out:</p>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>[[-196.88552365 -200.73861126    1.91971207]
- [-178.36353752 -200.73861126    2.71744774]
- [-157.83619475 -200.73861126    3.83725576]
- [-132.06918531 -200.73861126    5.57480421]
- [-113.76204247 -200.73861126    6.98161711]]
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>[[-204.59154514 -199.64772939    1.68089162]
+ [-182.3317507  -199.64772939    2.58562182]
+ [-161.42148893 -199.64772939    3.70381933]
+ [-141.05603715 -199.64772939    5.03981368]
+ [-117.45592455 -199.64772939    6.83744882]]
 </pre></div>
 </div>
 <p>Now use those points to create a point cloud PyVista data object. This will
 be encompassed in a <a class="reference internal" href="../../types/points.html#pyvista.PolyData" title="pyvista.PolyData"><code class="xref py py-class docutils literal notranslate"><span class="pre">pyvista.PolyData</span></code></a> object.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># simply pass the numpy points to the PolyData constructor</span>
-<span class="n">cloud</span> <span class="o">=</span> <span class="n">pyvista</span><span class="o">.</span><span class="n">PolyData</span><span class="p">(</span><span class="n">points</span><span class="p">)</span>
+<span class="n">cloud</span> <span class="o">=</span> <span class="n">pv</span><span class="o">.</span><span class="n">PolyData</span><span class="p">(</span><span class="n">points</span><span class="p">)</span>
 <span class="n">cloud</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">point_size</span><span class="o">=</span><span class="mi">15</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -264,7 +264,7 @@ triangulation to turn those boring discrete points into a connected surface.</p>
 </pre></div>
 </div>
 <img alt="../../_images/sphx_glr_create-tri-surface_002.png" class="sphx-glr-single-img" src="../../_images/sphx_glr_create-tri-surface_002.png" />
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  1.239 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  1.250 seconds)</p>
 <div class="sphx-glr-footer class sphx-glr-footer-example docutils container" id="sphx-glr-download-examples-00-load-create-tri-surface-py">
 <div class="sphx-glr-download docutils container">
 <p><a class="reference download internal" download="" href="../../_downloads/1522be3ab0c2bfabf5d5f4175c7e08ec/create-tri-surface.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">create-tri-surface.py</span></code></a></p>

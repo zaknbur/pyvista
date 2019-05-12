@@ -213,7 +213,7 @@ sphere to an empty plotting window.</p>
 <span class="kn">from</span> <span class="nn">PyQt5</span> <span class="kn">import</span> <span class="n">Qt</span>
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="kn">as</span> <span class="nn">np</span>
 
-<span class="kn">import</span> <span class="nn">pyvista</span>
+<span class="kn">import</span> <span class="nn">pyvista</span> <span class="kn">as</span> <span class="nn">pv</span>
 
 
 <span class="k">class</span> <span class="nc">MainWindow</span><span class="p">(</span><span class="n">Qt</span><span class="o">.</span><span class="n">QMainWindow</span><span class="p">):</span>
@@ -226,7 +226,7 @@ sphere to an empty plotting window.</p>
         <span class="n">vlayout</span> <span class="o">=</span> <span class="n">Qt</span><span class="o">.</span><span class="n">QVBoxLayout</span><span class="p">()</span>
 
         <span class="c1"># add the pyvista interactor object</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">vtk_widget</span> <span class="o">=</span> <span class="n">pyvista</span><span class="o">.</span><span class="n">QtInteractor</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">frame</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">vtk_widget</span> <span class="o">=</span> <span class="n">pv</span><span class="o">.</span><span class="n">QtInteractor</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">frame</span><span class="p">)</span>
         <span class="n">vlayout</span><span class="o">.</span><span class="n">addWidget</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">vtk_widget</span><span class="p">)</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">frame</span><span class="o">.</span><span class="n">setLayout</span><span class="p">(</span><span class="n">vlayout</span><span class="p">)</span>
@@ -251,7 +251,7 @@ sphere to an empty plotting window.</p>
 
     <span class="k">def</span> <span class="nf">add_sphere</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot; add a sphere to the pyqt frame &quot;&quot;&quot;</span>
-        <span class="n">sphere</span> <span class="o">=</span> <span class="n">pyvista</span><span class="o">.</span><span class="n">Sphere</span><span class="p">()</span>
+        <span class="n">sphere</span> <span class="o">=</span> <span class="n">pv</span><span class="o">.</span><span class="n">Sphere</span><span class="p">()</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">vtk_widget</span><span class="o">.</span><span class="n">add_mesh</span><span class="p">(</span><span class="n">sphere</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">vtk_widget</span><span class="o">.</span><span class="n">reset_camera</span><span class="p">()</span>
 
@@ -273,11 +273,11 @@ sphere to an empty plotting window.</p>
 to plot in the background and update the plotter in real-time using the
 <code class="docutils literal notranslate"><span class="pre">BackgroundPlotter</span></code> object.  This requires <code class="docutils literal notranslate"><span class="pre">PyQt5</span></code>, but otherwise appears
 and functions like a normal PyVista <code class="docutils literal notranslate"><span class="pre">Plotter</span></code> instance.  For example:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pyvista</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pyvista</span> <span class="kn">as</span> <span class="nn">pv</span>
 
-<span class="n">sphere</span> <span class="o">=</span> <span class="n">pyvista</span><span class="o">.</span><span class="n">Sphere</span><span class="p">()</span>
+<span class="n">sphere</span> <span class="o">=</span> <span class="n">pv</span><span class="o">.</span><span class="n">Sphere</span><span class="p">()</span>
 
-<span class="n">plotter</span> <span class="o">=</span> <span class="n">pyvista</span><span class="o">.</span><span class="n">BackgroundPlotter</span><span class="p">()</span>
+<span class="n">plotter</span> <span class="o">=</span> <span class="n">pv</span><span class="o">.</span><span class="n">BackgroundPlotter</span><span class="p">()</span>
 <span class="n">plotter</span><span class="o">.</span><span class="n">add_mesh</span><span class="p">(</span><span class="n">sphere</span><span class="p">)</span>
 
 <span class="c1"># can now operate on the sphere and have it updated in the background</span>

@@ -222,7 +222,8 @@
 <div class="sphx-glr-example-title section" id="read-image-files">
 <span id="sphx-glr-examples-00-load-read-image-py"></span><h1>Read Image Files<a class="headerlink" href="#read-image-files" title="Permalink to this headline">¶</a></h1>
 <p>Read and plot image files (JPEG, TIFF, PNG, etc).</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">pyvista</span> <span class="k">import</span> <span class="n">examples</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pyvista</span> <span class="k">as</span> <span class="nn">pv</span>
+<span class="kn">from</span> <span class="nn">pyvista</span> <span class="k">import</span> <span class="n">examples</span>
 </pre></div>
 </div>
 <p>PyVista fully supportes reading images into their own spatially referenced
@@ -233,7 +234,7 @@ This could similarly be implemented with any image file by using the
 <a class="reference internal" href="../../tools/utilities.html#pyvista.read" title="pyvista.read"><code class="xref py py-func docutils literal notranslate"><span class="pre">pyvista.read()</span></code></a> function and passing the path to the image file.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">image</span> <span class="o">=</span> <span class="n">examples</span><span class="o">.</span><span class="n">download_puppy</span><span class="p">()</span>
 <span class="c1"># or...</span>
-<span class="c1"># image = pyvista.read(&#39;my_image.jpg&#39;)</span>
+<span class="c1"># image = pv.read(&#39;my_image.jpg&#39;)</span>
 </pre></div>
 </div>
 <p>When plotting images stored in <a class="reference internal" href="../../types/grids.html#pyvista.UniformGrid" title="pyvista.UniformGrid"><code class="xref py py-class docutils literal notranslate"><span class="pre">pyvista.UniformGrid</span></code></a> objects, it is
@@ -249,7 +250,7 @@ image’s true colors are used and not mapped.</p>
 </pre></div>
 </div>
 <img alt="../../_images/sphx_glr_read-image_002.png" class="sphx-glr-single-img" src="../../_images/sphx_glr_read-image_002.png" />
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  12.810 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  13.560 seconds)</p>
 <div class="sphx-glr-footer class sphx-glr-footer-example docutils container" id="sphx-glr-download-examples-00-load-read-image-py">
 <div class="sphx-glr-download docutils container">
 <p><a class="reference download internal" download="" href="../../_downloads/ba18d67e09ae8bc5eac24fdb6d37f658/read-image.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">read-image.py</span></code></a></p>

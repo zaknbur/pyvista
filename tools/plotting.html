@@ -2293,14 +2293,14 @@ actors in the scene.</p>
 <p>Inline plots are possible using a Jupyter notebook.  The code snippet below
 will create a static screenshot of the rendering and display it in the Jupyter
 notebook:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pyvista</span>
-<span class="n">sphere</span> <span class="o">=</span> <span class="n">pyvista</span><span class="o">.</span><span class="n">Sphere</span><span class="p">()</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pyvista</span> <span class="kn">as</span> <span class="nn">pv</span>
+<span class="n">sphere</span> <span class="o">=</span> <span class="n">pv</span><span class="o">.</span><span class="n">Sphere</span><span class="p">()</span>
 
 <span class="c1"># short example</span>
 <span class="n">cpos</span><span class="p">,</span> <span class="n">image</span> <span class="o">=</span> <span class="n">sphere</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">notebook</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
 
 <span class="c1"># long example</span>
-<span class="n">plotter</span> <span class="o">=</span> <span class="n">pyvista</span><span class="o">.</span><span class="n">Plotter</span><span class="p">(</span><span class="n">notebook</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+<span class="n">plotter</span> <span class="o">=</span> <span class="n">pv</span><span class="o">.</span><span class="n">Plotter</span><span class="p">(</span><span class="n">notebook</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
 <span class="n">plotter</span><span class="o">.</span><span class="n">add_mesh</span><span class="p">(</span><span class="n">sphere</span><span class="p">)</span>
 <span class="n">plotter</span><span class="o">.</span><span class="n">plot</span><span class="p">()</span>
 </pre></div>
@@ -2312,12 +2312,12 @@ notebook:</p>
 <p>To display interactive plots in Jupyter notebooks, use the
 <a class="reference internal" href="qt_plotting.html#pyvista.BackgroundPlotter" title="pyvista.BackgroundPlotter"><code class="xref py py-class docutils literal notranslate"><span class="pre">pyvista.BackgroundPlotter</span></code></a> to open a rendering window in the background
 that you can manipulate in real time from the Jupyter notebook:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pyvista</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pyvista</span> <span class="kn">as</span> <span class="nn">pv</span>
 <span class="kn">from</span> <span class="nn">pyvista</span> <span class="kn">import</span> <span class="n">examples</span>
 
 <span class="n">dataset</span> <span class="o">=</span> <span class="n">examples</span><span class="o">.</span><span class="n">load_uniform</span><span class="p">()</span>
 
-<span class="n">plotter</span> <span class="o">=</span> <span class="n">pyvista</span><span class="o">.</span><span class="n">BackgroundPlotter</span><span class="p">()</span>
+<span class="n">plotter</span> <span class="o">=</span> <span class="n">pv</span><span class="o">.</span><span class="n">BackgroundPlotter</span><span class="p">()</span>
 <span class="n">plotter</span><span class="o">.</span><span class="n">add_mesh</span><span class="p">(</span><span class="n">dataset</span><span class="p">)</span>
 
 <span class="c1"># Then in another cell, you can add more to the plotter</span>
@@ -2333,12 +2333,12 @@ processing. This creates the ability to make a rendering scene and interactively
 add or remove datasets from the scene as well as has some useful menu functions
 for common scene manipulation or export tasks. To get started, try instantiating
 the <a class="reference internal" href="qt_plotting.html#pyvista.BackgroundPlotter" title="pyvista.BackgroundPlotter"><code class="xref py py-class docutils literal notranslate"><span class="pre">pyvista.BackgroundPlotter</span></code></a>:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pyvista</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pyvista</span> <span class="kn">as</span> <span class="nn">pv</span>
 <span class="kn">from</span> <span class="nn">pyvista</span> <span class="kn">import</span> <span class="n">examples</span>
 
 <span class="n">dataset</span> <span class="o">=</span> <span class="n">examples</span><span class="o">.</span><span class="n">load_hexbeam</span><span class="p">()</span>
 
-<span class="n">p</span> <span class="o">=</span> <span class="n">pyvista</span><span class="o">.</span><span class="n">BackgroundPlotter</span><span class="p">()</span>
+<span class="n">p</span> <span class="o">=</span> <span class="n">pv</span><span class="o">.</span><span class="n">BackgroundPlotter</span><span class="p">()</span>
 
 <span class="n">p</span><span class="o">.</span><span class="n">add_mesh</span><span class="p">(</span><span class="n">dataset</span><span class="p">)</span>
 
@@ -2354,13 +2354,13 @@ If in an IPython environment, call one of the tools on an input dataset to yield
 widgets that will control a filter or task in an interactive rendering scene.
 These tools create an <a class="reference internal" href="qt_plotting.html#pyvista.BackgroundPlotter" title="pyvista.BackgroundPlotter"><code class="xref py py-class docutils literal notranslate"><span class="pre">pyvista.BackgroundPlotter</span></code></a> instance which can be
 accessed under the <code class="docutils literal notranslate"><span class="pre">.plotter</span></code> attribute for further scene manipulation:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pyvista</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pyvista</span> <span class="kn">as</span> <span class="nn">pv</span>
 <span class="kn">from</span> <span class="nn">pyvista</span> <span class="kn">import</span> <span class="n">examples</span>
 
 <span class="n">dataset</span> <span class="o">=</span> <span class="n">examples</span><span class="o">.</span><span class="n">load_hexbeam</span><span class="p">()</span>
 
 <span class="c1"># Use the slicer tool</span>
-<span class="n">tool</span> <span class="o">=</span> <span class="n">pyvista</span><span class="o">.</span><span class="n">OrthogonalSlicer</span><span class="p">(</span><span class="n">dataset</span><span class="p">)</span>
+<span class="n">tool</span> <span class="o">=</span> <span class="n">pv</span><span class="o">.</span><span class="n">OrthogonalSlicer</span><span class="p">(</span><span class="n">dataset</span><span class="p">)</span>
 
 <span class="c1"># Get the plotter for adding more datasets:</span>
 <span class="n">p</span> <span class="o">=</span> <span class="n">tool</span><span class="o">.</span><span class="n">plotter</span>
@@ -2378,7 +2378,7 @@ values change through time:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">threading</span> <span class="kn">import</span> <span class="n">Thread</span>
 <span class="kn">import</span> <span class="nn">time</span>
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="kn">as</span> <span class="nn">np</span>
-<span class="kn">import</span> <span class="nn">pyvista</span>
+<span class="kn">import</span> <span class="nn">pyvista</span> <span class="kn">as</span> <span class="nn">pv</span>
 <span class="kn">from</span> <span class="nn">pyvista</span> <span class="kn">import</span> <span class="n">examples</span>
 
 
@@ -2387,7 +2387,7 @@ values change through time:</p>
 <span class="n">globe</span><span class="o">.</span><span class="n">set_active_scalar</span><span class="p">(</span><span class="s1">&#39;scalars&#39;</span><span class="p">)</span>
 
 
-<span class="n">plotter</span> <span class="o">=</span> <span class="n">pyvista</span><span class="o">.</span><span class="n">BackgroundPlotter</span><span class="p">()</span>
+<span class="n">plotter</span> <span class="o">=</span> <span class="n">pv</span><span class="o">.</span><span class="n">BackgroundPlotter</span><span class="p">()</span>
 <span class="n">plotter</span><span class="o">.</span><span class="n">add_mesh</span><span class="p">(</span><span class="n">globe</span><span class="p">,</span> <span class="n">lighting</span><span class="o">=</span><span class="bp">False</span><span class="p">,</span> <span class="n">show_edges</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">texture</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">scalars</span><span class="o">=</span><span class="s1">&#39;scalars&#39;</span><span class="p">)</span>
 <span class="n">plotter</span><span class="o">.</span><span class="n">view_isometric</span><span class="p">()</span>
 

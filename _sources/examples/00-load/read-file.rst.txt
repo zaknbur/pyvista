@@ -23,7 +23,7 @@ mesh.
 
 
     # sphinx_gallery_thumbnail_number = 5
-    import pyvista
+    import pyvista as pv
     from pyvista import examples
     import numpy as np
     import matplotlib.pyplot as plt
@@ -65,7 +65,7 @@ formats in PyVista.
 .. code-block:: default
 
 
-    mesh = pyvista.read(filename)
+    mesh = pv.read(filename)
     cpos = mesh.plot()
 
 
@@ -84,7 +84,7 @@ using the ``Plotter``:
 .. code-block:: default
 
 
-    plotter = pyvista.Plotter(off_screen=True)
+    plotter = pv.Plotter(off_screen=True)
     plotter.add_mesh(mesh)
     plotter.show(screenshot='myscreenshot.png')
 
@@ -237,7 +237,7 @@ Example VTK file
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  6.060 seconds)
+   **Total running time of the script:** ( 0 minutes  6.568 seconds)
 
 
 .. _sphx_glr_download_examples_00-load_read-file.py:

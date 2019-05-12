@@ -226,7 +226,7 @@
 <span id="sphx-glr-examples-01-filter-decimate-py"></span><h1>Decimation<a class="headerlink" href="#decimation" title="Permalink to this headline">¶</a></h1>
 <p>Decaimate a mesh</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># sphinx_gallery_thumbnail_number = 4</span>
-<span class="kn">import</span> <span class="nn">pyvista</span>
+<span class="kn">import</span> <span class="nn">pyvista</span> <span class="k">as</span> <span class="nn">pv</span>
 <span class="kn">from</span> <span class="nn">pyvista</span> <span class="k">import</span> <span class="n">examples</span>
 
 <span class="n">mesh</span> <span class="o">=</span> <span class="n">examples</span><span class="o">.</span><span class="n">download_face</span><span class="p">()</span>
@@ -263,7 +263,7 @@
 </div>
 <img alt="../../_images/sphx_glr_decimate_003.png" class="sphx-glr-single-img" src="../../_images/sphx_glr_decimate_003.png" />
 <p>Side by side comparison:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">p</span> <span class="o">=</span> <span class="n">pyvista</span><span class="o">.</span><span class="n">Plotter</span><span class="p">(</span><span class="n">shape</span><span class="o">=</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">))</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">p</span> <span class="o">=</span> <span class="n">pv</span><span class="o">.</span><span class="n">Plotter</span><span class="p">(</span><span class="n">shape</span><span class="o">=</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">))</span>
 <span class="n">p</span><span class="o">.</span><span class="n">add_mesh</span><span class="p">(</span><span class="n">mesh</span><span class="p">,</span> <span class="o">**</span><span class="n">dargs</span><span class="p">)</span>
 <span class="n">p</span><span class="o">.</span><span class="n">add_text</span><span class="p">(</span><span class="s1">&#39;Input mesh&#39;</span><span class="p">,</span> <span class="n">font_size</span><span class="o">=</span><span class="mi">24</span><span class="p">)</span>
 <span class="n">p</span><span class="o">.</span><span class="n">camera_position</span> <span class="o">=</span> <span class="n">cpos</span>
@@ -282,7 +282,7 @@
 </pre></div>
 </div>
 <img alt="../../_images/sphx_glr_decimate_004.png" class="sphx-glr-single-img" src="../../_images/sphx_glr_decimate_004.png" />
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  4.701 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  4.900 seconds)</p>
 <div class="sphx-glr-footer class sphx-glr-footer-example docutils container" id="sphx-glr-download-examples-01-filter-decimate-py">
 <div class="sphx-glr-download docutils container">
 <p><a class="reference download internal" download="" href="../../_downloads/84c5c5d2aa389c6d53997b76ba5ff998/decimate.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">decimate.py</span></code></a></p>

@@ -17,7 +17,6 @@ Compute normals on a surface.
 
 
     # sphinx_gallery_thumbnail_number = 2
-    import pyvista
     from pyvista import examples
 
 
@@ -76,7 +75,7 @@ exaggerated topographic relief.
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  15.334 seconds)
+   **Total running time of the script:** ( 0 minutes  16.649 seconds)
 
 
 .. _sphx_glr_download_examples_01-filter_compute-normals.py:

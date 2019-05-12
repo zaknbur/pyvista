@@ -16,7 +16,7 @@ Create a surface from a set of points through a Delaunay triangulation.
 
 
     # sphinx_gallery_thumbnail_number = 2
-    import pyvista
+    import pyvista as pv
     import numpy as np
 
 
@@ -53,11 +53,11 @@ First, create some points for the surface.
 
  .. code-block:: none
 
-    [[-196.88552365 -200.73861126    1.91971207]
-     [-178.36353752 -200.73861126    2.71744774]
-     [-157.83619475 -200.73861126    3.83725576]
-     [-132.06918531 -200.73861126    5.57480421]
-     [-113.76204247 -200.73861126    6.98161711]]
+    [[-204.59154514 -199.64772939    1.68089162]
+     [-182.3317507  -199.64772939    2.58562182]
+     [-161.42148893 -199.64772939    3.70381933]
+     [-141.05603715 -199.64772939    5.03981368]
+     [-117.45592455 -199.64772939    6.83744882]]
 
 
 Now use those points to create a point cloud PyVista data object. This will
@@ -68,7 +68,7 @@ be encompassed in a :class:`pyvista.PolyData` object.
 
 
     # simply pass the numpy points to the PolyData constructor
-    cloud = pyvista.PolyData(points)
+    cloud = pv.PolyData(points)
     cloud.plot(point_size=15)
 
 
@@ -101,7 +101,7 @@ triangulation to turn those boring discrete points into a connected surface.
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  1.239 seconds)
+   **Total running time of the script:** ( 0 minutes  1.250 seconds)
 
 
 .. _sphx_glr_download_examples_00-load_create-tri-surface.py:

@@ -15,7 +15,7 @@ Create a simple uniform grid from a 3D NumPy array of values.
 .. code-block:: default
 
 
-    import pyvista
+    import pyvista as pv
     import numpy as np
 
 
@@ -39,7 +39,7 @@ This is spatially referenced such that the grid is 20 by 5 by 10 (nx by ny by nz
     values.shape
 
     # Create the spatial reference
-    grid = pyvista.UniformGrid()
+    grid = pv.UniformGrid()
 
     # Set the grid dimensions: shape + 1 because we want to inject our values on the CELL data
     grid.dimensions = np.array(values.shape) + 1
@@ -78,7 +78,7 @@ grid dimensions upon initialization.
     values.shape
 
     # Create the spatial reference
-    grid = pyvista.UniformGrid()
+    grid = pv.UniformGrid()
 
     # Set the grid dimensions: shape because we want to inject our values on the POINT data
     grid.dimensions = values.shape
@@ -104,7 +104,7 @@ grid dimensions upon initialization.
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  3.210 seconds)
+   **Total running time of the script:** ( 0 minutes  3.292 seconds)
 
 
 .. _sphx_glr_download_examples_00-load_create-uniform-grid.py:
