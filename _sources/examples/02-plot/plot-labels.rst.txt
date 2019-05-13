@@ -64,12 +64,12 @@ Add string labels to the point data - this associates a label with every node:
 
  .. code-block:: none
 
-    PolyData (0x7fcdda5c9e28)
+    PolyData (0x7f2b890e6e28)
       N Cells:      10
       N Points:     10
-      X Bounds:     1.349e-01, 8.523e-01
-      Y Bounds:     2.897e-02, 8.571e-01
-      Z Bounds:     2.094e-02, 6.658e-01
+      X Bounds:     9.798e-02, 9.872e-01
+      Y Bounds:     4.035e-02, 9.132e-01
+      Z Bounds:     1.727e-01, 8.862e-01
       N Scalars:    1
 
 
@@ -190,7 +190,7 @@ This example will label pooints with their scalar values
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  3.672 seconds)
+   **Total running time of the script:** ( 0 minutes  3.682 seconds)
 
 
 .. _sphx_glr_download_examples_02-plot_plot-labels.py:
