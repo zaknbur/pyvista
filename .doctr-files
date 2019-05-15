@@ -38,6 +38,7 @@
 ./_downloads/997d4d99c733d57002fcb5dd38f2f720/streamlines.py
 ./_downloads/9d4f904b8a7d4a58e7f8d38196ca1a8d/geodesic.ipynb
 ./_downloads/9d6b84a80d62f44fecf5d3de91309882/compute-volume.py
+./_downloads/9df56cdf17b3867290648b6e6b32ee28/plot-themes.ipynb
 ./_downloads/a0392749606ac3bc65e656af853f68bc/plot-clear.ipynb
 ./_downloads/a64ec127bb6b73631660d73f3a82944e/create-geometric-objects.ipynb
 ./_downloads/ad510dcf96235a6ad2799bb757064b40/plot-screenshot.ipynb
@@ -52,6 +53,7 @@
 ./_downloads/cc32fb27d97b88fd5820ae5ec935cf73/poly-ray-trace.py
 ./_downloads/d1ccd05a03628ed9b58975b620244c3f/create-poly.ipynb
 ./_downloads/d2a10f34ef846ebc47ed79799b43c468/plot-texture.py
+./_downloads/d316570fa7a75b162ff84ec49bc3b65c/plot-themes.py
 ./_downloads/d5cc4d39819646d37e0dffbe3e30c71b/plot-scalar-bars.py
 ./_downloads/d68f5c146331b420bc23dc2f6388dcd7/compute-normals.ipynb
 ./_downloads/d6bf95d0761796846f8b29ea937995b9/using-filters.ipynb
@@ -166,6 +168,11 @@
 ./_images/sphx_glr_plot-texture_005.png
 ./_images/sphx_glr_plot-texture_006.png
 ./_images/sphx_glr_plot-texture_thumb.png
+./_images/sphx_glr_plot-themes_001.png
+./_images/sphx_glr_plot-themes_002.png
+./_images/sphx_glr_plot-themes_003.png
+./_images/sphx_glr_plot-themes_004.png
+./_images/sphx_glr_plot-themes_thumb.png
 ./_images/sphx_glr_poly-ray-trace_001.png
 ./_images/sphx_glr_poly-ray-trace_thumb.png
 ./_images/sphx_glr_read-file_001.png
@@ -245,6 +252,7 @@
 ./_sources/examples/02-plot/plot-scalar-bars.rst.txt
 ./_sources/examples/02-plot/plot-screenshot.rst.txt
 ./_sources/examples/02-plot/plot-texture.rst.txt
+./_sources/examples/02-plot/plot-themes.rst.txt
 ./_sources/examples/02-plot/sg_execution_times.rst.txt
 ./_sources/examples/index.rst.txt
 ./_sources/external_examples.rst.txt
@@ -364,6 +372,7 @@
 ./examples/02-plot/plot-scalar-bars.html
 ./examples/02-plot/plot-screenshot.html
 ./examples/02-plot/plot-texture.html
+./examples/02-plot/plot-themes.html
 ./examples/02-plot/sg_execution_times.html
 ./examples/index.html
 ./external_examples.html

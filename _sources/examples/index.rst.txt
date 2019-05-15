@@ -734,6 +734,26 @@ Plotting Examples
    :hidden:
 
    /examples/02-plot/plot-texture
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbcontainer" tooltip="PyVista has a few coloring themes for you to choose!">
+
+.. only:: html
+
+    .. figure:: /examples/02-plot/images/thumb/sphx_glr_plot-themes_thumb.png
+
+        :ref:`sphx_glr_examples_02-plot_plot-themes.py`
+
+.. raw:: html
+
+    </div>
+
+
+.. toctree::
+   :hidden:
+
+   /examples/02-plot/plot-themes
 .. raw:: html
 
     <div style='clear:both'></div>

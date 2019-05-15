@@ -9,7 +9,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Custom Colormaps &mdash; PyVista 0.20.1 documentation</title>
+  <title>Change the Theme &mdash; PyVista 0.20.1 documentation</title>
   
 
   
@@ -42,8 +42,8 @@
   <link rel="stylesheet" href="../../_static/copybutton.css" type="text/css" />
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Show Edges" href="plot-edges.html" />
-    <link rel="prev" title="Clearing a Mesh or the Entire Plot" href="plot-clear.html" />
+    <link rel="next" title="External Examples" href="../../external_examples.html" />
+    <link rel="prev" title="Applying Textures" href="plot-texture.html" />
  
 
 <meta name="description" content="3D plotting and mesh analysis through a streamlined interface for the Visualization Toolkit (VTK)">
@@ -128,7 +128,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../index.html#filtering">Filtering</a></li>
 <li class="toctree-l2 current"><a class="reference internal" href="../index.html#plotting-examples">Plotting Examples</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="plot-clear.html">Clearing a Mesh or the Entire Plot</a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="#">Custom Colormaps</a></li>
+<li class="toctree-l3"><a class="reference internal" href="plot-cmap.html">Custom Colormaps</a></li>
 <li class="toctree-l3"><a class="reference internal" href="plot-edges.html">Show Edges</a></li>
 <li class="toctree-l3"><a class="reference internal" href="plot-edl.html">Eye Dome Lighting</a></li>
 <li class="toctree-l3"><a class="reference internal" href="plot-gif.html">Create a GIF Movie</a></li>
@@ -140,7 +140,7 @@
 <li class="toctree-l3"><a class="reference internal" href="plot-scalar-bars.html">Customize Scalar Bars</a></li>
 <li class="toctree-l3"><a class="reference internal" href="plot-screenshot.html">Saving Screenshots</a></li>
 <li class="toctree-l3"><a class="reference internal" href="plot-texture.html">Applying Textures</a></li>
-<li class="toctree-l3"><a class="reference internal" href="plot-themes.html">Change the Theme</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Change the Theme</a></li>
 </ul>
 </li>
 </ul>
@@ -218,14 +218,14 @@
         
           <li><a href="../index.html">Quick Examples</a> &raquo;</li>
         
-      <li>Custom Colormaps</li>
+      <li>Change the Theme</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
             
             
-              <a href="https://github.com/pyvista/pyvista/blob/master/docs/examples/02-plot/plot-cmap.rst" class="fa fa-github"> Edit on GitHub</a>
+              <a href="https://github.com/pyvista/pyvista/blob/master/docs/examples/02-plot/plot-themes.rst" class="fa fa-github"> Edit on GitHub</a>
             
           
         
@@ -241,42 +241,72 @@
             
   <div class="sphx-glr-download-link-note admonition note">
 <p class="admonition-title">Note</p>
-<p>Click <a class="reference internal" href="#sphx-glr-download-examples-02-plot-plot-cmap-py"><span class="std std-ref">here</span></a> to download the full example code</p>
+<p>Click <a class="reference internal" href="#sphx-glr-download-examples-02-plot-plot-themes-py"><span class="std std-ref">here</span></a> to download the full example code</p>
 </div>
-<div class="sphx-glr-example-title section" id="custom-colormaps">
-<span id="sphx-glr-examples-02-plot-plot-cmap-py"></span><h1>Custom Colormaps<a class="headerlink" href="#custom-colormaps" title="Permalink to this headline">¶</a></h1>
-<p>Use a custom built colormap when plotting scalar values.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pyvista</span>
+<div class="sphx-glr-example-title section" id="change-the-theme">
+<span id="sphx-glr-examples-02-plot-plot-themes-py"></span><h1>Change the Theme<a class="headerlink" href="#change-the-theme" title="Permalink to this headline">¶</a></h1>
+<p>PyVista has a few coloring themes for you to choose!</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pyvista</span> <span class="k">as</span> <span class="nn">pv</span>
 <span class="kn">from</span> <span class="nn">pyvista</span> <span class="k">import</span> <span class="n">examples</span>
-<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
 </pre></div>
 </div>
-<p>Any colormap built for <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code> is fully compatible with PyVista.
-Colormaps are typically specifiedby passing the string name of the
-<code class="docutils literal notranslate"><span class="pre">matplotlib</span></code> colormap to the plotting routine via the <code class="docutils literal notranslate"><span class="pre">cmap</span></code> argument.</p>
-<p>See <a class="reference external" href="https://matplotlib.org/tutorials/colors/colormaps.html">this page</a> for a complete list of available colormaps.</p>
-<p>To get started using a custom colormap, download some data with scalars to
-plot.</p>
+<p>Define a simple plotting routine for comparing the themes</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mesh</span> <span class="o">=</span> <span class="n">examples</span><span class="o">.</span><span class="n">download_st_helens</span><span class="p">()</span><span class="o">.</span><span class="n">warp_by_scalar</span><span class="p">()</span>
+
+<span class="k">def</span> <span class="nf">plot_example</span><span class="p">():</span>
+    <span class="n">p</span> <span class="o">=</span> <span class="n">pv</span><span class="o">.</span><span class="n">Plotter</span><span class="p">()</span>
+    <span class="n">p</span><span class="o">.</span><span class="n">add_mesh</span><span class="p">(</span><span class="n">mesh</span><span class="p">)</span>
+    <span class="n">p</span><span class="o">.</span><span class="n">add_bounding_box</span><span class="p">()</span>
+    <span class="k">return</span> <span class="n">p</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
-<p>Build a custom colormap - here we just make a viridis map with 5 discrete
-colors, but you could make this as complex or simple as you desire.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cmap</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">cm</span><span class="o">.</span><span class="n">get_cmap</span><span class="p">(</span><span class="s1">&#39;viridis&#39;</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
+<p>PyVista’s default color theme is chosen to be generally easy on your eyes
+and is best used when working long hours on your visualization project.
+The grey background and warm colormaps are chosen to make sure 3D renderings
+do not drastically change the brightness of your screen when working in dark
+environments.</p>
+<p>Here’s an example of our default plotting theme - this is what you would see
+by default after running any of our examnples.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pv</span><span class="o">.</span><span class="n">set_plot_theme</span><span class="p">(</span><span class="s1">&#39;default&#39;</span><span class="p">)</span>
+
+<span class="n">plot_example</span><span class="p">()</span>
 </pre></div>
 </div>
-<p>Simply pass the colormap to the plotting routine!</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mesh</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">cmap</span><span class="o">=</span><span class="n">cmap</span><span class="p">,</span> <span class="n">cpos</span><span class="o">=</span><span class="s1">&#39;xy&#39;</span><span class="p">)</span>
+<img alt="../../_images/sphx_glr_plot-themes_001.png" class="sphx-glr-single-img" src="../../_images/sphx_glr_plot-themes_001.png" />
+<p>PyVista also ships with a few plotting themes:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">'ParaView'</span></code>: this is designed to mimic ParaView’s default plotting theme</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">'night'</span></code>: this is designed to be night-mode friendly with dark backgrounds and color schemes</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">'document'</span></code>: this is built for use in document style plotting and making publication quality figures</p></li>
+</ul>
+<p>Demo the <code class="docutils literal notranslate"><span class="pre">'ParaView'</span></code> theme</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pv</span><span class="o">.</span><span class="n">set_plot_theme</span><span class="p">(</span><span class="s1">&#39;ParaView&#39;</span><span class="p">)</span>
+
+<span class="n">plot_example</span><span class="p">()</span>
 </pre></div>
 </div>
-<img alt="../../_images/sphx_glr_plot-cmap_001.png" class="sphx-glr-single-img" src="../../_images/sphx_glr_plot-cmap_001.png" />
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  4.154 seconds)</p>
-<div class="sphx-glr-footer class sphx-glr-footer-example docutils container" id="sphx-glr-download-examples-02-plot-plot-cmap-py">
+<img alt="../../_images/sphx_glr_plot-themes_002.png" class="sphx-glr-single-img" src="../../_images/sphx_glr_plot-themes_002.png" />
+<p>Demo the <code class="docutils literal notranslate"><span class="pre">'night'</span></code> theme</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pv</span><span class="o">.</span><span class="n">set_plot_theme</span><span class="p">(</span><span class="s1">&#39;night&#39;</span><span class="p">)</span>
+
+<span class="n">plot_example</span><span class="p">()</span>
+</pre></div>
+</div>
+<img alt="../../_images/sphx_glr_plot-themes_003.png" class="sphx-glr-single-img" src="../../_images/sphx_glr_plot-themes_003.png" />
+<p>Demo the <code class="docutils literal notranslate"><span class="pre">'document'</span></code> theme</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pv</span><span class="o">.</span><span class="n">set_plot_theme</span><span class="p">(</span><span class="s1">&#39;document&#39;</span><span class="p">)</span>
+
+<span class="n">plot_example</span><span class="p">()</span>
+</pre></div>
+</div>
+<img alt="../../_images/sphx_glr_plot-themes_004.png" class="sphx-glr-single-img" src="../../_images/sphx_glr_plot-themes_004.png" />
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  4.200 seconds)</p>
+<div class="sphx-glr-footer class sphx-glr-footer-example docutils container" id="sphx-glr-download-examples-02-plot-plot-themes-py">
 <div class="sphx-glr-download docutils container">
-<p><a class="reference download internal" download="" href="../../_downloads/c155cc05e2e56bc9e04af8131599dd8e/plot-cmap.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">plot-cmap.py</span></code></a></p>
+<p><a class="reference download internal" download="" href="../../_downloads/d316570fa7a75b162ff84ec49bc3b65c/plot-themes.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">plot-themes.py</span></code></a></p>
 </div>
 <div class="sphx-glr-download docutils container">
-<p><a class="reference download internal" download="" href="../../_downloads/ed87f4e07a3f8d5e24638dee2d9a9ba2/plot-cmap.ipynb"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Jupyter</span> <span class="pre">notebook:</span> <span class="pre">plot-cmap.ipynb</span></code></a></p>
+<p><a class="reference download internal" download="" href="../../_downloads/9df56cdf17b3867290648b6e6b32ee28/plot-themes.ipynb"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Jupyter</span> <span class="pre">notebook:</span> <span class="pre">plot-themes.ipynb</span></code></a></p>
 </div>
 </div>
 <p class="sphx-glr-signature"><a class="reference external" href="https://sphinx-gallery.readthedocs.io">Gallery generated by Sphinx-Gallery</a></p>
@@ -290,10 +320,10 @@ colors, but you could make this as complex or simple as you desire.</p>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="plot-edges.html" class="btn btn-neutral float-right" title="Show Edges" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="../../external_examples.html" class="btn btn-neutral float-right" title="External Examples" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="plot-clear.html" class="btn btn-neutral float-left" title="Clearing a Mesh or the Entire Plot" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="plot-texture.html" class="btn btn-neutral float-left" title="Applying Textures" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
