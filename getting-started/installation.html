@@ -122,6 +122,7 @@
 <p class="caption"><span class="caption-text">Getting Started</span></p>
 <ul class="current">
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Installation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#dependencies">Dependencies</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#pypi">PyPI</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#anaconda">Anaconda</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#optional-dependencies">Optional Dependencies</a></li>
@@ -230,6 +231,17 @@
 <span id="install-ref"></span><h1>Installation<a class="headerlink" href="#installation" title="Permalink to this headline">¶</a></h1>
 <p>PyVista is supported on Python versions 3.5+, with temporary support for
 Python 2.7 as outlined in <a class="reference external" href="https://github.com/pyvista/pyvista/issues/164">this issue</a>.</p>
+<div class="section" id="dependencies">
+<h2>Dependencies<a class="headerlink" href="#dependencies" title="Permalink to this headline">¶</a></h2>
+<p>PyVista is built on top of the Visualization Toolkit (VTK) and NumPy - as such,
+the following projects are required dependencies of PyVista:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://pypi.org/project/vtk/">vtk</a> - PyVista directly inherits types from the VTK library.</p></li>
+<li><p><a class="reference external" href="https://pypi.org/project/numpy/">numpy</a> - NumPy arrays provide a core foundation for PyVista’s data array access.</p></li>
+<li><p><a class="reference external" href="https://pypi.org/project/imageio/">imageio</a> - This library is used for saving screenshots.</p></li>
+<li><p><a class="reference external" href="https://pypi.org/project/appdirs/">appdirs</a> - Data management for our example datasets so users can download tutorials on the fly.</p></li>
+</ul>
+</div>
 <div class="section" id="pypi">
 <h2>PyPI<a class="headerlink" href="#pypi" title="Permalink to this headline">¶</a></h2>
 <a class="reference external image-reference" href="https://pypi.org/project/pyvista/"><img alt="https://img.shields.io/pypi/v/pyvista.svg?logo=python&amp;logoColor=white" src="https://img.shields.io/pypi/v/pyvista.svg?logo=python&amp;logoColor=white" /></a>
@@ -306,7 +318,7 @@ using <code class="docutils literal notranslate"><span class="pre">pip</span></c
 </div>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p>Developers, please see the <a class="reference external" href="https://github.com/pyvista/pyvista/blob/master/CONTRIBUTING.md">Contributing Guide</a> for details on development testing</p>
+<p>Developers, please see the <a class="reference external" href="https://github.com/pyvista/pyvista/blob/master/CONTRIBUTING.md#testing">Contributing Guide</a> for details on development testing</p>
 </div>
 </div>
 <div class="section" id="running-on-ci-services">
