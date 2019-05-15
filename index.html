@@ -1,5 +1,6 @@
 
 
+
 <!DOCTYPE html>
 <!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
@@ -8,7 +9,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>pyvista &mdash; PyVista 0.20.1 documentation</title>
+  <title>PyVista &mdash; PyVista 0.20.1 documentation</title>
   
 
   
@@ -41,7 +42,26 @@
   <link rel="stylesheet" href="_static/copybutton.css" type="text/css" />
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Why PyVista?" href="why.html" /> 
+    <link rel="next" title="Why PyVista?" href="why.html" />
+ 
+
+<meta name="description" content="3D plotting and mesh analysis through a streamlined interface for the Visualization Toolkit (VTK)">
+<meta name="author" content="PyVista Developers">
+<meta name="keywords" content="python, 3D, visualization, plotting, mesh, meshviewer, vtk, open-source">
+
+<!-- this contains PyVista's Google analytics code - please don't copy/paste our tracking ID -->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+
+  ga('create', 'UA-140243896-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
 </head>
 
 <body class="wy-body-for-nav">
@@ -87,6 +107,7 @@
 
         <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
           
+    
             
             
               
@@ -101,39 +122,37 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="getting-started/installation.html">Installation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="getting-started/simple.html">Basic API Usage</a></li>
-</ul>
-<p class="caption"><span class="caption-text">Examples</span></p>
-<ul>
 <li class="toctree-l1"><a class="reference internal" href="examples/index.html">Quick Examples</a></li>
 <li class="toctree-l1"><a class="reference internal" href="external_examples.html">External Examples</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Data Types</span></p>
+<p class="caption"><span class="caption-text">API Reference</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="types/common.html">Datasets</a></li>
-<li class="toctree-l1"><a class="reference internal" href="types/common.html#the-common-model">The Common Model</a></li>
-<li class="toctree-l1"><a class="reference internal" href="types/points.html">Point Data</a></li>
-<li class="toctree-l1"><a class="reference internal" href="types/point-grids.html">Point-Based Grids</a></li>
-<li class="toctree-l1"><a class="reference internal" href="types/grids.html">Gridded Data</a></li>
-<li class="toctree-l1"><a class="reference internal" href="types/container.html">Multiple Block Datasets</a></li>
-</ul>
-<p class="caption"><span class="caption-text">Tools</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="tools/geometric.html">Geometric Objects</a></li>
-<li class="toctree-l1"><a class="reference internal" href="tools/plotting.html">Plotting</a></li>
-<li class="toctree-l1"><a class="reference internal" href="tools/filters.html">Filters</a></li>
-<li class="toctree-l1"><a class="reference internal" href="tools/ipy_tools.html">IPython Tools</a></li>
-<li class="toctree-l1"><a class="reference internal" href="tools/qt_plotting.html">PyVista PyQt Interface</a></li>
-<li class="toctree-l1"><a class="reference internal" href="tools/utilities.html">Utilities</a></li>
-</ul>
-<p class="caption"><span class="caption-text">Contributing</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="dev/contributing.html">Overview</a></li>
-<li class="toctree-l1"><a class="reference internal" href="dev/guidelines.html">Guidelines</a></li>
-<li class="toctree-l1"><a class="reference internal" href="dev/testing.html">Test Framework</a></li>
+<li class="toctree-l1"><a class="reference internal" href="types/index.html">Data Types</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tools/index.html">Tools</a></li>
 </ul>
 
             
           
+
+    
+        <p class="caption">
+            <span class="caption-text">
+            
+                Getting Connected
+            
+            </span>
+        </p>
+        <ul>
+            
+                <li class="toctree-l1"><a href="https://github.com/pyvista/pyvista-support"><i class="fa fa-comment fa-fw"></i> Support</a></li>
+            
+                <li class="toctree-l1"><a href="https://github.com/pyvista/pyvista"><i class="fa fa-github fa-fw"></i> Source Code</a></li>
+            
+                <li class="toctree-l1"><a href="https://github.com/pyvista/pyvista/blob/master/CONTRIBUTING.md"><i class="fa fa-gavel fa-fw"></i> Contributing</a></li>
+            
+        </ul>
+    
+
         </div>
       </div>
     </nav>
@@ -175,7 +194,7 @@
     
       <li><a href="#">Docs</a> &raquo;</li>
         
-      <li>pyvista</li>
+      <li>PyVista</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -269,11 +288,6 @@ Here are a few open-source projects that leverage PyVista:</p>
 <p>You can also visit <a class="reference external" href="http://pypi.python.org/pypi/pyvista">PyPi</a> or
 <a class="reference external" href="https://github.com/pyvista/pyvista">GitHub</a> to download the source.</p>
 <p>See <a class="reference internal" href="getting-started/installation.html#install-ref"><span class="std std-ref">Installation</span></a> for more details.</p>
-<div class="toctree-wrapper compound">
-</div>
-</div>
-<div class="section" id="examples">
-<h1>Examples<a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h1>
 <p>Be sure to head over to the <a class="reference external" href="./examples/index.html">examples gallery</a>
 to explore different use cases of PyVista and to start visualizing 3D data in
 Pyhton! Also, please explore the list of external projects leveraging PyVista
@@ -281,34 +295,17 @@ for 3D visualization in our <a class="reference external" href="./external_examp
 <div class="toctree-wrapper compound">
 </div>
 </div>
-<div class="section" id="data-types">
-<h1>Data Types<a class="headerlink" href="#data-types" title="Permalink to this headline">¶</a></h1>
-<p>The <a class="reference external" href="https://vtk.org">Visualization Toolkit</a> (VTK), developed by <a class="reference external" href="https://www.kitware.com">Kitware</a>, has many mesh data
-types that PyVista wraps.
-This chapter is intended to describe these different mesh types on the VTK
-side to help new users understand which data types to use.</p>
-<div class="toctree-wrapper compound">
-</div>
-</div>
-<div class="section" id="tools">
-<h1>Tools<a class="headerlink" href="#tools" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="api-reference">
+<h1>API Reference<a class="headerlink" href="#api-reference" title="Permalink to this headline">¶</a></h1>
+<p>In this section, you can learn more about how PyVista wraps different VTK mesh
+types and how you can leverage powerful 3D plotting and mesh analysis tools.
+Highlights of the API include:</p>
 <ul class="simple">
 <li><p>Pythonic interface to VTK’s Python-C++ bindings</p></li>
 <li><p>Filtering/plotting tools built for interactivity in Jupyter notebooks (see <a class="reference internal" href="tools/ipy_tools.html#ipy-tools-ref"><span class="std std-ref">IPython Tools</span></a>)</p></li>
 <li><p>Direct access to common VTK filters (see <a class="reference internal" href="tools/filters.html#filters-ref"><span class="std std-ref">Filters</span></a>)</p></li>
 <li><p>Intuitive plotting routines with <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code> similar syntax (see <a class="reference internal" href="tools/plotting.html#plotting-ref"><span class="std std-ref">Plotting</span></a>)</p></li>
 </ul>
-<div class="toctree-wrapper compound">
-</div>
-</div>
-<div class="section" id="contributing">
-<h1>Contributing<a class="headerlink" href="#contributing" title="Permalink to this headline">¶</a></h1>
-<p>We absolutely welcome contributions and we hope that this guide will facilitate
-an understanding of the PyVista code repository. It is important to note that
-the  PyVista software package is maintained on a volunteer basis and thus we
-need to foster a community that can support user questions and develop new
-features to make this software a useful tool for all users. To learn more about
-contributing to PyVista, please see <a class="reference internal" href="dev/contributing.html#contributing-ref"><span class="std std-ref">Overview</span></a>.</p>
 <div class="toctree-wrapper compound">
 </div>
 </div>

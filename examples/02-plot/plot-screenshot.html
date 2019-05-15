@@ -1,5 +1,6 @@
 
 
+
 <!DOCTYPE html>
 <!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
@@ -42,7 +43,26 @@
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="Applying Textures" href="plot-texture.html" />
-    <link rel="prev" title="Customize Scalar Bars" href="plot-scalar-bars.html" /> 
+    <link rel="prev" title="Customize Scalar Bars" href="plot-scalar-bars.html" />
+ 
+
+<meta name="description" content="3D plotting and mesh analysis through a streamlined interface for the Visualization Toolkit (VTK)">
+<meta name="author" content="PyVista Developers">
+<meta name="keywords" content="python, 3D, visualization, plotting, mesh, meshviewer, vtk, open-source">
+
+<!-- this contains PyVista's Google analytics code - please don't copy/paste our tracking ID -->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+
+  ga('create', 'UA-140243896-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
 </head>
 
 <body class="wy-body-for-nav">
@@ -88,6 +108,7 @@
 
         <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
           
+    
             
             
               
@@ -99,12 +120,9 @@
 <li class="toctree-l1"><a class="reference internal" href="../../authors.html">Authors</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Getting Started</span></p>
-<ul>
+<ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../../getting-started/installation.html">Installation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../getting-started/simple.html">Basic API Usage</a></li>
-</ul>
-<p class="caption"><span class="caption-text">Examples</span></p>
-<ul class="current">
 <li class="toctree-l1 current"><a class="reference internal" href="../index.html">Quick Examples</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="../index.html#loading-and-creating-meshes">Loading and Creating Meshes</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../index.html#filtering">Filtering</a></li>
@@ -128,33 +146,34 @@
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../external_examples.html">External Examples</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Data Types</span></p>
+<p class="caption"><span class="caption-text">API Reference</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../../types/common.html">Datasets</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../types/common.html#the-common-model">The Common Model</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../types/points.html">Point Data</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../types/point-grids.html">Point-Based Grids</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../types/grids.html">Gridded Data</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../types/container.html">Multiple Block Datasets</a></li>
-</ul>
-<p class="caption"><span class="caption-text">Tools</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../../tools/geometric.html">Geometric Objects</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../tools/plotting.html">Plotting</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../tools/filters.html">Filters</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../tools/ipy_tools.html">IPython Tools</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../tools/qt_plotting.html">PyVista PyQt Interface</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../tools/utilities.html">Utilities</a></li>
-</ul>
-<p class="caption"><span class="caption-text">Contributing</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../../dev/contributing.html">Overview</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../dev/guidelines.html">Guidelines</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../dev/testing.html">Test Framework</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../types/index.html">Data Types</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../tools/index.html">Tools</a></li>
 </ul>
 
             
           
+
+    
+        <p class="caption">
+            <span class="caption-text">
+            
+                Getting Connected
+            
+            </span>
+        </p>
+        <ul>
+            
+                <li class="toctree-l1"><a href="https://github.com/pyvista/pyvista-support"><i class="fa fa-comment fa-fw"></i> Support</a></li>
+            
+                <li class="toctree-l1"><a href="https://github.com/pyvista/pyvista"><i class="fa fa-github fa-fw"></i> Source Code</a></li>
+            
+                <li class="toctree-l1"><a href="https://github.com/pyvista/pyvista/blob/master/CONTRIBUTING.md"><i class="fa fa-gavel fa-fw"></i> Contributing</a></li>
+            
+        </ul>
+    
+
         </div>
       </div>
     </nav>
@@ -252,7 +271,7 @@ the <code class="docutils literal notranslate"><span class="pre">Plotter</span><
 </pre></div>
 </div>
 <img alt="../../_images/sphx_glr_plot-screenshot_002.png" class="sphx-glr-single-img" src="../../_images/sphx_glr_plot-screenshot_002.png" />
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  0.897 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  0.864 seconds)</p>
 <div class="sphx-glr-footer class sphx-glr-footer-example docutils container" id="sphx-glr-download-examples-02-plot-plot-screenshot-py">
 <div class="sphx-glr-download docutils container">
 <p><a class="reference download internal" download="" href="../../_downloads/e5b039de51cab43f71168beda91e4dae/plot-screenshot.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">plot-screenshot.py</span></code></a></p>

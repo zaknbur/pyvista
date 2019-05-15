@@ -1,5 +1,6 @@
 
 
+
 <!DOCTYPE html>
 <!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
@@ -40,7 +41,26 @@
   <link rel="stylesheet" href="../../_static/style.css" type="text/css" />
   <link rel="stylesheet" href="../../_static/copybutton.css" type="text/css" />
     <link rel="index" title="Index" href="../../genindex.html" />
-    <link rel="search" title="Search" href="../../search.html" /> 
+    <link rel="search" title="Search" href="../../search.html" />
+ 
+
+<meta name="description" content="3D plotting and mesh analysis through a streamlined interface for the Visualization Toolkit (VTK)">
+<meta name="author" content="PyVista Developers">
+<meta name="keywords" content="python, 3D, visualization, plotting, mesh, meshviewer, vtk, open-source">
+
+<!-- this contains PyVista's Google analytics code - please don't copy/paste our tracking ID -->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+
+  ga('create', 'UA-140243896-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
 </head>
 
 <body class="wy-body-for-nav">
@@ -86,6 +106,7 @@
 
         <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
           
+    
             
             
               
@@ -100,39 +121,37 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../getting-started/installation.html">Installation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../getting-started/simple.html">Basic API Usage</a></li>
-</ul>
-<p class="caption"><span class="caption-text">Examples</span></p>
-<ul>
 <li class="toctree-l1"><a class="reference internal" href="../index.html">Quick Examples</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../external_examples.html">External Examples</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Data Types</span></p>
+<p class="caption"><span class="caption-text">API Reference</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../../types/common.html">Datasets</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../types/common.html#the-common-model">The Common Model</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../types/points.html">Point Data</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../types/point-grids.html">Point-Based Grids</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../types/grids.html">Gridded Data</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../types/container.html">Multiple Block Datasets</a></li>
-</ul>
-<p class="caption"><span class="caption-text">Tools</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../../tools/geometric.html">Geometric Objects</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../tools/plotting.html">Plotting</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../tools/filters.html">Filters</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../tools/ipy_tools.html">IPython Tools</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../tools/qt_plotting.html">PyVista PyQt Interface</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../tools/utilities.html">Utilities</a></li>
-</ul>
-<p class="caption"><span class="caption-text">Contributing</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../../dev/contributing.html">Overview</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../dev/guidelines.html">Guidelines</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../dev/testing.html">Test Framework</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../types/index.html">Data Types</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../tools/index.html">Tools</a></li>
 </ul>
 
             
           
+
+    
+        <p class="caption">
+            <span class="caption-text">
+            
+                Getting Connected
+            
+            </span>
+        </p>
+        <ul>
+            
+                <li class="toctree-l1"><a href="https://github.com/pyvista/pyvista-support"><i class="fa fa-comment fa-fw"></i> Support</a></li>
+            
+                <li class="toctree-l1"><a href="https://github.com/pyvista/pyvista"><i class="fa fa-github fa-fw"></i> Source Code</a></li>
+            
+                <li class="toctree-l1"><a href="https://github.com/pyvista/pyvista/blob/master/CONTRIBUTING.md"><i class="fa fa-gavel fa-fw"></i> Contributing</a></li>
+            
+        </ul>
+    
+
         </div>
       </div>
     </nav>
@@ -197,21 +216,21 @@
             
   <div class="section" id="computation-times">
 <span id="sphx-glr-examples-02-plot-sg-execution-times"></span><h1>Computation times<a class="headerlink" href="#computation-times" title="Permalink to this headline">¶</a></h1>
-<p><strong>02:34.881</strong> total execution time for <strong>examples_02-plot</strong> files:</p>
+<p><strong>02:29.938</strong> total execution time for <strong>examples_02-plot</strong> files:</p>
 <ul class="simple">
-<li><p><strong>00:55.516</strong>: <a class="reference internal" href="plot-edl.html#sphx-glr-examples-02-plot-plot-edl-py"><span class="std std-ref">Eye Dome Lighting</span></a> (<code class="docutils literal notranslate"><span class="pre">plot-edl.py</span></code>)</p></li>
-<li><p><strong>00:20.737</strong>: <a class="reference internal" href="plot-movie.html#sphx-glr-examples-02-plot-plot-movie-py"><span class="std std-ref">Create a MP4 Movie</span></a> (<code class="docutils literal notranslate"><span class="pre">plot-movie.py</span></code>)</p></li>
-<li><p><strong>00:14.752</strong>: <a class="reference internal" href="plot-edges.html#sphx-glr-examples-02-plot-plot-edges-py"><span class="std std-ref">Show Edges</span></a> (<code class="docutils literal notranslate"><span class="pre">plot-edges.py</span></code>)</p></li>
-<li><p><strong>00:11.551</strong>: <a class="reference internal" href="plot-gif.html#sphx-glr-examples-02-plot-plot-gif-py"><span class="std std-ref">Create a GIF Movie</span></a> (<code class="docutils literal notranslate"><span class="pre">plot-gif.py</span></code>)</p></li>
-<li><p><strong>00:10.281</strong>: <a class="reference internal" href="plot-texture.html#sphx-glr-examples-02-plot-plot-texture-py"><span class="std std-ref">Applying Textures</span></a> (<code class="docutils literal notranslate"><span class="pre">plot-texture.py</span></code>)</p></li>
-<li><p><strong>00:10.192</strong>: <a class="reference internal" href="plot-opacity.html#sphx-glr-examples-02-plot-plot-opacity-py"><span class="std std-ref">Plot with Opacity</span></a> (<code class="docutils literal notranslate"><span class="pre">plot-opacity.py</span></code>)</p></li>
-<li><p><strong>00:09.783</strong>: <a class="reference internal" href="plot-scalar-bars.html#sphx-glr-examples-02-plot-plot-scalar-bars-py"><span class="std std-ref">Customize Scalar Bars</span></a> (<code class="docutils literal notranslate"><span class="pre">plot-scalar-bars.py</span></code>)</p></li>
-<li><p><strong>00:07.345</strong>: <a class="reference internal" href="plot-glyphs.html#sphx-glr-examples-02-plot-plot-glyphs-py"><span class="std std-ref">Plotting Glyphs</span></a> (<code class="docutils literal notranslate"><span class="pre">plot-glyphs.py</span></code>)</p></li>
-<li><p><strong>00:04.130</strong>: <a class="reference internal" href="plot-cmap.html#sphx-glr-examples-02-plot-plot-cmap-py"><span class="std std-ref">Custom Colormaps</span></a> (<code class="docutils literal notranslate"><span class="pre">plot-cmap.py</span></code>)</p></li>
-<li><p><strong>00:03.948</strong>: <a class="reference internal" href="plot-multi-window.html#sphx-glr-examples-02-plot-plot-multi-window-py"><span class="std std-ref">Multi-Window Plot</span></a> (<code class="docutils literal notranslate"><span class="pre">plot-multi-window.py</span></code>)</p></li>
-<li><p><strong>00:03.761</strong>: <a class="reference internal" href="plot-labels.html#sphx-glr-examples-02-plot-plot-labels-py"><span class="std std-ref">Label Points</span></a> (<code class="docutils literal notranslate"><span class="pre">plot-labels.py</span></code>)</p></li>
-<li><p><strong>00:01.989</strong>: <a class="reference internal" href="plot-clear.html#sphx-glr-examples-02-plot-plot-clear-py"><span class="std std-ref">Clearing a Mesh or the Entire Plot</span></a> (<code class="docutils literal notranslate"><span class="pre">plot-clear.py</span></code>)</p></li>
-<li><p><strong>00:00.897</strong>: <a class="reference internal" href="plot-screenshot.html#sphx-glr-examples-02-plot-plot-screenshot-py"><span class="std std-ref">Saving Screenshots</span></a> (<code class="docutils literal notranslate"><span class="pre">plot-screenshot.py</span></code>)</p></li>
+<li><p><strong>00:54.772</strong>: <a class="reference internal" href="plot-edl.html#sphx-glr-examples-02-plot-plot-edl-py"><span class="std std-ref">Eye Dome Lighting</span></a> (<code class="docutils literal notranslate"><span class="pre">plot-edl.py</span></code>)</p></li>
+<li><p><strong>00:19.451</strong>: <a class="reference internal" href="plot-movie.html#sphx-glr-examples-02-plot-plot-movie-py"><span class="std std-ref">Create a MP4 Movie</span></a> (<code class="docutils literal notranslate"><span class="pre">plot-movie.py</span></code>)</p></li>
+<li><p><strong>00:14.863</strong>: <a class="reference internal" href="plot-edges.html#sphx-glr-examples-02-plot-plot-edges-py"><span class="std std-ref">Show Edges</span></a> (<code class="docutils literal notranslate"><span class="pre">plot-edges.py</span></code>)</p></li>
+<li><p><strong>00:11.025</strong>: <a class="reference internal" href="plot-gif.html#sphx-glr-examples-02-plot-plot-gif-py"><span class="std std-ref">Create a GIF Movie</span></a> (<code class="docutils literal notranslate"><span class="pre">plot-gif.py</span></code>)</p></li>
+<li><p><strong>00:10.158</strong>: <a class="reference internal" href="plot-texture.html#sphx-glr-examples-02-plot-plot-texture-py"><span class="std std-ref">Applying Textures</span></a> (<code class="docutils literal notranslate"><span class="pre">plot-texture.py</span></code>)</p></li>
+<li><p><strong>00:09.538</strong>: <a class="reference internal" href="plot-scalar-bars.html#sphx-glr-examples-02-plot-plot-scalar-bars-py"><span class="std std-ref">Customize Scalar Bars</span></a> (<code class="docutils literal notranslate"><span class="pre">plot-scalar-bars.py</span></code>)</p></li>
+<li><p><strong>00:08.586</strong>: <a class="reference internal" href="plot-opacity.html#sphx-glr-examples-02-plot-plot-opacity-py"><span class="std std-ref">Plot with Opacity</span></a> (<code class="docutils literal notranslate"><span class="pre">plot-opacity.py</span></code>)</p></li>
+<li><p><strong>00:07.185</strong>: <a class="reference internal" href="plot-glyphs.html#sphx-glr-examples-02-plot-plot-glyphs-py"><span class="std std-ref">Plotting Glyphs</span></a> (<code class="docutils literal notranslate"><span class="pre">plot-glyphs.py</span></code>)</p></li>
+<li><p><strong>00:04.036</strong>: <a class="reference internal" href="plot-cmap.html#sphx-glr-examples-02-plot-plot-cmap-py"><span class="std std-ref">Custom Colormaps</span></a> (<code class="docutils literal notranslate"><span class="pre">plot-cmap.py</span></code>)</p></li>
+<li><p><strong>00:03.805</strong>: <a class="reference internal" href="plot-multi-window.html#sphx-glr-examples-02-plot-plot-multi-window-py"><span class="std std-ref">Multi-Window Plot</span></a> (<code class="docutils literal notranslate"><span class="pre">plot-multi-window.py</span></code>)</p></li>
+<li><p><strong>00:03.687</strong>: <a class="reference internal" href="plot-labels.html#sphx-glr-examples-02-plot-plot-labels-py"><span class="std std-ref">Label Points</span></a> (<code class="docutils literal notranslate"><span class="pre">plot-labels.py</span></code>)</p></li>
+<li><p><strong>00:01.967</strong>: <a class="reference internal" href="plot-clear.html#sphx-glr-examples-02-plot-plot-clear-py"><span class="std std-ref">Clearing a Mesh or the Entire Plot</span></a> (<code class="docutils literal notranslate"><span class="pre">plot-clear.py</span></code>)</p></li>
+<li><p><strong>00:00.864</strong>: <a class="reference internal" href="plot-screenshot.html#sphx-glr-examples-02-plot-plot-screenshot-py"><span class="std std-ref">Saving Screenshots</span></a> (<code class="docutils literal notranslate"><span class="pre">plot-screenshot.py</span></code>)</p></li>
 </ul>
 </div>
 

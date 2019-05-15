@@ -1,5 +1,6 @@
 
 
+
 <!DOCTYPE html>
 <!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
@@ -8,7 +9,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Test Framework &mdash; PyVista 0.20.1 documentation</title>
+  <title>Tools &mdash; PyVista 0.20.1 documentation</title>
   
 
   
@@ -41,7 +42,27 @@
   <link rel="stylesheet" href="../_static/copybutton.css" type="text/css" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="prev" title="Guidelines" href="guidelines.html" /> 
+    <link rel="next" title="Geometric Objects" href="geometric.html" />
+    <link rel="prev" title="Multiple Block Datasets" href="../types/container.html" />
+ 
+
+<meta name="description" content="3D plotting and mesh analysis through a streamlined interface for the Visualization Toolkit (VTK)">
+<meta name="author" content="PyVista Developers">
+<meta name="keywords" content="python, 3D, visualization, plotting, mesh, meshviewer, vtk, open-source">
+
+<!-- this contains PyVista's Google analytics code - please don't copy/paste our tracking ID -->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+
+  ga('create', 'UA-140243896-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
 </head>
 
 <body class="wy-body-for-nav">
@@ -87,6 +108,7 @@
 
         <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
           
+    
             
             
               
@@ -101,39 +123,45 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../getting-started/installation.html">Installation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../getting-started/simple.html">Basic API Usage</a></li>
-</ul>
-<p class="caption"><span class="caption-text">Examples</span></p>
-<ul>
 <li class="toctree-l1"><a class="reference internal" href="../examples/index.html">Quick Examples</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../external_examples.html">External Examples</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Data Types</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../types/common.html">Datasets</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../types/common.html#the-common-model">The Common Model</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../types/points.html">Point Data</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../types/point-grids.html">Point-Based Grids</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../types/grids.html">Gridded Data</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../types/container.html">Multiple Block Datasets</a></li>
-</ul>
-<p class="caption"><span class="caption-text">Tools</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../tools/geometric.html">Geometric Objects</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../tools/plotting.html">Plotting</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../tools/filters.html">Filters</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../tools/ipy_tools.html">IPython Tools</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../tools/qt_plotting.html">PyVista PyQt Interface</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../tools/utilities.html">Utilities</a></li>
-</ul>
-<p class="caption"><span class="caption-text">Contributing</span></p>
+<p class="caption"><span class="caption-text">API Reference</span></p>
 <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="contributing.html">Overview</a></li>
-<li class="toctree-l1"><a class="reference internal" href="guidelines.html">Guidelines</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Test Framework</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../types/index.html">Data Types</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Tools</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="geometric.html">Geometric Objects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="plotting.html">Plotting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="filters.html">Filters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ipy_tools.html">IPython Tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="qt_plotting.html">PyVista PyQt Interface</a></li>
+<li class="toctree-l2"><a class="reference internal" href="utilities.html">Utilities</a></li>
+</ul>
+</li>
 </ul>
 
             
           
+
+    
+        <p class="caption">
+            <span class="caption-text">
+            
+                Getting Connected
+            
+            </span>
+        </p>
+        <ul>
+            
+                <li class="toctree-l1"><a href="https://github.com/pyvista/pyvista-support"><i class="fa fa-comment fa-fw"></i> Support</a></li>
+            
+                <li class="toctree-l1"><a href="https://github.com/pyvista/pyvista"><i class="fa fa-github fa-fw"></i> Source Code</a></li>
+            
+                <li class="toctree-l1"><a href="https://github.com/pyvista/pyvista/blob/master/CONTRIBUTING.md"><i class="fa fa-gavel fa-fw"></i> Contributing</a></li>
+            
+        </ul>
+    
+
         </div>
       </div>
     </nav>
@@ -175,14 +203,14 @@
     
       <li><a href="../index.html">Docs</a> &raquo;</li>
         
-      <li>Test Framework</li>
+      <li>Tools</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
             
             
-              <a href="https://github.com/pyvista/pyvista/blob/master/docs/dev/testing.rst" class="fa fa-github"> Edit on GitHub</a>
+              <a href="https://github.com/pyvista/pyvista/blob/master/docs/tools/index.rst" class="fa fa-github"> Edit on GitHub</a>
             
           
         
@@ -196,39 +224,16 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="test-framework">
-<span id="testing-ref"></span><h1>Test Framework<a class="headerlink" href="#test-framework" title="Permalink to this headline">¶</a></h1>
-<p>After making changes, please test changes locally before creating a pull
-request. The following tests will be executed after any commit or pull request,
-so we ask that you perform the following sequence locally to track down any new
-issues from your changes.
-To run our comprehensive suite of unit tests, install all the dependencies
-listed in <code class="docutils literal notranslate"><span class="pre">requirements.txt</span></code>, <code class="docutils literal notranslate"><span class="pre">requirements_docs.txt</span></code>:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip install -r requirements.txt
-pip install -r requirements_docs.txt
-</pre></div>
+  <div class="section" id="tools">
+<h1>Tools<a class="headerlink" href="#tools" title="Permalink to this headline">¶</a></h1>
+<ul class="simple">
+<li><p>Pythonic interface to VTK’s Python-C++ bindings</p></li>
+<li><p>Filtering/plotting tools built for interactivity in Jupyter notebooks (see <a class="reference internal" href="ipy_tools.html#ipy-tools-ref"><span class="std std-ref">IPython Tools</span></a>)</p></li>
+<li><p>Direct access to common VTK filters (see <a class="reference internal" href="filters.html#filters-ref"><span class="std std-ref">Filters</span></a>)</p></li>
+<li><p>Intuitive plotting routines with <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code> similar syntax (see <a class="reference internal" href="plotting.html#plotting-ref"><span class="std std-ref">Plotting</span></a>)</p></li>
+</ul>
+<div class="toctree-wrapper compound">
 </div>
-<p>Then, if you have everything installed, you can run the various test suites:</p>
-<p>Run the primary test suite and generate coverage report:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python -m pytest -v --cov pyvista
-</pre></div>
-</div>
-<p>Run all code examples in the docstrings:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python -m pytest -v --doctest-modules pyvista
-</pre></div>
-</div>
-<p>Now make sure notebooks are running</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python -m pytest -v --nbval-lax --current-env --disable-warnings notebooks/*.ipynb
-python -m pytest -v --nbval-lax --current-env --disable-warnings tests/*.ipynb
-</pre></div>
-</div>
-<p>And finally, test the documentation examples:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span> ./docs/
-make doctest
-make html
-</pre></div>
-</div>
-<p>The finished documentation can be found in the <cite>docs/_build/html</cite> directory.</p>
 </div>
 
 
@@ -239,8 +244,10 @@ make html
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
+        <a href="geometric.html" class="btn btn-neutral float-right" title="Geometric Objects" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
-        <a href="guidelines.html" class="btn btn-neutral float-left" title="Guidelines" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+        <a href="../types/container.html" class="btn btn-neutral float-left" title="Multiple Block Datasets" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
