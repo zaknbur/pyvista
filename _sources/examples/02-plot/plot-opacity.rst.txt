@@ -15,7 +15,7 @@ Plot a mesh's scalar array with an opacity trasfer funciton
 .. code-block:: default
 
 
-    import pyvista
+    import pyvista as pv
     from pyvista import examples
 
 
@@ -74,7 +74,7 @@ mappings:
 
 .. code-block:: default
 
-    p = pyvista.Plotter(shape=(2,2), border=False)
+    p = pv.Plotter(shape=(2,2), border=False)
 
     p.add_mesh(knee, cmap='bone', show_scalar_bar=0)
     p.view_xy()
@@ -104,7 +104,7 @@ mappings:
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  8.414 seconds)
+   **Total running time of the script:** ( 0 minutes  8.680 seconds)
 
 
 .. _sphx_glr_download_examples_02-plot_plot-opacity.py:

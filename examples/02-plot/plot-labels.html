@@ -253,7 +253,7 @@
 <p>Use string arrays in a point set to label points</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># sphinx_gallery_thumbnail_number = 3</span>
 <span class="kn">from</span> <span class="nn">pyvista</span> <span class="k">import</span> <span class="n">examples</span>
-<span class="kn">import</span> <span class="nn">pyvista</span>
+<span class="kn">import</span> <span class="nn">pyvista</span> <span class="k">as</span> <span class="nn">pv</span>
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 </pre></div>
 </div>
@@ -262,7 +262,7 @@
 <p>This example will label the nodes of a mesh with a given array of string
 labels for each of the nodes.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Make some random points</span>
-<span class="n">poly</span> <span class="o">=</span> <span class="n">pyvista</span><span class="o">.</span><span class="n">PolyData</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">rand</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">3</span><span class="p">))</span>
+<span class="n">poly</span> <span class="o">=</span> <span class="n">pv</span><span class="o">.</span><span class="n">PolyData</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">rand</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">3</span><span class="p">))</span>
 </pre></div>
 </div>
 <p>Add string labels to the point data - this associates a label with every node:</p>
@@ -272,17 +272,17 @@ labels for each of the nodes.</p>
 </pre></div>
 </div>
 <p class="sphx-glr-script-out">Out:</p>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>PolyData (0x7f90470357c8)
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>PolyData (0x7f31bc789fa8)
   N Cells:      10
   N Points:     10
-  X Bounds:     9.039e-02, 9.977e-01
-  Y Bounds:     2.083e-01, 9.679e-01
-  Z Bounds:     7.144e-03, 8.956e-01
+  X Bounds:     4.378e-02, 9.895e-01
+  Y Bounds:     2.219e-01, 9.934e-01
+  Z Bounds:     1.929e-01, 8.366e-01
   N Scalars:    1
 </pre></div>
 </div>
 <p>Now plot the points with labels:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">plotter</span> <span class="o">=</span> <span class="n">pyvista</span><span class="o">.</span><span class="n">Plotter</span><span class="p">()</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">plotter</span> <span class="o">=</span> <span class="n">pv</span><span class="o">.</span><span class="n">Plotter</span><span class="p">()</span>
 <span class="n">plotter</span><span class="o">.</span><span class="n">add_point_labels</span><span class="p">(</span><span class="n">poly</span><span class="p">,</span> <span class="s1">&#39;My Labels&#39;</span><span class="p">,</span> <span class="n">point_size</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span> <span class="n">font_size</span><span class="o">=</span><span class="mi">36</span><span class="p">)</span>
 <span class="n">plotter</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
@@ -293,11 +293,11 @@ labels for each of the nodes.</p>
 <h2>Label Node Locations<a class="headerlink" href="#label-node-locations" title="Permalink to this headline">¶</a></h2>
 <p>This example will label the nodes of a mesh with their coordinate locations</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Load example beam file</span>
-<span class="n">grid</span> <span class="o">=</span> <span class="n">pyvista</span><span class="o">.</span><span class="n">UnstructuredGrid</span><span class="p">(</span><span class="n">examples</span><span class="o">.</span><span class="n">hexbeamfile</span><span class="p">)</span>
+<span class="n">grid</span> <span class="o">=</span> <span class="n">pv</span><span class="o">.</span><span class="n">UnstructuredGrid</span><span class="p">(</span><span class="n">examples</span><span class="o">.</span><span class="n">hexbeamfile</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>Create plotting class and add the unstructured grid</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">plotter</span> <span class="o">=</span> <span class="n">pyvista</span><span class="o">.</span><span class="n">Plotter</span><span class="p">()</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">plotter</span> <span class="o">=</span> <span class="n">pv</span><span class="o">.</span><span class="n">Plotter</span><span class="p">()</span>
 <span class="n">plotter</span><span class="o">.</span><span class="n">add_mesh</span><span class="p">(</span><span class="n">grid</span><span class="p">,</span> <span class="n">show_edges</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;tan&#39;</span><span class="p">)</span>
 
 <span class="c1"># Add labels to points on the yz plane (where x == 0)</span>
@@ -322,7 +322,7 @@ labels for each of the nodes.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mesh</span> <span class="o">=</span> <span class="n">examples</span><span class="o">.</span><span class="n">load_uniform</span><span class="p">()</span><span class="o">.</span><span class="n">slice</span><span class="p">()</span>
 </pre></div>
 </div>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">p</span> <span class="o">=</span> <span class="n">pyvista</span><span class="o">.</span><span class="n">Plotter</span><span class="p">()</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">p</span> <span class="o">=</span> <span class="n">pv</span><span class="o">.</span><span class="n">Plotter</span><span class="p">()</span>
 
 <span class="c1"># Add the mesh:</span>
 <span class="n">p</span><span class="o">.</span><span class="n">add_mesh</span><span class="p">(</span><span class="n">mesh</span><span class="p">,</span> <span class="n">scalars</span><span class="o">=</span><span class="s1">&#39;Spatial Point Data&#39;</span><span class="p">,</span> <span class="n">show_edges</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
@@ -339,7 +339,7 @@ labels for each of the nodes.</p>
 </pre></div>
 </div>
 <img alt="../../_images/sphx_glr_plot-labels_003.png" class="sphx-glr-single-img" src="../../_images/sphx_glr_plot-labels_003.png" />
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  3.685 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  3.743 seconds)</p>
 <div class="sphx-glr-footer class sphx-glr-footer-example docutils container" id="sphx-glr-download-examples-02-plot-plot-labels-py">
 <div class="sphx-glr-download docutils container">
 <p><a class="reference download internal" download="" href="../../_downloads/f9130a8332ccf23916654833ef79f618/plot-labels.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">plot-labels.py</span></code></a></p>

@@ -18,7 +18,7 @@ Use vectors in a dataset to plot and orient glyphs/geometric objects.
 
 
     # sphinx_gallery_thumbnail_number = 1
-    import pyvista
+    import pyvista as pv
     from pyvista import examples
     import numpy as np
 
@@ -37,13 +37,13 @@ Glyphying can be done via the :func:`pyvista.DataSetFilters.glyph` filter
     mesh = examples.download_carotid().threshold(145, scalars='scalars')
 
     # Make a geometric obhect to use as the glyph
-    geom = pyvista.Arrow() # This could be any dataset
+    geom = pv.Arrow() # This could be any dataset
 
     # Perform the glyph
     glyphs = mesh.glyph(orient='vectors', scale='scalars', factor=0.005, geom=geom)
 
     # plot using the plotting class
-    p = pyvista.Plotter()
+    p = pv.Plotter()
     p.add_mesh(glyphs)
     # Set a cool camera position
     p.camera_position = [(84.58052237950857, 77.76332116787425, 27.208569926456548),
@@ -67,7 +67,7 @@ access the :attr:`pyvista.Common.arrows` property.
 .. code-block:: default
 
 
-    sphere = pyvista.Sphere(radius=3.14)
+    sphere = pv.Sphere(radius=3.14)
 
     # make cool swirly pattern
     vectors = np.vstack((np.sin(sphere.points[:, 0]),
@@ -94,7 +94,7 @@ access the :attr:`pyvista.Common.arrows` property.
 
 
     # plot the arrows and the sphere
-    p = pyvista.Plotter()
+    p = pv.Plotter()
     p.add_mesh(sphere.arrows, lighting=False, stitle='Vector Magnitude')
     p.add_mesh(sphere, color='grey', ambient=0.6, opacity=0.5, show_edges=False)
     p.show()
@@ -110,7 +110,7 @@ access the :attr:`pyvista.Common.arrows` property.
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  7.272 seconds)
+   **Total running time of the script:** ( 0 minutes  7.224 seconds)
 
 
 .. _sphx_glr_download_examples_02-plot_plot-glyphs.py:
