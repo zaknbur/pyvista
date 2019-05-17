@@ -23,6 +23,9 @@ To learn more, please see `this blog post`_.
     import pyvista as pv
     from pyvista import examples
 
+    # Eye dome lighting is not currently supported by VTKjs
+    pv.rcParams['use_panel'] = False
+
 
 
 
@@ -170,7 +173,7 @@ The eye dome lighting mode can also handle plotting scalar arrays:
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  54.746 seconds)
+   **Total running time of the script:** ( 0 minutes  54.183 seconds)
 
 
 .. _sphx_glr_download_examples_02-plot_plot-edl.py:
