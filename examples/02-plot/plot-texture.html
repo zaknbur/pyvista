@@ -340,24 +340,19 @@ NumPy (X by Y by RGB) arrays can be converted to textures using
 <h2>Repeating Textures<a class="headerlink" href="#repeating-textures" title="Permalink to this headline">¶</a></h2>
 <p>What if you have a single texture that you’d like to repeat across a mesh?
 Simply define the texture coordinates for all nodes explicitly.</p>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>This example is not correct</p>
-<p>Would you like to help us make this example better? Please consider opening a pull request</p>
-</div>
 <p>Here we create the texture coordinates to fill up the grid with several
-mappings of a single texture:</p>
+mappings of a single texture. In order to do this we must define texture
+coordinates outside of the typical <code class="docutils literal notranslate"><span class="pre">(0,</span> <span class="pre">1)</span></code> range:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">axial_num_puppies</span> <span class="o">=</span> <span class="mi">4</span>
-<span class="n">dx</span> <span class="o">=</span> <span class="n">curvsurf</span><span class="o">.</span><span class="n">dimensions</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">//</span> <span class="n">axial_num_puppies</span>
-<span class="n">dy</span> <span class="o">=</span> <span class="n">curvsurf</span><span class="o">.</span><span class="n">dimensions</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">//</span> <span class="n">axial_num_puppies</span>
-
-<span class="n">xc</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">full</span><span class="p">((</span><span class="n">axial_num_puppies</span><span class="p">,</span> <span class="n">dx</span><span class="p">),</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">dx</span><span class="p">))</span>
-<span class="n">yc</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">full</span><span class="p">((</span><span class="n">axial_num_puppies</span><span class="p">,</span> <span class="n">dy</span><span class="p">),</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">dy</span><span class="p">))</span>
+<span class="n">xc</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">axial_num_puppies</span><span class="p">,</span> <span class="n">curvsurf</span><span class="o">.</span><span class="n">dimensions</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+<span class="n">yc</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">axial_num_puppies</span><span class="p">,</span> <span class="n">curvsurf</span><span class="o">.</span><span class="n">dimensions</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
 
 <span class="n">xxc</span><span class="p">,</span> <span class="n">yyc</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">meshgrid</span><span class="p">(</span><span class="n">xc</span><span class="p">,</span> <span class="n">yc</span><span class="p">)</span>
 <span class="n">puppy_coords</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">c_</span><span class="p">[</span><span class="n">yyc</span><span class="o">.</span><span class="n">ravel</span><span class="p">(),</span> <span class="n">xxc</span><span class="o">.</span><span class="n">ravel</span><span class="p">()]</span>
 </pre></div>
 </div>
+<p>By defining texture coordinates that range <code class="docutils literal notranslate"><span class="pre">(0,</span> <span class="pre">4)</span></code> on eaxh axis, we will
+produce 4 repitions of the same texture on this mesh.</p>
 <p>Then we must associate those texture coordinates with the mesh through the
 <a class="reference internal" href="../../types/common.html#pyvista.Common.t_coords" title="pyvista.Common.t_coords"><code class="xref py py-attr docutils literal notranslate"><span class="pre">pyvista.Common.t_coords</span></code></a> property.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">curvsurf</span><span class="o">.</span><span class="n">t_coords</span> <span class="o">=</span> <span class="n">puppy_coords</span>
@@ -370,7 +365,7 @@ mappings of a single texture:</p>
 </pre></div>
 </div>
 <img alt="../../_images/sphx_glr_plot-texture_006.png" class="sphx-glr-single-img" src="../../_images/sphx_glr_plot-texture_006.png" />
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  10.209 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  9.951 seconds)</p>
 <div class="sphx-glr-footer class sphx-glr-footer-example docutils container" id="sphx-glr-download-examples-02-plot-plot-texture-py">
 <div class="sphx-glr-download docutils container">
 <p><a class="reference download internal" download="" href="../../_downloads/d2a10f34ef846ebc47ed79799b43c468/plot-texture.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">plot-texture.py</span></code></a></p>

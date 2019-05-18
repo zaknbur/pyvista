@@ -360,7 +360,7 @@ create a plot and gif movie by updating the plotting object.</p>
 <span class="n">plotter</span><span class="o">.</span><span class="n">camera_position</span> <span class="o">=</span> <span class="n">cpos</span>
 
 <span class="c1"># Don&#39;t let it close automatically so we can take a screenshot</span>
-<span class="n">cpos</span> <span class="o">=</span> <span class="n">plotter</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">auto_close</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="n">cpos</span> <span class="o">=</span> <span class="n">plotter</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="n">auto_close</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
 <span class="n">plotter</span><span class="o">.</span><span class="n">screenshot</span><span class="p">(</span><span class="s1">&#39;beam.png&#39;</span><span class="p">)</span>
 <span class="n">plotter</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
 </pre></div>
@@ -381,7 +381,7 @@ First you have to setup the plotting object:</p>
 Set auto_close to False so the plotter does not close automatically.
 Disabling interactive means the plot will automatically continue without waiting
 for the user to exit the window.</p>
-<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="n">plotter</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">interactive</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">auto_close</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">window_size</span><span class="o">=</span><span class="p">[</span><span class="mi">800</span><span class="p">,</span> <span class="mi">600</span><span class="p">])</span>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="n">plotter</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="n">interactive</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">auto_close</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">window_size</span><span class="o">=</span><span class="p">[</span><span class="mi">800</span><span class="p">,</span> <span class="mi">600</span><span class="p">])</span>
 
 <span class="c1"># open movie file.  A mp4 file can be written instead.  Requires moviepy</span>
 <span class="n">plotter</span><span class="o">.</span><span class="n">open_gif</span><span class="p">(</span><span class="s1">&#39;beam.gif&#39;</span><span class="p">)</span>  <span class="c1"># or beam.mp4</span>
