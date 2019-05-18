@@ -358,6 +358,12 @@ Must contain the same number of items as cent.</p></li>
 <dd><p>Set the plotting parameters to a predefined theme</p>
 </dd></dl>
 
+<dl class="function">
+<dt id="pyvista.create_axes_orientation_box">
+<code class="descclassname">pyvista.</code><code class="descname">create_axes_orientation_box</code><span class="sig-paren">(</span><em>line_width=1</em>, <em>text_scale=0.366667</em>, <em>edge_color='black'</em>, <em>x_color='lightblue'</em>, <em>y_color='seagreen'</em>, <em>z_color='tomato'</em>, <em>x_face_color=(255</em>, <em>0</em>, <em>0)</em>, <em>y_face_color=(0</em>, <em>255</em>, <em>0)</em>, <em>z_face_color=(0</em>, <em>0</em>, <em>255)</em>, <em>color_box=False</em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.create_axes_orientation_box" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a Box axes orientation widget with labels.</p>
+</dd></dl>
+
 </div>
 <div class="section" id="base-plotter">
 <h2>Base Plotter<a class="headerlink" href="#base-plotter" title="Permalink to this headline">¶</a></h2>
@@ -418,7 +424,7 @@ Must contain the same number of items as cent.</p></li>
 <tr class="row-even"><td><p><a class="reference internal" href="#pyvista.BasePlotter.add_arrows" title="pyvista.BasePlotter.add_arrows"><code class="xref py py-obj docutils literal notranslate"><span class="pre">add_arrows</span></code></a>(cent, direction[, mag])</p></td>
 <td><p>Adds arrows to plotting object</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#pyvista.BasePlotter.add_axes" title="pyvista.BasePlotter.add_axes"><code class="xref py py-obj docutils literal notranslate"><span class="pre">add_axes</span></code></a>([interactive, color])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pyvista.BasePlotter.add_axes" title="pyvista.BasePlotter.add_axes"><code class="xref py py-obj docutils literal notranslate"><span class="pre">add_axes</span></code></a>([interactive, color, box, …])</p></td>
 <td><p>Add an interactive axes widget</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="#pyvista.BasePlotter.add_axes_at_origin" title="pyvista.BasePlotter.add_axes_at_origin"><code class="xref py py-obj docutils literal notranslate"><span class="pre">add_axes_at_origin</span></code></a>([loc])</p></td>
@@ -682,7 +688,7 @@ meshes to be partially displayed.  Default False.</p></li>
 
 <dl class="method">
 <dt id="pyvista.BasePlotter.add_axes">
-<code class="descname">add_axes</code><span class="sig-paren">(</span><em>interactive=None</em>, <em>color=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.BasePlotter.add_axes" title="Permalink to this definition">¶</a></dt>
+<code class="descname">add_axes</code><span class="sig-paren">(</span><em>interactive=None</em>, <em>color=None</em>, <em>box=False</em>, <em>box_arguments=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.BasePlotter.add_axes" title="Permalink to this definition">¶</a></dt>
 <dd><p>Add an interactive axes widget</p>
 </dd></dl>
 
