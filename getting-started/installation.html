@@ -349,7 +349,8 @@ time your Docker container is launched:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/bin/bash</span>
 <span class="nb">set</span> -x
 <span class="nb">export</span> <span class="nv">DISPLAY</span><span class="o">=</span>:99.0
-<span class="nb">export</span> <span class="nv">pyvista_OFF_SCREEN</span><span class="o">=</span>True
+<span class="nb">export</span> <span class="nv">PYVISTA_OFF_SCREEN</span><span class="o">=</span><span class="nb">true</span>
+<span class="nb">export</span> <span class="nv">PYVISTA_USE_PANEL</span><span class="o">=</span><span class="nb">true</span>
 which Xvfb
 Xvfb :99 -screen <span class="m">0</span> 1024x768x24 &gt; /dev/null <span class="m">2</span>&gt;<span class="p">&amp;</span><span class="m">1</span> <span class="p">&amp;</span>
 sleep <span class="m">3</span>
@@ -386,7 +387,8 @@ sudo apt update <span class="o">&amp;&amp;</span> sudo apt install python-qt4 li
 <p>Then, configure the headless display:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo apt-get install xvfb
 <span class="nb">export</span> <span class="nv">DISPLAY</span><span class="o">=</span>:99.0
-<span class="nb">export</span> <span class="nv">pyvista_OFF_SCREEN</span><span class="o">=</span>True
+<span class="nb">export</span> <span class="nv">PYVISTA_OFF_SCREEN</span><span class="o">=</span><span class="nb">true</span>
+<span class="nb">export</span> <span class="nv">PYVISTA_USE_PANEL</span><span class="o">=</span><span class="nb">true</span>
 Xvfb :99 -screen <span class="m">0</span> 1024x768x24 &gt; /dev/null <span class="m">2</span>&gt;<span class="p">&amp;</span><span class="m">1</span> <span class="p">&amp;</span>
 sleep <span class="m">3</span>
 </pre></div>

@@ -107,7 +107,7 @@ simply read the ``.pvtu`` file and VTK will handle putting the mesh together.
 
  .. code-block:: none
 
-    UnstructuredGrid (0x7fd806ef9288)
+    UnstructuredGrid (0x7fa37cad5e88)
       N Cells:      39353
       N Points:     48823
       X Bounds:     5.300e+01, 1.210e+02
@@ -149,7 +149,7 @@ Plot the pieced together mesh
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  3.011 seconds)
+   **Total running time of the script:** ( 0 minutes  2.855 seconds)
 
 
 .. _sphx_glr_download_examples_00-load_read-parallel.py:
