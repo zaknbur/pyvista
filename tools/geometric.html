@@ -451,6 +451,59 @@ the radial and circumferential resolution of the polygonal representation.</p>
 <dd><p>Create 3D text from a string</p>
 </dd></dl>
 
+<dl class="function">
+<dt id="pyvista.SuperToroid">
+<code class="descclassname">pyvista.</code><code class="descname">SuperToroid</code><span class="sig-paren">(</span><em>ring_radius=1.0</em>, <em>cross_section_radius=0.5</em>, <em>x_radius=1.0</em>, <em>y_radius=1.0</em>, <em>z_radius=1.0</em>, <em>n_1=1.0</em>, <em>n_2=1.0</em>, <em>min_u=0</em>, <em>max_u=6.283185307179586</em>, <em>min_v=0.0</em>, <em>max_v=6.283185307179586</em>, <em>u_res=100</em>, <em>v_res=100</em>, <em>w_res=100</em>, <em>join_u=False</em>, <em>join_v=False</em>, <em>twist_u=False</em>, <em>twist_v=False</em>, <em>clockwise=True</em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.SuperToroid" title="Permalink to this definition">¶</a></dt>
+<dd><p>Construct a supertoroid and return a mesh.</p>
+<p>Essentially a supertoroid is a torus with the sine and cosine
+terms raised to a power. A supertoroid is a versatile primitive
+that is controlled by four parameters r0, r1, n1 and n2. r0, r1
+determine the type of torus whilst the value of n1 determines the
+shape of the torus ring and n2 determines the shape of the cross
+section of the ring. It is the different values of these powers
+which give rise to a family of 3D shapes that are all basically
+toroidal in shape.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>ring_radius</strong> (<em>float</em>) – The radius from the center to the middle of the ring of the
+supertoroid.</p></li>
+<li><p><strong>= 0.5</strong> (<em>cross_section_radius</em>) – The radius of the cross section of ring of the supertoroid.</p></li>
+<li><p><strong>x_radius</strong> (<em>float</em><em>, </em><em>optional</em>) – Radius in the x direction.</p></li>
+<li><p><strong>y_radius</strong> (<em>float</em><em>, </em><em>optional</em>) – Radius in the y direction.</p></li>
+<li><p><strong>z_radius</strong> (<em>float</em><em>, </em><em>optional</em>) – Radius in the z direction.</p></li>
+<li><p><strong>n_1</strong> (<em>float</em>) – Controls shape of torus ring.</p></li>
+<li><p><strong>= 1</strong> (<em>n_2</em>) – Controls shape of cross section of the ring.</p></li>
+<li><p><strong>min_u</strong> (<em>float</em><em>, </em><em>optional</em>) – The minimum u-value.</p></li>
+<li><p><strong>max_u</strong> (<em>float</em><em>, </em><em>optional</em>) – The maximum u-value.</p></li>
+<li><p><strong>min_v</strong> (<em>float</em><em>, </em><em>optional</em>) – The minimum v-value.</p></li>
+<li><p><strong>max_v</strong> (<em>float</em><em>, </em><em>optional</em>) – The maximum v-value.</p></li>
+<li><p><strong>u_res</strong> (<em>int</em><em>, </em><em>optional</em>) – Resol</p></li>
+<li><p><strong>join_u</strong> (<em>bool</em><em>, </em><em>optional</em>) – Joins the first triangle strip to the last one with a twist in
+the u direction.</p></li>
+<li><p><strong>join_v</strong> (<em>bool</em><em>, </em><em>optional</em>) – joins the first triangle strip to the last one with a twist in
+the v direction.</p></li>
+<li><p><strong>twist_u</strong> (<em>bool</em><em>, </em><em>optional</em>) – Joins the first triangle strip to the last one with a twist in
+the u direction.</p></li>
+<li><p><strong>twist_v</strong> (<em>bool</em><em>, </em><em>optional</em>) – Joins the first triangle strip to the last one with a twist in
+the v direction.</p></li>
+<li><p><strong>clockwise</strong> (<em>bool</em>) – Determines the ordering of the vertices forming the triangle
+strips.</p></li>
+</ul>
+</dd>
+</dl>
+<p class="rubric">Notes</p>
+<p>Care needs to be taken specifying the bounds correctly. You may
+need to carefully adjust MinimumU, MinimumV, MaximumU, MaximumV.</p>
+<p class="rubric">Examples</p>
+<p>Create default supertorid
+&gt;&gt;&gt; import pyvista
+&gt;&gt;&gt; mesh = pyvista.SuperToroid()
+&gt;&gt;&gt; mesh.plot(color=’w’)  # doctest:+SKIP</p>
+<p>Alternative supertorid
+&gt;&gt;&gt; mesh = pyvista.SuperToroid(n_1=1, n_2=2)</p>
+</dd></dl>
+
 </div>
 
 
