@@ -5,19 +5,19 @@
 
 Computation times
 =================
-**02:32.396** total execution time for **examples_02-plot** files:
+**02:34.743** total execution time for **examples_02-plot** files:
 
-- **00:53.765**: :ref:`sphx_glr_examples_02-plot_plot-edl.py` (``plot-edl.py``)
-- **00:19.613**: :ref:`sphx_glr_examples_02-plot_plot-movie.py` (``plot-movie.py``)
-- **00:14.610**: :ref:`sphx_glr_examples_02-plot_plot-edges.py` (``plot-edges.py``)
-- **00:10.641**: :ref:`sphx_glr_examples_02-plot_plot-gif.py` (``plot-gif.py``)
-- **00:10.063**: :ref:`sphx_glr_examples_02-plot_plot-texture.py` (``plot-texture.py``)
-- **00:09.516**: :ref:`sphx_glr_examples_02-plot_plot-scalar-bars.py` (``plot-scalar-bars.py``)
-- **00:08.515**: :ref:`sphx_glr_examples_02-plot_plot-opacity.py` (``plot-opacity.py``)
-- **00:07.175**: :ref:`sphx_glr_examples_02-plot_plot-glyphs.py` (``plot-glyphs.py``)
-- **00:04.129**: :ref:`sphx_glr_examples_02-plot_plot-themes.py` (``plot-themes.py``)
-- **00:04.062**: :ref:`sphx_glr_examples_02-plot_plot-cmap.py` (``plot-cmap.py``)
-- **00:03.806**: :ref:`sphx_glr_examples_02-plot_plot-multi-window.py` (``plot-multi-window.py``)
-- **00:03.676**: :ref:`sphx_glr_examples_02-plot_plot-labels.py` (``plot-labels.py``)
-- **00:01.965**: :ref:`sphx_glr_examples_02-plot_plot-clear.py` (``plot-clear.py``)
-- **00:00.861**: :ref:`sphx_glr_examples_02-plot_plot-screenshot.py` (``plot-screenshot.py``)
+- **00:54.185**: :ref:`sphx_glr_examples_02-plot_plot-edl.py` (``plot-edl.py``)
+- **00:19.580**: :ref:`sphx_glr_examples_02-plot_plot-movie.py` (``plot-movie.py``)
+- **00:14.846**: :ref:`sphx_glr_examples_02-plot_plot-edges.py` (``plot-edges.py``)
+- **00:10.827**: :ref:`sphx_glr_examples_02-plot_plot-gif.py` (``plot-gif.py``)
+- **00:10.043**: :ref:`sphx_glr_examples_02-plot_plot-texture.py` (``plot-texture.py``)
+- **00:09.681**: :ref:`sphx_glr_examples_02-plot_plot-scalar-bars.py` (``plot-scalar-bars.py``)
+- **00:09.658**: :ref:`sphx_glr_examples_02-plot_plot-opacity.py` (``plot-opacity.py``)
+- **00:07.253**: :ref:`sphx_glr_examples_02-plot_plot-glyphs.py` (``plot-glyphs.py``)
+- **00:04.205**: :ref:`sphx_glr_examples_02-plot_plot-themes.py` (``plot-themes.py``)
+- **00:04.021**: :ref:`sphx_glr_examples_02-plot_plot-cmap.py` (``plot-cmap.py``)
+- **00:03.889**: :ref:`sphx_glr_examples_02-plot_plot-multi-window.py` (``plot-multi-window.py``)
+- **00:03.674**: :ref:`sphx_glr_examples_02-plot_plot-labels.py` (``plot-labels.py``)
+- **00:01.995**: :ref:`sphx_glr_examples_02-plot_plot-clear.py` (``plot-clear.py``)
+- **00:00.886**: :ref:`sphx_glr_examples_02-plot_plot-screenshot.py` (``plot-screenshot.py``)
