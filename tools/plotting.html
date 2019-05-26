@@ -1895,7 +1895,7 @@ color=’#FFFFFF’</p>
 
 <dl class="method">
 <dt id="pyvista.Plotter.show">
-<code class="descname">show</code><span class="sig-paren">(</span><em>title=None</em>, <em>window_size=None</em>, <em>interactive=True</em>, <em>auto_close=True</em>, <em>interactive_update=False</em>, <em>full_screen=False</em>, <em>screenshot=False</em>, <em>return_img=False</em>, <em>use_panel=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.Plotter.show" title="Permalink to this definition">¶</a></dt>
+<code class="descname">show</code><span class="sig-paren">(</span><em>title=None</em>, <em>window_size=None</em>, <em>interactive=True</em>, <em>auto_close=True</em>, <em>interactive_update=False</em>, <em>full_screen=False</em>, <em>screenshot=False</em>, <em>return_img=False</em>, <em>use_panel=None</em>, <em>cpos=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.Plotter.show" title="Permalink to this definition">¶</a></dt>
 <dd><p>Creates plotting window</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -1911,6 +1911,7 @@ user should call Update() in each iteration.</p></li>
 window_size.  Default False.</p></li>
 <li><p><strong>use_panel</strong> (<em>bool</em><em>, </em><em>optional</em>) – If False, the interactive rendering from panel will not be used in
 notebooks</p></li>
+<li><p><strong>cpos</strong> (<em>list</em><em>(</em><em>tuple</em><em>(</em><em>floats</em><em>)</em><em>)</em>) – The camera position to use</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns</dt>
