@@ -542,7 +542,7 @@ Must contain the same number of items as cent.</p></li>
 <tr class="row-even"><td><p><a class="reference internal" href="#pyvista.BasePlotter.open_movie" title="pyvista.BasePlotter.open_movie"><code class="xref py py-obj docutils literal notranslate"><span class="pre">open_movie</span></code></a>(filename[, framerate])</p></td>
 <td><p>Establishes a connection to the ffmpeg writer</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#pyvista.BasePlotter.orbit_on_path" title="pyvista.BasePlotter.orbit_on_path"><code class="xref py py-obj docutils literal notranslate"><span class="pre">orbit_on_path</span></code></a>([path, focus, step, viewup, bkg])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pyvista.BasePlotter.orbit_on_path" title="pyvista.BasePlotter.orbit_on_path"><code class="xref py py-obj docutils literal notranslate"><span class="pre">orbit_on_path</span></code></a>([path, focus, step, viewup, …])</p></td>
 <td><p>Orbit on the given path focusing on the focus point</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="#pyvista.BasePlotter.remove_actor" title="pyvista.BasePlotter.remove_actor"><code class="xref py py-obj docutils literal notranslate"><span class="pre">remove_actor</span></code></a>(actor[, reset_camera])</p></td>
@@ -1265,7 +1265,7 @@ NumberOfFlyFrames. The LOD desired frame rate is used.</p>
 
 <dl class="method">
 <dt id="pyvista.BasePlotter.generate_orbital_path">
-<code class="descname">generate_orbital_path</code><span class="sig-paren">(</span><em>factor=3.0</em>, <em>n_points=20</em>, <em>viewup=None</em>, <em>z_shift=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.BasePlotter.generate_orbital_path" title="Permalink to this definition">¶</a></dt>
+<code class="descname">generate_orbital_path</code><span class="sig-paren">(</span><em>factor=3.0</em>, <em>n_points=20</em>, <em>viewup=None</em>, <em>shift=0.0</em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.BasePlotter.generate_orbital_path" title="Permalink to this definition">¶</a></dt>
 <dd><p>Genrates an orbital path around the data scene</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -1273,7 +1273,7 @@ NumberOfFlyFrames. The LOD desired frame rate is used.</p>
 <li><p><strong>facotr</strong> (<em>float</em>) – A scaling factor when biulding the orbital extent</p></li>
 <li><p><strong>n_points</strong> (<em>int</em>) – number of points on the orbital path</p></li>
 <li><p><strong>viewup</strong> (<em>list</em><em>(</em><em>float</em><em>)</em>) – the normal to the orbital plane</p></li>
-<li><p><strong>z_shift</strong> (<em>float</em><em>, </em><em>optional</em>) – shift the plane up/down from the center of the scene by this amount</p></li>
+<li><p><strong>shift</strong> (<em>float</em><em>, </em><em>optional</em>) – shift the plane up/down from the center of the scene by this amount</p></li>
 </ul>
 </dd>
 </dl>
@@ -1379,7 +1379,7 @@ but other filetypes may be supported.  See “imagio.get_writer”</p></li>
 
 <dl class="method">
 <dt id="pyvista.BasePlotter.orbit_on_path">
-<code class="descname">orbit_on_path</code><span class="sig-paren">(</span><em>path=None</em>, <em>focus=None</em>, <em>step=0.5</em>, <em>viewup=None</em>, <em>bkg=True</em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.BasePlotter.orbit_on_path" title="Permalink to this definition">¶</a></dt>
+<code class="descname">orbit_on_path</code><span class="sig-paren">(</span><em>path=None</em>, <em>focus=None</em>, <em>step=0.5</em>, <em>viewup=None</em>, <em>bkg=True</em>, <em>write_frames=False</em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.BasePlotter.orbit_on_path" title="Permalink to this definition">¶</a></dt>
 <dd><p>Orbit on the given path focusing on the focus point</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -1389,6 +1389,8 @@ travel</p></li>
 <li><p><strong>focus</strong> (<em>list</em><em>(</em><em>float</em><em>) </em><em>of length 3</em><em>, </em><em>optional</em>) – The point ot focus the camera.</p></li>
 <li><p><strong>step</strong> (<em>float</em><em>, </em><em>optional</em>) – The timestep between flying to each camera position</p></li>
 <li><p><strong>viewup</strong> (<em>list</em><em>(</em><em>float</em><em>)</em>) – the normal to the orbital plane</p></li>
+<li><p><strong>write_frames</strong> (<em>bool</em>) – Assume a file is open and write a frame on each camera view during
+the orbit.</p></li>
 </ul>
 </dd>
 </dl>
