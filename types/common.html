@@ -357,40 +357,43 @@ This base class is analogous to VTK’s <code class="docutils literal notranslat
 <tr class="row-odd"><td><p><a class="reference internal" href="#pyvista.Common.length" title="pyvista.Common.length"><code class="xref py py-obj docutils literal notranslate"><span class="pre">length</span></code></a></p></td>
 <td><p>the length of the diagonal of the bounding box</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#pyvista.Common.n_cells" title="pyvista.Common.n_cells"><code class="xref py py-obj docutils literal notranslate"><span class="pre">n_cells</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#pyvista.Common.n_arrays" title="pyvista.Common.n_arrays"><code class="xref py py-obj docutils literal notranslate"><span class="pre">n_arrays</span></code></a></p></td>
+<td><p>The number of scalar arrays present in the dataset</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pyvista.Common.n_cells" title="pyvista.Common.n_cells"><code class="xref py py-obj docutils literal notranslate"><span class="pre">n_cells</span></code></a></p></td>
 <td><p>The number of cells in the entire dataset</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#pyvista.Common.n_points" title="pyvista.Common.n_points"><code class="xref py py-obj docutils literal notranslate"><span class="pre">n_points</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#pyvista.Common.n_points" title="pyvista.Common.n_points"><code class="xref py py-obj docutils literal notranslate"><span class="pre">n_points</span></code></a></p></td>
 <td><p>The number of points in the entire dataset</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#pyvista.Common.n_scalars" title="pyvista.Common.n_scalars"><code class="xref py py-obj docutils literal notranslate"><span class="pre">n_scalars</span></code></a></p></td>
-<td><p>The number of scalara arrays present in the dataset</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pyvista.Common.n_scalars" title="pyvista.Common.n_scalars"><code class="xref py py-obj docutils literal notranslate"><span class="pre">n_scalars</span></code></a></p></td>
+<td><p>Please use <cite>n_arrays</cite></p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#pyvista.Common.number_of_cells" title="pyvista.Common.number_of_cells"><code class="xref py py-obj docutils literal notranslate"><span class="pre">number_of_cells</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#pyvista.Common.number_of_cells" title="pyvista.Common.number_of_cells"><code class="xref py py-obj docutils literal notranslate"><span class="pre">number_of_cells</span></code></a></p></td>
 <td><p>returns the number of cells</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#pyvista.Common.number_of_points" title="pyvista.Common.number_of_points"><code class="xref py py-obj docutils literal notranslate"><span class="pre">number_of_points</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pyvista.Common.number_of_points" title="pyvista.Common.number_of_points"><code class="xref py py-obj docutils literal notranslate"><span class="pre">number_of_points</span></code></a></p></td>
 <td><p>returns the number of points</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#pyvista.Common.point_arrays" title="pyvista.Common.point_arrays"><code class="xref py py-obj docutils literal notranslate"><span class="pre">point_arrays</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#pyvista.Common.point_arrays" title="pyvista.Common.point_arrays"><code class="xref py py-obj docutils literal notranslate"><span class="pre">point_arrays</span></code></a></p></td>
 <td><p>Returns the all point arrays</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#pyvista.Common.points" title="pyvista.Common.points"><code class="xref py py-obj docutils literal notranslate"><span class="pre">points</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pyvista.Common.points" title="pyvista.Common.points"><code class="xref py py-obj docutils literal notranslate"><span class="pre">points</span></code></a></p></td>
 <td><p>returns a pointer to the points as a numpy object</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#pyvista.Common.scalar_names" title="pyvista.Common.scalar_names"><code class="xref py py-obj docutils literal notranslate"><span class="pre">scalar_names</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#pyvista.Common.scalar_names" title="pyvista.Common.scalar_names"><code class="xref py py-obj docutils literal notranslate"><span class="pre">scalar_names</span></code></a></p></td>
 <td><p>A list of scalar names for the dataset.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#pyvista.Common.t_coords" title="pyvista.Common.t_coords"><code class="xref py py-obj docutils literal notranslate"><span class="pre">t_coords</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pyvista.Common.t_coords" title="pyvista.Common.t_coords"><code class="xref py py-obj docutils literal notranslate"><span class="pre">t_coords</span></code></a></p></td>
 <td><p>The active texture coordinates on the points</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#pyvista.Common.textures" title="pyvista.Common.textures"><code class="xref py py-obj docutils literal notranslate"><span class="pre">textures</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#pyvista.Common.textures" title="pyvista.Common.textures"><code class="xref py py-obj docutils literal notranslate"><span class="pre">textures</span></code></a></p></td>
 <td><p>A dictionary to hold <code class="docutils literal notranslate"><span class="pre">vtk.vtkTexture</span></code> objects that can be associated with this dataset.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#pyvista.Common.vectors" title="pyvista.Common.vectors"><code class="xref py py-obj docutils literal notranslate"><span class="pre">vectors</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pyvista.Common.vectors" title="pyvista.Common.vectors"><code class="xref py py-obj docutils literal notranslate"><span class="pre">vectors</span></code></a></p></td>
 <td><p>Returns active vectors</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#pyvista.Common.volume" title="pyvista.Common.volume"><code class="xref py py-obj docutils literal notranslate"><span class="pre">volume</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#pyvista.Common.volume" title="pyvista.Common.volume"><code class="xref py py-obj docutils literal notranslate"><span class="pre">volume</span></code></a></p></td>
 <td><p>Mesh volume</p></td>
 </tr>
 </tbody>
@@ -407,6 +410,18 @@ This base class is analogous to VTK’s <code class="docutils literal notranslat
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="#pyvista.Common.cast_to_unstructured_grid" title="pyvista.Common.cast_to_unstructured_grid"><code class="xref py py-obj docutils literal notranslate"><span class="pre">cast_to_unstructured_grid</span></code></a>()</p></td>
 <td><p>Get a new representation of this object as an <a class="reference internal" href="point-grids.html#pyvista.UnstructuredGrid" title="pyvista.UnstructuredGrid"><code class="xref py py-class docutils literal notranslate"><span class="pre">pyvista.UnstructuredGrid</span></code></a></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pyvista.Common.clear_arrays" title="pyvista.Common.clear_arrays"><code class="xref py py-obj docutils literal notranslate"><span class="pre">clear_arrays</span></code></a>()</p></td>
+<td><p>removes all arrays from point/cell/field data</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pyvista.Common.clear_cell_arrays" title="pyvista.Common.clear_cell_arrays"><code class="xref py py-obj docutils literal notranslate"><span class="pre">clear_cell_arrays</span></code></a>()</p></td>
+<td><p>removes all cell arrays</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pyvista.Common.clear_field_arrays" title="pyvista.Common.clear_field_arrays"><code class="xref py py-obj docutils literal notranslate"><span class="pre">clear_field_arrays</span></code></a>()</p></td>
+<td><p>removes all field arrays</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pyvista.Common.clear_point_arrays" title="pyvista.Common.clear_point_arrays"><code class="xref py py-obj docutils literal notranslate"><span class="pre">clear_point_arrays</span></code></a>()</p></td>
+<td><p>removes all point arrays</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="#pyvista.Common.copy" title="pyvista.Common.copy"><code class="xref py py-obj docutils literal notranslate"><span class="pre">copy</span></code></a>([deep])</p></td>
 <td><p>Returns a copy of the object</p></td>
@@ -558,6 +573,30 @@ Their direction will be the “direction” of the vector</p>
 </dd></dl>
 
 <dl class="method">
+<dt id="pyvista.Common.clear_arrays">
+<code class="descname">clear_arrays</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.Common.clear_arrays" title="Permalink to this definition">¶</a></dt>
+<dd><p>removes all arrays from point/cell/field data</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pyvista.Common.clear_cell_arrays">
+<code class="descname">clear_cell_arrays</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.Common.clear_cell_arrays" title="Permalink to this definition">¶</a></dt>
+<dd><p>removes all cell arrays</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pyvista.Common.clear_field_arrays">
+<code class="descname">clear_field_arrays</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.Common.clear_field_arrays" title="Permalink to this definition">¶</a></dt>
+<dd><p>removes all field arrays</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pyvista.Common.clear_point_arrays">
+<code class="descname">clear_point_arrays</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.Common.clear_point_arrays" title="Permalink to this definition">¶</a></dt>
+<dd><p>removes all point arrays</p>
+</dd></dl>
+
+<dl class="method">
 <dt id="pyvista.Common.copy">
 <code class="descname">copy</code><span class="sig-paren">(</span><em>deep=True</em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.Common.copy" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns a copy of the object</p>
@@ -629,6 +668,12 @@ be formatted to HTML. Otherwise returns a console friendly string</p>
 </dd></dl>
 
 <dl class="attribute">
+<dt id="pyvista.Common.n_arrays">
+<code class="descname">n_arrays</code><a class="headerlink" href="#pyvista.Common.n_arrays" title="Permalink to this definition">¶</a></dt>
+<dd><p>The number of scalar arrays present in the dataset</p>
+</dd></dl>
+
+<dl class="attribute">
 <dt id="pyvista.Common.n_cells">
 <code class="descname">n_cells</code><a class="headerlink" href="#pyvista.Common.n_cells" title="Permalink to this definition">¶</a></dt>
 <dd><p>The number of cells in the entire dataset</p>
@@ -643,7 +688,12 @@ be formatted to HTML. Otherwise returns a console friendly string</p>
 <dl class="attribute">
 <dt id="pyvista.Common.n_scalars">
 <code class="descname">n_scalars</code><a class="headerlink" href="#pyvista.Common.n_scalars" title="Permalink to this definition">¶</a></dt>
-<dd><p>The number of scalara arrays present in the dataset</p>
+<dd><p>Please use <cite>n_arrays</cite></p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>DEPRECATED</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="attribute">
