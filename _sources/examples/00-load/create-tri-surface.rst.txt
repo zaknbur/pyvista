@@ -53,11 +53,11 @@ First, create some points for the surface.
 
  .. code-block:: none
 
-    [[-197.34347446 -202.10669305    1.85075205]
-     [-179.65355464 -202.10669305    2.58324002]
-     [-156.8189115  -202.10669305    3.79318436]
-     [-138.41004932 -202.10669305    4.97759742]
-     [-113.99827396 -202.10669305    6.77360942]]
+    [[-200.84707606 -203.684285      1.6716788 ]
+     [-182.79220467 -203.684285      2.36353005]
+     [-155.18030274 -203.684285      3.76881064]
+     [-138.62184313 -203.684285      4.80667232]
+     [-116.15470035 -203.684285      6.39943732]]
 
 
 Now use those points to create a point cloud PyVista data object. This will
@@ -101,7 +101,7 @@ triangulation to turn those boring discrete points into a connected surface.
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  1.255 seconds)
+   **Total running time of the script:** ( 0 minutes  1.240 seconds)
 
 
 .. _sphx_glr_download_examples_00-load_create-tri-surface.py:
