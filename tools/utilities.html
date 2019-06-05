@@ -240,19 +240,19 @@
 <p>Supporting functions for polydata and grid objects</p>
 <dl class="function">
 <dt id="pyvista.set_error_output_file">
-<code class="descclassname">pyvista.</code><code class="descname">set_error_output_file</code><span class="sig-paren">(</span><em>filename</em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.set_error_output_file" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">pyvista.</code><code class="sig-name descname">set_error_output_file</code><span class="sig-paren">(</span><em class="sig-param">filename</em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.set_error_output_file" title="Permalink to this definition">¶</a></dt>
 <dd><p>Sets a file to write out the VTK errors</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="pyvista.trans_from_matrix">
-<code class="descclassname">pyvista.</code><code class="descname">trans_from_matrix</code><span class="sig-paren">(</span><em>matrix</em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.trans_from_matrix" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">pyvista.</code><code class="sig-name descname">trans_from_matrix</code><span class="sig-paren">(</span><em class="sig-param">matrix</em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.trans_from_matrix" title="Permalink to this definition">¶</a></dt>
 <dd><p>Convert a vtk matrix to a numpy.ndarray</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="pyvista.is_inside_bounds">
-<code class="descclassname">pyvista.</code><code class="descname">is_inside_bounds</code><span class="sig-paren">(</span><em>point</em>, <em>bounds</em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.is_inside_bounds" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">pyvista.</code><code class="sig-name descname">is_inside_bounds</code><span class="sig-paren">(</span><em class="sig-param">point</em>, <em class="sig-param">bounds</em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.is_inside_bounds" title="Permalink to this definition">¶</a></dt>
 <dd><p>Checks if a point is inside a set of bounds. This is implemented
 through recursion so that this is N-dimensional.</p>
 </dd></dl>
@@ -261,26 +261,26 @@ through recursion so that this is N-dimensional.</p>
 <h2>Object Conversions<a class="headerlink" href="#object-conversions" title="Permalink to this headline">¶</a></h2>
 <dl class="function">
 <dt id="pyvista.wrap">
-<code class="descclassname">pyvista.</code><code class="descname">wrap</code><span class="sig-paren">(</span><em>vtkdataset</em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.wrap" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">pyvista.</code><code class="sig-name descname">wrap</code><span class="sig-paren">(</span><em class="sig-param">vtkdataset</em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.wrap" title="Permalink to this definition">¶</a></dt>
 <dd><p>This is a convenience method to safely wrap any given VTK data object
 to its appropriate PyVista data object.</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="pyvista.is_pyvista_obj">
-<code class="descclassname">pyvista.</code><code class="descname">is_pyvista_obj</code><span class="sig-paren">(</span><em>obj</em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.is_pyvista_obj" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">pyvista.</code><code class="sig-name descname">is_pyvista_obj</code><span class="sig-paren">(</span><em class="sig-param">obj</em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.is_pyvista_obj" title="Permalink to this definition">¶</a></dt>
 <dd><p>Return True if the Object is a PyVista wrapped dataset</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="pyvista.image_to_texture">
-<code class="descclassname">pyvista.</code><code class="descname">image_to_texture</code><span class="sig-paren">(</span><em>image</em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.image_to_texture" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">pyvista.</code><code class="sig-name descname">image_to_texture</code><span class="sig-paren">(</span><em class="sig-param">image</em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.image_to_texture" title="Permalink to this definition">¶</a></dt>
 <dd><p>Converts <code class="docutils literal notranslate"><span class="pre">vtkImageData</span></code> (<a class="reference internal" href="../types/grids.html#pyvista.UniformGrid" title="pyvista.UniformGrid"><code class="xref py py-class docutils literal notranslate"><span class="pre">pyvista.UniformGrid</span></code></a>) to a <code class="docutils literal notranslate"><span class="pre">vtkTexture</span></code></p>
 </dd></dl>
 
 <dl class="function">
 <dt id="pyvista.numpy_to_texture">
-<code class="descclassname">pyvista.</code><code class="descname">numpy_to_texture</code><span class="sig-paren">(</span><em>image</em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.numpy_to_texture" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">pyvista.</code><code class="sig-name descname">numpy_to_texture</code><span class="sig-paren">(</span><em class="sig-param">image</em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.numpy_to_texture" title="Permalink to this definition">¶</a></dt>
 <dd><p>Convert a NumPy image array to a vtk.vtkTexture</p>
 </dd></dl>
 
@@ -289,7 +289,7 @@ to its appropriate PyVista data object.</p>
 <h2>File IO<a class="headerlink" href="#file-io" title="Permalink to this headline">¶</a></h2>
 <dl class="function">
 <dt id="pyvista.read">
-<code class="descclassname">pyvista.</code><code class="descname">read</code><span class="sig-paren">(</span><em>filename</em>, <em>attrs=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.read" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">pyvista.</code><code class="sig-name descname">read</code><span class="sig-paren">(</span><em class="sig-param">filename</em>, <em class="sig-param">attrs=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.read" title="Permalink to this definition">¶</a></dt>
 <dd><p>This will read any VTK file! It will figure out what reader to use
 then wrap the VTK object for use in PyVista.</p>
 <dl class="field-list simple">
@@ -304,19 +304,19 @@ value.</p>
 
 <dl class="function">
 <dt id="pyvista.read_exodus">
-<code class="descclassname">pyvista.</code><code class="descname">read_exodus</code><span class="sig-paren">(</span><em>filename</em>, <em>animate_mode_shapes=True</em>, <em>apply_displacements=True</em>, <em>displacement_magnitude=1.0</em>, <em>enabled_sidesets=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.read_exodus" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">pyvista.</code><code class="sig-name descname">read_exodus</code><span class="sig-paren">(</span><em class="sig-param">filename</em>, <em class="sig-param">animate_mode_shapes=True</em>, <em class="sig-param">apply_displacements=True</em>, <em class="sig-param">displacement_magnitude=1.0</em>, <em class="sig-param">enabled_sidesets=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.read_exodus" title="Permalink to this definition">¶</a></dt>
 <dd><p>Read an ExodusII file (<code class="docutils literal notranslate"><span class="pre">'.e'</span></code> or <code class="docutils literal notranslate"><span class="pre">'.exo'</span></code>)</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="pyvista.read_texture">
-<code class="descclassname">pyvista.</code><code class="descname">read_texture</code><span class="sig-paren">(</span><em>filename</em>, <em>attrs=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.read_texture" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">pyvista.</code><code class="sig-name descname">read_texture</code><span class="sig-paren">(</span><em class="sig-param">filename</em>, <em class="sig-param">attrs=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.read_texture" title="Permalink to this definition">¶</a></dt>
 <dd><p>Loads a <code class="docutils literal notranslate"><span class="pre">vtkTexture</span></code> from an image file.</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="pyvista.read_legacy">
-<code class="descclassname">pyvista.</code><code class="descname">read_legacy</code><span class="sig-paren">(</span><em>filename</em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.read_legacy" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">pyvista.</code><code class="sig-name descname">read_legacy</code><span class="sig-paren">(</span><em class="sig-param">filename</em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.read_legacy" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use VTK’s legacy reader to read a file</p>
 </dd></dl>
 
@@ -325,7 +325,7 @@ value.</p>
 <h2>Mesh Creation<a class="headerlink" href="#mesh-creation" title="Permalink to this headline">¶</a></h2>
 <dl class="function">
 <dt id="pyvista.lines_from_points">
-<code class="descclassname">pyvista.</code><code class="descname">lines_from_points</code><span class="sig-paren">(</span><em>points</em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.lines_from_points" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">pyvista.</code><code class="sig-name descname">lines_from_points</code><span class="sig-paren">(</span><em class="sig-param">points</em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.lines_from_points" title="Permalink to this definition">¶</a></dt>
 <dd><p>Generates line from points.  Assumes points are ordered as line segments.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -354,19 +354,19 @@ would be represented as:</p>
 
 <dl class="function">
 <dt id="pyvista.vtk_points">
-<code class="descclassname">pyvista.</code><code class="descname">vtk_points</code><span class="sig-paren">(</span><em>points</em>, <em>deep=True</em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.vtk_points" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">pyvista.</code><code class="sig-name descname">vtk_points</code><span class="sig-paren">(</span><em class="sig-param">points</em>, <em class="sig-param">deep=True</em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.vtk_points" title="Permalink to this definition">¶</a></dt>
 <dd><p>Convert numpy points to a vtkPoints object</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="pyvista.vector_poly_data">
-<code class="descclassname">pyvista.</code><code class="descname">vector_poly_data</code><span class="sig-paren">(</span><em>orig</em>, <em>vec</em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.vector_poly_data" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">pyvista.</code><code class="sig-name descname">vector_poly_data</code><span class="sig-paren">(</span><em class="sig-param">orig</em>, <em class="sig-param">vec</em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.vector_poly_data" title="Permalink to this definition">¶</a></dt>
 <dd><p>Creates a vtkPolyData object composed of vectors</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="pyvista.fit_plane_to_points">
-<code class="descclassname">pyvista.</code><code class="descname">fit_plane_to_points</code><span class="sig-paren">(</span><em>points</em>, <em>return_meta=False</em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.fit_plane_to_points" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">pyvista.</code><code class="sig-name descname">fit_plane_to_points</code><span class="sig-paren">(</span><em class="sig-param">points</em>, <em class="sig-param">return_meta=False</em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.fit_plane_to_points" title="Permalink to this definition">¶</a></dt>
 <dd><p>Fits a plane to a set of points</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -383,7 +383,7 @@ would be represented as:</p>
 <h2>Array Access<a class="headerlink" href="#array-access" title="Permalink to this headline">¶</a></h2>
 <dl class="function">
 <dt id="pyvista.get_scalar">
-<code class="descclassname">pyvista.</code><code class="descname">get_scalar</code><span class="sig-paren">(</span><em>mesh</em>, <em>name</em>, <em>preference='cell'</em>, <em>info=False</em>, <em>err=False</em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.get_scalar" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">pyvista.</code><code class="sig-name descname">get_scalar</code><span class="sig-paren">(</span><em class="sig-param">mesh</em>, <em class="sig-param">name</em>, <em class="sig-param">preference='cell'</em>, <em class="sig-param">info=False</em>, <em class="sig-param">err=False</em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.get_scalar" title="Permalink to this definition">¶</a></dt>
 <dd><p>Searches point, cell and field data for an array</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -401,7 +401,7 @@ search for in the dataset.  Must be either <code class="docutils literal notrans
 
 <dl class="function">
 <dt id="pyvista.convert_array">
-<code class="descclassname">pyvista.</code><code class="descname">convert_array</code><span class="sig-paren">(</span><em>arr</em>, <em>name=None</em>, <em>deep=0</em>, <em>array_type=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.convert_array" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">pyvista.</code><code class="sig-name descname">convert_array</code><span class="sig-paren">(</span><em class="sig-param">arr</em>, <em class="sig-param">name=None</em>, <em class="sig-param">deep=0</em>, <em class="sig-param">array_type=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.convert_array" title="Permalink to this definition">¶</a></dt>
 <dd><p>A helper to convert a NumPy array to a vtkDataArray or vice versa</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -425,19 +425,19 @@ return a pandas DataFrame.</p>
 
 <dl class="function">
 <dt id="pyvista.point_scalar">
-<code class="descclassname">pyvista.</code><code class="descname">point_scalar</code><span class="sig-paren">(</span><em>mesh</em>, <em>name</em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.point_scalar" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">pyvista.</code><code class="sig-name descname">point_scalar</code><span class="sig-paren">(</span><em class="sig-param">mesh</em>, <em class="sig-param">name</em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.point_scalar" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns point scalars of a vtk object</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="pyvista.cell_scalar">
-<code class="descclassname">pyvista.</code><code class="descname">cell_scalar</code><span class="sig-paren">(</span><em>mesh</em>, <em>name</em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.cell_scalar" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">pyvista.</code><code class="sig-name descname">cell_scalar</code><span class="sig-paren">(</span><em class="sig-param">mesh</em>, <em class="sig-param">name</em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.cell_scalar" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns cell scalars of a vtk object</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="pyvista.get_vtk_type">
-<code class="descclassname">pyvista.</code><code class="descname">get_vtk_type</code><span class="sig-paren">(</span><em>typ</em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.get_vtk_type" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">pyvista.</code><code class="sig-name descname">get_vtk_type</code><span class="sig-paren">(</span><em class="sig-param">typ</em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.get_vtk_type" title="Permalink to this definition">¶</a></dt>
 <dd><p>This looks up the VTK type for a give python data type. Corrects for
 string type mapping issues.</p>
 <dl class="field-list simple">
@@ -452,13 +452,13 @@ string type mapping issues.</p>
 
 <dl class="function">
 <dt id="pyvista.vtk_bit_array_to_char">
-<code class="descclassname">pyvista.</code><code class="descname">vtk_bit_array_to_char</code><span class="sig-paren">(</span><em>vtkarr_bint</em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.vtk_bit_array_to_char" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">pyvista.</code><code class="sig-name descname">vtk_bit_array_to_char</code><span class="sig-paren">(</span><em class="sig-param">vtkarr_bint</em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.vtk_bit_array_to_char" title="Permalink to this definition">¶</a></dt>
 <dd><p>Cast vtk bit array to a char array</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="pyvista.convert_string_array">
-<code class="descclassname">pyvista.</code><code class="descname">convert_string_array</code><span class="sig-paren">(</span><em>arr</em>, <em>name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.convert_string_array" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">pyvista.</code><code class="sig-name descname">convert_string_array</code><span class="sig-paren">(</span><em class="sig-param">arr</em>, <em class="sig-param">name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.convert_string_array" title="Permalink to this definition">¶</a></dt>
 <dd><p>A helper to convert a numpy array of strings to a vtkStringArray
 or vice versa. Note that this is terribly inefficient - inefficient support
 is better than no support :). If you have ideas on how to make this faster,

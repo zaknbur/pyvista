@@ -73,6 +73,26 @@ Loading and Creating Meshes
 
 .. raw:: html
 
+    <div class="sphx-glr-thumbcontainer" tooltip="Create a spline from numpy arrays">
+
+.. only:: html
+
+    .. figure:: /examples/00-load/images/thumb/sphx_glr_create-spline_thumb.png
+
+        :ref:`sphx_glr_examples_00-load_create-spline.py`
+
+.. raw:: html
+
+    </div>
+
+
+.. toctree::
+   :hidden:
+
+   /examples/00-load/create-spline
+
+.. raw:: html
+
     <div class="sphx-glr-thumbcontainer" tooltip="Create a StructuredGrid surface from NumPy arrays">
 
 .. only:: html

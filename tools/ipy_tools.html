@@ -245,25 +245,16 @@ in real-time from a Jupyter notebook or other IPython environment.</p>
 <p>These tools are useable from the top level of PyVista on any PyVista wrapped
 dataset. Simply call one of these tools on your object.</p>
 <p class="rubric">Attributes</p>
-<table class="longtable docutils align-center">
+<table class="longtable docutils align-default">
 <colgroup>
 <col style="width: 10%" />
 <col style="width: 90%" />
 </colgroup>
 <tbody>
-<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">loc</span></code></p></td>
-<td><p>The location in the plotter window.</p></td>
-</tr>
-<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">plotter</span></code></p></td>
-<td><p>The active plotter that this tool uses.</p></td>
-</tr>
-<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">renderer</span></code></p></td>
-<td><p></p></td>
-</tr>
 </tbody>
 </table>
 <p class="rubric">Methods</p>
-<table class="longtable docutils align-center">
+<table class="longtable docutils align-default">
 <colgroup>
 <col style="width: 10%" />
 <col style="width: 90%" />
@@ -288,12 +279,12 @@ slider bars directly in a Jupyter notebook:</p>
 <span class="n">pv</span><span class="o">.</span><span class="n">OrthogonalSlicer</span><span class="p">(</span><span class="n">dataset</span><span class="p">)</span>
 </pre></div>
 </div>
-<div class="figure align-center">
+<div class="figure align-default">
 <a class="reference internal image-reference" href="../_images/slicer-tool.gif"><img alt="../_images/slicer-tool.gif" src="../_images/slicer-tool.gif" style="width: 500pt;" /></a>
 </div>
 <dl class="class">
 <dt id="pyvista.OrthogonalSlicer">
-<em class="property">class </em><code class="descclassname">pyvista.</code><code class="descname">OrthogonalSlicer</code><span class="sig-paren">(</span><em>dataset</em>, <em>plotter=None</em>, <em>scalars=None</em>, <em>preference='cell'</em>, <em>show_bounds=False</em>, <em>reset_camera=True</em>, <em>outline=None</em>, <em>display_params=None</em>, <em>default_params=None</em>, <em>continuous_update=False</em>, <em>clean=True</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.OrthogonalSlicer" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pyvista.</code><code class="sig-name descname">OrthogonalSlicer</code><span class="sig-paren">(</span><em class="sig-param">dataset</em>, <em class="sig-param">plotter=None</em>, <em class="sig-param">scalars=None</em>, <em class="sig-param">preference='cell'</em>, <em class="sig-param">show_bounds=False</em>, <em class="sig-param">reset_camera=True</em>, <em class="sig-param">outline=None</em>, <em class="sig-param">display_params=None</em>, <em class="sig-param">default_params=None</em>, <em class="sig-param">continuous_update=False</em>, <em class="sig-param">clean=True</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.OrthogonalSlicer" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">pyvista.ipy_tools.InteractiveTool</span></code></p>
 <p>Within ipython enviornments like Jupyter notebooks, this will create
 an interactive render window with slider bars in te ipython enviornment to
@@ -333,12 +324,12 @@ of a Jupyter notebook cell:</p>
 <span class="n">pv</span><span class="o">.</span><span class="n">Threshold</span><span class="p">(</span><span class="n">dataset</span><span class="p">)</span>
 </pre></div>
 </div>
-<div class="figure align-center">
+<div class="figure align-default">
 <a class="reference internal image-reference" href="../_images/threshold-tool.gif"><img alt="../_images/threshold-tool.gif" src="../_images/threshold-tool.gif" style="width: 500pt;" /></a>
 </div>
 <dl class="class">
 <dt id="pyvista.Threshold">
-<em class="property">class </em><code class="descclassname">pyvista.</code><code class="descname">Threshold</code><span class="sig-paren">(</span><em>dataset</em>, <em>plotter=None</em>, <em>scalars=None</em>, <em>preference='cell'</em>, <em>show_bounds=False</em>, <em>reset_camera=True</em>, <em>outline=None</em>, <em>display_params=None</em>, <em>default_params=None</em>, <em>continuous_update=False</em>, <em>clean=True</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.Threshold" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pyvista.</code><code class="sig-name descname">Threshold</code><span class="sig-paren">(</span><em class="sig-param">dataset</em>, <em class="sig-param">plotter=None</em>, <em class="sig-param">scalars=None</em>, <em class="sig-param">preference='cell'</em>, <em class="sig-param">show_bounds=False</em>, <em class="sig-param">reset_camera=True</em>, <em class="sig-param">outline=None</em>, <em class="sig-param">display_params=None</em>, <em class="sig-param">default_params=None</em>, <em class="sig-param">continuous_update=False</em>, <em class="sig-param">clean=True</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.Threshold" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">pyvista.ipy_tools.InteractiveTool</span></code></p>
 <p>Yields slider bars for user to control the threshold range in an
 interactive plot. The threshold will default at 25 and 75 percent of the
@@ -372,12 +363,12 @@ down menu in the Jupyter notebook cell output:</p>
 <span class="n">pv</span><span class="o">.</span><span class="n">ManySlicesAlongAxis</span><span class="p">(</span><span class="n">dataset</span><span class="p">)</span>
 </pre></div>
 </div>
-<div class="figure align-center">
+<div class="figure align-default">
 <a class="reference internal image-reference" href="../_images/many-slices-tool.gif"><img alt="../_images/many-slices-tool.gif" src="../_images/many-slices-tool.gif" style="width: 500pt;" /></a>
 </div>
 <dl class="class">
 <dt id="pyvista.ManySlicesAlongAxis">
-<em class="property">class </em><code class="descclassname">pyvista.</code><code class="descname">ManySlicesAlongAxis</code><span class="sig-paren">(</span><em>dataset</em>, <em>plotter=None</em>, <em>scalars=None</em>, <em>preference='cell'</em>, <em>show_bounds=False</em>, <em>reset_camera=True</em>, <em>outline=None</em>, <em>display_params=None</em>, <em>default_params=None</em>, <em>continuous_update=False</em>, <em>clean=True</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.ManySlicesAlongAxis" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pyvista.</code><code class="sig-name descname">ManySlicesAlongAxis</code><span class="sig-paren">(</span><em class="sig-param">dataset</em>, <em class="sig-param">plotter=None</em>, <em class="sig-param">scalars=None</em>, <em class="sig-param">preference='cell'</em>, <em class="sig-param">show_bounds=False</em>, <em class="sig-param">reset_camera=True</em>, <em class="sig-param">outline=None</em>, <em class="sig-param">display_params=None</em>, <em class="sig-param">default_params=None</em>, <em class="sig-param">continuous_update=False</em>, <em class="sig-param">clean=True</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.ManySlicesAlongAxis" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">pyvista.ipy_tools.InteractiveTool</span></code></p>
 <p>Within ipython enviornments like Jupyter notebooks, this will create
 an interactive render window with slider bars in te ipython enviornment to
@@ -415,12 +406,12 @@ along a point scalar array</p>
 <span class="n">pv</span><span class="o">.</span><span class="n">Isocontour</span><span class="p">(</span><span class="n">dataset</span><span class="p">)</span>
 </pre></div>
 </div>
-<div class="figure align-center">
+<div class="figure align-default">
 <a class="reference internal image-reference" href="../_images/isocontour-tool.gif"><img alt="../_images/isocontour-tool.gif" src="../_images/isocontour-tool.gif" style="width: 500pt;" /></a>
 </div>
 <dl class="class">
 <dt>
-<em class="property">class </em><code class="descclassname">pyvista.</code><code class="descname">ManySlicesAlongAxis</code><span class="sig-paren">(</span><em>dataset</em>, <em>plotter=None</em>, <em>scalars=None</em>, <em>preference='cell'</em>, <em>show_bounds=False</em>, <em>reset_camera=True</em>, <em>outline=None</em>, <em>display_params=None</em>, <em>default_params=None</em>, <em>continuous_update=False</em>, <em>clean=True</em>, <em>**kwargs</em><span class="sig-paren">)</span></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pyvista.</code><code class="sig-name descname">ManySlicesAlongAxis</code><span class="sig-paren">(</span><em class="sig-param">dataset</em>, <em class="sig-param">plotter=None</em>, <em class="sig-param">scalars=None</em>, <em class="sig-param">preference='cell'</em>, <em class="sig-param">show_bounds=False</em>, <em class="sig-param">reset_camera=True</em>, <em class="sig-param">outline=None</em>, <em class="sig-param">display_params=None</em>, <em class="sig-param">default_params=None</em>, <em class="sig-param">continuous_update=False</em>, <em class="sig-param">clean=True</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">pyvista.ipy_tools.InteractiveTool</span></code></p>
 <p>Within ipython enviornments like Jupyter notebooks, this will create
 an interactive render window with slider bars in te ipython enviornment to
@@ -483,7 +474,7 @@ passing the plotter to the tool upon construction:</p>
 </pre></div>
 </div>
 <p>And now you have two tools being used in one rendering window!</p>
-<div class="figure align-center">
+<div class="figure align-default">
 <a class="reference internal image-reference" href="../_images/integrated-tools.gif"><img alt="../_images/integrated-tools.gif" src="../_images/integrated-tools.gif" style="width: 500pt;" /></a>
 </div>
 </div>

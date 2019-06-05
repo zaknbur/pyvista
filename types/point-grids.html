@@ -488,28 +488,16 @@ to show the exact value of certain points.</p>
 <code class="docutils literal notranslate"><span class="pre">pyvista.UnstructuredGrid</span></code> object.  It inherits all methods from the original
 <code class="docutils literal notranslate"><span class="pre">vtk</span></code> object, <a class="reference external" href="https://www.vtk.org/doc/nightly/html/classvtkUnstructuredGrid.html">vtk.vtkUnstructuredGrid</a>.</p>
 <p class="rubric">Attributes</p>
-<table class="longtable docutils align-center">
+<table class="longtable docutils align-default">
 <colgroup>
 <col style="width: 10%" />
 <col style="width: 90%" />
 </colgroup>
 <tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="#pyvista.UnstructuredGrid.cells" title="pyvista.UnstructuredGrid.cells"><code class="xref py py-obj docutils literal notranslate"><span class="pre">cells</span></code></a></p></td>
-<td><p>returns a pointer to the cells as a numpy object</p></td>
-</tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#pyvista.UnstructuredGrid.celltypes" title="pyvista.UnstructuredGrid.celltypes"><code class="xref py py-obj docutils literal notranslate"><span class="pre">celltypes</span></code></a></p></td>
-<td><p>Get the cell types array</p></td>
-</tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#pyvista.UnstructuredGrid.offset" title="pyvista.UnstructuredGrid.offset"><code class="xref py py-obj docutils literal notranslate"><span class="pre">offset</span></code></a></p></td>
-<td><p>Get Cell Locations Array</p></td>
-</tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#pyvista.UnstructuredGrid.quality" title="pyvista.UnstructuredGrid.quality"><code class="xref py py-obj docutils literal notranslate"><span class="pre">quality</span></code></a></p></td>
-<td><p>Returns cell quality</p></td>
-</tr>
 </tbody>
 </table>
 <p class="rubric">Methods</p>
-<table class="longtable docutils align-center">
+<table class="longtable docutils align-default">
 <colgroup>
 <col style="width: 10%" />
 <col style="width: 90%" />
@@ -537,7 +525,7 @@ to show the exact value of certain points.</p>
 </table>
 <dl class="class">
 <dt id="pyvista.UnstructuredGrid">
-<em class="property">class </em><code class="descclassname">pyvista.</code><code class="descname">UnstructuredGrid</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.UnstructuredGrid" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pyvista.</code><code class="sig-name descname">UnstructuredGrid</code><span class="sig-paren">(</span><em class="sig-param">*args</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.UnstructuredGrid" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">vtkCommonDataModelPython.vtkUnstructuredGrid</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">pyvista.pointset.PointGrid</span></code></p>
 <p>Extends the functionality of a vtk.vtkUnstructuredGrid object.</p>
 <p>Can be initialized by the following:</p>
@@ -570,28 +558,28 @@ to show the exact value of certain points.</p>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">grid</span> <span class="o">=</span> <span class="n">pyvista</span><span class="o">.</span><span class="n">UnstructuredGrid</span><span class="p">(</span><span class="n">examples</span><span class="o">.</span><span class="n">hexbeamfile</span><span class="p">)</span>
 </pre></div>
 </div>
-<dl class="attribute">
+<dl class="method">
 <dt id="pyvista.UnstructuredGrid.cells">
-<code class="descname">cells</code><a class="headerlink" href="#pyvista.UnstructuredGrid.cells" title="Permalink to this definition">¶</a></dt>
+<em class="property">property </em><code class="sig-name descname">cells</code><a class="headerlink" href="#pyvista.UnstructuredGrid.cells" title="Permalink to this definition">¶</a></dt>
 <dd><p>returns a pointer to the cells as a numpy object</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="method">
 <dt id="pyvista.UnstructuredGrid.celltypes">
-<code class="descname">celltypes</code><a class="headerlink" href="#pyvista.UnstructuredGrid.celltypes" title="Permalink to this definition">¶</a></dt>
+<em class="property">property </em><code class="sig-name descname">celltypes</code><a class="headerlink" href="#pyvista.UnstructuredGrid.celltypes" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get the cell types array</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="pyvista.UnstructuredGrid.delaunay_2d">
-<code class="descname">delaunay_2d</code><span class="sig-paren">(</span><em>tol=1e-05</em>, <em>alpha=0.0</em>, <em>offset=1.0</em>, <em>bound=False</em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.UnstructuredGrid.delaunay_2d" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">delaunay_2d</code><span class="sig-paren">(</span><em class="sig-param">tol=1e-05</em>, <em class="sig-param">alpha=0.0</em>, <em class="sig-param">offset=1.0</em>, <em class="sig-param">bound=False</em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.UnstructuredGrid.delaunay_2d" title="Permalink to this definition">¶</a></dt>
 <dd><p>Apply a delaunay 2D filter along the best fitting plane. This
 extracts the grid’s points and perfoms the triangulation on those alone.</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="pyvista.UnstructuredGrid.extract_cells">
-<code class="descname">extract_cells</code><span class="sig-paren">(</span><em>ind</em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.UnstructuredGrid.extract_cells" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">extract_cells</code><span class="sig-paren">(</span><em class="sig-param">ind</em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.UnstructuredGrid.extract_cells" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns a subset of the grid</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -608,7 +596,7 @@ extracts the grid’s points and perfoms the triangulation on those alone.</p>
 
 <dl class="method">
 <dt id="pyvista.UnstructuredGrid.extract_selection_points">
-<code class="descname">extract_selection_points</code><span class="sig-paren">(</span><em>ind</em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.UnstructuredGrid.extract_selection_points" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">extract_selection_points</code><span class="sig-paren">(</span><em class="sig-param">ind</em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.UnstructuredGrid.extract_selection_points" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns a subset of the grid that contains the cells that
 contain any of the point indices.</p>
 <dl class="field-list simple">
@@ -626,7 +614,7 @@ contain any of the point indices.</p>
 
 <dl class="method">
 <dt id="pyvista.UnstructuredGrid.linear_copy">
-<code class="descname">linear_copy</code><span class="sig-paren">(</span><em>deep=False</em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.UnstructuredGrid.linear_copy" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">linear_copy</code><span class="sig-paren">(</span><em class="sig-param">deep=False</em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.UnstructuredGrid.linear_copy" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns a copy of the input unstructured grid containing only
 linear cells.  Converts the following cell types to their
 linear equivalents.</p>
@@ -652,7 +640,7 @@ False.  Cells and cell types are always copied.</p>
 
 <dl class="method">
 <dt id="pyvista.UnstructuredGrid.merge">
-<code class="descname">merge</code><span class="sig-paren">(</span><em>grid=None</em>, <em>merge_points=True</em>, <em>inplace=False</em>, <em>main_has_priority=True</em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.UnstructuredGrid.merge" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">merge</code><span class="sig-paren">(</span><em class="sig-param">grid=None</em>, <em class="sig-param">merge_points=True</em>, <em class="sig-param">inplace=False</em>, <em class="sig-param">main_has_priority=True</em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.UnstructuredGrid.merge" title="Permalink to this definition">¶</a></dt>
 <dd><p>Join one or many other grids to this grid.  Grid is updated
 in-place by default.</p>
 <p>Can be used to merge points of adjcent cells when no grids
@@ -682,21 +670,21 @@ scalar array must match or the arrays will be ignored and not
 included in the final merged mesh.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="method">
 <dt id="pyvista.UnstructuredGrid.offset">
-<code class="descname">offset</code><a class="headerlink" href="#pyvista.UnstructuredGrid.offset" title="Permalink to this definition">¶</a></dt>
+<em class="property">property </em><code class="sig-name descname">offset</code><a class="headerlink" href="#pyvista.UnstructuredGrid.offset" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get Cell Locations Array</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="method">
 <dt id="pyvista.UnstructuredGrid.quality">
-<code class="descname">quality</code><a class="headerlink" href="#pyvista.UnstructuredGrid.quality" title="Permalink to this definition">¶</a></dt>
+<em class="property">property </em><code class="sig-name descname">quality</code><a class="headerlink" href="#pyvista.UnstructuredGrid.quality" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns cell quality</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="pyvista.UnstructuredGrid.save">
-<code class="descname">save</code><span class="sig-paren">(</span><em>filename</em>, <em>binary=True</em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.UnstructuredGrid.save" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">save</code><span class="sig-paren">(</span><em class="sig-param">filename</em>, <em class="sig-param">binary=True</em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.UnstructuredGrid.save" title="Permalink to this definition">¶</a></dt>
 <dd><p>Writes an unstructured grid to disk.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -723,31 +711,16 @@ only “.vtk” files</p>
 <code class="docutils literal notranslate"><span class="pre">pyvista.StructuredGrid</span></code> object.  It inherits all methods from the original
 <code class="docutils literal notranslate"><span class="pre">vtk</span></code> object, <a class="reference external" href="https://www.vtk.org/doc/nightly/html/classvtkStructuredGrid.html">vtk.vtkStructuredGrid</a>.</p>
 <p class="rubric">Attributes</p>
-<table class="longtable docutils align-center">
+<table class="longtable docutils align-default">
 <colgroup>
 <col style="width: 10%" />
 <col style="width: 90%" />
 </colgroup>
 <tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="#pyvista.StructuredGrid.dimensions" title="pyvista.StructuredGrid.dimensions"><code class="xref py py-obj docutils literal notranslate"><span class="pre">dimensions</span></code></a></p></td>
-<td><p>Returns a length 3 tuple of the grid’s dimensions</p></td>
-</tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#pyvista.StructuredGrid.quality" title="pyvista.StructuredGrid.quality"><code class="xref py py-obj docutils literal notranslate"><span class="pre">quality</span></code></a></p></td>
-<td><p>Computes the minimum scaled jacobian of each cell.</p></td>
-</tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#pyvista.StructuredGrid.x" title="pyvista.StructuredGrid.x"><code class="xref py py-obj docutils literal notranslate"><span class="pre">x</span></code></a></p></td>
-<td><p>The X coordinates of all points</p></td>
-</tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#pyvista.StructuredGrid.y" title="pyvista.StructuredGrid.y"><code class="xref py py-obj docutils literal notranslate"><span class="pre">y</span></code></a></p></td>
-<td><p>The Y coordinates of all points</p></td>
-</tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#pyvista.StructuredGrid.z" title="pyvista.StructuredGrid.z"><code class="xref py py-obj docutils literal notranslate"><span class="pre">z</span></code></a></p></td>
-<td><p>The Z coordinates of all points</p></td>
-</tr>
 </tbody>
 </table>
 <p class="rubric">Methods</p>
-<table class="longtable docutils align-center">
+<table class="longtable docutils align-default">
 <colgroup>
 <col style="width: 10%" />
 <col style="width: 90%" />
@@ -760,7 +733,7 @@ only “.vtk” files</p>
 </table>
 <dl class="class">
 <dt id="pyvista.StructuredGrid">
-<em class="property">class </em><code class="descclassname">pyvista.</code><code class="descname">StructuredGrid</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.StructuredGrid" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pyvista.</code><code class="sig-name descname">StructuredGrid</code><span class="sig-paren">(</span><em class="sig-param">*args</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.StructuredGrid" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">vtkCommonDataModelPython.vtkStructuredGrid</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">pyvista.pointset.PointGrid</span></code></p>
 <p>Extends the functionality of a vtk.vtkStructuredGrid object
 Can be initialized in several ways:</p>
@@ -794,15 +767,15 @@ from point arrays</p>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">grid</span> <span class="o">=</span> <span class="n">pyvista</span><span class="o">.</span><span class="n">StructuredGrid</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">z</span><span class="p">)</span>
 </pre></div>
 </div>
-<dl class="attribute">
+<dl class="method">
 <dt id="pyvista.StructuredGrid.dimensions">
-<code class="descname">dimensions</code><a class="headerlink" href="#pyvista.StructuredGrid.dimensions" title="Permalink to this definition">¶</a></dt>
+<em class="property">property </em><code class="sig-name descname">dimensions</code><a class="headerlink" href="#pyvista.StructuredGrid.dimensions" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns a length 3 tuple of the grid’s dimensions</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="method">
 <dt id="pyvista.StructuredGrid.quality">
-<code class="descname">quality</code><a class="headerlink" href="#pyvista.StructuredGrid.quality" title="Permalink to this definition">¶</a></dt>
+<em class="property">property </em><code class="sig-name descname">quality</code><a class="headerlink" href="#pyvista.StructuredGrid.quality" title="Permalink to this definition">¶</a></dt>
 <dd><p>Computes the minimum scaled jacobian of each cell.  Cells that have
 values below 0 are invalid for a finite element analysis.</p>
 <dl class="field-list simple">
@@ -819,7 +792,7 @@ values below 0 are invalid for a finite element analysis.</p>
 
 <dl class="method">
 <dt id="pyvista.StructuredGrid.save">
-<code class="descname">save</code><span class="sig-paren">(</span><em>filename</em>, <em>binary=True</em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.StructuredGrid.save" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">save</code><span class="sig-paren">(</span><em class="sig-param">filename</em>, <em class="sig-param">binary=True</em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.StructuredGrid.save" title="Permalink to this definition">¶</a></dt>
 <dd><p>Writes a structured grid to disk.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -837,21 +810,21 @@ one system may not be readable on other systems.  Binary can be used
 only with the legacy writer.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="method">
 <dt id="pyvista.StructuredGrid.x">
-<code class="descname">x</code><a class="headerlink" href="#pyvista.StructuredGrid.x" title="Permalink to this definition">¶</a></dt>
+<em class="property">property </em><code class="sig-name descname">x</code><a class="headerlink" href="#pyvista.StructuredGrid.x" title="Permalink to this definition">¶</a></dt>
 <dd><p>The X coordinates of all points</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="method">
 <dt id="pyvista.StructuredGrid.y">
-<code class="descname">y</code><a class="headerlink" href="#pyvista.StructuredGrid.y" title="Permalink to this definition">¶</a></dt>
+<em class="property">property </em><code class="sig-name descname">y</code><a class="headerlink" href="#pyvista.StructuredGrid.y" title="Permalink to this definition">¶</a></dt>
 <dd><p>The Y coordinates of all points</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="method">
 <dt id="pyvista.StructuredGrid.z">
-<code class="descname">z</code><a class="headerlink" href="#pyvista.StructuredGrid.z" title="Permalink to this definition">¶</a></dt>
+<em class="property">property </em><code class="sig-name descname">z</code><a class="headerlink" href="#pyvista.StructuredGrid.z" title="Permalink to this definition">¶</a></dt>
 <dd><p>The Z coordinates of all points</p>
 </dd></dl>
 
@@ -863,19 +836,16 @@ only with the legacy writer.</p>
 <p>These methods are in common to both <code class="docutils literal notranslate"><span class="pre">pyvista.StructuredGrid</span></code> and
 <code class="docutils literal notranslate"><span class="pre">pyvista.UnstructuredGrid</span></code> objects.</p>
 <p class="rubric">Attributes</p>
-<table class="longtable docutils align-center">
+<table class="longtable docutils align-default">
 <colgroup>
 <col style="width: 10%" />
 <col style="width: 90%" />
 </colgroup>
 <tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="#pyvista.PointGrid.volume" title="pyvista.PointGrid.volume"><code class="xref py py-obj docutils literal notranslate"><span class="pre">volume</span></code></a></p></td>
-<td><p>Computes volume by extracting the external surface and computing interior volume</p></td>
-</tr>
 </tbody>
 </table>
 <p class="rubric">Methods</p>
-<table class="longtable docutils align-center">
+<table class="longtable docutils align-default">
 <colgroup>
 <col style="width: 10%" />
 <col style="width: 90%" />
@@ -897,12 +867,12 @@ only with the legacy writer.</p>
 </table>
 <dl class="class">
 <dt id="pyvista.PointGrid">
-<em class="property">class </em><code class="descclassname">pyvista.</code><code class="descname">PointGrid</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.PointGrid" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pyvista.</code><code class="sig-name descname">PointGrid</code><span class="sig-paren">(</span><em class="sig-param">*args</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.PointGrid" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">pyvista.common.Common</span></code></p>
 <p>Class in common with structured and unstructured grids</p>
 <dl class="method">
 <dt id="pyvista.PointGrid.extract_edges">
-<code class="descname">extract_edges</code><span class="sig-paren">(</span><em>feature_angle=30</em>, <em>boundary_edges=True</em>, <em>non_manifold_edges=True</em>, <em>feature_edges=True</em>, <em>manifold_edges=True</em>, <em>inplace=False</em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.PointGrid.extract_edges" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">extract_edges</code><span class="sig-paren">(</span><em class="sig-param">feature_angle=30</em>, <em class="sig-param">boundary_edges=True</em>, <em class="sig-param">non_manifold_edges=True</em>, <em class="sig-param">feature_edges=True</em>, <em class="sig-param">manifold_edges=True</em>, <em class="sig-param">inplace=False</em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.PointGrid.extract_edges" title="Permalink to this definition">¶</a></dt>
 <dd><p>Extracts edges from the surface of the grid.  From vtk documentation:</p>
 <dl class="simple">
 <dt>These edges are either</dt><dd><ol class="arabic simple">
@@ -936,7 +906,7 @@ dihedral angle &gt; feature_angle)</p></li>
 
 <dl class="method">
 <dt id="pyvista.PointGrid.extract_surface">
-<code class="descname">extract_surface</code><span class="sig-paren">(</span><em>pass_pointid=True</em>, <em>pass_cellid=True</em>, <em>inplace=False</em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.PointGrid.extract_surface" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">extract_surface</code><span class="sig-paren">(</span><em class="sig-param">pass_pointid=True</em>, <em class="sig-param">pass_cellid=True</em>, <em class="sig-param">inplace=False</em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.PointGrid.extract_surface" title="Permalink to this definition">¶</a></dt>
 <dd><p>Extract surface mesh of the grid</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -959,7 +929,7 @@ original cells these surface cells correspond to</p></li>
 
 <dl class="method">
 <dt id="pyvista.PointGrid.plot_curvature">
-<code class="descname">plot_curvature</code><span class="sig-paren">(</span><em>curv_type='mean'</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.PointGrid.plot_curvature" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">plot_curvature</code><span class="sig-paren">(</span><em class="sig-param">curv_type='mean'</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.PointGrid.plot_curvature" title="Permalink to this definition">¶</a></dt>
 <dd><p>Plots the curvature of the external surface of the grid</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -987,7 +957,7 @@ setting camera view.</p>
 
 <dl class="method">
 <dt id="pyvista.PointGrid.surface_indices">
-<code class="descname">surface_indices</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.PointGrid.surface_indices" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">surface_indices</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.PointGrid.surface_indices" title="Permalink to this definition">¶</a></dt>
 <dd><p>The surface indices of a grid.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
@@ -999,9 +969,9 @@ setting camera view.</p>
 </dl>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="method">
 <dt id="pyvista.PointGrid.volume">
-<code class="descname">volume</code><a class="headerlink" href="#pyvista.PointGrid.volume" title="Permalink to this definition">¶</a></dt>
+<em class="property">property </em><code class="sig-name descname">volume</code><a class="headerlink" href="#pyvista.PointGrid.volume" title="Permalink to this definition">¶</a></dt>
 <dd><p>Computes volume by extracting the external surface and
 computing interior volume</p>
 </dd></dl>

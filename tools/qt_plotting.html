@@ -295,7 +295,7 @@ sphere to an empty plotting window.</p>
     <span class="n">sys</span><span class="o">.</span><span class="n">exit</span><span class="p">(</span><span class="n">app</span><span class="o">.</span><span class="n">exec_</span><span class="p">())</span>
 </pre></div>
 </div>
-<div class="figure align-center" id="id1">
+<div class="figure align-default" id="id1">
 <a class="reference internal image-reference" href="../_images/qt_plotting_sphere.png"><img alt="../_images/qt_plotting_sphere.png" src="../_images/qt_plotting_sphere.png" style="width: 600pt;" /></a>
 <p class="caption"><span class="caption-text">PyQt5 pyvista QtInteractor</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
 </div>
@@ -318,7 +318,7 @@ and functions like a normal PyVista <code class="docutils literal notranslate"><
 </pre></div>
 </div>
 <p class="rubric">Attributes</p>
-<table class="longtable docutils align-center">
+<table class="longtable docutils align-default">
 <colgroup>
 <col style="width: 10%" />
 <col style="width: 90%" />
@@ -327,13 +327,10 @@ and functions like a normal PyVista <code class="docutils literal notranslate"><
 <tr class="row-odd"><td><p><a class="reference internal" href="#pyvista.BackgroundPlotter.ICON_TIME_STEP" title="pyvista.BackgroundPlotter.ICON_TIME_STEP"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ICON_TIME_STEP</span></code></a></p></td>
 <td><p></p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#pyvista.BackgroundPlotter.window_size" title="pyvista.BackgroundPlotter.window_size"><code class="xref py py-obj docutils literal notranslate"><span class="pre">window_size</span></code></a></p></td>
-<td><p>returns render window size</p></td>
-</tr>
 </tbody>
 </table>
 <p class="rubric">Methods</p>
-<table class="longtable docutils align-center">
+<table class="longtable docutils align-default">
 <colgroup>
 <col style="width: 10%" />
 <col style="width: 90%" />
@@ -361,16 +358,16 @@ and functions like a normal PyVista <code class="docutils literal notranslate"><
 </table>
 <dl class="class">
 <dt id="pyvista.BackgroundPlotter">
-<em class="property">class </em><code class="descclassname">pyvista.</code><code class="descname">BackgroundPlotter</code><span class="sig-paren">(</span><em>show=True</em>, <em>app=None</em>, <em>shape=(1</em>, <em>1)</em>, <em>window_size=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.BackgroundPlotter" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pyvista.</code><code class="sig-name descname">BackgroundPlotter</code><span class="sig-paren">(</span><em class="sig-param">show=True</em>, <em class="sig-param">app=None</em>, <em class="sig-param">shape=(1</em>, <em class="sig-param">1)</em>, <em class="sig-param">window_size=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.BackgroundPlotter" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">pyvista.qt_plotting.QtInteractor</span></code></p>
 <dl class="attribute">
 <dt id="pyvista.BackgroundPlotter.ICON_TIME_STEP">
-<code class="descname">ICON_TIME_STEP</code><em class="property"> = 5.0</em><a class="headerlink" href="#pyvista.BackgroundPlotter.ICON_TIME_STEP" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">ICON_TIME_STEP</code><em class="property"> = 5.0</em><a class="headerlink" href="#pyvista.BackgroundPlotter.ICON_TIME_STEP" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
 <dt id="pyvista.BackgroundPlotter.add_actor">
-<code class="descname">add_actor</code><span class="sig-paren">(</span><em>actor</em>, <em>reset_camera=None</em>, <em>name=None</em>, <em>loc=None</em>, <em>culling=False</em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.BackgroundPlotter.add_actor" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">add_actor</code><span class="sig-paren">(</span><em class="sig-param">actor</em>, <em class="sig-param">reset_camera=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">loc=None</em>, <em class="sig-param">culling=False</em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.BackgroundPlotter.add_actor" title="Permalink to this definition">¶</a></dt>
 <dd><p>Adds an actor to render window.  Creates an actor if input is
 a mapper.</p>
 <dl class="field-list simple">
@@ -399,36 +396,36 @@ meshes to be partially displayed.  Default False.</p></li>
 
 <dl class="method">
 <dt id="pyvista.BackgroundPlotter.clear_camera_positions">
-<code class="descname">clear_camera_positions</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.BackgroundPlotter.clear_camera_positions" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">clear_camera_positions</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.BackgroundPlotter.clear_camera_positions" title="Permalink to this definition">¶</a></dt>
 <dd><p>clears all camera positions</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="pyvista.BackgroundPlotter.closeEvent">
-<code class="descname">closeEvent</code><span class="sig-paren">(</span><em>self</em>, <em>QCloseEvent</em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.BackgroundPlotter.closeEvent" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">closeEvent</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">QCloseEvent</em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.BackgroundPlotter.closeEvent" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
 <dt id="pyvista.BackgroundPlotter.save_camera_position">
-<code class="descname">save_camera_position</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.BackgroundPlotter.save_camera_position" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">save_camera_position</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.BackgroundPlotter.save_camera_position" title="Permalink to this definition">¶</a></dt>
 <dd><p>Saves camera position to saved camera menu for recall</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="pyvista.BackgroundPlotter.scale_axes_dialog">
-<code class="descname">scale_axes_dialog</code><span class="sig-paren">(</span><em>show=True</em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.BackgroundPlotter.scale_axes_dialog" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">scale_axes_dialog</code><span class="sig-paren">(</span><em class="sig-param">show=True</em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.BackgroundPlotter.scale_axes_dialog" title="Permalink to this definition">¶</a></dt>
 <dd><p>Open scale axes dialog</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="pyvista.BackgroundPlotter.update_app_icon">
-<code class="descname">update_app_icon</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.BackgroundPlotter.update_app_icon" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">update_app_icon</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.BackgroundPlotter.update_app_icon" title="Permalink to this definition">¶</a></dt>
 <dd><p>Update the app icon if the user is not trying to resize the window.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="method">
 <dt id="pyvista.BackgroundPlotter.window_size">
-<code class="descname">window_size</code><a class="headerlink" href="#pyvista.BackgroundPlotter.window_size" title="Permalink to this definition">¶</a></dt>
+<em class="property">property </em><code class="sig-name descname">window_size</code><a class="headerlink" href="#pyvista.BackgroundPlotter.window_size" title="Permalink to this definition">¶</a></dt>
 <dd><p>returns render window size</p>
 </dd></dl>
 
@@ -436,7 +433,7 @@ meshes to be partially displayed.  Default False.</p></li>
 
 <dl class="class">
 <dt id="pyvista.ScaledPlotter">
-<em class="property">class </em><code class="descclassname">pyvista.</code><code class="descname">ScaledPlotter</code><span class="sig-paren">(</span><em>xscale=1.0</em>, <em>yscale=1.0</em>, <em>zscale=1.0</em>, <em>show=True</em>, <em>app=None</em>, <em>continuous_update=False</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.ScaledPlotter" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pyvista.</code><code class="sig-name descname">ScaledPlotter</code><span class="sig-paren">(</span><em class="sig-param">xscale=1.0</em>, <em class="sig-param">yscale=1.0</em>, <em class="sig-param">zscale=1.0</em>, <em class="sig-param">show=True</em>, <em class="sig-param">app=None</em>, <em class="sig-param">continuous_update=False</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.ScaledPlotter" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">pyvista.qt_plotting.BackgroundPlotter</span></code></p>
 <p>An extension of the <code class="docutils literal notranslate"><span class="pre">pyvista.BackgroundPlotter</span></code> that has
 interactive widgets for scaling the axes in the rendering scene.</p>

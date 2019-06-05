@@ -312,94 +312,16 @@ The <a class="reference internal" href="container.html#pyvista.MultiBlock" title
 spatially referenced datasets in PyVista.
 This base class is analogous to VTK’s <code class="docutils literal notranslate"><span class="pre">vtk.vtkDataSet</span></code> class.</p>
 <p class="rubric">Attributes</p>
-<table class="longtable docutils align-center">
+<table class="longtable docutils align-default">
 <colgroup>
 <col style="width: 10%" />
 <col style="width: 90%" />
 </colgroup>
 <tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="#pyvista.Common.active_scalar" title="pyvista.Common.active_scalar"><code class="xref py py-obj docutils literal notranslate"><span class="pre">active_scalar</span></code></a></p></td>
-<td><p>Returns the active scalar as an array</p></td>
-</tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#pyvista.Common.active_scalar_info" title="pyvista.Common.active_scalar_info"><code class="xref py py-obj docutils literal notranslate"><span class="pre">active_scalar_info</span></code></a></p></td>
-<td><p>[field, name]</p></td>
-</tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#pyvista.Common.active_scalar_name" title="pyvista.Common.active_scalar_name"><code class="xref py py-obj docutils literal notranslate"><span class="pre">active_scalar_name</span></code></a></p></td>
-<td><p>Returns the active scalar’s name</p></td>
-</tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#pyvista.Common.active_vectors" title="pyvista.Common.active_vectors"><code class="xref py py-obj docutils literal notranslate"><span class="pre">active_vectors</span></code></a></p></td>
-<td><p>The active vectors array</p></td>
-</tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#pyvista.Common.active_vectors_info" title="pyvista.Common.active_vectors_info"><code class="xref py py-obj docutils literal notranslate"><span class="pre">active_vectors_info</span></code></a></p></td>
-<td><p>[field, name]</p></td>
-</tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#pyvista.Common.active_vectors_name" title="pyvista.Common.active_vectors_name"><code class="xref py py-obj docutils literal notranslate"><span class="pre">active_vectors_name</span></code></a></p></td>
-<td><p>The name of the active vectors array</p></td>
-</tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#pyvista.Common.arrows" title="pyvista.Common.arrows"><code class="xref py py-obj docutils literal notranslate"><span class="pre">arrows</span></code></a></p></td>
-<td><p>Returns a glyph representation of the active vector data as arrows.</p></td>
-</tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#pyvista.Common.bounds" title="pyvista.Common.bounds"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bounds</span></code></a></p></td>
-<td><p>bounding box of this dataset in the form (xmin,xmax, ymin,ymax, zmin,zmax)</p></td>
-</tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#pyvista.Common.cell_arrays" title="pyvista.Common.cell_arrays"><code class="xref py py-obj docutils literal notranslate"><span class="pre">cell_arrays</span></code></a></p></td>
-<td><p>Returns the all cell arrays</p></td>
-</tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#pyvista.Common.center" title="pyvista.Common.center"><code class="xref py py-obj docutils literal notranslate"><span class="pre">center</span></code></a></p></td>
-<td><p>Center of the bounding box</p></td>
-</tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#pyvista.Common.extent" title="pyvista.Common.extent"><code class="xref py py-obj docutils literal notranslate"><span class="pre">extent</span></code></a></p></td>
-<td><p>The range of the bounding box</p></td>
-</tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#pyvista.Common.field_arrays" title="pyvista.Common.field_arrays"><code class="xref py py-obj docutils literal notranslate"><span class="pre">field_arrays</span></code></a></p></td>
-<td><p>Returns all field arrays</p></td>
-</tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#pyvista.Common.length" title="pyvista.Common.length"><code class="xref py py-obj docutils literal notranslate"><span class="pre">length</span></code></a></p></td>
-<td><p>the length of the diagonal of the bounding box</p></td>
-</tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#pyvista.Common.n_arrays" title="pyvista.Common.n_arrays"><code class="xref py py-obj docutils literal notranslate"><span class="pre">n_arrays</span></code></a></p></td>
-<td><p>The number of scalar arrays present in the dataset</p></td>
-</tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#pyvista.Common.n_cells" title="pyvista.Common.n_cells"><code class="xref py py-obj docutils literal notranslate"><span class="pre">n_cells</span></code></a></p></td>
-<td><p>The number of cells in the entire dataset</p></td>
-</tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#pyvista.Common.n_points" title="pyvista.Common.n_points"><code class="xref py py-obj docutils literal notranslate"><span class="pre">n_points</span></code></a></p></td>
-<td><p>The number of points in the entire dataset</p></td>
-</tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#pyvista.Common.n_scalars" title="pyvista.Common.n_scalars"><code class="xref py py-obj docutils literal notranslate"><span class="pre">n_scalars</span></code></a></p></td>
-<td><p>Please use <cite>n_arrays</cite></p></td>
-</tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#pyvista.Common.number_of_cells" title="pyvista.Common.number_of_cells"><code class="xref py py-obj docutils literal notranslate"><span class="pre">number_of_cells</span></code></a></p></td>
-<td><p>returns the number of cells</p></td>
-</tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#pyvista.Common.number_of_points" title="pyvista.Common.number_of_points"><code class="xref py py-obj docutils literal notranslate"><span class="pre">number_of_points</span></code></a></p></td>
-<td><p>returns the number of points</p></td>
-</tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#pyvista.Common.point_arrays" title="pyvista.Common.point_arrays"><code class="xref py py-obj docutils literal notranslate"><span class="pre">point_arrays</span></code></a></p></td>
-<td><p>Returns the all point arrays</p></td>
-</tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#pyvista.Common.points" title="pyvista.Common.points"><code class="xref py py-obj docutils literal notranslate"><span class="pre">points</span></code></a></p></td>
-<td><p>returns a pointer to the points as a numpy object</p></td>
-</tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#pyvista.Common.scalar_names" title="pyvista.Common.scalar_names"><code class="xref py py-obj docutils literal notranslate"><span class="pre">scalar_names</span></code></a></p></td>
-<td><p>A list of scalar names for the dataset.</p></td>
-</tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#pyvista.Common.t_coords" title="pyvista.Common.t_coords"><code class="xref py py-obj docutils literal notranslate"><span class="pre">t_coords</span></code></a></p></td>
-<td><p>The active texture coordinates on the points</p></td>
-</tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#pyvista.Common.textures" title="pyvista.Common.textures"><code class="xref py py-obj docutils literal notranslate"><span class="pre">textures</span></code></a></p></td>
-<td><p>A dictionary to hold <code class="docutils literal notranslate"><span class="pre">vtk.vtkTexture</span></code> objects that can be associated with this dataset.</p></td>
-</tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#pyvista.Common.vectors" title="pyvista.Common.vectors"><code class="xref py py-obj docutils literal notranslate"><span class="pre">vectors</span></code></a></p></td>
-<td><p>Returns active vectors</p></td>
-</tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#pyvista.Common.volume" title="pyvista.Common.volume"><code class="xref py py-obj docutils literal notranslate"><span class="pre">volume</span></code></a></p></td>
-<td><p>Mesh volume</p></td>
-</tr>
 </tbody>
 </table>
 <p class="rubric">Methods</p>
-<table class="longtable docutils align-center">
+<table class="longtable docutils align-default">
 <colgroup>
 <col style="width: 10%" />
 <col style="width: 90%" />
@@ -475,63 +397,53 @@ This base class is analogous to VTK’s <code class="docutils literal notranslat
 </table>
 <dl class="class">
 <dt id="pyvista.Common">
-<em class="property">class </em><code class="descclassname">pyvista.</code><code class="descname">Common</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.Common" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pyvista.</code><code class="sig-name descname">Common</code><span class="sig-paren">(</span><em class="sig-param">*args</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.Common" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">pyvista.filters.DataSetFilters</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <p>Methods in common to grid and surface objects</p>
-<dl class="attribute">
+<dl class="method">
 <dt id="pyvista.Common.active_scalar">
-<code class="descname">active_scalar</code><a class="headerlink" href="#pyvista.Common.active_scalar" title="Permalink to this definition">¶</a></dt>
+<em class="property">property </em><code class="sig-name descname">active_scalar</code><a class="headerlink" href="#pyvista.Common.active_scalar" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns the active scalar as an array</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="method">
 <dt id="pyvista.Common.active_scalar_info">
-<code class="descname">active_scalar_info</code><a class="headerlink" href="#pyvista.Common.active_scalar_info" title="Permalink to this definition">¶</a></dt>
-<dd><p>[field, name]</p>
-<dl class="field-list simple">
-<dt class="field-odd">Type</dt>
-<dd class="field-odd"><p>Return the active scalar’s field and name</p>
-</dd>
-</dl>
+<em class="property">property </em><code class="sig-name descname">active_scalar_info</code><a class="headerlink" href="#pyvista.Common.active_scalar_info" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the active scalar’s field and name: [field, name]</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="method">
 <dt id="pyvista.Common.active_scalar_name">
-<code class="descname">active_scalar_name</code><a class="headerlink" href="#pyvista.Common.active_scalar_name" title="Permalink to this definition">¶</a></dt>
+<em class="property">property </em><code class="sig-name descname">active_scalar_name</code><a class="headerlink" href="#pyvista.Common.active_scalar_name" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns the active scalar’s name</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="method">
 <dt id="pyvista.Common.active_vectors">
-<code class="descname">active_vectors</code><a class="headerlink" href="#pyvista.Common.active_vectors" title="Permalink to this definition">¶</a></dt>
+<em class="property">property </em><code class="sig-name descname">active_vectors</code><a class="headerlink" href="#pyvista.Common.active_vectors" title="Permalink to this definition">¶</a></dt>
 <dd><p>The active vectors array</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="method">
 <dt id="pyvista.Common.active_vectors_info">
-<code class="descname">active_vectors_info</code><a class="headerlink" href="#pyvista.Common.active_vectors_info" title="Permalink to this definition">¶</a></dt>
-<dd><p>[field, name]</p>
-<dl class="field-list simple">
-<dt class="field-odd">Type</dt>
-<dd class="field-odd"><p>Return the active scalar’s field and name</p>
-</dd>
-</dl>
+<em class="property">property </em><code class="sig-name descname">active_vectors_info</code><a class="headerlink" href="#pyvista.Common.active_vectors_info" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the active scalar’s field and name: [field, name]</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="method">
 <dt id="pyvista.Common.active_vectors_name">
-<code class="descname">active_vectors_name</code><a class="headerlink" href="#pyvista.Common.active_vectors_name" title="Permalink to this definition">¶</a></dt>
+<em class="property">property </em><code class="sig-name descname">active_vectors_name</code><a class="headerlink" href="#pyvista.Common.active_vectors_name" title="Permalink to this definition">¶</a></dt>
 <dd><p>The name of the active vectors array</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="pyvista.Common.add_field_array">
-<code class="descname">add_field_array</code><span class="sig-paren">(</span><em>scalars</em>, <em>name</em>, <em>deep=True</em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.Common.add_field_array" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">add_field_array</code><span class="sig-paren">(</span><em class="sig-param">scalars</em>, <em class="sig-param">name</em>, <em class="sig-param">deep=True</em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.Common.add_field_array" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="attribute">
+<dl class="method">
 <dt id="pyvista.Common.arrows">
-<code class="descname">arrows</code><a class="headerlink" href="#pyvista.Common.arrows" title="Permalink to this definition">¶</a></dt>
+<em class="property">property </em><code class="sig-name descname">arrows</code><a class="headerlink" href="#pyvista.Common.arrows" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns a glyph representation of the active vector data as
 arrows.  Arrows will be located at the points of the mesh and
 their size will be dependent on the length of the vector.
@@ -546,59 +458,59 @@ Their direction will be the “direction” of the vector</p>
 </dl>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="method">
 <dt id="pyvista.Common.bounds">
-<code class="descname">bounds</code><a class="headerlink" href="#pyvista.Common.bounds" title="Permalink to this definition">¶</a></dt>
+<em class="property">property </em><code class="sig-name descname">bounds</code><a class="headerlink" href="#pyvista.Common.bounds" title="Permalink to this definition">¶</a></dt>
 <dd><p>bounding box of this dataset in the form
 (xmin,xmax, ymin,ymax, zmin,zmax)</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="pyvista.Common.cast_to_unstructured_grid">
-<code class="descname">cast_to_unstructured_grid</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.Common.cast_to_unstructured_grid" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">cast_to_unstructured_grid</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.Common.cast_to_unstructured_grid" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get a new representation of this object as an
 <a class="reference internal" href="point-grids.html#pyvista.UnstructuredGrid" title="pyvista.UnstructuredGrid"><code class="xref py py-class docutils literal notranslate"><span class="pre">pyvista.UnstructuredGrid</span></code></a></p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="method">
 <dt id="pyvista.Common.cell_arrays">
-<code class="descname">cell_arrays</code><a class="headerlink" href="#pyvista.Common.cell_arrays" title="Permalink to this definition">¶</a></dt>
+<em class="property">property </em><code class="sig-name descname">cell_arrays</code><a class="headerlink" href="#pyvista.Common.cell_arrays" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns the all cell arrays</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="method">
 <dt id="pyvista.Common.center">
-<code class="descname">center</code><a class="headerlink" href="#pyvista.Common.center" title="Permalink to this definition">¶</a></dt>
+<em class="property">property </em><code class="sig-name descname">center</code><a class="headerlink" href="#pyvista.Common.center" title="Permalink to this definition">¶</a></dt>
 <dd><p>Center of the bounding box</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="pyvista.Common.clear_arrays">
-<code class="descname">clear_arrays</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.Common.clear_arrays" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">clear_arrays</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.Common.clear_arrays" title="Permalink to this definition">¶</a></dt>
 <dd><p>removes all arrays from point/cell/field data</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="pyvista.Common.clear_cell_arrays">
-<code class="descname">clear_cell_arrays</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.Common.clear_cell_arrays" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">clear_cell_arrays</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.Common.clear_cell_arrays" title="Permalink to this definition">¶</a></dt>
 <dd><p>removes all cell arrays</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="pyvista.Common.clear_field_arrays">
-<code class="descname">clear_field_arrays</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.Common.clear_field_arrays" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">clear_field_arrays</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.Common.clear_field_arrays" title="Permalink to this definition">¶</a></dt>
 <dd><p>removes all field arrays</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="pyvista.Common.clear_point_arrays">
-<code class="descname">clear_point_arrays</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.Common.clear_point_arrays" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">clear_point_arrays</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.Common.clear_point_arrays" title="Permalink to this definition">¶</a></dt>
 <dd><p>removes all point arrays</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="pyvista.Common.copy">
-<code class="descname">copy</code><span class="sig-paren">(</span><em>deep=True</em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.Common.copy" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">copy</code><span class="sig-paren">(</span><em class="sig-param">deep=True</em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.Common.copy" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns a copy of the object</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -615,25 +527,25 @@ Their direction will be the “direction” of the vector</p>
 
 <dl class="method">
 <dt id="pyvista.Common.copy_meta_from">
-<code class="descname">copy_meta_from</code><span class="sig-paren">(</span><em>ido</em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.Common.copy_meta_from" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">copy_meta_from</code><span class="sig-paren">(</span><em class="sig-param">ido</em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.Common.copy_meta_from" title="Permalink to this definition">¶</a></dt>
 <dd><p>Copies pyvista meta data onto this object from another object</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="method">
 <dt id="pyvista.Common.extent">
-<code class="descname">extent</code><a class="headerlink" href="#pyvista.Common.extent" title="Permalink to this definition">¶</a></dt>
+<em class="property">property </em><code class="sig-name descname">extent</code><a class="headerlink" href="#pyvista.Common.extent" title="Permalink to this definition">¶</a></dt>
 <dd><p>The range of the bounding box</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="method">
 <dt id="pyvista.Common.field_arrays">
-<code class="descname">field_arrays</code><a class="headerlink" href="#pyvista.Common.field_arrays" title="Permalink to this definition">¶</a></dt>
+<em class="property">property </em><code class="sig-name descname">field_arrays</code><a class="headerlink" href="#pyvista.Common.field_arrays" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns all field arrays</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="pyvista.Common.get_data_range">
-<code class="descname">get_data_range</code><span class="sig-paren">(</span><em>arr=None</em>, <em>preference='cell'</em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.Common.get_data_range" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">get_data_range</code><span class="sig-paren">(</span><em class="sig-param">arr=None</em>, <em class="sig-param">preference='cell'</em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.Common.get_data_range" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get the non-NaN min and max of a named scalar array</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -650,67 +562,62 @@ or <code class="docutils literal notranslate"><span class="pre">'field'</span></
 
 <dl class="method">
 <dt id="pyvista.Common.get_scalar">
-<code class="descname">get_scalar</code><span class="sig-paren">(</span><em>name</em>, <em>preference='cell'</em>, <em>info=False</em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.Common.get_scalar" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">get_scalar</code><span class="sig-paren">(</span><em class="sig-param">name</em>, <em class="sig-param">preference='cell'</em>, <em class="sig-param">info=False</em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.Common.get_scalar" title="Permalink to this definition">¶</a></dt>
 <dd><p>Searches both point, cell and field data for an array</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="pyvista.Common.head">
-<code class="descname">head</code><span class="sig-paren">(</span><em>display=True</em>, <em>html=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.Common.head" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">head</code><span class="sig-paren">(</span><em class="sig-param">display=True</em>, <em class="sig-param">html=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.Common.head" title="Permalink to this definition">¶</a></dt>
 <dd><p>Return the header stats of this dataset. If in IPython, this will
 be formatted to HTML. Otherwise returns a console friendly string</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="method">
 <dt id="pyvista.Common.length">
-<code class="descname">length</code><a class="headerlink" href="#pyvista.Common.length" title="Permalink to this definition">¶</a></dt>
+<em class="property">property </em><code class="sig-name descname">length</code><a class="headerlink" href="#pyvista.Common.length" title="Permalink to this definition">¶</a></dt>
 <dd><p>the length of the diagonal of the bounding box</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="method">
 <dt id="pyvista.Common.n_arrays">
-<code class="descname">n_arrays</code><a class="headerlink" href="#pyvista.Common.n_arrays" title="Permalink to this definition">¶</a></dt>
+<em class="property">property </em><code class="sig-name descname">n_arrays</code><a class="headerlink" href="#pyvista.Common.n_arrays" title="Permalink to this definition">¶</a></dt>
 <dd><p>The number of scalar arrays present in the dataset</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="method">
 <dt id="pyvista.Common.n_cells">
-<code class="descname">n_cells</code><a class="headerlink" href="#pyvista.Common.n_cells" title="Permalink to this definition">¶</a></dt>
+<em class="property">property </em><code class="sig-name descname">n_cells</code><a class="headerlink" href="#pyvista.Common.n_cells" title="Permalink to this definition">¶</a></dt>
 <dd><p>The number of cells in the entire dataset</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="method">
 <dt id="pyvista.Common.n_points">
-<code class="descname">n_points</code><a class="headerlink" href="#pyvista.Common.n_points" title="Permalink to this definition">¶</a></dt>
+<em class="property">property </em><code class="sig-name descname">n_points</code><a class="headerlink" href="#pyvista.Common.n_points" title="Permalink to this definition">¶</a></dt>
 <dd><p>The number of points in the entire dataset</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="method">
 <dt id="pyvista.Common.n_scalars">
-<code class="descname">n_scalars</code><a class="headerlink" href="#pyvista.Common.n_scalars" title="Permalink to this definition">¶</a></dt>
-<dd><p>Please use <cite>n_arrays</cite></p>
-<dl class="field-list simple">
-<dt class="field-odd">Type</dt>
-<dd class="field-odd"><p>DEPRECATED</p>
-</dd>
-</dl>
+<em class="property">property </em><code class="sig-name descname">n_scalars</code><a class="headerlink" href="#pyvista.Common.n_scalars" title="Permalink to this definition">¶</a></dt>
+<dd><p>DEPRECATED: Please use <cite>n_arrays</cite></p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="method">
 <dt id="pyvista.Common.number_of_cells">
-<code class="descname">number_of_cells</code><a class="headerlink" href="#pyvista.Common.number_of_cells" title="Permalink to this definition">¶</a></dt>
+<em class="property">property </em><code class="sig-name descname">number_of_cells</code><a class="headerlink" href="#pyvista.Common.number_of_cells" title="Permalink to this definition">¶</a></dt>
 <dd><p>returns the number of cells</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="method">
 <dt id="pyvista.Common.number_of_points">
-<code class="descname">number_of_points</code><a class="headerlink" href="#pyvista.Common.number_of_points" title="Permalink to this definition">¶</a></dt>
+<em class="property">property </em><code class="sig-name descname">number_of_points</code><a class="headerlink" href="#pyvista.Common.number_of_points" title="Permalink to this definition">¶</a></dt>
 <dd><p>returns the number of points</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="pyvista.Common.overwrite">
-<code class="descname">overwrite</code><span class="sig-paren">(</span><em>mesh</em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.Common.overwrite" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">overwrite</code><span class="sig-paren">(</span><em class="sig-param">mesh</em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.Common.overwrite" title="Permalink to this definition">¶</a></dt>
 <dd><p>Overwrites this mesh inplace with the new mesh’s geometries and data</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -721,7 +628,7 @@ be formatted to HTML. Otherwise returns a console friendly string</p>
 
 <dl class="method">
 <dt id="pyvista.Common.plot">
-<code class="descname">plot</code><span class="sig-paren">(</span><em>off_screen=None</em>, <em>full_screen=False</em>, <em>screenshot=None</em>, <em>interactive=True</em>, <em>cpos=None</em>, <em>window_size=None</em>, <em>show_bounds=False</em>, <em>show_axes=True</em>, <em>notebook=None</em>, <em>background=None</em>, <em>text=''</em>, <em>return_img=False</em>, <em>eye_dome_lighting=False</em>, <em>use_panel=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.Common.plot" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">plot</code><span class="sig-paren">(</span><em class="sig-param">off_screen=None</em>, <em class="sig-param">full_screen=False</em>, <em class="sig-param">screenshot=None</em>, <em class="sig-param">interactive=True</em>, <em class="sig-param">cpos=None</em>, <em class="sig-param">window_size=None</em>, <em class="sig-param">show_bounds=False</em>, <em class="sig-param">show_axes=True</em>, <em class="sig-param">notebook=None</em>, <em class="sig-param">background=None</em>, <em class="sig-param">text=''</em>, <em class="sig-param">return_img=False</em>, <em class="sig-param">eye_dome_lighting=False</em>, <em class="sig-param">use_panel=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.Common.plot" title="Permalink to this definition">¶</a></dt>
 <dd><p>Convenience plotting function for a vtk or numpy object.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -758,33 +665,33 @@ Returned only when screenshot enabled</p></li>
 </dl>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="method">
 <dt id="pyvista.Common.point_arrays">
-<code class="descname">point_arrays</code><a class="headerlink" href="#pyvista.Common.point_arrays" title="Permalink to this definition">¶</a></dt>
+<em class="property">property </em><code class="sig-name descname">point_arrays</code><a class="headerlink" href="#pyvista.Common.point_arrays" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns the all point arrays</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="method">
 <dt id="pyvista.Common.points">
-<code class="descname">points</code><a class="headerlink" href="#pyvista.Common.points" title="Permalink to this definition">¶</a></dt>
+<em class="property">property </em><code class="sig-name descname">points</code><a class="headerlink" href="#pyvista.Common.points" title="Permalink to this definition">¶</a></dt>
 <dd><p>returns a pointer to the points as a numpy object</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="pyvista.Common.points_to_double">
-<code class="descname">points_to_double</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.Common.points_to_double" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">points_to_double</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.Common.points_to_double" title="Permalink to this definition">¶</a></dt>
 <dd><p>Makes points double precision</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="pyvista.Common.rename_scalar">
-<code class="descname">rename_scalar</code><span class="sig-paren">(</span><em>old_name</em>, <em>new_name</em>, <em>preference='cell'</em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.Common.rename_scalar" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">rename_scalar</code><span class="sig-paren">(</span><em class="sig-param">old_name</em>, <em class="sig-param">new_name</em>, <em class="sig-param">preference='cell'</em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.Common.rename_scalar" title="Permalink to this definition">¶</a></dt>
 <dd><p>Changes array name by searching for the array then renaming it</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="pyvista.Common.rotate_x">
-<code class="descname">rotate_x</code><span class="sig-paren">(</span><em>angle</em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.Common.rotate_x" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">rotate_x</code><span class="sig-paren">(</span><em class="sig-param">angle</em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.Common.rotate_x" title="Permalink to this definition">¶</a></dt>
 <dd><p>Rotates mesh about the x-axis.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -795,7 +702,7 @@ Returned only when screenshot enabled</p></li>
 
 <dl class="method">
 <dt id="pyvista.Common.rotate_y">
-<code class="descname">rotate_y</code><span class="sig-paren">(</span><em>angle</em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.Common.rotate_y" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">rotate_y</code><span class="sig-paren">(</span><em class="sig-param">angle</em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.Common.rotate_y" title="Permalink to this definition">¶</a></dt>
 <dd><p>Rotates mesh about the y-axis.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -806,7 +713,7 @@ Returned only when screenshot enabled</p></li>
 
 <dl class="method">
 <dt id="pyvista.Common.rotate_z">
-<code class="descname">rotate_z</code><span class="sig-paren">(</span><em>angle</em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.Common.rotate_z" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">rotate_z</code><span class="sig-paren">(</span><em class="sig-param">angle</em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.Common.rotate_z" title="Permalink to this definition">¶</a></dt>
 <dd><p>Rotates mesh about the z-axis.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -815,34 +722,34 @@ Returned only when screenshot enabled</p></li>
 </dl>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="method">
 <dt id="pyvista.Common.scalar_names">
-<code class="descname">scalar_names</code><a class="headerlink" href="#pyvista.Common.scalar_names" title="Permalink to this definition">¶</a></dt>
+<em class="property">property </em><code class="sig-name descname">scalar_names</code><a class="headerlink" href="#pyvista.Common.scalar_names" title="Permalink to this definition">¶</a></dt>
 <dd><p>A list of scalar names for the dataset. This makes
 sure to put the active scalar’s name first in the list.</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="pyvista.Common.set_active_scalar">
-<code class="descname">set_active_scalar</code><span class="sig-paren">(</span><em>name</em>, <em>preference='cell'</em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.Common.set_active_scalar" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">set_active_scalar</code><span class="sig-paren">(</span><em class="sig-param">name</em>, <em class="sig-param">preference='cell'</em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.Common.set_active_scalar" title="Permalink to this definition">¶</a></dt>
 <dd><p>Finds the scalar by name and appropriately sets it as active</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="pyvista.Common.set_active_vectors">
-<code class="descname">set_active_vectors</code><span class="sig-paren">(</span><em>name</em>, <em>preference='cell'</em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.Common.set_active_vectors" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">set_active_vectors</code><span class="sig-paren">(</span><em class="sig-param">name</em>, <em class="sig-param">preference='cell'</em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.Common.set_active_vectors" title="Permalink to this definition">¶</a></dt>
 <dd><p>Finds the vectors by name and appropriately sets it as active</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="method">
 <dt id="pyvista.Common.t_coords">
-<code class="descname">t_coords</code><a class="headerlink" href="#pyvista.Common.t_coords" title="Permalink to this definition">¶</a></dt>
+<em class="property">property </em><code class="sig-name descname">t_coords</code><a class="headerlink" href="#pyvista.Common.t_coords" title="Permalink to this definition">¶</a></dt>
 <dd><p>The active texture coordinates on the points</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="method">
 <dt id="pyvista.Common.textures">
-<code class="descname">textures</code><a class="headerlink" href="#pyvista.Common.textures" title="Permalink to this definition">¶</a></dt>
+<em class="property">property </em><code class="sig-name descname">textures</code><a class="headerlink" href="#pyvista.Common.textures" title="Permalink to this definition">¶</a></dt>
 <dd><p>A dictionary to hold <code class="docutils literal notranslate"><span class="pre">vtk.vtkTexture</span></code> objects that can be
 associated with this dataset. When casting back to a VTK dataset or
 filtering this dataset, these textures will not be passed.</p>
@@ -850,7 +757,7 @@ filtering this dataset, these textures will not be passed.</p>
 
 <dl class="method">
 <dt id="pyvista.Common.transform">
-<code class="descname">transform</code><span class="sig-paren">(</span><em>trans</em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.Common.transform" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">transform</code><span class="sig-paren">(</span><em class="sig-param">trans</em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.Common.transform" title="Permalink to this definition">¶</a></dt>
 <dd><p>Compute a transformation in place using a 4x4 transform.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -861,7 +768,7 @@ filtering this dataset, these textures will not be passed.</p>
 
 <dl class="method">
 <dt id="pyvista.Common.translate">
-<code class="descname">translate</code><span class="sig-paren">(</span><em>xyz</em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.Common.translate" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">translate</code><span class="sig-paren">(</span><em class="sig-param">xyz</em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.Common.translate" title="Permalink to this definition">¶</a></dt>
 <dd><p>Translates the mesh.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -870,15 +777,15 @@ filtering this dataset, these textures will not be passed.</p>
 </dl>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="method">
 <dt id="pyvista.Common.vectors">
-<code class="descname">vectors</code><a class="headerlink" href="#pyvista.Common.vectors" title="Permalink to this definition">¶</a></dt>
+<em class="property">property </em><code class="sig-name descname">vectors</code><a class="headerlink" href="#pyvista.Common.vectors" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns active vectors</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="method">
 <dt id="pyvista.Common.volume">
-<code class="descname">volume</code><a class="headerlink" href="#pyvista.Common.volume" title="Permalink to this definition">¶</a></dt>
+<em class="property">property </em><code class="sig-name descname">volume</code><a class="headerlink" href="#pyvista.Common.volume" title="Permalink to this definition">¶</a></dt>
 <dd><p>Mesh volume</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>

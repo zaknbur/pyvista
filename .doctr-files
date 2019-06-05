@@ -35,6 +35,7 @@
 ./_downloads/822038be643ce1a47e466ddc00928453/using-filters.py
 ./_downloads/848359017e79c6284425ce933aee3082/plot-edl.ipynb
 ./_downloads/84c5c5d2aa389c6d53997b76ba5ff998/decimate.py
+./_downloads/8a290b90d5307758ee14087c73760d27/create-spline.py
 ./_downloads/8dae383028e73c6a3e1aed32bee1e0cc/volume-smoothing.ipynb
 ./_downloads/973b10364dc0f133909b5f2b97027f22/plot-edl.py
 ./_downloads/997d4d99c733d57002fcb5dd38f2f720/streamlines.py
@@ -60,6 +61,7 @@
 ./_downloads/d68f5c146331b420bc23dc2f6388dcd7/compute-normals.ipynb
 ./_downloads/d6bf95d0761796846f8b29ea937995b9/using-filters.ipynb
 ./_downloads/dace825711e79355e93513493fd0db50/geodesic.py
+./_downloads/de49df3560077f27e1ce0512720a9d2e/create-spline.ipynb
 ./_downloads/e04e991f369f4bf45d395af223eb2ae0/plot-opacity.ipynb
 ./_downloads/e245dd6f4b79373f29d868a68cf579d9/create-unstructured-surface.py
 ./_downloads/e4a96981d2ba075fb5cd46d7bd14ddc5/create-structured-surface.py
@@ -100,6 +102,9 @@
 ./_images/sphx_glr_create-geometric-objects_thumb.png
 ./_images/sphx_glr_create-poly_001.png
 ./_images/sphx_glr_create-poly_thumb.png
+./_images/sphx_glr_create-spline_001.png
+./_images/sphx_glr_create-spline_002.png
+./_images/sphx_glr_create-spline_thumb.png
 ./_images/sphx_glr_create-structured-surface_001.png
 ./_images/sphx_glr_create-structured-surface_002.png
 ./_images/sphx_glr_create-structured-surface_thumb.png
@@ -223,6 +228,7 @@
 ./_sources/authors.rst.txt
 ./_sources/examples/00-load/create-geometric-objects.rst.txt
 ./_sources/examples/00-load/create-poly.rst.txt
+./_sources/examples/00-load/create-spline.rst.txt
 ./_sources/examples/00-load/create-structured-surface.rst.txt
 ./_sources/examples/00-load/create-tri-surface.rst.txt
 ./_sources/examples/00-load/create-uniform-grid.rst.txt
@@ -344,6 +350,7 @@
 ./authors.html
 ./examples/00-load/create-geometric-objects.html
 ./examples/00-load/create-poly.html
+./examples/00-load/create-spline.html
 ./examples/00-load/create-structured-surface.html
 ./examples/00-load/create-tri-surface.html
 ./examples/00-load/create-uniform-grid.html

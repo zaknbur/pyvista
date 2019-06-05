@@ -240,19 +240,16 @@
 data objects on the VTK backend. These data types have common features which
 are encompassed int their shared inheritance of <a class="reference internal" href="#pyvista.Grid" title="pyvista.Grid"><code class="xref py py-class docutils literal notranslate"><span class="pre">pyvista.Grid</span></code></a></p>
 <p class="rubric">Attributes</p>
-<table class="longtable docutils align-center">
+<table class="longtable docutils align-default">
 <colgroup>
 <col style="width: 10%" />
 <col style="width: 90%" />
 </colgroup>
 <tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="#pyvista.Grid.dimensions" title="pyvista.Grid.dimensions"><code class="xref py py-obj docutils literal notranslate"><span class="pre">dimensions</span></code></a></p></td>
-<td><p>Returns a length 3 tuple of the grid’s dimensions - these are effectively the number of nodes along each of the three dataset axes</p></td>
-</tr>
 </tbody>
 </table>
 <p class="rubric">Methods</p>
-<table class="longtable docutils align-center">
+<table class="longtable docutils align-default">
 <colgroup>
 <col style="width: 10%" />
 <col style="width: 90%" />
@@ -262,12 +259,12 @@ are encompassed int their shared inheritance of <a class="reference internal" hr
 </table>
 <dl class="class">
 <dt id="pyvista.Grid">
-<em class="property">class </em><code class="descclassname">pyvista.</code><code class="descname">Grid</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.Grid" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pyvista.</code><code class="sig-name descname">Grid</code><span class="sig-paren">(</span><em class="sig-param">*args</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.Grid" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">pyvista.common.Common</span></code></p>
 <p>A class full of common methods for non-pointset grids</p>
-<dl class="attribute">
+<dl class="method">
 <dt id="pyvista.Grid.dimensions">
-<code class="descname">dimensions</code><a class="headerlink" href="#pyvista.Grid.dimensions" title="Permalink to this definition">¶</a></dt>
+<em class="property">property </em><code class="sig-name descname">dimensions</code><a class="headerlink" href="#pyvista.Grid.dimensions" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns a length 3 tuple of the grid’s dimensions - these are
 effectively the number of nodes along each of the three dataset axes</p>
 </dd></dl>
@@ -277,28 +274,16 @@ effectively the number of nodes along each of the three dataset axes</p>
 <div class="section" id="rectilinear-grid">
 <h2>Rectilinear Grid<a class="headerlink" href="#rectilinear-grid" title="Permalink to this headline">¶</a></h2>
 <p class="rubric">Attributes</p>
-<table class="longtable docutils align-center">
+<table class="longtable docutils align-default">
 <colgroup>
 <col style="width: 10%" />
 <col style="width: 90%" />
 </colgroup>
 <tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="#pyvista.RectilinearGrid.points" title="pyvista.RectilinearGrid.points"><code class="xref py py-obj docutils literal notranslate"><span class="pre">points</span></code></a></p></td>
-<td><p>returns a pointer to the points as a numpy object</p></td>
-</tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#pyvista.RectilinearGrid.x" title="pyvista.RectilinearGrid.x"><code class="xref py py-obj docutils literal notranslate"><span class="pre">x</span></code></a></p></td>
-<td><p>Get the coordinates along the X-direction</p></td>
-</tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#pyvista.RectilinearGrid.y" title="pyvista.RectilinearGrid.y"><code class="xref py py-obj docutils literal notranslate"><span class="pre">y</span></code></a></p></td>
-<td><p>Get the coordinates along the Y-direction</p></td>
-</tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#pyvista.RectilinearGrid.z" title="pyvista.RectilinearGrid.z"><code class="xref py py-obj docutils literal notranslate"><span class="pre">z</span></code></a></p></td>
-<td><p>Get the coordinates along the Z-direction</p></td>
-</tr>
 </tbody>
 </table>
 <p class="rubric">Methods</p>
-<table class="longtable docutils align-center">
+<table class="longtable docutils align-default">
 <colgroup>
 <col style="width: 10%" />
 <col style="width: 90%" />
@@ -311,7 +296,7 @@ effectively the number of nodes along each of the three dataset axes</p>
 </table>
 <dl class="class">
 <dt id="pyvista.RectilinearGrid">
-<em class="property">class </em><code class="descclassname">pyvista.</code><code class="descname">RectilinearGrid</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.RectilinearGrid" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pyvista.</code><code class="sig-name descname">RectilinearGrid</code><span class="sig-paren">(</span><em class="sig-param">*args</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.RectilinearGrid" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">vtkCommonDataModelPython.vtkRectilinearGrid</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">pyvista.grid.Grid</span></code></p>
 <p>Extends the functionality of a vtk.vtkRectilinearGrid object
 Can be initialized in several ways:</p>
@@ -344,15 +329,15 @@ from point arrays</p>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">grid</span> <span class="o">=</span> <span class="n">pyvista</span><span class="o">.</span><span class="n">RectilinearGrid</span><span class="p">(</span><span class="n">xrng</span><span class="p">,</span> <span class="n">yrng</span><span class="p">,</span> <span class="n">zrng</span><span class="p">)</span>
 </pre></div>
 </div>
-<dl class="attribute">
+<dl class="method">
 <dt id="pyvista.RectilinearGrid.points">
-<code class="descname">points</code><a class="headerlink" href="#pyvista.RectilinearGrid.points" title="Permalink to this definition">¶</a></dt>
+<em class="property">property </em><code class="sig-name descname">points</code><a class="headerlink" href="#pyvista.RectilinearGrid.points" title="Permalink to this definition">¶</a></dt>
 <dd><p>returns a pointer to the points as a numpy object</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="pyvista.RectilinearGrid.save">
-<code class="descname">save</code><span class="sig-paren">(</span><em>filename</em>, <em>binary=True</em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.RectilinearGrid.save" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">save</code><span class="sig-paren">(</span><em class="sig-param">filename</em>, <em class="sig-param">binary=True</em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.RectilinearGrid.save" title="Permalink to this definition">¶</a></dt>
 <dd><p>Writes a rectilinear grid to disk.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -370,21 +355,21 @@ one system may not be readable on other systems.  Binary can be used
 only with the legacy writer.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="method">
 <dt id="pyvista.RectilinearGrid.x">
-<code class="descname">x</code><a class="headerlink" href="#pyvista.RectilinearGrid.x" title="Permalink to this definition">¶</a></dt>
+<em class="property">property </em><code class="sig-name descname">x</code><a class="headerlink" href="#pyvista.RectilinearGrid.x" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get the coordinates along the X-direction</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="method">
 <dt id="pyvista.RectilinearGrid.y">
-<code class="descname">y</code><a class="headerlink" href="#pyvista.RectilinearGrid.y" title="Permalink to this definition">¶</a></dt>
+<em class="property">property </em><code class="sig-name descname">y</code><a class="headerlink" href="#pyvista.RectilinearGrid.y" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get the coordinates along the Y-direction</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="method">
 <dt id="pyvista.RectilinearGrid.z">
-<code class="descname">z</code><a class="headerlink" href="#pyvista.RectilinearGrid.z" title="Permalink to this definition">¶</a></dt>
+<em class="property">property </em><code class="sig-name descname">z</code><a class="headerlink" href="#pyvista.RectilinearGrid.z" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get the coordinates along the Z-direction</p>
 </dd></dl>
 
@@ -395,34 +380,16 @@ only with the legacy writer.</p>
 <h2>Uniform Grid<a class="headerlink" href="#uniform-grid" title="Permalink to this headline">¶</a></h2>
 <p>PyVista’s definition of a uniform grid is an extension of VTK’s <code class="docutils literal notranslate"><span class="pre">vtkImageData</span></code></p>
 <p class="rubric">Attributes</p>
-<table class="longtable docutils align-center">
+<table class="longtable docutils align-default">
 <colgroup>
 <col style="width: 10%" />
 <col style="width: 90%" />
 </colgroup>
 <tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="#pyvista.UniformGrid.origin" title="pyvista.UniformGrid.origin"><code class="xref py py-obj docutils literal notranslate"><span class="pre">origin</span></code></a></p></td>
-<td><p>Origin of the grid (bottom southwest corner)</p></td>
-</tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#pyvista.UniformGrid.points" title="pyvista.UniformGrid.points"><code class="xref py py-obj docutils literal notranslate"><span class="pre">points</span></code></a></p></td>
-<td><p>returns a pointer to the points as a numpy object</p></td>
-</tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#pyvista.UniformGrid.spacing" title="pyvista.UniformGrid.spacing"><code class="xref py py-obj docutils literal notranslate"><span class="pre">spacing</span></code></a></p></td>
-<td><p>Get the spacing for each axial direction.</p></td>
-</tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#pyvista.UniformGrid.x" title="pyvista.UniformGrid.x"><code class="xref py py-obj docutils literal notranslate"><span class="pre">x</span></code></a></p></td>
-<td><p>all the X points</p></td>
-</tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#pyvista.UniformGrid.y" title="pyvista.UniformGrid.y"><code class="xref py py-obj docutils literal notranslate"><span class="pre">y</span></code></a></p></td>
-<td><p>all the Y points</p></td>
-</tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#pyvista.UniformGrid.z" title="pyvista.UniformGrid.z"><code class="xref py py-obj docutils literal notranslate"><span class="pre">z</span></code></a></p></td>
-<td><p>all the Z points</p></td>
-</tr>
 </tbody>
 </table>
 <p class="rubric">Methods</p>
-<table class="longtable docutils align-center">
+<table class="longtable docutils align-default">
 <colgroup>
 <col style="width: 10%" />
 <col style="width: 90%" />
@@ -435,7 +402,7 @@ only with the legacy writer.</p>
 </table>
 <dl class="class">
 <dt id="pyvista.UniformGrid">
-<em class="property">class </em><code class="descclassname">pyvista.</code><code class="descname">UniformGrid</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.UniformGrid" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pyvista.</code><code class="sig-name descname">UniformGrid</code><span class="sig-paren">(</span><em class="sig-param">*args</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.UniformGrid" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">vtkCommonDataModelPython.vtkImageData</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">pyvista.grid.Grid</span></code></p>
 <p>Extends the functionality of a vtk.vtkImageData object
 Can be initialized in several ways:</p>
@@ -476,21 +443,21 @@ from point arrays</p>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">grid</span> <span class="o">=</span> <span class="n">pyvista</span><span class="o">.</span><span class="n">UniformGrid</span><span class="p">(</span><span class="n">dims</span><span class="p">,</span> <span class="n">spacing</span><span class="p">,</span> <span class="n">origin</span><span class="p">)</span>
 </pre></div>
 </div>
-<dl class="attribute">
+<dl class="method">
 <dt id="pyvista.UniformGrid.origin">
-<code class="descname">origin</code><a class="headerlink" href="#pyvista.UniformGrid.origin" title="Permalink to this definition">¶</a></dt>
+<em class="property">property </em><code class="sig-name descname">origin</code><a class="headerlink" href="#pyvista.UniformGrid.origin" title="Permalink to this definition">¶</a></dt>
 <dd><p>Origin of the grid (bottom southwest corner)</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="method">
 <dt id="pyvista.UniformGrid.points">
-<code class="descname">points</code><a class="headerlink" href="#pyvista.UniformGrid.points" title="Permalink to this definition">¶</a></dt>
+<em class="property">property </em><code class="sig-name descname">points</code><a class="headerlink" href="#pyvista.UniformGrid.points" title="Permalink to this definition">¶</a></dt>
 <dd><p>returns a pointer to the points as a numpy object</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="pyvista.UniformGrid.save">
-<code class="descname">save</code><span class="sig-paren">(</span><em>filename</em>, <em>binary=True</em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.UniformGrid.save" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">save</code><span class="sig-paren">(</span><em class="sig-param">filename</em>, <em class="sig-param">binary=True</em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.UniformGrid.save" title="Permalink to this definition">¶</a></dt>
 <dd><p>Writes image data grid to disk.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -508,27 +475,27 @@ one system may not be readable on other systems.  Binary can be used
 only with the legacy writer.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="method">
 <dt id="pyvista.UniformGrid.spacing">
-<code class="descname">spacing</code><a class="headerlink" href="#pyvista.UniformGrid.spacing" title="Permalink to this definition">¶</a></dt>
+<em class="property">property </em><code class="sig-name descname">spacing</code><a class="headerlink" href="#pyvista.UniformGrid.spacing" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get the spacing for each axial direction.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="method">
 <dt id="pyvista.UniformGrid.x">
-<code class="descname">x</code><a class="headerlink" href="#pyvista.UniformGrid.x" title="Permalink to this definition">¶</a></dt>
+<em class="property">property </em><code class="sig-name descname">x</code><a class="headerlink" href="#pyvista.UniformGrid.x" title="Permalink to this definition">¶</a></dt>
 <dd><p>all the X points</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="method">
 <dt id="pyvista.UniformGrid.y">
-<code class="descname">y</code><a class="headerlink" href="#pyvista.UniformGrid.y" title="Permalink to this definition">¶</a></dt>
+<em class="property">property </em><code class="sig-name descname">y</code><a class="headerlink" href="#pyvista.UniformGrid.y" title="Permalink to this definition">¶</a></dt>
 <dd><p>all the Y points</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="method">
 <dt id="pyvista.UniformGrid.z">
-<code class="descname">z</code><a class="headerlink" href="#pyvista.UniformGrid.z" title="Permalink to this definition">¶</a></dt>
+<em class="property">property </em><code class="sig-name descname">z</code><a class="headerlink" href="#pyvista.UniformGrid.z" title="Permalink to this definition">¶</a></dt>
 <dd><p>all the Z points</p>
 </dd></dl>
 

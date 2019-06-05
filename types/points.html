@@ -333,46 +333,16 @@ The following code creates the class and plots the meshes with various colors.</
 object.  It inherits all methods from the original vtk object,
 <a class="reference external" href="https://www.vtk.org/doc/nightly/html/classvtkPolyData.html">vtk.vtkPolyData</a>.</p>
 <p class="rubric">Attributes</p>
-<table class="longtable docutils align-center">
+<table class="longtable docutils align-default">
 <colgroup>
 <col style="width: 10%" />
 <col style="width: 90%" />
 </colgroup>
 <tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="#pyvista.PolyData.area" title="pyvista.PolyData.area"><code class="xref py py-obj docutils literal notranslate"><span class="pre">area</span></code></a></p></td>
-<td><p>Mesh surface area</p></td>
-</tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#pyvista.PolyData.cell_normals" title="pyvista.PolyData.cell_normals"><code class="xref py py-obj docutils literal notranslate"><span class="pre">cell_normals</span></code></a></p></td>
-<td><p>Cell normals</p></td>
-</tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#pyvista.PolyData.face_normals" title="pyvista.PolyData.face_normals"><code class="xref py py-obj docutils literal notranslate"><span class="pre">face_normals</span></code></a></p></td>
-<td><p>Cell normals</p></td>
-</tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#pyvista.PolyData.faces" title="pyvista.PolyData.faces"><code class="xref py py-obj docutils literal notranslate"><span class="pre">faces</span></code></a></p></td>
-<td><p>returns a pointer to the points as a numpy object</p></td>
-</tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#pyvista.PolyData.lines" title="pyvista.PolyData.lines"><code class="xref py py-obj docutils literal notranslate"><span class="pre">lines</span></code></a></p></td>
-<td><p></p></td>
-</tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#pyvista.PolyData.n_faces" title="pyvista.PolyData.n_faces"><code class="xref py py-obj docutils literal notranslate"><span class="pre">n_faces</span></code></a></p></td>
-<td><p>alias for <code class="docutils literal notranslate"><span class="pre">n_cells</span></code></p></td>
-</tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#pyvista.PolyData.number_of_faces" title="pyvista.PolyData.number_of_faces"><code class="xref py py-obj docutils literal notranslate"><span class="pre">number_of_faces</span></code></a></p></td>
-<td><p>returns the number of cells</p></td>
-</tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#pyvista.PolyData.obbTree" title="pyvista.PolyData.obbTree"><code class="xref py py-obj docutils literal notranslate"><span class="pre">obbTree</span></code></a></p></td>
-<td><p>obbTree is an object to generate oriented bounding box (OBB) trees.</p></td>
-</tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#pyvista.PolyData.point_normals" title="pyvista.PolyData.point_normals"><code class="xref py py-obj docutils literal notranslate"><span class="pre">point_normals</span></code></a></p></td>
-<td><p>Point normals</p></td>
-</tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#pyvista.PolyData.volume" title="pyvista.PolyData.volume"><code class="xref py py-obj docutils literal notranslate"><span class="pre">volume</span></code></a></p></td>
-<td><p>Mesh volume - will throw a VTK error/warning if not a closed surface</p></td>
-</tr>
 </tbody>
 </table>
 <p class="rubric">Methods</p>
-<table class="longtable docutils align-center">
+<table class="longtable docutils align-default">
 <colgroup>
 <col style="width: 10%" />
 <col style="width: 90%" />
@@ -472,7 +442,7 @@ object.  It inherits all methods from the original vtk object,
 </table>
 <dl class="class">
 <dt id="pyvista.PolyData">
-<em class="property">class </em><code class="descclassname">pyvista.</code><code class="descname">PolyData</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.PolyData" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pyvista.</code><code class="sig-name descname">PolyData</code><span class="sig-paren">(</span><em class="sig-param">*args</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.PolyData" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">vtkCommonDataModelPython.vtkPolyData</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">pyvista.common.Common</span></code></p>
 <p>Extends the functionality of a vtk.vtkPolyData object</p>
 <p>Can be initialized in several ways:</p>
@@ -512,9 +482,9 @@ object.  It inherits all methods from the original vtk object,
 <span class="gp">&gt;&gt;&gt; </span><span class="n">surf</span> <span class="o">=</span> <span class="n">pyvista</span><span class="o">.</span><span class="n">PolyData</span><span class="p">(</span><span class="n">examples</span><span class="o">.</span><span class="n">antfile</span><span class="p">)</span>
 </pre></div>
 </div>
-<dl class="attribute">
+<dl class="method">
 <dt id="pyvista.PolyData.area">
-<code class="descname">area</code><a class="headerlink" href="#pyvista.PolyData.area" title="Permalink to this definition">¶</a></dt>
+<em class="property">property </em><code class="sig-name descname">area</code><a class="headerlink" href="#pyvista.PolyData.area" title="Permalink to this definition">¶</a></dt>
 <dd><p>Mesh surface area</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
@@ -528,7 +498,7 @@ object.  It inherits all methods from the original vtk object,
 
 <dl class="method">
 <dt id="pyvista.PolyData.boolean_add">
-<code class="descname">boolean_add</code><span class="sig-paren">(</span><em>mesh</em>, <em>inplace=False</em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.PolyData.boolean_add" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">boolean_add</code><span class="sig-paren">(</span><em class="sig-param">mesh</em>, <em class="sig-param">inplace=False</em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.PolyData.boolean_add" title="Permalink to this definition">¶</a></dt>
 <dd><p>Add a mesh to the current mesh.  Does not attempt to “join”
 the meshes.</p>
 <dl class="field-list simple">
@@ -549,7 +519,7 @@ the meshes.</p>
 
 <dl class="method">
 <dt id="pyvista.PolyData.boolean_cut">
-<code class="descname">boolean_cut</code><span class="sig-paren">(</span><em>cut</em>, <em>tolerance=1e-05</em>, <em>inplace=False</em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.PolyData.boolean_cut" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">boolean_cut</code><span class="sig-paren">(</span><em class="sig-param">cut</em>, <em class="sig-param">tolerance=1e-05</em>, <em class="sig-param">inplace=False</em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.PolyData.boolean_cut" title="Permalink to this definition">¶</a></dt>
 <dd><p>Performs a Boolean cut using another mesh.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -569,7 +539,7 @@ the meshes.</p>
 
 <dl class="method">
 <dt id="pyvista.PolyData.boolean_difference">
-<code class="descname">boolean_difference</code><span class="sig-paren">(</span><em>mesh</em>, <em>inplace=False</em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.PolyData.boolean_difference" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">boolean_difference</code><span class="sig-paren">(</span><em class="sig-param">mesh</em>, <em class="sig-param">inplace=False</em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.PolyData.boolean_difference" title="Permalink to this definition">¶</a></dt>
 <dd><p>Combines two meshes and retains only the volume in common
 between the meshes.</p>
 <dl class="field-list simple">
@@ -590,7 +560,7 @@ between the meshes.</p>
 
 <dl class="method">
 <dt id="pyvista.PolyData.boolean_union">
-<code class="descname">boolean_union</code><span class="sig-paren">(</span><em>mesh</em>, <em>inplace=False</em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.PolyData.boolean_union" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">boolean_union</code><span class="sig-paren">(</span><em class="sig-param">mesh</em>, <em class="sig-param">inplace=False</em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.PolyData.boolean_union" title="Permalink to this definition">¶</a></dt>
 <dd><p>Combines two meshes and attempts to create a manifold mesh.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -608,15 +578,15 @@ between the meshes.</p>
 </dl>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="method">
 <dt id="pyvista.PolyData.cell_normals">
-<code class="descname">cell_normals</code><a class="headerlink" href="#pyvista.PolyData.cell_normals" title="Permalink to this definition">¶</a></dt>
+<em class="property">property </em><code class="sig-name descname">cell_normals</code><a class="headerlink" href="#pyvista.PolyData.cell_normals" title="Permalink to this definition">¶</a></dt>
 <dd><p>Cell normals</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="pyvista.PolyData.center_of_mass">
-<code class="descname">center_of_mass</code><span class="sig-paren">(</span><em>scalars_weight=False</em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.PolyData.center_of_mass" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">center_of_mass</code><span class="sig-paren">(</span><em class="sig-param">scalars_weight=False</em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.PolyData.center_of_mass" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns the coordinates for the center of mass of the mesh.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -633,7 +603,7 @@ between the meshes.</p>
 
 <dl class="method">
 <dt id="pyvista.PolyData.clean">
-<code class="descname">clean</code><span class="sig-paren">(</span><em>point_merging=True</em>, <em>merge_tol=None</em>, <em>lines_to_points=True</em>, <em>polys_to_lines=True</em>, <em>strips_to_polys=True</em>, <em>inplace=False</em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.PolyData.clean" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">clean</code><span class="sig-paren">(</span><em class="sig-param">point_merging=True</em>, <em class="sig-param">merge_tol=None</em>, <em class="sig-param">lines_to_points=True</em>, <em class="sig-param">polys_to_lines=True</em>, <em class="sig-param">strips_to_polys=True</em>, <em class="sig-param">inplace=False</em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.PolyData.clean" title="Permalink to this definition">¶</a></dt>
 <dd><p>Cleans mesh by merging duplicate points, remove unused
 points, and/or remove degenerate cells.</p>
 <dl class="field-list simple">
@@ -661,7 +631,7 @@ default.</p></li>
 
 <dl class="method">
 <dt id="pyvista.PolyData.clip_with_plane">
-<code class="descname">clip_with_plane</code><span class="sig-paren">(</span><em>origin</em>, <em>normal</em>, <em>value=0</em>, <em>inplace=False</em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.PolyData.clip_with_plane" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">clip_with_plane</code><span class="sig-paren">(</span><em class="sig-param">origin</em>, <em class="sig-param">normal</em>, <em class="sig-param">value=0</em>, <em class="sig-param">inplace=False</em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.PolyData.clip_with_plane" title="Permalink to this definition">¶</a></dt>
 <dd><p>Clip a pyvista.PolyData or vtk.vtkPolyData with a plane.</p>
 <p>Can be used to open a mesh which has been closed along a well-defined
 plane.</p>
@@ -688,7 +658,7 @@ normal parameter.</p></li>
 
 <dl class="method">
 <dt id="pyvista.PolyData.compute_normals">
-<code class="descname">compute_normals</code><span class="sig-paren">(</span><em>cell_normals=True</em>, <em>point_normals=True</em>, <em>split_vertices=False</em>, <em>flip_normals=False</em>, <em>consistent_normals=True</em>, <em>auto_orient_normals=False</em>, <em>non_manifold_traversal=True</em>, <em>feature_angle=30.0</em>, <em>inplace=False</em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.PolyData.compute_normals" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">compute_normals</code><span class="sig-paren">(</span><em class="sig-param">cell_normals=True</em>, <em class="sig-param">point_normals=True</em>, <em class="sig-param">split_vertices=False</em>, <em class="sig-param">flip_normals=False</em>, <em class="sig-param">consistent_normals=True</em>, <em class="sig-param">auto_orient_normals=False</em>, <em class="sig-param">non_manifold_traversal=True</em>, <em class="sig-param">feature_angle=30.0</em>, <em class="sig-param">inplace=False</em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.PolyData.compute_normals" title="Permalink to this definition">¶</a></dt>
 <dd><p>Compute point and/or cell normals for a mesh.</p>
 <p>The filter can reorder polygons to insure consistent orientation across
 polygon neighbors. Sharp edges can be split and points duplicated
@@ -744,7 +714,7 @@ restrip the triangles.</p>
 
 <dl class="method">
 <dt id="pyvista.PolyData.curvature">
-<code class="descname">curvature</code><span class="sig-paren">(</span><em>curv_type='mean'</em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.PolyData.curvature" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">curvature</code><span class="sig-paren">(</span><em class="sig-param">curv_type='mean'</em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.PolyData.curvature" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns the pointwise curvature of a mesh</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -768,7 +738,7 @@ Minimum</p></li>
 
 <dl class="method">
 <dt id="pyvista.PolyData.decimate">
-<code class="descname">decimate</code><span class="sig-paren">(</span><em>target_reduction</em>, <em>volume_preservation=False</em>, <em>attribute_error=False</em>, <em>scalars=True</em>, <em>vectors=True</em>, <em>normals=False</em>, <em>tcoords=True</em>, <em>tensors=True</em>, <em>scalars_weight=0.1</em>, <em>vectors_weight=0.1</em>, <em>normals_weight=0.1</em>, <em>tcoords_weight=0.1</em>, <em>tensors_weight=0.1</em>, <em>inplace=False</em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.PolyData.decimate" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">decimate</code><span class="sig-paren">(</span><em class="sig-param">target_reduction</em>, <em class="sig-param">volume_preservation=False</em>, <em class="sig-param">attribute_error=False</em>, <em class="sig-param">scalars=True</em>, <em class="sig-param">vectors=True</em>, <em class="sig-param">normals=False</em>, <em class="sig-param">tcoords=True</em>, <em class="sig-param">tensors=True</em>, <em class="sig-param">scalars_weight=0.1</em>, <em class="sig-param">vectors_weight=0.1</em>, <em class="sig-param">normals_weight=0.1</em>, <em class="sig-param">tcoords_weight=0.1</em>, <em class="sig-param">tensors_weight=0.1</em>, <em class="sig-param">inplace=False</em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.PolyData.decimate" title="Permalink to this definition">¶</a></dt>
 <dd><p>Reduces the number of triangles in a triangular mesh using
 vtkQuadricDecimation.</p>
 <dl class="field-list simple">
@@ -815,7 +785,7 @@ the error metric. Defaults to 0.1.</p></li>
 
 <dl class="method">
 <dt id="pyvista.PolyData.decimate_pro">
-<code class="descname">decimate_pro</code><span class="sig-paren">(</span><em>reduction</em>, <em>feature_angle=45.0</em>, <em>split_angle=75.0</em>, <em>splitting=True</em>, <em>pre_split_mesh=False</em>, <em>preserve_topology=False</em>, <em>inplace=False</em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.PolyData.decimate_pro" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">decimate_pro</code><span class="sig-paren">(</span><em class="sig-param">reduction</em>, <em class="sig-param">feature_angle=45.0</em>, <em class="sig-param">split_angle=75.0</em>, <em class="sig-param">splitting=True</em>, <em class="sig-param">pre_split_mesh=False</em>, <em class="sig-param">preserve_topology=False</em>, <em class="sig-param">inplace=False</em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.PolyData.decimate_pro" title="Permalink to this definition">¶</a></dt>
 <dd><p>Reduce the number of triangles in a triangular mesh, forming a good
 approximation to the original geometry. Based on the algorithm originally
 described in “Decimation of Triangle Meshes”, Proc Siggraph 92.</p>
@@ -852,19 +822,19 @@ will not occur. This may limit the maximum reduction that may be achieved.</p></
 
 <dl class="method">
 <dt id="pyvista.PolyData.delaunay_2d">
-<code class="descname">delaunay_2d</code><span class="sig-paren">(</span><em>tol=1e-05</em>, <em>alpha=0.0</em>, <em>offset=1.0</em>, <em>bound=False</em>, <em>inplace=False</em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.PolyData.delaunay_2d" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">delaunay_2d</code><span class="sig-paren">(</span><em class="sig-param">tol=1e-05</em>, <em class="sig-param">alpha=0.0</em>, <em class="sig-param">offset=1.0</em>, <em class="sig-param">bound=False</em>, <em class="sig-param">inplace=False</em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.PolyData.delaunay_2d" title="Permalink to this definition">¶</a></dt>
 <dd><p>Apply a delaunay 2D filter along the best fitting plane</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="pyvista.PolyData.delauney_2d">
-<code class="descname">delauney_2d</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.PolyData.delauney_2d" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">delauney_2d</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.PolyData.delauney_2d" title="Permalink to this definition">¶</a></dt>
 <dd><p>DEPRECATED. Please see <a class="reference internal" href="#pyvista.PolyData.delaunay_2d" title="pyvista.PolyData.delaunay_2d"><code class="xref py py-func docutils literal notranslate"><span class="pre">pyvista.PolyData.delaunay_2d()</span></code></a></p>
 </dd></dl>
 
 <dl class="method">
 <dt id="pyvista.PolyData.edge_mask">
-<code class="descname">edge_mask</code><span class="sig-paren">(</span><em>angle</em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.PolyData.edge_mask" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">edge_mask</code><span class="sig-paren">(</span><em class="sig-param">angle</em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.PolyData.edge_mask" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns a mask of the points of a surface mesh that have a surface
 angle greater than angle</p>
 <dl class="field-list simple">
@@ -876,7 +846,7 @@ angle greater than angle</p>
 
 <dl class="method">
 <dt id="pyvista.PolyData.extract_edges">
-<code class="descname">extract_edges</code><span class="sig-paren">(</span><em>feature_angle=30</em>, <em>boundary_edges=True</em>, <em>non_manifold_edges=True</em>, <em>feature_edges=True</em>, <em>manifold_edges=True</em>, <em>inplace=False</em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.PolyData.extract_edges" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">extract_edges</code><span class="sig-paren">(</span><em class="sig-param">feature_angle=30</em>, <em class="sig-param">boundary_edges=True</em>, <em class="sig-param">non_manifold_edges=True</em>, <em class="sig-param">feature_edges=True</em>, <em class="sig-param">manifold_edges=True</em>, <em class="sig-param">inplace=False</em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.PolyData.extract_edges" title="Permalink to this definition">¶</a></dt>
 <dd><p>Extracts edges from a surface.  From vtk documentation, the edges are
 one of the following</p>
 <blockquote>
@@ -910,7 +880,7 @@ dihedral angle &gt; feature_angle)</p></li>
 
 <dl class="method">
 <dt id="pyvista.PolyData.extract_largest">
-<code class="descname">extract_largest</code><span class="sig-paren">(</span><em>inplace=False</em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.PolyData.extract_largest" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">extract_largest</code><span class="sig-paren">(</span><em class="sig-param">inplace=False</em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.PolyData.extract_largest" title="Permalink to this definition">¶</a></dt>
 <dd><p>Extract largest connected set in mesh.</p>
 <p>Can be used to reduce residues obtained when generating an isosurface.
 Works only if residues are not connected (share at least one point with)
@@ -928,21 +898,21 @@ the main component of the image.</p>
 </dl>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="method">
 <dt id="pyvista.PolyData.face_normals">
-<code class="descname">face_normals</code><a class="headerlink" href="#pyvista.PolyData.face_normals" title="Permalink to this definition">¶</a></dt>
+<em class="property">property </em><code class="sig-name descname">face_normals</code><a class="headerlink" href="#pyvista.PolyData.face_normals" title="Permalink to this definition">¶</a></dt>
 <dd><p>Cell normals</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="method">
 <dt id="pyvista.PolyData.faces">
-<code class="descname">faces</code><a class="headerlink" href="#pyvista.PolyData.faces" title="Permalink to this definition">¶</a></dt>
+<em class="property">property </em><code class="sig-name descname">faces</code><a class="headerlink" href="#pyvista.PolyData.faces" title="Permalink to this definition">¶</a></dt>
 <dd><p>returns a pointer to the points as a numpy object</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="pyvista.PolyData.fill_holes">
-<code class="descname">fill_holes</code><span class="sig-paren">(</span><em>hole_size</em>, <em>inplace=False</em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.PolyData.fill_holes" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">fill_holes</code><span class="sig-paren">(</span><em class="sig-param">hole_size</em>, <em class="sig-param">inplace=False</em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.PolyData.fill_holes" title="Permalink to this definition">¶</a></dt>
 <dd><p>Fill holes in a pyvista.PolyData or vtk.vtkPolyData object.</p>
 <p>Holes are identified by locating boundary edges, linking them together
 into loops, and then triangulating the resulting loops. Note that you
@@ -969,13 +939,13 @@ without first triangulating the hole.</p></li>
 
 <dl class="method">
 <dt id="pyvista.PolyData.flip_normals">
-<code class="descname">flip_normals</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.PolyData.flip_normals" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">flip_normals</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.PolyData.flip_normals" title="Permalink to this definition">¶</a></dt>
 <dd><p>Flip normals of a triangular mesh by reversing the point ordering.</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="pyvista.PolyData.geodesic">
-<code class="descname">geodesic</code><span class="sig-paren">(</span><em>start_vertex</em>, <em>end_vertex</em>, <em>inplace=False</em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.PolyData.geodesic" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">geodesic</code><span class="sig-paren">(</span><em class="sig-param">start_vertex</em>, <em class="sig-param">end_vertex</em>, <em class="sig-param">inplace=False</em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.PolyData.geodesic" title="Permalink to this definition">¶</a></dt>
 <dd><p>Calculates the geodesic path betweeen two vertices using Dijkstra’s
 algorithm.</p>
 <dl class="field-list simple">
@@ -997,7 +967,7 @@ vertices.</p>
 
 <dl class="method">
 <dt id="pyvista.PolyData.geodesic_distance">
-<code class="descname">geodesic_distance</code><span class="sig-paren">(</span><em>start_vertex</em>, <em>end_vertex</em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.PolyData.geodesic_distance" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">geodesic_distance</code><span class="sig-paren">(</span><em class="sig-param">start_vertex</em>, <em class="sig-param">end_vertex</em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.PolyData.geodesic_distance" title="Permalink to this definition">¶</a></dt>
 <dd><p>Calculates the geodesic distance betweeen two vertices using Dijkstra’s
 algorithm.</p>
 <dl class="field-list simple">
@@ -1016,26 +986,26 @@ algorithm.</p>
 </dl>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="method">
 <dt id="pyvista.PolyData.lines">
-<code class="descname">lines</code><a class="headerlink" href="#pyvista.PolyData.lines" title="Permalink to this definition">¶</a></dt>
+<em class="property">property </em><code class="sig-name descname">lines</code><a class="headerlink" href="#pyvista.PolyData.lines" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="attribute">
+<dl class="method">
 <dt id="pyvista.PolyData.n_faces">
-<code class="descname">n_faces</code><a class="headerlink" href="#pyvista.PolyData.n_faces" title="Permalink to this definition">¶</a></dt>
+<em class="property">property </em><code class="sig-name descname">n_faces</code><a class="headerlink" href="#pyvista.PolyData.n_faces" title="Permalink to this definition">¶</a></dt>
 <dd><p>alias for <code class="docutils literal notranslate"><span class="pre">n_cells</span></code></p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="method">
 <dt id="pyvista.PolyData.number_of_faces">
-<code class="descname">number_of_faces</code><a class="headerlink" href="#pyvista.PolyData.number_of_faces" title="Permalink to this definition">¶</a></dt>
+<em class="property">property </em><code class="sig-name descname">number_of_faces</code><a class="headerlink" href="#pyvista.PolyData.number_of_faces" title="Permalink to this definition">¶</a></dt>
 <dd><p>returns the number of cells</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="method">
 <dt id="pyvista.PolyData.obbTree">
-<code class="descname">obbTree</code><a class="headerlink" href="#pyvista.PolyData.obbTree" title="Permalink to this definition">¶</a></dt>
+<em class="property">property </em><code class="sig-name descname">obbTree</code><a class="headerlink" href="#pyvista.PolyData.obbTree" title="Permalink to this definition">¶</a></dt>
 <dd><p>obbTree is an object to generate oriented bounding box (OBB)
 trees. An oriented bounding box is a bounding box that does not
 necessarily line up along coordinate axes. The OBB tree is a
@@ -1045,13 +1015,13 @@ confine smaller regions of space.</p>
 
 <dl class="method">
 <dt id="pyvista.PolyData.plot_boundaries">
-<code class="descname">plot_boundaries</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.PolyData.plot_boundaries" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">plot_boundaries</code><span class="sig-paren">(</span><em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.PolyData.plot_boundaries" title="Permalink to this definition">¶</a></dt>
 <dd><p>Plots boundaries of a mesh</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="pyvista.PolyData.plot_curvature">
-<code class="descname">plot_curvature</code><span class="sig-paren">(</span><em>curv_type='mean'</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.PolyData.plot_curvature" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">plot_curvature</code><span class="sig-paren">(</span><em class="sig-param">curv_type='mean'</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.PolyData.plot_curvature" title="Permalink to this definition">¶</a></dt>
 <dd><p>Plots curvature</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -1078,19 +1048,19 @@ confine smaller regions of space.</p>
 
 <dl class="method">
 <dt id="pyvista.PolyData.plot_normals">
-<code class="descname">plot_normals</code><span class="sig-paren">(</span><em>show_mesh=True</em>, <em>mag=1.0</em>, <em>flip=False</em>, <em>use_every=1</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.PolyData.plot_normals" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">plot_normals</code><span class="sig-paren">(</span><em class="sig-param">show_mesh=True</em>, <em class="sig-param">mag=1.0</em>, <em class="sig-param">flip=False</em>, <em class="sig-param">use_every=1</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.PolyData.plot_normals" title="Permalink to this definition">¶</a></dt>
 <dd><p>Plot the point normals of a mesh.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="method">
 <dt id="pyvista.PolyData.point_normals">
-<code class="descname">point_normals</code><a class="headerlink" href="#pyvista.PolyData.point_normals" title="Permalink to this definition">¶</a></dt>
+<em class="property">property </em><code class="sig-name descname">point_normals</code><a class="headerlink" href="#pyvista.PolyData.point_normals" title="Permalink to this definition">¶</a></dt>
 <dd><p>Point normals</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="pyvista.PolyData.ray_trace">
-<code class="descname">ray_trace</code><span class="sig-paren">(</span><em>origin</em>, <em>end_point</em>, <em>first_point=False</em>, <em>plot=False</em>, <em>off_screen=False</em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.PolyData.ray_trace" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">ray_trace</code><span class="sig-paren">(</span><em class="sig-param">origin</em>, <em class="sig-param">end_point</em>, <em class="sig-param">first_point=False</em>, <em class="sig-param">plot=False</em>, <em class="sig-param">off_screen=False</em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.PolyData.ray_trace" title="Permalink to this definition">¶</a></dt>
 <dd><p>Performs a single ray trace calculation given a mesh and a line segment
 defined by an origin and end_point.</p>
 <dl class="field-list simple">
@@ -1117,7 +1087,7 @@ intersections.</p></li>
 
 <dl class="method">
 <dt id="pyvista.PolyData.remove_points">
-<code class="descname">remove_points</code><span class="sig-paren">(</span><em>remove</em>, <em>mode='any'</em>, <em>keep_scalars=True</em>, <em>inplace=False</em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.PolyData.remove_points" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">remove_points</code><span class="sig-paren">(</span><em class="sig-param">remove</em>, <em class="sig-param">mode='any'</em>, <em class="sig-param">keep_scalars=True</em>, <em class="sig-param">inplace=False</em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.PolyData.remove_points" title="Permalink to this definition">¶</a></dt>
 <dd><p>Rebuild a mesh by removing points.  Only valid for
 all-triangle meshes.</p>
 <dl class="field-list simple">
@@ -1146,7 +1116,7 @@ returned when inplace=False.</p></li>
 
 <dl class="method">
 <dt id="pyvista.PolyData.save">
-<code class="descname">save</code><span class="sig-paren">(</span><em>filename</em>, <em>binary=True</em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.PolyData.save" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">save</code><span class="sig-paren">(</span><em class="sig-param">filename</em>, <em class="sig-param">binary=True</em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.PolyData.save" title="Permalink to this definition">¶</a></dt>
 <dd><p>Writes a surface mesh to disk.</p>
 <p>Written file may be an ASCII or binary ply, stl, or vtk mesh file.</p>
 <dl class="field-list simple">
@@ -1167,7 +1137,7 @@ file size.</p>
 
 <dl class="method">
 <dt id="pyvista.PolyData.smooth">
-<code class="descname">smooth</code><span class="sig-paren">(</span><em>n_iter=20</em>, <em>convergence=0.0</em>, <em>edge_angle=15</em>, <em>feature_angle=45</em>, <em>boundary_smoothing=True</em>, <em>feature_smoothing=False</em>, <em>inplace=False</em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.PolyData.smooth" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">smooth</code><span class="sig-paren">(</span><em class="sig-param">n_iter=20</em>, <em class="sig-param">convergence=0.0</em>, <em class="sig-param">edge_angle=15</em>, <em class="sig-param">feature_angle=45</em>, <em class="sig-param">boundary_smoothing=True</em>, <em class="sig-param">feature_smoothing=False</em>, <em class="sig-param">inplace=False</em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.PolyData.smooth" title="Permalink to this definition">¶</a></dt>
 <dd><p>Adjust point coordinates using Laplacian smoothing.
 The effect is to “relax” the mesh, making the cells better shaped and
 the vertices more evenly distributed.</p>
@@ -1195,7 +1165,7 @@ result in more smoothing iterations. Range from (0 to 1).</p></li>
 
 <dl class="method">
 <dt id="pyvista.PolyData.subdivide">
-<code class="descname">subdivide</code><span class="sig-paren">(</span><em>nsub</em>, <em>subfilter='linear'</em>, <em>inplace=False</em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.PolyData.subdivide" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">subdivide</code><span class="sig-paren">(</span><em class="sig-param">nsub</em>, <em class="sig-param">subfilter='linear'</em>, <em class="sig-param">inplace=False</em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.PolyData.subdivide" title="Permalink to this definition">¶</a></dt>
 <dd><p>Increase the number of triangles in a single, connected triangular
 mesh.</p>
 <p>Uses one of the following vtk subdivision filters to subdivide a mesh.
@@ -1241,7 +1211,7 @@ is the current number of faces.</p></li>
 
 <dl class="method">
 <dt id="pyvista.PolyData.tri_filter">
-<code class="descname">tri_filter</code><span class="sig-paren">(</span><em>inplace=False</em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.PolyData.tri_filter" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">tri_filter</code><span class="sig-paren">(</span><em class="sig-param">inplace=False</em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.PolyData.tri_filter" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns an all triangle mesh.  More complex polygons will be broken
 down into triangles.</p>
 <dl class="field-list simple">
@@ -1259,7 +1229,7 @@ down into triangles.</p>
 
 <dl class="method">
 <dt id="pyvista.PolyData.tube">
-<code class="descname">tube</code><span class="sig-paren">(</span><em>radius=None</em>, <em>scalars=None</em>, <em>capping=True</em>, <em>n_sides=20</em>, <em>radius_factor=10</em>, <em>preference='point'</em>, <em>inplace=False</em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.PolyData.tube" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">tube</code><span class="sig-paren">(</span><em class="sig-param">radius=None</em>, <em class="sig-param">scalars=None</em>, <em class="sig-param">capping=True</em>, <em class="sig-param">n_sides=20</em>, <em class="sig-param">radius_factor=10</em>, <em class="sig-param">preference='point'</em>, <em class="sig-param">inplace=False</em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.PolyData.tube" title="Permalink to this definition">¶</a></dt>
 <dd><p>Generate a tube around each input line. The radius of the tube can be
 set to linearly vary with a scalar value.</p>
 <dl class="field-list simple">
@@ -1283,9 +1253,9 @@ set to linearly vary with a scalar value.</p>
 </dl>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="method">
 <dt id="pyvista.PolyData.volume">
-<code class="descname">volume</code><a class="headerlink" href="#pyvista.PolyData.volume" title="Permalink to this definition">¶</a></dt>
+<em class="property">property </em><code class="sig-name descname">volume</code><a class="headerlink" href="#pyvista.PolyData.volume" title="Permalink to this definition">¶</a></dt>
 <dd><p>Mesh volume - will throw a VTK error/warning if not a closed surface</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>

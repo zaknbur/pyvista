@@ -266,7 +266,7 @@ can easily apply common filters in an intuitive manner.</p>
 all the the following filters available as callable methods directly from any
 PyVista dataset.</p>
 <p class="rubric">Methods</p>
-<table class="longtable docutils align-center">
+<table class="longtable docutils align-default">
 <colgroup>
 <col style="width: 10%" />
 <col style="width: 90%" />
@@ -363,11 +363,11 @@ PyVista dataset.</p>
 </table>
 <dl class="class">
 <dt id="pyvista.DataSetFilters">
-<em class="property">class </em><code class="descclassname">pyvista.</code><code class="descname">DataSetFilters</code><a class="headerlink" href="#pyvista.DataSetFilters" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pyvista.</code><code class="sig-name descname">DataSetFilters</code><a class="headerlink" href="#pyvista.DataSetFilters" title="Permalink to this definition">¶</a></dt>
 <dd><p>A set of common filters that can be applied to any vtkDataSet</p>
 <dl class="method">
 <dt id="pyvista.DataSetFilters.cell_centers">
-<code class="descname">cell_centers</code><span class="sig-paren">(</span><em>vertex=True</em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.DataSetFilters.cell_centers" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">cell_centers</code><span class="sig-paren">(</span><em class="sig-param">vertex=True</em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.DataSetFilters.cell_centers" title="Permalink to this definition">¶</a></dt>
 <dd><p>Generate points at the center of the cells in this dataset.
 These points can be used for placing glyphs / vectors.</p>
 <dl class="field-list simple">
@@ -379,7 +379,7 @@ These points can be used for placing glyphs / vectors.</p>
 
 <dl class="method">
 <dt id="pyvista.DataSetFilters.cell_data_to_point_data">
-<code class="descname">cell_data_to_point_data</code><span class="sig-paren">(</span><em>pass_cell_data=False</em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.DataSetFilters.cell_data_to_point_data" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">cell_data_to_point_data</code><span class="sig-paren">(</span><em class="sig-param">pass_cell_data=False</em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.DataSetFilters.cell_data_to_point_data" title="Permalink to this definition">¶</a></dt>
 <dd><p>Transforms cell data (i.e., data specified per cell) into point data
 (i.e., data specified at cell points).
 The method of transformation is based on averaging the data values of
@@ -395,7 +395,7 @@ be passed through to the output as well.</p>
 
 <dl class="method">
 <dt id="pyvista.DataSetFilters.clip">
-<code class="descname">clip</code><span class="sig-paren">(</span><em>normal='x'</em>, <em>origin=None</em>, <em>invert=True</em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.DataSetFilters.clip" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">clip</code><span class="sig-paren">(</span><em class="sig-param">normal='x'</em>, <em class="sig-param">origin=None</em>, <em class="sig-param">invert=True</em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.DataSetFilters.clip" title="Permalink to this definition">¶</a></dt>
 <dd><p>Clip a dataset by a plane by specifying the origin and normal. If no
 parameters are given the clip will occur in the center of that dataset</p>
 <dl class="field-list simple">
@@ -414,7 +414,7 @@ occurs</p></li>
 
 <dl class="method">
 <dt id="pyvista.DataSetFilters.clip_box">
-<code class="descname">clip_box</code><span class="sig-paren">(</span><em>bounds=None</em>, <em>invert=True</em>, <em>factor=0.35</em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.DataSetFilters.clip_box" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">clip_box</code><span class="sig-paren">(</span><em class="sig-param">bounds=None</em>, <em class="sig-param">invert=True</em>, <em class="sig-param">factor=0.35</em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.DataSetFilters.clip_box" title="Permalink to this definition">¶</a></dt>
 <dd><p>Clips a dataset by a bounding box defined by the bounds. If no bounds
 are given, a corner of the dataset bounds will be removed.</p>
 <dl class="field-list simple">
@@ -431,7 +431,7 @@ extract the default box.</p></li>
 
 <dl class="method">
 <dt id="pyvista.DataSetFilters.compute_cell_sizes">
-<code class="descname">compute_cell_sizes</code><span class="sig-paren">(</span><em>length=False</em>, <em>area=True</em>, <em>volume=True</em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.DataSetFilters.compute_cell_sizes" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">compute_cell_sizes</code><span class="sig-paren">(</span><em class="sig-param">length=False</em>, <em class="sig-param">area=True</em>, <em class="sig-param">volume=True</em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.DataSetFilters.compute_cell_sizes" title="Permalink to this definition">¶</a></dt>
 <dd><p>This filter computes sizes for 1D (length), 2D (area) and 3D (volume)
 cells.</p>
 <dl class="field-list simple">
@@ -447,7 +447,7 @@ cells.</p>
 
 <dl class="method">
 <dt id="pyvista.DataSetFilters.connectivity">
-<code class="descname">connectivity</code><span class="sig-paren">(</span><em>largest=False</em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.DataSetFilters.connectivity" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">connectivity</code><span class="sig-paren">(</span><em class="sig-param">largest=False</em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.DataSetFilters.connectivity" title="Permalink to this definition">¶</a></dt>
 <dd><p>Find and label connected bodies/volumes. This adds an ID array to
 the point and cell data to distinguish seperate connected bodies.
 This applies a <code class="docutils literal notranslate"><span class="pre">vtkConnectivityFilter</span></code> filter which extracts cells
@@ -463,7 +463,7 @@ as scalar range are known as a region.)</p>
 
 <dl class="method">
 <dt id="pyvista.DataSetFilters.contour">
-<code class="descname">contour</code><span class="sig-paren">(</span><em>isosurfaces=10</em>, <em>scalars=None</em>, <em>compute_normals=False</em>, <em>compute_gradients=False</em>, <em>compute_scalars=True</em>, <em>rng=None</em>, <em>preference='point'</em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.DataSetFilters.contour" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">contour</code><span class="sig-paren">(</span><em class="sig-param">isosurfaces=10</em>, <em class="sig-param">scalars=None</em>, <em class="sig-param">compute_normals=False</em>, <em class="sig-param">compute_gradients=False</em>, <em class="sig-param">compute_scalars=True</em>, <em class="sig-param">rng=None</em>, <em class="sig-param">preference='point'</em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.DataSetFilters.contour" title="Permalink to this definition">¶</a></dt>
 <dd><p>Contours an input dataset by an array. <code class="docutils literal notranslate"><span class="pre">isosurfaces</span></code> can be an integer
 specifying the number of isosurfaces in the data range or an iterable set of
 values for explicitly setting the isosurfaces.</p>
@@ -488,7 +488,7 @@ search for in the dataset.  Must be either <code class="docutils literal notrans
 
 <dl class="method">
 <dt id="pyvista.DataSetFilters.decimate_boundary">
-<code class="descname">decimate_boundary</code><span class="sig-paren">(</span><em>target_reduction=0.5</em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.DataSetFilters.decimate_boundary" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">decimate_boundary</code><span class="sig-paren">(</span><em class="sig-param">target_reduction=0.5</em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.DataSetFilters.decimate_boundary" title="Permalink to this definition">¶</a></dt>
 <dd><p>Return a decimated version of a triangulation of the boundary of
 this mesh’s outer surface</p>
 <dl class="field-list simple">
@@ -503,7 +503,7 @@ of the input triangles.</p>
 
 <dl class="method">
 <dt id="pyvista.DataSetFilters.delaunay_3d">
-<code class="descname">delaunay_3d</code><span class="sig-paren">(</span><em>alpha=0</em>, <em>tol=0.001</em>, <em>offset=2.5</em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.DataSetFilters.delaunay_3d" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">delaunay_3d</code><span class="sig-paren">(</span><em class="sig-param">alpha=0</em>, <em class="sig-param">tol=0.001</em>, <em class="sig-param">offset=2.5</em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.DataSetFilters.delaunay_3d" title="Permalink to this definition">¶</a></dt>
 <dd><p>Constructs a 3D Delaunay triangulation of the mesh.
 This helps smooth out a rugged mesh.</p>
 <dl class="field-list simple">
@@ -525,7 +525,7 @@ triangulation.</p></li>
 
 <dl class="method">
 <dt id="pyvista.DataSetFilters.elevation">
-<code class="descname">elevation</code><span class="sig-paren">(</span><em>low_point=None</em>, <em>high_point=None</em>, <em>scalar_range=None</em>, <em>preference='point'</em>, <em>set_active=True</em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.DataSetFilters.elevation" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">elevation</code><span class="sig-paren">(</span><em class="sig-param">low_point=None</em>, <em class="sig-param">high_point=None</em>, <em class="sig-param">scalar_range=None</em>, <em class="sig-param">preference='point'</em>, <em class="sig-param">set_active=True</em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.DataSetFilters.elevation" title="Permalink to this definition">¶</a></dt>
 <dd><p>Generate scalar values on a dataset.  The scalar values lie within a
 user specified range, and are generated by computing a projection of
 each dataset point onto a line.
@@ -562,7 +562,7 @@ the input dataset and overasdf write an array named <cite>Elevation</cite> if pr
 
 <dl class="method">
 <dt id="pyvista.DataSetFilters.extract_geometry">
-<code class="descname">extract_geometry</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.DataSetFilters.extract_geometry" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">extract_geometry</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.DataSetFilters.extract_geometry" title="Permalink to this definition">¶</a></dt>
 <dd><p>Extract the outer surface of a volume or structured grid dataset as
 PolyData. This will extract all 0D, 1D, and 2D cells producing the
 boundary faces of the dataset.</p>
@@ -570,7 +570,7 @@ boundary faces of the dataset.</p>
 
 <dl class="method">
 <dt id="pyvista.DataSetFilters.glyph">
-<code class="descname">glyph</code><span class="sig-paren">(</span><em>orient=True</em>, <em>scale=True</em>, <em>factor=1.0</em>, <em>geom=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.DataSetFilters.glyph" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">glyph</code><span class="sig-paren">(</span><em class="sig-param">orient=True</em>, <em class="sig-param">scale=True</em>, <em class="sig-param">factor=1.0</em>, <em class="sig-param">geom=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.DataSetFilters.glyph" title="Permalink to this definition">¶</a></dt>
 <dd><p>Copies a geometric representation (called a glyph) to every
 point in the input dataset.  The glyph may be oriented along
 the input vectors, and it may be scaled according to scalar
@@ -589,7 +589,7 @@ data or vector magnitude.</p>
 
 <dl class="method">
 <dt id="pyvista.DataSetFilters.interpolate">
-<code class="descname">interpolate</code><span class="sig-paren">(</span><em>points</em>, <em>sharpness=2</em>, <em>radius=1.0</em>, <em>dimensions=(101</em>, <em>101</em>, <em>101)</em>, <em>pass_cell_arrays=True</em>, <em>pass_point_arrays=True</em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.DataSetFilters.interpolate" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">interpolate</code><span class="sig-paren">(</span><em class="sig-param">points</em>, <em class="sig-param">sharpness=2</em>, <em class="sig-param">radius=1.0</em>, <em class="sig-param">dimensions=(101</em>, <em class="sig-param">101</em>, <em class="sig-param">101)</em>, <em class="sig-param">pass_cell_arrays=True</em>, <em class="sig-param">pass_point_arrays=True</em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.DataSetFilters.interpolate" title="Permalink to this definition">¶</a></dt>
 <dd><p>Interpolate values onto this mesh from the point data of a given
 <a class="reference internal" href="../types/points.html#pyvista.PolyData" title="pyvista.PolyData"><code class="xref py py-class docutils literal notranslate"><span class="pre">pyvista.PolyData</span></code></a> object (typically a point cloud).</p>
 <p>This uses a guassian interpolation kernel. Use the <code class="docutils literal notranslate"><span class="pre">sharpness</span></code> and
@@ -614,7 +614,7 @@ distant points are reduced.</p></li>
 
 <dl class="method">
 <dt id="pyvista.DataSetFilters.outline">
-<code class="descname">outline</code><span class="sig-paren">(</span><em>generate_faces=False</em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.DataSetFilters.outline" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">outline</code><span class="sig-paren">(</span><em class="sig-param">generate_faces=False</em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.DataSetFilters.outline" title="Permalink to this definition">¶</a></dt>
 <dd><p>Produces an outline of the full extent for the input dataset.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -625,7 +625,7 @@ distant points are reduced.</p></li>
 
 <dl class="method">
 <dt id="pyvista.DataSetFilters.outline_corners">
-<code class="descname">outline_corners</code><span class="sig-paren">(</span><em>factor=0.2</em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.DataSetFilters.outline_corners" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">outline_corners</code><span class="sig-paren">(</span><em class="sig-param">factor=0.2</em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.DataSetFilters.outline_corners" title="Permalink to this definition">¶</a></dt>
 <dd><p>Produces an outline of the corners for the input dataset.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -637,7 +637,7 @@ corresponding bounds</p>
 
 <dl class="method">
 <dt id="pyvista.DataSetFilters.point_data_to_cell_data">
-<code class="descname">point_data_to_cell_data</code><span class="sig-paren">(</span><em>pass_point_data=False</em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.DataSetFilters.point_data_to_cell_data" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">point_data_to_cell_data</code><span class="sig-paren">(</span><em class="sig-param">pass_point_data=False</em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.DataSetFilters.point_data_to_cell_data" title="Permalink to this definition">¶</a></dt>
 <dd><p>Transforms point data (i.e., data specified per node) into cell data
 (i.e., data specified within cells).
 Optionally, the input point data can be passed through to the output.</p>
@@ -651,7 +651,7 @@ Optionally, the input point data can be passed through to the output.</p>
 
 <dl class="method">
 <dt id="pyvista.DataSetFilters.sample">
-<code class="descname">sample</code><span class="sig-paren">(</span><em>target</em>, <em>tolerance=None</em>, <em>pass_cell_arrays=True</em>, <em>pass_point_arrays=True</em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.DataSetFilters.sample" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">sample</code><span class="sig-paren">(</span><em class="sig-param">target</em>, <em class="sig-param">tolerance=None</em>, <em class="sig-param">pass_cell_arrays=True</em>, <em class="sig-param">pass_point_arrays=True</em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.DataSetFilters.sample" title="Permalink to this definition">¶</a></dt>
 <dd><p>Resample scalar data from a passed mesh onto this mesh using
 <code class="xref py py-class docutils literal notranslate"><span class="pre">vtk.vtkResampleWithDataSet</span></code>.</p>
 <dl class="field-list simple">
@@ -671,7 +671,7 @@ cell of the input.  If not given, tolerance automatically generated.</p></li>
 
 <dl class="method">
 <dt id="pyvista.DataSetFilters.select_enclosed_points">
-<code class="descname">select_enclosed_points</code><span class="sig-paren">(</span><em>surface</em>, <em>tolerance=0.001</em>, <em>inside_out=False</em>, <em>check_surface=True</em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.DataSetFilters.select_enclosed_points" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">select_enclosed_points</code><span class="sig-paren">(</span><em class="sig-param">surface</em>, <em class="sig-param">tolerance=0.001</em>, <em class="sig-param">inside_out=False</em>, <em class="sig-param">check_surface=True</em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.DataSetFilters.select_enclosed_points" title="Permalink to this definition">¶</a></dt>
 <dd><p>Mark points as to whether they are inside a closed surface.
 This evaluates all the input points to determine whether they are in an
 enclosed surface. The filter produces a (0,1) mask
@@ -706,7 +706,7 @@ manifold.</p></li>
 
 <dl class="method">
 <dt id="pyvista.DataSetFilters.slice">
-<code class="descname">slice</code><span class="sig-paren">(</span><em>normal='x'</em>, <em>origin=None</em>, <em>generate_triangles=False</em>, <em>contour=False</em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.DataSetFilters.slice" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">slice</code><span class="sig-paren">(</span><em class="sig-param">normal='x'</em>, <em class="sig-param">origin=None</em>, <em class="sig-param">generate_triangles=False</em>, <em class="sig-param">contour=False</em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.DataSetFilters.slice" title="Permalink to this definition">¶</a></dt>
 <dd><p>Slice a dataset by a plane at the specified origin and normal vector
 orientation. If no origin is specified, the center of the input dataset will
 be used.</p>
@@ -727,7 +727,7 @@ triangles otherwise, the output will be the intersection polygons.</p></li>
 
 <dl class="method">
 <dt id="pyvista.DataSetFilters.slice_along_axis">
-<code class="descname">slice_along_axis</code><span class="sig-paren">(</span><em>n=5</em>, <em>axis='x'</em>, <em>tolerance=None</em>, <em>generate_triangles=False</em>, <em>contour=False</em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.DataSetFilters.slice_along_axis" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">slice_along_axis</code><span class="sig-paren">(</span><em class="sig-param">n=5</em>, <em class="sig-param">axis='x'</em>, <em class="sig-param">tolerance=None</em>, <em class="sig-param">generate_triangles=False</em>, <em class="sig-param">contour=False</em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.DataSetFilters.slice_along_axis" title="Permalink to this definition">¶</a></dt>
 <dd><p>Create many slices of the input dataset along a specified axis.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -747,7 +747,7 @@ triangles otherwise, the output will be the intersection polygons.</p></li>
 
 <dl class="method">
 <dt id="pyvista.DataSetFilters.slice_orthogonal">
-<code class="descname">slice_orthogonal</code><span class="sig-paren">(</span><em>x=None</em>, <em>y=None</em>, <em>z=None</em>, <em>generate_triangles=False</em>, <em>contour=False</em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.DataSetFilters.slice_orthogonal" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">slice_orthogonal</code><span class="sig-paren">(</span><em class="sig-param">x=None</em>, <em class="sig-param">y=None</em>, <em class="sig-param">z=None</em>, <em class="sig-param">generate_triangles=False</em>, <em class="sig-param">contour=False</em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.DataSetFilters.slice_orthogonal" title="Permalink to this definition">¶</a></dt>
 <dd><p>Creates three orthogonal slices through the dataset on the three
 caresian planes. Yields a MutliBlock dataset of the three slices</p>
 <dl class="field-list simple">
@@ -766,7 +766,7 @@ triangles otherwise, the output will be the intersection polygons.</p></li>
 
 <dl class="method">
 <dt id="pyvista.DataSetFilters.split_bodies">
-<code class="descname">split_bodies</code><span class="sig-paren">(</span><em>label=False</em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.DataSetFilters.split_bodies" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">split_bodies</code><span class="sig-paren">(</span><em class="sig-param">label=False</em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.DataSetFilters.split_bodies" title="Permalink to this definition">¶</a></dt>
 <dd><p>Find, label, and split connected bodies/volumes. This splits
 different connected bodies into blocks in a MultiBlock dataset.</p>
 <dl class="field-list simple">
@@ -779,7 +779,7 @@ different connected bodies into blocks in a MultiBlock dataset.</p>
 
 <dl class="method">
 <dt id="pyvista.DataSetFilters.streamlines">
-<code class="descname">streamlines</code><span class="sig-paren">(</span><em>vectors=None</em>, <em>source_center=None</em>, <em>source_radius=None</em>, <em>n_points=100</em>, <em>integrator_type=45</em>, <em>integration_direction='both'</em>, <em>surface_streamlines=False</em>, <em>initial_step_length=0.5</em>, <em>step_unit='cl'</em>, <em>min_step_length=0.01</em>, <em>max_step_length=1.0</em>, <em>max_steps=2000</em>, <em>terminal_speed=1e-12</em>, <em>max_error=1e-06</em>, <em>max_time=None</em>, <em>compute_vorticity=True</em>, <em>rotation_scale=1.0</em>, <em>interpolator_type='point'</em>, <em>start_position=(0.0</em>, <em>0.0</em>, <em>0.0)</em>, <em>return_source=False</em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.DataSetFilters.streamlines" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">streamlines</code><span class="sig-paren">(</span><em class="sig-param">vectors=None</em>, <em class="sig-param">source_center=None</em>, <em class="sig-param">source_radius=None</em>, <em class="sig-param">n_points=100</em>, <em class="sig-param">integrator_type=45</em>, <em class="sig-param">integration_direction='both'</em>, <em class="sig-param">surface_streamlines=False</em>, <em class="sig-param">initial_step_length=0.5</em>, <em class="sig-param">step_unit='cl'</em>, <em class="sig-param">min_step_length=0.01</em>, <em class="sig-param">max_step_length=1.0</em>, <em class="sig-param">max_steps=2000</em>, <em class="sig-param">terminal_speed=1e-12</em>, <em class="sig-param">max_error=1e-06</em>, <em class="sig-param">max_time=None</em>, <em class="sig-param">compute_vorticity=True</em>, <em class="sig-param">rotation_scale=1.0</em>, <em class="sig-param">interpolator_type='point'</em>, <em class="sig-param">start_position=(0.0</em>, <em class="sig-param">0.0</em>, <em class="sig-param">0.0)</em>, <em class="sig-param">return_source=False</em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.DataSetFilters.streamlines" title="Permalink to this definition">¶</a></dt>
 <dd><p>Integrate a vector field to generate streamlines. The integration is
 performed using a specified integrator, by default Runge-Kutta2.
 This supports integration through any type of dataset.
@@ -845,7 +845,7 @@ streamlines. This will be the second value returned if <code class="docutils lit
 
 <dl class="method">
 <dt id="pyvista.DataSetFilters.texture_map_to_plane">
-<code class="descname">texture_map_to_plane</code><span class="sig-paren">(</span><em>origin=None</em>, <em>point_u=None</em>, <em>point_v=None</em>, <em>inplace=False</em>, <em>name='Texture Coordinates'</em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.DataSetFilters.texture_map_to_plane" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">texture_map_to_plane</code><span class="sig-paren">(</span><em class="sig-param">origin=None</em>, <em class="sig-param">point_u=None</em>, <em class="sig-param">point_v=None</em>, <em class="sig-param">inplace=False</em>, <em class="sig-param">name='Texture Coordinates'</em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.DataSetFilters.texture_map_to_plane" title="Permalink to this definition">¶</a></dt>
 <dd><p>Texture map this dataset to a user defined plane. This is often used
 to define a plane to texture map an image to this dataset. The plane
 defines the spatial reference and extent of that image.</p>
@@ -870,7 +870,7 @@ the filter inplace.</p></li>
 
 <dl class="method">
 <dt id="pyvista.DataSetFilters.threshold">
-<code class="descname">threshold</code><span class="sig-paren">(</span><em>value=None</em>, <em>scalars=None</em>, <em>invert=False</em>, <em>continuous=False</em>, <em>preference='cell'</em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.DataSetFilters.threshold" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">threshold</code><span class="sig-paren">(</span><em class="sig-param">value=None</em>, <em class="sig-param">scalars=None</em>, <em class="sig-param">invert=False</em>, <em class="sig-param">continuous=False</em>, <em class="sig-param">preference='cell'</em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.DataSetFilters.threshold" title="Permalink to this definition">¶</a></dt>
 <dd><p>This filter will apply a <code class="docutils literal notranslate"><span class="pre">vtkThreshold</span></code> filter to the input dataset and
 return the resulting object. This extracts cells where scalar value in each
 cell satisfies threshold criterion.  If scalars is None, the inputs
@@ -898,7 +898,7 @@ search for in the dataset.  Must be either <code class="docutils literal notrans
 
 <dl class="method">
 <dt id="pyvista.DataSetFilters.threshold_percent">
-<code class="descname">threshold_percent</code><span class="sig-paren">(</span><em>percent=0.5</em>, <em>scalars=None</em>, <em>invert=False</em>, <em>continuous=False</em>, <em>preference='cell'</em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.DataSetFilters.threshold_percent" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">threshold_percent</code><span class="sig-paren">(</span><em class="sig-param">percent=0.5</em>, <em class="sig-param">scalars=None</em>, <em class="sig-param">invert=False</em>, <em class="sig-param">continuous=False</em>, <em class="sig-param">preference='cell'</em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.DataSetFilters.threshold_percent" title="Permalink to this definition">¶</a></dt>
 <dd><p>Thresholds the dataset by a percentage of its range on the active
 scalar array or as specified</p>
 <dl class="field-list simple">
@@ -923,7 +923,7 @@ search for in the dataset.  Must be either <code class="docutils literal notrans
 
 <dl class="method">
 <dt id="pyvista.DataSetFilters.triangulate">
-<code class="descname">triangulate</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.DataSetFilters.triangulate" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">triangulate</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.DataSetFilters.triangulate" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns an all triangle mesh.  More complex polygons will be broken
 down into triangles.</p>
 <dl class="field-list simple">
@@ -938,7 +938,7 @@ down into triangles.</p>
 
 <dl class="method">
 <dt id="pyvista.DataSetFilters.warp_by_scalar">
-<code class="descname">warp_by_scalar</code><span class="sig-paren">(</span><em>scalars=None</em>, <em>factor=1.0</em>, <em>normal=None</em>, <em>inplace=False</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.DataSetFilters.warp_by_scalar" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">warp_by_scalar</code><span class="sig-paren">(</span><em class="sig-param">scalars=None</em>, <em class="sig-param">factor=1.0</em>, <em class="sig-param">normal=None</em>, <em class="sig-param">inplace=False</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.DataSetFilters.warp_by_scalar" title="Permalink to this definition">¶</a></dt>
 <dd><p>Warp the dataset’s points by a point data scalar array’s values.
 This modifies point coordinates by moving points along point normals by
 the scalar amount times the scale factor.</p>
@@ -958,7 +958,7 @@ the given normal will be used to project the warp.</p></li>
 
 <dl class="method">
 <dt id="pyvista.DataSetFilters.wireframe">
-<code class="descname">wireframe</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.DataSetFilters.wireframe" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">wireframe</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.DataSetFilters.wireframe" title="Permalink to this definition">¶</a></dt>
 <dd><p>Extract all the internal/external edges of the dataset as PolyData.
 This produces a full wireframe representation of the input dataset.</p>
 </dd></dl>
