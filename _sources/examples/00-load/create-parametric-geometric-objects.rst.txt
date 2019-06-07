@@ -1,0 +1,484 @@
+.. note::
+    :class: sphx-glr-download-link-note
+
+    Click :ref:`here <sphx_glr_download_examples_00-load_create-parametric-geometric-objects.py>` to download the full example code
+.. rst-class:: sphx-glr-example-title
+
+.. _sphx_glr_examples_00-load_create-parametric-geometric-objects.py:
+
+
+.. _ref_parametric_example:
+
+Geometric Parametric Objects
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Creating parametric objects
+
+.. code-block:: default
+
+    import pyvista as pv
+    from math import pi
+
+
+
+
+
+
+
+This example demonstrates how to plot parametric objects using pyvista
+Create a supertoroid
+
+
+.. code-block:: default
+
+
+    supertoroid = pv.ParametricSuperToroid(n1=0.5)
+    supertoroid.plot(color='tan', smooth_shading=True)
+
+
+
+
+.. image:: /examples/00-load/images/sphx_glr_create-parametric-geometric-objects_001.png
+    :class: sphx-glr-single-img
+
+
+
+
+Create a parametric ellipsoid
+
+
+.. code-block:: default
+
+
+    # Ellipsoid with a long x axis
+    ellipsoid = pv.ParametricEllipsoid(10, 5, 5)
+    ellipsoid.plot(color='tan')
+
+
+
+
+
+
+.. image:: /examples/00-load/images/sphx_glr_create-parametric-geometric-objects_002.png
+    :class: sphx-glr-single-img
+
+
+
+
+Create a partial parametric ellipsoid
+
+
+.. code-block:: default
+
+
+    # cool plotting direction
+    cpos = [(21.9930, 21.1810, -30.3780),
+            (-1.1640, -1.3098, -0.1061),
+            (0.8498, -0.2515, 0.4631)]
+
+
+    # half ellipsoid
+    part_ellipsoid = pv.ParametricEllipsoid(10, 5, 5, max_v=pi/2)
+    part_ellipsoid.plot(color='tan', smooth_shading=True, cpos=cpos)
+
+
+
+
+
+.. image:: /examples/00-load/images/sphx_glr_create-parametric-geometric-objects_003.png
+    :class: sphx-glr-single-img
+
+
+
+
+Create a pseudosphere
+
+
+.. code-block:: default
+
+
+    pseudosphere = pv.ParametricPseudosphere()
+    pseudosphere.plot(color='tan', smooth_shading=True)
+
+
+
+
+.. image:: /examples/00-load/images/sphx_glr_create-parametric-geometric-objects_004.png
+    :class: sphx-glr-single-img
+
+
+
+
+Create a bohemiandome
+
+
+.. code-block:: default
+
+
+    bohemiandome = pv.ParametricBohemianDome()
+    bohemiandome.plot(color='tan')
+
+
+
+
+.. image:: /examples/00-load/images/sphx_glr_create-parametric-geometric-objects_005.png
+    :class: sphx-glr-single-img
+
+
+
+
+Create a bour
+
+
+.. code-block:: default
+
+
+    bour = pv.ParametricBour()
+    bour.plot(color='tan')
+
+
+
+
+.. image:: /examples/00-load/images/sphx_glr_create-parametric-geometric-objects_006.png
+    :class: sphx-glr-single-img
+
+
+
+
+Create a boy
+
+
+.. code-block:: default
+
+
+    boy = pv.ParametricBoy()
+    boy.plot(color='tan')
+
+
+
+
+.. image:: /examples/00-load/images/sphx_glr_create-parametric-geometric-objects_007.png
+    :class: sphx-glr-single-img
+
+
+
+
+Create a catalanminimal
+
+
+.. code-block:: default
+
+
+    catalanminimal = pv.ParametricCatalanMinimal()
+    catalanminimal.plot(color='tan')
+
+
+
+
+.. image:: /examples/00-load/images/sphx_glr_create-parametric-geometric-objects_008.png
+    :class: sphx-glr-single-img
+
+
+
+
+Create a conicspiral
+
+
+.. code-block:: default
+
+
+    conicspiral = pv.ParametricConicSpiral()
+    conicspiral.plot(color='tan')
+
+
+
+
+.. image:: /examples/00-load/images/sphx_glr_create-parametric-geometric-objects_009.png
+    :class: sphx-glr-single-img
+
+
+
+
+Create a crosscap
+
+
+.. code-block:: default
+
+
+    crosscap = pv.ParametricCrossCap()
+    crosscap.plot(color='tan')
+
+
+
+
+.. image:: /examples/00-load/images/sphx_glr_create-parametric-geometric-objects_010.png
+    :class: sphx-glr-single-img
+
+
+
+
+Create a dini
+
+
+.. code-block:: default
+
+
+    dini = pv.ParametricDini()
+    dini.plot(color='tan')
+
+
+
+
+.. image:: /examples/00-load/images/sphx_glr_create-parametric-geometric-objects_011.png
+    :class: sphx-glr-single-img
+
+
+
+
+Create a enneper
+
+
+.. code-block:: default
+
+
+    enneper = pv.ParametricEnneper()
+    enneper.plot(color='tan')
+
+
+
+
+.. image:: /examples/00-load/images/sphx_glr_create-parametric-geometric-objects_012.png
+    :class: sphx-glr-single-img
+
+
+
+
+Create a figure8klein
+
+
+.. code-block:: default
+
+
+    figure8klein = pv.ParametricFigure8Klein()
+    figure8klein.plot(color='tan')
+
+
+
+
+.. image:: /examples/00-load/images/sphx_glr_create-parametric-geometric-objects_013.png
+    :class: sphx-glr-single-img
+
+
+
+
+Create a henneberg
+
+
+.. code-block:: default
+
+
+    henneberg = pv.ParametricHenneberg()
+    henneberg.plot(color='tan')
+
+
+
+
+.. image:: /examples/00-load/images/sphx_glr_create-parametric-geometric-objects_014.png
+    :class: sphx-glr-single-img
+
+
+
+
+Create a klein
+
+
+.. code-block:: default
+
+
+    klein = pv.ParametricKlein()
+    klein.plot(color='tan')
+
+
+
+
+.. image:: /examples/00-load/images/sphx_glr_create-parametric-geometric-objects_015.png
+    :class: sphx-glr-single-img
+
+
+
+
+Create a kuen
+
+
+.. code-block:: default
+
+
+    kuen = pv.ParametricKuen()
+    kuen.plot(color='tan')
+
+
+
+
+.. image:: /examples/00-load/images/sphx_glr_create-parametric-geometric-objects_016.png
+    :class: sphx-glr-single-img
+
+
+
+
+Create a mobius
+
+
+.. code-block:: default
+
+
+    mobius = pv.ParametricMobius()
+    mobius.plot(color='tan')
+
+
+
+
+.. image:: /examples/00-load/images/sphx_glr_create-parametric-geometric-objects_017.png
+    :class: sphx-glr-single-img
+
+
+
+
+Create a pluckerconoid
+
+
+.. code-block:: default
+
+
+    pluckerconoid = pv.ParametricPluckerConoid()
+    pluckerconoid.plot(color='tan')
+
+
+
+
+.. image:: /examples/00-load/images/sphx_glr_create-parametric-geometric-objects_018.png
+    :class: sphx-glr-single-img
+
+
+
+
+Create a pseudosphere
+
+
+.. code-block:: default
+
+
+    pseudosphere = pv.ParametricPseudosphere()
+    pseudosphere.plot(color='tan')
+
+
+
+
+.. image:: /examples/00-load/images/sphx_glr_create-parametric-geometric-objects_019.png
+    :class: sphx-glr-single-img
+
+
+
+
+Create a randomhills
+
+
+.. code-block:: default
+
+
+    randomhills = pv.ParametricRandomHills()
+    randomhills.plot(color='tan')
+
+
+
+
+.. image:: /examples/00-load/images/sphx_glr_create-parametric-geometric-objects_020.png
+    :class: sphx-glr-single-img
+
+
+
+
+Create a roman
+
+
+.. code-block:: default
+
+
+    roman = pv.ParametricRoman()
+    roman.plot(color='tan')
+
+
+
+
+.. image:: /examples/00-load/images/sphx_glr_create-parametric-geometric-objects_021.png
+    :class: sphx-glr-single-img
+
+
+
+
+Create a superellipsoid
+
+
+.. code-block:: default
+
+
+    superellipsoid = pv.ParametricSuperEllipsoid(n1=0.1, n2=2)
+    superellipsoid.plot(color='tan')
+
+
+
+
+.. image:: /examples/00-load/images/sphx_glr_create-parametric-geometric-objects_022.png
+    :class: sphx-glr-single-img
+
+
+
+
+Create a torus
+
+
+.. code-block:: default
+
+
+    torus = pv.ParametricTorus()
+    torus.plot(color='tan')
+
+
+
+.. image:: /examples/00-load/images/sphx_glr_create-parametric-geometric-objects_023.png
+    :class: sphx-glr-single-img
+
+
+
+
+
+.. rst-class:: sphx-glr-timing
+
+   **Total running time of the script:** ( 0 minutes  23.293 seconds)
+
+
+.. _sphx_glr_download_examples_00-load_create-parametric-geometric-objects.py:
+
+
+.. only :: html
+
+ .. container:: sphx-glr-footer
+    :class: sphx-glr-footer-example
+
+
+
+  .. container:: sphx-glr-download
+
+     :download:`Download Python source code: create-parametric-geometric-objects.py <create-parametric-geometric-objects.py>`
+
+
+
+  .. container:: sphx-glr-download
+
+     :download:`Download Jupyter notebook: create-parametric-geometric-objects.ipynb <create-parametric-geometric-objects.ipynb>`
+
+
+.. only:: html
+
+ .. rst-class:: sphx-glr-signature
+
+    `Gallery generated by Sphinx-Gallery <https://sphinx-gallery.readthedocs.io>`_

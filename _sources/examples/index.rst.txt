@@ -53,6 +53,26 @@ Loading and Creating Meshes
 
 .. raw:: html
 
+    <div class="sphx-glr-thumbcontainer" tooltip="Creating parametric objects">
+
+.. only:: html
+
+    .. figure:: /examples/00-load/images/thumb/sphx_glr_create-parametric-geometric-objects_thumb.png
+
+        :ref:`sphx_glr_examples_00-load_create-parametric-geometric-objects.py`
+
+.. raw:: html
+
+    </div>
+
+
+.. toctree::
+   :hidden:
+
+   /examples/00-load/create-parametric-geometric-objects
+
+.. raw:: html
+
     <div class="sphx-glr-thumbcontainer" tooltip="Creating a PolyData object from NumPy arrays">
 
 .. only:: html
@@ -754,6 +774,26 @@ Plotting Examples
    :hidden:
 
    /examples/02-plot/plot-screenshot
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbcontainer" tooltip="Use a custom built colormap when plotting scalar values.">
+
+.. only:: html
+
+    .. figure:: /examples/02-plot/images/thumb/sphx_glr_plot-shading_thumb.png
+
+        :ref:`sphx_glr_examples_02-plot_plot-shading.py`
+
+.. raw:: html
+
+    </div>
+
+
+.. toctree::
+   :hidden:
+
+   /examples/02-plot/plot-shading
 
 .. raw:: html
 
