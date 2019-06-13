@@ -24,6 +24,7 @@
 ./_downloads/586a4ef89a47a23651e9c825ebb6159a/compute-normals.py
 ./_downloads/5b13047ce218316b06efa0534d6b5577/decimate.ipynb
 ./_downloads/5c86328122948c36bb2fe3c83a74db3f/plot-gif.py
+./_downloads/68be9ad105af13966420f1c9a85a1894/plot-linked.ipynb
 ./_downloads/6f152800fff155ee32125cf636e9bb91/create-parametric-geometric-objects.ipynb
 ./_downloads/74b7600045d625b11dfaba4d01b70a54/read-parallel.ipynb
 ./_downloads/75160b6e672b56f357dc91a06c24ce5a/resample.ipynb
@@ -38,6 +39,7 @@
 ./_downloads/822038be643ce1a47e466ddc00928453/using-filters.py
 ./_downloads/848359017e79c6284425ce933aee3082/plot-edl.ipynb
 ./_downloads/84c5c5d2aa389c6d53997b76ba5ff998/decimate.py
+./_downloads/899e20eea2fd91da2eb2b3354ea4345d/plot-linked.py
 ./_downloads/8a290b90d5307758ee14087c73760d27/create-spline.py
 ./_downloads/8dae383028e73c6a3e1aed32bee1e0cc/volume-smoothing.ipynb
 ./_downloads/973b10364dc0f133909b5f2b97027f22/plot-edl.py
@@ -181,6 +183,8 @@
 ./_images/sphx_glr_plot-labels_002.png
 ./_images/sphx_glr_plot-labels_003.png
 ./_images/sphx_glr_plot-labels_thumb.png
+./_images/sphx_glr_plot-linked_001.png
+./_images/sphx_glr_plot-linked_thumb.png
 ./_images/sphx_glr_plot-movie_001.png
 ./_images/sphx_glr_plot-movie_thumb.png
 ./_images/sphx_glr_plot-multi-window_001.png
@@ -289,6 +293,7 @@
 ./_sources/examples/02-plot/plot-gif.rst.txt
 ./_sources/examples/02-plot/plot-glyphs.rst.txt
 ./_sources/examples/02-plot/plot-labels.rst.txt
+./_sources/examples/02-plot/plot-linked.rst.txt
 ./_sources/examples/02-plot/plot-movie.rst.txt
 ./_sources/examples/02-plot/plot-multi-window.rst.txt
 ./_sources/examples/02-plot/plot-opacity.rst.txt
@@ -413,6 +418,7 @@
 ./examples/02-plot/plot-gif.html
 ./examples/02-plot/plot-glyphs.html
 ./examples/02-plot/plot-labels.html
+./examples/02-plot/plot-linked.html
 ./examples/02-plot/plot-movie.html
 ./examples/02-plot/plot-multi-window.html
 ./examples/02-plot/plot-opacity.html
