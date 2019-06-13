@@ -589,11 +589,14 @@ data or vector magnitude.</p>
 
 <dl class="method">
 <dt id="pyvista.DataSetFilters.interpolate">
-<code class="sig-name descname">interpolate</code><span class="sig-paren">(</span><em class="sig-param">points</em>, <em class="sig-param">sharpness=2</em>, <em class="sig-param">radius=1.0</em>, <em class="sig-param">dimensions=(101</em>, <em class="sig-param">101</em>, <em class="sig-param">101)</em>, <em class="sig-param">pass_cell_arrays=True</em>, <em class="sig-param">pass_point_arrays=True</em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.DataSetFilters.interpolate" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">interpolate</code><span class="sig-paren">(</span><em class="sig-param">points</em>, <em class="sig-param">sharpness=2</em>, <em class="sig-param">radius=1.0</em>, <em class="sig-param">dimensions=(101</em>, <em class="sig-param">101</em>, <em class="sig-param">101)</em>, <em class="sig-param">pass_cell_arrays=True</em>, <em class="sig-param">pass_point_arrays=True</em>, <em class="sig-param">kernel='gaussian'</em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.DataSetFilters.interpolate" title="Permalink to this definition">¶</a></dt>
 <dd><p>Interpolate values onto this mesh from the point data of a given
 <a class="reference internal" href="../types/points.html#pyvista.PolyData" title="pyvista.PolyData"><code class="xref py py-class docutils literal notranslate"><span class="pre">pyvista.PolyData</span></code></a> object (typically a point cloud).</p>
 <p>This uses a guassian interpolation kernel. Use the <code class="docutils literal notranslate"><span class="pre">sharpness</span></code> and
 <code class="docutils literal notranslate"><span class="pre">radius</span></code> parameters to adjust this kernel.</p>
+<p>Please note that the source dataset is first interpolated onto a fine
+UniformGrid which is then sampled to this mesh. The interpolation grid’s
+dimensions will likely need to be tweaked for each individual use case.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
