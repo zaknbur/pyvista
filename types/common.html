@@ -345,52 +345,55 @@ This base class is analogous to VTK’s <code class="docutils literal notranslat
 <tr class="row-even"><td><p><a class="reference internal" href="#pyvista.Common.clear_point_arrays" title="pyvista.Common.clear_point_arrays"><code class="xref py py-obj docutils literal notranslate"><span class="pre">clear_point_arrays</span></code></a>()</p></td>
 <td><p>removes all point arrays</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#pyvista.Common.copy" title="pyvista.Common.copy"><code class="xref py py-obj docutils literal notranslate"><span class="pre">copy</span></code></a>([deep])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pyvista.Common.clear_textures" title="pyvista.Common.clear_textures"><code class="xref py py-obj docutils literal notranslate"><span class="pre">clear_textures</span></code></a>()</p></td>
+<td><p>Clear the textures from this mesh</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pyvista.Common.copy" title="pyvista.Common.copy"><code class="xref py py-obj docutils literal notranslate"><span class="pre">copy</span></code></a>([deep])</p></td>
 <td><p>Returns a copy of the object</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#pyvista.Common.copy_meta_from" title="pyvista.Common.copy_meta_from"><code class="xref py py-obj docutils literal notranslate"><span class="pre">copy_meta_from</span></code></a>(ido)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pyvista.Common.copy_meta_from" title="pyvista.Common.copy_meta_from"><code class="xref py py-obj docutils literal notranslate"><span class="pre">copy_meta_from</span></code></a>(ido)</p></td>
 <td><p>Copies pyvista meta data onto this object from another object</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#pyvista.Common.get_data_range" title="pyvista.Common.get_data_range"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_data_range</span></code></a>([arr, preference])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#pyvista.Common.get_data_range" title="pyvista.Common.get_data_range"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_data_range</span></code></a>([arr, preference])</p></td>
 <td><p>Get the non-NaN min and max of a named scalar array</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#pyvista.Common.get_scalar" title="pyvista.Common.get_scalar"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_scalar</span></code></a>(name[, preference, info])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pyvista.Common.get_scalar" title="pyvista.Common.get_scalar"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_scalar</span></code></a>(name[, preference, info])</p></td>
 <td><p>Searches both point, cell and field data for an array</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#pyvista.Common.head" title="pyvista.Common.head"><code class="xref py py-obj docutils literal notranslate"><span class="pre">head</span></code></a>([display, html])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#pyvista.Common.head" title="pyvista.Common.head"><code class="xref py py-obj docutils literal notranslate"><span class="pre">head</span></code></a>([display, html])</p></td>
 <td><p>Return the header stats of this dataset.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#pyvista.Common.overwrite" title="pyvista.Common.overwrite"><code class="xref py py-obj docutils literal notranslate"><span class="pre">overwrite</span></code></a>(mesh)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pyvista.Common.overwrite" title="pyvista.Common.overwrite"><code class="xref py py-obj docutils literal notranslate"><span class="pre">overwrite</span></code></a>(mesh)</p></td>
 <td><p>Overwrites this mesh inplace with the new mesh’s geometries and data</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#pyvista.Common.plot" title="pyvista.Common.plot"><code class="xref py py-obj docutils literal notranslate"><span class="pre">plot</span></code></a>([off_screen, full_screen, screenshot, …])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#pyvista.Common.plot" title="pyvista.Common.plot"><code class="xref py py-obj docutils literal notranslate"><span class="pre">plot</span></code></a>([off_screen, full_screen, screenshot, …])</p></td>
 <td><p>Convenience plotting function for a vtk or numpy object.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#pyvista.Common.points_to_double" title="pyvista.Common.points_to_double"><code class="xref py py-obj docutils literal notranslate"><span class="pre">points_to_double</span></code></a>()</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pyvista.Common.points_to_double" title="pyvista.Common.points_to_double"><code class="xref py py-obj docutils literal notranslate"><span class="pre">points_to_double</span></code></a>()</p></td>
 <td><p>Makes points double precision</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#pyvista.Common.rename_scalar" title="pyvista.Common.rename_scalar"><code class="xref py py-obj docutils literal notranslate"><span class="pre">rename_scalar</span></code></a>(old_name, new_name[, preference])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#pyvista.Common.rename_scalar" title="pyvista.Common.rename_scalar"><code class="xref py py-obj docutils literal notranslate"><span class="pre">rename_scalar</span></code></a>(old_name, new_name[, preference])</p></td>
 <td><p>Changes array name by searching for the array then renaming it</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#pyvista.Common.rotate_x" title="pyvista.Common.rotate_x"><code class="xref py py-obj docutils literal notranslate"><span class="pre">rotate_x</span></code></a>(angle)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pyvista.Common.rotate_x" title="pyvista.Common.rotate_x"><code class="xref py py-obj docutils literal notranslate"><span class="pre">rotate_x</span></code></a>(angle)</p></td>
 <td><p>Rotates mesh about the x-axis.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#pyvista.Common.rotate_y" title="pyvista.Common.rotate_y"><code class="xref py py-obj docutils literal notranslate"><span class="pre">rotate_y</span></code></a>(angle)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#pyvista.Common.rotate_y" title="pyvista.Common.rotate_y"><code class="xref py py-obj docutils literal notranslate"><span class="pre">rotate_y</span></code></a>(angle)</p></td>
 <td><p>Rotates mesh about the y-axis.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#pyvista.Common.rotate_z" title="pyvista.Common.rotate_z"><code class="xref py py-obj docutils literal notranslate"><span class="pre">rotate_z</span></code></a>(angle)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pyvista.Common.rotate_z" title="pyvista.Common.rotate_z"><code class="xref py py-obj docutils literal notranslate"><span class="pre">rotate_z</span></code></a>(angle)</p></td>
 <td><p>Rotates mesh about the z-axis.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#pyvista.Common.set_active_scalar" title="pyvista.Common.set_active_scalar"><code class="xref py py-obj docutils literal notranslate"><span class="pre">set_active_scalar</span></code></a>(name[, preference])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#pyvista.Common.set_active_scalar" title="pyvista.Common.set_active_scalar"><code class="xref py py-obj docutils literal notranslate"><span class="pre">set_active_scalar</span></code></a>(name[, preference])</p></td>
 <td><p>Finds the scalar by name and appropriately sets it as active</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#pyvista.Common.set_active_vectors" title="pyvista.Common.set_active_vectors"><code class="xref py py-obj docutils literal notranslate"><span class="pre">set_active_vectors</span></code></a>(name[, preference])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pyvista.Common.set_active_vectors" title="pyvista.Common.set_active_vectors"><code class="xref py py-obj docutils literal notranslate"><span class="pre">set_active_vectors</span></code></a>(name[, preference])</p></td>
 <td><p>Finds the vectors by name and appropriately sets it as active</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#pyvista.Common.transform" title="pyvista.Common.transform"><code class="xref py py-obj docutils literal notranslate"><span class="pre">transform</span></code></a>(trans)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#pyvista.Common.transform" title="pyvista.Common.transform"><code class="xref py py-obj docutils literal notranslate"><span class="pre">transform</span></code></a>(trans)</p></td>
 <td><p>Compute a transformation in place using a 4x4 transform.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#pyvista.Common.translate" title="pyvista.Common.translate"><code class="xref py py-obj docutils literal notranslate"><span class="pre">translate</span></code></a>(xyz)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pyvista.Common.translate" title="pyvista.Common.translate"><code class="xref py py-obj docutils literal notranslate"><span class="pre">translate</span></code></a>(xyz)</p></td>
 <td><p>Translates the mesh.</p></td>
 </tr>
 </tbody>
@@ -516,6 +519,12 @@ Their direction will be the “direction” of the vector</p>
 <dt id="pyvista.Common.clear_point_arrays">
 <code class="sig-name descname">clear_point_arrays</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.Common.clear_point_arrays" title="Permalink to this definition">¶</a></dt>
 <dd><p>removes all point arrays</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pyvista.Common.clear_textures">
+<code class="sig-name descname">clear_textures</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.Common.clear_textures" title="Permalink to this definition">¶</a></dt>
+<dd><p>Clear the textures from this mesh</p>
 </dd></dl>
 
 <dl class="method">
