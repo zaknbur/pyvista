@@ -317,46 +317,49 @@ PyVista dataset.</p>
 <tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">outline_corners</span></code>([factor])</p></td>
 <td><p>Produces an outline of the corners for the input dataset.</p></td>
 </tr>
-<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">point_data_to_cell_data</span></code>([pass_point_data])</p></td>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">plot_over_line</span></code>(pointa, pointb[, resolution, …])</p></td>
+<td><p>Sample a dataset along a high resolution line and plot the variables of interest in 2D where the X-axis is distance from Point A and the Y-axis is the varaible of interest.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">point_data_to_cell_data</span></code>([pass_point_data])</p></td>
 <td><p>Transforms point data (i.e., data specified per node) into cell data (i.e., data specified within cells).</p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">sample</span></code>(target[, tolerance, …])</p></td>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">sample</span></code>(target[, tolerance, …])</p></td>
 <td><p>Resample scalar data from a passed mesh onto this mesh using <code class="xref py py-class docutils literal notranslate"><span class="pre">vtk.vtkResampleWithDataSet</span></code>.</p></td>
 </tr>
-<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">select_enclosed_points</span></code>(surface[, tolerance, …])</p></td>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">select_enclosed_points</span></code>(surface[, tolerance, …])</p></td>
 <td><p>Mark points as to whether they are inside a closed surface.</p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">slice</span></code>([normal, origin, generate_triangles, …])</p></td>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">slice</span></code>([normal, origin, generate_triangles, …])</p></td>
 <td><p>Slice a dataset by a plane at the specified origin and normal vector orientation.</p></td>
 </tr>
-<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">slice_along_axis</span></code>([n, axis, tolerance, …])</p></td>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">slice_along_axis</span></code>([n, axis, tolerance, …])</p></td>
 <td><p>Create many slices of the input dataset along a specified axis.</p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">slice_orthogonal</span></code>([x, y, z, …])</p></td>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">slice_orthogonal</span></code>([x, y, z, …])</p></td>
 <td><p>Creates three orthogonal slices through the dataset on the three caresian planes.</p></td>
 </tr>
-<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">split_bodies</span></code>([label])</p></td>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">split_bodies</span></code>([label])</p></td>
 <td><p>Find, label, and split connected bodies/volumes.</p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">streamlines</span></code>([vectors, source_center, …])</p></td>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">streamlines</span></code>([vectors, source_center, …])</p></td>
 <td><p>Integrate a vector field to generate streamlines.</p></td>
 </tr>
-<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">texture_map_to_plane</span></code>([origin, point_u, …])</p></td>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">texture_map_to_plane</span></code>([origin, point_u, …])</p></td>
 <td><p>Texture map this dataset to a user defined plane.</p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">threshold</span></code>([value, scalars, invert, …])</p></td>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">threshold</span></code>([value, scalars, invert, …])</p></td>
 <td><p>This filter will apply a <code class="docutils literal notranslate"><span class="pre">vtkThreshold</span></code> filter to the input dataset and return the resulting object.</p></td>
 </tr>
-<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">threshold_percent</span></code>([percent, scalars, …])</p></td>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">threshold_percent</span></code>([percent, scalars, …])</p></td>
 <td><p>Thresholds the dataset by a percentage of its range on the active scalar array or as specified</p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">triangulate</span></code>()</p></td>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">triangulate</span></code>()</p></td>
 <td><p>Returns an all triangle mesh.</p></td>
 </tr>
-<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">warp_by_scalar</span></code>([scalars, factor, normal, …])</p></td>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">warp_by_scalar</span></code>([scalars, factor, normal, …])</p></td>
 <td><p>Warp the dataset’s points by a point data scalar array’s values.</p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">wireframe</span></code>()</p></td>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">wireframe</span></code>()</p></td>
 <td><p>Extract all the internal/external edges of the dataset as PolyData.</p></td>
 </tr>
 </tbody>
@@ -634,6 +637,31 @@ distant points are reduced.</p></li>
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>factor</strong> (<em>float</em><em>, </em><em>optional</em>) – controls the relative size of the corners to the length of the
 corresponding bounds</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pyvista.DataSetFilters.plot_over_line">
+<code class="sig-name descname">plot_over_line</code><span class="sig-paren">(</span><em class="sig-param">pointa</em>, <em class="sig-param">pointb</em>, <em class="sig-param">resolution=None</em>, <em class="sig-param">scalars=None</em>, <em class="sig-param">title=None</em>, <em class="sig-param">ylabel=None</em>, <em class="sig-param">figsize=None</em>, <em class="sig-param">figure=True</em>, <em class="sig-param">show=True</em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.DataSetFilters.plot_over_line" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sample a dataset along a high resolution line and plot the variables
+of interest in 2D where the X-axis is distance from Point A and the
+Y-axis is the varaible of interest. Note that this filter returns None.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>pointa</strong> (<em>np.ndarray</em><em> or </em><em>list</em>) – Location in [x, y, z].</p></li>
+<li><p><strong>pointb</strong> (<em>np.ndarray</em><em> or </em><em>list</em>) – Location in [x, y, z].</p></li>
+<li><p><strong>resolution</strong> (<em>int</em>) – number of pieces to divide line into. Defaults to number of cells
+in the input mesh. Must be a positive integer.</p></li>
+<li><p><strong>scalars</strong> (<em>str</em>) – The string name of the variable in the input dataset to probe. The
+active scalar is used by default.</p></li>
+<li><p><strong>title</strong> (<em>str</em>) – The string title of the <cite>matplotlib</cite> figure</p></li>
+<li><p><strong>ylabel</strong> (<em>str</em>) – The string label of the Y-axis. Defaults to variable name</p></li>
+<li><p><strong>figsize</strong> (<em>tuple</em><em>(</em><em>int</em><em>)</em>) – the size of the new figure</p></li>
+<li><p><strong>figure</strong> (<em>bool</em>) – flag on whether or not to create a new figure</p></li>
+<li><p><strong>show</strong> (<em>bool</em>) – Shows the matplotlib figure</p></li>
+</ul>
 </dd>
 </dl>
 </dd></dl>

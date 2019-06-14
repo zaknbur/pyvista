@@ -49,6 +49,7 @@
 ./_downloads/9df56cdf17b3867290648b6e6b32ee28/plot-themes.ipynb
 ./_downloads/a0392749606ac3bc65e656af853f68bc/plot-clear.ipynb
 ./_downloads/a64ec127bb6b73631660d73f3a82944e/create-geometric-objects.ipynb
+./_downloads/a7b373b4da5d226062b787b3f3d760ac/plot-over-line.py
 ./_downloads/ad510dcf96235a6ad2799bb757064b40/plot-screenshot.ipynb
 ./_downloads/b1bee53d06f3b37166bf7cb7b1b2fa4e/extract-cells-inside-surface.ipynb
 ./_downloads/ba18d67e09ae8bc5eac24fdb6d37f658/read-image.py
@@ -75,6 +76,7 @@
 ./_downloads/ea0318be77aa9c4607d7dda6561f3c92/create-poly.py
 ./_downloads/ea72855fac19307326538066e67e296c/create-uniform-grid.py
 ./_downloads/ed87f4e07a3f8d5e24638dee2d9a9ba2/plot-cmap.ipynb
+./_downloads/f1e2a8538e6e2fd67730e6618af31b3e/plot-over-line.ipynb
 ./_downloads/f7a6db97cdde57ff44418a13af6a3b05/plot-shading.py
 ./_downloads/f8691701187b822f862f1a976cedf9e3/slicing.py
 ./_downloads/f9130a8332ccf23916654833ef79f618/plot-labels.py
@@ -196,6 +198,11 @@
 ./_images/sphx_glr_plot-orbit_001.png
 ./_images/sphx_glr_plot-orbit_002.png
 ./_images/sphx_glr_plot-orbit_thumb.png
+./_images/sphx_glr_plot-over-line_001.png
+./_images/sphx_glr_plot-over-line_002.png
+./_images/sphx_glr_plot-over-line_003.png
+./_images/sphx_glr_plot-over-line_004.png
+./_images/sphx_glr_plot-over-line_thumb.png
 ./_images/sphx_glr_plot-scalar-bars_001.png
 ./_images/sphx_glr_plot-scalar-bars_002.png
 ./_images/sphx_glr_plot-scalar-bars_003.png
@@ -298,6 +305,7 @@
 ./_sources/examples/02-plot/plot-multi-window.rst.txt
 ./_sources/examples/02-plot/plot-opacity.rst.txt
 ./_sources/examples/02-plot/plot-orbit.rst.txt
+./_sources/examples/02-plot/plot-over-line.rst.txt
 ./_sources/examples/02-plot/plot-scalar-bars.rst.txt
 ./_sources/examples/02-plot/plot-screenshot.rst.txt
 ./_sources/examples/02-plot/plot-shading.rst.txt
@@ -423,6 +431,7 @@
 ./examples/02-plot/plot-multi-window.html
 ./examples/02-plot/plot-opacity.html
 ./examples/02-plot/plot-orbit.html
+./examples/02-plot/plot-over-line.html
 ./examples/02-plot/plot-scalar-bars.html
 ./examples/02-plot/plot-screenshot.html
 ./examples/02-plot/plot-shading.html

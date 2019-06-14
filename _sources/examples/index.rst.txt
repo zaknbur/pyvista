@@ -757,6 +757,26 @@ Plotting Examples
 
 .. raw:: html
 
+    <div class="sphx-glr-thumbcontainer" tooltip="Plot the values of a dataset over a line through that dataset">
+
+.. only:: html
+
+    .. figure:: /examples/02-plot/images/thumb/sphx_glr_plot-over-line_thumb.png
+
+        :ref:`sphx_glr_examples_02-plot_plot-over-line.py`
+
+.. raw:: html
+
+    </div>
+
+
+.. toctree::
+   :hidden:
+
+   /examples/02-plot/plot-over-line
+
+.. raw:: html
+
     <div class="sphx-glr-thumbcontainer" tooltip="Walk through of all the different capabilities of scalar bars and how a user can customize scal...">
 
 .. only:: html
