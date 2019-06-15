@@ -18,7 +18,7 @@ environment:
       PYTHON_VERSION: "3.7.1"
       PYTHON_ARCH: "64"
 
-  # This is a vtki flag to bypass X11 hooks
+  # This is a pyvista flag to bypass X11 hooks
   ALLOW_PLOTTING: "True"
 
 init:
@@ -26,12 +26,11 @@ init:
 
 install:
   # Use ci-helpers
-  - "git clone --depth 1 git://github.com/vtkiorg/gl-ci-helpers.git"
+  - "git clone --depth 1 git://github.com/pyvista/gl-ci-helpers.git"
   - "powershell gl-ci-helpers/appveyor/install_opengl.ps1"
   # Install requirements
   - "%PYTHON% -m ensurepip"
   - "%PYTHON% -m pip install -r requirements.txt"
-  - "%PYTHON% -c \"import imageio; imageio.plugins.ffmpeg.download()\""
 
 build_script:
   - "%PYTHON% setup.py sdist"

@@ -9,12 +9,12 @@ language: python
 
 env:
   global:
-    # Doctr deploy key for vtkiorg/vtki
-    - secure: "NHUV04B//rkOUxfBd5Bk3QN3g/iQ91wdRZowNTwCIPAbznFez2mbwQcsULDeZk7blPsv1xEAnqy/T/nPyYZuHO9qU2/OElvxKspaKgcGZ9Ig/czmjrO7Y5VnU2KOZJNwBLgb6mEpDvkKoI2j9WhhcTuPcDbayk6ntXz03snYRUsn2nwHfvqDmIqMQnqSwgVejPJQxBsQSikzYzkTYT9P/z94VoSTp4UrvDVj2Tygrw4PnSGe/9x6qTolo3Ofd+REt4LBth6/lBX2OrBhHwnp9wWpEX1o98HOdf5ZUHI9v8gZacnncVXNlNu1biBlQR58bXZX/4RqRdM2No6NcszC8CbhAS+UhNdsPlbimt9L60s4MWwq+IaxCOA2/lzLVdFl8p5wDjz+DDZsdVMNyjhO3MBP5Am/4qJ0BsQEQ2vtZMF3Jvil9oiSSWcp7IGYsj3aPqEcKFm5uc2SwU1CXg4uBfgDsowqBi0t5/1rWqsJQ6p+6ZlU2NoN4ppNjuenAYyDla49J6I7wLp6Z3GwHuupE75WncVhL5BY5aYRcTDrkKuRx8nFIMe+Xuzp6NKmWaDxIwoztA0VPZ9FtMYiM5ahvHwSnZ8wIxUngjMHPuE7+e6KkCBcLt/e7DlzBQhi4kPJesbzw3NX/VmYkAoZsK5tkwKBZakKIKudpjzW73DxGE8="
+    # Doctr deploy key for pyvista/pyvista
+    - secure: "LffT6SJeAEvH2qD6nJXbw8E9VW5ji5vm6bLywUdEjequgKDuV8SvkKuZQq6pBrz2l1YEWlJ70c9oShz7lJ7H2mpteIpjvf5qDx6eXiRyOSwWdsvr8sbQe8C7J0nGxnfEWSANvZ9IA7gXwURbs3wzbnLoUpIiubW8UPnbfk8KAymh3S3wDwNrUXNszc4pzVE/0tkEjIRft1EYfdUpBQfZ1pABltkQcMFqGjDR6LFmkU7EONrRw4cKzg5IFSWRfHtS6S04i+c5PXuMoReM7EkFlUKO4j+fKHJhSxlSuMGYugVlroXWZUjVNZuEWjF1mKLuQnq13FzUHr1skbUXl2LgWHHmHGJ76+8ZtvSPhuOSll4kgWjTVplnW4iqbPcGWnvs3GnSeuAtz5gOjpKbY879/QpFanTXSA4a/WTy0D87aRKjn2p2zQ46/d8oeIfdo1ww59b983ubjJ4jccqlANVyw6AUuND1iXtktCN485SnUfX5bHEj5kEbpRmWBTIfDeMLgyYq7KM0ZHTfd5Zd+V1JD9idJxw3o3L7DytojPgjE190L+DhhyoZdWWZXGFF3DiivQdR/huKvaGG5o2Jg+k9/lBYmq1/AhnOJflakVHbcxQf2FR0DkylMclgLo8X5+MySkMsiSU9kHCCQgzzOOUPClRdxN+4i/tuXn1/H97SAPo="
 
 before_install:
   # configure a headless display
-  - git clone --depth 1 git://github.com/vtkiorg/gl-ci-helpers.git
+  - git clone --depth 1 git://github.com/pyvista/gl-ci-helpers.git
   - source ./gl-ci-helpers/travis/setup_headless_display.sh
 
 install:
@@ -25,7 +25,6 @@ install:
   - pip install -e .
   - which python
   - python -c "import vtk; print(vtk.VTK_VERSION)"
-  - python -c "import imageio; imageio.plugins.ffmpeg.download()"
   - pip list
 
 before_script:
@@ -33,6 +32,7 @@ before_script:
   - echo $TRAVIS_TAG
   - echo $TRAVIS_BRANCH
   - echo $TRAVIS_BUILD_NUMBER
+  - echo $TRAVIS_JOB_NUMBER
   - echo $TRAVIS_REPO_SLUG
 
 matrix:
@@ -41,35 +41,35 @@ matrix:
     - name: Core API 3.5
       python: 3.5
       # Run the test suite and generate coverage report
-      script: pytest -v --cov vtki
+      script: pytest -v --cov pyvista
     - name: Core API 3.6
       python: 3.6
       # Run the test suite and generate coverage report
-      script: pytest -v --cov vtki
+      script: pytest -v --cov pyvista
     - name: Core API 3.7
       python: 3.7
       env:
         - REPORT_COVERAGE: true
         # Deploy to PyPI when core testing passes on 3.7 on tags
-        - VTKI_DEPLOY: true
+        - PYVISTA_DEPLOY: true
       # Run the test suite and generate coverage report
-      script: pytest -v --cov vtki
+      script: pytest -v --cov pyvista
 
     # Test the package docstrings on Python 3.5, 3.6, and 3.7
     - name: Package Docstrings 3.5
       python: 3.5
       # Run all code examples in the docstrings
-      script: pytest -v --doctest-modules vtki
+      script: pytest -v --doctest-modules pyvista
     - name: Package Docstrings 3.6
       python: 3.6
       # Run all code examples in the docstrings
-      script: pytest -v --cov --doctest-modules vtki
+      script: pytest -v --cov --doctest-modules pyvista
     - name: Package Docstrings 3.7
       python: 3.7
       env:
         - REPORT_COVERAGE: true
       # Run all code examples in the docstrings
-      script: pytest -v --cov --doctest-modules vtki
+      script: pytest -v --cov --doctest-modules pyvista
 
     # Test notebooks on Python 3.6 and 3.7
     - name: Notebooks 3.6
@@ -82,15 +82,25 @@ matrix:
     - name: Notebooks 3.6 with panel
       python: 3.6
       # Now make sure notebooks are running
+      # Install panel from master branch to keep up with bug fixes
       script: |
-        pip install panel;
+        git clone https://github.com/pyviz/panel.git;
+        mv panel .panel
+        cd .panel
+        python setup.py install
+        cd ..
         pytest -v --nbval-lax --current-env --disable-warnings tests/*.ipynb;
         pytest -v --nbval-lax --current-env --disable-warnings notebooks/*.ipynb;
     - name: Notebooks 3.7 with panel
       python: 3.7
       # Now make sure notebooks are running
+      # Install panel from master branch to keep up with bug fixes
       script: |
-        pip install panel;
+        git clone https://github.com/pyviz/panel.git;
+        mv panel .panel
+        cd .panel
+        python setup.py install
+        cd ..
         pytest -v --nbval-lax --current-env --disable-warnings tests/*.ipynb;
         pytest -v --nbval-lax --current-env --disable-warnings notebooks/*.ipynb;
     - name: Notebooks 3.7
@@ -107,11 +117,12 @@ matrix:
       python: 3.7
       env:
         - REPORT_COVERAGE: false
+        - DEPLOY_DOCS: true
       # Run `make html` before `make doctest` to avoid segfault.
       # Then rerun `make html` to use updated figures from `make doctest`
       script: |
         cd ./docs/;
-        export VTKI_OFFSCREEN=True;
+        export PYVISTA_OFFSCREEN=True;
         set -e;
         make html;
         make doctest;
@@ -121,15 +132,25 @@ matrix:
     - name: Notebooks 3.6 with panel
       python: 3.6
       # Now make sure notebooks are running
+      # Install panel from master branch to keep up with bug fixes
       script: |
-        pip install panel;
+        git clone https://github.com/pyviz/panel.git;
+        mv panel .panel
+        cd .panel
+        python setup.py install
+        cd ..
         pytest -v --nbval-lax --current-env --disable-warnings tests/*.ipynb;
         pytest -v --nbval-lax --current-env --disable-warnings notebooks/*.ipynb;
     - name: Notebooks 3.7 with panel
       python: 3.7
       # Now make sure notebooks are running
+      # Install panel from master branch to keep up with bug fixes
       script: |
-        pip install panel;
+        git clone https://github.com/pyviz/panel.git;
+        mv panel .panel
+        cd .panel
+        python setup.py install
+        cd ..
         pytest -v --nbval-lax --current-env --disable-warnings tests/*.ipynb;
         pytest -v --nbval-lax --current-env --disable-warnings notebooks/*.ipynb;
 
@@ -149,12 +170,12 @@ deploy:
     script: sh ./docs/deploy_docs_from_travis.sh
     skip_cleanup: true
     on:
-      condition: ($TRAVIS_PYTHON_VERSION == 3.7) && ($TRAVIS_REPO_SLUG == 'vtkiorg/vtki') && ($TRAVIS_BRANCH == 'master') && ($DOCS_TRIGGER == 'BANE_RULES')
+      condition: ($TRAVIS_PYTHON_VERSION == 3.7) && ($TRAVIS_REPO_SLUG == 'pyvista/pyvista') && ($TRAVIS_BRANCH == 'master') && ($DOCS_TRIGGER == 'BANE_RULES' && ($DEPLOY_DOCS == 'true'))
   - provider: pypi
     user: akaszynski
     distributions: sdist
     on:
-      condition: ($TRAVIS_PYTHON_VERSION == 3.7) && ($VTKI_DEPLOY == 'true')
+      condition: ($TRAVIS_PYTHON_VERSION == 3.7) && ($PYVISTA_DEPLOY == 'true')
       tags: true
     password: $PYPI_PASSWORD
 

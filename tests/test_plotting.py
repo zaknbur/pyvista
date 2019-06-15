@@ -7,11 +7,22 @@ import imageio
 import numpy as np
 import pytest
 
-import vtki
-from vtki import examples
-from vtki.plotting import system_supports_plotting
+import pyvista
+from pyvista import examples
+from pyvista.plotting import system_supports_plotting
 
 NO_PLOTTING = not system_supports_plotting()
+
+ffmpeg_failed = False
+try:
+    try:
+        import imageio_ffmpeg
+        imageio_ffmpeg.get_ffmpeg_exe()
+    except ImportError:
+        import imageio
+        imageio.plugins.ffmpeg.download()
+except:
+    ffmpeg_failed = True
 
 
 if __name__ != '__main__':
@@ -19,18 +30,18 @@ if __name__ != '__main__':
 else:
     OFF_SCREEN = False
 
-vtki.OFF_SCREEN = OFF_SCREEN
+pyvista.OFF_SCREEN = OFF_SCREEN
 
 
-sphere = vtki.Sphere()
-sphere_b = vtki.Sphere(1.0)
-sphere_c = vtki.Sphere(2.0)
+sphere = pyvista.Sphere()
+sphere_b = pyvista.Sphere(1.0)
+sphere_c = pyvista.Sphere(2.0)
 
 @pytest.mark.skipif(NO_PLOTTING, reason="Requires system to support plotting")
 def test_plot(tmpdir):
-    filename = os.path.join(vtki.USER_DATA_PATH, 'tmp.png')
+    filename = os.path.join(pyvista.USER_DATA_PATH, 'tmp.png')
     scalars = np.arange(sphere.n_points)
-    cpos, img = vtki.plot(sphere,
+    cpos, img = pyvista.plot(sphere,
                           off_screen=OFF_SCREEN,
                           full_screen=True,
                           text='this is a sphere',
@@ -53,19 +64,19 @@ def test_plot(tmpdir):
 @pytest.mark.skipif(NO_PLOTTING, reason="Requires system to support plotting")
 def test_plot_invalid_style():
     with pytest.raises(Exception):
-        vtki.plot(sphere, style='not a style')
+        pyvista.plot(sphere, style='not a style')
 
 
 @pytest.mark.skipif(NO_PLOTTING, reason="Requires system to support plotting")
 def test_plot_bounds_axes_with_no_data():
-    plotter = vtki.Plotter()
+    plotter = pyvista.Plotter()
     plotter.show_bounds()
     plotter.close()
 
 
 @pytest.mark.skipif(NO_PLOTTING, reason="Requires system to support plotting")
 def test_plot_show_grid():
-    plotter = vtki.Plotter()
+    plotter = pyvista.Plotter()
     plotter.show_grid()
     plotter.add_mesh(sphere)
     plotter.close()
@@ -78,7 +89,7 @@ def test_set_camera_position():
             (0.0, 0.0, 0.0),
             (-0.7611973344707588, -0.5507178512374836, 0.3424740374436883)]
 
-    plotter = vtki.Plotter(off_screen=OFF_SCREEN)
+    plotter = pyvista.Plotter(off_screen=OFF_SCREEN)
     plotter.add_mesh(sphere)
     plotter.camera_position = 'xy'
     plotter.camera_position = 'xz'
@@ -87,13 +98,13 @@ def test_set_camera_position():
     plotter.camera_position = 'zx'
     plotter.camera_position = 'zy'
     plotter.camera_position = cpos
-    cpos_out = plotter.plot()
+    cpos_out = plotter.show()
     assert cpos_out == cpos
 
 
 @pytest.mark.skipif(NO_PLOTTING, reason="Requires system to support plotting")
 def test_plot_no_active_scalars():
-    plotter = vtki.Plotter(off_screen=OFF_SCREEN)
+    plotter = pyvista.Plotter(off_screen=OFF_SCREEN)
     plotter.add_mesh(sphere)
     with pytest.raises(Exception):
         plotter.update_scalars(np.arange(5))
@@ -103,7 +114,7 @@ def test_plot_no_active_scalars():
 
 @pytest.mark.skipif(NO_PLOTTING, reason="Requires system to support plotting")
 def test_plot_show_bounds():
-    plotter = vtki.Plotter(off_screen=OFF_SCREEN)
+    plotter = pyvista.Plotter(off_screen=OFF_SCREEN)
     plotter.add_mesh(sphere)
     plotter.show_bounds(show_xaxis=False,
                         show_yaxis=False,
@@ -120,21 +131,21 @@ def test_plot_show_bounds():
                             show_ylabels=False,
                             show_zlabels=False,
                             use_2d=True)
-    plotter.plot()
+    plotter.show()
 
 @pytest.mark.skipif(NO_PLOTTING, reason="Requires system to support plotting")
 def test_plot_label_fmt():
-    plotter = vtki.Plotter(off_screen=OFF_SCREEN)
+    plotter = pyvista.Plotter(off_screen=OFF_SCREEN)
     plotter.add_mesh(sphere)
     plotter.show_bounds(xlabel='My X', fmt=r'%.3f')
-    plotter.plot()
+    plotter.show()
 
 
 @pytest.mark.skipif(NO_PLOTTING, reason="Requires system to support plotting")
 @pytest.mark.parametrize('grid', [True, 'both', 'front', 'back'])
 @pytest.mark.parametrize('location', ['all', 'origin', 'outer', 'front', 'back'])
 def test_plot_show_bounds_params(grid, location):
-    plotter = vtki.Plotter(off_screen=OFF_SCREEN)
+    plotter = pyvista.Plotter(off_screen=OFF_SCREEN)
     plotter.add_mesh(sphere)
     plotter.show_bounds(grid=grid, ticks='inside', location=location)
     plotter.show_bounds(grid=grid, ticks='outside', location=location)
@@ -144,7 +155,7 @@ def test_plot_show_bounds_params(grid, location):
 
 @pytest.mark.skipif(NO_PLOTTING, reason="Requires system to support plotting")
 def test_plotter_scale():
-    plotter = vtki.Plotter(off_screen=OFF_SCREEN)
+    plotter = pyvista.Plotter(off_screen=OFF_SCREEN)
     plotter.add_mesh(sphere)
     plotter.set_scale(10, 10, 10)
     plotter.set_scale(5.0)
@@ -156,7 +167,7 @@ def test_plotter_scale():
 
 @pytest.mark.skipif(NO_PLOTTING, reason="Requires system to support plotting")
 def test_plot_add_scalar_bar():
-    plotter = vtki.Plotter(off_screen=OFF_SCREEN)
+    plotter = pyvista.Plotter(off_screen=OFF_SCREEN)
     plotter.add_mesh(sphere)
     plotter.add_scalar_bar(label_font_size=10, title_font_size=20, title='woa',
                 interactive=True, vertical=True)
@@ -165,47 +176,48 @@ def test_plot_add_scalar_bar():
 @pytest.mark.skipif(NO_PLOTTING, reason="Requires system to support plotting")
 def test_plot_invalid_add_scalar_bar():
     with pytest.raises(Exception):
-        plotter = vtki.Plotter()
+        plotter = pyvista.Plotter()
         plotter.add_scalar_bar()
 
 
 @pytest.mark.skipif(NO_PLOTTING, reason="Requires system to support plotting")
 def test_plot_list():
-    vtki.plot([sphere, sphere_b],
+    pyvista.plot([sphere, sphere_b],
               off_screen=OFF_SCREEN,
               style='points')
 
-    vtki.plot([sphere, sphere_b, sphere_c],
+    pyvista.plot([sphere, sphere_b, sphere_c],
               off_screen=OFF_SCREEN,
               style='wireframe')
 
 @pytest.mark.skipif(NO_PLOTTING, reason="Requires system to support plotting")
 def test_add_lines_invalid():
-    plotter = vtki.Plotter()
+    plotter = pyvista.Plotter()
     with pytest.raises(Exception):
         plotter.add_lines(range(10))
 
 
 @pytest.mark.skipif(NO_PLOTTING, reason="Requires system to support plotting")
 def test_open_gif_invalid():
-    plotter = vtki.Plotter(off_screen=OFF_SCREEN)
+    plotter = pyvista.Plotter(off_screen=OFF_SCREEN)
     with pytest.raises(Exception):
         plotter.open_gif('file.abs')
 
 
+@pytest.mark.skipif(ffmpeg_failed, reason="Requires imageio-ffmpeg")
 @pytest.mark.skipif(NO_PLOTTING, reason="Requires system to support plotting")
 def test_make_movie():
     # Make temporary file
-    filename = os.path.join(vtki.USER_DATA_PATH, 'tmp.mp4')
+    filename = os.path.join(pyvista.USER_DATA_PATH, 'tmp.mp4')
 
     movie_sphere = sphere.copy()
-    plotter = vtki.Plotter(off_screen=OFF_SCREEN)
+    plotter = pyvista.Plotter(off_screen=OFF_SCREEN)
     plotter.open_movie(filename)
     actor = plotter.add_axes_at_origin()
     plotter.remove_actor(actor)
     plotter.add_mesh(movie_sphere,
                      scalars=np.random.random(movie_sphere.n_faces))
-    plotter.plot(auto_close=False, window_size=[304, 304])
+    plotter.show(auto_close=False, window_size=[304, 304])
     plotter.set_focus([0, 0, 0])
     for i in range(10):
         plotter.write_frame()
@@ -230,19 +242,19 @@ def test_make_movie():
 
 @pytest.mark.skipif(NO_PLOTTING, reason="Requires system to support plotting")
 def test_add_legend():
-    plotter = vtki.Plotter(off_screen=OFF_SCREEN)
+    plotter = pyvista.Plotter(off_screen=OFF_SCREEN)
     plotter.add_mesh(sphere)
     with pytest.raises(Exception):
         plotter.add_legend()
     legend_labels = [['sphere', 'r']]
     plotter.add_legend(labels=legend_labels, border=True, bcolor=None,
                        size=[0.1, 0.1])
-    plotter.plot()
+    plotter.show()
 
 
 @pytest.mark.skipif(NO_PLOTTING, reason="Requires system to support plotting")
 def test_add_axes_twice():
-    plotter = vtki.Plotter(off_screen=OFF_SCREEN)
+    plotter = pyvista.Plotter(off_screen=OFF_SCREEN)
     plotter.add_axes()
     plotter.add_axes(interactive=True)
 
@@ -250,7 +262,7 @@ def test_add_axes_twice():
 @pytest.mark.skipif(NO_PLOTTING, reason="Requires system to support plotting")
 def test_add_point_labels():
     n = 10
-    plotter = vtki.Plotter(off_screen=OFF_SCREEN)
+    plotter = pyvista.Plotter(off_screen=OFF_SCREEN)
     points = np.random.random((n, 3))
 
     with pytest.raises(Exception):
@@ -259,68 +271,68 @@ def test_add_point_labels():
     plotter.set_background('k')
     plotter.add_point_labels(points, range(n), show_points=True, point_color='r')
     plotter.add_point_labels(points - 1, range(n), show_points=False, point_color='r')
-    plotter.plot()
+    plotter.show()
 
 
 @pytest.mark.skipif(NO_PLOTTING, reason="Requires system to support plotting")
 def test_add_points():
     n = 10
-    plotter = vtki.Plotter(off_screen=OFF_SCREEN)
+    plotter = pyvista.Plotter(off_screen=OFF_SCREEN)
     points = np.random.random((n, 3))
     plotter.add_points(points, scalars=np.arange(10), cmap=None, flip_scalars=True)
-    plotter.plot()
+    plotter.show()
 
 
 @pytest.mark.skipif(NO_PLOTTING, reason="Requires system to support plotting")
 def test_key_press_event():
-    plotter = vtki.Plotter(off_screen=False)
+    plotter = pyvista.Plotter(off_screen=False)
     plotter.key_press_event(None, None)
 
 
 @pytest.mark.skipif(NO_PLOTTING, reason="Requires system to support plotting")
 def test_left_button_down():
-    plotter = vtki.Plotter(off_screen=False)
+    plotter = pyvista.Plotter(off_screen=False)
     plotter.left_button_down(None, None)
     # assert np.allclose(plotter.pickpoint, [0, 0, 0])
 
 
 @pytest.mark.skipif(NO_PLOTTING, reason="Requires system to support plotting")
 def test_update():
-    plotter = vtki.Plotter(off_screen=True)
+    plotter = pyvista.Plotter(off_screen=True)
     plotter.update()
 
 
 @pytest.mark.skipif(NO_PLOTTING, reason="Requires system to support plotting")
 def test_plot_cell_scalars():
-    plotter = vtki.Plotter(off_screen=OFF_SCREEN)
+    plotter = pyvista.Plotter(off_screen=OFF_SCREEN)
     scalars = np.arange(sphere.n_faces)
     plotter.add_mesh(sphere, interpolate_before_map=True, scalars=scalars,
                      n_colors=5, rng=10)
-    plotter.plot()
+    plotter.show()
 
 @pytest.mark.skipif(NO_PLOTTING, reason="Requires system to support plotting")
 def test_plot_clim():
-    plotter = vtki.Plotter(off_screen=OFF_SCREEN)
+    plotter = pyvista.Plotter(off_screen=OFF_SCREEN)
     scalars = np.arange(sphere.n_faces)
     plotter.add_mesh(sphere, interpolate_before_map=True, scalars=scalars,
                      n_colors=5, clim=10)
-    plotter.plot()
+    plotter.show()
     assert plotter.mapper.GetScalarRange() == (-10, 10)
 
 
 @pytest.mark.skipif(NO_PLOTTING, reason="Requires system to support plotting")
-def test_invalid_n_scalars():
+def test_invalid_n_arrays():
     with pytest.raises(Exception):
-        plotter = vtki.Plotter(off_screen=OFF_SCREEN)
+        plotter = pyvista.Plotter(off_screen=OFF_SCREEN)
         plotter.add_mesh(sphere, scalars=np.arange(10))
-        plotter.plot()
+        plotter.show()
 
 
 @pytest.mark.skipif(NO_PLOTTING, reason="Requires system to support plotting")
 def test_plot_arrow():
     cent = np.random.random(3)
     direction = np.random.random(3)
-    cpos, img = vtki.plot_arrows(cent, direction, off_screen=True, screenshot=True)
+    cpos, img = pyvista.plot_arrows(cent, direction, off_screen=True, screenshot=True)
     assert np.any(img)
 
 
@@ -328,22 +340,30 @@ def test_plot_arrow():
 def test_plot_arrows():
     cent = np.random.random((100, 3))
     direction = np.random.random((100, 3))
-    cpos, img = vtki.plot_arrows(cent, direction, off_screen=True, screenshot=True)
+    cpos, img = pyvista.plot_arrows(cent, direction, off_screen=True, screenshot=True)
     assert np.any(img)
 
 
 @pytest.mark.skipif(NO_PLOTTING, reason="Requires system to support plotting")
 def test_axes():
-    plotter = vtki.Plotter(off_screen=True)
+    plotter = pyvista.Plotter(off_screen=True)
     plotter.add_axes()
-    plotter.add_mesh(vtki.Sphere())
+    plotter.add_mesh(pyvista.Sphere())
+    plotter.show()
+
+
+@pytest.mark.skipif(NO_PLOTTING, reason="Requires system to support plotting")
+def test_box_axes():
+    plotter = pyvista.Plotter(off_screen=True)
+    plotter.add_axes(box=True)
+    plotter.add_mesh(pyvista.Sphere())
     plotter.plot()
 
 
 @pytest.mark.skipif(NO_PLOTTING, reason="Requires system to support plotting")
 def test_screenshot():
-    plotter = vtki.Plotter(off_screen=True)
-    plotter.add_mesh(vtki.Sphere())
+    plotter = pyvista.Plotter(off_screen=True)
+    plotter.add_mesh(pyvista.Sphere())
     img = plotter.screenshot(transparent_background=True)
     assert np.any(img)
     img_again = plotter.screenshot()
@@ -371,21 +391,21 @@ def test_invalid_font():
 
 @pytest.mark.skipif(NO_PLOTTING, reason="Requires system to support plotting")
 def test_scalars_by_name():
-    plotter = vtki.Plotter(off_screen=OFF_SCREEN)
+    plotter = pyvista.Plotter(off_screen=OFF_SCREEN)
     data = examples.load_uniform()
     plotter.add_mesh(data, scalars='Spatial Cell Data')
-    plotter.plot()
+    plotter.show()
 
 
 def test_themes():
-    vtki.set_plot_theme('paraview')
-    vtki.set_plot_theme('document')
-    vtki.set_plot_theme('default')
+    pyvista.set_plot_theme('paraview')
+    pyvista.set_plot_theme('document')
+    pyvista.set_plot_theme('default')
 
 
 @pytest.mark.skipif(NO_PLOTTING, reason="Requires system to support plotting")
 def test_multi_block_plot():
-    multi = vtki.MultiBlock()
+    multi = pyvista.MultiBlock()
     multi.append(examples.load_rectilinear())
     uni = examples.load_uniform()
     arr = np.random.rand(uni.n_cells)
@@ -398,10 +418,10 @@ def test_multi_block_plot():
 
 @pytest.mark.skipif(NO_PLOTTING, reason="Requires system to support plotting")
 def test_clear():
-    plotter = vtki.Plotter(off_screen=OFF_SCREEN)
+    plotter = pyvista.Plotter(off_screen=OFF_SCREEN)
     plotter.add_mesh(sphere)
     plotter.clear()
-    plotter.plot()
+    plotter.show()
 
 
 @pytest.mark.skipif(NO_PLOTTING, reason="Requires system to support plotting")
@@ -409,49 +429,49 @@ def test_plot_texture():
     """"Test adding a texture to a plot"""
     globe = examples.load_globe()
     texture = examples.load_globe_texture()
-    plotter = vtki.Plotter(off_screen=OFF_SCREEN)
+    plotter = pyvista.Plotter(off_screen=OFF_SCREEN)
     plotter.add_mesh(globe, texture=texture)
-    plotter.plot()
+    plotter.show()
 
 @pytest.mark.skipif(NO_PLOTTING, reason="Requires system to support plotting")
 def test_plot_texture_associated():
     """"Test adding a texture to a plot"""
     globe = examples.load_globe()
-    plotter = vtki.Plotter(off_screen=OFF_SCREEN)
+    plotter = pyvista.Plotter(off_screen=OFF_SCREEN)
     plotter.add_mesh(globe, texture=True)
-    plotter.plot()
+    plotter.show()
 
 @pytest.mark.skipif(NO_PLOTTING, reason="Requires system to support plotting")
 def test_read_texture_from_numpy():
     """"Test adding a texture to a plot"""
     globe = examples.load_globe()
-    texture = vtki.numpy_to_texture(imageio.imread(examples.mapfile))
-    plotter = vtki.Plotter(off_screen=OFF_SCREEN)
+    texture = pyvista.numpy_to_texture(imageio.imread(examples.mapfile))
+    plotter = pyvista.Plotter(off_screen=OFF_SCREEN)
     plotter.add_mesh(globe, texture=texture)
-    plotter.plot()
+    plotter.show()
 
 
 @pytest.mark.skipif(NO_PLOTTING, reason="Requires system to support plotting")
 def test_plot_rgb():
     """"Test adding a texture to a plot"""
-    image = vtki.read(examples.mapfile)
-    plotter = vtki.Plotter(off_screen=OFF_SCREEN)
+    image = pyvista.read(examples.mapfile)
+    plotter = pyvista.Plotter(off_screen=OFF_SCREEN)
     plotter.add_mesh(image, rgb=True)
-    plotter.plot()
+    plotter.show()
 
 
 @pytest.mark.skipif(NO_PLOTTING, reason="Requires system to support plotting")
 def test_plot_multi_component_array():
     """"Test adding a texture to a plot"""
-    image = vtki.read(examples.mapfile)
-    plotter = vtki.Plotter(off_screen=OFF_SCREEN)
+    image = pyvista.read(examples.mapfile)
+    plotter = pyvista.Plotter(off_screen=OFF_SCREEN)
     plotter.add_mesh(image)
-    plotter.plot()
+    plotter.show()
 
 
 @pytest.mark.skipif(NO_PLOTTING, reason="Requires system to support plotting")
 def test_camera():
-    plotter = vtki.Plotter(off_screen=OFF_SCREEN)
+    plotter = pyvista.Plotter(off_screen=OFF_SCREEN)
     plotter.add_mesh(sphere)
     plotter.view_isometric()
     plotter.reset_camera()
@@ -468,31 +488,55 @@ def test_camera():
 
 @pytest.mark.skipif(NO_PLOTTING, reason="Requires system to support plotting")
 def test_multi_renderers():
-    plotter = vtki.Plotter(shape=(2, 2), off_screen=OFF_SCREEN)
+    plotter = pyvista.Plotter(shape=(2, 2), off_screen=OFF_SCREEN)
 
     loc = (0, 0)
     plotter.add_text('Render Window 0', loc=loc, font_size=30)
-    sphere = vtki.Sphere()
+    sphere = pyvista.Sphere()
     plotter.add_mesh(sphere, loc=loc, scalars=sphere.points[:, 2])
     plotter.add_scalar_bar('Z', vertical=True)
 
     loc = (0, 1)
     plotter.add_text('Render Window 1', loc=loc, font_size=30)
-    plotter.add_mesh(vtki.Cube(), loc=loc, show_edges=True)
+    plotter.add_mesh(pyvista.Cube(), loc=loc, show_edges=True)
 
     loc = (1, 0)
     plotter.add_text('Render Window 2', loc=loc, font_size=30)
-    plotter.add_mesh(vtki.Arrow(), color='y', loc=loc, show_edges=True)
+    plotter.add_mesh(pyvista.Arrow(), color='y', loc=loc, show_edges=True)
 
     plotter.subplot(1, 1)
     plotter.add_text('Render Window 3', loc=loc, font_size=30)
-    plotter.add_mesh(vtki.Cone(), color='g', loc=loc, show_edges=True,
+    plotter.add_mesh(pyvista.Cone(), color='g', loc=loc, show_edges=True,
                      backface_culling=True)
     plotter.add_bounding_box(render_lines_as_tubes=True, line_width=5)
     plotter.show_bounds(all_edges=True)
 
     plotter.update_bounds_axes()
-    plotter.plot()
+    plotter.show()
+
+
+@pytest.mark.skipif(NO_PLOTTING, reason="Requires system to support plotting")
+def test_link_views():
+    plotter = pyvista.Plotter(shape=(1, 4), off_screen=OFF_SCREEN)
+    sphere = pyvista.Sphere()
+    plotter.subplot(0, 0)
+    plotter.add_mesh(sphere, smooth_shading=False, show_edges=False)
+    plotter.subplot(0, 1)
+    plotter.add_mesh(sphere, smooth_shading=True, show_edges=False)
+    plotter.subplot(0, 2)
+    plotter.add_mesh(sphere, smooth_shading=False, show_edges=True)
+    plotter.subplot(0, 3)
+    plotter.add_mesh(sphere, smooth_shading=True, show_edges=True)
+    with pytest.raises(TypeError):
+        plotter.link_views(views='foo')
+    plotter.link_views([0, 1])
+    plotter.link_views()
+    with pytest.raises(TypeError):
+        plotter.unlink_views(views='foo')
+    plotter.unlink_views([0, 1])
+    plotter.unlink_views(2)
+    plotter.unlink_views()
+    plotter.show()
 
 
 @pytest.mark.skipif(NO_PLOTTING, reason="Requires system to support plotting")
@@ -503,7 +547,7 @@ def test_orthographic_slicer():
     slices = data.slice_orthogonal()
 
     # Orthographic Slicer
-    p = vtki.Plotter(shape=(2,2), off_screen=OFF_SCREEN)
+    p = pyvista.Plotter(shape=(2,2), off_screen=OFF_SCREEN)
 
     p.subplot(1,1)
     p.add_mesh(slices, clim=data.get_data_range())
@@ -530,7 +574,7 @@ def test_orthographic_slicer():
 @pytest.mark.skipif(NO_PLOTTING, reason="Requires system to support plotting")
 def test_remove_actor():
     data = examples.load_uniform()
-    plotter = vtki.Plotter(off_screen=OFF_SCREEN)
+    plotter = pyvista.Plotter(off_screen=OFF_SCREEN)
     plotter.add_mesh(data, name='data')
     plotter.add_mesh(data, name='data')
     plotter.add_mesh(data, name='data')
@@ -540,7 +584,7 @@ def test_remove_actor():
 @pytest.mark.skipif(NO_PLOTTING, reason="Requires system to support plotting")
 def test_image_properties():
     mesh = examples.load_uniform()
-    p = vtki.Plotter(off_screen=OFF_SCREEN)
+    p = pyvista.Plotter(off_screen=OFF_SCREEN)
     p.add_mesh(mesh)
     p.show(auto_close=False) # DO NOT close plotter
     # Get RGB image

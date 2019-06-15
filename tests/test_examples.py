@@ -5,9 +5,20 @@ import numpy as np
 import pytest
 import vtk
 
-import vtki
-from vtki import examples
-from vtki.plotting import system_supports_plotting
+import pyvista
+from pyvista import examples
+from pyvista.plotting import system_supports_plotting
+
+ffmpeg_failed = False
+try:
+    try:
+        import imageio_ffmpeg
+        imageio_ffmpeg.get_ffmpeg_exe()
+    except ImportError:
+        import imageio
+        imageio.plugins.ffmpeg.download()
+except:
+    ffmpeg_failed = True
 
 TEST_DOWNLOADS = False
 try:
@@ -19,7 +30,7 @@ except KeyError:
 
 @pytest.mark.skipif(not system_supports_plotting(), reason="Requires system to support plotting")
 def test_docexample_advancedplottingwithnumpy():
-    import vtki
+    import pyvista
     import numpy as np
 
     # Make a grid
@@ -36,14 +47,15 @@ def test_docexample_advancedplottingwithnumpy():
     direction = np.sin(points)**3
 
     # plot using the plotting class
-    plotter = vtki.Plotter(off_screen=True)
+    plotter = pyvista.Plotter(off_screen=True)
     plotter.add_arrows(points, direction, 0.5)
     plotter.set_background([0, 0, 0]) # RGB set to black
-    plotter.plot(auto_close=False)
+    plotter.show(auto_close=False)
     np.any(plotter.screenshot())
     plotter.close()
 
 
+@pytest.mark.skipif(ffmpeg_failed, reason="Requires imageio-ffmpeg")
 @pytest.mark.skipif(not system_supports_plotting(), reason="Requires system to support plotting")
 def test_creatingagifmovie(tmpdir, off_screen=True):
     if tmpdir:
@@ -58,15 +70,15 @@ def test_creatingagifmovie(tmpdir, off_screen=True):
     z = np.sin(r)
 
     # Create and structured surface
-    grid = vtki.StructuredGrid(x, y, z)
+    grid = pyvista.StructuredGrid(x, y, z)
 
     # Make copy of points
     pts = grid.points.copy()
 
     # Start a plotter object and set the scalars to the Z height
-    plotter = vtki.Plotter(off_screen=off_screen)
+    plotter = pyvista.Plotter(off_screen=off_screen)
     plotter.add_mesh(grid, scalars=z.ravel())
-    plotter.plot(auto_close=False)
+    plotter.show(auto_close=False)
 
     # Open a gif
     plotter.open_gif(filename)
@@ -163,7 +175,7 @@ if TEST_DOWNLOADS:
 
     def test_download_bolt_nut():
         data = examples.download_bolt_nut()
-        assert isinstance(data, vtki.MultiBlock)
+        assert isinstance(data, pyvista.MultiBlock)
 
     def test_download_clown():
         data = examples.download_clown()
@@ -180,7 +192,7 @@ if TEST_DOWNLOADS:
     def test_download_blood_vessels():
         """Tests the parallel VTU reader"""
         data = examples.download_blood_vessels()
-        assert isinstance(data, vtki.UnstructuredGrid)
+        assert isinstance(data, pyvista.UnstructuredGrid)
 
     def test_download_bunny_coarse():
         data = examples.download_bunny_coarse()
@@ -416,13 +428,13 @@ if TEST_DOWNLOADS:
         data = examples.download_kitchen(split=True)
         assert data.n_blocks
 
-    def test_download_topo_global():
-        data = examples.download_topo_global()
-        assert data.n_cells
-
-    def test_download_topo_land():
-        data = examples.download_topo_land()
-        assert data.n_cells
+    # def test_download_topo_global():
+    #     data = examples.download_topo_global()
+    #     assert data.n_cells
+    #
+    # def test_download_topo_land():
+    #     data = examples.download_topo_land()
+    #     assert data.n_cells
 
     def test_download_coastlines():
         data = examples.download_coastlines()
