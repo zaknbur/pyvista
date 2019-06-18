@@ -129,7 +129,11 @@
 <li class="toctree-l3"><a class="reference internal" href="create-parametric-geometric-objects.html">Geometric Parametric Objects</a></li>
 <li class="toctree-l3"><a class="reference internal" href="create-poly.html">Create PolyData</a></li>
 <li class="toctree-l3"><a class="reference internal" href="create-spline.html">Creating a Spline</a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="#">Creating a Structured Surface</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Creating a Structured Surface</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#from-numpy-meshgrid">From NumPy Meshgrid</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#from-xyz-points">From XYZ Points</a></li>
+</ul>
+</li>
 <li class="toctree-l3"><a class="reference internal" href="create-tri-surface.html">Create Triangulated Surface</a></li>
 <li class="toctree-l3"><a class="reference internal" href="create-uniform-grid.html">Creating a Uniform Grid</a></li>
 <li class="toctree-l3"><a class="reference internal" href="create-unstructured-surface.html">Creating an Unstructured Surface</a></li>
@@ -252,6 +256,8 @@
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 </pre></div>
 </div>
+<div class="section" id="from-numpy-meshgrid">
+<h2>From NumPy Meshgrid<a class="headerlink" href="#from-numpy-meshgrid" title="Permalink to this headline">¶</a></h2>
 <p>Create a simple meshgrid using NumPy</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Make data</span>
 <span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="o">-</span><span class="mi">10</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mf">0.25</span><span class="p">)</span>
@@ -288,7 +294,86 @@ the resulting surface can be accessed as a NumPy array:</p>
  [  9.75         9.75         0.93985707]]
 </pre></div>
 </div>
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  3.602 seconds)</p>
+</div>
+<div class="section" id="from-xyz-points">
+<h2>From XYZ Points<a class="headerlink" href="#from-xyz-points" title="Permalink to this headline">¶</a></h2>
+<p>Quite often, you might be given a set of coordinates (XYZ points) in a simple
+tabular format where there exists some structure such that grid could be built
+between the nodes you have. A great example is found in <a class="reference external" href="https://github.com/pyvista/pyvista-support/issues/16">pyvista-support#16</a>
+where a strucutred grid that is rotated from the cartesian reference frame is
+given as just XYZ points. In these cases, all that is needed to recover the
+grid is the dimensions of the grid (<cite>nx</cite> by <cite>ny</cite> by <cite>nz</cite>) and that the
+coordinates are ordered appropriately.</p>
+<p>For this example, we will create a small dataset and rotate the
+coordinates such that they are not on orthogonal to cartesian reference frame.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Define a simple Gaussian surface</span>
+<span class="k">def</span> <span class="nf">make_point_set</span><span class="p">():</span>
+    <span class="sd">&quot;&quot;&quot;Ignore the contents of this function. Just know that it returns an</span>
+<span class="sd">    n by 3 numpy array of structured coordinates.&quot;&quot;&quot;</span>
+    <span class="n">n</span><span class="p">,</span> <span class="n">m</span> <span class="o">=</span> <span class="mi">29</span><span class="p">,</span> <span class="mi">32</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="mi">200</span><span class="p">,</span><span class="mi">200</span><span class="p">,</span> <span class="n">num</span><span class="o">=</span><span class="n">n</span><span class="p">)</span> <span class="o">+</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">uniform</span><span class="p">(</span><span class="o">-</span><span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="n">n</span><span class="p">)</span>
+    <span class="n">y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="mi">200</span><span class="p">,</span><span class="mi">200</span><span class="p">,</span> <span class="n">num</span><span class="o">=</span><span class="n">m</span><span class="p">)</span> <span class="o">+</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">uniform</span><span class="p">(</span><span class="o">-</span><span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="n">m</span><span class="p">)</span>
+    <span class="n">xx</span><span class="p">,</span> <span class="n">yy</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">meshgrid</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
+    <span class="n">A</span><span class="p">,</span> <span class="n">b</span> <span class="o">=</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">100</span>
+    <span class="n">zz</span> <span class="o">=</span> <span class="n">A</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="mf">0.5</span><span class="o">*</span><span class="p">((</span><span class="n">xx</span><span class="o">/</span><span class="n">b</span><span class="p">)</span><span class="o">**</span><span class="mf">2.</span> <span class="o">+</span> <span class="p">(</span><span class="n">yy</span><span class="o">/</span><span class="n">b</span><span class="p">)</span><span class="o">**</span><span class="mf">2.</span><span class="p">))</span>
+    <span class="n">points</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">c_</span><span class="p">[</span><span class="n">xx</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">),</span> <span class="n">yy</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">),</span> <span class="n">zz</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">)]</span>
+    <span class="n">foo</span> <span class="o">=</span> <span class="n">pv</span><span class="o">.</span><span class="n">PolyData</span><span class="p">(</span><span class="n">points</span><span class="p">)</span>
+    <span class="n">foo</span><span class="o">.</span><span class="n">rotate_z</span><span class="p">(</span><span class="mf">36.6</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">foo</span><span class="o">.</span><span class="n">points</span>
+
+
+<span class="c1"># Get the points as a 2D NumPy array (N by 3)</span>
+<span class="n">points</span> <span class="o">=</span> <span class="n">make_point_set</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">points</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">5</span><span class="p">,</span> <span class="p">:])</span>
+</pre></div>
+</div>
+<p class="sphx-glr-script-out">Out:</p>
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>[[ -38.54557542 -283.35692406    1.6758572 ]
+ [ -27.35941622 -275.04934909    2.19270531]
+ [ -12.70929209 -264.16920671    3.02776702]
+ [  -2.64728454 -256.69650043    3.7067857 ]
+ [   8.55268537 -248.37866871    4.55813984]]
+</pre></div>
+</div>
+<p>Now pretend that the (n by 3) NumPy array above are coordinates that you have,
+possibly from a file with three columns of XYZ points.</p>
+<p>We simply need to recover the dimensions of the grid that these points make
+and then we can generate a <a class="reference internal" href="../../types/point-grids.html#pyvista.StructuredGrid" title="pyvista.StructuredGrid"><code class="xref py py-class docutils literal notranslate"><span class="pre">pyvista.StructuredGrid</span></code></a> mesh.</p>
+<p>Let’s preview the points to see what we are dealing with:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">10</span><span class="p">))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">points</span><span class="p">[:,</span><span class="mi">0</span><span class="p">],</span> <span class="n">points</span><span class="p">[:,</span><span class="mi">1</span><span class="p">],</span> <span class="n">c</span><span class="o">=</span><span class="n">points</span><span class="p">[:,</span><span class="mi">2</span><span class="p">])</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">axis</span><span class="p">(</span><span class="s1">&#39;image&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;X Coordinate&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Y Coordinate&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+<img alt="../../_images/sphx_glr_create-structured-surface_003.png" class="sphx-glr-single-img" src="../../_images/sphx_glr_create-structured-surface_003.png" />
+<p>In the figure above, we can see some inherit structure to the points and thus
+we could connect the points as a structured gird. All we need to know are the
+dimensions of the grid present. In this case, we know (because we made this
+dataset) the dimensions are <code class="docutils literal notranslate"><span class="pre">[29,</span> <span class="pre">32,</span> <span class="pre">1]</span></code>, but you might not know the
+dimensions of your pointset. There are a few ways to figure out the
+dimensionality of structured grid including:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># * manually conting the the nodes along the edges of the pointset</span>
+<span class="c1"># * using a technique like principle component analysis to strip the rotation from the dataset and count the unique values along each axis for the new;y projected dataset.</span>
+
+<span class="c1"># Once you&#39;ve figured out your grid&#39;s dimensions, simple create the</span>
+<span class="c1"># :class:`pyvista.StructuredGrid` as follows:</span>
+
+<span class="n">mesh</span> <span class="o">=</span> <span class="n">pv</span><span class="o">.</span><span class="n">StructuredGrid</span><span class="p">()</span>
+<span class="c1"># Set the coordinates from the numpy array</span>
+<span class="n">mesh</span><span class="o">.</span><span class="n">points</span> <span class="o">=</span> <span class="n">points</span>
+<span class="c1"># set the dimensions</span>
+<span class="n">mesh</span><span class="o">.</span><span class="n">dimensions</span> <span class="o">=</span> <span class="p">[</span><span class="mi">29</span><span class="p">,</span> <span class="mi">32</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span>
+
+<span class="c1"># and then inspect it!</span>
+<span class="n">mesh</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">show_edges</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">show_grid</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">cpos</span><span class="o">=</span><span class="s1">&#39;xy&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<img alt="../../_images/sphx_glr_create-structured-surface_004.png" class="sphx-glr-single-img" src="../../_images/sphx_glr_create-structured-surface_004.png" />
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  5.050 seconds)</p>
 <div class="sphx-glr-footer class sphx-glr-footer-example docutils container" id="sphx-glr-download-examples-00-load-create-structured-surface-py">
 <div class="sphx-glr-download docutils container">
 <p><a class="reference download internal" download="" href="../../_downloads/e4a96981d2ba075fb5cd46d7bd14ddc5/create-structured-surface.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">create-structured-surface.py</span></code></a></p>
@@ -298,6 +383,7 @@ the resulting surface can be accessed as a NumPy array:</p>
 </div>
 </div>
 <p class="sphx-glr-signature"><a class="reference external" href="https://sphinx-gallery.readthedocs.io">Gallery generated by Sphinx-Gallery</a></p>
+</div>
 </div>
 
 
