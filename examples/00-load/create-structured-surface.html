@@ -306,8 +306,7 @@ grid is the dimensions of the grid (<cite>nx</cite> by <cite>ny</cite> by <cite>
 coordinates are ordered appropriately.</p>
 <p>For this example, we will create a small dataset and rotate the
 coordinates such that they are not on orthogonal to cartesian reference frame.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Define a simple Gaussian surface</span>
-<span class="k">def</span> <span class="nf">make_point_set</span><span class="p">():</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">make_point_set</span><span class="p">():</span>
     <span class="sd">&quot;&quot;&quot;Ignore the contents of this function. Just know that it returns an</span>
 <span class="sd">    n by 3 numpy array of structured coordinates.&quot;&quot;&quot;</span>
     <span class="n">n</span><span class="p">,</span> <span class="n">m</span> <span class="o">=</span> <span class="mi">29</span><span class="p">,</span> <span class="mi">32</span>
@@ -328,11 +327,11 @@ coordinates such that they are not on orthogonal to cartesian reference frame.</
 </pre></div>
 </div>
 <p class="sphx-glr-script-out">Out:</p>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>[[ -38.54557542 -283.35692406    1.6758572 ]
- [ -27.35941622 -275.04934909    2.19270531]
- [ -12.70929209 -264.16920671    3.02776702]
- [  -2.64728454 -256.69650043    3.7067857 ]
- [   8.55268537 -248.37866871    4.55813984]]
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>[[-3.93018883e+01 -2.75113448e+02  2.10342674e+00]
+ [-2.77917791e+01 -2.66565287e+02  2.75577424e+00]
+ [-1.85141433e+01 -2.59675106e+02  3.37526375e+00]
+ [-1.15474298e+01 -2.54501168e+02  3.89604057e+00]
+ [ 2.10429070e-02 -2.45909662e+02  4.86269138e+00]]
 </pre></div>
 </div>
 <p>Now pretend that the (n by 3) NumPy array above are coordinates that you have,
@@ -356,10 +355,11 @@ dimensions of the grid present. In this case, we know (because we made this
 dataset) the dimensions are <code class="docutils literal notranslate"><span class="pre">[29,</span> <span class="pre">32,</span> <span class="pre">1]</span></code>, but you might not know the
 dimensions of your pointset. There are a few ways to figure out the
 dimensionality of structured grid including:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># * manually conting the the nodes along the edges of the pointset</span>
-<span class="c1"># * using a technique like principle component analysis to strip the rotation from the dataset and count the unique values along each axis for the new;y projected dataset.</span>
-
-<span class="c1"># Once you&#39;ve figured out your grid&#39;s dimensions, simple create the</span>
+<ul class="simple">
+<li><p>manually conting the the nodes along the edges of the pointset</p></li>
+<li><p>using a technique like principle component analysis to strip the rotation from the dataset and count the unique values along each axis for the new;y projected dataset.</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Once you&#39;ve figured out your grid&#39;s dimensions, simple create the</span>
 <span class="c1"># :class:`pyvista.StructuredGrid` as follows:</span>
 
 <span class="n">mesh</span> <span class="o">=</span> <span class="n">pv</span><span class="o">.</span><span class="n">StructuredGrid</span><span class="p">()</span>
@@ -373,7 +373,7 @@ dimensionality of structured grid including:</p>
 </pre></div>
 </div>
 <img alt="../../_images/sphx_glr_create-structured-surface_004.png" class="sphx-glr-single-img" src="../../_images/sphx_glr_create-structured-surface_004.png" />
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  5.050 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  5.022 seconds)</p>
 <div class="sphx-glr-footer class sphx-glr-footer-example docutils container" id="sphx-glr-download-examples-00-load-create-structured-surface-py">
 <div class="sphx-glr-download docutils container">
 <p><a class="reference download internal" download="" href="../../_downloads/e4a96981d2ba075fb5cd46d7bd14ddc5/create-structured-surface.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">create-structured-surface.py</span></code></a></p>

@@ -134,7 +134,6 @@ coordinates such that they are not on orthogonal to cartesian reference frame.
 .. code-block:: default
 
 
-    # Define a simple Gaussian surface
     def make_point_set():
         """Ignore the contents of this function. Just know that it returns an
         n by 3 numpy array of structured coordinates."""
@@ -164,11 +163,11 @@ coordinates such that they are not on orthogonal to cartesian reference frame.
 
  .. code-block:: none
 
-    [[ -38.54557542 -283.35692406    1.6758572 ]
-     [ -27.35941622 -275.04934909    2.19270531]
-     [ -12.70929209 -264.16920671    3.02776702]
-     [  -2.64728454 -256.69650043    3.7067857 ]
-     [   8.55268537 -248.37866871    4.55813984]]
+    [[-3.93018883e+01 -2.75113448e+02  2.10342674e+00]
+     [-2.77917791e+01 -2.66565287e+02  2.75577424e+00]
+     [-1.85141433e+01 -2.59675106e+02  3.37526375e+00]
+     [-1.15474298e+01 -2.54501168e+02  3.89604057e+00]
+     [ 2.10429070e-02 -2.45909662e+02  4.86269138e+00]]
 
 
 Now pretend that the (n by 3) NumPy array above are coordinates that you have,
@@ -206,12 +205,12 @@ dataset) the dimensions are ``[29, 32, 1]``, but you might not know the
 dimensions of your pointset. There are a few ways to figure out the
 dimensionality of structured grid including:
 
+* manually conting the the nodes along the edges of the pointset
+* using a technique like principle component analysis to strip the rotation from the dataset and count the unique values along each axis for the new;y projected dataset.
+
 
 .. code-block:: default
 
-
-    # * manually conting the the nodes along the edges of the pointset
-    # * using a technique like principle component analysis to strip the rotation from the dataset and count the unique values along each axis for the new;y projected dataset.
 
     # Once you've figured out your grid's dimensions, simple create the
     # :class:`pyvista.StructuredGrid` as follows:
@@ -236,7 +235,7 @@ dimensionality of structured grid including:
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  5.050 seconds)
+   **Total running time of the script:** ( 0 minutes  5.022 seconds)
 
 
 .. _sphx_glr_download_examples_00-load_create-structured-surface.py:
