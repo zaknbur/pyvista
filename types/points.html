@@ -366,73 +366,76 @@ object.  It inherits all methods from the original vtk object,
 <tr class="row-even"><td><p><a class="reference internal" href="#pyvista.PolyData.clip_with_plane" title="pyvista.PolyData.clip_with_plane"><code class="xref py py-obj docutils literal notranslate"><span class="pre">clip_with_plane</span></code></a>(origin, normal[, value, inplace])</p></td>
 <td><p>Clip a pyvista.PolyData or vtk.vtkPolyData with a plane.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#pyvista.PolyData.compute_normals" title="pyvista.PolyData.compute_normals"><code class="xref py py-obj docutils literal notranslate"><span class="pre">compute_normals</span></code></a>([cell_normals, …])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pyvista.PolyData.compute_arc_length" title="pyvista.PolyData.compute_arc_length"><code class="xref py py-obj docutils literal notranslate"><span class="pre">compute_arc_length</span></code></a>()</p></td>
+<td><p>Computes the arc length over the length of the probed line.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pyvista.PolyData.compute_normals" title="pyvista.PolyData.compute_normals"><code class="xref py py-obj docutils literal notranslate"><span class="pre">compute_normals</span></code></a>([cell_normals, …])</p></td>
 <td><p>Compute point and/or cell normals for a mesh.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#pyvista.PolyData.curvature" title="pyvista.PolyData.curvature"><code class="xref py py-obj docutils literal notranslate"><span class="pre">curvature</span></code></a>([curv_type])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pyvista.PolyData.curvature" title="pyvista.PolyData.curvature"><code class="xref py py-obj docutils literal notranslate"><span class="pre">curvature</span></code></a>([curv_type])</p></td>
 <td><p>Returns the pointwise curvature of a mesh</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#pyvista.PolyData.decimate" title="pyvista.PolyData.decimate"><code class="xref py py-obj docutils literal notranslate"><span class="pre">decimate</span></code></a>(target_reduction[, …])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#pyvista.PolyData.decimate" title="pyvista.PolyData.decimate"><code class="xref py py-obj docutils literal notranslate"><span class="pre">decimate</span></code></a>(target_reduction[, …])</p></td>
 <td><p>Reduces the number of triangles in a triangular mesh using vtkQuadricDecimation.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#pyvista.PolyData.decimate_pro" title="pyvista.PolyData.decimate_pro"><code class="xref py py-obj docutils literal notranslate"><span class="pre">decimate_pro</span></code></a>(reduction[, feature_angle, …])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pyvista.PolyData.decimate_pro" title="pyvista.PolyData.decimate_pro"><code class="xref py py-obj docutils literal notranslate"><span class="pre">decimate_pro</span></code></a>(reduction[, feature_angle, …])</p></td>
 <td><p>Reduce the number of triangles in a triangular mesh, forming a good approximation to the original geometry.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#pyvista.PolyData.delaunay_2d" title="pyvista.PolyData.delaunay_2d"><code class="xref py py-obj docutils literal notranslate"><span class="pre">delaunay_2d</span></code></a>([tol, alpha, offset, bound, inplace])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#pyvista.PolyData.delaunay_2d" title="pyvista.PolyData.delaunay_2d"><code class="xref py py-obj docutils literal notranslate"><span class="pre">delaunay_2d</span></code></a>([tol, alpha, offset, bound, inplace])</p></td>
 <td><p>Apply a delaunay 2D filter along the best fitting plane</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#pyvista.PolyData.delauney_2d" title="pyvista.PolyData.delauney_2d"><code class="xref py py-obj docutils literal notranslate"><span class="pre">delauney_2d</span></code></a>()</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pyvista.PolyData.delauney_2d" title="pyvista.PolyData.delauney_2d"><code class="xref py py-obj docutils literal notranslate"><span class="pre">delauney_2d</span></code></a>()</p></td>
 <td><p>DEPRECATED.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#pyvista.PolyData.edge_mask" title="pyvista.PolyData.edge_mask"><code class="xref py py-obj docutils literal notranslate"><span class="pre">edge_mask</span></code></a>(angle)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#pyvista.PolyData.edge_mask" title="pyvista.PolyData.edge_mask"><code class="xref py py-obj docutils literal notranslate"><span class="pre">edge_mask</span></code></a>(angle)</p></td>
 <td><p>Returns a mask of the points of a surface mesh that have a surface angle greater than angle</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#pyvista.PolyData.extract_edges" title="pyvista.PolyData.extract_edges"><code class="xref py py-obj docutils literal notranslate"><span class="pre">extract_edges</span></code></a>([feature_angle, …])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pyvista.PolyData.extract_edges" title="pyvista.PolyData.extract_edges"><code class="xref py py-obj docutils literal notranslate"><span class="pre">extract_edges</span></code></a>([feature_angle, …])</p></td>
 <td><p>Extracts edges from a surface.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#pyvista.PolyData.extract_largest" title="pyvista.PolyData.extract_largest"><code class="xref py py-obj docutils literal notranslate"><span class="pre">extract_largest</span></code></a>([inplace])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#pyvista.PolyData.extract_largest" title="pyvista.PolyData.extract_largest"><code class="xref py py-obj docutils literal notranslate"><span class="pre">extract_largest</span></code></a>([inplace])</p></td>
 <td><p>Extract largest connected set in mesh.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#pyvista.PolyData.fill_holes" title="pyvista.PolyData.fill_holes"><code class="xref py py-obj docutils literal notranslate"><span class="pre">fill_holes</span></code></a>(hole_size[, inplace])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pyvista.PolyData.fill_holes" title="pyvista.PolyData.fill_holes"><code class="xref py py-obj docutils literal notranslate"><span class="pre">fill_holes</span></code></a>(hole_size[, inplace])</p></td>
 <td><p>Fill holes in a pyvista.PolyData or vtk.vtkPolyData object.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#pyvista.PolyData.flip_normals" title="pyvista.PolyData.flip_normals"><code class="xref py py-obj docutils literal notranslate"><span class="pre">flip_normals</span></code></a>()</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#pyvista.PolyData.flip_normals" title="pyvista.PolyData.flip_normals"><code class="xref py py-obj docutils literal notranslate"><span class="pre">flip_normals</span></code></a>()</p></td>
 <td><p>Flip normals of a triangular mesh by reversing the point ordering.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#pyvista.PolyData.geodesic" title="pyvista.PolyData.geodesic"><code class="xref py py-obj docutils literal notranslate"><span class="pre">geodesic</span></code></a>(start_vertex, end_vertex[, inplace])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pyvista.PolyData.geodesic" title="pyvista.PolyData.geodesic"><code class="xref py py-obj docutils literal notranslate"><span class="pre">geodesic</span></code></a>(start_vertex, end_vertex[, inplace])</p></td>
 <td><p>Calculates the geodesic path betweeen two vertices using Dijkstra’s algorithm.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#pyvista.PolyData.geodesic_distance" title="pyvista.PolyData.geodesic_distance"><code class="xref py py-obj docutils literal notranslate"><span class="pre">geodesic_distance</span></code></a>(start_vertex, end_vertex)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#pyvista.PolyData.geodesic_distance" title="pyvista.PolyData.geodesic_distance"><code class="xref py py-obj docutils literal notranslate"><span class="pre">geodesic_distance</span></code></a>(start_vertex, end_vertex)</p></td>
 <td><p>Calculates the geodesic distance betweeen two vertices using Dijkstra’s algorithm.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#pyvista.PolyData.plot_boundaries" title="pyvista.PolyData.plot_boundaries"><code class="xref py py-obj docutils literal notranslate"><span class="pre">plot_boundaries</span></code></a>(**kwargs)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pyvista.PolyData.plot_boundaries" title="pyvista.PolyData.plot_boundaries"><code class="xref py py-obj docutils literal notranslate"><span class="pre">plot_boundaries</span></code></a>(**kwargs)</p></td>
 <td><p>Plots boundaries of a mesh</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#pyvista.PolyData.plot_curvature" title="pyvista.PolyData.plot_curvature"><code class="xref py py-obj docutils literal notranslate"><span class="pre">plot_curvature</span></code></a>([curv_type])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#pyvista.PolyData.plot_curvature" title="pyvista.PolyData.plot_curvature"><code class="xref py py-obj docutils literal notranslate"><span class="pre">plot_curvature</span></code></a>([curv_type])</p></td>
 <td><p>Plots curvature</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#pyvista.PolyData.plot_normals" title="pyvista.PolyData.plot_normals"><code class="xref py py-obj docutils literal notranslate"><span class="pre">plot_normals</span></code></a>([show_mesh, mag, flip, use_every])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pyvista.PolyData.plot_normals" title="pyvista.PolyData.plot_normals"><code class="xref py py-obj docutils literal notranslate"><span class="pre">plot_normals</span></code></a>([show_mesh, mag, flip, use_every])</p></td>
 <td><p>Plot the point normals of a mesh.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#pyvista.PolyData.ray_trace" title="pyvista.PolyData.ray_trace"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ray_trace</span></code></a>(origin, end_point[, first_point, …])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#pyvista.PolyData.ray_trace" title="pyvista.PolyData.ray_trace"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ray_trace</span></code></a>(origin, end_point[, first_point, …])</p></td>
 <td><p>Performs a single ray trace calculation given a mesh and a line segment defined by an origin and end_point.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#pyvista.PolyData.remove_points" title="pyvista.PolyData.remove_points"><code class="xref py py-obj docutils literal notranslate"><span class="pre">remove_points</span></code></a>(remove[, mode, keep_scalars, …])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pyvista.PolyData.remove_points" title="pyvista.PolyData.remove_points"><code class="xref py py-obj docutils literal notranslate"><span class="pre">remove_points</span></code></a>(remove[, mode, keep_scalars, …])</p></td>
 <td><p>Rebuild a mesh by removing points.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#pyvista.PolyData.save" title="pyvista.PolyData.save"><code class="xref py py-obj docutils literal notranslate"><span class="pre">save</span></code></a>(filename[, binary])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#pyvista.PolyData.save" title="pyvista.PolyData.save"><code class="xref py py-obj docutils literal notranslate"><span class="pre">save</span></code></a>(filename[, binary])</p></td>
 <td><p>Writes a surface mesh to disk.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#pyvista.PolyData.smooth" title="pyvista.PolyData.smooth"><code class="xref py py-obj docutils literal notranslate"><span class="pre">smooth</span></code></a>([n_iter, convergence, edge_angle, …])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pyvista.PolyData.smooth" title="pyvista.PolyData.smooth"><code class="xref py py-obj docutils literal notranslate"><span class="pre">smooth</span></code></a>([n_iter, convergence, edge_angle, …])</p></td>
 <td><p>Adjust point coordinates using Laplacian smoothing.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#pyvista.PolyData.subdivide" title="pyvista.PolyData.subdivide"><code class="xref py py-obj docutils literal notranslate"><span class="pre">subdivide</span></code></a>(nsub[, subfilter, inplace])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#pyvista.PolyData.subdivide" title="pyvista.PolyData.subdivide"><code class="xref py py-obj docutils literal notranslate"><span class="pre">subdivide</span></code></a>(nsub[, subfilter, inplace])</p></td>
 <td><p>Increase the number of triangles in a single, connected triangular mesh.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#pyvista.PolyData.tri_filter" title="pyvista.PolyData.tri_filter"><code class="xref py py-obj docutils literal notranslate"><span class="pre">tri_filter</span></code></a>([inplace])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pyvista.PolyData.tri_filter" title="pyvista.PolyData.tri_filter"><code class="xref py py-obj docutils literal notranslate"><span class="pre">tri_filter</span></code></a>([inplace])</p></td>
 <td><p>Returns an all triangle mesh.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#pyvista.PolyData.tube" title="pyvista.PolyData.tube"><code class="xref py py-obj docutils literal notranslate"><span class="pre">tube</span></code></a>([radius, scalars, capping, n_sides, …])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#pyvista.PolyData.tube" title="pyvista.PolyData.tube"><code class="xref py py-obj docutils literal notranslate"><span class="pre">tube</span></code></a>([radius, scalars, capping, n_sides, …])</p></td>
 <td><p>Generate a tube around each input line.</p></td>
 </tr>
 </tbody>
@@ -634,6 +637,15 @@ normal parameter.</p></li>
 </dl>
 <p class="rubric">Notes</p>
 <p>Not guaranteed to produce a manifold output.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pyvista.PolyData.compute_arc_length">
+<code class="sig-name descname">compute_arc_length</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.PolyData.compute_arc_length" title="Permalink to this definition">¶</a></dt>
+<dd><p>Computes the arc length over the length of the probed line.
+It adds a new point-data array named “arc_length” with the computed arc
+length for each of the polylines in the input. For all other cell types,
+the arc length is set to 0.</p>
 </dd></dl>
 
 <dl class="method">
