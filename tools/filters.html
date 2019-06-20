@@ -335,31 +335,34 @@ PyVista dataset.</p>
 <tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">slice_along_axis</span></code>([n, axis, tolerance, …])</p></td>
 <td><p>Create many slices of the input dataset along a specified axis.</p></td>
 </tr>
-<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">slice_orthogonal</span></code>([x, y, z, …])</p></td>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">slice_along_line</span></code>(line[, generate_triangles, …])</p></td>
+<td><p>Slices a dataset using a polyline/spline as the path.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">slice_orthogonal</span></code>([x, y, z, …])</p></td>
 <td><p>Creates three orthogonal slices through the dataset on the three caresian planes.</p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">split_bodies</span></code>([label])</p></td>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">split_bodies</span></code>([label])</p></td>
 <td><p>Find, label, and split connected bodies/volumes.</p></td>
 </tr>
-<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">streamlines</span></code>([vectors, source_center, …])</p></td>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">streamlines</span></code>([vectors, source_center, …])</p></td>
 <td><p>Integrate a vector field to generate streamlines.</p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">texture_map_to_plane</span></code>([origin, point_u, …])</p></td>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">texture_map_to_plane</span></code>([origin, point_u, …])</p></td>
 <td><p>Texture map this dataset to a user defined plane.</p></td>
 </tr>
-<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">threshold</span></code>([value, scalars, invert, …])</p></td>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">threshold</span></code>([value, scalars, invert, …])</p></td>
 <td><p>This filter will apply a <code class="docutils literal notranslate"><span class="pre">vtkThreshold</span></code> filter to the input dataset and return the resulting object.</p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">threshold_percent</span></code>([percent, scalars, …])</p></td>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">threshold_percent</span></code>([percent, scalars, …])</p></td>
 <td><p>Thresholds the dataset by a percentage of its range on the active scalar array or as specified</p></td>
 </tr>
-<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">triangulate</span></code>()</p></td>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">triangulate</span></code>()</p></td>
 <td><p>Returns an all triangle mesh.</p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">warp_by_scalar</span></code>([scalars, factor, normal, …])</p></td>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">warp_by_scalar</span></code>([scalars, factor, normal, …])</p></td>
 <td><p>Warp the dataset’s points by a point data scalar array’s values.</p></td>
 </tr>
-<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">wireframe</span></code>()</p></td>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">wireframe</span></code>()</p></td>
 <td><p>Extract all the internal/external edges of the dataset as PolyData.</p></td>
 </tr>
 </tbody>
@@ -768,6 +771,23 @@ triangles otherwise, the output will be the intersection polygons.</p></li>
 Can be string name (<code class="docutils literal notranslate"><span class="pre">'x'</span></code>, <code class="docutils literal notranslate"><span class="pre">'y'</span></code>, or <code class="docutils literal notranslate"><span class="pre">'z'</span></code>) or axis index
 (<code class="docutils literal notranslate"><span class="pre">0</span></code>, <code class="docutils literal notranslate"><span class="pre">1</span></code>, or <code class="docutils literal notranslate"><span class="pre">2</span></code>).</p></li>
 <li><p><strong>tolerance</strong> (<em>float</em><em>, </em><em>optional</em>) – The toleranceerance to the edge of the dataset bounds to create the slices</p></li>
+<li><p><strong>generate_triangles</strong> (<em>bool</em><em>, </em><em>optional</em>) – If this is enabled (<code class="docutils literal notranslate"><span class="pre">False</span></code> by default), the output will be
+triangles otherwise, the output will be the intersection polygons.</p></li>
+<li><p><strong>contour</strong> (<em>bool</em><em>, </em><em>optional</em>) – If True, apply a <code class="docutils literal notranslate"><span class="pre">contour</span></code> filter after slicing</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pyvista.DataSetFilters.slice_along_line">
+<code class="sig-name descname">slice_along_line</code><span class="sig-paren">(</span><em class="sig-param">line</em>, <em class="sig-param">generate_triangles=False</em>, <em class="sig-param">contour=False</em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.DataSetFilters.slice_along_line" title="Permalink to this definition">¶</a></dt>
+<dd><p>Slices a dataset using a polyline/spline as the path. This also works
+for lines generated with <a class="reference internal" href="geometric.html#pyvista.Line" title="pyvista.Line"><code class="xref py py-func docutils literal notranslate"><span class="pre">pyvista.Line()</span></code></a></p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>line</strong> (<a class="reference internal" href="../types/points.html#pyvista.PolyData" title="pyvista.PolyData"><em>pyvista.PolyData</em></a>) – A PolyData object containing one single PolyLine cell.</p></li>
 <li><p><strong>generate_triangles</strong> (<em>bool</em><em>, </em><em>optional</em>) – If this is enabled (<code class="docutils literal notranslate"><span class="pre">False</span></code> by default), the output will be
 triangles otherwise, the output will be the intersection polygons.</p></li>
 <li><p><strong>contour</strong> (<em>bool</em><em>, </em><em>optional</em>) – If True, apply a <code class="docutils literal notranslate"><span class="pre">contour</span></code> filter after slicing</p></li>

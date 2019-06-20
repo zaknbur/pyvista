@@ -18,6 +18,7 @@ Extract thin planar slices from a volume
     import pyvista as pv
     from pyvista import examples
     import matplotlib.pyplot as plt
+    import numpy as np
 
 
 
@@ -131,7 +132,102 @@ automated with the :func:`pyvista.DataSetFilters.slice_along_axis` filter:
 
 
 
+
+
 .. image:: /examples/01-filter/images/sphx_glr_slicing_005.png
+    :class: sphx-glr-single-img
+
+
+
+
+Slice Along Line
+++++++++++++++++
+
+We can also slice a dataset along a :func:`pyvista.Spline` or
+:func:`pyvista.Line` using the :func:`DataSetFilters.slice_along_line` filter.
+
+First, define a line source through a datset of interest. Please note
+that this type of slicing is computationally expensive and might take a while
+if there are a lot of points in the line - try to keep the resolution of
+the line low.
+
+
+.. code-block:: default
+
+
+    model = examples.load_channels()
+
+    def path(y):
+        """Equation: x = a(y-h)^2 + k"""
+        a = 110.0 / 160.0**2
+        x = a*y**2 + 0.0
+        return x, y
+
+    x, y = path(np.arange(model.bounds[2], model.bounds[3], 15.0))
+    zo = np.linspace(9.0, 11.0, num=len(y))
+    points = np.c_[x,y,zo]
+    spline = pv.Spline(points, 15)
+    print(spline)
+
+
+
+
+
+
+.. rst-class:: sphx-glr-script-out
+
+ Out:
+
+ .. code-block:: none
+
+    PolyData (0x7f914e1fe9a8)
+      N Cells:      1
+      N Points:     15
+      X Bounds:     0.000e+00, 2.475e+02
+      Y Bounds:     0.000e+00, 2.400e+02
+      Z Bounds:     9.000e+00, 1.100e+01
+      N Arrays:     1
+
+
+Then run the filter
+
+
+.. code-block:: default
+
+    slc = model.slice_along_line(spline)
+    print(slc)
+
+
+
+
+
+.. rst-class:: sphx-glr-script-out
+
+ Out:
+
+ .. code-block:: none
+
+    PolyData (0x7f914e1feac8)
+      N Cells:      49100
+      N Points:     49692
+      X Bounds:     0.000e+00, 2.500e+02
+      Y Bounds:     0.000e+00, 2.415e+02
+      Z Bounds:     0.000e+00, 1.000e+02
+      N Arrays:     1
+
+
+
+.. code-block:: default
+
+
+    p = pv.Plotter()
+    p.add_mesh(slc)
+    p.add_mesh(model.outline())
+    p.show(cpos=[1,-1,1])
+
+
+
+.. image:: /examples/01-filter/images/sphx_glr_slicing_006.png
     :class: sphx-glr-single-img
 
 
@@ -140,7 +236,7 @@ automated with the :func:`pyvista.DataSetFilters.slice_along_axis` filter:
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  13.721 seconds)
+   **Total running time of the script:** ( 0 minutes  31.556 seconds)
 
 
 .. _sphx_glr_download_examples_01-filter_slicing.py:
