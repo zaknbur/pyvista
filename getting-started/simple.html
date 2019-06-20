@@ -292,25 +292,28 @@ of the mesh respectively).</p>
 </pre></div>
 </div>
 <p>Access the points by fetching the <code class="docutils literal notranslate"><span class="pre">.points</span></code> attribute on any
-PyVista data object:</p>
+PyVista data object as a NumPy array:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">the_pts</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">points</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="nb">isinstance</span><span class="p">(</span><span class="n">the_pts</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">)</span>
 <span class="go">True</span>
 </pre></div>
 </div>
-<p>Accessing the different data attributes on the points and cells of the data
-object is interfaces via dictionaries with callbacks to the VTK object.
+<p>Accessing the different data attributes on the nodes and cells of the data
+object is interfaced via dictionaries with callbacks to the VTK object.
 These dictionaries of the different point and cell arrays can be directly
-accessed and modified.</p>
+accessed and modified as NumPy arrays. In the example below, we load a dataset,
+access an array on that dataset, then add some more data:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">data</span> <span class="o">=</span> <span class="n">examples</span><span class="o">.</span><span class="n">load_uniform</span><span class="p">()</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="c1"># Fetch a data array from the point data</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="c1"># Fetch a data array from the point data dictionary</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">arr</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">point_arrays</span><span class="p">[</span><span class="s1">&#39;Spatial Point Data&#39;</span><span class="p">]</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="c1"># Assign a new array to the cell data:</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">data</span><span class="o">.</span><span class="n">cell_arrays</span><span class="p">[</span><span class="s1">&#39;foo&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">rand</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">n_cells</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="c1"># Don&#39;t remember if your array is point or cell data? Doesn&#39;t matter!</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">foo</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">get_scalar</span><span class="p">(</span><span class="s1">&#39;foo&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">foo</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;foo&#39;</span><span class="p">]</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="nb">isinstance</span><span class="p">(</span><span class="n">foo</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">)</span>
 <span class="go">True</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="c1"># Or maybe you just want to add an array where it fits</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;new-array&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">rand</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">n_points</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
