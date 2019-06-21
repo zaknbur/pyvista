@@ -9,7 +9,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Geometric Parametric Objects &mdash; PyVista 0.20.4 documentation</title>
+  <title>Parametric Geometric Objects &mdash; PyVista 0.20.4 documentation</title>
   
 
   
@@ -126,7 +126,31 @@
 <li class="toctree-l1 current"><a class="reference internal" href="../index.html">Quick Examples</a><ul class="current">
 <li class="toctree-l2 current"><a class="reference internal" href="../index.html#loading-and-creating-meshes">Loading and Creating Meshes</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="create-geometric-objects.html">Geometric Objects</a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="#">Geometric Parametric Objects</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Parametric Geometric Objects</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#supertoroid">Supertoroid</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#parametric-ellipsoid">Parametric Ellipsoid</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#partial-parametric-ellipsoid">Partial Parametric Ellipsoid</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pseudosphere">Pseudosphere</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#bohemian-dome">Bohemian Dome</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#bour">Bour</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#boy-s-surface">Boy’s Surface</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#catalan-minimal">Catalan Minimal</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#conic-spiral">Conic Spiral</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#cross-cap">Cross Cap</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#dini">Dini</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#enneper">Enneper</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#figure-8-klein">Figure-8 Klein</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#henneberg">Henneberg</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#klein">Klein</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#kuen">Kuen</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#mobius">Mobius</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#plucker-conoid">Plucker Conoid</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#random-hills">Random Hills</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#roman">Roman</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#super-ellipsoid">Super Ellipsoid</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#torus">Torus</a></li>
+</ul>
+</li>
 <li class="toctree-l3"><a class="reference internal" href="create-poly.html">Create PolyData</a></li>
 <li class="toctree-l3"><a class="reference internal" href="create-spline.html">Creating a Spline</a></li>
 <li class="toctree-l3"><a class="reference internal" href="create-structured-surface.html">Creating a Structured Surface</a></li>
@@ -219,7 +243,7 @@
         
           <li><a href="../index.html">Quick Examples</a> &raquo;</li>
         
-      <li>Geometric Parametric Objects</li>
+      <li>Parametric Geometric Objects</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -244,28 +268,34 @@
 <p class="admonition-title">Note</p>
 <p>Click <a class="reference internal" href="#sphx-glr-download-examples-00-load-create-parametric-geometric-objects-py"><span class="std std-ref">here</span></a> to download the full example code</p>
 </div>
-<div class="sphx-glr-example-title section" id="geometric-parametric-objects">
-<span id="ref-parametric-example"></span><span id="sphx-glr-examples-00-load-create-parametric-geometric-objects-py"></span><h1>Geometric Parametric Objects<a class="headerlink" href="#geometric-parametric-objects" title="Permalink to this headline">¶</a></h1>
+<div class="sphx-glr-example-title section" id="parametric-geometric-objects">
+<span id="ref-parametric-example"></span><span id="sphx-glr-examples-00-load-create-parametric-geometric-objects-py"></span><h1>Parametric Geometric Objects<a class="headerlink" href="#parametric-geometric-objects" title="Permalink to this headline">¶</a></h1>
 <p>Creating parametric objects</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pyvista</span> <span class="k">as</span> <span class="nn">pv</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># sphinx_gallery_thumbnail_number = 12</span>
+<span class="kn">import</span> <span class="nn">pyvista</span> <span class="k">as</span> <span class="nn">pv</span>
 <span class="kn">from</span> <span class="nn">math</span> <span class="k">import</span> <span class="n">pi</span>
 </pre></div>
 </div>
-<p>This example demonstrates how to plot parametric objects using pyvista
-Create a supertoroid</p>
+<p>This example demonstrates how to plot parametric objects using pyvista</p>
+<div class="section" id="supertoroid">
+<h2>Supertoroid<a class="headerlink" href="#supertoroid" title="Permalink to this headline">¶</a></h2>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">supertoroid</span> <span class="o">=</span> <span class="n">pv</span><span class="o">.</span><span class="n">ParametricSuperToroid</span><span class="p">(</span><span class="n">n1</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span>
 <span class="n">supertoroid</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;tan&#39;</span><span class="p">,</span> <span class="n">smooth_shading</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 </pre></div>
 </div>
 <img alt="../../_images/sphx_glr_create-parametric-geometric-objects_001.png" class="sphx-glr-single-img" src="../../_images/sphx_glr_create-parametric-geometric-objects_001.png" />
-<p>Create a parametric ellipsoid</p>
+</div>
+<div class="section" id="parametric-ellipsoid">
+<h2>Parametric Ellipsoid<a class="headerlink" href="#parametric-ellipsoid" title="Permalink to this headline">¶</a></h2>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Ellipsoid with a long x axis</span>
 <span class="n">ellipsoid</span> <span class="o">=</span> <span class="n">pv</span><span class="o">.</span><span class="n">ParametricEllipsoid</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
 <span class="n">ellipsoid</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;tan&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 <img alt="../../_images/sphx_glr_create-parametric-geometric-objects_002.png" class="sphx-glr-single-img" src="../../_images/sphx_glr_create-parametric-geometric-objects_002.png" />
-<p>Create a partial parametric ellipsoid</p>
+</div>
+<div class="section" id="partial-parametric-ellipsoid">
+<h2>Partial Parametric Ellipsoid<a class="headerlink" href="#partial-parametric-ellipsoid" title="Permalink to this headline">¶</a></h2>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># cool plotting direction</span>
 <span class="n">cpos</span> <span class="o">=</span> <span class="p">[(</span><span class="mf">21.9930</span><span class="p">,</span> <span class="mf">21.1810</span><span class="p">,</span> <span class="o">-</span><span class="mf">30.3780</span><span class="p">),</span>
         <span class="p">(</span><span class="o">-</span><span class="mf">1.1640</span><span class="p">,</span> <span class="o">-</span><span class="mf">1.3098</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.1061</span><span class="p">),</span>
@@ -278,127 +308,159 @@ Create a supertoroid</p>
 </pre></div>
 </div>
 <img alt="../../_images/sphx_glr_create-parametric-geometric-objects_003.png" class="sphx-glr-single-img" src="../../_images/sphx_glr_create-parametric-geometric-objects_003.png" />
-<p>Create a pseudosphere</p>
+</div>
+<div class="section" id="pseudosphere">
+<h2>Pseudosphere<a class="headerlink" href="#pseudosphere" title="Permalink to this headline">¶</a></h2>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pseudosphere</span> <span class="o">=</span> <span class="n">pv</span><span class="o">.</span><span class="n">ParametricPseudosphere</span><span class="p">()</span>
 <span class="n">pseudosphere</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;tan&#39;</span><span class="p">,</span> <span class="n">smooth_shading</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 </pre></div>
 </div>
 <img alt="../../_images/sphx_glr_create-parametric-geometric-objects_004.png" class="sphx-glr-single-img" src="../../_images/sphx_glr_create-parametric-geometric-objects_004.png" />
-<p>Create a bohemiandome</p>
+</div>
+<div class="section" id="bohemian-dome">
+<h2>Bohemian Dome<a class="headerlink" href="#bohemian-dome" title="Permalink to this headline">¶</a></h2>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">bohemiandome</span> <span class="o">=</span> <span class="n">pv</span><span class="o">.</span><span class="n">ParametricBohemianDome</span><span class="p">()</span>
 <span class="n">bohemiandome</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;tan&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 <img alt="../../_images/sphx_glr_create-parametric-geometric-objects_005.png" class="sphx-glr-single-img" src="../../_images/sphx_glr_create-parametric-geometric-objects_005.png" />
-<p>Create a bour</p>
+</div>
+<div class="section" id="bour">
+<h2>Bour<a class="headerlink" href="#bour" title="Permalink to this headline">¶</a></h2>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">bour</span> <span class="o">=</span> <span class="n">pv</span><span class="o">.</span><span class="n">ParametricBour</span><span class="p">()</span>
 <span class="n">bour</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;tan&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 <img alt="../../_images/sphx_glr_create-parametric-geometric-objects_006.png" class="sphx-glr-single-img" src="../../_images/sphx_glr_create-parametric-geometric-objects_006.png" />
-<p>Create a boy</p>
+</div>
+<div class="section" id="boy-s-surface">
+<h2>Boy’s Surface<a class="headerlink" href="#boy-s-surface" title="Permalink to this headline">¶</a></h2>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">boy</span> <span class="o">=</span> <span class="n">pv</span><span class="o">.</span><span class="n">ParametricBoy</span><span class="p">()</span>
 <span class="n">boy</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;tan&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 <img alt="../../_images/sphx_glr_create-parametric-geometric-objects_007.png" class="sphx-glr-single-img" src="../../_images/sphx_glr_create-parametric-geometric-objects_007.png" />
-<p>Create a catalanminimal</p>
+</div>
+<div class="section" id="catalan-minimal">
+<h2>Catalan Minimal<a class="headerlink" href="#catalan-minimal" title="Permalink to this headline">¶</a></h2>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">catalanminimal</span> <span class="o">=</span> <span class="n">pv</span><span class="o">.</span><span class="n">ParametricCatalanMinimal</span><span class="p">()</span>
 <span class="n">catalanminimal</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;tan&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 <img alt="../../_images/sphx_glr_create-parametric-geometric-objects_008.png" class="sphx-glr-single-img" src="../../_images/sphx_glr_create-parametric-geometric-objects_008.png" />
-<p>Create a conicspiral</p>
+</div>
+<div class="section" id="conic-spiral">
+<h2>Conic Spiral<a class="headerlink" href="#conic-spiral" title="Permalink to this headline">¶</a></h2>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">conicspiral</span> <span class="o">=</span> <span class="n">pv</span><span class="o">.</span><span class="n">ParametricConicSpiral</span><span class="p">()</span>
 <span class="n">conicspiral</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;tan&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 <img alt="../../_images/sphx_glr_create-parametric-geometric-objects_009.png" class="sphx-glr-single-img" src="../../_images/sphx_glr_create-parametric-geometric-objects_009.png" />
-<p>Create a crosscap</p>
+</div>
+<div class="section" id="cross-cap">
+<h2>Cross Cap<a class="headerlink" href="#cross-cap" title="Permalink to this headline">¶</a></h2>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">crosscap</span> <span class="o">=</span> <span class="n">pv</span><span class="o">.</span><span class="n">ParametricCrossCap</span><span class="p">()</span>
 <span class="n">crosscap</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;tan&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 <img alt="../../_images/sphx_glr_create-parametric-geometric-objects_010.png" class="sphx-glr-single-img" src="../../_images/sphx_glr_create-parametric-geometric-objects_010.png" />
-<p>Create a dini</p>
+</div>
+<div class="section" id="dini">
+<h2>Dini<a class="headerlink" href="#dini" title="Permalink to this headline">¶</a></h2>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">dini</span> <span class="o">=</span> <span class="n">pv</span><span class="o">.</span><span class="n">ParametricDini</span><span class="p">()</span>
 <span class="n">dini</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;tan&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 <img alt="../../_images/sphx_glr_create-parametric-geometric-objects_011.png" class="sphx-glr-single-img" src="../../_images/sphx_glr_create-parametric-geometric-objects_011.png" />
-<p>Create a enneper</p>
+</div>
+<div class="section" id="enneper">
+<h2>Enneper<a class="headerlink" href="#enneper" title="Permalink to this headline">¶</a></h2>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">enneper</span> <span class="o">=</span> <span class="n">pv</span><span class="o">.</span><span class="n">ParametricEnneper</span><span class="p">()</span>
-<span class="n">enneper</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;tan&#39;</span><span class="p">)</span>
+<span class="n">enneper</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">cpos</span><span class="o">=</span><span class="s1">&#39;yz&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 <img alt="../../_images/sphx_glr_create-parametric-geometric-objects_012.png" class="sphx-glr-single-img" src="../../_images/sphx_glr_create-parametric-geometric-objects_012.png" />
-<p>Create a figure8klein</p>
+</div>
+<div class="section" id="figure-8-klein">
+<h2>Figure-8 Klein<a class="headerlink" href="#figure-8-klein" title="Permalink to this headline">¶</a></h2>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">figure8klein</span> <span class="o">=</span> <span class="n">pv</span><span class="o">.</span><span class="n">ParametricFigure8Klein</span><span class="p">()</span>
-<span class="n">figure8klein</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;tan&#39;</span><span class="p">)</span>
+<span class="n">figure8klein</span><span class="o">.</span><span class="n">plot</span><span class="p">()</span>
 </pre></div>
 </div>
 <img alt="../../_images/sphx_glr_create-parametric-geometric-objects_013.png" class="sphx-glr-single-img" src="../../_images/sphx_glr_create-parametric-geometric-objects_013.png" />
-<p>Create a henneberg</p>
+</div>
+<div class="section" id="henneberg">
+<h2>Henneberg<a class="headerlink" href="#henneberg" title="Permalink to this headline">¶</a></h2>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">henneberg</span> <span class="o">=</span> <span class="n">pv</span><span class="o">.</span><span class="n">ParametricHenneberg</span><span class="p">()</span>
 <span class="n">henneberg</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;tan&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 <img alt="../../_images/sphx_glr_create-parametric-geometric-objects_014.png" class="sphx-glr-single-img" src="../../_images/sphx_glr_create-parametric-geometric-objects_014.png" />
-<p>Create a klein</p>
+</div>
+<div class="section" id="klein">
+<h2>Klein<a class="headerlink" href="#klein" title="Permalink to this headline">¶</a></h2>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">klein</span> <span class="o">=</span> <span class="n">pv</span><span class="o">.</span><span class="n">ParametricKlein</span><span class="p">()</span>
 <span class="n">klein</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;tan&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 <img alt="../../_images/sphx_glr_create-parametric-geometric-objects_015.png" class="sphx-glr-single-img" src="../../_images/sphx_glr_create-parametric-geometric-objects_015.png" />
-<p>Create a kuen</p>
+</div>
+<div class="section" id="kuen">
+<h2>Kuen<a class="headerlink" href="#kuen" title="Permalink to this headline">¶</a></h2>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">kuen</span> <span class="o">=</span> <span class="n">pv</span><span class="o">.</span><span class="n">ParametricKuen</span><span class="p">()</span>
 <span class="n">kuen</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;tan&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 <img alt="../../_images/sphx_glr_create-parametric-geometric-objects_016.png" class="sphx-glr-single-img" src="../../_images/sphx_glr_create-parametric-geometric-objects_016.png" />
-<p>Create a mobius</p>
+</div>
+<div class="section" id="mobius">
+<h2>Mobius<a class="headerlink" href="#mobius" title="Permalink to this headline">¶</a></h2>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mobius</span> <span class="o">=</span> <span class="n">pv</span><span class="o">.</span><span class="n">ParametricMobius</span><span class="p">()</span>
 <span class="n">mobius</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;tan&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 <img alt="../../_images/sphx_glr_create-parametric-geometric-objects_017.png" class="sphx-glr-single-img" src="../../_images/sphx_glr_create-parametric-geometric-objects_017.png" />
-<p>Create a pluckerconoid</p>
+</div>
+<div class="section" id="plucker-conoid">
+<h2>Plucker Conoid<a class="headerlink" href="#plucker-conoid" title="Permalink to this headline">¶</a></h2>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pluckerconoid</span> <span class="o">=</span> <span class="n">pv</span><span class="o">.</span><span class="n">ParametricPluckerConoid</span><span class="p">()</span>
 <span class="n">pluckerconoid</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;tan&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 <img alt="../../_images/sphx_glr_create-parametric-geometric-objects_018.png" class="sphx-glr-single-img" src="../../_images/sphx_glr_create-parametric-geometric-objects_018.png" />
-<p>Create a pseudosphere</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pseudosphere</span> <span class="o">=</span> <span class="n">pv</span><span class="o">.</span><span class="n">ParametricPseudosphere</span><span class="p">()</span>
-<span class="n">pseudosphere</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;tan&#39;</span><span class="p">)</span>
-</pre></div>
 </div>
-<img alt="../../_images/sphx_glr_create-parametric-geometric-objects_019.png" class="sphx-glr-single-img" src="../../_images/sphx_glr_create-parametric-geometric-objects_019.png" />
-<p>Create a randomhills</p>
+<div class="section" id="random-hills">
+<h2>Random Hills<a class="headerlink" href="#random-hills" title="Permalink to this headline">¶</a></h2>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">randomhills</span> <span class="o">=</span> <span class="n">pv</span><span class="o">.</span><span class="n">ParametricRandomHills</span><span class="p">()</span>
 <span class="n">randomhills</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;tan&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
-<img alt="../../_images/sphx_glr_create-parametric-geometric-objects_020.png" class="sphx-glr-single-img" src="../../_images/sphx_glr_create-parametric-geometric-objects_020.png" />
-<p>Create a roman</p>
+<img alt="../../_images/sphx_glr_create-parametric-geometric-objects_019.png" class="sphx-glr-single-img" src="../../_images/sphx_glr_create-parametric-geometric-objects_019.png" />
+</div>
+<div class="section" id="roman">
+<h2>Roman<a class="headerlink" href="#roman" title="Permalink to this headline">¶</a></h2>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">roman</span> <span class="o">=</span> <span class="n">pv</span><span class="o">.</span><span class="n">ParametricRoman</span><span class="p">()</span>
 <span class="n">roman</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;tan&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
-<img alt="../../_images/sphx_glr_create-parametric-geometric-objects_021.png" class="sphx-glr-single-img" src="../../_images/sphx_glr_create-parametric-geometric-objects_021.png" />
-<p>Create a superellipsoid</p>
+<img alt="../../_images/sphx_glr_create-parametric-geometric-objects_020.png" class="sphx-glr-single-img" src="../../_images/sphx_glr_create-parametric-geometric-objects_020.png" />
+</div>
+<div class="section" id="super-ellipsoid">
+<h2>Super Ellipsoid<a class="headerlink" href="#super-ellipsoid" title="Permalink to this headline">¶</a></h2>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">superellipsoid</span> <span class="o">=</span> <span class="n">pv</span><span class="o">.</span><span class="n">ParametricSuperEllipsoid</span><span class="p">(</span><span class="n">n1</span><span class="o">=</span><span class="mf">0.1</span><span class="p">,</span> <span class="n">n2</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
 <span class="n">superellipsoid</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;tan&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
-<img alt="../../_images/sphx_glr_create-parametric-geometric-objects_022.png" class="sphx-glr-single-img" src="../../_images/sphx_glr_create-parametric-geometric-objects_022.png" />
-<p>Create a torus</p>
+<img alt="../../_images/sphx_glr_create-parametric-geometric-objects_021.png" class="sphx-glr-single-img" src="../../_images/sphx_glr_create-parametric-geometric-objects_021.png" />
+</div>
+<div class="section" id="torus">
+<h2>Torus<a class="headerlink" href="#torus" title="Permalink to this headline">¶</a></h2>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">torus</span> <span class="o">=</span> <span class="n">pv</span><span class="o">.</span><span class="n">ParametricTorus</span><span class="p">()</span>
 <span class="n">torus</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;tan&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
-<img alt="../../_images/sphx_glr_create-parametric-geometric-objects_023.png" class="sphx-glr-single-img" src="../../_images/sphx_glr_create-parametric-geometric-objects_023.png" />
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  23.514 seconds)</p>
+<img alt="../../_images/sphx_glr_create-parametric-geometric-objects_022.png" class="sphx-glr-single-img" src="../../_images/sphx_glr_create-parametric-geometric-objects_022.png" />
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  24.827 seconds)</p>
 <div class="sphx-glr-footer class sphx-glr-footer-example docutils container" id="sphx-glr-download-examples-00-load-create-parametric-geometric-objects-py">
 <div class="sphx-glr-download docutils container">
 <p><a class="reference download internal" download="" href="../../_downloads/18596d010145c5f849a9fa0951009752/create-parametric-geometric-objects.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">create-parametric-geometric-objects.py</span></code></a></p>
@@ -408,6 +470,7 @@ Create a supertoroid</p>
 </div>
 </div>
 <p class="sphx-glr-signature"><a class="reference external" href="https://sphinx-gallery.readthedocs.io">Gallery generated by Sphinx-Gallery</a></p>
+</div>
 </div>
 
 
