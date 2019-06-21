@@ -318,6 +318,84 @@ This base class is analogous to VTK’s <code class="docutils literal notranslat
 <col style="width: 90%" />
 </colgroup>
 <tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pyvista.Common.active_scalar" title="pyvista.Common.active_scalar"><code class="xref py py-obj docutils literal notranslate"><span class="pre">active_scalar</span></code></a></p></td>
+<td><p>Returns the active scalar as an array</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pyvista.Common.active_scalar_info" title="pyvista.Common.active_scalar_info"><code class="xref py py-obj docutils literal notranslate"><span class="pre">active_scalar_info</span></code></a></p></td>
+<td><p>[field, name]</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pyvista.Common.active_scalar_name" title="pyvista.Common.active_scalar_name"><code class="xref py py-obj docutils literal notranslate"><span class="pre">active_scalar_name</span></code></a></p></td>
+<td><p>Returns the active scalar’s name</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pyvista.Common.active_vectors" title="pyvista.Common.active_vectors"><code class="xref py py-obj docutils literal notranslate"><span class="pre">active_vectors</span></code></a></p></td>
+<td><p>The active vectors array</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pyvista.Common.active_vectors_info" title="pyvista.Common.active_vectors_info"><code class="xref py py-obj docutils literal notranslate"><span class="pre">active_vectors_info</span></code></a></p></td>
+<td><p>[field, name]</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pyvista.Common.active_vectors_name" title="pyvista.Common.active_vectors_name"><code class="xref py py-obj docutils literal notranslate"><span class="pre">active_vectors_name</span></code></a></p></td>
+<td><p>The name of the active vectors array</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pyvista.Common.arrows" title="pyvista.Common.arrows"><code class="xref py py-obj docutils literal notranslate"><span class="pre">arrows</span></code></a></p></td>
+<td><p>Returns a glyph representation of the active vector data as arrows.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pyvista.Common.bounds" title="pyvista.Common.bounds"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bounds</span></code></a></p></td>
+<td><p>bounding box of this dataset in the form (xmin,xmax, ymin,ymax, zmin,zmax)</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pyvista.Common.cell_arrays" title="pyvista.Common.cell_arrays"><code class="xref py py-obj docutils literal notranslate"><span class="pre">cell_arrays</span></code></a></p></td>
+<td><p>Returns the all cell arrays</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pyvista.Common.center" title="pyvista.Common.center"><code class="xref py py-obj docutils literal notranslate"><span class="pre">center</span></code></a></p></td>
+<td><p>Center of the bounding box</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pyvista.Common.extent" title="pyvista.Common.extent"><code class="xref py py-obj docutils literal notranslate"><span class="pre">extent</span></code></a></p></td>
+<td><p>The range of the bounding box</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pyvista.Common.field_arrays" title="pyvista.Common.field_arrays"><code class="xref py py-obj docutils literal notranslate"><span class="pre">field_arrays</span></code></a></p></td>
+<td><p>Returns all field arrays</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pyvista.Common.length" title="pyvista.Common.length"><code class="xref py py-obj docutils literal notranslate"><span class="pre">length</span></code></a></p></td>
+<td><p>the length of the diagonal of the bounding box</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pyvista.Common.n_arrays" title="pyvista.Common.n_arrays"><code class="xref py py-obj docutils literal notranslate"><span class="pre">n_arrays</span></code></a></p></td>
+<td><p>The number of scalar arrays present in the dataset</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pyvista.Common.n_cells" title="pyvista.Common.n_cells"><code class="xref py py-obj docutils literal notranslate"><span class="pre">n_cells</span></code></a></p></td>
+<td><p>The number of cells in the entire dataset</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pyvista.Common.n_points" title="pyvista.Common.n_points"><code class="xref py py-obj docutils literal notranslate"><span class="pre">n_points</span></code></a></p></td>
+<td><p>The number of points in the entire dataset</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pyvista.Common.n_scalars" title="pyvista.Common.n_scalars"><code class="xref py py-obj docutils literal notranslate"><span class="pre">n_scalars</span></code></a></p></td>
+<td><p>Please use <cite>n_arrays</cite></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pyvista.Common.number_of_cells" title="pyvista.Common.number_of_cells"><code class="xref py py-obj docutils literal notranslate"><span class="pre">number_of_cells</span></code></a></p></td>
+<td><p>returns the number of cells</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pyvista.Common.number_of_points" title="pyvista.Common.number_of_points"><code class="xref py py-obj docutils literal notranslate"><span class="pre">number_of_points</span></code></a></p></td>
+<td><p>returns the number of points</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pyvista.Common.point_arrays" title="pyvista.Common.point_arrays"><code class="xref py py-obj docutils literal notranslate"><span class="pre">point_arrays</span></code></a></p></td>
+<td><p>Returns the all point arrays</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pyvista.Common.points" title="pyvista.Common.points"><code class="xref py py-obj docutils literal notranslate"><span class="pre">points</span></code></a></p></td>
+<td><p>returns a pointer to the points as a numpy object</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pyvista.Common.scalar_names" title="pyvista.Common.scalar_names"><code class="xref py py-obj docutils literal notranslate"><span class="pre">scalar_names</span></code></a></p></td>
+<td><p>A list of scalar names for the dataset.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pyvista.Common.t_coords" title="pyvista.Common.t_coords"><code class="xref py py-obj docutils literal notranslate"><span class="pre">t_coords</span></code></a></p></td>
+<td><p>The active texture coordinates on the points</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pyvista.Common.textures" title="pyvista.Common.textures"><code class="xref py py-obj docutils literal notranslate"><span class="pre">textures</span></code></a></p></td>
+<td><p>A dictionary to hold <code class="docutils literal notranslate"><span class="pre">vtk.vtkTexture</span></code> objects that can be associated with this dataset.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pyvista.Common.vectors" title="pyvista.Common.vectors"><code class="xref py py-obj docutils literal notranslate"><span class="pre">vectors</span></code></a></p></td>
+<td><p>Returns active vectors</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pyvista.Common.volume" title="pyvista.Common.volume"><code class="xref py py-obj docutils literal notranslate"><span class="pre">volume</span></code></a></p></td>
+<td><p>Mesh volume</p></td>
+</tr>
 </tbody>
 </table>
 <p class="rubric">Methods</p>

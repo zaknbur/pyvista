@@ -494,6 +494,18 @@ to show the exact value of certain points.</p>
 <col style="width: 90%" />
 </colgroup>
 <tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pyvista.UnstructuredGrid.cells" title="pyvista.UnstructuredGrid.cells"><code class="xref py py-obj docutils literal notranslate"><span class="pre">cells</span></code></a></p></td>
+<td><p>returns a pointer to the cells as a numpy object</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pyvista.UnstructuredGrid.celltypes" title="pyvista.UnstructuredGrid.celltypes"><code class="xref py py-obj docutils literal notranslate"><span class="pre">celltypes</span></code></a></p></td>
+<td><p>Get the cell types array</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pyvista.UnstructuredGrid.offset" title="pyvista.UnstructuredGrid.offset"><code class="xref py py-obj docutils literal notranslate"><span class="pre">offset</span></code></a></p></td>
+<td><p>Get Cell Locations Array</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pyvista.UnstructuredGrid.quality" title="pyvista.UnstructuredGrid.quality"><code class="xref py py-obj docutils literal notranslate"><span class="pre">quality</span></code></a></p></td>
+<td><p>Returns cell quality</p></td>
+</tr>
 </tbody>
 </table>
 <p class="rubric">Methods</p>
@@ -717,6 +729,21 @@ only “.vtk” files</p>
 <col style="width: 90%" />
 </colgroup>
 <tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pyvista.StructuredGrid.dimensions" title="pyvista.StructuredGrid.dimensions"><code class="xref py py-obj docutils literal notranslate"><span class="pre">dimensions</span></code></a></p></td>
+<td><p>Returns a length 3 tuple of the grid’s dimensions</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pyvista.StructuredGrid.quality" title="pyvista.StructuredGrid.quality"><code class="xref py py-obj docutils literal notranslate"><span class="pre">quality</span></code></a></p></td>
+<td><p>Computes the minimum scaled jacobian of each cell.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pyvista.StructuredGrid.x" title="pyvista.StructuredGrid.x"><code class="xref py py-obj docutils literal notranslate"><span class="pre">x</span></code></a></p></td>
+<td><p>The X coordinates of all points</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pyvista.StructuredGrid.y" title="pyvista.StructuredGrid.y"><code class="xref py py-obj docutils literal notranslate"><span class="pre">y</span></code></a></p></td>
+<td><p>The Y coordinates of all points</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pyvista.StructuredGrid.z" title="pyvista.StructuredGrid.z"><code class="xref py py-obj docutils literal notranslate"><span class="pre">z</span></code></a></p></td>
+<td><p>The Z coordinates of all points</p></td>
+</tr>
 </tbody>
 </table>
 <p class="rubric">Methods</p>
@@ -842,6 +869,9 @@ only with the legacy writer.</p>
 <col style="width: 90%" />
 </colgroup>
 <tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pyvista.PointGrid.volume" title="pyvista.PointGrid.volume"><code class="xref py py-obj docutils literal notranslate"><span class="pre">volume</span></code></a></p></td>
+<td><p>Computes volume by extracting the external surface and computing interior volume</p></td>
+</tr>
 </tbody>
 </table>
 <p class="rubric">Methods</p>
