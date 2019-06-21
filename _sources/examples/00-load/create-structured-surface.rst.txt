@@ -163,11 +163,11 @@ coordinates such that they are not on orthogonal to cartesian reference frame.
 
  .. code-block:: none
 
-    [[ -44.8806658  -279.90639286    1.79872313]
-     [ -27.12285782 -266.71828077    2.74960056]
-     [ -22.51543092 -263.29650358    3.04521198]
-     [  -4.62140486 -250.00722702    4.38821105]
-     [   4.76581455 -243.03566264    5.21071911]]
+    [[ -42.1223802  -282.48840791    1.69294634]
+     [ -26.46756307 -270.86211467    2.46410666]
+     [ -16.23864496 -263.26544966    3.08499691]
+     [  -5.89034764 -255.58012583    3.80903296]
+     [   3.98054538 -248.24935372    4.58592059]]
 
 
 Now pretend that the (n by 3) NumPy array above are coordinates that you have,
@@ -235,7 +235,7 @@ dimensionality of structured grid including:
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  4.979 seconds)
+   **Total running time of the script:** ( 0 minutes  4.966 seconds)
 
 
 .. _sphx_glr_download_examples_00-load_create-structured-surface.py:
