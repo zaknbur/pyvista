@@ -9,7 +9,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Plotting Glyphs &mdash; PyVista 0.20.4 documentation</title>
+  <title>Plotting Glyphs (Vectors) &mdash; PyVista 0.20.4 documentation</title>
   
 
   
@@ -132,7 +132,10 @@
 <li class="toctree-l3"><a class="reference internal" href="plot-edges.html">Show Edges</a></li>
 <li class="toctree-l3"><a class="reference internal" href="plot-edl.html">Eye Dome Lighting</a></li>
 <li class="toctree-l3"><a class="reference internal" href="plot-gif.html">Create a GIF Movie</a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="#">Plotting Glyphs</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Plotting Glyphs (Vectors)</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#subset-of-glyphs">Subset of Glyphs</a></li>
+</ul>
+</li>
 <li class="toctree-l3"><a class="reference internal" href="plot-labels.html">Label Points</a></li>
 <li class="toctree-l3"><a class="reference internal" href="plot-linked.html">Linked Views in Subplots</a></li>
 <li class="toctree-l3"><a class="reference internal" href="plot-movie.html">Create a MP4 Movie</a></li>
@@ -226,7 +229,7 @@
         
           <li><a href="../index.html">Quick Examples</a> &raquo;</li>
         
-      <li>Plotting Glyphs</li>
+      <li>Plotting Glyphs (Vectors)</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -251,10 +254,10 @@
 <p class="admonition-title">Note</p>
 <p>Click <a class="reference internal" href="#sphx-glr-download-examples-02-plot-plot-glyphs-py"><span class="std std-ref">here</span></a> to download the full example code</p>
 </div>
-<div class="sphx-glr-example-title section" id="plotting-glyphs">
-<span id="glyph-example"></span><span id="sphx-glr-examples-02-plot-plot-glyphs-py"></span><h1>Plotting Glyphs<a class="headerlink" href="#plotting-glyphs" title="Permalink to this headline">¶</a></h1>
+<div class="sphx-glr-example-title section" id="plotting-glyphs-vectors">
+<span id="glyph-example"></span><span id="sphx-glr-examples-02-plot-plot-glyphs-py"></span><h1>Plotting Glyphs (Vectors)<a class="headerlink" href="#plotting-glyphs-vectors" title="Permalink to this headline">¶</a></h1>
 <p>Use vectors in a dataset to plot and orient glyphs/geometric objects.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># sphinx_gallery_thumbnail_number = 1</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># sphinx_gallery_thumbnail_number = 4</span>
 <span class="kn">import</span> <span class="nn">pyvista</span> <span class="k">as</span> <span class="nn">pv</span>
 <span class="kn">from</span> <span class="nn">pyvista</span> <span class="k">import</span> <span class="n">examples</span>
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
@@ -305,7 +308,27 @@ access the <a class="reference internal" href="../../types/common.html#pyvista.C
 </pre></div>
 </div>
 <img alt="../../_images/sphx_glr_plot-glyphs_003.png" class="sphx-glr-single-img" src="../../_images/sphx_glr_plot-glyphs_003.png" />
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  7.216 seconds)</p>
+<div class="section" id="subset-of-glyphs">
+<h2>Subset of Glyphs<a class="headerlink" href="#subset-of-glyphs" title="Permalink to this headline">¶</a></h2>
+<p>Sometimes you might not want glyphs for every node in the input dataset. In
+this case, you can choose to build glyphs for a subset of the input dataset
+by using a percentage of the points. Using this percentage, a uniform
+distribuiton is used to select points from the input dataset and use them for
+glyphing.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Example dataset with normals</span>
+<span class="n">mesh</span> <span class="o">=</span> <span class="n">examples</span><span class="o">.</span><span class="n">load_random_hills</span><span class="p">()</span>
+
+<span class="c1"># create a subset of arrows using the glyph filter</span>
+<span class="n">arrows</span> <span class="o">=</span> <span class="n">mesh</span><span class="o">.</span><span class="n">glyph</span><span class="p">(</span><span class="n">scale</span><span class="o">=</span><span class="s1">&#39;Normals&#39;</span><span class="p">,</span> <span class="n">orient</span><span class="o">=</span><span class="s1">&#39;Normals&#39;</span><span class="p">,</span> <span class="n">subset</span><span class="o">=</span><span class="mf">0.05</span><span class="p">)</span>
+
+<span class="n">p</span> <span class="o">=</span> <span class="n">pv</span><span class="o">.</span><span class="n">Plotter</span><span class="p">()</span>
+<span class="n">p</span><span class="o">.</span><span class="n">add_mesh</span><span class="p">(</span><span class="n">arrows</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">)</span>
+<span class="n">p</span><span class="o">.</span><span class="n">add_mesh</span><span class="p">(</span><span class="n">mesh</span><span class="p">,</span> <span class="n">scalars</span><span class="o">=</span><span class="s1">&#39;Elevation&#39;</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="s1">&#39;terrain&#39;</span><span class="p">)</span>
+<span class="n">p</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+<img alt="../../_images/sphx_glr_plot-glyphs_004.png" class="sphx-glr-single-img" src="../../_images/sphx_glr_plot-glyphs_004.png" />
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  10.005 seconds)</p>
 <div class="sphx-glr-footer class sphx-glr-footer-example docutils container" id="sphx-glr-download-examples-02-plot-plot-glyphs-py">
 <div class="sphx-glr-download docutils container">
 <p><a class="reference download internal" download="" href="../../_downloads/28f51db31cc4de42756922b803a6d82f/plot-glyphs.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">plot-glyphs.py</span></code></a></p>
@@ -315,6 +338,7 @@ access the <a class="reference internal" href="../../types/common.html#pyvista.C
 </div>
 </div>
 <p class="sphx-glr-signature"><a class="reference external" href="https://sphinx-gallery.readthedocs.io">Gallery generated by Sphinx-Gallery</a></p>
+</div>
 </div>
 
 

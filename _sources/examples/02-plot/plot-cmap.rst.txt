@@ -16,6 +16,7 @@ Use a custom built colormap when plotting scalar values.
 
 
     from pyvista import examples
+    import pyvista as pv
     import matplotlib.pyplot as plt
 
 
@@ -24,13 +25,16 @@ Use a custom built colormap when plotting scalar values.
 
 
 
-Any colormap built for ``matplotlib`` is fully compatible with PyVista.
-Colormaps are typically specifiedby passing the string name of the
-``matplotlib`` colormap to the plotting routine via the ``cmap`` argument.
+Any colormap built for ``matplotlib`` or ``colorcet`` is fully compatible
+with PyVista. Colormaps are typically specified by passing the string name of
+the ``matplotlib`` or ``colorcet`` colormap to the plotting routine via the
+``cmap`` argument.
 
-See `this page`_ for a complete list of available colormaps.
+See `Matplotlib's complete list of available colormaps`_ and
+`Colorcet's complete list`_.
 
-.. _this page: https://matplotlib.org/tutorials/colors/colormaps.html
+.. _Matplotlib's complete list of available colormaps: https://matplotlib.org/tutorials/colors/colormaps.html
+.. _Colorcet's complete list: http://colorcet.pyviz.org/user_guide/index.html
 
 To get started using a custom colormap, download some data with scalars to
 plot.
@@ -71,7 +75,47 @@ Simply pass the colormap to the plotting routine!
 
 
 
+
+
 .. image:: /examples/02-plot/images/sphx_glr_plot-cmap_001.png
+    :class: sphx-glr-single-img
+
+
+
+
+Matplotlib vs. Colorcet
++++++++++++++++++++++++
+
+Let's compare Colorcet's perceptually uniform "fire" colormap to Matplotlib's
+"hot" colormap much like the example on the `first page of Colorcet's docs`_.
+
+.. _first page of Colorcet's docs: http://colorcet.pyviz.org/index.html
+
+The "hot" version washes out detail at the high end, as if the image is
+overexposed, while "fire" makes detail visible throughout the data range.
+
+
+.. code-block:: default
+
+
+    p = pv.Plotter(shape=(2,2), border=False)
+    p.subplot(0,0)
+    p.add_mesh(mesh, cmap='fire', lighting=True, stitle='Colorcet Fire')
+
+    p.subplot(0,1)
+    p.add_mesh(mesh, cmap='fire', lighting=False, stitle='Colorcet Fire (No Lighting)')
+
+    p.subplot(1,0)
+    p.add_mesh(mesh, cmap='hot', lighting=True, stitle='Matplotlib Hot')
+
+    p.subplot(1,1)
+    p.add_mesh(mesh, cmap='hot', lighting=False, stitle='Matplotlib Hot (No Lighting)')
+
+    p.show()
+
+
+
+.. image:: /examples/02-plot/images/sphx_glr_plot-cmap_002.png
     :class: sphx-glr-single-img
 
 
@@ -80,7 +124,7 @@ Simply pass the colormap to the plotting routine!
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  4.159 seconds)
+   **Total running time of the script:** ( 0 minutes  8.059 seconds)
 
 
 .. _sphx_glr_download_examples_02-plot_plot-cmap.py:
