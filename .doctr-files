@@ -329,7 +329,7 @@
 ./_sources/tools/qt_plotting.rst.txt
 ./_sources/tools/utilities.rst.txt
 ./_sources/types/common.rst.txt
-./_sources/types/container.rst.txt
+./_sources/types/composite.rst.txt
 ./_sources/types/grids.rst.txt
 ./_sources/types/index.rst.txt
 ./_sources/types/point-grids.rst.txt
@@ -460,7 +460,7 @@
 ./tools/qt_plotting.html
 ./tools/utilities.html
 ./types/common.html
-./types/container.html
+./types/composite.html
 ./types/grids.html
 ./types/index.html
 ./types/point-grids.html

@@ -763,7 +763,7 @@ triangles otherwise, the output will be the intersection polygons.</p></li>
 
 <dl class="method">
 <dt id="pyvista.DataSetFilters.slice_along_axis">
-<code class="sig-name descname">slice_along_axis</code><span class="sig-paren">(</span><em class="sig-param">n=5</em>, <em class="sig-param">axis='x'</em>, <em class="sig-param">tolerance=None</em>, <em class="sig-param">generate_triangles=False</em>, <em class="sig-param">contour=False</em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.DataSetFilters.slice_along_axis" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">slice_along_axis</code><span class="sig-paren">(</span><em class="sig-param">n=5</em>, <em class="sig-param">axis='x'</em>, <em class="sig-param">tolerance=None</em>, <em class="sig-param">generate_triangles=False</em>, <em class="sig-param">contour=False</em>, <em class="sig-param">bounds=None</em>, <em class="sig-param">center=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.DataSetFilters.slice_along_axis" title="Permalink to this definition">¶</a></dt>
 <dd><p>Create many slices of the input dataset along a specified axis.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -802,7 +802,7 @@ triangles otherwise, the output will be the intersection polygons.</p></li>
 <dt id="pyvista.DataSetFilters.slice_orthogonal">
 <code class="sig-name descname">slice_orthogonal</code><span class="sig-paren">(</span><em class="sig-param">x=None</em>, <em class="sig-param">y=None</em>, <em class="sig-param">z=None</em>, <em class="sig-param">generate_triangles=False</em>, <em class="sig-param">contour=False</em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.DataSetFilters.slice_orthogonal" title="Permalink to this definition">¶</a></dt>
 <dd><p>Creates three orthogonal slices through the dataset on the three
-caresian planes. Yields a MutliBlock dataset of the three slices</p>
+caresian planes. Yields a MutliBlock dataset of the three slices.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">

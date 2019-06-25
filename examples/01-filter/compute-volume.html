@@ -337,7 +337,7 @@ thresholded dataset:</p>
 <p>What if instead, we wanted to split all the different connected bodies/volumes
 in a dataset like the one above? We could use the
 <a class="reference internal" href="../../tools/filters.html#pyvista.DataSetFilters.split_bodies" title="pyvista.DataSetFilters.split_bodies"><code class="xref py py-func docutils literal notranslate"><span class="pre">pyvista.DataSetFilters.split_bodies()</span></code></a> filter to extract all the different
-connected volumes in a dataset into blocks in a <a class="reference internal" href="../../types/container.html#pyvista.MultiBlock" title="pyvista.MultiBlock"><code class="xref py py-class docutils literal notranslate"><span class="pre">pyvista.MultiBlock</span></code></a>
+connected volumes in a dataset into blocks in a <a class="reference internal" href="../../types/composite.html#pyvista.MultiBlock" title="pyvista.MultiBlock"><code class="xref py py-class docutils literal notranslate"><span class="pre">pyvista.MultiBlock</span></code></a>
 dataset. For example, lets split the thresholded volume in the example above:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Load a simple example mesh</span>
 <span class="n">dataset</span> <span class="o">=</span> <span class="n">examples</span><span class="o">.</span><span class="n">load_uniform</span><span class="p">()</span>
@@ -418,7 +418,7 @@ Body 20 volume: 2270.000
 </pre></div>
 </div>
 <img alt="../../_images/sphx_glr_compute-volume_004.png" class="sphx-glr-single-img" src="../../_images/sphx_glr_compute-volume_004.png" />
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  21.764 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  21.443 seconds)</p>
 <div class="sphx-glr-footer class sphx-glr-footer-example docutils container" id="sphx-glr-download-examples-01-filter-compute-volume-py">
 <div class="sphx-glr-download docutils container">
 <p><a class="reference download internal" download="" href="../../_downloads/9d6b84a80d62f44fecf5d3de91309882/compute-volume.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">compute-volume.py</span></code></a></p>
