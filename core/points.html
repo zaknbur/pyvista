@@ -448,25 +448,28 @@ object.  It inherits all methods from the original vtk object,
 <tr class="row-odd"><td><p><a class="reference internal" href="#pyvista.PolyData.plot_normals" title="pyvista.PolyData.plot_normals"><code class="xref py py-obj docutils literal notranslate"><span class="pre">plot_normals</span></code></a>([show_mesh, mag, flip, use_every])</p></td>
 <td><p>Plot the point normals of a mesh.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#pyvista.PolyData.ray_trace" title="pyvista.PolyData.ray_trace"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ray_trace</span></code></a>(origin, end_point[, first_point, …])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#pyvista.PolyData.project_points_to_plane" title="pyvista.PolyData.project_points_to_plane"><code class="xref py py-obj docutils literal notranslate"><span class="pre">project_points_to_plane</span></code></a>([origin, normal, …])</p></td>
+<td><p>Project points of this mesh to a plane</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pyvista.PolyData.ray_trace" title="pyvista.PolyData.ray_trace"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ray_trace</span></code></a>(origin, end_point[, first_point, …])</p></td>
 <td><p>Performs a single ray trace calculation given a mesh and a line segment defined by an origin and end_point.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#pyvista.PolyData.remove_points" title="pyvista.PolyData.remove_points"><code class="xref py py-obj docutils literal notranslate"><span class="pre">remove_points</span></code></a>(remove[, mode, keep_scalars, …])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#pyvista.PolyData.remove_points" title="pyvista.PolyData.remove_points"><code class="xref py py-obj docutils literal notranslate"><span class="pre">remove_points</span></code></a>(remove[, mode, keep_scalars, …])</p></td>
 <td><p>Rebuild a mesh by removing points.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#pyvista.PolyData.save" title="pyvista.PolyData.save"><code class="xref py py-obj docutils literal notranslate"><span class="pre">save</span></code></a>(filename[, binary])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pyvista.PolyData.save" title="pyvista.PolyData.save"><code class="xref py py-obj docutils literal notranslate"><span class="pre">save</span></code></a>(filename[, binary])</p></td>
 <td><p>Writes a surface mesh to disk.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#pyvista.PolyData.smooth" title="pyvista.PolyData.smooth"><code class="xref py py-obj docutils literal notranslate"><span class="pre">smooth</span></code></a>([n_iter, convergence, edge_angle, …])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#pyvista.PolyData.smooth" title="pyvista.PolyData.smooth"><code class="xref py py-obj docutils literal notranslate"><span class="pre">smooth</span></code></a>([n_iter, convergence, edge_angle, …])</p></td>
 <td><p>Adjust point coordinates using Laplacian smoothing.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#pyvista.PolyData.subdivide" title="pyvista.PolyData.subdivide"><code class="xref py py-obj docutils literal notranslate"><span class="pre">subdivide</span></code></a>(nsub[, subfilter, inplace])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pyvista.PolyData.subdivide" title="pyvista.PolyData.subdivide"><code class="xref py py-obj docutils literal notranslate"><span class="pre">subdivide</span></code></a>(nsub[, subfilter, inplace])</p></td>
 <td><p>Increase the number of triangles in a single, connected triangular mesh.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#pyvista.PolyData.tri_filter" title="pyvista.PolyData.tri_filter"><code class="xref py py-obj docutils literal notranslate"><span class="pre">tri_filter</span></code></a>([inplace])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#pyvista.PolyData.tri_filter" title="pyvista.PolyData.tri_filter"><code class="xref py py-obj docutils literal notranslate"><span class="pre">tri_filter</span></code></a>([inplace])</p></td>
 <td><p>Returns an all triangle mesh.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#pyvista.PolyData.tube" title="pyvista.PolyData.tube"><code class="xref py py-obj docutils literal notranslate"><span class="pre">tube</span></code></a>([radius, scalars, capping, n_sides, …])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pyvista.PolyData.tube" title="pyvista.PolyData.tube"><code class="xref py py-obj docutils literal notranslate"><span class="pre">tube</span></code></a>([radius, scalars, capping, n_sides, …])</p></td>
 <td><p>Generate a tube around each input line.</p></td>
 </tr>
 </tbody>
@@ -1079,6 +1082,12 @@ confine smaller regions of space.</p>
 <dt id="pyvista.PolyData.point_normals">
 <em class="property">property </em><code class="sig-name descname">point_normals</code><a class="headerlink" href="#pyvista.PolyData.point_normals" title="Permalink to this definition">¶</a></dt>
 <dd><p>Point normals</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pyvista.PolyData.project_points_to_plane">
+<code class="sig-name descname">project_points_to_plane</code><span class="sig-paren">(</span><em class="sig-param">origin=None</em>, <em class="sig-param">normal=(0</em>, <em class="sig-param">0</em>, <em class="sig-param">1)</em>, <em class="sig-param">inplace=False</em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.PolyData.project_points_to_plane" title="Permalink to this definition">¶</a></dt>
+<dd><p>Project points of this mesh to a plane</p>
 </dd></dl>
 
 <dl class="method">

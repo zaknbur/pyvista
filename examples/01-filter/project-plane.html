@@ -9,7 +9,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Read Image Files &mdash; PyVista 0.20.4 documentation</title>
+  <title>Project to a Plane &mdash; PyVista 0.20.4 documentation</title>
   
 
   
@@ -42,8 +42,8 @@
   <link rel="stylesheet" href="../../_static/copybutton.css" type="text/css" />
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Parallel Files" href="read-parallel.html" />
-    <link rel="prev" title="Load and Plot from a File" href="read-file.html" />
+    <link rel="next" title="Resampling &amp; Interpolating" href="resample.html" />
+    <link rel="prev" title="Ray Tracing" href="poly-ray-trace.html" />
  
 
 <meta name="description" content="3D plotting and mesh analysis through a streamlined interface for the Visualization Toolkit (VTK)">
@@ -124,21 +124,23 @@
 <li class="toctree-l1"><a class="reference internal" href="../../getting-started/installation.html">Installation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../getting-started/simple.html">Basic API Usage</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="../index.html">Quick Examples</a><ul class="current">
-<li class="toctree-l2 current"><a class="reference internal" href="../index.html#loading-and-creating-meshes">Loading and Creating Meshes</a><ul class="current">
-<li class="toctree-l3"><a class="reference internal" href="create-geometric-objects.html">Geometric Objects</a></li>
-<li class="toctree-l3"><a class="reference internal" href="create-parametric-geometric-objects.html">Parametric Geometric Objects</a></li>
-<li class="toctree-l3"><a class="reference internal" href="create-poly.html">Create PolyData</a></li>
-<li class="toctree-l3"><a class="reference internal" href="create-spline.html">Creating a Spline</a></li>
-<li class="toctree-l3"><a class="reference internal" href="create-structured-surface.html">Creating a Structured Surface</a></li>
-<li class="toctree-l3"><a class="reference internal" href="create-tri-surface.html">Create Triangulated Surface</a></li>
-<li class="toctree-l3"><a class="reference internal" href="create-uniform-grid.html">Creating a Uniform Grid</a></li>
-<li class="toctree-l3"><a class="reference internal" href="create-unstructured-surface.html">Creating an Unstructured Surface</a></li>
-<li class="toctree-l3"><a class="reference internal" href="read-file.html">Load and Plot from a File</a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="#">Read Image Files</a></li>
-<li class="toctree-l3"><a class="reference internal" href="read-parallel.html">Parallel Files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index.html#loading-and-creating-meshes">Loading and Creating Meshes</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html#filtering">Filtering</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="compute-normals.html">Computing Surface Normals</a></li>
+<li class="toctree-l3"><a class="reference internal" href="compute-volume.html">Volumetric Analysis</a></li>
+<li class="toctree-l3"><a class="reference internal" href="decimate.html">Decimation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="extract-cells-inside-surface.html">Extract Cells Inside Surface</a></li>
+<li class="toctree-l3"><a class="reference internal" href="extract-edges.html">Extract Edges</a></li>
+<li class="toctree-l3"><a class="reference internal" href="geodesic.html">Geodesic Paths</a></li>
+<li class="toctree-l3"><a class="reference internal" href="poly-ray-trace.html">Ray Tracing</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Project to a Plane</a></li>
+<li class="toctree-l3"><a class="reference internal" href="resample.html">Resampling &amp; Interpolating</a></li>
+<li class="toctree-l3"><a class="reference internal" href="slicing.html">Slicing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="streamlines.html">Streamlines</a></li>
+<li class="toctree-l3"><a class="reference internal" href="using-filters.html">Using Common Filters</a></li>
+<li class="toctree-l3"><a class="reference internal" href="volume-smoothing.html">Volume Smoothing</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../index.html#filtering">Filtering</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../index.html#plotting-examples">Plotting Examples</a></li>
 </ul>
 </li>
@@ -220,14 +222,14 @@
         
           <li><a href="../index.html">Quick Examples</a> &raquo;</li>
         
-      <li>Read Image Files</li>
+      <li>Project to a Plane</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
             
             
-              <a href="https://github.com/pyvista/pyvista/blob/master/docs/examples/00-load/read-image.rst" class="fa fa-github"> Edit on GitHub</a>
+              <a href="https://github.com/pyvista/pyvista/blob/master/docs/examples/01-filter/project-plane.rst" class="fa fa-github"> Edit on GitHub</a>
             
           
         
@@ -243,46 +245,54 @@
             
   <div class="sphx-glr-download-link-note admonition note">
 <p class="admonition-title">Note</p>
-<p>Click <a class="reference internal" href="#sphx-glr-download-examples-00-load-read-image-py"><span class="std std-ref">here</span></a> to download the full example code</p>
+<p>Click <a class="reference internal" href="#sphx-glr-download-examples-01-filter-project-plane-py"><span class="std std-ref">here</span></a> to download the full example code</p>
 </div>
-<div class="sphx-glr-example-title section" id="read-image-files">
-<span id="sphx-glr-examples-00-load-read-image-py"></span><h1>Read Image Files<a class="headerlink" href="#read-image-files" title="Permalink to this headline">¶</a></h1>
-<p>Read and plot image files (JPEG, TIFF, PNG, etc).</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pyvista</span> <span class="k">as</span> <span class="nn">pv</span>
+<div class="sphx-glr-example-title section" id="project-to-a-plane">
+<span id="sphx-glr-examples-01-filter-project-plane-py"></span><h1>Project to a Plane<a class="headerlink" href="#project-to-a-plane" title="Permalink to this headline">¶</a></h1>
+<p><a class="reference internal" href="../../core/points.html#pyvista.PolyData" title="pyvista.PolyData"><code class="xref py py-class docutils literal notranslate"><span class="pre">pyvista.PolyData</span></code></a> surfaces and pointsets can easily be projected to a
+plane defined by a normal and origin</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># sphinx_gallery_thumbnail_number = 2</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">pyvista</span> <span class="k">as</span> <span class="nn">pv</span>
 <span class="kn">from</span> <span class="nn">pyvista</span> <span class="k">import</span> <span class="n">examples</span>
+
+
+<span class="k">def</span> <span class="nf">make_example_data</span><span class="p">():</span>
+    <span class="n">surface</span> <span class="o">=</span> <span class="n">examples</span><span class="o">.</span><span class="n">download_saddle_surface</span><span class="p">()</span>
+    <span class="n">points</span> <span class="o">=</span> <span class="n">examples</span><span class="o">.</span><span class="n">download_sparse_points</span><span class="p">()</span>
+    <span class="n">poly</span> <span class="o">=</span> <span class="n">surface</span><span class="o">.</span><span class="n">interpolate</span><span class="p">(</span><span class="n">points</span><span class="p">,</span> <span class="n">radius</span><span class="o">=</span><span class="mf">12.0</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">poly</span>
+
+<span class="n">poly</span> <span class="o">=</span> <span class="n">make_example_data</span><span class="p">()</span>
+<span class="n">poly</span><span class="o">.</span><span class="n">plot</span><span class="p">()</span>
 </pre></div>
 </div>
-<p>PyVista fully supportes reading images into their own spatially referenced
-data objects (this example) as well as supports texture mapping of images onto
-datasets (see <a class="reference internal" href="../02-plot/plot-texture.html#ref-texture-example"><span class="std std-ref">Applying Textures</span></a>).</p>
-<p>Download a JPEG image of a puppy and load it to <a class="reference internal" href="../../core/grids.html#pyvista.UniformGrid" title="pyvista.UniformGrid"><code class="xref py py-class docutils literal notranslate"><span class="pre">pyvista.UniformGrid</span></code></a>.
-This could similarly be implemented with any image file by using the
-<a class="reference internal" href="../../utilities/utilities.html#pyvista.read" title="pyvista.read"><code class="xref py py-func docutils literal notranslate"><span class="pre">pyvista.read()</span></code></a> function and passing the path to the image file.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">image</span> <span class="o">=</span> <span class="n">examples</span><span class="o">.</span><span class="n">download_puppy</span><span class="p">()</span>
-<span class="c1"># or...</span>
-<span class="c1"># image = pv.read(&#39;my_image.jpg&#39;)</span>
+<img alt="../../_images/sphx_glr_project-plane_001.png" class="sphx-glr-single-img" src="../../_images/sphx_glr_project-plane_001.png" />
+<p>Project that surface to a plane underneath the surface</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">origin</span> <span class="o">=</span> <span class="n">poly</span><span class="o">.</span><span class="n">center</span>
+<span class="n">origin</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">-=</span> <span class="n">poly</span><span class="o">.</span><span class="n">length</span> <span class="o">/</span> <span class="mf">3.</span>
+<span class="n">projected</span> <span class="o">=</span> <span class="n">poly</span><span class="o">.</span><span class="n">project_points_to_plane</span><span class="p">(</span><span class="n">origin</span><span class="o">=</span><span class="n">origin</span><span class="p">)</span>
+
+<span class="c1"># Display the results</span>
+<span class="n">p</span> <span class="o">=</span> <span class="n">pv</span><span class="o">.</span><span class="n">Plotter</span><span class="p">()</span>
+<span class="n">p</span><span class="o">.</span><span class="n">add_mesh</span><span class="p">(</span><span class="n">poly</span><span class="p">,)</span>
+<span class="n">p</span><span class="o">.</span><span class="n">add_mesh</span><span class="p">(</span><span class="n">projected</span><span class="p">,</span> <span class="p">)</span>
+<span class="n">p</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
-<p>When plotting images stored in <a class="reference internal" href="../../core/grids.html#pyvista.UniformGrid" title="pyvista.UniformGrid"><code class="xref py py-class docutils literal notranslate"><span class="pre">pyvista.UniformGrid</span></code></a> objects, it is
-important to specify usign the <cite>rgb</cite> option when plotting to ensure that the
-image’s true colors are used and not mapped.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># True image colors</span>
-<span class="n">image</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">rgb</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">cpos</span><span class="o">=</span><span class="s1">&#39;xy&#39;</span><span class="p">)</span>
+<img alt="../../_images/sphx_glr_project-plane_002.png" class="sphx-glr-single-img" src="../../_images/sphx_glr_project-plane_002.png" />
+<p class="sphx-glr-script-out">Out:</p>
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>(0.0, 0.0, 1.0)
+(-0.006363868713378906, 19.79582965373993, -12.51884275485332)
 </pre></div>
 </div>
-<img alt="../../_images/sphx_glr_read-image_001.png" class="sphx-glr-single-img" src="../../_images/sphx_glr_read-image_001.png" />
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Mapped image colors</span>
-<span class="n">image</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">cpos</span><span class="o">=</span><span class="s1">&#39;xy&#39;</span><span class="p">)</span>
-</pre></div>
-</div>
-<img alt="../../_images/sphx_glr_read-image_002.png" class="sphx-glr-single-img" src="../../_images/sphx_glr_read-image_002.png" />
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  13.825 seconds)</p>
-<div class="sphx-glr-footer class sphx-glr-footer-example docutils container" id="sphx-glr-download-examples-00-load-read-image-py">
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  6.532 seconds)</p>
+<div class="sphx-glr-footer class sphx-glr-footer-example docutils container" id="sphx-glr-download-examples-01-filter-project-plane-py">
 <div class="sphx-glr-download docutils container">
-<p><a class="reference download internal" download="" href="../../_downloads/ba18d67e09ae8bc5eac24fdb6d37f658/read-image.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">read-image.py</span></code></a></p>
+<p><a class="reference download internal" download="" href="../../_downloads/675cd900bf27dad461b1685e49bead71/project-plane.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">project-plane.py</span></code></a></p>
 </div>
 <div class="sphx-glr-download docutils container">
-<p><a class="reference download internal" download="" href="../../_downloads/3b25804b3ce36b7c6b9fb0ca7a68f4a0/read-image.ipynb"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Jupyter</span> <span class="pre">notebook:</span> <span class="pre">read-image.ipynb</span></code></a></p>
+<p><a class="reference download internal" download="" href="../../_downloads/15713ef181d3f94cd644bceaba29a7d3/project-plane.ipynb"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Jupyter</span> <span class="pre">notebook:</span> <span class="pre">project-plane.ipynb</span></code></a></p>
 </div>
 </div>
 <p class="sphx-glr-signature"><a class="reference external" href="https://sphinx-gallery.github.io">Gallery generated by Sphinx-Gallery</a></p>
@@ -296,10 +306,10 @@ image’s true colors are used and not mapped.</p>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="read-parallel.html" class="btn btn-neutral float-right" title="Parallel Files" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="resample.html" class="btn btn-neutral float-right" title="Resampling &amp; Interpolating" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="read-file.html" class="btn btn-neutral float-left" title="Load and Plot from a File" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="poly-ray-trace.html" class="btn btn-neutral float-left" title="Ray Tracing" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

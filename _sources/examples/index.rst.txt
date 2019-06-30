@@ -424,6 +424,26 @@ in the :ref:`filters_ref` module. Explore these demos to perfrom tasks such as:
 
 .. raw:: html
 
+    <div class="sphx-glr-thumbcontainer" tooltip="pyvista.PolyData surfaces and pointsets can easily be projected to a plane defined by a normal ...">
+
+.. only:: html
+
+    .. figure:: /examples/01-filter/images/thumb/sphx_glr_project-plane_thumb.png
+
+        :ref:`sphx_glr_examples_01-filter_project-plane.py`
+
+.. raw:: html
+
+    </div>
+
+
+.. toctree::
+   :hidden:
+
+   /examples/01-filter/project-plane
+
+.. raw:: html
+
     <div class="sphx-glr-thumbcontainer" tooltip="Resample one mesh&#x27;s point/cell arrays onto another meshes nodes.">
 
 .. only:: html

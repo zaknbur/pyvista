@@ -3,6 +3,7 @@
 ./_downloads/07f90d98aa6176cbd1fb06fb1320a17e/plot-movie.ipynb
 ./_downloads/1029870de3a2593219174b9be63a9062/plot-multi-window.py
 ./_downloads/1522be3ab0c2bfabf5d5f4175c7e08ec/create-tri-surface.py
+./_downloads/15713ef181d3f94cd644bceaba29a7d3/project-plane.ipynb
 ./_downloads/159cf2b9e5ab3fc0016508cc7b8d24c3/plot-edges.py
 ./_downloads/18596d010145c5f849a9fa0951009752/create-parametric-geometric-objects.py
 ./_downloads/1970d64e8b3e33df7849a51bf5cfc68f/create-tri-surface.ipynb
@@ -24,6 +25,7 @@
 ./_downloads/586a4ef89a47a23651e9c825ebb6159a/compute-normals.py
 ./_downloads/5b13047ce218316b06efa0534d6b5577/decimate.ipynb
 ./_downloads/5c86328122948c36bb2fe3c83a74db3f/plot-gif.py
+./_downloads/675cd900bf27dad461b1685e49bead71/project-plane.py
 ./_downloads/68be9ad105af13966420f1c9a85a1894/plot-linked.ipynb
 ./_downloads/6f152800fff155ee32125cf636e9bb91/create-parametric-geometric-objects.ipynb
 ./_downloads/74b7600045d625b11dfaba4d01b70a54/read-parallel.ipynb
@@ -238,6 +240,9 @@
 ./_images/sphx_glr_plot-volume_thumb.png
 ./_images/sphx_glr_poly-ray-trace_001.png
 ./_images/sphx_glr_poly-ray-trace_thumb.png
+./_images/sphx_glr_project-plane_001.png
+./_images/sphx_glr_project-plane_002.png
+./_images/sphx_glr_project-plane_thumb.png
 ./_images/sphx_glr_read-file_001.png
 ./_images/sphx_glr_read-file_002.png
 ./_images/sphx_glr_read-file_003.png
@@ -306,6 +311,7 @@
 ./_sources/examples/01-filter/extract-edges.rst.txt
 ./_sources/examples/01-filter/geodesic.rst.txt
 ./_sources/examples/01-filter/poly-ray-trace.rst.txt
+./_sources/examples/01-filter/project-plane.rst.txt
 ./_sources/examples/01-filter/resample.rst.txt
 ./_sources/examples/01-filter/sg_execution_times.rst.txt
 ./_sources/examples/01-filter/slicing.rst.txt
@@ -435,6 +441,7 @@
 ./examples/01-filter/extract-edges.html
 ./examples/01-filter/geodesic.html
 ./examples/01-filter/poly-ray-trace.html
+./examples/01-filter/project-plane.html
 ./examples/01-filter/resample.html
 ./examples/01-filter/sg_execution_times.html
 ./examples/01-filter/slicing.html
