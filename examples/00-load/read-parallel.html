@@ -146,8 +146,9 @@
 </ul>
 <p class="caption"><span class="caption-text">API Reference</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../../types/index.html">Data Types</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../tools/index.html">Tools</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../core/index.html">Core API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../plotting/index.html">Plotting</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../utilities/index.html">Utilities</a></li>
 </ul>
 
             
@@ -255,13 +256,13 @@ several files is natively supported by VTK and PyVista</p>
 </pre></div>
 </div>
 <p>Let’s go ahead and download the sample dataset containing an
-<a class="reference internal" href="../../types/point-grids.html#pyvista.UnstructuredGrid" title="pyvista.UnstructuredGrid"><code class="xref py py-class docutils literal notranslate"><span class="pre">pyvista.UnstructuredGrid</span></code></a> broken up into several files.</p>
+<a class="reference internal" href="../../core/point-grids.html#pyvista.UnstructuredGrid" title="pyvista.UnstructuredGrid"><code class="xref py py-class docutils literal notranslate"><span class="pre">pyvista.UnstructuredGrid</span></code></a> broken up into several files.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Do not capture output because we&#39;ll demo how to read the file</span>
 <span class="n">examples</span><span class="o">.</span><span class="n">download_blood_vessels</span><span class="p">()</span>
 </pre></div>
 </div>
 <p>The above code downloaded a dataset containing a set of parallel files for a
-blood vessel mesh and returned an <a class="reference internal" href="../../types/point-grids.html#pyvista.UnstructuredGrid" title="pyvista.UnstructuredGrid"><code class="xref py py-class docutils literal notranslate"><span class="pre">pyvista.UnstructuredGrid</span></code></a> - we did not
+blood vessel mesh and returned an <a class="reference internal" href="../../core/point-grids.html#pyvista.UnstructuredGrid" title="pyvista.UnstructuredGrid"><code class="xref py py-class docutils literal notranslate"><span class="pre">pyvista.UnstructuredGrid</span></code></a> - we did not
 grab that UnstructuredGrid, so that we could demo how to use these types of
 files.</p>
 <p>Let’s inspect where this downloaded our dataset:</p>
@@ -289,7 +290,7 @@ simply read the <code class="docutils literal notranslate"><span class="pre">.pv
 </pre></div>
 </div>
 <p class="sphx-glr-script-out">Out:</p>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>UnstructuredGrid (0x7fd8995857c8)
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>UnstructuredGrid (0x7fd5000b5fa8)
   N Cells:      39353
   N Points:     48823
   X Bounds:     5.300e+01, 1.210e+02
@@ -307,7 +308,7 @@ simply read the <code class="docutils literal notranslate"><span class="pre">.pv
 </pre></div>
 </div>
 <img alt="../../_images/sphx_glr_read-parallel_002.png" class="sphx-glr-single-img" src="../../_images/sphx_glr_read-parallel_002.png" />
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  3.013 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  3.072 seconds)</p>
 <div class="sphx-glr-footer class sphx-glr-footer-example docutils container" id="sphx-glr-download-examples-00-load-read-parallel-py">
 <div class="sphx-glr-download docutils container">
 <p><a class="reference download internal" download="" href="../../_downloads/79ee78fbb8a82d454ad85df901955c57/read-parallel.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">read-parallel.py</span></code></a></p>

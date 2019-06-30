@@ -148,6 +148,7 @@
 <li class="toctree-l3"><a class="reference internal" href="plot-shading.html">Types of Shading</a></li>
 <li class="toctree-l3"><a class="reference internal" href="plot-texture.html">Applying Textures</a></li>
 <li class="toctree-l3"><a class="reference internal" href="plot-themes.html">Change the Theme</a></li>
+<li class="toctree-l3"><a class="reference internal" href="plot-volume.html">Volume Rendering</a></li>
 </ul>
 </li>
 </ul>
@@ -156,8 +157,9 @@
 </ul>
 <p class="caption"><span class="caption-text">API Reference</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../../types/index.html">Data Types</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../tools/index.html">Tools</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../core/index.html">Core API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../plotting/index.html">Plotting</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../utilities/index.html">Utilities</a></li>
 </ul>
 
             
@@ -263,7 +265,7 @@
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 </pre></div>
 </div>
-<p>Glyphying can be done via the <a class="reference internal" href="../../tools/filters.html#pyvista.DataSetFilters.glyph" title="pyvista.DataSetFilters.glyph"><code class="xref py py-func docutils literal notranslate"><span class="pre">pyvista.DataSetFilters.glyph()</span></code></a> filter</p>
+<p>Glyphying can be done via the <a class="reference internal" href="../../core/filters.html#pyvista.DataSetFilters.glyph" title="pyvista.DataSetFilters.glyph"><code class="xref py py-func docutils literal notranslate"><span class="pre">pyvista.DataSetFilters.glyph()</span></code></a> filter</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mesh</span> <span class="o">=</span> <span class="n">examples</span><span class="o">.</span><span class="n">download_carotid</span><span class="p">()</span><span class="o">.</span><span class="n">threshold</span><span class="p">(</span><span class="mi">145</span><span class="p">,</span> <span class="n">scalars</span><span class="o">=</span><span class="s1">&#39;scalars&#39;</span><span class="p">)</span>
 
 <span class="c1"># Make a geometric obhect to use as the glyph</span>
@@ -284,7 +286,7 @@
 </div>
 <img alt="../../_images/sphx_glr_plot-glyphs_001.png" class="sphx-glr-single-img" src="../../_images/sphx_glr_plot-glyphs_001.png" />
 <p>Another approach is to load the vectors directly to the mesh object and then
-access the <a class="reference internal" href="../../types/common.html#pyvista.Common.arrows" title="pyvista.Common.arrows"><code class="xref py py-attr docutils literal notranslate"><span class="pre">pyvista.Common.arrows</span></code></a> property.</p>
+access the <a class="reference internal" href="../../core/common.html#pyvista.Common.arrows" title="pyvista.Common.arrows"><code class="xref py py-attr docutils literal notranslate"><span class="pre">pyvista.Common.arrows</span></code></a> property.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sphere</span> <span class="o">=</span> <span class="n">pv</span><span class="o">.</span><span class="n">Sphere</span><span class="p">(</span><span class="n">radius</span><span class="o">=</span><span class="mf">3.14</span><span class="p">)</span>
 
 <span class="c1"># make cool swirly pattern</span>
@@ -328,7 +330,7 @@ glyphing.</p>
 </pre></div>
 </div>
 <img alt="../../_images/sphx_glr_plot-glyphs_004.png" class="sphx-glr-single-img" src="../../_images/sphx_glr_plot-glyphs_004.png" />
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  10.014 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  10.076 seconds)</p>
 <div class="sphx-glr-footer class sphx-glr-footer-example docutils container" id="sphx-glr-download-examples-02-plot-plot-glyphs-py">
 <div class="sphx-glr-download docutils container">
 <p><a class="reference download internal" download="" href="../../_downloads/28f51db31cc4de42756922b803a6d82f/plot-glyphs.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">plot-glyphs.py</span></code></a></p>

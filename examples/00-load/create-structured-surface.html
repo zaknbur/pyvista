@@ -150,8 +150,9 @@
 </ul>
 <p class="caption"><span class="caption-text">API Reference</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../../types/index.html">Data Types</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../tools/index.html">Tools</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../core/index.html">Core API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../plotting/index.html">Plotting</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../utilities/index.html">Utilities</a></li>
 </ul>
 
             
@@ -327,17 +328,17 @@ coordinates such that they are not on orthogonal to cartesian reference frame.</
 </pre></div>
 </div>
 <p class="sphx-glr-script-out">Out:</p>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>[[ -43.66552074 -280.15674285    1.79579222]
- [ -28.05362042 -268.56232244    2.61047932]
- [ -22.36511082 -264.33766238    2.96370534]
- [ -10.14087081 -255.25914055    3.82732789]
- [   1.1482857  -246.87507302    4.74807453]]
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>[[ -35.70963513 -280.00113745    1.86149408]
+ [ -26.62764257 -273.25625452    2.30774207]
+ [ -16.79191241 -265.95159666    2.87070941]
+ [  -7.93698229 -259.37534519    3.44954355]
+ [   7.45201543 -247.94646686    4.61135176]]
 </pre></div>
 </div>
 <p>Now pretend that the (n by 3) NumPy array above are coordinates that you have,
 possibly from a file with three columns of XYZ points.</p>
 <p>We simply need to recover the dimensions of the grid that these points make
-and then we can generate a <a class="reference internal" href="../../types/point-grids.html#pyvista.StructuredGrid" title="pyvista.StructuredGrid"><code class="xref py py-class docutils literal notranslate"><span class="pre">pyvista.StructuredGrid</span></code></a> mesh.</p>
+and then we can generate a <a class="reference internal" href="../../core/point-grids.html#pyvista.StructuredGrid" title="pyvista.StructuredGrid"><code class="xref py py-class docutils literal notranslate"><span class="pre">pyvista.StructuredGrid</span></code></a> mesh.</p>
 <p>Let’s preview the points to see what we are dealing with:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">10</span><span class="p">))</span>
@@ -378,7 +379,7 @@ dimensionality of structured grid including:</p>
 </pre></div>
 </div>
 <img alt="../../_images/sphx_glr_create-structured-surface_004.png" class="sphx-glr-single-img" src="../../_images/sphx_glr_create-structured-surface_004.png" />
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  5.091 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  5.222 seconds)</p>
 <div class="sphx-glr-footer class sphx-glr-footer-example docutils container" id="sphx-glr-download-examples-00-load-create-structured-surface-py">
 <div class="sphx-glr-download docutils container">
 <p><a class="reference download internal" download="" href="../../_downloads/e4a96981d2ba075fb5cd46d7bd14ddc5/create-structured-surface.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">create-structured-surface.py</span></code></a></p>

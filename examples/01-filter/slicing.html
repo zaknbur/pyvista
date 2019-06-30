@@ -150,8 +150,9 @@
 </ul>
 <p class="caption"><span class="caption-text">API Reference</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../../types/index.html">Data Types</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../tools/index.html">Tools</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../core/index.html">Core API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../plotting/index.html">Plotting</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../utilities/index.html">Utilities</a></li>
 </ul>
 
             
@@ -262,7 +263,7 @@
 Thes filters allow you to slice through a volumetric dataset to extract and
 view sections through the volume of data.</p>
 <p>One of the most common slicing filters used in PyVista is the
-<a class="reference internal" href="../../tools/filters.html#pyvista.DataSetFilters.slice_orthogonal" title="pyvista.DataSetFilters.slice_orthogonal"><code class="xref py py-func docutils literal notranslate"><span class="pre">pyvista.DataSetFilters.slice_orthogonal()</span></code></a> filter which creates three
+<a class="reference internal" href="../../core/filters.html#pyvista.DataSetFilters.slice_orthogonal" title="pyvista.DataSetFilters.slice_orthogonal"><code class="xref py py-func docutils literal notranslate"><span class="pre">pyvista.DataSetFilters.slice_orthogonal()</span></code></a> filter which creates three
 orthogonal slices through the dataset on the three caresian planes.
 For example, let’s slice through the sample geostatitical training image
 volume. First, load up the volume and preview it:</p>
@@ -291,7 +292,7 @@ to gain insight about the internals of the volume.</p>
 </div>
 <img alt="../../_images/sphx_glr_slicing_003.png" class="sphx-glr-single-img" src="../../_images/sphx_glr_slicing_003.png" />
 <p>We can also add just a single slice of the volume by specifying the origin
-and normal of the slicing plane with the <a class="reference internal" href="../../tools/filters.html#pyvista.DataSetFilters.slice" title="pyvista.DataSetFilters.slice"><code class="xref py py-func docutils literal notranslate"><span class="pre">pyvista.DataSetFilters.slice()</span></code></a>
+and normal of the slicing plane with the <a class="reference internal" href="../../core/filters.html#pyvista.DataSetFilters.slice" title="pyvista.DataSetFilters.slice"><code class="xref py py-func docutils literal notranslate"><span class="pre">pyvista.DataSetFilters.slice()</span></code></a>
 filter:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Sing slice - origin defaults to center of the mesh</span>
 <span class="n">single_slice</span> <span class="o">=</span> <span class="n">mesh</span><span class="o">.</span><span class="n">slice</span><span class="p">(</span><span class="n">normal</span><span class="o">=</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">])</span>
@@ -304,7 +305,7 @@ filter:</p>
 </div>
 <img alt="../../_images/sphx_glr_slicing_004.png" class="sphx-glr-single-img" src="../../_images/sphx_glr_slicing_004.png" />
 <p>Adding slicing planes uniformly across an axial direction can also be
-automated with the <a class="reference internal" href="../../tools/filters.html#pyvista.DataSetFilters.slice_along_axis" title="pyvista.DataSetFilters.slice_along_axis"><code class="xref py py-func docutils literal notranslate"><span class="pre">pyvista.DataSetFilters.slice_along_axis()</span></code></a> filter:</p>
+automated with the <a class="reference internal" href="../../core/filters.html#pyvista.DataSetFilters.slice_along_axis" title="pyvista.DataSetFilters.slice_along_axis"><code class="xref py py-func docutils literal notranslate"><span class="pre">pyvista.DataSetFilters.slice_along_axis()</span></code></a> filter:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">slices</span> <span class="o">=</span> <span class="n">mesh</span><span class="o">.</span><span class="n">slice_along_axis</span><span class="p">(</span><span class="n">n</span><span class="o">=</span><span class="mi">7</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="s1">&#39;y&#39;</span><span class="p">)</span>
 
 <span class="n">slices</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">cmap</span><span class="o">=</span><span class="n">cmap</span><span class="p">)</span>
@@ -313,8 +314,8 @@ automated with the <a class="reference internal" href="../../tools/filters.html#
 <img alt="../../_images/sphx_glr_slicing_005.png" class="sphx-glr-single-img" src="../../_images/sphx_glr_slicing_005.png" />
 <div class="section" id="slice-along-line">
 <h2>Slice Along Line<a class="headerlink" href="#slice-along-line" title="Permalink to this headline">¶</a></h2>
-<p>We can also slice a dataset along a <a class="reference internal" href="../../tools/geometric.html#pyvista.Spline" title="pyvista.Spline"><code class="xref py py-func docutils literal notranslate"><span class="pre">pyvista.Spline()</span></code></a> or
-<a class="reference internal" href="../../tools/geometric.html#pyvista.Line" title="pyvista.Line"><code class="xref py py-func docutils literal notranslate"><span class="pre">pyvista.Line()</span></code></a> using the <code class="xref py py-func docutils literal notranslate"><span class="pre">DataSetFilters.slice_along_line()</span></code> filter.</p>
+<p>We can also slice a dataset along a <a class="reference internal" href="../../utilities/geometric.html#pyvista.Spline" title="pyvista.Spline"><code class="xref py py-func docutils literal notranslate"><span class="pre">pyvista.Spline()</span></code></a> or
+<a class="reference internal" href="../../utilities/geometric.html#pyvista.Line" title="pyvista.Line"><code class="xref py py-func docutils literal notranslate"><span class="pre">pyvista.Line()</span></code></a> using the <code class="xref py py-func docutils literal notranslate"><span class="pre">DataSetFilters.slice_along_line()</span></code> filter.</p>
 <p>First, define a line source through a datset of interest. Please note
 that this type of slicing is computationally expensive and might take a while
 if there are a lot of points in the line - try to keep the resolution of
@@ -335,7 +336,7 @@ the line low.</p>
 </pre></div>
 </div>
 <p class="sphx-glr-script-out">Out:</p>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>PolyData (0x7fd898ee2d08)
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>PolyData (0x7fd4f479b3a8)
   N Cells:      1
   N Points:     15
   X Bounds:     0.000e+00, 2.475e+02
@@ -350,7 +351,7 @@ the line low.</p>
 </pre></div>
 </div>
 <p class="sphx-glr-script-out">Out:</p>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>PolyData (0x7fd898ee2e28)
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>PolyData (0x7fd4f479b4c8)
   N Cells:      49100
   N Points:     49692
   X Bounds:     0.000e+00, 2.500e+02
@@ -366,7 +367,7 @@ the line low.</p>
 </pre></div>
 </div>
 <img alt="../../_images/sphx_glr_slicing_006.png" class="sphx-glr-single-img" src="../../_images/sphx_glr_slicing_006.png" />
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  31.394 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  31.469 seconds)</p>
 <div class="sphx-glr-footer class sphx-glr-footer-example docutils container" id="sphx-glr-download-examples-01-filter-slicing-py">
 <div class="sphx-glr-download docutils container">
 <p><a class="reference download internal" download="" href="../../_downloads/f8691701187b822f862f1a976cedf9e3/slicing.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">slicing.py</span></code></a></p>

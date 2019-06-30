@@ -146,8 +146,9 @@
 </ul>
 <p class="caption"><span class="caption-text">API Reference</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../../types/index.html">Data Types</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../tools/index.html">Tools</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../core/index.html">Core API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../plotting/index.html">Plotting</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../utilities/index.html">Utilities</a></li>
 </ul>
 
             
@@ -267,15 +268,15 @@
 </pre></div>
 </div>
 <p class="sphx-glr-script-out">Out:</p>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>[[-201.89850549 -204.441615      1.6115576 ]
- [-183.0497147  -204.441615      2.31634749]
- [-162.07011244 -204.441615      3.32681511]
- [-135.36517253 -204.441615      4.94889833]
- [-115.92641601 -204.441615      6.3180132 ]]
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>[[-201.86003901 -204.89150523    1.59802737]
+ [-179.80541086 -204.89150523    2.434264  ]
+ [-154.05260554 -204.89150523    3.74167539]
+ [-138.40759076 -204.89150523    4.70351773]
+ [-119.39626237 -204.89150523    6.00967317]]
 </pre></div>
 </div>
 <p>Now use those points to create a point cloud PyVista data object. This will
-be encompassed in a <a class="reference internal" href="../../types/points.html#pyvista.PolyData" title="pyvista.PolyData"><code class="xref py py-class docutils literal notranslate"><span class="pre">pyvista.PolyData</span></code></a> object.</p>
+be encompassed in a <a class="reference internal" href="../../core/points.html#pyvista.PolyData" title="pyvista.PolyData"><code class="xref py py-class docutils literal notranslate"><span class="pre">pyvista.PolyData</span></code></a> object.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># simply pass the numpy points to the PolyData constructor</span>
 <span class="n">cloud</span> <span class="o">=</span> <span class="n">pv</span><span class="o">.</span><span class="n">PolyData</span><span class="p">(</span><span class="n">points</span><span class="p">)</span>
 <span class="n">cloud</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">point_size</span><span class="o">=</span><span class="mi">15</span><span class="p">)</span>
@@ -289,7 +290,7 @@ triangulation to turn those boring discrete points into a connected surface.</p>
 </pre></div>
 </div>
 <img alt="../../_images/sphx_glr_create-tri-surface_002.png" class="sphx-glr-single-img" src="../../_images/sphx_glr_create-tri-surface_002.png" />
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  1.256 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  1.342 seconds)</p>
 <div class="sphx-glr-footer class sphx-glr-footer-example docutils container" id="sphx-glr-download-examples-00-load-create-tri-surface-py">
 <div class="sphx-glr-download docutils container">
 <p><a class="reference download internal" download="" href="../../_downloads/1522be3ab0c2bfabf5d5f4175c7e08ec/create-tri-surface.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">create-tri-surface.py</span></code></a></p>

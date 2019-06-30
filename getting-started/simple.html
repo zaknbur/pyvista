@@ -134,8 +134,9 @@
 </ul>
 <p class="caption"><span class="caption-text">API Reference</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../types/index.html">Data Types</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../tools/index.html">Tools</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../core/index.html">Core API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../plotting/index.html">Plotting</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../utilities/index.html">Utilities</a></li>
 </ul>
 
             
@@ -231,12 +232,12 @@
 <p>PyVista provides tools to get started with just about any VTK dataset
 and wrap that object into an easily accesible data object.
 Whether you are new to the VTK library or a power user, the best place to
-get started is with PyVista’s <a class="reference internal" href="../tools/utilities.html#pyvista.wrap" title="pyvista.wrap"><code class="xref py py-func docutils literal notranslate"><span class="pre">pyvista.wrap()</span></code></a> and <code class="xref py py-func docutils literal notranslate"><span class="pre">vtk.read()</span></code>
+get started is with PyVista’s <a class="reference internal" href="../utilities/utilities.html#pyvista.wrap" title="pyvista.wrap"><code class="xref py py-func docutils literal notranslate"><span class="pre">pyvista.wrap()</span></code></a> and <code class="xref py py-func docutils literal notranslate"><span class="pre">vtk.read()</span></code>
 functions to either wrap a VTK data object in memory or read a VTK or
 VTK-friendly file format.</p>
 <div class="section" id="wrapping-a-vtk-data-object">
 <h2>Wrapping a VTK Data Object<a class="headerlink" href="#wrapping-a-vtk-data-object" title="Permalink to this headline">¶</a></h2>
-<p>The wrapping function is under the <a class="reference internal" href="../tools/utilities.html#module-pyvista.utilities" title="pyvista.utilities"><code class="xref py py-mod docutils literal notranslate"><span class="pre">pyvista.utilities</span></code></a> module which is
+<p>The wrapping function is under the <a class="reference internal" href="../utilities/utilities.html#module-pyvista.utilities" title="pyvista.utilities"><code class="xref py py-mod docutils literal notranslate"><span class="pre">pyvista.utilities</span></code></a> module which is
 usable from the top level of PyVista:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pyvista</span> <span class="kn">as</span> <span class="nn">pv</span>
 <span class="n">wrapped_data</span> <span class="o">=</span> <span class="n">pv</span><span class="o">.</span><span class="n">wrap</span><span class="p">(</span><span class="n">my_vtk_data_object</span><span class="p">)</span>
@@ -254,7 +255,7 @@ PyVista object:</p>
 <div class="section" id="reading-a-vtk-file">
 <h2>Reading a VTK File<a class="headerlink" href="#reading-a-vtk-file" title="Permalink to this headline">¶</a></h2>
 <p>PyVista provides a convenience function to read VTK file formats into their
-respective PyVista data objects. Simply call the <a class="reference internal" href="../tools/utilities.html#pyvista.read" title="pyvista.read"><code class="xref py py-func docutils literal notranslate"><span class="pre">pyvista.read()</span></code></a> function
+respective PyVista data objects. Simply call the <a class="reference internal" href="../utilities/utilities.html#pyvista.read" title="pyvista.read"><code class="xref py py-func docutils literal notranslate"><span class="pre">pyvista.read()</span></code></a> function
 passing the filename:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pyvista</span> <span class="kn">as</span> <span class="nn">pv</span>
 <span class="n">data</span> <span class="o">=</span> <span class="n">pv</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="s1">&#39;my_strange_vtk_file.vtk&#39;</span><span class="p">)</span>
@@ -322,7 +323,7 @@ access an array on that dataset, then add some more data:</p>
 <p>PyVista includes numerous plotting routines that are intended to be intuitive
 and highly controllable with <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code> similar syntax and keyword
 arguments.
-To get started, try out the <a class="reference internal" href="../tools/plotting.html#pyvista.plot" title="pyvista.plot"><code class="xref py py-func docutils literal notranslate"><span class="pre">pyvista.plot()</span></code></a> convenience method that is binded
+To get started, try out the <a class="reference internal" href="../plotting/plotting.html#pyvista.plot" title="pyvista.plot"><code class="xref py py-func docutils literal notranslate"><span class="pre">pyvista.plot()</span></code></a> convenience method that is binded
 to each PyVista data object:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pyvista</span> <span class="k">as</span> <span class="nn">pv</span>
 <span class="kn">from</span> <span class="nn">pyvista</span> <span class="k">import</span> <span class="n">examples</span>
@@ -333,8 +334,8 @@ to each PyVista data object:</p>
 </div>
 <img alt="../_images/airplane.png" src="../_images/airplane.png" />
 <p>You can also create the plotter to highly control the scene. First, instantiate
-a plotter such as <a class="reference internal" href="../tools/plotting.html#pyvista.Plotter" title="pyvista.Plotter"><code class="xref py py-class docutils literal notranslate"><span class="pre">pyvista.Plotter</span></code></a> or <a class="reference internal" href="../tools/qt_plotting.html#pyvista.BackgroundPlotter" title="pyvista.BackgroundPlotter"><code class="xref py py-class docutils literal notranslate"><span class="pre">pyvista.BackgroundPlotter</span></code></a>:</p>
-<p>The <a class="reference internal" href="../tools/plotting.html#pyvista.Plotter" title="pyvista.Plotter"><code class="xref py py-class docutils literal notranslate"><span class="pre">pyvista.Plotter</span></code></a> will create a rendering window that will pause the
+a plotter such as <a class="reference internal" href="../plotting/plotting.html#pyvista.Plotter" title="pyvista.Plotter"><code class="xref py py-class docutils literal notranslate"><span class="pre">pyvista.Plotter</span></code></a> or <a class="reference internal" href="../plotting/qt_plotting.html#pyvista.BackgroundPlotter" title="pyvista.BackgroundPlotter"><code class="xref py py-class docutils literal notranslate"><span class="pre">pyvista.BackgroundPlotter</span></code></a>:</p>
+<p>The <a class="reference internal" href="../plotting/plotting.html#pyvista.Plotter" title="pyvista.Plotter"><code class="xref py py-class docutils literal notranslate"><span class="pre">pyvista.Plotter</span></code></a> will create a rendering window that will pause the
 execution of the code after calling <code class="docutils literal notranslate"><span class="pre">show</span></code>.</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="n">plotter</span> <span class="o">=</span> <span class="n">pv</span><span class="o">.</span><span class="n">Plotter</span><span class="p">()</span>  <span class="c1"># instantiate the plotter</span>
 <span class="n">plotter</span><span class="o">.</span><span class="n">add_mesh</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>    <span class="c1"># add a dataset to the scene</span>
@@ -356,9 +357,9 @@ manually interact with the plotting window:</p>
 </div>
 <p>Be sure to check out all the available plotters for your use case:</p>
 <ul class="simple">
-<li><p><a class="reference internal" href="../tools/plotting.html#pyvista.Plotter" title="pyvista.Plotter"><code class="xref py py-class docutils literal notranslate"><span class="pre">pyvista.Plotter</span></code></a>: The standard plotter that pauses the code until closed</p></li>
-<li><p><a class="reference internal" href="../tools/qt_plotting.html#pyvista.BackgroundPlotter" title="pyvista.BackgroundPlotter"><code class="xref py py-class docutils literal notranslate"><span class="pre">pyvista.BackgroundPlotter</span></code></a>: Creates a rendering window that is interactive and does not pause the code execution</p></li>
-<li><p><a class="reference internal" href="../tools/qt_plotting.html#pyvista.ScaledPlotter" title="pyvista.ScaledPlotter"><code class="xref py py-class docutils literal notranslate"><span class="pre">pyvista.ScaledPlotter</span></code></a>: An IPython extension of the <a class="reference internal" href="../tools/qt_plotting.html#pyvista.BackgroundPlotter" title="pyvista.BackgroundPlotter"><code class="xref py py-class docutils literal notranslate"><span class="pre">pyvista.BackgroundPlotter</span></code></a> that has interactive widgets for scaling the axes in the rendering scene.</p></li>
+<li><p><a class="reference internal" href="../plotting/plotting.html#pyvista.Plotter" title="pyvista.Plotter"><code class="xref py py-class docutils literal notranslate"><span class="pre">pyvista.Plotter</span></code></a>: The standard plotter that pauses the code until closed</p></li>
+<li><p><a class="reference internal" href="../plotting/qt_plotting.html#pyvista.BackgroundPlotter" title="pyvista.BackgroundPlotter"><code class="xref py py-class docutils literal notranslate"><span class="pre">pyvista.BackgroundPlotter</span></code></a>: Creates a rendering window that is interactive and does not pause the code execution</p></li>
+<li><p><a class="reference internal" href="../plotting/qt_plotting.html#pyvista.ScaledPlotter" title="pyvista.ScaledPlotter"><code class="xref py py-class docutils literal notranslate"><span class="pre">pyvista.ScaledPlotter</span></code></a>: An IPython extension of the <a class="reference internal" href="../plotting/qt_plotting.html#pyvista.BackgroundPlotter" title="pyvista.BackgroundPlotter"><code class="xref py py-class docutils literal notranslate"><span class="pre">pyvista.BackgroundPlotter</span></code></a> that has interactive widgets for scaling the axes in the rendering scene.</p></li>
 </ul>
 </div>
 </div>

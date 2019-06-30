@@ -149,6 +149,7 @@
 <li class="toctree-l3"><a class="reference internal" href="plot-shading.html">Types of Shading</a></li>
 <li class="toctree-l3"><a class="reference internal" href="plot-texture.html">Applying Textures</a></li>
 <li class="toctree-l3"><a class="reference internal" href="plot-themes.html">Change the Theme</a></li>
+<li class="toctree-l3"><a class="reference internal" href="plot-volume.html">Volume Rendering</a></li>
 </ul>
 </li>
 </ul>
@@ -157,8 +158,9 @@
 </ul>
 <p class="caption"><span class="caption-text">API Reference</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../../types/index.html">Data Types</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../tools/index.html">Tools</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../core/index.html">Core API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../plotting/index.html">Plotting</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../utilities/index.html">Utilities</a></li>
 </ul>
 
             
@@ -315,7 +317,7 @@ Take this Lidar point cloud for example:</p>
 </div>
 <img alt="../../_images/sphx_glr_plot-edl_003.png" class="sphx-glr-single-img" src="../../_images/sphx_glr_plot-edl_003.png" />
 <p>We can improve the depth mapping by enabling eye dome lighting on the renderer.
-Reference <a class="reference internal" href="../../tools/plotting.html#pyvista.Renderer.enable_eye_dome_lighting" title="pyvista.Renderer.enable_eye_dome_lighting"><code class="xref py py-func docutils literal notranslate"><span class="pre">pyvista.Renderer.enable_eye_dome_lighting()</span></code></a>.</p>
+Reference <a class="reference internal" href="../../plotting/plotting.html#pyvista.Renderer.enable_eye_dome_lighting" title="pyvista.Renderer.enable_eye_dome_lighting"><code class="xref py py-func docutils literal notranslate"><span class="pre">pyvista.Renderer.enable_eye_dome_lighting()</span></code></a>.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Plot with EDL</span>
 <span class="n">p</span> <span class="o">=</span> <span class="n">pv</span><span class="o">.</span><span class="n">Plotter</span><span class="p">()</span>
 <span class="n">p</span><span class="o">.</span><span class="n">add_mesh</span><span class="p">(</span><span class="n">point_cloud</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;tan&#39;</span><span class="p">,</span> <span class="n">point_size</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>
@@ -333,7 +335,7 @@ Reference <a class="reference internal" href="../../tools/plotting.html#pyvista.
 </pre></div>
 </div>
 <img alt="../../_images/sphx_glr_plot-edl_005.png" class="sphx-glr-single-img" src="../../_images/sphx_glr_plot-edl_005.png" />
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  53.881 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  54.866 seconds)</p>
 <div class="sphx-glr-footer class sphx-glr-footer-example docutils container" id="sphx-glr-download-examples-02-plot-plot-edl-py">
 <div class="sphx-glr-download docutils container">
 <p><a class="reference download internal" download="" href="../../_downloads/973b10364dc0f133909b5f2b97027f22/plot-edl.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">plot-edl.py</span></code></a></p>
