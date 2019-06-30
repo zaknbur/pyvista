@@ -38,7 +38,7 @@ the subplot you wish to be the active subplot.
     plotter = pv.Plotter(shape=(2, 2))
 
     plotter.subplot(0,0)
-    plotter.add_text('Render Window 0', position=None, font_size=30)
+    plotter.add_text('Render Window 0', font_size=30)
     plotter.add_mesh(examples.load_globe())
 
     plotter.subplot(0, 1)
@@ -101,7 +101,7 @@ the subplot you wish to be the active subplot.
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  3.900 seconds)
+   **Total running time of the script:** ( 0 minutes  4.251 seconds)
 
 
 .. _sphx_glr_download_examples_02-plot_plot-multi-window.py:

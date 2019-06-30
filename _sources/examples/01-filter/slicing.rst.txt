@@ -181,7 +181,7 @@ the line low.
 
  .. code-block:: none
 
-    PolyData (0x7fd4f479b3a8)
+    PolyData (0x7fcc1f0cd1c8)
       N Cells:      1
       N Points:     15
       X Bounds:     0.000e+00, 2.475e+02
@@ -210,7 +210,7 @@ Then run the filter
 
  .. code-block:: none
 
-    PolyData (0x7fd4f479b4c8)
+    PolyData (0x7fcc1f0cd2e8)
       N Cells:      49100
       N Points:     49692
       X Bounds:     0.000e+00, 2.500e+02
@@ -241,7 +241,7 @@ Then run the filter
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  31.469 seconds)
+   **Total running time of the script:** ( 0 minutes  31.364 seconds)
 
 
 .. _sphx_glr_download_examples_01-filter_slicing.py:

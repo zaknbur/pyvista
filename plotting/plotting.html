@@ -481,7 +481,7 @@ Must contain the same number of items as cent.</p></li>
 <tr class="row-even"><td><p><a class="reference internal" href="#pyvista.BasePlotter.enable" title="pyvista.BasePlotter.enable"><code class="xref py py-obj docutils literal notranslate"><span class="pre">enable</span></code></a>()</p></td>
 <td><p>Enable this renderer’s camera to be interactive</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#pyvista.BasePlotter.enable_cell_picking" title="pyvista.BasePlotter.enable_cell_picking"><code class="xref py py-obj docutils literal notranslate"><span class="pre">enable_cell_picking</span></code></a>([mesh, callback])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pyvista.BasePlotter.enable_cell_picking" title="pyvista.BasePlotter.enable_cell_picking"><code class="xref py py-obj docutils literal notranslate"><span class="pre">enable_cell_picking</span></code></a>([mesh, callback, show, …])</p></td>
 <td><p>Enables picking of cells.</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="#pyvista.BasePlotter.enable_eye_dome_lighting" title="pyvista.BasePlotter.enable_eye_dome_lighting"><code class="xref py py-obj docutils literal notranslate"><span class="pre">enable_eye_dome_lighting</span></code></a>()</p></td>
@@ -1065,15 +1065,19 @@ sizing for both the title and label.</p>
 
 <dl class="method">
 <dt id="pyvista.BasePlotter.add_text">
-<code class="sig-name descname">add_text</code><span class="sig-paren">(</span><em class="sig-param">text</em>, <em class="sig-param">position=None</em>, <em class="sig-param">font_size=50</em>, <em class="sig-param">color=None</em>, <em class="sig-param">font=None</em>, <em class="sig-param">shadow=False</em>, <em class="sig-param">name=None</em>, <em class="sig-param">loc=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.BasePlotter.add_text" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">add_text</code><span class="sig-paren">(</span><em class="sig-param">text</em>, <em class="sig-param">position='upper_left'</em>, <em class="sig-param">font_size=18</em>, <em class="sig-param">color=None</em>, <em class="sig-param">font=None</em>, <em class="sig-param">shadow=False</em>, <em class="sig-param">name=None</em>, <em class="sig-param">loc=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.BasePlotter.add_text" title="Permalink to this definition">¶</a></dt>
 <dd><p>Adds text to plot object in the top left corner by default</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>text</strong> (<em>str</em>) – The text to add the the rendering</p></li>
-<li><p><strong>position</strong> (<em>tuple</em><em>(</em><em>float</em><em>)</em>) – Length 2 tuple of the pixelwise position to place the bottom
-left corner of the text box. Default is to find the top left corner
-of the renderering window and place text box up there.</p></li>
+<li><p><strong>position</strong> (<em>str</em><em>, </em><em>tuple</em><em>(</em><em>float</em><em>)</em>) – String name of the position or length 2 tuple of the pixelwise
+position to place the bottom left corner of the text box.
+Default is to find the top left corner of the renderering window
+and place text box up there. Available position: <code class="docutils literal notranslate"><span class="pre">'lower_left'</span></code>,
+<code class="docutils literal notranslate"><span class="pre">'lower_right'</span></code>, <code class="docutils literal notranslate"><span class="pre">'upper_left'</span></code>, <code class="docutils literal notranslate"><span class="pre">'upper_right'</span></code>,
+<code class="docutils literal notranslate"><span class="pre">'lower_edge'</span></code>, <code class="docutils literal notranslate"><span class="pre">'upper_edge'</span></code>, <code class="docutils literal notranslate"><span class="pre">'right_edge'</span></code>, and
+<code class="docutils literal notranslate"><span class="pre">'left_edge'</span></code></p></li>
 <li><p><strong>font</strong> (<em>string</em><em>, </em><em>optional</em>) – Font name may be courier, times, or arial</p></li>
 <li><p><strong>shadow</strong> (<em>bool</em><em>, </em><em>optional</em>) – Adds a black shadow to the text.  Defaults to False</p></li>
 <li><p><strong>name</strong> (<em>str</em><em>, </em><em>optional</em>) – The name for the added actor so that it can be easily updated.
@@ -1211,7 +1215,7 @@ one of ‘additive’, ‘maximum’, ‘minimum’, ‘composite’, or
 
 <dl class="method">
 <dt id="pyvista.BasePlotter.enable_cell_picking">
-<code class="sig-name descname">enable_cell_picking</code><span class="sig-paren">(</span><em class="sig-param">mesh=None</em>, <em class="sig-param">callback=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.BasePlotter.enable_cell_picking" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">enable_cell_picking</code><span class="sig-paren">(</span><em class="sig-param">mesh=None</em>, <em class="sig-param">callback=None</em>, <em class="sig-param">show=True</em>, <em class="sig-param">show_message=True</em>, <em class="sig-param">style='wireframe'</em>, <em class="sig-param">line_width=5</em>, <em class="sig-param">color='pink'</em>, <em class="sig-param">font_size=18</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.BasePlotter.enable_cell_picking" title="Permalink to this definition">¶</a></dt>
 <dd><p>Enables picking of cells.  Press r to enable retangle based
 selection.  Press “r” again to turn it off.  Selection will be
 saved to self.picked_cells.</p>
@@ -1223,6 +1227,11 @@ saved to self.picked_cells.</p>
 input grid by default.</p></li>
 <li><p><strong>callback</strong> (<em>function</em><em>, </em><em>optional</em>) – When input, calls this function after a selection is made.
 The picked_cells are input as the first parameter to this function.</p></li>
+<li><p><strong>show</strong> (<em>bool</em>) – Show the selection interactively</p></li>
+<li><p><strong>show_message</strong> (<em>bool</em><em>, </em><em>str</em>) – Show the message about how to use the cell picking tool. If this
+is a string, that will be the message shown.</p></li>
+<li><p><strong>kwargs</strong> (<em>optional</em>) – All remaining keyword arguments are used to control how the
+selection is intereactively displayed</p></li>
 </ul>
 </dd>
 </dl>
