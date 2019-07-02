@@ -165,11 +165,11 @@ coordinates such that they are not on orthogonal to cartesian reference frame.
 
  .. code-block:: none
 
-    [[ -41.44635928 -274.82249351    2.10204358]
-     [ -31.55637405 -267.47754227    2.65957987]
-     [ -18.85860906 -258.04734976    3.5182584 ]
-     [  -5.70164941 -248.2761292     4.5790563 ]
-     [   2.70993888 -242.02913242    5.34359128]]
+    [[ -36.96463517 -277.74129895    1.97356098]
+     [ -30.78932212 -273.15510674    2.28664448]
+     [ -17.12270553 -263.00538152    3.10160369]
+     [  -3.07663322 -252.57384763    4.11656664]
+     [   4.31174865 -247.08675101    4.71923873]]
 
 
 
@@ -247,7 +247,7 @@ dimensionality of structured grid including:
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  5.085 seconds)
+   **Total running time of the script:** ( 0 minutes  5.126 seconds)
 
 
 .. _sphx_glr_download_examples_00-load_create-structured-surface.py:
