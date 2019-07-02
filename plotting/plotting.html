@@ -951,7 +951,7 @@ array will be used as the <code class="docutils literal notranslate"><span class
 
 <dl class="method">
 <dt id="pyvista.BasePlotter.add_point_labels">
-<code class="sig-name descname">add_point_labels</code><span class="sig-paren">(</span><em class="sig-param">points</em>, <em class="sig-param">labels</em>, <em class="sig-param">italic=False</em>, <em class="sig-param">bold=True</em>, <em class="sig-param">font_size=None</em>, <em class="sig-param">text_color=None</em>, <em class="sig-param">font_family=None</em>, <em class="sig-param">shadow=False</em>, <em class="sig-param">show_points=True</em>, <em class="sig-param">point_color=None</em>, <em class="sig-param">point_size=5</em>, <em class="sig-param">name=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.BasePlotter.add_point_labels" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">add_point_labels</code><span class="sig-paren">(</span><em class="sig-param">points</em>, <em class="sig-param">labels</em>, <em class="sig-param">italic=False</em>, <em class="sig-param">bold=True</em>, <em class="sig-param">font_size=None</em>, <em class="sig-param">text_color=None</em>, <em class="sig-param">font_family=None</em>, <em class="sig-param">shadow=False</em>, <em class="sig-param">show_points=True</em>, <em class="sig-param">point_color=None</em>, <em class="sig-param">point_size=5</em>, <em class="sig-param">name=None</em>, <em class="sig-param">shape_color='grey'</em>, <em class="sig-param">shape='rounded_rect'</em>, <em class="sig-param">fill_shape=True</em>, <em class="sig-param">margin=3</em>, <em class="sig-param">shape_opacity=1.0</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.BasePlotter.add_point_labels" title="Permalink to this definition">¶</a></dt>
 <dd><p>Creates a point actor with one label from list labels assigned to
 each point.</p>
 <dl class="field-list simple">
@@ -988,11 +988,26 @@ If an actor of this name already exists in the rendering window, it
 will be replaced by the new actor.</p></li>
 </ul>
 </dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p><strong>labelMapper</strong> – VTK label mapper.  Can be used to change properties of the labels.</p>
+</dl>
+<dl class="simple">
+<dt>shape_color<span class="classifier">string or 3 item list, optional. Color of points (if visible).</span></dt><dd><p>Either a string, rgb list, or hex color string.  For example:</p>
 </dd>
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p>vtk.vtkvtkLabeledDataMapper</p>
+<dt>shape<span class="classifier">str, optional</span></dt><dd><p>The string name of the shape to use. Options are <code class="docutils literal notranslate"><span class="pre">'rect'</span></code> or
+<code class="docutils literal notranslate"><span class="pre">'rounded_rect'</span></code>. If you want no shape, pass <code class="docutils literal notranslate"><span class="pre">None</span></code></p>
+</dd>
+<dt>fill_shape<span class="classifier">bool, optional</span></dt><dd><p>Fill the shape with the <code class="docutils literal notranslate"><span class="pre">shape_color</span></code>. Outlines if <code class="docutils literal notranslate"><span class="pre">False</span></code>.</p>
+</dd>
+<dt>margin<span class="classifier">int, optional</span></dt><dd><p>The size of the margin on the label background shape. Default is 3.</p>
+</dd>
+<dt>shape_opacity<span class="classifier">flaot</span></dt><dd><p>The opacity of the shape between zero and one.</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><strong>labelMapper</strong> – VTK label mapper.  Can be used to change properties of the labels.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>vtk.vtkvtkLabeledDataMapper</p>
 </dd>
 </dl>
 </dd></dl>
