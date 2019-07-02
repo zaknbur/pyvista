@@ -87,7 +87,7 @@ Orbit around a scene
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 1 minutes  53.797 seconds)
+   **Total running time of the script:** ( 1 minutes  57.901 seconds)
 
 
 .. _sphx_glr_download_examples_02-plot_plot-orbit.py:
