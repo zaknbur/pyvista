@@ -37,6 +37,9 @@ log = logging.getLogger(__name__)
 log.setLevel('CRITICAL')
 
 
+# Set global topology offset flag
+vtk.vtkMapper.SetResolveCoincidentTopologyToPolygonOffset()
+
 
 class BasePlotter(object):
     """
@@ -2447,9 +2450,16 @@ class BasePlotter(object):
             vtklabels.InsertNextValue(str(item))
         vtkpoints.GetPointData().AddArray(vtklabels)
 
+        vis_points = vtk.vtkSelectVisiblePoints()
+        vis_points.SetInputData(vtkpoints);
+        vis_points.SetTolerance(1.0)
+        # TODO: vis_points.SetToleranceWorld()
+        vis_points.SetRenderer(self.renderer)
+        vis_points.Update()
+
         # Create heirarchy
         hier = vtk.vtkPointSetToLabelHierarchy()
-        hier.SetInputData(vtkpoints)
+        hier.SetInputData(vis_points.GetOutput())
         # hier.SetOrientationArrayName('orientation')
         hier.SetLabelArrayName('labels')
 
