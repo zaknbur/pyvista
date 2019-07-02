@@ -790,7 +790,7 @@ plotting routines to perfrom tasks like:
 
 .. raw:: html
 
-    <div class="sphx-glr-thumbcontainer" tooltip="Orbit around a scene">
+    <div class="sphx-glr-thumbcontainer" tooltip="Orbit around a scene.">
 
 .. only:: html
 

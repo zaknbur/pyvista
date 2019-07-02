@@ -403,13 +403,16 @@ Must contain the same number of items as cent.</p></li>
 <tr class="row-even"><td><p><a class="reference internal" href="#pyvista.BasePlotter.image_depth" title="pyvista.BasePlotter.image_depth"><code class="xref py py-obj docutils literal notranslate"><span class="pre">image_depth</span></code></a></p></td>
 <td><p>Returns an image array of current render window</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#pyvista.BasePlotter.renderer" title="pyvista.BasePlotter.renderer"><code class="xref py py-obj docutils literal notranslate"><span class="pre">renderer</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pyvista.BasePlotter.length" title="pyvista.BasePlotter.length"><code class="xref py py-obj docutils literal notranslate"><span class="pre">length</span></code></a></p></td>
+<td><p>Returns the length of the diagonal of the bounding box of the scene</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pyvista.BasePlotter.renderer" title="pyvista.BasePlotter.renderer"><code class="xref py py-obj docutils literal notranslate"><span class="pre">renderer</span></code></a></p></td>
 <td><p>simply returns the active renderer</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#pyvista.BasePlotter.scale" title="pyvista.BasePlotter.scale"><code class="xref py py-obj docutils literal notranslate"><span class="pre">scale</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pyvista.BasePlotter.scale" title="pyvista.BasePlotter.scale"><code class="xref py py-obj docutils literal notranslate"><span class="pre">scale</span></code></a></p></td>
 <td><p>The scaling of the active renderer.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#pyvista.BasePlotter.window_size" title="pyvista.BasePlotter.window_size"><code class="xref py py-obj docutils literal notranslate"><span class="pre">window_size</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#pyvista.BasePlotter.window_size" title="pyvista.BasePlotter.window_size"><code class="xref py py-obj docutils literal notranslate"><span class="pre">window_size</span></code></a></p></td>
 <td><p>returns render window size</p></td>
 </tr>
 </tbody>
@@ -1413,6 +1416,12 @@ NumberOfFlyFrames. The LOD desired frame rate is used.</p>
 <dt id="pyvista.BasePlotter.left_button_down">
 <code class="sig-name descname">left_button_down</code><span class="sig-paren">(</span><em class="sig-param">obj</em>, <em class="sig-param">event_type</em><span class="sig-paren">)</span><a class="headerlink" href="#pyvista.BasePlotter.left_button_down" title="Permalink to this definition">¶</a></dt>
 <dd><p>Register the event for a left button down click</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pyvista.BasePlotter.length">
+<em class="property">property </em><code class="sig-name descname">length</code><a class="headerlink" href="#pyvista.BasePlotter.length" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the length of the diagonal of the bounding box of the scene</p>
 </dd></dl>
 
 <dl class="method">

@@ -255,7 +255,11 @@
 </div>
 <div class="sphx-glr-example-title section" id="orbiting">
 <span id="sphx-glr-examples-02-plot-plot-orbit-py"></span><h1>Orbiting<a class="headerlink" href="#orbiting" title="Permalink to this headline">¶</a></h1>
-<p>Orbit around a scene</p>
+<p>Orbit around a scene.</p>
+<p>NOTE: using <code class="docutils literal notranslate"><span class="pre">p.open_movie('orbit.mp4')</span></code> is better than
+<code class="docutils literal notranslate"><span class="pre">p.open_gif('orbit.gif')</span></code></p>
+<p>For orbiting to work you first have to show the scene and leave the plotter open
+with <code class="docutils literal notranslate"><span class="pre">.show(auto_close=False)</span></code>.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># sphinx_gallery_thumbnail_number = 2</span>
 <span class="kn">import</span> <span class="nn">pyvista</span> <span class="k">as</span> <span class="nn">pv</span>
 <span class="kn">from</span> <span class="nn">pyvista</span> <span class="k">import</span> <span class="n">examples</span>
@@ -265,22 +269,32 @@
 </div>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">p</span> <span class="o">=</span> <span class="n">pv</span><span class="o">.</span><span class="n">Plotter</span><span class="p">()</span>
 <span class="n">p</span><span class="o">.</span><span class="n">add_mesh</span><span class="p">(</span><span class="n">mesh</span><span class="p">)</span>
-
 <span class="n">p</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="n">auto_close</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
-<span class="n">path</span> <span class="o">=</span> <span class="n">p</span><span class="o">.</span><span class="n">generate_orbital_path</span><span class="p">(</span><span class="n">n_points</span><span class="o">=</span><span class="mi">36</span><span class="p">)</span>
+<span class="n">path</span> <span class="o">=</span> <span class="n">p</span><span class="o">.</span><span class="n">generate_orbital_path</span><span class="p">(</span><span class="n">n_points</span><span class="o">=</span><span class="mi">36</span><span class="p">,</span> <span class="n">shift</span><span class="o">=</span><span class="mf">1e4</span><span class="p">)</span>
 <span class="n">p</span><span class="o">.</span><span class="n">open_gif</span><span class="p">(</span><span class="s1">&#39;orbit.gif&#39;</span><span class="p">)</span>
 <span class="n">p</span><span class="o">.</span><span class="n">orbit_on_path</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">write_frames</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 <span class="n">p</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
 </pre></div>
 </div>
 <img alt="../../_images/sphx_glr_plot-orbit_001.png" class="sphx-glr-single-img" src="../../_images/sphx_glr_plot-orbit_001.png" />
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">p</span> <span class="o">=</span> <span class="n">pv</span><span class="o">.</span><span class="n">Plotter</span><span class="p">()</span>
+<span class="n">p</span><span class="o">.</span><span class="n">add_mesh</span><span class="p">(</span><span class="n">mesh</span><span class="p">)</span>
+<span class="n">p</span><span class="o">.</span><span class="n">show_grid</span><span class="p">()</span>
+<span class="n">p</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="n">auto_close</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="n">viewup</span><span class="o">=</span><span class="p">[</span><span class="mf">0.5</span><span class="p">,</span><span class="mf">0.5</span><span class="p">,</span><span class="mi">1</span><span class="p">]</span>
+<span class="n">path</span> <span class="o">=</span> <span class="n">p</span><span class="o">.</span><span class="n">generate_orbital_path</span><span class="p">(</span><span class="n">factor</span><span class="o">=</span><span class="mf">2.0</span><span class="p">,</span> <span class="n">shift</span><span class="o">=</span><span class="mi">10000</span><span class="p">,</span> <span class="n">viewup</span><span class="o">=</span><span class="n">viewup</span><span class="p">,</span> <span class="n">n_points</span><span class="o">=</span><span class="mi">36</span><span class="p">)</span>
+<span class="n">p</span><span class="o">.</span><span class="n">open_gif</span><span class="p">(</span><span class="s1">&#39;orbit.gif&#39;</span><span class="p">)</span>
+<span class="n">p</span><span class="o">.</span><span class="n">orbit_on_path</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">write_frames</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">viewup</span><span class="o">=</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">])</span>
+<span class="n">p</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</pre></div>
+</div>
+<img alt="../../_images/sphx_glr_plot-orbit_002.png" class="sphx-glr-single-img" src="../../_images/sphx_glr_plot-orbit_002.png" />
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mesh</span> <span class="o">=</span> <span class="n">examples</span><span class="o">.</span><span class="n">download_dragon</span><span class="p">()</span>
 <span class="n">viewup</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">]</span>
 </pre></div>
 </div>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">p</span> <span class="o">=</span> <span class="n">pv</span><span class="o">.</span><span class="n">Plotter</span><span class="p">()</span>
 <span class="n">p</span><span class="o">.</span><span class="n">add_mesh</span><span class="p">(</span><span class="n">mesh</span><span class="p">)</span>
-
 <span class="n">p</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="n">auto_close</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
 <span class="n">path</span> <span class="o">=</span> <span class="n">p</span><span class="o">.</span><span class="n">generate_orbital_path</span><span class="p">(</span><span class="n">factor</span><span class="o">=</span><span class="mf">2.</span><span class="p">,</span> <span class="n">n_points</span><span class="o">=</span><span class="mi">36</span><span class="p">,</span> <span class="n">viewup</span><span class="o">=</span><span class="n">viewup</span><span class="p">,</span> <span class="n">shift</span><span class="o">=</span><span class="mf">0.2</span><span class="p">)</span>
 <span class="n">p</span><span class="o">.</span><span class="n">open_gif</span><span class="p">(</span><span class="s1">&#39;orbit.gif&#39;</span><span class="p">)</span>
@@ -288,8 +302,8 @@
 <span class="n">p</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
 </pre></div>
 </div>
-<img alt="../../_images/sphx_glr_plot-orbit_002.png" class="sphx-glr-single-img" src="../../_images/sphx_glr_plot-orbit_002.png" />
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 1 minutes  51.956 seconds)</p>
+<img alt="../../_images/sphx_glr_plot-orbit_003.png" class="sphx-glr-single-img" src="../../_images/sphx_glr_plot-orbit_003.png" />
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 2 minutes  36.112 seconds)</p>
 <div class="sphx-glr-footer class sphx-glr-footer-example docutils container" id="sphx-glr-download-examples-02-plot-plot-orbit-py">
 <div class="sphx-glr-download docutils container">
 <p><a class="reference download internal" download="" href="../../_downloads/4fd787a3f4ccada0c82998e64b36f563/plot-orbit.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">plot-orbit.py</span></code></a></p>
