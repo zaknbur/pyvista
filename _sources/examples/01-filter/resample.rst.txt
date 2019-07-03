@@ -35,7 +35,7 @@ Querry a grids points onto a sphere
 
 .. code-block:: default
 
-    mesh = pv.Sphere(center=(4.5,4.5,4.5), radius=4.5)
+    mesh = pv.Sphere(center=(4.5, 4.5, 4.5), radius=4.5)
     data_to_probe = examples.load_uniform()
 
 
@@ -71,9 +71,8 @@ Run the algorithm and plot the result
     result = mesh.sample(data_to_probe)
 
     # Plot result
-    name = 'Spatial Point Data'
+    name = "Spatial Point Data"
     result.plot(scalars=name, clim=data_to_probe.get_data_range(name))
-
 
 
 
@@ -124,7 +123,7 @@ Run the interpolation
 
     p = pv.Plotter()
     p.add_mesh(points, point_size=30.0, render_points_as_spheres=True)
-    p.add_mesh(interpolated, scalars='val')
+    p.add_mesh(interpolated, scalars="val")
     p.show()
 
 
@@ -138,7 +137,7 @@ Run the interpolation
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  8.085 seconds)
+   **Total running time of the script:** ( 0 minutes  8.243 seconds)
 
 
 .. _sphx_glr_download_examples_01-filter_resample.py:

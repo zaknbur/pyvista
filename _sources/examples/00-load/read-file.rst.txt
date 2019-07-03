@@ -13,11 +13,11 @@ Load and Plot from a File
 Read a dataset from a known file type.
 
 Loading a mesh is trivial - if your data is in one of the many supported
-file formats, simply use :func:`pyvista.read` to load your spatially referneced
-dataset into a PyVista mesh object.
+file formats, simply use :func:`pyvista.read` to load your spatially
+referneced dataset into a PyVista mesh object.
 
-The following code block uses a built-in example file and displays an airplane
-mesh.
+The following code block uses a built-in example file and displays an
+airplane mesh.
 
 
 .. code-block:: default
@@ -88,7 +88,7 @@ using the ``Plotter``:
 
     plotter = pv.Plotter(off_screen=True)
     plotter.add_mesh(mesh)
-    plotter.show(screenshot='myscreenshot.png')
+    plotter.show(screenshot="myscreenshot.png")
 
 
 
@@ -169,9 +169,7 @@ Example STL file:
 .. code-block:: default
 
     mesh = examples.download_cad_model()
-    cpos = [(107., 68.5, 204.),
-            (128., 86.5, 223.5),
-            (0.45, 0.36, -0.8)]
+    cpos = [(107.0, 68.5, 204.0), (128.0, 86.5, 223.5), (0.45, 0.36, -0.8)]
     mesh.plot(cpos=cpos)
 
 
@@ -189,7 +187,7 @@ Example OBJ file
 .. code-block:: default
 
     mesh = examples.download_doorman()
-    mesh.plot(cpos='xy')
+    mesh.plot(cpos="xy")
 
 
 
@@ -225,9 +223,7 @@ Example VTK file
 .. code-block:: default
 
     mesh = examples.download_bunny_coarse()
-    cpos = [(0.2, 0.3, 0.9),
-            (0,0,0),
-            (0,1,0)]
+    cpos = [(0.2, 0.3, 0.9), (0, 0, 0), (0, 1, 0)]
     mesh.plot(cpos=cpos, show_edges=True, color=True)
 
 
@@ -241,7 +237,7 @@ Example VTK file
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  6.751 seconds)
+   **Total running time of the script:** ( 0 minutes  6.500 seconds)
 
 
 .. _sphx_glr_download_examples_00-load_read-file.py:

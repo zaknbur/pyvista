@@ -50,11 +50,9 @@ To demonstrate, we will first extract the edges around Queen Nefertiti's eyes:
     # Render the edge lines ontop of the original mesh
     p = pv.Plotter()
     p.add_mesh(mesh, color=True)
-    p.add_mesh(edges, color='red', line_width=5)
+    p.add_mesh(edges, color="red", line_width=5)
     # Define a camera position that will zoom to her eye
-    p.camera_position = [(96., -197., 45.),
-                         (7., -109., 22.),
-                         (0, 0, 1)]
+    p.camera_position = [(96.0, -197.0, 45.0), (7.0, -109.0, 22.0), (0, 0, 1)]
     p.show()
 
 
@@ -66,8 +64,8 @@ To demonstrate, we will first extract the edges around Queen Nefertiti's eyes:
 
 
 
-We can do this anaylsis for any :class:`pyvista.PolyData` object. Let's try the
-cow mesh example:
+We can do this anaylsis for any :class:`pyvista.PolyData` object. Let's try
+the cow mesh example:
 
 
 .. code-block:: default
@@ -79,10 +77,8 @@ cow mesh example:
 
     p = pv.Plotter()
     p.add_mesh(mesh, color=True)
-    p.add_mesh(edges, color='red', line_width=5)
-    p.camera_position = [(9.5, 3., 5.5),
-                         (2.5, 1, 0),
-                         (0, 1, 0)]
+    p.add_mesh(edges, color="red", line_width=5)
+    p.camera_position = [(9.5, 3.0, 5.5), (2.5, 1, 0), (0, 1, 0)]
     p.show()
 
 
@@ -96,7 +92,7 @@ cow mesh example:
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  13.750 seconds)
+   **Total running time of the script:** ( 0 minutes  13.753 seconds)
 
 
 .. _sphx_glr_download_examples_01-filter_extract-edges.py:

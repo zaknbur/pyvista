@@ -59,7 +59,7 @@ colors, but you could make this as complex or simple as you desire.
 .. code-block:: default
 
 
-    cmap = plt.cm.get_cmap('viridis', 5)
+    cmap = plt.cm.get_cmap("viridis", 5)
 
 
 
@@ -72,7 +72,7 @@ Simply pass the colormap to the plotting routine!
 
 .. code-block:: default
 
-    mesh.plot(cmap=cmap, cpos='xy')
+    mesh.plot(cmap=cmap, cpos="xy")
 
 
 
@@ -99,18 +99,18 @@ overexposed, while "fire" makes detail visible throughout the data range.
 .. code-block:: default
 
 
-    p = pv.Plotter(shape=(2,2), border=False)
-    p.subplot(0,0)
-    p.add_mesh(mesh, cmap='fire', lighting=True, stitle='Colorcet Fire')
+    p = pv.Plotter(shape=(2, 2), border=False)
+    p.subplot(0, 0)
+    p.add_mesh(mesh, cmap="fire", lighting=True, stitle="Colorcet Fire")
 
-    p.subplot(0,1)
-    p.add_mesh(mesh, cmap='fire', lighting=False, stitle='Colorcet Fire (No Lighting)')
+    p.subplot(0, 1)
+    p.add_mesh(mesh, cmap="fire", lighting=False, stitle="Colorcet Fire (No Lighting)")
 
-    p.subplot(1,0)
-    p.add_mesh(mesh, cmap='hot', lighting=True, stitle='Matplotlib Hot')
+    p.subplot(1, 0)
+    p.add_mesh(mesh, cmap="hot", lighting=True, stitle="Matplotlib Hot")
 
-    p.subplot(1,1)
-    p.add_mesh(mesh, cmap='hot', lighting=False, stitle='Matplotlib Hot (No Lighting)')
+    p.subplot(1, 1)
+    p.add_mesh(mesh, cmap="hot", lighting=False, stitle="Matplotlib Hot (No Lighting)")
 
     p.show()
 
@@ -125,7 +125,7 @@ overexposed, while "fire" makes detail visible throughout the data range.
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  7.831 seconds)
+   **Total running time of the script:** ( 0 minutes  7.536 seconds)
 
 
 .. _sphx_glr_download_examples_02-plot_plot-cmap.py:

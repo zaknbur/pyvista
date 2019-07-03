@@ -267,7 +267,7 @@ NumPy arrays</p>
 <span class="kn">from</span> <span class="nn">pyvista</span> <span class="k">import</span> <span class="n">examples</span>
 
 <span class="c1"># Volume rednering is not supported with Panel yet</span>
-<span class="n">pv</span><span class="o">.</span><span class="n">rcParams</span><span class="p">[</span><span class="s1">&#39;use_panel&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="kc">False</span>
+<span class="n">pv</span><span class="o">.</span><span class="n">rcParams</span><span class="p">[</span><span class="s2">&quot;use_panel&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="kc">False</span>
 
 <span class="c1"># Download a volumetric dataset</span>
 <span class="n">vol</span> <span class="o">=</span> <span class="n">examples</span><span class="o">.</span><span class="n">download_knee_full</span><span class="p">()</span>
@@ -275,7 +275,7 @@ NumPy arrays</p>
 </pre></div>
 </div>
 <p class="sphx-glr-script-out">Out:</p>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>UniformGrid (0x7f630d6519a8)
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>UniformGrid (0x7f47af0b1828)
   N Cells:      10225800
   N Points:     10368384
   X Bounds:     0.000e+00, 1.497e+02
@@ -289,11 +289,9 @@ NumPy arrays</p>
 <div class="section" id="simple-volume-render">
 <h2>Simple Volume Render<a class="headerlink" href="#simple-volume-render" title="Permalink to this headline">¶</a></h2>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># A nice camera position</span>
-<span class="n">cpos</span> <span class="o">=</span> <span class="p">[(</span><span class="o">-</span><span class="mf">381.74</span><span class="p">,</span> <span class="o">-</span><span class="mf">46.02</span><span class="p">,</span> <span class="mf">216.54</span><span class="p">),</span>
-        <span class="p">(</span><span class="mf">74.8305</span><span class="p">,</span> <span class="mf">89.2905</span><span class="p">,</span> <span class="mf">100.0</span><span class="p">),</span>
-        <span class="p">(</span><span class="mf">0.23</span><span class="p">,</span> <span class="mf">0.072</span><span class="p">,</span> <span class="mf">0.97</span><span class="p">)]</span>
+<span class="n">cpos</span> <span class="o">=</span> <span class="p">[(</span><span class="o">-</span><span class="mf">381.74</span><span class="p">,</span> <span class="o">-</span><span class="mf">46.02</span><span class="p">,</span> <span class="mf">216.54</span><span class="p">),</span> <span class="p">(</span><span class="mf">74.8305</span><span class="p">,</span> <span class="mf">89.2905</span><span class="p">,</span> <span class="mf">100.0</span><span class="p">),</span> <span class="p">(</span><span class="mf">0.23</span><span class="p">,</span> <span class="mf">0.072</span><span class="p">,</span> <span class="mf">0.97</span><span class="p">)]</span>
 
-<span class="n">vol</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">volume</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="s1">&#39;bone&#39;</span><span class="p">,</span> <span class="n">cpos</span><span class="o">=</span><span class="n">cpos</span><span class="p">)</span>
+<span class="n">vol</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">volume</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="s2">&quot;bone&quot;</span><span class="p">,</span> <span class="n">cpos</span><span class="o">=</span><span class="n">cpos</span><span class="p">)</span>
 </pre></div>
 </div>
 <img alt="../../_images/sphx_glr_plot-volume_001.png" class="sphx-glr-single-img" src="../../_images/sphx_glr_plot-volume_001.png" />
@@ -303,7 +301,7 @@ NumPy arrays</p>
 <p>Or use the <a class="reference internal" href="../../plotting/plotting.html#pyvista.BasePlotter.add_volume" title="pyvista.BasePlotter.add_volume"><code class="xref py py-func docutils literal notranslate"><span class="pre">pyvista.BasePlotter.add_volume()</span></code></a> method like below.
 Note that here we use a non-default opacity mapping to a sigmoid:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">p</span> <span class="o">=</span> <span class="n">pv</span><span class="o">.</span><span class="n">Plotter</span><span class="p">()</span>
-<span class="n">p</span><span class="o">.</span><span class="n">add_volume</span><span class="p">(</span><span class="n">vol</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="s1">&#39;bone&#39;</span><span class="p">,</span> <span class="n">opacity</span><span class="o">=</span><span class="s1">&#39;sigmoid&#39;</span><span class="p">)</span>
+<span class="n">p</span><span class="o">.</span><span class="n">add_volume</span><span class="p">(</span><span class="n">vol</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="s2">&quot;bone&quot;</span><span class="p">,</span> <span class="n">opacity</span><span class="o">=</span><span class="s2">&quot;sigmoid&quot;</span><span class="p">)</span>
 <span class="n">p</span><span class="o">.</span><span class="n">camera_position</span> <span class="o">=</span> <span class="n">cpos</span>
 <span class="n">p</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
@@ -316,10 +314,8 @@ Note that here we use a non-default opacity mapping to a sigmoid:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">head</span> <span class="o">=</span> <span class="n">examples</span><span class="o">.</span><span class="n">download_head</span><span class="p">()</span>
 
 <span class="n">p</span> <span class="o">=</span> <span class="n">pv</span><span class="o">.</span><span class="n">Plotter</span><span class="p">()</span>
-<span class="n">p</span><span class="o">.</span><span class="n">add_volume</span><span class="p">(</span><span class="n">head</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="s1">&#39;cool&#39;</span><span class="p">,</span> <span class="n">opacity</span><span class="o">=</span><span class="s1">&#39;sigmoid_6&#39;</span><span class="p">,)</span>
-<span class="n">p</span><span class="o">.</span><span class="n">camera_position</span> <span class="o">=</span> <span class="p">[(</span><span class="o">-</span><span class="mf">228.</span><span class="p">,</span> <span class="o">-</span><span class="mf">418.</span><span class="p">,</span> <span class="o">-</span><span class="mf">158.</span><span class="p">),</span>
-                     <span class="p">(</span><span class="mf">94.0</span><span class="p">,</span> <span class="mf">122.0</span><span class="p">,</span> <span class="mf">82.0</span><span class="p">),</span>
-                     <span class="p">(</span><span class="o">-</span><span class="mf">0.2</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.3</span><span class="p">,</span> <span class="mf">0.9</span><span class="p">)]</span>
+<span class="n">p</span><span class="o">.</span><span class="n">add_volume</span><span class="p">(</span><span class="n">head</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="s2">&quot;cool&quot;</span><span class="p">,</span> <span class="n">opacity</span><span class="o">=</span><span class="s2">&quot;sigmoid_6&quot;</span><span class="p">)</span>
+<span class="n">p</span><span class="o">.</span><span class="n">camera_position</span> <span class="o">=</span> <span class="p">[(</span><span class="o">-</span><span class="mf">228.0</span><span class="p">,</span> <span class="o">-</span><span class="mf">418.0</span><span class="p">,</span> <span class="o">-</span><span class="mf">158.0</span><span class="p">),</span> <span class="p">(</span><span class="mf">94.0</span><span class="p">,</span> <span class="mf">122.0</span><span class="p">,</span> <span class="mf">82.0</span><span class="p">),</span> <span class="p">(</span><span class="o">-</span><span class="mf">0.2</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.3</span><span class="p">,</span> <span class="mf">0.9</span><span class="p">)]</span>
 <span class="n">p</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
@@ -327,8 +323,7 @@ Note that here we use a non-default opacity mapping to a sigmoid:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">bolt_nut</span> <span class="o">=</span> <span class="n">examples</span><span class="o">.</span><span class="n">download_bolt_nut</span><span class="p">()</span>
 
 <span class="n">p</span> <span class="o">=</span> <span class="n">pv</span><span class="o">.</span><span class="n">Plotter</span><span class="p">()</span>
-<span class="n">p</span><span class="o">.</span><span class="n">add_volume</span><span class="p">(</span><span class="n">bolt_nut</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="s1">&#39;coolwarm&#39;</span><span class="p">,</span>
-             <span class="n">opacity</span><span class="o">=</span><span class="s1">&#39;sigmoid_5&#39;</span><span class="p">,)</span>
+<span class="n">p</span><span class="o">.</span><span class="n">add_volume</span><span class="p">(</span><span class="n">bolt_nut</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="s2">&quot;coolwarm&quot;</span><span class="p">,</span> <span class="n">opacity</span><span class="o">=</span><span class="s2">&quot;sigmoid_5&quot;</span><span class="p">)</span>
 <span class="n">p</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
@@ -336,13 +331,12 @@ Note that here we use a non-default opacity mapping to a sigmoid:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">frog</span> <span class="o">=</span> <span class="n">examples</span><span class="o">.</span><span class="n">download_frog</span><span class="p">()</span>
 
 <span class="n">p</span> <span class="o">=</span> <span class="n">pv</span><span class="o">.</span><span class="n">Plotter</span><span class="p">()</span>
-<span class="n">p</span><span class="o">.</span><span class="n">add_volume</span><span class="p">(</span><span class="n">frog</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="s1">&#39;viridis&#39;</span><span class="p">,</span>
-             <span class="n">opacity</span><span class="o">=</span><span class="s1">&#39;sigmoid_5&#39;</span><span class="p">,)</span>
+<span class="n">p</span><span class="o">.</span><span class="n">add_volume</span><span class="p">(</span><span class="n">frog</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="s2">&quot;viridis&quot;</span><span class="p">,</span> <span class="n">opacity</span><span class="o">=</span><span class="s2">&quot;sigmoid_5&quot;</span><span class="p">)</span>
 <span class="n">p</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
 <img alt="../../_images/sphx_glr_plot-volume_005.png" class="sphx-glr-single-img" src="../../_images/sphx_glr_plot-volume_005.png" />
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  25.496 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  24.801 seconds)</p>
 <div class="sphx-glr-footer class sphx-glr-footer-example docutils container" id="sphx-glr-download-examples-02-plot-plot-volume-py">
 <div class="sphx-glr-download docutils container">
 <p><a class="reference download internal" download="" href="../../_downloads/7f879214a8609549b1be2c22ed0c7d18/plot-volume.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">plot-volume.py</span></code></a></p>

@@ -35,21 +35,23 @@ Glyphying can be done via the :func:`pyvista.DataSetFilters.glyph` filter
 .. code-block:: default
 
 
-    mesh = examples.download_carotid().threshold(145, scalars='scalars')
+    mesh = examples.download_carotid().threshold(145, scalars="scalars")
 
     # Make a geometric obhect to use as the glyph
-    geom = pv.Arrow() # This could be any dataset
+    geom = pv.Arrow()  # This could be any dataset
 
     # Perform the glyph
-    glyphs = mesh.glyph(orient='vectors', scale='scalars', factor=0.005, geom=geom)
+    glyphs = mesh.glyph(orient="vectors", scale="scalars", factor=0.005, geom=geom)
 
     # plot using the plotting class
     p = pv.Plotter()
     p.add_mesh(glyphs)
     # Set a cool camera position
-    p.camera_position = [(84.58052237950857, 77.76332116787425, 27.208569926456548),
-     (131.39486171068918, 99.871379394528, 20.082859824932008),
-     (0.13483731007732908, 0.033663777790747404, 0.9902957385932576)]
+    p.camera_position = [
+        (84.58052237950857, 77.76332116787425, 27.208569926456548),
+        (131.39486171068918, 99.871379394528, 20.082859824932008),
+        (0.13483731007732908, 0.033663777790747404, 0.9902957385932576),
+    ]
     p.show()
 
 
@@ -71,12 +73,16 @@ access the :attr:`pyvista.Common.arrows` property.
     sphere = pv.Sphere(radius=3.14)
 
     # make cool swirly pattern
-    vectors = np.vstack((np.sin(sphere.points[:, 0]),
-    np.cos(sphere.points[:, 1]),
-    np.cos(sphere.points[:, 2]))).T
+    vectors = np.vstack(
+        (
+            np.sin(sphere.points[:, 0]),
+            np.cos(sphere.points[:, 1]),
+            np.cos(sphere.points[:, 2]),
+        )
+    ).T
 
     # add and scale
-    sphere.vectors = vectors*0.3
+    sphere.vectors = vectors * 0.3
 
     # plot just the arrows
     sphere.arrows.plot()
@@ -96,8 +102,8 @@ access the :attr:`pyvista.Common.arrows` property.
 
     # plot the arrows and the sphere
     p = pv.Plotter()
-    p.add_mesh(sphere.arrows, lighting=False, stitle='Vector Magnitude')
-    p.add_mesh(sphere, color='grey', ambient=0.6, opacity=0.5, show_edges=False)
+    p.add_mesh(sphere.arrows, lighting=False, stitle="Vector Magnitude")
+    p.add_mesh(sphere, color="grey", ambient=0.6, opacity=0.5, show_edges=False)
     p.show()
 
 
@@ -127,11 +133,11 @@ glyphing.
     mesh = examples.load_random_hills()
 
     # create a subset of arrows using the glyph filter
-    arrows = mesh.glyph(scale='Normals', orient='Normals', subset=0.05)
+    arrows = mesh.glyph(scale="Normals", orient="Normals", subset=0.05)
 
     p = pv.Plotter()
-    p.add_mesh(arrows, color='black')
-    p.add_mesh(mesh, scalars='Elevation', cmap='terrain')
+    p.add_mesh(arrows, color="black")
+    p.add_mesh(mesh, scalars="Elevation", cmap="terrain")
     p.show()
 
 
@@ -145,7 +151,7 @@ glyphing.
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  9.613 seconds)
+   **Total running time of the script:** ( 0 minutes  9.696 seconds)
 
 
 .. _sphx_glr_download_examples_02-plot_plot-glyphs.py:

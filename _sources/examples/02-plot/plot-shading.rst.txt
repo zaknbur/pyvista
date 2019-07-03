@@ -17,15 +17,16 @@ Use a custom built colormap when plotting scalar values.
 
 
     import pyvista
-    pyvista.set_plot_theme('document')
+
+    pyvista.set_plot_theme("document")
 
 
 
 
 
 
-pyvista supports two types of shading, flat and smooth shading that uses VTK's
-phong shading algorthim.
+pyvista supports two types of shading, flat and smooth shading that uses
+VTK's phong shading algorthim.
 
 This is a plot with the default flat shading:
 
@@ -33,7 +34,7 @@ This is a plot with the default flat shading:
 .. code-block:: default
 
     sphere = pyvista.Sphere()
-    sphere.plot(color='w')
+    sphere.plot(color="w")
 
 
 
@@ -49,7 +50,7 @@ Here's the same sphere with smooth shading:
 
 .. code-block:: default
 
-    sphere.plot(color='w', smooth_shading=True)
+    sphere.plot(color="w", smooth_shading=True)
 
 
 
@@ -62,7 +63,7 @@ Here's the same sphere with smooth shading:
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  2.268 seconds)
+   **Total running time of the script:** ( 0 minutes  2.314 seconds)
 
 
 .. _sphx_glr_download_examples_02-plot_plot-shading.py:

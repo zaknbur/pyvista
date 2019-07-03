@@ -44,8 +44,8 @@ First a 3D mesh example to demonstrate a
     line = pv.Line(a, b)
 
     p = pv.Plotter()
-    p.add_mesh(mesh, style='wireframe', color='w')
-    p.add_mesh(line, color='b')
+    p.add_mesh(mesh, style="wireframe", color="w")
+    p.add_mesh(line, color="b")
     p.show()
 
 
@@ -102,9 +102,10 @@ We could also plot the values of a mesh that lies on a flat surface
 
     p = pv.Plotter()
     p.add_mesh(mesh)
-    p.add_mesh(line, color='white', line_width=10)
-    p.add_point_labels([a, b], ['A', 'B'], font_size=48,
-                       point_color='red', text_color='red')
+    p.add_mesh(line, color="white", line_width=10)
+    p.add_point_labels(
+        [a, b], ["A", "B"], font_size=48, point_color="red", text_color="red"
+    )
     p.show()
 
 
@@ -121,8 +122,14 @@ Run the filter and produce a line plot
 
 .. code-block:: default
 
-    mesh.plot_over_line(a, b, resolution=10000, title='Elevation Profile',
-                        ylabel='Height above sea level', figsize=(10, 5))
+    mesh.plot_over_line(
+        a,
+        b,
+        resolution=10000,
+        title="Elevation Profile",
+        ylabel="Height above sea level",
+        figsize=(10, 5),
+    )
 
 
 
@@ -135,7 +142,7 @@ Run the filter and produce a line plot
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  4.593 seconds)
+   **Total running time of the script:** ( 0 minutes  4.677 seconds)
 
 
 .. _sphx_glr_download_examples_02-plot_plot-over-line.py:

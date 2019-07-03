@@ -249,10 +249,10 @@
 <span id="sphx-glr-examples-00-load-read-file-py"></span><h1>Load and Plot from a File<a class="headerlink" href="#load-and-plot-from-a-file" title="Permalink to this headline">¶</a></h1>
 <p>Read a dataset from a known file type.</p>
 <p>Loading a mesh is trivial - if your data is in one of the many supported
-file formats, simply use <a class="reference internal" href="../../utilities/utilities.html#pyvista.read" title="pyvista.read"><code class="xref py py-func docutils literal notranslate"><span class="pre">pyvista.read()</span></code></a> to load your spatially referneced
-dataset into a PyVista mesh object.</p>
-<p>The following code block uses a built-in example file and displays an airplane
-mesh.</p>
+file formats, simply use <a class="reference internal" href="../../utilities/utilities.html#pyvista.read" title="pyvista.read"><code class="xref py py-func docutils literal notranslate"><span class="pre">pyvista.read()</span></code></a> to load your spatially
+referneced dataset into a PyVista mesh object.</p>
+<p>The following code block uses a built-in example file and displays an
+airplane mesh.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># sphinx_gallery_thumbnail_number = 5</span>
 <span class="kn">import</span> <span class="nn">pyvista</span> <span class="k">as</span> <span class="nn">pv</span>
 <span class="kn">from</span> <span class="nn">pyvista</span> <span class="k">import</span> <span class="n">examples</span>
@@ -282,7 +282,7 @@ formats in PyVista.</p>
 using the <code class="docutils literal notranslate"><span class="pre">Plotter</span></code>:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">plotter</span> <span class="o">=</span> <span class="n">pv</span><span class="o">.</span><span class="n">Plotter</span><span class="p">(</span><span class="n">off_screen</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 <span class="n">plotter</span><span class="o">.</span><span class="n">add_mesh</span><span class="p">(</span><span class="n">mesh</span><span class="p">)</span>
-<span class="n">plotter</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="n">screenshot</span><span class="o">=</span><span class="s1">&#39;myscreenshot.png&#39;</span><span class="p">)</span>
+<span class="n">plotter</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="n">screenshot</span><span class="o">=</span><span class="s2">&quot;myscreenshot.png&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 <img alt="../../_images/sphx_glr_read-file_002.png" class="sphx-glr-single-img" src="../../_images/sphx_glr_read-file_002.png" />
@@ -320,16 +320,14 @@ using the <code class="docutils literal notranslate"><span class="pre">Plotter</
 examples below with <code class="docutils literal notranslate"><span class="pre">pyvista.read('path/to/you/file.ext')</span></code></p>
 <p>Example STL file:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mesh</span> <span class="o">=</span> <span class="n">examples</span><span class="o">.</span><span class="n">download_cad_model</span><span class="p">()</span>
-<span class="n">cpos</span> <span class="o">=</span> <span class="p">[(</span><span class="mf">107.</span><span class="p">,</span> <span class="mf">68.5</span><span class="p">,</span> <span class="mf">204.</span><span class="p">),</span>
-        <span class="p">(</span><span class="mf">128.</span><span class="p">,</span> <span class="mf">86.5</span><span class="p">,</span> <span class="mf">223.5</span><span class="p">),</span>
-        <span class="p">(</span><span class="mf">0.45</span><span class="p">,</span> <span class="mf">0.36</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.8</span><span class="p">)]</span>
+<span class="n">cpos</span> <span class="o">=</span> <span class="p">[(</span><span class="mf">107.0</span><span class="p">,</span> <span class="mf">68.5</span><span class="p">,</span> <span class="mf">204.0</span><span class="p">),</span> <span class="p">(</span><span class="mf">128.0</span><span class="p">,</span> <span class="mf">86.5</span><span class="p">,</span> <span class="mf">223.5</span><span class="p">),</span> <span class="p">(</span><span class="mf">0.45</span><span class="p">,</span> <span class="mf">0.36</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.8</span><span class="p">)]</span>
 <span class="n">mesh</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">cpos</span><span class="o">=</span><span class="n">cpos</span><span class="p">)</span>
 </pre></div>
 </div>
 <img alt="../../_images/sphx_glr_read-file_003.png" class="sphx-glr-single-img" src="../../_images/sphx_glr_read-file_003.png" />
 <p>Example OBJ file</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mesh</span> <span class="o">=</span> <span class="n">examples</span><span class="o">.</span><span class="n">download_doorman</span><span class="p">()</span>
-<span class="n">mesh</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">cpos</span><span class="o">=</span><span class="s1">&#39;xy&#39;</span><span class="p">)</span>
+<span class="n">mesh</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">cpos</span><span class="o">=</span><span class="s2">&quot;xy&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 <img alt="../../_images/sphx_glr_read-file_004.png" class="sphx-glr-single-img" src="../../_images/sphx_glr_read-file_004.png" />
@@ -341,14 +339,12 @@ examples below with <code class="docutils literal notranslate"><span class="pre"
 <img alt="../../_images/sphx_glr_read-file_005.png" class="sphx-glr-single-img" src="../../_images/sphx_glr_read-file_005.png" />
 <p>Example VTK file</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mesh</span> <span class="o">=</span> <span class="n">examples</span><span class="o">.</span><span class="n">download_bunny_coarse</span><span class="p">()</span>
-<span class="n">cpos</span> <span class="o">=</span> <span class="p">[(</span><span class="mf">0.2</span><span class="p">,</span> <span class="mf">0.3</span><span class="p">,</span> <span class="mf">0.9</span><span class="p">),</span>
-        <span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">),</span>
-        <span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">)]</span>
+<span class="n">cpos</span> <span class="o">=</span> <span class="p">[(</span><span class="mf">0.2</span><span class="p">,</span> <span class="mf">0.3</span><span class="p">,</span> <span class="mf">0.9</span><span class="p">),</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">)]</span>
 <span class="n">mesh</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">cpos</span><span class="o">=</span><span class="n">cpos</span><span class="p">,</span> <span class="n">show_edges</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 </pre></div>
 </div>
 <img alt="../../_images/sphx_glr_read-file_006.png" class="sphx-glr-single-img" src="../../_images/sphx_glr_read-file_006.png" />
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  6.751 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  6.500 seconds)</p>
 <div class="sphx-glr-footer class sphx-glr-footer-example docutils container" id="sphx-glr-download-examples-00-load-read-file-py">
 <div class="sphx-glr-download docutils container">
 <p><a class="reference download internal" download="" href="../../_downloads/78fb854ce6db0a354590d7ab2f5998db/read-file.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">read-file.py</span></code></a></p>

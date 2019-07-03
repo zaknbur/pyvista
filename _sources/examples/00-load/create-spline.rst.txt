@@ -39,7 +39,7 @@ Create a dataset to plot
     n_points = 100
     theta = np.linspace(-4 * np.pi, 4 * np.pi, n_points)
     z = np.linspace(-2, 2, n_points)
-    r = z**2 + 1
+    r = z ** 2 + 1
     x = r * np.sin(theta)
     y = r * np.cos(theta)
     points = np.column_stack((x, y, z))
@@ -72,7 +72,7 @@ Plot spline as a tube
 
 
     # add scalars to spline and plot it
-    spline['scalars'] = np.arange(spline.n_points)
+    spline["scalars"] = np.arange(spline.n_points)
     tube = spline.tube(radius=0.1)
     tube.plot(smooth_shading=True)
 
@@ -95,7 +95,7 @@ Line can also be plotted as a plain line
     spline = pv.Spline(points, 400)
 
     # plot without scalars
-    spline.plot(line_width=4, color='k')
+    spline.plot(line_width=4, color="k")
 
 
 
@@ -108,7 +108,7 @@ Line can also be plotted as a plain line
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  1.454 seconds)
+   **Total running time of the script:** ( 0 minutes  1.409 seconds)
 
 
 .. _sphx_glr_download_examples_00-load_create-spline.py:

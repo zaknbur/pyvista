@@ -30,8 +30,8 @@ Plot a mesh with an image projected onto it as a texture.
 
 
 Texture mapping is easily implemented using PyVista. Many of the geometric
-objects come preloaded with texture coordinates, so quickly creating a surface
-and displaying an image is simply:
+objects come preloaded with texture coordinates, so quickly creating a
+surface and displaying an image is simply:
 
 
 .. code-block:: default
@@ -68,7 +68,7 @@ For example, let's map that same image of bricks to a curvey surface:
     x = np.arange(-10, 10, 0.25)
     y = np.arange(-10, 10, 0.25)
     x, y = np.meshgrid(x, y)
-    r = np.sqrt(x**2 + y**2)
+    r = np.sqrt(x ** 2 + y ** 2)
     z = np.sin(r)
     curvsurf = pv.StructuredGrid(x, y, z)
 
@@ -136,9 +136,9 @@ use.
 NumPy Arrays as Textures
 ++++++++++++++++++++++++
 
-Wan't to use a programmaticaly built image? :class:`pyvista.UniformGrid` objects
-can be converted to textures using :func:`pyvista.image_to_texture` and 3D
-NumPy (X by Y by RGB) arrays can be converted to textures using
+Wan't to use a programmaticaly built image? :class:`pyvista.UniformGrid`
+objects can be converted to textures using :func:`pyvista.image_to_texture`
+and 3D NumPy (X by Y by RGB) arrays can be converted to textures using
 :func:`pyvista.numpy_to_texture`.
 
 
@@ -146,16 +146,16 @@ NumPy (X by Y by RGB) arrays can be converted to textures using
 
 
     # create an image using Numpy,
-    xx, yy = np.meshgrid(np.linspace(-200,200,20), np.linspace(-200,200,20))
+    xx, yy = np.meshgrid(np.linspace(-200, 200, 20), np.linspace(-200, 200, 20))
     A, b = 500, 100
-    zz = A*np.exp(-0.5*((xx/b)**2. + (yy/b)**2.))
+    zz = A * np.exp(-0.5 * ((xx / b) ** 2.0 + (yy / b) ** 2.0))
 
     # Creating a custom RGB image
-    cmap = get_cmap('nipy_spectral')
+    cmap = get_cmap("nipy_spectral")
     norm = lambda x: (x - np.nanmin(x)) / (np.nanmax(x) - np.nanmin(x))
     hue = norm(zz.ravel())
-    colors = (cmap(hue)[:, 0:3] * 255.).astype(np.uint8)
-    image = colors.reshape((xx.shape[0], xx.shape[1], 3), order='F')
+    colors = (cmap(hue)[:, 0:3] * 255.0).astype(np.uint8)
+    image = colors.reshape((xx.shape[0], xx.shape[1], 3), order="F")
 
     # Convert 3D numpy array to texture
     tex = pv.numpy_to_texture(image)
@@ -226,7 +226,7 @@ Now display all the puppies!
 
     # use the puppy image
     tex = examples.download_puppy_texture()
-    curvsurf.plot(texture=tex, cpos='yx')
+    curvsurf.plot(texture=tex, cpos="yx")
 
 
 
@@ -239,7 +239,7 @@ Now display all the puppies!
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  9.516 seconds)
+   **Total running time of the script:** ( 0 minutes  10.139 seconds)
 
 
 .. _sphx_glr_download_examples_02-plot_plot-texture.py:

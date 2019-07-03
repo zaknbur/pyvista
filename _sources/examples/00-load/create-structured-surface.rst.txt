@@ -42,7 +42,7 @@ Create a simple meshgrid using NumPy
     x = np.arange(-10, 10, 0.25)
     y = np.arange(-10, 10, 0.25)
     x, y = np.meshgrid(x, y)
-    r = np.sqrt(x**2 + y**2)
+    r = np.sqrt(x ** 2 + y ** 2)
     z = np.sin(r)
 
 
@@ -86,8 +86,8 @@ Now pass the NumPy meshgrid to PyVista
 
 
 
-Generating a structured grid is a one liner in this module, and the points from
-the resulting surface can be accessed as a NumPy array:
+Generating a structured grid is a one liner in this module, and the points
+from the resulting surface can be accessed as a NumPy array:
 
 
 .. code-block:: default
@@ -120,31 +120,33 @@ From XYZ Points
 +++++++++++++++
 
 Quite often, you might be given a set of coordinates (XYZ points) in a simple
-tabular format where there exists some structure such that grid could be built
-between the nodes you have. A great example is found in `pyvista-support#16`_
-where a strucutred grid that is rotated from the cartesian reference frame is
-given as just XYZ points. In these cases, all that is needed to recover the
-grid is the dimensions of the grid (`nx` by `ny` by `nz`) and that the
-coordinates are ordered appropriately.
+tabular format where there exists some structure such that grid could be
+built between the nodes you have. A great example is found in
+`pyvista-support#16`_ where a strucutred grid that is rotated from the
+cartesian reference frame is given as just XYZ points. In these cases, all
+that is needed to recover the grid is the dimensions of the grid
+(`nx` by `ny` by `nz`) and that the coordinates are ordered appropriately.
 
 .. _pyvista-support#16: https://github.com/pyvista/pyvista-support/issues/16
 
 For this example, we will create a small dataset and rotate the
-coordinates such that they are not on orthogonal to cartesian reference frame.
+coordinates such that they are not on orthogonal to cartesian reference
+frame.
 
 
 .. code-block:: default
+
 
 
     def make_point_set():
         """Ignore the contents of this function. Just know that it returns an
         n by 3 numpy array of structured coordinates."""
         n, m = 29, 32
-        x = np.linspace(-200,200, num=n) + np.random.uniform(-5, 5, size=n)
-        y = np.linspace(-200,200, num=m) + np.random.uniform(-5, 5, size=m)
+        x = np.linspace(-200, 200, num=n) + np.random.uniform(-5, 5, size=n)
+        y = np.linspace(-200, 200, num=m) + np.random.uniform(-5, 5, size=m)
         xx, yy = np.meshgrid(x, y)
         A, b = 100, 100
-        zz = A*np.exp(-0.5*((xx/b)**2. + (yy/b)**2.))
+        zz = A * np.exp(-0.5 * ((xx / b) ** 2.0 + (yy / b) ** 2.0))
         points = np.c_[xx.reshape(-1), yy.reshape(-1), zz.reshape(-1)]
         foo = pv.PolyData(points)
         foo.rotate_z(36.6)
@@ -165,16 +167,16 @@ coordinates such that they are not on orthogonal to cartesian reference frame.
 
  .. code-block:: none
 
-    [[ -38.32511525 -283.05876171    1.69150106]
-     [ -25.11871938 -273.25082656    2.3171129 ]
-     [ -15.58442847 -266.17003724    2.85965798]
-     [  -2.12405795 -256.17348389    3.75730488]
-     [   7.89598848 -248.73194068    4.52073205]]
+    [[ -37.75401406 -282.66391938    1.71421858]
+     [ -29.39285962 -276.4543781     2.09723963]
+     [ -14.20130735 -265.17213571    2.94254029]
+     [  -8.23179418 -260.73878397    3.32858201]
+     [   5.12729048 -250.81745213    4.29901538]]
 
 
 
-Now pretend that the (n by 3) NumPy array above are coordinates that you have,
-possibly from a file with three columns of XYZ points.
+Now pretend that the (n by 3) NumPy array above are coordinates that you
+have, possibly from a file with three columns of XYZ points.
 
 We simply need to recover the dimensions of the grid that these points make
 and then we can generate a :class:`pyvista.StructuredGrid` mesh.
@@ -185,11 +187,12 @@ Let's preview the points to see what we are dealing with:
 .. code-block:: default
 
     import matplotlib.pyplot as plt
-    plt.figure(figsize=(10,10))
-    plt.scatter(points[:,0], points[:,1], c=points[:,2])
-    plt.axis('image')
-    plt.xlabel('X Coordinate')
-    plt.ylabel('Y Coordinate')
+
+    plt.figure(figsize=(10, 10))
+    plt.scatter(points[:, 0], points[:, 1], c=points[:, 2])
+    plt.axis("image")
+    plt.xlabel("X Coordinate")
+    plt.ylabel("Y Coordinate")
     plt.show()
 
 
@@ -205,7 +208,7 @@ Let's preview the points to see what we are dealing with:
 
  .. code-block:: none
 
-    /home/travis/build/pyvista/pyvista/examples/00-load/create-structured-surface.py:97: UserWarning: Matplotlib is currently using agg, which is a non-GUI backend, so cannot show the figure.
+    /home/travis/build/pyvista/pyvista/examples/00-load/create-structured-surface.py:100: UserWarning: Matplotlib is currently using agg, which is a non-GUI backend, so cannot show the figure.
       plt.show()
 
 
@@ -234,7 +237,7 @@ dimensionality of structured grid including:
     mesh.dimensions = [29, 32, 1]
 
     # and then inspect it!
-    mesh.plot(show_edges=True, show_grid=True, cpos='xy')
+    mesh.plot(show_edges=True, show_grid=True, cpos="xy")
 
 
 
@@ -247,7 +250,7 @@ dimensionality of structured grid including:
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  4.885 seconds)
+   **Total running time of the script:** ( 0 minutes  4.971 seconds)
 
 
 .. _sphx_glr_download_examples_00-load_create-structured-surface.py:

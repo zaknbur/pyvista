@@ -29,6 +29,7 @@ plane defined by a normal and origin
         poly = surface.interpolate(points, radius=12.0)
         return poly
 
+
     poly = make_example_data()
     poly.plot()
 
@@ -47,13 +48,13 @@ Project that surface to a plane underneath the surface
 .. code-block:: default
 
     origin = poly.center
-    origin[-1] -= poly.length / 3.
+    origin[-1] -= poly.length / 3.0
     projected = poly.project_points_to_plane(origin=origin)
 
     # Display the results
     p = pv.Plotter()
-    p.add_mesh(poly,)
-    p.add_mesh(projected, )
+    p.add_mesh(poly)
+    p.add_mesh(projected)
     p.show()
 
 
@@ -76,7 +77,7 @@ Project that surface to a plane underneath the surface
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  5.983 seconds)
+   **Total running time of the script:** ( 0 minutes  6.262 seconds)
 
 
 .. _sphx_glr_download_examples_01-filter_project-plane.py:

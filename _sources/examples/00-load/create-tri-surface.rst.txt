@@ -34,11 +34,11 @@ First, create some points for the surface.
 
     # Define a simple Gaussian surface
     n = 20
-    x = np.linspace(-200,200, num=n) + np.random.uniform(-5, 5, size=n)
-    y = np.linspace(-200,200, num=n) + np.random.uniform(-5, 5, size=n)
+    x = np.linspace(-200, 200, num=n) + np.random.uniform(-5, 5, size=n)
+    y = np.linspace(-200, 200, num=n) + np.random.uniform(-5, 5, size=n)
     xx, yy = np.meshgrid(x, y)
     A, b = 100, 100
-    zz = A*np.exp(-0.5*((xx/b)**2. + (yy/b)**2.))
+    zz = A * np.exp(-0.5 * ((xx / b) ** 2.0 + (yy / b) ** 2.0))
 
     # Get the points as a 2D NumPy array (N by 3)
     points = np.c_[xx.reshape(-1), yy.reshape(-1), zz.reshape(-1)]
@@ -54,11 +54,11 @@ First, create some points for the surface.
 
  .. code-block:: none
 
-    [[-196.12155777 -199.97376116    1.97884167]
-     [-175.45547839 -199.97376116    2.905088  ]
-     [-154.92669468 -199.97376116    4.07789487]
-     [-140.55602963 -199.97376116    5.04246503]
-     [-112.4234791  -199.97376116    7.19756659]]
+    [[-197.91623219 -197.62500967    2.00139856]
+     [-176.50546931 -197.62500967    2.9882231 ]
+     [-160.5381329  -197.62500967    3.9108837 ]
+     [-140.28847483 -197.62500967    5.30338425]
+     [-118.29904406 -197.62500967    7.04737194]]
 
 
 
@@ -103,7 +103,7 @@ triangulation to turn those boring discrete points into a connected surface.
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  1.254 seconds)
+   **Total running time of the script:** ( 0 minutes  1.234 seconds)
 
 
 .. _sphx_glr_download_examples_00-load_create-tri-surface.py:

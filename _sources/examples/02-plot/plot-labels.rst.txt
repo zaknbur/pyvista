@@ -21,7 +21,7 @@ Use string arrays in a point set to label points
     import numpy as np
 
     # Labels are not currently supported by the VTKjs conversion script
-    pv.rcParams['use_panel'] = False
+    pv.rcParams["use_panel"] = False
 
 
 
@@ -48,13 +48,14 @@ labels for each of the nodes.
 
 
 
-Add string labels to the point data - this associates a label with every node:
+Add string labels to the point data - this associates a label with every
+node:
 
 
 .. code-block:: default
 
 
-    poly['My Labels'] = ['Label {}'.format(i) for i in range(poly.n_points)]
+    poly["My Labels"] = ["Label {}".format(i) for i in range(poly.n_points)]
 
     print(poly)
 
@@ -68,12 +69,12 @@ Add string labels to the point data - this associates a label with every node:
 
  .. code-block:: none
 
-    PolyData (0x7f630d731fa8)
+    PolyData (0x7f47b4a38fa8)
       N Cells:      10
       N Points:     10
-      X Bounds:     8.050e-04, 8.682e-01
-      Y Bounds:     2.115e-01, 9.654e-01
-      Z Bounds:     1.607e-01, 9.606e-01
+      X Bounds:     3.989e-02, 9.500e-01
+      Y Bounds:     2.476e-01, 9.074e-01
+      Z Bounds:     1.892e-01, 7.419e-01
       N Arrays:     1
 
 
@@ -86,7 +87,7 @@ Now plot the points with labels:
 
 
     plotter = pv.Plotter()
-    plotter.add_point_labels(poly, 'My Labels', point_size=20, font_size=36)
+    plotter.add_point_labels(poly, "My Labels", point_size=20, font_size=36)
     plotter.show()
 
 
@@ -124,21 +125,21 @@ Create plotting class and add the unstructured grid
 .. code-block:: default
 
     plotter = pv.Plotter()
-    plotter.add_mesh(grid, show_edges=True, color='tan')
+    plotter.add_mesh(grid, show_edges=True, color="tan")
 
     # Add labels to points on the yz plane (where x == 0)
     points = grid.points
     mask = points[:, 0] == 0
-    plotter.add_point_labels(points[mask], points[mask].tolist(),
-                             point_size=20, font_size=36)
+    plotter.add_point_labels(
+        points[mask], points[mask].tolist(), point_size=20, font_size=36
+    )
 
     plotter.camera_position = [
-        (-1.5, 1.5, 3.),
+        (-1.5, 1.5, 3.0),
         (0.05, 0.6, 1.2),
         (0.2, 0.9, -0.25)]
 
     plotter.show()
-
 
 
 
@@ -173,15 +174,12 @@ This example will label pooints with their scalar values
     p = pv.Plotter()
 
     # Add the mesh:
-    p.add_mesh(mesh, scalars='Spatial Point Data', show_edges=True)
+    p.add_mesh(mesh, scalars="Spatial Point Data", show_edges=True)
     # Add the points with scalar labels:
-    p.add_point_scalar_labels(mesh, 'Spatial Point Data',
-                              point_size=20, font_size=36)
+    p.add_point_scalar_labels(mesh, "Spatial Point Data", point_size=20, font_size=36)
 
     # Use a nice camera position:
-    p.camera_position = [(7, 4, 5),
-                         (4.4, 7., 7.2),
-                         (0.8, 0.5, 0.25)]
+    p.camera_position = [(7, 4, 5), (4.4, 7.0, 7.2), (0.8, 0.5, 0.25)]
 
     p.show()
 
@@ -196,7 +194,7 @@ This example will label pooints with their scalar values
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  3.798 seconds)
+   **Total running time of the script:** ( 0 minutes  3.688 seconds)
 
 
 .. _sphx_glr_download_examples_02-plot_plot-labels.py:

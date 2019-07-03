@@ -42,7 +42,7 @@ with ``.show(auto_close=False)``.
     p.add_mesh(mesh)
     p.show(auto_close=False)
     path = p.generate_orbital_path(n_points=36, shift=1e4)
-    p.open_gif('orbit.gif')
+    p.open_gif("orbit.gif")
     p.orbit_on_path(path, write_frames=True)
     p.close()
 
@@ -63,10 +63,10 @@ with ``.show(auto_close=False)``.
     p.add_mesh(mesh)
     p.show_grid()
     p.show(auto_close=False)
-    viewup=[0.5,0.5,1]
+    viewup = [0.5, 0.5, 1]
     path = p.generate_orbital_path(factor=2.0, shift=10000, viewup=viewup, n_points=36)
-    p.open_gif('orbit.gif')
-    p.orbit_on_path(path, write_frames=True, viewup=[0,0,1])
+    p.open_gif("orbit.gif")
+    p.orbit_on_path(path, write_frames=True, viewup=[0, 0, 1])
     p.close()
 
 
@@ -84,7 +84,7 @@ with ``.show(auto_close=False)``.
 
 
     mesh = examples.download_dragon()
-    viewup = [0,1,0]
+    viewup = [0, 1, 0]
 
 
 
@@ -98,8 +98,8 @@ with ``.show(auto_close=False)``.
     p = pv.Plotter()
     p.add_mesh(mesh)
     p.show(auto_close=False)
-    path = p.generate_orbital_path(factor=2., n_points=36, viewup=viewup, shift=0.2)
-    p.open_gif('orbit.gif')
+    path = p.generate_orbital_path(factor=2.0, n_points=36, viewup=viewup, shift=0.2)
+    p.open_gif("orbit.gif")
     p.orbit_on_path(path, write_frames=True, viewup=viewup)
     p.close()
 
@@ -114,7 +114,7 @@ with ``.show(auto_close=False)``.
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 2 minutes  41.842 seconds)
+   **Total running time of the script:** ( 2 minutes  28.164 seconds)
 
 
 .. _sphx_glr_download_examples_02-plot_plot-orbit.py:

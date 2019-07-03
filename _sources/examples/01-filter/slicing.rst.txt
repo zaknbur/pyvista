@@ -43,7 +43,7 @@ volume. First, load up the volume and preview it:
 
     mesh = examples.load_channels()
     # define a categorical colormap
-    cmap = plt.cm.get_cmap('viridis', 4)
+    cmap = plt.cm.get_cmap("viridis", 4)
 
 
     mesh.plot(cmap=cmap)
@@ -105,10 +105,10 @@ filter:
 
 
     # Sing slice - origin defaults to center of the mesh
-    single_slice = mesh.slice(normal=[1,1,0])
+    single_slice = mesh.slice(normal=[1, 1, 0])
 
     p = pv.Plotter()
-    p.add_mesh(mesh.outline(), color='k')
+    p.add_mesh(mesh.outline(), color="k")
     p.add_mesh(single_slice, cmap=cmap)
     p.show()
 
@@ -127,7 +127,7 @@ automated with the :func:`pyvista.DataSetFilters.slice_along_axis` filter:
 .. code-block:: default
 
 
-    slices = mesh.slice_along_axis(n=7, axis='y')
+    slices = mesh.slice_along_axis(n=7, axis="y")
 
     slices.plot(cmap=cmap)
 
@@ -158,15 +158,17 @@ the line low.
 
     model = examples.load_channels()
 
+
     def path(y):
         """Equation: x = a(y-h)^2 + k"""
-        a = 110.0 / 160.0**2
-        x = a*y**2 + 0.0
+        a = 110.0 / 160.0 ** 2
+        x = a * y ** 2 + 0.0
         return x, y
+
 
     x, y = path(np.arange(model.bounds[2], model.bounds[3], 15.0))
     zo = np.linspace(9.0, 11.0, num=len(y))
-    points = np.c_[x,y,zo]
+    points = np.c_[x, y, zo]
     spline = pv.Spline(points, 15)
     print(spline)
 
@@ -181,7 +183,7 @@ the line low.
 
  .. code-block:: none
 
-    PolyData (0x7f63180b4ee8)
+    PolyData (0x7f47b4b02d68)
       N Cells:      1
       N Points:     15
       X Bounds:     0.000e+00, 2.475e+02
@@ -210,7 +212,7 @@ Then run the filter
 
  .. code-block:: none
 
-    PolyData (0x7f63180b4f48)
+    PolyData (0x7f47b4b02e88)
       N Cells:      49100
       N Points:     49692
       X Bounds:     0.000e+00, 2.500e+02
@@ -228,7 +230,7 @@ Then run the filter
     p = pv.Plotter()
     p.add_mesh(slc)
     p.add_mesh(model.outline())
-    p.show(cpos=[1,-1,1])
+    p.show(cpos=[1, -1, 1])
 
 
 
@@ -241,7 +243,7 @@ Then run the filter
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  31.688 seconds)
+   **Total running time of the script:** ( 0 minutes  30.688 seconds)
 
 
 .. _sphx_glr_download_examples_01-filter_slicing.py:

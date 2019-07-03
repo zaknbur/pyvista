@@ -25,8 +25,8 @@ Read and plot image files (JPEG, TIFF, PNG, etc).
 
 
 PyVista fully supportes reading images into their own spatially referenced
-data objects (this example) as well as supports texture mapping of images onto
-datasets (see :ref:`ref_texture_example`).
+data objects (this example) as well as supports texture mapping of images
+onto datasets (see :ref:`ref_texture_example`).
 
 Download a JPEG image of a puppy and load it to :class:`pyvista.UniformGrid`.
 This could similarly be implemented with any image file by using the
@@ -55,7 +55,7 @@ image's true colors are used and not mapped.
 
 
     # True image colors
-    image.plot(rgb=True, cpos='xy')
+    image.plot(rgb=True, cpos="xy")
 
 
 
@@ -71,7 +71,7 @@ image's true colors are used and not mapped.
 
 
     # Mapped image colors
-    image.plot(cpos='xy')
+    image.plot(cpos="xy")
 
 
 
@@ -84,7 +84,7 @@ image's true colors are used and not mapped.
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  13.144 seconds)
+   **Total running time of the script:** ( 0 minutes  12.952 seconds)
 
 
 .. _sphx_glr_download_examples_00-load_read-image.py:
