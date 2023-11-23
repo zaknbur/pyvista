@@ -1,0 +1,229 @@
+repo_name: zaknbur/pyvista
+report_id: 7eded3851af1dd7f797ce88d3d911a3d
+repo_type: Public
+timestamp: '2023-11-23T15:31:51+00:00'
+requested_by: banesullivan
+provider: github
+branch: master
+detected_tools_count: 19
+tools:
+- name: Python
+  description: A clear and powerful object-oriented programming language, comparable
+    to Perl, Ruby, Scheme, or Java.
+  website_url: https://www.python.org
+  open_source: true
+  hosted_saas: false
+  category: Languages & Frameworks
+  sub_category: Languages
+  image_url: https://img.stackshare.io/service/993/pUBY5pVj.png
+  detection_source: Repo Metadata
+- name: Matplotlib
+  description: A plotting library for the Python programming language
+  website_url: http://matplotlib.org
+  open_source: false
+  hosted_saas: false
+  category: Libraries
+  sub_category: Charting Libraries
+  image_url: https://img.stackshare.io/service/2993/2DZC4KaA_400x400.jpg
+  detection_source: requirements.txt
+  last_updated_by: Bane Sullivan
+  last_updated_on: 2018-12-22 20:13:50.000000000 Z
+- name: Codecov
+  description: Hosted coverage reports with awesome features to enhance your CI workflow
+  website_url: https://codecov.io/
+  open_source: false
+  hosted_saas: true
+  category: Build, Test, Deploy
+  sub_category: Code Coverage
+  image_url: https://img.stackshare.io/service/2673/Codecov_Mark_Circle_Pink.png
+  detection_source: requirements.txt
+  last_updated_by: Bane Sullivan
+  last_updated_on: 2019-06-27 22:07:36.000000000 Z
+- name: Git
+  description: Fast, scalable, distributed revision control system
+  website_url: http://git-scm.com/
+  open_source: true
+  hosted_saas: false
+  category: Build, Test, Deploy
+  sub_category: Version Control System
+  image_url: https://img.stackshare.io/service/1046/git.png
+  detection_source: Repo Metadata
+- name: PyPI
+  description: A repository of software for the Python programming language
+  website_url: https://pypi.org/
+  open_source: false
+  hosted_saas: false
+  category: Build, Test, Deploy
+  sub_category: Hosted Package Repository
+  image_url: https://img.stackshare.io/service/12572/-RIWgodF_400x400.jpg
+  detection_source: requirements_docs.txt
+  last_updated_by: Bane Sullivan
+  last_updated_on: 2019-01-23 01:06:10.000000000 Z
+- name: Travis CI
+  description: A hosted continuous integration service for open source and private
+    projects
+  website_url: http://travis-ci.com/
+  open_source: false
+  hosted_saas: true
+  category: Build, Test, Deploy
+  sub_category: Continuous Integration
+  image_url: https://img.stackshare.io/service/460/Lu6cGu0z_400x400.png
+  detection_source: ".travis.yml"
+  last_updated_by: Bane Sullivan
+  last_updated_on: 2019-04-20 05:15:42.000000000 Z
+- name: pytest
+  description: A full-featured Python testing tool to help you write better programs
+  website_url: http://pytest.org/latest/
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Build, Test, Deploy
+  sub_category: Testing Frameworks
+  image_url: https://img.stackshare.io/service/4586/Lu99Qe0Z_400x400.png
+  detection_source: requirements.txt
+  last_updated_by: Bane Sullivan
+  last_updated_on: 2019-04-18 22:47:48.000000000 Z
+- name: HTML
+  description: Hypertext Markup Language for creating web pages.
+  website_url: http://
+  open_source: false
+  hosted_saas: false
+  image_url: https://img.stackshare.io/service/2270/no-img-open-source.png
+  detection_source: docs/_templates/layout.html
+  last_updated_by: Bane Sullivan
+  last_updated_on: 2019-05-15 16:23:46.000000000 Z
+- name: NumPy
+  description: Fundamental package for scientific computing with Python
+  website_url: http://www.numpy.org/
+  license: BSD-3-Clause
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: Data Science Tools
+  image_url: https://img.stackshare.io/service/2179/default_332f874a2edb2686f578aa6389313efcea1eec41.png
+  detection_source: setup.py
+  last_updated_by: Alex Kaszynski
+  last_updated_on: 2018-07-06 07:06:27.000000000 Z
+- name: Sphinx
+  description: Open source full text search server, designed from the ground up with
+    performance, relevance (aka search quality), and integration simplicity in mind
+  website_url: http://sphinxsearch.com/
+  open_source: false
+  hosted_saas: false
+  category: Application Utilities
+  sub_category: Search Engines
+  image_url: https://img.stackshare.io/service/1598/TtqoAo1V.png
+  detection_source: requirements_docs.txt
+  last_updated_by: Bane Sullivan
+  last_updated_on: 2019-06-27 00:31:15.000000000 Z
+- name: appdirs
+  description: A small Python module for determining appropriate platform-specific
+    dirs, e.g
+  package_url: https://pypi.org/appdirs
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: PyPI Packages
+  image_url: https://img.stackshare.io/package/19878/default_2270bfab784e3d2c2d999d26b11ee478a9dad238.png
+  detection_source: setup.py
+  last_updated_by: Bane Sullivan
+  last_updated_on: 2019-04-04 02:16:42.000000000 Z
+- name: colorcet
+  description: Collection of perceptually uniform colormaps
+  package_url: https://pypi.org/colorcet
+  license: Ruby
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: PyPI Packages
+  image_url: https://img.stackshare.io/package/pypi/image.png
+  detection_source: requirements.txt
+  last_updated_by: Bane Sullivan
+  last_updated_on: 2019-06-24 20:28:18.000000000 Z
+- name: imageio
+  description: Library for reading and writing a wide range of image
+  package_url: https://pypi.org/imageio
+  version: 2.5.0
+  license: BSD-3-Clause
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: PyPI Packages
+  image_url: https://img.stackshare.io/package/20258/default_c011fd31f7e9af58e2e3e8a82a6acdf8662ecdb6.png
+  detection_source_url: requirements.txt
+  detection_source: setup.py
+  last_updated_by: Bane Sullivan
+  last_updated_on: 2019-05-24 16:03:23.000000000 Z
+- name: ipywidgets
+  description: IPython HTML widgets for Jupyter
+  package_url: https://pypi.org/ipywidgets
+  license: BSD-3-Clause
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: PyPI Packages
+  image_url: https://img.stackshare.io/package/pypi/image.png
+  detection_source: requirements.txt
+  last_updated_by: Bane Sullivan
+  last_updated_on: 2019-04-18 22:47:48.000000000 Z
+- name: nbval
+  description: A py.test plugin to validate Jupyter notebooks
+  package_url: https://pypi.org/nbval
+  license: BSD-3-Clause
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: PyPI Packages
+  image_url: https://img.stackshare.io/package/pypi/image.png
+  detection_source: requirements.txt
+  last_updated_by: Bane Sullivan
+  last_updated_on: 2019-04-18 22:47:48.000000000 Z
+- name: pytest-cov
+  description: Pytest plugin for measuring coverage
+  package_url: https://pypi.org/pytest-cov
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: PyPI Packages
+  image_url: https://img.stackshare.io/package/19958/default_e91a78767854f0fa80aab2f13d1a25b15ca2d278.png
+  detection_source: requirements.txt
+  last_updated_by: Bane Sullivan
+  last_updated_on: 2019-04-18 22:47:48.000000000 Z
+- name: sphinx-rtd-theme
+  description: Read the Docs theme for Sphinx
+  package_url: https://pypi.org/sphinx-rtd-theme
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: PyPI Packages
+  image_url: https://img.stackshare.io/package/20198/default_1b766c7727f93da29992cd7a2499f00a0ba7bc2d.png
+  detection_source: requirements_docs.txt
+  last_updated_by: Bane Sullivan
+  last_updated_on: 2019-06-27 00:31:15.000000000 Z
+- name: sphinxcontrib-napoleon
+  description: Sphinx "napoleon" extension
+  package_url: https://pypi.org/sphinxcontrib-napoleon
+  license: BSD-3-Clause
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: PyPI Packages
+  image_url: https://img.stackshare.io/package/pypi/image.png
+  detection_source: requirements_docs.txt
+  last_updated_by: Bane Sullivan
+  last_updated_on: 2019-06-27 00:31:15.000000000 Z
+- name: sphinxcontrib-websupport
+  description: Sphinx API for Web Apps
+  package_url: https://pypi.org/sphinxcontrib-websupport
+  license: BSD-3-Clause
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: PyPI Packages
+  image_url: https://img.stackshare.io/package/pypi/image.png
+  detection_source: requirements_docs.txt
+  last_updated_by: Bane Sullivan
+  last_updated_on: 2019-06-27 00:31:15.000000000 Z
